@@ -1,0 +1,42 @@
+{
+  "global_id": 958,
+  "species": "Cobalion",
+  "nature": "Jolly",
+  "item": "Lax Incense",
+  "moves": [
+    "Swagger",
+    "Substitute",
+    "Psych Up",
+    "Iron Head"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 3,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "cobalion3.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 166,
+    "Atk": 142,
+    "Def": 149,
+    "SpA": 99,
+    "SpD": 92,
+    "Spe": 176
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png"
+}

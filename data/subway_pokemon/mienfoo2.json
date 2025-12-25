@@ -1,0 +1,42 @@
+{
+  "global_id": 75,
+  "species": "Mienfoo",
+  "nature": "Adamant",
+  "item": "Muscle Band",
+  "moves": [
+    "Jump Kick",
+    "Bounce",
+    "U-turn",
+    "Quick Guard"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "mienfoo2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 120,
+    "Atk": 150,
+    "Def": 70,
+    "SpA": 67,
+    "SpD": 70,
+    "Spe": 117
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/619.png"
+}

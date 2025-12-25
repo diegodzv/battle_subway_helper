@@ -1,0 +1,42 @@
+{
+  "global_id": 613,
+  "species": "Slowbro",
+  "nature": "Bold",
+  "item": "Leftovers",
+  "moves": [
+    "Psychic",
+    "Surf",
+    "Slack Off",
+    "Amnesia"
+  ],
+  "evs": "HP/Def",
+  "variant_index": 3,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "slowbro3.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 202,
+    "Atk": 85,
+    "Def": 178,
+    "SpA": 120,
+    "SpD": 100,
+    "Spe": 50
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png"
+}

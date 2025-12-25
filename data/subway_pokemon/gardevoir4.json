@@ -1,0 +1,42 @@
+{
+  "global_id": 858,
+  "species": "Gardevoir",
+  "nature": "Timid",
+  "item": "Psychic Gem",
+  "moves": [
+    "Psychic",
+    "Thunderbolt",
+    "Shadow Ball",
+    "Destiny Bond"
+  ],
+  "evs": "Spe/SpA",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "gardevoir4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 143,
+    "Atk": 76,
+    "Def": 85,
+    "SpA": 177,
+    "SpD": 135,
+    "Spe": 145
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png"
+}

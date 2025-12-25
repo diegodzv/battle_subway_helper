@@ -1,0 +1,42 @@
+{
+  "global_id": 87,
+  "species": "Pansage",
+  "nature": "Jolly",
+  "item": "Salac Berry",
+  "moves": [
+    "Seed Bomb",
+    "Crunch",
+    "Acrobatics",
+    "Torment"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "pansage2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 125,
+    "Atk": 105,
+    "Def": 68,
+    "SpA": 65,
+    "SpD": 68,
+    "Spe": 127
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/511.png"
+}

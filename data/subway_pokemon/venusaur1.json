@@ -1,0 +1,42 @@
+{
+  "global_id": 209,
+  "species": "Venusaur",
+  "nature": "Calm",
+  "item": "Big Root",
+  "moves": [
+    "Leech Seed",
+    "Toxic",
+    "Synthesis",
+    "Ingrain"
+  ],
+  "evs": "HP/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "venusaur1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 187,
+    "Atk": 91,
+    "Def": 103,
+    "SpA": 120,
+    "SpD": 167,
+    "Spe": 100
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+}

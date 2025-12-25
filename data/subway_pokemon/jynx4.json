@@ -1,0 +1,42 @@
+{
+  "global_id": 754,
+  "species": "Jynx",
+  "nature": "Timid",
+  "item": "Wide Lens",
+  "moves": [
+    "Lovely Kiss",
+    "Blizzard",
+    "Psychic",
+    "Fake Out"
+  ],
+  "evs": "Spe/SpA",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "jynx4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 140,
+    "Atk": 63,
+    "Def": 55,
+    "SpA": 167,
+    "SpD": 115,
+    "Spe": 161
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png"
+}

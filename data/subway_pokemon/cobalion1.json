@@ -1,0 +1,42 @@
+{
+  "global_id": 918,
+  "species": "Cobalion",
+  "nature": "Bold",
+  "item": "Chesto Berry",
+  "moves": [
+    "Focus Blast",
+    "Flash Cannon",
+    "Calm Mind",
+    "Rest"
+  ],
+  "evs": "HP/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "cobalion1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 198,
+    "Atk": 99,
+    "Def": 163,
+    "SpA": 110,
+    "SpD": 124,
+    "Spe": 128
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png"
+}

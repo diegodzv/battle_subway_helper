@@ -1,0 +1,42 @@
+{
+  "global_id": 155,
+  "species": "Stunfisk",
+  "nature": "Quiet",
+  "item": "Focus Sash",
+  "moves": [
+    "Thunderbolt",
+    "Earthquake",
+    "Flail",
+    "Endure"
+  ],
+  "evs": "HP/Atk/SpA",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "stunfisk1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 170,
+    "Atk": 170,
+    "Def": 0,
+    "SpA": 170,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 205,
+    "Atk": 107,
+    "Def": 104,
+    "SpA": 134,
+    "SpD": 119,
+    "Spe": 46
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/618.png"
+}

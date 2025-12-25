@@ -1,0 +1,42 @@
+{
+  "global_id": 350,
+  "species": "Dusknoir",
+  "nature": "Bold",
+  "item": "Leftovers",
+  "moves": [
+    "Disable",
+    "Will-O-Wisp",
+    "Pain Split",
+    "Mean Look"
+  ],
+  "evs": "HP/Def",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "dusknoir1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 152,
+    "Atk": 108,
+    "Def": 205,
+    "SpA": 85,
+    "SpD": 155,
+    "Spe": 65
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png"
+}

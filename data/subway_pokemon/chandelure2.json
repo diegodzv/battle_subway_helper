@@ -1,0 +1,42 @@
+{
+  "global_id": 514,
+  "species": "Chandelure",
+  "nature": "Timid",
+  "item": "Chesto Berry",
+  "moves": [
+    "Energy Ball",
+    "Rest",
+    "Heat Wave",
+    "Will-O-Wisp"
+  ],
+  "evs": "HP/Spe",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "chandelure2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 167,
+    "Atk": 67,
+    "Def": 110,
+    "SpA": 165,
+    "SpD": 110,
+    "Spe": 145
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
+}

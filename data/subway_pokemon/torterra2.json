@@ -1,0 +1,42 @@
+{
+  "global_id": 393,
+  "species": "Torterra",
+  "nature": "Jolly",
+  "item": "Choice Scarf",
+  "moves": [
+    "Rock Slide",
+    "Earthquake",
+    "Wood Hammer",
+    "Tickle"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "torterra2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 170,
+    "Atk": 161,
+    "Def": 125,
+    "SpA": 85,
+    "SpD": 105,
+    "Spe": 118
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png"
+}

@@ -1,0 +1,42 @@
+{
+  "global_id": 967,
+  "species": "Landorus",
+  "nature": "Jolly",
+  "item": "Ground Gem",
+  "moves": [
+    "Sandstorm",
+    "Earthquake",
+    "Rock Slide",
+    "Protect"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 3,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "landorus3.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 164,
+    "Atk": 177,
+    "Def": 110,
+    "SpA": 121,
+    "SpD": 100,
+    "Spe": 168
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png"
+}

@@ -1,0 +1,42 @@
+{
+  "global_id": 449,
+  "species": "Slowking",
+  "nature": "Gentle",
+  "item": "King's Rock",
+  "moves": [
+    "Zen Headbutt",
+    "Earthquake",
+    "Swagger",
+    "Psych Up"
+  ],
+  "evs": "Atk/SpD",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "slowking2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 170,
+    "Atk": 127,
+    "Def": 90,
+    "SpA": 120,
+    "SpD": 178,
+    "Spe": 50
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png"
+}

@@ -1,0 +1,42 @@
+{
+  "global_id": 274,
+  "species": "Slowking",
+  "nature": "Calm",
+  "item": "Sitrus Berry",
+  "moves": [
+    "Psyshock",
+    "Water Pulse",
+    "Trick Room",
+    "Heal Pulse"
+  ],
+  "evs": "SpA/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "slowking1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 170,
+    "Atk": 85,
+    "Def": 100,
+    "SpA": 152,
+    "SpD": 178,
+    "Spe": 50
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png"
+}

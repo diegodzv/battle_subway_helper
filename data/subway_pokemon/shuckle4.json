@@ -1,0 +1,42 @@
+{
+  "global_id": 840,
+  "species": "Shuckle",
+  "nature": "Relaxed",
+  "item": "Leftovers",
+  "moves": [
+    "Toxic",
+    "Protect",
+    "Sandstorm",
+    "Wrap"
+  ],
+  "evs": "HP/Def",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "shuckle4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 127,
+    "Atk": 30,
+    "Def": 310,
+    "SpA": 30,
+    "SpD": 250,
+    "Spe": 22
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png"
+}

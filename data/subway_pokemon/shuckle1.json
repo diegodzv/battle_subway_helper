@@ -1,0 +1,42 @@
+{
+  "global_id": 315,
+  "species": "Shuckle",
+  "nature": "Careful",
+  "item": "Binding Band",
+  "moves": [
+    "Power Split",
+    "Encore",
+    "Gastro Acid",
+    "Sand Tomb"
+  ],
+  "evs": "HP/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "shuckle1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 127,
+    "Atk": 30,
+    "Def": 250,
+    "SpA": 27,
+    "SpD": 310,
+    "Spe": 25
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png"
+}

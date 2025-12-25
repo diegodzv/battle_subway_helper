@@ -1,0 +1,42 @@
+{
+  "global_id": 798,
+  "species": "Alakazam",
+  "nature": "Timid",
+  "item": "Choice Specs",
+  "moves": [
+    "Psychic",
+    "Focus Blast",
+    "Disable",
+    "Trick"
+  ],
+  "evs": "Spe/SpA",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "alakazam4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 130,
+    "Atk": 63,
+    "Def": 65,
+    "SpA": 187,
+    "SpD": 115,
+    "Spe": 189
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png"
+}

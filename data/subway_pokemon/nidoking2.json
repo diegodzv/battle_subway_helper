@@ -1,0 +1,42 @@
+{
+  "global_id": 458,
+  "species": "Nidoking",
+  "nature": "Quiet",
+  "item": "Black Sludge",
+  "moves": [
+    "Amnesia",
+    "Sludge Bomb",
+    "Flamethrower",
+    "Protect"
+  ],
+  "evs": "HP/SpA",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "nidoking2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 188,
+    "Atk": 122,
+    "Def": 97,
+    "SpA": 150,
+    "SpD": 95,
+    "Spe": 94
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png"
+}

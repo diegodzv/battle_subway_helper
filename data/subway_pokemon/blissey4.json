@@ -1,0 +1,42 @@
+{
+  "global_id": 893,
+  "species": "Blissey",
+  "nature": "Bold",
+  "item": "Chople Berry",
+  "moves": [
+    "Toxic",
+    "Minimize",
+    "Mud Bomb",
+    "Softboiled"
+  ],
+  "evs": "Def/SpD",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "blissey4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 330,
+    "Atk": 27,
+    "Def": 68,
+    "SpA": 95,
+    "SpD": 187,
+    "Spe": 75
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png"
+}

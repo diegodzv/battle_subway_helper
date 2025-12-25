@@ -1,0 +1,42 @@
+{
+  "global_id": 821,
+  "species": "Poliwrath",
+  "nature": "Adamant",
+  "item": "Sitrus Berry",
+  "moves": [
+    "Waterfall",
+    "Earthquake",
+    "Focus Punch",
+    "Circle Throw"
+  ],
+  "evs": "HP/Atk",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "poliwrath4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 197,
+    "Atk": 161,
+    "Def": 115,
+    "SpA": 81,
+    "SpD": 110,
+    "Spe": 90
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png"
+}

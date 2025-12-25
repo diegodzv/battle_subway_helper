@@ -1,0 +1,42 @@
+{
+  "global_id": 359,
+  "species": "Magnezone",
+  "nature": "Rash",
+  "item": "Magnet",
+  "moves": [
+    "Metal Sound",
+    "Flash Cannon",
+    "Thunderbolt",
+    "Magnet Rise"
+  ],
+  "evs": "HP/SpA",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "magnezone1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 177,
+    "Atk": 90,
+    "Def": 135,
+    "SpA": 200,
+    "SpD": 99,
+    "Spe": 80
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/462.png"
+}

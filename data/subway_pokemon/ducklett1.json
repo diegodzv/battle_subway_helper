@@ -1,0 +1,42 @@
+{
+  "global_id": 27,
+  "species": "Ducklett",
+  "nature": "Serious",
+  "item": "Sharp Beak",
+  "moves": [
+    "Aerial Ace",
+    "Water Pulse",
+    "FeatherDance",
+    "Defog"
+  ],
+  "evs": "HP/Spe",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "ducklett1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 169,
+    "Atk": 64,
+    "Def": 70,
+    "SpA": 64,
+    "SpD": 70,
+    "Spe": 107
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/580.png"
+}

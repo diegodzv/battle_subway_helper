@@ -1,0 +1,42 @@
+{
+  "global_id": 548,
+  "species": "Togekiss",
+  "nature": "Naughty",
+  "item": "Liechi Berry",
+  "moves": [
+    "ExtremeSpeed",
+    "Aerial Ace",
+    "Psych Up",
+    "Brick Break"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "togekiss2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 160,
+    "Atk": 112,
+    "Def": 115,
+    "SpA": 140,
+    "SpD": 121,
+    "Spe": 132
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png"
+}

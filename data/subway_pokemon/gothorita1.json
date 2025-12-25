@@ -1,0 +1,42 @@
+{
+  "global_id": 64,
+  "species": "Gothorita",
+  "nature": "Hardy",
+  "item": "Persim Berry",
+  "moves": [
+    "Psybeam",
+    "Charge Beam",
+    "Future Sight",
+    "Fake Tears"
+  ],
+  "evs": "",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "gothorita1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 135,
+    "Atk": 65,
+    "Def": 90,
+    "SpA": 95,
+    "SpD": 105,
+    "Spe": 75
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/575.png"
+}

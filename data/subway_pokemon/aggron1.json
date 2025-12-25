@@ -1,0 +1,42 @@
+{
+  "global_id": 354,
+  "species": "Aggron",
+  "nature": "Impish",
+  "item": "Focus Sash",
+  "moves": [
+    "Protect",
+    "Roar",
+    "Stealth Rock",
+    "Metal Burst"
+  ],
+  "evs": "HP/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "aggron1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 177,
+    "Atk": 130,
+    "Def": 220,
+    "SpA": 72,
+    "SpD": 112,
+    "Spe": 70
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png"
+}

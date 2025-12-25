@@ -1,0 +1,42 @@
+{
+  "global_id": 908,
+  "species": "Slaking",
+  "nature": "Jolly",
+  "item": "Life Orb",
+  "moves": [
+    "Return",
+    "Night Slash",
+    "Gunk Shot",
+    "Aerial Ace"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "slaking4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 225,
+    "Atk": 212,
+    "Def": 120,
+    "SpA": 103,
+    "SpD": 85,
+    "Spe": 167
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png"
+}

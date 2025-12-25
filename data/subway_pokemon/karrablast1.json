@@ -1,0 +1,42 @@
+{
+  "global_id": 38,
+  "species": "Karrablast",
+  "nature": "Jolly",
+  "item": "Coba Berry",
+  "moves": [
+    "Fury Cutter",
+    "Aerial Ace",
+    "Flail",
+    "Endure"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "karrablast1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 125,
+    "Atk": 127,
+    "Def": 65,
+    "SpA": 54,
+    "SpD": 65,
+    "Spe": 123
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/588.png"
+}

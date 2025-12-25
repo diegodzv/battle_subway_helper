@@ -1,0 +1,42 @@
+{
+  "global_id": 45,
+  "species": "Zorua",
+  "nature": "Adamant",
+  "item": "BlackGlasses",
+  "moves": [
+    "Foul Play",
+    "Aerial Ace",
+    "Pursuit",
+    "Leer"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "zorua1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 115,
+    "Atk": 128,
+    "Def": 60,
+    "SpA": 90,
+    "SpD": 60,
+    "Spe": 117
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/570.png"
+}

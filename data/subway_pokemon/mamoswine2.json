@@ -1,0 +1,42 @@
+{
+  "global_id": 531,
+  "species": "Mamoswine",
+  "nature": "Brave",
+  "item": "Zoom Lens",
+  "moves": [
+    "Stone Edge",
+    "Bulldoze",
+    "Blizzard",
+    "Ice Fang"
+  ],
+  "evs": "Atk/Def/SpD",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "mamoswine2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 170,
+    "Def": 170,
+    "SpA": 0,
+    "SpD": 170,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 185,
+    "Atk": 188,
+    "Def": 121,
+    "SpA": 90,
+    "SpD": 101,
+    "Spe": 90
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png"
+}

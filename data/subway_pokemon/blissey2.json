@@ -1,0 +1,42 @@
+{
+  "global_id": 543,
+  "species": "Blissey",
+  "nature": "Modest",
+  "item": "Custap Berry",
+  "moves": [
+    "Charge Beam",
+    "Shadow Ball",
+    "Grass Knot",
+    "Thunder Wave"
+  ],
+  "evs": "Def/SpA",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "blissey2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 330,
+    "Atk": 27,
+    "Def": 62,
+    "SpA": 139,
+    "SpD": 155,
+    "Spe": 75
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png"
+}

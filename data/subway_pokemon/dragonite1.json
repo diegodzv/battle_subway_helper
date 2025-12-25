@@ -1,0 +1,42 @@
+{
+  "global_id": 377,
+  "species": "Dragonite",
+  "nature": "Impish",
+  "item": "Custap Berry",
+  "moves": [
+    "Toxic",
+    "Thunder Wave",
+    "Roost",
+    "Rock Slide"
+  ],
+  "evs": "HP/Def/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "dragonite1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 170,
+    "Atk": 0,
+    "Def": 170,
+    "SpA": 0,
+    "SpD": 170,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 187,
+    "Atk": 154,
+    "Def": 149,
+    "SpA": 108,
+    "SpD": 141,
+    "Spe": 100
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+}

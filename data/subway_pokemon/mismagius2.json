@@ -1,0 +1,42 @@
+{
+  "global_id": 464,
+  "species": "Mismagius",
+  "nature": "Timid",
+  "item": "Kasib Berry",
+  "moves": [
+    "Shadow Ball",
+    "Wonder Room",
+    "Grudge",
+    "Pain Split"
+  ],
+  "evs": "HP/SpD",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "mismagius2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 167,
+    "Atk": 72,
+    "Def": 80,
+    "SpA": 125,
+    "SpD": 157,
+    "Spe": 137
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png"
+}

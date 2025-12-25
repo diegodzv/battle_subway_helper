@@ -1,0 +1,42 @@
+{
+  "global_id": 842,
+  "species": "Honchkrow",
+  "nature": "Adamant",
+  "item": "Life Orb",
+  "moves": [
+    "Night Slash",
+    "Drill Peck",
+    "Sucker Punch",
+    "Thunder Wave"
+  ],
+  "evs": "HP/Atk",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "honchkrow4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 207,
+    "Atk": 194,
+    "Def": 72,
+    "SpA": 112,
+    "SpD": 72,
+    "Spe": 91
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/430.png"
+}

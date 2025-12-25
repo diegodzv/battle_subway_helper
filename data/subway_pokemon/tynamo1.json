@@ -1,0 +1,42 @@
+{
+  "global_id": 42,
+  "species": "Tynamo",
+  "nature": "Hardy",
+  "item": "Razor Fang",
+  "moves": [
+    "Charge Beam",
+    "Spark",
+    "Thunder Wave",
+    "Tackle"
+  ],
+  "evs": "Atk/SpA",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "tynamo1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 110,
+    "Atk": 107,
+    "Def": 60,
+    "SpA": 97,
+    "SpD": 60,
+    "Spe": 80
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/602.png"
+}

@@ -1,0 +1,42 @@
+{
+  "global_id": 487,
+  "species": "Luxray",
+  "nature": "Careful",
+  "item": "Quick Claw",
+  "moves": [
+    "Charge Beam",
+    "Helping Hand",
+    "Discharge",
+    "Roar"
+  ],
+  "evs": "HP/SpD",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "luxray2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 187,
+    "Atk": 140,
+    "Def": 99,
+    "SpA": 103,
+    "SpD": 144,
+    "Spe": 90
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png"
+}

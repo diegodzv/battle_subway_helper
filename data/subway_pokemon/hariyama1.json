@@ -1,0 +1,42 @@
+{
+  "global_id": 237,
+  "species": "Hariyama",
+  "nature": "Brave",
+  "item": "King's Rock",
+  "moves": [
+    "Feint",
+    "Fake Out",
+    "Smack Down",
+    "Vital Throw"
+  ],
+  "evs": "Atk/Def/SpD",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "hariyama1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 170,
+    "Def": 170,
+    "SpA": 0,
+    "SpD": 170,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 219,
+    "Atk": 177,
+    "Def": 101,
+    "SpA": 60,
+    "SpD": 101,
+    "Spe": 63
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png"
+}

@@ -1,0 +1,42 @@
+{
+  "global_id": 811,
+  "species": "Rampardos",
+  "nature": "Relaxed",
+  "item": "Sitrus Berry",
+  "moves": [
+    "Head Smash",
+    "Earthquake",
+    "Rock Slide",
+    "Protect"
+  ],
+  "evs": "Atk/SpD",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "rampardos4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 172,
+    "Atk": 217,
+    "Def": 88,
+    "SpA": 85,
+    "SpD": 102,
+    "Spe": 70
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png"
+}

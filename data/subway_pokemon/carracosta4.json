@@ -1,0 +1,42 @@
+{
+  "global_id": 815,
+  "species": "Carracosta",
+  "nature": "Adamant",
+  "item": "Rindo Berry",
+  "moves": [
+    "Waterfall",
+    "Rock Slide",
+    "Aqua Jet",
+    "Earthquake"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "carracosta4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 149,
+    "Atk": 176,
+    "Def": 153,
+    "SpA": 92,
+    "SpD": 85,
+    "Spe": 84
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/565.png"
+}

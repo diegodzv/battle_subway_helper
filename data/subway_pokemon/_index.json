@@ -1,0 +1,2579 @@
+{
+  "meta": {
+    "parse_mode": "table",
+    "total_sets": 988,
+    "total_species": 296
+  },
+  "by_species": {
+    "Patrat": [
+      "patrat1.json",
+      "patrat2.json"
+    ],
+    "Venipede": [
+      "venipede1.json",
+      "venipede2.json"
+    ],
+    "Pidove": [
+      "pidove1.json",
+      "pidove2.json"
+    ],
+    "Lillipup": [
+      "lillipup1.json",
+      "lillipup2.json"
+    ],
+    "Litwick": [
+      "litwick1.json",
+      "litwick2.json"
+    ],
+    "Roggenrola": [
+      "roggenrola1.json",
+      "roggenrola2.json"
+    ],
+    "Cottonee": [
+      "cottonee1.json",
+      "cottonee2.json"
+    ],
+    "Petilil": [
+      "petilil1.json",
+      "petilil2.json"
+    ],
+    "Mienfoo": [
+      "mienfoo1.json",
+      "mienfoo2.json"
+    ],
+    "Purrloin": [
+      "purrloin1.json",
+      "purrloin2.json"
+    ],
+    "Gothita": [
+      "gothita1.json",
+      "gothita2.json"
+    ],
+    "Solosis": [
+      "solosis1.json",
+      "solosis2.json"
+    ],
+    "Munna": [
+      "munna1.json",
+      "munna2.json"
+    ],
+    "Sandile": [
+      "sandile1.json",
+      "sandile2.json"
+    ],
+    "Tympole": [
+      "tympole1.json",
+      "tympole2.json"
+    ],
+    "Foongus": [
+      "foongus1.json",
+      "foongus2.json"
+    ],
+    "Blitzle": [
+      "blitzle1.json",
+      "blitzle2.json"
+    ],
+    "Minccino": [
+      "minccino1.json",
+      "minccino2.json"
+    ],
+    "Klink": [
+      "klink1.json",
+      "klink2.json"
+    ],
+    "Deino": [
+      "deino1.json",
+      "deino2.json"
+    ],
+    "Pansage": [
+      "pansage1.json",
+      "pansage2.json"
+    ],
+    "Pansear": [
+      "pansear1.json",
+      "pansear2.json"
+    ],
+    "Panpour": [
+      "panpour1.json",
+      "panpour2.json"
+    ],
+    "Yamask": [
+      "yamask1.json",
+      "yamask2.json"
+    ],
+    "Golett": [
+      "golett1.json",
+      "golett2.json"
+    ],
+    "Timburr": [
+      "timburr1.json",
+      "timburr2.json"
+    ],
+    "Ducklett": [
+      "ducklett1.json",
+      "ducklett2.json"
+    ],
+    "Vanillite": [
+      "vanillite1.json",
+      "vanillite2.json"
+    ],
+    "Ferroseed": [
+      "ferroseed1.json",
+      "ferroseed2.json"
+    ],
+    "Cubchoo": [
+      "cubchoo1.json",
+      "cubchoo2.json"
+    ],
+    "Shelmet": [
+      "shelmet1.json",
+      "shelmet2.json"
+    ],
+    "Snivy": [
+      "snivy1.json",
+      "snivy2.json"
+    ],
+    "Tepig": [
+      "tepig1.json",
+      "tepig2.json"
+    ],
+    "Oshawott": [
+      "oshawott1.json",
+      "oshawott2.json"
+    ],
+    "Sewaddle": [
+      "sewaddle1.json",
+      "sewaddle2.json"
+    ],
+    "Woobat": [
+      "woobat1.json",
+      "woobat2.json"
+    ],
+    "Darumaka": [
+      "darumaka1.json",
+      "darumaka2.json"
+    ],
+    "Karrablast": [
+      "karrablast1.json",
+      "karrablast2.json"
+    ],
+    "Joltik": [
+      "joltik1.json",
+      "joltik2.json"
+    ],
+    "Axew": [
+      "axew1.json",
+      "axew2.json"
+    ],
+    "Dwebble": [
+      "dwebble1.json",
+      "dwebble2.json"
+    ],
+    "Tynamo": [
+      "tynamo1.json",
+      "tynamo2.json"
+    ],
+    "Drilbur": [
+      "drilbur1.json",
+      "drilbur2.json"
+    ],
+    "Trubbish": [
+      "trubbish1.json",
+      "trubbish2.json"
+    ],
+    "Zorua": [
+      "zorua1.json",
+      "zorua2.json"
+    ],
+    "Deerling": [
+      "deerling1.json",
+      "deerling2.json"
+    ],
+    "Frillish": [
+      "frillish1.json",
+      "frillish2.json"
+    ],
+    "Elgyem": [
+      "elgyem1.json",
+      "elgyem2.json"
+    ],
+    "Pawniard": [
+      "pawniard1.json",
+      "pawniard2.json"
+    ],
+    "Scraggy": [
+      "scraggy1.json",
+      "scraggy2.json"
+    ],
+    "Rufflet": [
+      "rufflet1.json",
+      "rufflet2.json"
+    ],
+    "Krokorok": [
+      "krokorok1.json",
+      "krokorok2.json"
+    ],
+    "Tirtouga": [
+      "tirtouga1.json",
+      "tirtouga2.json"
+    ],
+    "Tranquill": [
+      "tranquill1.json",
+      "tranquill2.json"
+    ],
+    "Whirlipede": [
+      "whirlipede1.json",
+      "whirlipede2.json"
+    ],
+    "Larvesta": [
+      "larvesta1.json",
+      "larvesta2.json"
+    ],
+    "Duosion": [
+      "duosion1.json",
+      "duosion2.json"
+    ],
+    "Lampent": [
+      "lampent1.json",
+      "lampent2.json"
+    ],
+    "Vullaby": [
+      "vullaby1.json",
+      "vullaby2.json"
+    ],
+    "Herdier": [
+      "herdier1.json",
+      "herdier2.json"
+    ],
+    "Swadloon": [
+      "swadloon1.json",
+      "swadloon2.json"
+    ],
+    "Palpitoad": [
+      "palpitoad1.json",
+      "palpitoad2.json"
+    ],
+    "Boldore": [
+      "boldore1.json",
+      "boldore2.json"
+    ],
+    "Gothorita": [
+      "gothorita1.json",
+      "gothorita2.json"
+    ],
+    "Vanillish": [
+      "vanillish1.json",
+      "vanillish2.json"
+    ],
+    "Archen": [
+      "archen1.json",
+      "archen2.json"
+    ],
+    "Gurdurr": [
+      "gurdurr1.json",
+      "gurdurr2.json"
+    ],
+    "Fraxure": [
+      "fraxure1.json",
+      "fraxure2.json"
+    ],
+    "Mienshao": [
+      "mienshao1.json",
+      "mienshao2.json",
+      "mienshao3.json",
+      "mienshao4.json",
+      "mienshao5.json",
+      "mienshao6.json"
+    ],
+    "Servine": [
+      "servine1.json",
+      "servine2.json"
+    ],
+    "Dewott": [
+      "dewott1.json",
+      "dewott2.json"
+    ],
+    "Pignite": [
+      "pignite1.json",
+      "pignite2.json"
+    ],
+    "Watchog": [
+      "watchog1.json",
+      "watchog2.json"
+    ],
+    "Zweilous": [
+      "zweilous1.json",
+      "zweilous2.json"
+    ],
+    "Swoobat": [
+      "swoobat1.json",
+      "swoobat2.json"
+    ],
+    "Emolga": [
+      "emolga1.json",
+      "emolga2.json"
+    ],
+    "Klang": [
+      "klang1.json",
+      "klang2.json"
+    ],
+    "Audino": [
+      "audino1.json",
+      "audino2.json"
+    ],
+    "Liepard": [
+      "liepard1.json",
+      "liepard2.json"
+    ],
+    "Basculin": [
+      "basculin1.json",
+      "basculin2.json"
+    ],
+    "Maractus": [
+      "maractus1.json",
+      "maractus2.json"
+    ],
+    "Simisage": [
+      "simisage1.json",
+      "simisage2.json"
+    ],
+    "Simisear": [
+      "simisear1.json",
+      "simisear2.json"
+    ],
+    "Simipour": [
+      "simipour1.json",
+      "simipour2.json"
+    ],
+    "Amoonguss": [
+      "amoonguss1.json",
+      "amoonguss2.json"
+    ],
+    "Eelektrik": [
+      "eelektrik1.json",
+      "eelektrik2.json"
+    ],
+    "Cinccino": [
+      "cinccino1.json",
+      "cinccino2.json"
+    ],
+    "Alomomola": [
+      "alomomola1.json",
+      "alomomola2.json"
+    ],
+    "Stunfisk": [
+      "stunfisk1.json",
+      "stunfisk2.json"
+    ],
+    "Galvantula": [
+      "galvantula1.json",
+      "galvantula2.json"
+    ],
+    "Swanna": [
+      "swanna1.json",
+      "swanna2.json"
+    ],
+    "Garbodor": [
+      "garbodor1.json",
+      "garbodor2.json"
+    ],
+    "Scolipede": [
+      "scolipede1.json",
+      "scolipede2.json"
+    ],
+    "Crustle": [
+      "crustle1.json",
+      "crustle2.json"
+    ],
+    "Sawsbuck": [
+      "sawsbuck1.json",
+      "sawsbuck2.json"
+    ],
+    "Whimsicott": [
+      "whimsicott1.json",
+      "whimsicott2.json"
+    ],
+    "Jellicent": [
+      "jellicent1.json",
+      "jellicent2.json"
+    ],
+    "Heatmor": [
+      "heatmor1.json",
+      "heatmor2.json"
+    ],
+    "Beheeyem": [
+      "beheeyem1.json",
+      "beheeyem2.json"
+    ],
+    "Beartic": [
+      "beartic1.json",
+      "beartic2.json",
+      "beartic3.json",
+      "beartic4.json",
+      "beartic5.json",
+      "beartic6.json"
+    ],
+    "Stoutland": [
+      "stoutland1.json",
+      "stoutland2.json"
+    ],
+    "Leavanny": [
+      "leavanny1.json",
+      "leavanny2.json"
+    ],
+    "Sigilyph": [
+      "sigilyph1.json",
+      "sigilyph2.json"
+    ],
+    "Bouffalant": [
+      "bouffalant1.json",
+      "bouffalant2.json",
+      "bouffalant3.json",
+      "bouffalant4.json",
+      "bouffalant5.json",
+      "bouffalant6.json"
+    ],
+    "Venusaur": [
+      "venusaur1.json",
+      "venusaur2.json",
+      "venusaur3.json",
+      "venusaur4.json"
+    ],
+    "Charizard": [
+      "charizard1.json",
+      "charizard2.json",
+      "charizard3.json",
+      "charizard4.json"
+    ],
+    "Blastoise": [
+      "blastoise1.json",
+      "blastoise2.json",
+      "blastoise3.json",
+      "blastoise4.json"
+    ],
+    "Meganium": [
+      "meganium1.json",
+      "meganium2.json",
+      "meganium3.json",
+      "meganium4.json"
+    ],
+    "Typhlosion": [
+      "typhlosion1.json",
+      "typhlosion2.json",
+      "typhlosion3.json",
+      "typhlosion4.json"
+    ],
+    "Feraligatr": [
+      "feraligatr1.json",
+      "feraligatr2.json",
+      "feraligatr3.json",
+      "feraligatr4.json"
+    ],
+    "Sceptile": [
+      "sceptile1.json",
+      "sceptile2.json",
+      "sceptile3.json",
+      "sceptile4.json"
+    ],
+    "Blaziken": [
+      "blaziken1.json",
+      "blaziken2.json",
+      "blaziken3.json",
+      "blaziken4.json"
+    ],
+    "Swampert": [
+      "swampert1.json",
+      "swampert2.json",
+      "swampert3.json",
+      "swampert4.json"
+    ],
+    "Torterra": [
+      "torterra1.json",
+      "torterra2.json",
+      "torterra3.json",
+      "torterra4.json"
+    ],
+    "Infernape": [
+      "infernape1.json",
+      "infernape2.json",
+      "infernape3.json",
+      "infernape4.json"
+    ],
+    "Empoleon": [
+      "empoleon1.json",
+      "empoleon2.json",
+      "empoleon3.json",
+      "empoleon4.json"
+    ],
+    "Serperior": [
+      "serperior1.json",
+      "serperior2.json",
+      "serperior3.json",
+      "serperior4.json"
+    ],
+    "Emboar": [
+      "emboar1.json",
+      "emboar2.json",
+      "emboar3.json",
+      "emboar4.json"
+    ],
+    "Samurott": [
+      "samurott1.json",
+      "samurott2.json",
+      "samurott3.json",
+      "samurott4.json"
+    ],
+    "Dugtrio": [
+      "dugtrio1.json",
+      "dugtrio2.json",
+      "dugtrio3.json",
+      "dugtrio4.json"
+    ],
+    "Marowak": [
+      "marowak1.json",
+      "marowak2.json",
+      "marowak3.json",
+      "marowak4.json"
+    ],
+    "Medicham": [
+      "medicham1.json",
+      "medicham2.json",
+      "medicham3.json",
+      "medicham4.json"
+    ],
+    "Quagsire": [
+      "quagsire1.json",
+      "quagsire2.json",
+      "quagsire3.json",
+      "quagsire4.json"
+    ],
+    "Granbull": [
+      "granbull1.json",
+      "granbull2.json",
+      "granbull3.json",
+      "granbull4.json"
+    ],
+    "Jynx": [
+      "jynx1.json",
+      "jynx2.json",
+      "jynx3.json",
+      "jynx4.json"
+    ],
+    "Mr. Mime": [
+      "mrmime1.json",
+      "mrmime2.json",
+      "mrmime3.json",
+      "mrmime4.json"
+    ],
+    "Lanturn": [
+      "lanturn1.json",
+      "lanturn2.json",
+      "lanturn3.json",
+      "lanturn4.json"
+    ],
+    "Breloom": [
+      "breloom1.json",
+      "breloom2.json",
+      "breloom3.json",
+      "breloom4.json"
+    ],
+    "Forretress": [
+      "forretress1.json",
+      "forretress2.json",
+      "forretress3.json",
+      "forretress4.json"
+    ],
+    "Skarmory": [
+      "skarmory1.json",
+      "skarmory2.json",
+      "skarmory3.json",
+      "skarmory4.json"
+    ],
+    "Absol": [
+      "absol1.json",
+      "absol2.json",
+      "absol3.json",
+      "absol4.json"
+    ],
+    "Whiscash": [
+      "whiscash1.json",
+      "whiscash2.json",
+      "whiscash3.json",
+      "whiscash4.json"
+    ],
+    "Hariyama": [
+      "hariyama1.json",
+      "hariyama2.json",
+      "hariyama3.json",
+      "hariyama4.json"
+    ],
+    "Vespiquen": [
+      "vespiquen1.json",
+      "vespiquen2.json",
+      "vespiquen3.json",
+      "vespiquen4.json"
+    ],
+    "Raichu": [
+      "raichu1.json",
+      "raichu2.json",
+      "raichu3.json",
+      "raichu4.json"
+    ],
+    "Dewgong": [
+      "dewgong1.json",
+      "dewgong2.json",
+      "dewgong3.json",
+      "dewgong4.json"
+    ],
+    "Manectric": [
+      "manectric1.json",
+      "manectric2.json",
+      "manectric3.json",
+      "manectric4.json"
+    ],
+    "Staraptor": [
+      "staraptor1.json",
+      "staraptor2.json",
+      "staraptor3.json",
+      "staraptor4.json"
+    ],
+    "Gastrodon": [
+      "gastrodon1.json",
+      "gastrodon2.json",
+      "gastrodon3.json",
+      "gastrodon4.json"
+    ],
+    "Skuntank": [
+      "skuntank1.json",
+      "skuntank2.json",
+      "skuntank3.json",
+      "skuntank4.json"
+    ],
+    "Sawk": [
+      "sawk1.json",
+      "sawk2.json",
+      "sawk3.json",
+      "sawk4.json"
+    ],
+    "Throh": [
+      "throh1.json",
+      "throh2.json",
+      "throh3.json",
+      "throh4.json"
+    ],
+    "Unfezant": [
+      "unfezant1.json",
+      "unfezant2.json",
+      "unfezant3.json",
+      "unfezant4.json"
+    ],
+    "Vileplume": [
+      "vileplume1.json",
+      "vileplume2.json",
+      "vileplume3.json",
+      "vileplume4.json"
+    ],
+    "Victreebel": [
+      "victreebel1.json",
+      "victreebel2.json",
+      "victreebel3.json",
+      "victreebel4.json"
+    ],
+    "Electrode": [
+      "electrode1.json",
+      "electrode2.json",
+      "electrode3.json",
+      "electrode4.json"
+    ],
+    "Ludicolo": [
+      "ludicolo1.json",
+      "ludicolo2.json",
+      "ludicolo3.json",
+      "ludicolo4.json"
+    ],
+    "Shiftry": [
+      "shiftry1.json",
+      "shiftry2.json",
+      "shiftry3.json",
+      "shiftry4.json"
+    ],
+    "Exploud": [
+      "exploud1.json",
+      "exploud2.json",
+      "exploud3.json",
+      "exploud4.json"
+    ],
+    "Lopunny": [
+      "lopunny1.json",
+      "lopunny2.json",
+      "lopunny3.json",
+      "lopunny4.json"
+    ],
+    "Froslass": [
+      "froslass1.json",
+      "froslass2.json",
+      "froslass3.json",
+      "froslass4.json"
+    ],
+    "Lilligant": [
+      "lilligant1.json",
+      "lilligant2.json",
+      "lilligant3.json",
+      "lilligant4.json"
+    ],
+    "Darmanitan": [
+      "darmanitan1.json",
+      "darmanitan2.json",
+      "darmanitan3.json",
+      "darmanitan4.json"
+    ],
+    "Ambipom": [
+      "ambipom1.json",
+      "ambipom2.json",
+      "ambipom3.json",
+      "ambipom4.json"
+    ],
+    "Cofagrigus": [
+      "cofagrigus1.json",
+      "cofagrigus2.json",
+      "cofagrigus3.json",
+      "cofagrigus4.json"
+    ],
+    "Golurk": [
+      "golurk1.json",
+      "golurk2.json",
+      "golurk3.json",
+      "golurk4.json"
+    ],
+    "Durant": [
+      "durant1.json",
+      "durant2.json",
+      "durant3.json",
+      "durant4.json"
+    ],
+    "Golem": [
+      "golem1.json",
+      "golem2.json",
+      "golem3.json",
+      "golem4.json"
+    ],
+    "Slowbro": [
+      "slowbro1.json",
+      "slowbro2.json",
+      "slowbro3.json",
+      "slowbro4.json"
+    ],
+    "Weezing": [
+      "weezing1.json",
+      "weezing2.json",
+      "weezing3.json",
+      "weezing4.json"
+    ],
+    "Kangaskhan": [
+      "kangaskhan1.json",
+      "kangaskhan2.json",
+      "kangaskhan3.json",
+      "kangaskhan4.json"
+    ],
+    "Tauros": [
+      "tauros1.json",
+      "tauros2.json",
+      "tauros3.json",
+      "tauros4.json"
+    ],
+    "Spiritomb": [
+      "spiritomb1.json",
+      "spiritomb2.json",
+      "spiritomb3.json",
+      "spiritomb4.json"
+    ],
+    "Cryogonal": [
+      "cryogonal1.json",
+      "cryogonal2.json",
+      "cryogonal3.json",
+      "cryogonal4.json"
+    ],
+    "Druddigon": [
+      "druddigon1.json",
+      "druddigon2.json",
+      "druddigon3.json",
+      "druddigon4.json"
+    ],
+    "Musharna": [
+      "musharna1.json",
+      "musharna2.json",
+      "musharna3.json",
+      "musharna4.json"
+    ],
+    "Scrafty": [
+      "scrafty1.json",
+      "scrafty2.json",
+      "scrafty3.json",
+      "scrafty4.json"
+    ],
+    "Ferrothorn": [
+      "ferrothorn1.json",
+      "ferrothorn2.json",
+      "ferrothorn3.json",
+      "ferrothorn4.json"
+    ],
+    "Alakazam": [
+      "alakazam1.json",
+      "alakazam2.json",
+      "alakazam3.json",
+      "alakazam4.json"
+    ],
+    "Slowking": [
+      "slowking1.json",
+      "slowking2.json",
+      "slowking3.json",
+      "slowking4.json"
+    ],
+    "Miltank": [
+      "miltank1.json",
+      "miltank2.json",
+      "miltank3.json",
+      "miltank4.json"
+    ],
+    "Altaria": [
+      "altaria1.json",
+      "altaria2.json",
+      "altaria3.json",
+      "altaria4.json"
+    ],
+    "Toxicroak": [
+      "toxicroak1.json",
+      "toxicroak2.json",
+      "toxicroak3.json",
+      "toxicroak4.json"
+    ],
+    "Gothitelle": [
+      "gothitelle1.json",
+      "gothitelle2.json",
+      "gothitelle3.json",
+      "gothitelle4.json"
+    ],
+    "Reuniclus": [
+      "reuniclus1.json",
+      "reuniclus2.json",
+      "reuniclus3.json",
+      "reuniclus4.json"
+    ],
+    "Bisharp": [
+      "bisharp1.json",
+      "bisharp2.json",
+      "bisharp3.json",
+      "bisharp4.json"
+    ],
+    "Abomasnow": [
+      "abomasnow1.json",
+      "abomasnow2.json",
+      "abomasnow3.json",
+      "abomasnow4.json"
+    ],
+    "Nidoqueen": [
+      "nidoqueen1.json",
+      "nidoqueen2.json",
+      "nidoqueen3.json",
+      "nidoqueen4.json"
+    ],
+    "Nidoking": [
+      "nidoking1.json",
+      "nidoking2.json",
+      "nidoking3.json",
+      "nidoking4.json"
+    ],
+    "Cradily": [
+      "cradily1.json",
+      "cradily2.json",
+      "cradily3.json",
+      "cradily4.json"
+    ],
+    "Armaldo": [
+      "armaldo1.json",
+      "armaldo2.json",
+      "armaldo3.json",
+      "armaldo4.json"
+    ],
+    "Rampardos": [
+      "rampardos1.json",
+      "rampardos2.json",
+      "rampardos3.json",
+      "rampardos4.json"
+    ],
+    "Bastiodon": [
+      "bastiodon1.json",
+      "bastiodon2.json",
+      "bastiodon3.json",
+      "bastiodon4.json"
+    ],
+    "Floatzel": [
+      "floatzel1.json",
+      "floatzel2.json",
+      "floatzel3.json",
+      "floatzel4.json"
+    ],
+    "Mismagius": [
+      "mismagius1.json",
+      "mismagius2.json",
+      "mismagius3.json",
+      "mismagius4.json"
+    ],
+    "Carracosta": [
+      "carracosta1.json",
+      "carracosta2.json",
+      "carracosta3.json",
+      "carracosta4.json"
+    ],
+    "Escavalier": [
+      "escavalier1.json",
+      "escavalier2.json",
+      "escavalier3.json",
+      "escavalier4.json"
+    ],
+    "Accelgor": [
+      "accelgor1.json",
+      "accelgor2.json",
+      "accelgor3.json",
+      "accelgor4.json"
+    ],
+    "Zebstrika": [
+      "zebstrika1.json",
+      "zebstrika2.json",
+      "zebstrika3.json",
+      "zebstrika4.json"
+    ],
+    "Drifblim": [
+      "drifblim1.json",
+      "drifblim2.json",
+      "drifblim3.json",
+      "drifblim4.json"
+    ],
+    "Seismitoad": [
+      "seismitoad1.json",
+      "seismitoad2.json",
+      "seismitoad3.json",
+      "seismitoad4.json"
+    ],
+    "Poliwrath": [
+      "poliwrath1.json",
+      "poliwrath2.json",
+      "poliwrath3.json",
+      "poliwrath4.json"
+    ],
+    "Rapidash": [
+      "rapidash1.json",
+      "rapidash2.json",
+      "rapidash3.json",
+      "rapidash4.json"
+    ],
+    "Muk": [
+      "muk1.json",
+      "muk2.json",
+      "muk3.json",
+      "muk4.json"
+    ],
+    "Gengar": [
+      "gengar1.json",
+      "gengar2.json",
+      "gengar3.json",
+      "gengar4.json"
+    ],
+    "Ampharos": [
+      "ampharos1.json",
+      "ampharos2.json",
+      "ampharos3.json",
+      "ampharos4.json"
+    ],
+    "Politoed": [
+      "politoed1.json",
+      "politoed2.json",
+      "politoed3.json",
+      "politoed4.json"
+    ],
+    "Pinsir": [
+      "pinsir1.json",
+      "pinsir2.json",
+      "pinsir3.json",
+      "pinsir4.json"
+    ],
+    "Scizor": [
+      "scizor1.json",
+      "scizor2.json",
+      "scizor3.json",
+      "scizor4.json"
+    ],
+    "Heracross": [
+      "heracross1.json",
+      "heracross2.json",
+      "heracross3.json",
+      "heracross4.json"
+    ],
+    "Ursaring": [
+      "ursaring1.json",
+      "ursaring2.json",
+      "ursaring3.json",
+      "ursaring4.json"
+    ],
+    "Houndoom": [
+      "houndoom1.json",
+      "houndoom2.json",
+      "houndoom3.json",
+      "houndoom4.json"
+    ],
+    "Donphan": [
+      "donphan1.json",
+      "donphan2.json",
+      "donphan3.json",
+      "donphan4.json"
+    ],
+    "Wailord": [
+      "wailord1.json",
+      "wailord2.json",
+      "wailord3.json",
+      "wailord4.json"
+    ],
+    "Claydol": [
+      "claydol1.json",
+      "claydol2.json",
+      "claydol3.json",
+      "claydol4.json"
+    ],
+    "Bronzong": [
+      "bronzong1.json",
+      "bronzong2.json",
+      "bronzong3.json",
+      "bronzong4.json"
+    ],
+    "Drapion": [
+      "drapion1.json",
+      "drapion2.json",
+      "drapion3.json",
+      "drapion4.json"
+    ],
+    "Luxray": [
+      "luxray1.json",
+      "luxray2.json",
+      "luxray3.json",
+      "luxray4.json"
+    ],
+    "Ninetales": [
+      "ninetales1.json",
+      "ninetales2.json",
+      "ninetales3.json",
+      "ninetales4.json"
+    ],
+    "Machamp": [
+      "machamp1.json",
+      "machamp2.json",
+      "machamp3.json",
+      "machamp4.json"
+    ],
+    "Shuckle": [
+      "shuckle1.json",
+      "shuckle2.json",
+      "shuckle3.json",
+      "shuckle4.json"
+    ],
+    "Roserade": [
+      "roserade1.json",
+      "roserade2.json",
+      "roserade3.json",
+      "roserade4.json"
+    ],
+    "Honchkrow": [
+      "honchkrow1.json",
+      "honchkrow2.json",
+      "honchkrow3.json",
+      "honchkrow4.json"
+    ],
+    "Gigalith": [
+      "gigalith1.json",
+      "gigalith2.json",
+      "gigalith3.json",
+      "gigalith4.json"
+    ],
+    "Conkeldurr": [
+      "conkeldurr1.json",
+      "conkeldurr2.json",
+      "conkeldurr3.json",
+      "conkeldurr4.json"
+    ],
+    "Excadrill": [
+      "excadrill1.json",
+      "excadrill2.json",
+      "excadrill3.json",
+      "excadrill4.json"
+    ],
+    "Krookodile": [
+      "krookodile1.json",
+      "krookodile2.json",
+      "krookodile3.json",
+      "krookodile4.json"
+    ],
+    "Steelix": [
+      "steelix1.json",
+      "steelix2.json",
+      "steelix3.json",
+      "steelix4.json"
+    ],
+    "Weavile": [
+      "weavile1.json",
+      "weavile2.json",
+      "weavile3.json",
+      "weavile4.json"
+    ],
+    "Gliscor": [
+      "gliscor1.json",
+      "gliscor2.json",
+      "gliscor3.json",
+      "gliscor4.json"
+    ],
+    "Zoroark": [
+      "zoroark1.json",
+      "zoroark2.json",
+      "zoroark3.json",
+      "zoroark4.json"
+    ],
+    "Mandibuzz": [
+      "mandibuzz1.json",
+      "mandibuzz2.json",
+      "mandibuzz3.json",
+      "mandibuzz4.json"
+    ],
+    "Braviary": [
+      "braviary1.json",
+      "braviary2.json",
+      "braviary3.json",
+      "braviary4.json"
+    ],
+    "Tentacruel": [
+      "tentacruel1.json",
+      "tentacruel2.json",
+      "tentacruel3.json",
+      "tentacruel4.json"
+    ],
+    "Aerodactyl": [
+      "aerodactyl1.json",
+      "aerodactyl2.json",
+      "aerodactyl3.json",
+      "aerodactyl4.json"
+    ],
+    "Porygon2": [
+      "porygon21.json",
+      "porygon22.json",
+      "porygon23.json",
+      "porygon24.json"
+    ],
+    "Lickilicky": [
+      "lickilicky1.json",
+      "lickilicky2.json",
+      "lickilicky3.json",
+      "lickilicky4.json"
+    ],
+    "Yanmega": [
+      "yanmega1.json",
+      "yanmega2.json",
+      "yanmega3.json",
+      "yanmega4.json"
+    ],
+    "Gardevoir": [
+      "gardevoir1.json",
+      "gardevoir2.json",
+      "gardevoir3.json",
+      "gardevoir4.json"
+    ],
+    "Gallade": [
+      "gallade1.json",
+      "gallade2.json",
+      "gallade3.json",
+      "gallade4.json"
+    ],
+    "Exeggutor": [
+      "exeggutor1.json",
+      "exeggutor2.json",
+      "exeggutor3.json",
+      "exeggutor4.json"
+    ],
+    "Starmie": [
+      "starmie1.json",
+      "starmie2.json",
+      "starmie3.json",
+      "starmie4.json"
+    ],
+    "Flygon": [
+      "flygon1.json",
+      "flygon2.json",
+      "flygon3.json",
+      "flygon4.json"
+    ],
+    "Klinklang": [
+      "klinklang1.json",
+      "klinklang2.json",
+      "klinklang3.json",
+      "klinklang4.json"
+    ],
+    "Chandelure": [
+      "chandelure1.json",
+      "chandelure2.json",
+      "chandelure3.json",
+      "chandelure4.json"
+    ],
+    "Vaporeon": [
+      "vaporeon1.json",
+      "vaporeon2.json",
+      "vaporeon3.json",
+      "vaporeon4.json"
+    ],
+    "Jolteon": [
+      "jolteon1.json",
+      "jolteon2.json",
+      "jolteon3.json",
+      "jolteon4.json"
+    ],
+    "Flareon": [
+      "flareon1.json",
+      "flareon2.json",
+      "flareon3.json",
+      "flareon4.json"
+    ],
+    "Espeon": [
+      "espeon1.json",
+      "espeon2.json",
+      "espeon3.json",
+      "espeon4.json"
+    ],
+    "Umbreon": [
+      "umbreon1.json",
+      "umbreon2.json",
+      "umbreon3.json",
+      "umbreon4.json"
+    ],
+    "Leafeon": [
+      "leafeon1.json",
+      "leafeon2.json",
+      "leafeon3.json",
+      "leafeon4.json"
+    ],
+    "Glaceon": [
+      "glaceon1.json",
+      "glaceon2.json",
+      "glaceon3.json",
+      "glaceon4.json"
+    ],
+    "Lucario": [
+      "lucario1.json",
+      "lucario2.json",
+      "lucario3.json",
+      "lucario4.json"
+    ],
+    "Hippowdon": [
+      "hippowdon1.json",
+      "hippowdon2.json",
+      "hippowdon3.json",
+      "hippowdon4.json"
+    ],
+    "Probopass": [
+      "probopass1.json",
+      "probopass2.json",
+      "probopass3.json",
+      "probopass4.json"
+    ],
+    "Dusknoir": [
+      "dusknoir1.json",
+      "dusknoir2.json",
+      "dusknoir3.json",
+      "dusknoir4.json"
+    ],
+    "Aggron": [
+      "aggron1.json",
+      "aggron2.json",
+      "aggron3.json",
+      "aggron4.json"
+    ],
+    "Walrein": [
+      "walrein1.json",
+      "walrein2.json",
+      "walrein3.json",
+      "walrein4.json"
+    ],
+    "Mamoswine": [
+      "mamoswine1.json",
+      "mamoswine2.json",
+      "mamoswine3.json",
+      "mamoswine4.json"
+    ],
+    "Lapras": [
+      "lapras1.json",
+      "lapras2.json",
+      "lapras3.json",
+      "lapras4.json"
+    ],
+    "Crobat": [
+      "crobat1.json",
+      "crobat2.json",
+      "crobat3.json",
+      "crobat4.json"
+    ],
+    "Magnezone": [
+      "magnezone1.json",
+      "magnezone2.json",
+      "magnezone3.json",
+      "magnezone4.json"
+    ],
+    "Rhyperior": [
+      "rhyperior1.json",
+      "rhyperior2.json",
+      "rhyperior3.json",
+      "rhyperior4.json"
+    ],
+    "Tangrowth": [
+      "tangrowth1.json",
+      "tangrowth2.json",
+      "tangrowth3.json",
+      "tangrowth4.json"
+    ],
+    "Porygon-z": [
+      "porygonz1.json",
+      "porygonz2.json",
+      "porygonz3.json",
+      "porygonz4.json"
+    ],
+    "Vanilluxe": [
+      "vanilluxe1.json",
+      "vanilluxe2.json",
+      "vanilluxe3.json",
+      "vanilluxe4.json"
+    ],
+    "Eelektross": [
+      "eelektross1.json",
+      "eelektross2.json",
+      "eelektross3.json",
+      "eelektross4.json"
+    ],
+    "Gyarados": [
+      "gyarados1.json",
+      "gyarados2.json",
+      "gyarados3.json",
+      "gyarados4.json"
+    ],
+    "Snorlax": [
+      "snorlax1.json",
+      "snorlax2.json",
+      "snorlax3.json",
+      "snorlax4.json"
+    ],
+    "Kingdra": [
+      "kingdra1.json",
+      "kingdra2.json",
+      "kingdra3.json",
+      "kingdra4.json"
+    ],
+    "Blissey": [
+      "blissey1.json",
+      "blissey2.json",
+      "blissey3.json",
+      "blissey4.json"
+    ],
+    "Milotic": [
+      "milotic1.json",
+      "milotic2.json",
+      "milotic3.json",
+      "milotic4.json"
+    ],
+    "Electivire": [
+      "electivire1.json",
+      "electivire2.json",
+      "electivire3.json",
+      "electivire4.json"
+    ],
+    "Magmortar": [
+      "magmortar1.json",
+      "magmortar2.json",
+      "magmortar3.json",
+      "magmortar4.json"
+    ],
+    "Haxorus": [
+      "haxorus1.json",
+      "haxorus2.json",
+      "haxorus3.json",
+      "haxorus4.json"
+    ],
+    "Togekiss": [
+      "togekiss1.json",
+      "togekiss2.json",
+      "togekiss3.json",
+      "togekiss4.json"
+    ],
+    "Volcarona": [
+      "volcarona1.json",
+      "volcarona2.json",
+      "volcarona3.json",
+      "volcarona4.json"
+    ],
+    "Arcanine": [
+      "arcanine1.json",
+      "arcanine2.json",
+      "arcanine3.json",
+      "arcanine4.json"
+    ],
+    "Archeops": [
+      "archeops1.json",
+      "archeops2.json",
+      "archeops3.json",
+      "archeops4.json"
+    ],
+    "Dragonite": [
+      "dragonite1.json",
+      "dragonite2.json",
+      "dragonite3.json",
+      "dragonite4.json"
+    ],
+    "Tyranitar": [
+      "tyranitar1.json",
+      "tyranitar2.json",
+      "tyranitar3.json",
+      "tyranitar4.json"
+    ],
+    "Salamence": [
+      "salamence1.json",
+      "salamence2.json",
+      "salamence3.json",
+      "salamence4.json"
+    ],
+    "Metagross": [
+      "metagross1.json",
+      "metagross2.json",
+      "metagross3.json",
+      "metagross4.json"
+    ],
+    "Garchomp": [
+      "garchomp1.json",
+      "garchomp2.json",
+      "garchomp3.json",
+      "garchomp4.json"
+    ],
+    "Hydreigon": [
+      "hydreigon1.json",
+      "hydreigon2.json",
+      "hydreigon3.json",
+      "hydreigon4.json"
+    ],
+    "Slaking": [
+      "slaking1.json",
+      "slaking2.json",
+      "slaking3.json",
+      "slaking4.json"
+    ],
+    "Articuno": [
+      "articuno1.json",
+      "articuno2.json",
+      "articuno3.json",
+      "articuno4.json"
+    ],
+    "Zapdos": [
+      "zapdos1.json",
+      "zapdos2.json",
+      "zapdos3.json",
+      "zapdos4.json"
+    ],
+    "Moltres": [
+      "moltres1.json",
+      "moltres2.json",
+      "moltres3.json",
+      "moltres4.json"
+    ],
+    "Raikou": [
+      "raikou1.json",
+      "raikou2.json",
+      "raikou3.json",
+      "raikou4.json"
+    ],
+    "Entei": [
+      "entei1.json",
+      "entei2.json",
+      "entei3.json",
+      "entei4.json"
+    ],
+    "Suicune": [
+      "suicune1.json",
+      "suicune2.json",
+      "suicune3.json",
+      "suicune4.json"
+    ],
+    "Regirock": [
+      "regirock1.json",
+      "regirock2.json",
+      "regirock3.json",
+      "regirock4.json"
+    ],
+    "Regice": [
+      "regice1.json",
+      "regice2.json",
+      "regice3.json",
+      "regice4.json"
+    ],
+    "Registeel": [
+      "registeel1.json",
+      "registeel2.json",
+      "registeel3.json",
+      "registeel4.json"
+    ],
+    "Cobalion": [
+      "cobalion1.json",
+      "cobalion2.json",
+      "cobalion3.json",
+      "cobalion4.json"
+    ],
+    "Terrakion": [
+      "terrakion1.json",
+      "terrakion2.json",
+      "terrakion3.json",
+      "terrakion4.json"
+    ],
+    "Virizion": [
+      "virizion1.json",
+      "virizion2.json",
+      "virizion3.json",
+      "virizion4.json"
+    ],
+    "Tornadus": [
+      "tornadus1.json",
+      "tornadus2.json",
+      "tornadus3.json",
+      "tornadus4.json"
+    ],
+    "Thundurus": [
+      "thundurus1.json",
+      "thundurus2.json",
+      "thundurus3.json",
+      "thundurus4.json"
+    ],
+    "Latias": [
+      "latias1.json",
+      "latias2.json",
+      "latias3.json",
+      "latias4.json"
+    ],
+    "Latios": [
+      "latios1.json",
+      "latios2.json",
+      "latios3.json",
+      "latios4.json"
+    ],
+    "Heatran": [
+      "heatran1.json",
+      "heatran2.json",
+      "heatran3.json",
+      "heatran4.json"
+    ],
+    "Cresselia": [
+      "cresselia1.json",
+      "cresselia2.json",
+      "cresselia3.json",
+      "cresselia4.json"
+    ],
+    "Landorus": [
+      "landorus1.json",
+      "landorus2.json",
+      "landorus3.json",
+      "landorus4.json"
+    ],
+    "Regigigas": [
+      "regigigas1.json",
+      "regigigas2.json",
+      "regigigas3.json",
+      "regigigas4.json"
+    ]
+  },
+  "by_global_id": {
+    "1": "patrat1.json",
+    "2": "venipede1.json",
+    "3": "pidove1.json",
+    "4": "lillipup1.json",
+    "5": "litwick1.json",
+    "6": "roggenrola1.json",
+    "7": "cottonee1.json",
+    "8": "petilil1.json",
+    "9": "mienfoo1.json",
+    "10": "purrloin1.json",
+    "11": "gothita1.json",
+    "12": "solosis1.json",
+    "13": "munna1.json",
+    "14": "sandile1.json",
+    "15": "tympole1.json",
+    "16": "foongus1.json",
+    "17": "blitzle1.json",
+    "18": "minccino1.json",
+    "19": "klink1.json",
+    "20": "deino1.json",
+    "21": "pansage1.json",
+    "22": "pansear1.json",
+    "23": "panpour1.json",
+    "24": "yamask1.json",
+    "25": "golett1.json",
+    "26": "timburr1.json",
+    "27": "ducklett1.json",
+    "28": "vanillite1.json",
+    "29": "ferroseed1.json",
+    "30": "cubchoo1.json",
+    "31": "shelmet1.json",
+    "32": "snivy1.json",
+    "33": "tepig1.json",
+    "34": "oshawott1.json",
+    "35": "sewaddle1.json",
+    "36": "woobat1.json",
+    "37": "darumaka1.json",
+    "38": "karrablast1.json",
+    "39": "joltik1.json",
+    "40": "axew1.json",
+    "41": "dwebble1.json",
+    "42": "tynamo1.json",
+    "43": "drilbur1.json",
+    "44": "trubbish1.json",
+    "45": "zorua1.json",
+    "46": "deerling1.json",
+    "47": "frillish1.json",
+    "48": "elgyem1.json",
+    "49": "pawniard1.json",
+    "50": "scraggy1.json",
+    "51": "rufflet1.json",
+    "52": "krokorok1.json",
+    "53": "tirtouga1.json",
+    "54": "tranquill1.json",
+    "55": "whirlipede1.json",
+    "56": "larvesta1.json",
+    "57": "duosion1.json",
+    "58": "lampent1.json",
+    "59": "vullaby1.json",
+    "60": "herdier1.json",
+    "61": "swadloon1.json",
+    "62": "palpitoad1.json",
+    "63": "boldore1.json",
+    "64": "gothorita1.json",
+    "65": "vanillish1.json",
+    "66": "archen1.json",
+    "67": "patrat2.json",
+    "68": "venipede2.json",
+    "69": "pidove2.json",
+    "70": "lillipup2.json",
+    "71": "litwick2.json",
+    "72": "roggenrola2.json",
+    "73": "cottonee2.json",
+    "74": "petilil2.json",
+    "75": "mienfoo2.json",
+    "76": "purrloin2.json",
+    "77": "gothita2.json",
+    "78": "solosis2.json",
+    "79": "munna2.json",
+    "80": "sandile2.json",
+    "81": "tympole2.json",
+    "82": "foongus2.json",
+    "83": "blitzle2.json",
+    "84": "minccino2.json",
+    "85": "klink2.json",
+    "86": "deino2.json",
+    "87": "pansage2.json",
+    "88": "pansear2.json",
+    "89": "panpour2.json",
+    "90": "yamask2.json",
+    "91": "golett2.json",
+    "92": "timburr2.json",
+    "93": "ducklett2.json",
+    "94": "vanillite2.json",
+    "95": "ferroseed2.json",
+    "96": "cubchoo2.json",
+    "97": "shelmet2.json",
+    "98": "snivy2.json",
+    "99": "tepig2.json",
+    "100": "oshawott2.json",
+    "101": "sewaddle2.json",
+    "102": "woobat2.json",
+    "103": "darumaka2.json",
+    "104": "karrablast2.json",
+    "105": "joltik2.json",
+    "106": "axew2.json",
+    "107": "dwebble2.json",
+    "108": "tynamo2.json",
+    "109": "drilbur2.json",
+    "110": "trubbish2.json",
+    "111": "zorua2.json",
+    "112": "deerling2.json",
+    "113": "frillish2.json",
+    "114": "elgyem2.json",
+    "115": "pawniard2.json",
+    "116": "scraggy2.json",
+    "117": "rufflet2.json",
+    "118": "krokorok2.json",
+    "119": "tirtouga2.json",
+    "120": "tranquill2.json",
+    "121": "whirlipede2.json",
+    "122": "larvesta2.json",
+    "123": "duosion2.json",
+    "124": "lampent2.json",
+    "125": "vullaby2.json",
+    "126": "herdier2.json",
+    "127": "swadloon2.json",
+    "128": "palpitoad2.json",
+    "129": "boldore2.json",
+    "130": "gothorita2.json",
+    "131": "vanillish2.json",
+    "132": "archen2.json",
+    "133": "gurdurr1.json",
+    "134": "fraxure1.json",
+    "135": "mienshao1.json",
+    "136": "servine1.json",
+    "137": "dewott1.json",
+    "138": "pignite1.json",
+    "139": "watchog1.json",
+    "140": "zweilous1.json",
+    "141": "swoobat1.json",
+    "142": "emolga1.json",
+    "143": "klang1.json",
+    "144": "audino1.json",
+    "145": "liepard1.json",
+    "146": "basculin1.json",
+    "147": "maractus1.json",
+    "148": "simisage1.json",
+    "149": "simisear1.json",
+    "150": "simipour1.json",
+    "151": "amoonguss1.json",
+    "152": "eelektrik1.json",
+    "153": "cinccino1.json",
+    "154": "alomomola1.json",
+    "155": "stunfisk1.json",
+    "156": "galvantula1.json",
+    "157": "swanna1.json",
+    "158": "garbodor1.json",
+    "159": "scolipede1.json",
+    "160": "crustle1.json",
+    "161": "sawsbuck1.json",
+    "162": "whimsicott1.json",
+    "163": "jellicent1.json",
+    "164": "heatmor1.json",
+    "165": "beheeyem1.json",
+    "166": "beartic1.json",
+    "167": "stoutland1.json",
+    "168": "leavanny1.json",
+    "169": "sigilyph1.json",
+    "170": "bouffalant1.json",
+    "171": "gurdurr2.json",
+    "172": "fraxure2.json",
+    "173": "mienshao2.json",
+    "174": "servine2.json",
+    "175": "dewott2.json",
+    "176": "pignite2.json",
+    "177": "watchog2.json",
+    "178": "zweilous2.json",
+    "179": "swoobat2.json",
+    "180": "emolga2.json",
+    "181": "klang2.json",
+    "182": "audino2.json",
+    "183": "liepard2.json",
+    "184": "basculin2.json",
+    "185": "maractus2.json",
+    "186": "simisage2.json",
+    "187": "simisear2.json",
+    "188": "simipour2.json",
+    "189": "amoonguss2.json",
+    "190": "eelektrik2.json",
+    "191": "cinccino2.json",
+    "192": "alomomola2.json",
+    "193": "stunfisk2.json",
+    "194": "galvantula2.json",
+    "195": "swanna2.json",
+    "196": "garbodor2.json",
+    "197": "scolipede2.json",
+    "198": "crustle2.json",
+    "199": "sawsbuck2.json",
+    "200": "whimsicott2.json",
+    "201": "jellicent2.json",
+    "202": "heatmor2.json",
+    "203": "beheeyem2.json",
+    "204": "beartic2.json",
+    "205": "stoutland2.json",
+    "206": "leavanny2.json",
+    "207": "sigilyph2.json",
+    "208": "bouffalant2.json",
+    "209": "venusaur1.json",
+    "210": "charizard1.json",
+    "211": "blastoise1.json",
+    "212": "meganium1.json",
+    "213": "typhlosion1.json",
+    "214": "feraligatr1.json",
+    "215": "sceptile1.json",
+    "216": "blaziken1.json",
+    "217": "swampert1.json",
+    "218": "torterra1.json",
+    "219": "infernape1.json",
+    "220": "empoleon1.json",
+    "221": "serperior1.json",
+    "222": "emboar1.json",
+    "223": "samurott1.json",
+    "224": "dugtrio1.json",
+    "225": "marowak1.json",
+    "226": "medicham1.json",
+    "227": "quagsire1.json",
+    "228": "granbull1.json",
+    "229": "jynx1.json",
+    "230": "mrmime1.json",
+    "231": "lanturn1.json",
+    "232": "breloom1.json",
+    "233": "forretress1.json",
+    "234": "skarmory1.json",
+    "235": "absol1.json",
+    "236": "whiscash1.json",
+    "237": "hariyama1.json",
+    "238": "vespiquen1.json",
+    "239": "raichu1.json",
+    "240": "dewgong1.json",
+    "241": "manectric1.json",
+    "242": "staraptor1.json",
+    "243": "gastrodon1.json",
+    "244": "skuntank1.json",
+    "245": "sawk1.json",
+    "246": "throh1.json",
+    "247": "unfezant1.json",
+    "248": "vileplume1.json",
+    "249": "victreebel1.json",
+    "250": "electrode1.json",
+    "251": "ludicolo1.json",
+    "252": "shiftry1.json",
+    "253": "exploud1.json",
+    "254": "lopunny1.json",
+    "255": "froslass1.json",
+    "256": "lilligant1.json",
+    "257": "darmanitan1.json",
+    "258": "ambipom1.json",
+    "259": "cofagrigus1.json",
+    "260": "golurk1.json",
+    "261": "durant1.json",
+    "262": "golem1.json",
+    "263": "slowbro1.json",
+    "264": "weezing1.json",
+    "265": "kangaskhan1.json",
+    "266": "tauros1.json",
+    "267": "spiritomb1.json",
+    "268": "cryogonal1.json",
+    "269": "druddigon1.json",
+    "270": "musharna1.json",
+    "271": "scrafty1.json",
+    "272": "ferrothorn1.json",
+    "273": "alakazam1.json",
+    "274": "slowking1.json",
+    "275": "miltank1.json",
+    "276": "altaria1.json",
+    "277": "toxicroak1.json",
+    "278": "gothitelle1.json",
+    "279": "reuniclus1.json",
+    "280": "bisharp1.json",
+    "281": "abomasnow1.json",
+    "282": "nidoqueen1.json",
+    "283": "nidoking1.json",
+    "284": "cradily1.json",
+    "285": "armaldo1.json",
+    "286": "rampardos1.json",
+    "287": "bastiodon1.json",
+    "288": "floatzel1.json",
+    "289": "mismagius1.json",
+    "290": "carracosta1.json",
+    "291": "escavalier1.json",
+    "292": "accelgor1.json",
+    "293": "zebstrika1.json",
+    "294": "drifblim1.json",
+    "295": "seismitoad1.json",
+    "296": "poliwrath1.json",
+    "297": "rapidash1.json",
+    "298": "muk1.json",
+    "299": "gengar1.json",
+    "300": "ampharos1.json",
+    "301": "politoed1.json",
+    "302": "pinsir1.json",
+    "303": "scizor1.json",
+    "304": "heracross1.json",
+    "305": "ursaring1.json",
+    "306": "houndoom1.json",
+    "307": "donphan1.json",
+    "308": "wailord1.json",
+    "309": "claydol1.json",
+    "310": "bronzong1.json",
+    "311": "drapion1.json",
+    "312": "luxray1.json",
+    "313": "ninetales1.json",
+    "314": "machamp1.json",
+    "315": "shuckle1.json",
+    "316": "roserade1.json",
+    "317": "honchkrow1.json",
+    "318": "gigalith1.json",
+    "319": "conkeldurr1.json",
+    "320": "excadrill1.json",
+    "321": "krookodile1.json",
+    "322": "steelix1.json",
+    "323": "weavile1.json",
+    "324": "gliscor1.json",
+    "325": "zoroark1.json",
+    "326": "mandibuzz1.json",
+    "327": "braviary1.json",
+    "328": "tentacruel1.json",
+    "329": "aerodactyl1.json",
+    "330": "porygon21.json",
+    "331": "lickilicky1.json",
+    "332": "yanmega1.json",
+    "333": "gardevoir1.json",
+    "334": "gallade1.json",
+    "335": "exeggutor1.json",
+    "336": "starmie1.json",
+    "337": "flygon1.json",
+    "338": "klinklang1.json",
+    "339": "chandelure1.json",
+    "340": "vaporeon1.json",
+    "341": "jolteon1.json",
+    "342": "flareon1.json",
+    "343": "espeon1.json",
+    "344": "umbreon1.json",
+    "345": "leafeon1.json",
+    "346": "glaceon1.json",
+    "347": "lucario1.json",
+    "348": "hippowdon1.json",
+    "349": "probopass1.json",
+    "350": "dusknoir1.json",
+    "351": "mienshao3.json",
+    "352": "beartic3.json",
+    "353": "bouffalant3.json",
+    "354": "aggron1.json",
+    "355": "walrein1.json",
+    "356": "mamoswine1.json",
+    "357": "lapras1.json",
+    "358": "crobat1.json",
+    "359": "magnezone1.json",
+    "360": "rhyperior1.json",
+    "361": "tangrowth1.json",
+    "362": "porygonz1.json",
+    "363": "vanilluxe1.json",
+    "364": "eelektross1.json",
+    "365": "gyarados1.json",
+    "366": "snorlax1.json",
+    "367": "kingdra1.json",
+    "368": "blissey1.json",
+    "369": "milotic1.json",
+    "370": "electivire1.json",
+    "371": "magmortar1.json",
+    "372": "haxorus1.json",
+    "373": "togekiss1.json",
+    "374": "volcarona1.json",
+    "375": "arcanine1.json",
+    "376": "archeops1.json",
+    "377": "dragonite1.json",
+    "378": "tyranitar1.json",
+    "379": "salamence1.json",
+    "380": "metagross1.json",
+    "381": "garchomp1.json",
+    "382": "hydreigon1.json",
+    "383": "slaking1.json",
+    "384": "venusaur2.json",
+    "385": "charizard2.json",
+    "386": "blastoise2.json",
+    "387": "meganium2.json",
+    "388": "typhlosion2.json",
+    "389": "feraligatr2.json",
+    "390": "sceptile2.json",
+    "391": "blaziken2.json",
+    "392": "swampert2.json",
+    "393": "torterra2.json",
+    "394": "infernape2.json",
+    "395": "empoleon2.json",
+    "396": "serperior2.json",
+    "397": "emboar2.json",
+    "398": "samurott2.json",
+    "399": "dugtrio2.json",
+    "400": "marowak2.json",
+    "401": "medicham2.json",
+    "402": "quagsire2.json",
+    "403": "granbull2.json",
+    "404": "jynx2.json",
+    "405": "mrmime2.json",
+    "406": "lanturn2.json",
+    "407": "breloom2.json",
+    "408": "forretress2.json",
+    "409": "skarmory2.json",
+    "410": "absol2.json",
+    "411": "whiscash2.json",
+    "412": "hariyama2.json",
+    "413": "vespiquen2.json",
+    "414": "raichu2.json",
+    "415": "dewgong2.json",
+    "416": "manectric2.json",
+    "417": "staraptor2.json",
+    "418": "gastrodon2.json",
+    "419": "skuntank2.json",
+    "420": "sawk2.json",
+    "421": "throh2.json",
+    "422": "unfezant2.json",
+    "423": "vileplume2.json",
+    "424": "victreebel2.json",
+    "425": "electrode2.json",
+    "426": "ludicolo2.json",
+    "427": "shiftry2.json",
+    "428": "exploud2.json",
+    "429": "lopunny2.json",
+    "430": "froslass2.json",
+    "431": "lilligant2.json",
+    "432": "darmanitan2.json",
+    "433": "ambipom2.json",
+    "434": "cofagrigus2.json",
+    "435": "golurk2.json",
+    "436": "durant2.json",
+    "437": "golem2.json",
+    "438": "slowbro2.json",
+    "439": "weezing2.json",
+    "440": "kangaskhan2.json",
+    "441": "tauros2.json",
+    "442": "spiritomb2.json",
+    "443": "cryogonal2.json",
+    "444": "druddigon2.json",
+    "445": "musharna2.json",
+    "446": "scrafty2.json",
+    "447": "ferrothorn2.json",
+    "448": "alakazam2.json",
+    "449": "slowking2.json",
+    "450": "miltank2.json",
+    "451": "altaria2.json",
+    "452": "toxicroak2.json",
+    "453": "gothitelle2.json",
+    "454": "reuniclus2.json",
+    "455": "bisharp2.json",
+    "456": "abomasnow2.json",
+    "457": "nidoqueen2.json",
+    "458": "nidoking2.json",
+    "459": "cradily2.json",
+    "460": "armaldo2.json",
+    "461": "rampardos2.json",
+    "462": "bastiodon2.json",
+    "463": "floatzel2.json",
+    "464": "mismagius2.json",
+    "465": "carracosta2.json",
+    "466": "escavalier2.json",
+    "467": "accelgor2.json",
+    "468": "zebstrika2.json",
+    "469": "drifblim2.json",
+    "470": "seismitoad2.json",
+    "471": "poliwrath2.json",
+    "472": "rapidash2.json",
+    "473": "muk2.json",
+    "474": "gengar2.json",
+    "475": "ampharos2.json",
+    "476": "politoed2.json",
+    "477": "pinsir2.json",
+    "478": "scizor2.json",
+    "479": "heracross2.json",
+    "480": "ursaring2.json",
+    "481": "houndoom2.json",
+    "482": "donphan2.json",
+    "483": "wailord2.json",
+    "484": "claydol2.json",
+    "485": "bronzong2.json",
+    "486": "drapion2.json",
+    "487": "luxray2.json",
+    "488": "ninetales2.json",
+    "489": "machamp2.json",
+    "490": "shuckle2.json",
+    "491": "roserade2.json",
+    "492": "honchkrow2.json",
+    "493": "gigalith2.json",
+    "494": "conkeldurr2.json",
+    "495": "excadrill2.json",
+    "496": "krookodile2.json",
+    "497": "steelix2.json",
+    "498": "weavile2.json",
+    "499": "gliscor2.json",
+    "500": "zoroark2.json",
+    "501": "mandibuzz2.json",
+    "502": "braviary2.json",
+    "503": "tentacruel2.json",
+    "504": "aerodactyl2.json",
+    "505": "porygon22.json",
+    "506": "lickilicky2.json",
+    "507": "yanmega2.json",
+    "508": "gardevoir2.json",
+    "509": "gallade2.json",
+    "510": "exeggutor2.json",
+    "511": "starmie2.json",
+    "512": "flygon2.json",
+    "513": "klinklang2.json",
+    "514": "chandelure2.json",
+    "515": "vaporeon2.json",
+    "516": "jolteon2.json",
+    "517": "flareon2.json",
+    "518": "espeon2.json",
+    "519": "umbreon2.json",
+    "520": "leafeon2.json",
+    "521": "glaceon2.json",
+    "522": "lucario2.json",
+    "523": "hippowdon2.json",
+    "524": "probopass2.json",
+    "525": "dusknoir2.json",
+    "526": "mienshao4.json",
+    "527": "beartic4.json",
+    "528": "bouffalant4.json",
+    "529": "aggron2.json",
+    "530": "walrein2.json",
+    "531": "mamoswine2.json",
+    "532": "lapras2.json",
+    "533": "crobat2.json",
+    "534": "magnezone2.json",
+    "535": "rhyperior2.json",
+    "536": "tangrowth2.json",
+    "537": "porygonz2.json",
+    "538": "vanilluxe2.json",
+    "539": "eelektross2.json",
+    "540": "gyarados2.json",
+    "541": "snorlax2.json",
+    "542": "kingdra2.json",
+    "543": "blissey2.json",
+    "544": "milotic2.json",
+    "545": "electivire2.json",
+    "546": "magmortar2.json",
+    "547": "haxorus2.json",
+    "548": "togekiss2.json",
+    "549": "volcarona2.json",
+    "550": "arcanine2.json",
+    "551": "archeops2.json",
+    "552": "dragonite2.json",
+    "553": "tyranitar2.json",
+    "554": "salamence2.json",
+    "555": "metagross2.json",
+    "556": "garchomp2.json",
+    "557": "hydreigon2.json",
+    "558": "slaking2.json",
+    "559": "venusaur3.json",
+    "560": "charizard3.json",
+    "561": "blastoise3.json",
+    "562": "meganium3.json",
+    "563": "typhlosion3.json",
+    "564": "feraligatr3.json",
+    "565": "sceptile3.json",
+    "566": "blaziken3.json",
+    "567": "swampert3.json",
+    "568": "torterra3.json",
+    "569": "infernape3.json",
+    "570": "empoleon3.json",
+    "571": "serperior3.json",
+    "572": "emboar3.json",
+    "573": "samurott3.json",
+    "574": "dugtrio3.json",
+    "575": "marowak3.json",
+    "576": "medicham3.json",
+    "577": "quagsire3.json",
+    "578": "granbull3.json",
+    "579": "jynx3.json",
+    "580": "mrmime3.json",
+    "581": "lanturn3.json",
+    "582": "breloom3.json",
+    "583": "forretress3.json",
+    "584": "skarmory3.json",
+    "585": "absol3.json",
+    "586": "whiscash3.json",
+    "587": "hariyama3.json",
+    "588": "vespiquen3.json",
+    "589": "raichu3.json",
+    "590": "dewgong3.json",
+    "591": "manectric3.json",
+    "592": "staraptor3.json",
+    "593": "gastrodon3.json",
+    "594": "skuntank3.json",
+    "595": "throh3.json",
+    "596": "sawk3.json",
+    "597": "unfezant3.json",
+    "598": "vileplume3.json",
+    "599": "victreebel3.json",
+    "600": "electrode3.json",
+    "601": "ludicolo3.json",
+    "602": "shiftry3.json",
+    "603": "exploud3.json",
+    "604": "lopunny3.json",
+    "605": "froslass3.json",
+    "606": "lilligant3.json",
+    "607": "darmanitan3.json",
+    "608": "ambipom3.json",
+    "609": "cofagrigus3.json",
+    "610": "golurk3.json",
+    "611": "durant3.json",
+    "612": "golem3.json",
+    "613": "slowbro3.json",
+    "614": "weezing3.json",
+    "615": "kangaskhan3.json",
+    "616": "tauros3.json",
+    "617": "spiritomb3.json",
+    "618": "cryogonal3.json",
+    "619": "druddigon3.json",
+    "620": "musharna3.json",
+    "621": "scrafty3.json",
+    "622": "ferrothorn3.json",
+    "623": "alakazam3.json",
+    "624": "slowking3.json",
+    "625": "miltank3.json",
+    "626": "altaria3.json",
+    "627": "toxicroak3.json",
+    "628": "gothitelle3.json",
+    "629": "reuniclus3.json",
+    "630": "bisharp3.json",
+    "631": "abomasnow3.json",
+    "632": "nidoqueen3.json",
+    "633": "nidoking3.json",
+    "634": "cradily3.json",
+    "635": "armaldo3.json",
+    "636": "rampardos3.json",
+    "637": "bastiodon3.json",
+    "638": "floatzel3.json",
+    "639": "mismagius3.json",
+    "640": "carracosta3.json",
+    "641": "escavalier3.json",
+    "642": "accelgor3.json",
+    "643": "zebstrika3.json",
+    "644": "drifblim3.json",
+    "645": "seismitoad3.json",
+    "646": "poliwrath3.json",
+    "647": "rapidash3.json",
+    "648": "muk3.json",
+    "649": "gengar3.json",
+    "650": "ampharos3.json",
+    "651": "politoed3.json",
+    "652": "pinsir3.json",
+    "653": "scizor3.json",
+    "654": "heracross3.json",
+    "655": "ursaring3.json",
+    "656": "houndoom3.json",
+    "657": "donphan3.json",
+    "658": "wailord3.json",
+    "659": "claydol3.json",
+    "660": "bronzong3.json",
+    "661": "drapion3.json",
+    "662": "luxray3.json",
+    "663": "ninetales3.json",
+    "664": "machamp3.json",
+    "665": "shuckle3.json",
+    "666": "roserade3.json",
+    "667": "honchkrow3.json",
+    "668": "gigalith3.json",
+    "669": "conkeldurr3.json",
+    "670": "excadrill3.json",
+    "671": "krookodile3.json",
+    "672": "steelix3.json",
+    "673": "weavile3.json",
+    "674": "gliscor3.json",
+    "675": "zoroark3.json",
+    "676": "mandibuzz3.json",
+    "677": "braviary3.json",
+    "678": "tentacruel3.json",
+    "679": "aerodactyl3.json",
+    "680": "porygon23.json",
+    "681": "lickilicky3.json",
+    "682": "yanmega3.json",
+    "683": "gardevoir3.json",
+    "684": "gallade3.json",
+    "685": "exeggutor3.json",
+    "686": "starmie3.json",
+    "687": "flygon3.json",
+    "688": "klinklang3.json",
+    "689": "chandelure3.json",
+    "690": "vaporeon3.json",
+    "691": "jolteon3.json",
+    "692": "flareon3.json",
+    "693": "espeon3.json",
+    "694": "umbreon3.json",
+    "695": "leafeon3.json",
+    "696": "glaceon3.json",
+    "697": "lucario3.json",
+    "698": "hippowdon3.json",
+    "699": "probopass3.json",
+    "700": "dusknoir3.json",
+    "701": "mienshao5.json",
+    "702": "beartic5.json",
+    "703": "bouffalant5.json",
+    "704": "aggron3.json",
+    "705": "walrein3.json",
+    "706": "mamoswine3.json",
+    "707": "lapras3.json",
+    "708": "crobat3.json",
+    "709": "magnezone3.json",
+    "710": "rhyperior3.json",
+    "711": "tangrowth3.json",
+    "712": "porygonz3.json",
+    "713": "vanilluxe3.json",
+    "714": "eelektross3.json",
+    "715": "gyarados3.json",
+    "716": "snorlax3.json",
+    "717": "kingdra3.json",
+    "718": "blissey3.json",
+    "719": "milotic3.json",
+    "720": "electivire3.json",
+    "721": "magmortar3.json",
+    "722": "haxorus3.json",
+    "723": "togekiss3.json",
+    "724": "volcarona3.json",
+    "725": "arcanine3.json",
+    "726": "archeops3.json",
+    "727": "dragonite3.json",
+    "728": "tyranitar3.json",
+    "729": "salamence3.json",
+    "730": "metagross3.json",
+    "731": "garchomp3.json",
+    "732": "hydreigon3.json",
+    "733": "slaking3.json",
+    "734": "venusaur4.json",
+    "735": "charizard4.json",
+    "736": "blastoise4.json",
+    "737": "meganium4.json",
+    "738": "typhlosion4.json",
+    "739": "feraligatr4.json",
+    "740": "sceptile4.json",
+    "741": "blaziken4.json",
+    "742": "swampert4.json",
+    "743": "torterra4.json",
+    "744": "infernape4.json",
+    "745": "empoleon4.json",
+    "746": "serperior4.json",
+    "747": "emboar4.json",
+    "748": "samurott4.json",
+    "749": "dugtrio4.json",
+    "750": "marowak4.json",
+    "751": "medicham4.json",
+    "752": "quagsire4.json",
+    "753": "granbull4.json",
+    "754": "jynx4.json",
+    "755": "mrmime4.json",
+    "756": "lanturn4.json",
+    "757": "breloom4.json",
+    "758": "forretress4.json",
+    "759": "skarmory4.json",
+    "760": "absol4.json",
+    "761": "whiscash4.json",
+    "762": "hariyama4.json",
+    "763": "vespiquen4.json",
+    "764": "raichu4.json",
+    "765": "dewgong4.json",
+    "766": "manectric4.json",
+    "767": "staraptor4.json",
+    "768": "gastrodon4.json",
+    "769": "skuntank4.json",
+    "770": "throh4.json",
+    "771": "sawk4.json",
+    "772": "unfezant4.json",
+    "773": "vileplume4.json",
+    "774": "victreebel4.json",
+    "775": "electrode4.json",
+    "776": "ludicolo4.json",
+    "777": "shiftry4.json",
+    "778": "exploud4.json",
+    "779": "lopunny4.json",
+    "780": "froslass4.json",
+    "781": "lilligant4.json",
+    "782": "darmanitan4.json",
+    "783": "ambipom4.json",
+    "784": "cofagrigus4.json",
+    "785": "golurk4.json",
+    "786": "durant4.json",
+    "787": "golem4.json",
+    "788": "slowbro4.json",
+    "789": "weezing4.json",
+    "790": "kangaskhan4.json",
+    "791": "tauros4.json",
+    "792": "spiritomb4.json",
+    "793": "cryogonal4.json",
+    "794": "druddigon4.json",
+    "795": "musharna4.json",
+    "796": "scrafty4.json",
+    "797": "ferrothorn4.json",
+    "798": "alakazam4.json",
+    "799": "slowking4.json",
+    "800": "miltank4.json",
+    "801": "altaria4.json",
+    "802": "toxicroak4.json",
+    "803": "gothitelle4.json",
+    "804": "reuniclus4.json",
+    "805": "bisharp4.json",
+    "806": "abomasnow4.json",
+    "807": "nidoqueen4.json",
+    "808": "nidoking4.json",
+    "809": "cradily4.json",
+    "810": "armaldo4.json",
+    "811": "rampardos4.json",
+    "812": "bastiodon4.json",
+    "813": "floatzel4.json",
+    "814": "mismagius4.json",
+    "815": "carracosta4.json",
+    "816": "escavalier4.json",
+    "817": "accelgor4.json",
+    "818": "zebstrika4.json",
+    "819": "drifblim4.json",
+    "820": "seismitoad4.json",
+    "821": "poliwrath4.json",
+    "822": "rapidash4.json",
+    "823": "muk4.json",
+    "824": "gengar4.json",
+    "825": "ampharos4.json",
+    "826": "politoed4.json",
+    "827": "pinsir4.json",
+    "828": "scizor4.json",
+    "829": "heracross4.json",
+    "830": "ursaring4.json",
+    "831": "houndoom4.json",
+    "832": "donphan4.json",
+    "833": "wailord4.json",
+    "834": "claydol4.json",
+    "835": "bronzong4.json",
+    "836": "drapion4.json",
+    "837": "luxray4.json",
+    "838": "ninetales4.json",
+    "839": "machamp4.json",
+    "840": "shuckle4.json",
+    "841": "roserade4.json",
+    "842": "honchkrow4.json",
+    "843": "gigalith4.json",
+    "844": "conkeldurr4.json",
+    "845": "excadrill4.json",
+    "846": "krookodile4.json",
+    "847": "steelix4.json",
+    "848": "weavile4.json",
+    "849": "gliscor4.json",
+    "850": "zoroark4.json",
+    "851": "mandibuzz4.json",
+    "852": "braviary4.json",
+    "853": "tentacruel4.json",
+    "854": "aerodactyl4.json",
+    "855": "porygon24.json",
+    "856": "lickilicky4.json",
+    "857": "yanmega4.json",
+    "858": "gardevoir4.json",
+    "859": "gallade4.json",
+    "860": "exeggutor4.json",
+    "861": "starmie4.json",
+    "862": "flygon4.json",
+    "863": "klinklang4.json",
+    "864": "chandelure4.json",
+    "865": "vaporeon4.json",
+    "866": "jolteon4.json",
+    "867": "flareon4.json",
+    "868": "espeon4.json",
+    "869": "umbreon4.json",
+    "870": "leafeon4.json",
+    "871": "glaceon4.json",
+    "872": "lucario4.json",
+    "873": "hippowdon4.json",
+    "874": "probopass4.json",
+    "875": "dusknoir4.json",
+    "876": "mienshao6.json",
+    "877": "beartic6.json",
+    "878": "bouffalant6.json",
+    "879": "aggron4.json",
+    "880": "walrein4.json",
+    "881": "mamoswine4.json",
+    "882": "lapras4.json",
+    "883": "crobat4.json",
+    "884": "magnezone4.json",
+    "885": "rhyperior4.json",
+    "886": "tangrowth4.json",
+    "887": "porygonz4.json",
+    "888": "vanilluxe4.json",
+    "889": "eelektross4.json",
+    "890": "gyarados4.json",
+    "891": "snorlax4.json",
+    "892": "kingdra4.json",
+    "893": "blissey4.json",
+    "894": "milotic4.json",
+    "895": "electivire4.json",
+    "896": "magmortar4.json",
+    "897": "haxorus4.json",
+    "898": "togekiss4.json",
+    "899": "volcarona4.json",
+    "900": "arcanine4.json",
+    "901": "archeops4.json",
+    "902": "dragonite4.json",
+    "903": "tyranitar4.json",
+    "904": "salamence4.json",
+    "905": "metagross4.json",
+    "906": "garchomp4.json",
+    "907": "hydreigon4.json",
+    "908": "slaking4.json",
+    "909": "articuno1.json",
+    "910": "zapdos1.json",
+    "911": "moltres1.json",
+    "912": "raikou1.json",
+    "913": "entei1.json",
+    "914": "suicune1.json",
+    "915": "regirock1.json",
+    "916": "regice1.json",
+    "917": "registeel1.json",
+    "918": "cobalion1.json",
+    "919": "terrakion1.json",
+    "920": "virizion1.json",
+    "921": "tornadus1.json",
+    "922": "thundurus1.json",
+    "923": "latias1.json",
+    "924": "latios1.json",
+    "925": "heatran1.json",
+    "926": "cresselia1.json",
+    "927": "landorus1.json",
+    "928": "regigigas1.json",
+    "929": "articuno2.json",
+    "930": "zapdos2.json",
+    "931": "moltres2.json",
+    "932": "raikou2.json",
+    "933": "entei2.json",
+    "934": "suicune2.json",
+    "935": "regirock2.json",
+    "936": "regice2.json",
+    "937": "registeel2.json",
+    "938": "cobalion2.json",
+    "939": "terrakion2.json",
+    "940": "virizion2.json",
+    "941": "tornadus2.json",
+    "942": "thundurus2.json",
+    "943": "latias2.json",
+    "944": "latios2.json",
+    "945": "heatran2.json",
+    "946": "cresselia2.json",
+    "947": "landorus2.json",
+    "948": "regigigas2.json",
+    "949": "articuno3.json",
+    "950": "zapdos3.json",
+    "951": "moltres3.json",
+    "952": "raikou3.json",
+    "953": "entei3.json",
+    "954": "suicune3.json",
+    "955": "regirock3.json",
+    "956": "regice3.json",
+    "957": "registeel3.json",
+    "958": "cobalion3.json",
+    "959": "terrakion3.json",
+    "960": "virizion3.json",
+    "961": "tornadus3.json",
+    "962": "thundurus3.json",
+    "963": "latias3.json",
+    "964": "latios3.json",
+    "965": "heatran3.json",
+    "966": "cresselia3.json",
+    "967": "landorus3.json",
+    "968": "regigigas3.json",
+    "969": "articuno4.json",
+    "970": "zapdos4.json",
+    "971": "moltres4.json",
+    "972": "raikou4.json",
+    "973": "entei4.json",
+    "974": "suicune4.json",
+    "975": "regirock4.json",
+    "976": "regice4.json",
+    "977": "registeel4.json",
+    "978": "cobalion4.json",
+    "979": "terrakion4.json",
+    "980": "virizion4.json",
+    "981": "tornadus4.json",
+    "982": "thundurus4.json",
+    "983": "latias4.json",
+    "984": "latios4.json",
+    "985": "heatran4.json",
+    "986": "cresselia4.json",
+    "987": "landorus4.json",
+    "988": "regigigas4.json"
+  }
+}

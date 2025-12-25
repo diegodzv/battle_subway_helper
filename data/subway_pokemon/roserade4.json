@@ -1,0 +1,42 @@
+{
+  "global_id": 841,
+  "species": "Roserade",
+  "nature": "Bold",
+  "item": "Black Sludge",
+  "moves": [
+    "Toxic",
+    "Protect",
+    "Leech Seed",
+    "Giga Drain"
+  ],
+  "evs": "HP/Def",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "roserade4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 167,
+    "Atk": 81,
+    "Def": 128,
+    "SpA": 145,
+    "SpD": 125,
+    "Spe": 110
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png"
+}

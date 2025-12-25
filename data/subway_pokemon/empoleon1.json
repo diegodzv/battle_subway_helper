@@ -1,0 +1,42 @@
+{
+  "global_id": 220,
+  "species": "Empoleon",
+  "nature": "Lax",
+  "item": "Sitrus Berry",
+  "moves": [
+    "Yawn",
+    "Swords Dance",
+    "Aqua Jet",
+    "Metal Claw"
+  ],
+  "evs": "HP/Def",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "empoleon1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 191,
+    "Atk": 106,
+    "Def": 154,
+    "SpA": 131,
+    "SpD": 108,
+    "Spe": 80
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png"
+}

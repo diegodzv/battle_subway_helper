@@ -1,0 +1,42 @@
+{
+  "global_id": 771,
+  "species": "Sawk",
+  "nature": "Adamant",
+  "item": "Life Orb",
+  "moves": [
+    "Close Combat",
+    "Bulldoze",
+    "Stone Edge",
+    "Taunt"
+  ],
+  "evs": "Atk/Spe",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "sawk4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 150,
+    "Atk": 194,
+    "Def": 95,
+    "SpA": 45,
+    "SpD": 95,
+    "Spe": 137
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/539.png"
+}

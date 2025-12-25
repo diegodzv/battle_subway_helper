@@ -1,0 +1,42 @@
+{
+  "global_id": 96,
+  "species": "Cubchoo",
+  "nature": "Adamant",
+  "item": "Expert Belt",
+  "moves": [
+    "Avalanche",
+    "Shadow Claw",
+    "Aerial Ace",
+    "Slash"
+  ],
+  "evs": "HP/Atk",
+  "variant_index": 2,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "cubchoo2.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 255,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 162,
+    "Atk": 134,
+    "Def": 60,
+    "SpA": 72,
+    "SpD": 60,
+    "Spe": 60
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/613.png"
+}

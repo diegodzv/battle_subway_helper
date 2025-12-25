@@ -1,0 +1,42 @@
+{
+  "global_id": 15,
+  "species": "Tympole",
+  "nature": "Timid",
+  "item": "Cheri Berry",
+  "moves": [
+    "BubbleBeam",
+    "Round",
+    "Growl",
+    "Aqua Ring"
+  ],
+  "evs": "Spe/SpA",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "tympole1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 255
+  },
+  "stats_lv50": {
+    "HP": 125,
+    "Atk": 63,
+    "Def": 60,
+    "SpA": 102,
+    "SpD": 60,
+    "Spe": 127
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/535.png"
+}

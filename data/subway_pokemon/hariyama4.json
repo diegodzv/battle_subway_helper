@@ -1,0 +1,42 @@
+{
+  "global_id": 762,
+  "species": "Hariyama",
+  "nature": "Careful",
+  "item": "Sitrus Berry",
+  "moves": [
+    "Belly Drum",
+    "Brick Break",
+    "Ice Punch",
+    "Bullet Punch"
+  ],
+  "evs": "Def/SpD",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "hariyama4.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 0,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 255,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 219,
+    "Atk": 140,
+    "Def": 112,
+    "SpA": 54,
+    "SpD": 123,
+    "Spe": 70
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png"
+}

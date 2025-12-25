@@ -1,0 +1,42 @@
+{
+  "global_id": 652,
+  "species": "Pinsir",
+  "nature": "Adamant",
+  "item": "Lax Incense",
+  "moves": [
+    "X-Scissor",
+    "Superpower",
+    "Stone Edge",
+    "Giga Impact"
+  ],
+  "evs": "Atk/Def",
+  "variant_index": 3,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "pinsir3.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 255,
+    "Def": 255,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 140,
+    "Atk": 194,
+    "Def": 152,
+    "SpA": 67,
+    "SpD": 90,
+    "Spe": 105
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"
+}

@@ -1,0 +1,42 @@
+{
+  "global_id": 855,
+  "species": "Porygon2",
+  "nature": "Modest",
+  "item": "Lum Berry",
+  "moves": [
+    "Tri Attack",
+    "Thunder Wave",
+    "Shadow Ball",
+    "Ice Beam"
+  ],
+  "evs": "HP/SpA",
+  "variant_index": 4,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "porygon24.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 255,
+    "Atk": 0,
+    "Def": 0,
+    "SpA": 255,
+    "SpD": 0,
+    "Spe": 0
+  },
+  "stats_lv50": {
+    "HP": 192,
+    "Atk": 90,
+    "Def": 110,
+    "SpA": 172,
+    "SpD": 115,
+    "Spe": 80
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png"
+}

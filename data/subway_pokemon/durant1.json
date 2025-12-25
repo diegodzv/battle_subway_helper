@@ -1,0 +1,42 @@
+{
+  "global_id": 261,
+  "species": "Durant",
+  "nature": "Naive",
+  "item": "Sitrus Berry",
+  "moves": [
+    "Crunch",
+    "Dig",
+    "Bug Bite",
+    "Metal Sound"
+  ],
+  "evs": "HP/Atk/Spe",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "durant1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 170,
+    "Atk": 170,
+    "Def": 0,
+    "SpA": 0,
+    "SpD": 0,
+    "Spe": 170
+  },
+  "stats_lv50": {
+    "HP": 154,
+    "Atk": 150,
+    "Def": 132,
+    "SpA": 68,
+    "SpD": 61,
+    "Spe": 165
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/632.png"
+}

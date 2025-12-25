@@ -1,0 +1,42 @@
+{
+  "global_id": 10,
+  "species": "Purrloin",
+  "nature": "Docile",
+  "item": "BlackGlasses",
+  "moves": [
+    "Night Slash",
+    "Echoed Voice",
+    "Hone Claws",
+    "Fake Out"
+  ],
+  "evs": "Atk/Spe/SpA",
+  "variant_index": 1,
+  "source_url": "https://www.smogon.com/ingame/bc/bw_subway_pokemon",
+  "filename": "purrloin1.json",
+  "level": 50,
+  "ivs": {
+    "HP": 31,
+    "Atk": 31,
+    "Def": 31,
+    "SpA": 31,
+    "SpD": 31,
+    "Spe": 31
+  },
+  "evs_numeric": {
+    "HP": 0,
+    "Atk": 170,
+    "Def": 0,
+    "SpA": 170,
+    "SpD": 0,
+    "Spe": 170
+  },
+  "stats_lv50": {
+    "HP": 116,
+    "Atk": 91,
+    "Def": 57,
+    "SpA": 91,
+    "SpD": 57,
+    "Spe": 107
+  },
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/509.png"
+}
