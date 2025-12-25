@@ -24,11 +24,13 @@ function Sprite({ url, alt }) {
   return <img className="sprite" src={url} alt={alt} loading="lazy" />;
 }
 
-function SetCard({ set, onClick, selected, tag }) {
+function SetCard({ set, onClick, selected, tag, tone = "default" }) {
   const spe = set?.stats_lv50?.Spe ?? "-";
   return (
     <button
-      className={`card ${selected ? "cardSelected" : ""}`}
+      className={`card ${selected ? "cardSelected" : ""} ${
+        tone === "seen" ? "cardSeen" : ""
+      }`}
       onClick={onClick}
       title={`${set.species} (#${set.global_id})`}
     >
@@ -49,24 +51,20 @@ function SetCard({ set, onClick, selected, tag }) {
 }
 
 export default function App() {
-  // Search
   const [q, setQ] = useState("");
   const debouncedQ = useDebouncedValue(q, 150);
   const [suggestions, setSuggestions] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
 
-  // Selected trainer
   const [trainer, setTrainer] = useState(null);
   const [selectedSet, setSelectedSet] = useState(null);
 
-  // Filtering
   const [seen, setSeen] = useState([]);
   const [filterInfo, setFilterInfo] = useState(null);
   const [isFiltering, setIsFiltering] = useState(false);
 
   const poolId = trainer?.pool_id ?? null;
 
-  // Search suggestions
   useEffect(() => {
     let cancelled = false;
 
@@ -78,7 +76,9 @@ export default function App() {
       }
       setIsSearching(true);
       try {
-        const res = await fetch(`/trainers/search?q=${encodeURIComponent(nq)}&limit=20`);
+        const res = await fetch(
+          `/trainers/search?q=${encodeURIComponent(nq)}&limit=20`
+        );
         if (!res.ok) throw new Error(`search failed: ${res.status}`);
         const data = await res.json();
         if (!cancelled) setSuggestions(data);
@@ -110,7 +110,6 @@ export default function App() {
     setTrainer(data);
   }
 
-  // Filtering whenever seen changes
   useEffect(() => {
     let cancelled = false;
 
@@ -144,9 +143,27 @@ export default function App() {
   const poolSets = trainer?.sets ?? [];
   const remainingSets = filterInfo?.possible_remaining_sets ?? [];
 
+  // ✅ Pool layout fijo: vistos primero (en orden de vistos), luego el resto
+  const orderedPoolSets = useMemo(() => {
+    if (!poolSets.length) return [];
+    const byId = new Map(poolSets.map((s) => [s.global_id, s]));
+
+    const seenFirst = seen
+      .map((gid) => byId.get(gid))
+      .filter(Boolean);
+
+    const seenIds = new Set(seen);
+    const rest = poolSets.filter((s) => !seenIds.has(s.global_id));
+
+    // Puedes decidir orden del resto: por especie, por id, etc. Aquí por global_id
+    rest.sort((a, b) => a.global_id - b.global_id);
+
+    return [...seenFirst, ...rest];
+  }, [poolSets, seen]);
+
   function markSeen(globalId) {
     if (seenSet.has(globalId)) return;
-    if (seen.length >= 4) return; // 4v4
+    if (seen.length >= 4) return;
     setSeen((prev) => [...prev, globalId]);
   }
 
@@ -209,8 +226,8 @@ export default function App() {
           <div className="empty">
             <div className="emptyTitle">Selecciona un entrenador</div>
             <div className="muted">
-              Escribe arriba para autocompletar y elige uno. Luego marca Pokémon según te
-              los enseñe.
+              Escribe arriba para autocompletar y elige uno. Luego marca Pokémon
+              según te los enseñe.
             </div>
           </div>
         ) : (
@@ -220,20 +237,22 @@ export default function App() {
                 <div>
                   <div className="h1">{trainer.name_en}</div>
                   <div className="muted">
-                    {trainer.section} · pool <span className="mono">{trainer.pool_id}</span> ·{" "}
+                    {trainer.section} · pool{" "}
+                    <span className="mono">{trainer.pool_id}</span> ·{" "}
                     <span className="mono">{trainer.pool_size}</span> sets
                   </div>
                 </div>
               </div>
 
-              <div className="subTitle">Pool completo</div>
+              <div className="subTitle">Pool completo (vistos fijados)</div>
               <div className="cards">
-                {poolSets.map((s) => (
+                {orderedPoolSets.map((s) => (
                   <SetCard
                     key={s.global_id}
                     set={s}
                     selected={selectedSet?.global_id === s.global_id}
                     tag={seenSet.has(s.global_id) ? "Visto" : ""}
+                    tone={seenSet.has(s.global_id) ? "seen" : "default"}
                     onClick={() => setSelectedSet(s)}
                   />
                 ))}
@@ -248,7 +267,9 @@ export default function App() {
                 </div>
 
                 {seen.length === 0 ? (
-                  <div className="muted">Marca los Pokémon que vaya sacando el rival.</div>
+                  <div className="muted">
+                    Marca los Pokémon que vaya sacando el rival.
+                  </div>
                 ) : (
                   <div className="seenChips">
                     {seen.map((gid) => (
@@ -295,11 +316,16 @@ export default function App() {
                 </div>
 
                 {!selectedSet ? (
-                  <div className="muted">Haz click en un Pokémon para ver su set.</div>
+                  <div className="muted">
+                    Haz click en un Pokémon para ver su set.
+                  </div>
                 ) : (
                   <div className="detail">
                     <div className="detailTop">
-                      <Sprite url={selectedSet.sprite_url_pokeapi} alt={selectedSet.species} />
+                      <Sprite
+                        url={selectedSet.sprite_url_pokeapi}
+                        alt={selectedSet.species}
+                      />
                       <div>
                         <div className="h2">{selectedSet.species}</div>
                         <div className="muted">
@@ -368,7 +394,8 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Tip: puedes quitar “vistos” haciendo click en los chips.
+        Tip: puedes quitar “vistos” haciendo click en los chips. Los vistos quedan
+        fijados al principio del pool.
       </footer>
     </div>
   );
