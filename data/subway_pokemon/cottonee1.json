@@ -38,5 +38,29 @@
     "SpD": 91,
     "Spe": 86
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/546.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/546.png",
+  "dex_number": 546,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png",
+  "moves_meta": [
+    {
+      "name": "Giga Drain",
+      "slug": "giga-drain",
+      "type": "grass"
+    },
+    {
+      "name": "Charm",
+      "slug": "charm",
+      "type": "fairy"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    },
+    {
+      "name": "PoisonPowder",
+      "slug": "poisonpowder",
+      "type": null
+    }
+  ]
 }

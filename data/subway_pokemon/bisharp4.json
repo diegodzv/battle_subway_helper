@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/625.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/625.png",
+  "dex_number": 625,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+  "moves_meta": [
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    },
+    {
+      "name": "Sucker Punch",
+      "slug": "sucker-punch",
+      "type": "dark"
+    },
+    {
+      "name": "Rock Smash",
+      "slug": "rock-smash",
+      "type": "fighting"
+    },
+    {
+      "name": "Iron Head",
+      "slug": "iron-head",
+      "type": "steel"
+    }
+  ]
 }

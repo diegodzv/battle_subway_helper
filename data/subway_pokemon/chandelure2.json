@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 145
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
+  "dex_number": 609,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    },
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    }
+  ]
 }

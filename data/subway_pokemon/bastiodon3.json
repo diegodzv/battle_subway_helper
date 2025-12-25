@@ -38,5 +38,29 @@
     "SpD": 209,
     "Spe": 50
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/411.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/411.png",
+  "dex_number": 411,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    },
+    {
+      "name": "Fissure",
+      "slug": "fissure",
+      "type": "ground"
+    },
+    {
+      "name": "Double Team",
+      "slug": "double-team",
+      "type": "normal"
+    },
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    }
+  ]
 }

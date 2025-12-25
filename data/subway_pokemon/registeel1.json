@@ -38,5 +38,29 @@
     "SpD": 222,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png",
+  "dex_number": 379,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Curse",
+      "slug": "curse",
+      "type": "ghost"
+    },
+    {
+      "name": "Amnesia",
+      "slug": "amnesia",
+      "type": "psychic"
+    },
+    {
+      "name": "Iron Head",
+      "slug": "iron-head",
+      "type": "steel"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    }
+  ]
 }

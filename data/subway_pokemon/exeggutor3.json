@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+  "dex_number": 103,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Leaf Storm",
+      "slug": "leaf-storm",
+      "type": "grass"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "AncientPower",
+      "slug": "ancientpower",
+      "type": null
+    }
+  ]
 }

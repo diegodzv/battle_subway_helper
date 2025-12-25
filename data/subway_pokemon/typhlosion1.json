@@ -38,5 +38,29 @@
     "SpD": 94,
     "Spe": 152
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
+  "dex_number": 157,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
+  "moves_meta": [
+    {
+      "name": "Flame Burst",
+      "slug": "flame-burst",
+      "type": "fire"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "SolarBeam",
+      "slug": "solarbeam",
+      "type": null
+    },
+    {
+      "name": "Sunny Day",
+      "slug": "sunny-day",
+      "type": "fire"
+    }
+  ]
 }

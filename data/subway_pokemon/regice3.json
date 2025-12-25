@@ -38,5 +38,29 @@
     "SpD": 220,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/378.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/378.png",
+  "dex_number": 378,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    },
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    },
+    {
+      "name": "Amnesia",
+      "slug": "amnesia",
+      "type": "psychic"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

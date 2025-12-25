@@ -38,5 +38,29 @@
     "SpD": 61,
     "Spe": 165
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/632.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/632.png",
+  "dex_number": 632,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Dig",
+      "slug": "dig",
+      "type": "ground"
+    },
+    {
+      "name": "Bug Bite",
+      "slug": "bug-bite",
+      "type": "bug"
+    },
+    {
+      "name": "Metal Sound",
+      "slug": "metal-sound",
+      "type": "steel"
+    }
+  ]
 }

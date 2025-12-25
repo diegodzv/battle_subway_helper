@@ -38,5 +38,29 @@
     "SpD": 81,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+  "dex_number": 110,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-gem.png",
+  "moves_meta": [
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "Fire Blast",
+      "slug": "fire-blast",
+      "type": "fire"
+    },
+    {
+      "name": "Stockpile",
+      "slug": "stockpile",
+      "type": "normal"
+    },
+    {
+      "name": "Swallow",
+      "slug": "swallow",
+      "type": "normal"
+    }
+  ]
 }

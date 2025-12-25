@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png",
+  "dex_number": 210,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/jaboca-berry.png",
+  "moves_meta": [
+    {
+      "name": "Metronome",
+      "slug": "metronome",
+      "type": "normal"
+    },
+    {
+      "name": "Attract",
+      "slug": "attract",
+      "type": "normal"
+    },
+    {
+      "name": "Mimic",
+      "slug": "mimic",
+      "type": "normal"
+    },
+    {
+      "name": "Return",
+      "slug": "return",
+      "type": "normal"
+    }
+  ]
 }

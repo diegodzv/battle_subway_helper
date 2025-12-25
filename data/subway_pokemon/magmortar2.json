@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 135
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png",
+  "dex_number": 467,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png",
+  "moves_meta": [
+    {
+      "name": "Fire Blast",
+      "slug": "fire-blast",
+      "type": "fire"
+    },
+    {
+      "name": "Flame Burst",
+      "slug": "flame-burst",
+      "type": "fire"
+    },
+    {
+      "name": "Focus Blast",
+      "slug": "focus-blast",
+      "type": "fighting"
+    },
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 102,
     "Spe": 95
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png",
+  "dex_number": 569,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+  "moves_meta": [
+    {
+      "name": "Gunk Shot",
+      "slug": "gunk-shot",
+      "type": "poison"
+    },
+    {
+      "name": "Body Slam",
+      "slug": "body-slam",
+      "type": "normal"
+    },
+    {
+      "name": "Smack Down",
+      "slug": "smack-down",
+      "type": "rock"
+    },
+    {
+      "name": "Explosion",
+      "slug": "explosion",
+      "type": "normal"
+    }
+  ]
 }

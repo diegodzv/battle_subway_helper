@@ -38,5 +38,29 @@
     "SpD": 103,
     "Spe": 77
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png",
+  "dex_number": 463,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    },
+    {
+      "name": "Me First",
+      "slug": "me-first",
+      "type": "normal"
+    },
+    {
+      "name": "Psych Up",
+      "slug": "psych-up",
+      "type": "normal"
+    }
+  ]
 }

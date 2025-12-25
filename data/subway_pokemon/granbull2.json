@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png",
+  "dex_number": 210,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png",
+  "moves_meta": [
+    {
+      "name": "Charm",
+      "slug": "charm",
+      "type": "fairy"
+    },
+    {
+      "name": "Double-Edge",
+      "slug": "double-edge",
+      "type": "normal"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Bulk Up",
+      "slug": "bulk-up",
+      "type": "fighting"
+    }
+  ]
 }

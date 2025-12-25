@@ -38,5 +38,28 @@
     "SpD": 90,
     "Spe": 189
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+  "dex_number": 51,
+  "moves_meta": [
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Dig",
+      "slug": "dig",
+      "type": "ground"
+    },
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    },
+    {
+      "name": "Sandstorm",
+      "slug": "sandstorm",
+      "type": "rock"
+    }
+  ]
 }

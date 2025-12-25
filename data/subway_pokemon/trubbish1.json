@@ -38,5 +38,29 @@
     "SpD": 82,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/568.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/568.png",
+  "dex_number": 568,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Acid Spray",
+      "slug": "acid-spray",
+      "type": "poison"
+    },
+    {
+      "name": "Toxic Spikes",
+      "slug": "toxic-spikes",
+      "type": "poison"
+    },
+    {
+      "name": "Stockpile",
+      "slug": "stockpile",
+      "type": "normal"
+    },
+    {
+      "name": "Swallow",
+      "slug": "swallow",
+      "type": "normal"
+    }
+  ]
 }

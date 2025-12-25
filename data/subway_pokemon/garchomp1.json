@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 169
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png",
+  "dex_number": 445,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png",
+  "moves_meta": [
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Sandstorm",
+      "slug": "sandstorm",
+      "type": "rock"
+    },
+    {
+      "name": "Sand Tomb",
+      "slug": "sand-tomb",
+      "type": "ground"
+    }
+  ]
 }

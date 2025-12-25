@@ -38,5 +38,29 @@
     "SpD": 111,
     "Spe": 95
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png",
+  "dex_number": 359,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Mean Look",
+      "slug": "mean-look",
+      "type": "normal"
+    },
+    {
+      "name": "Hone Claws",
+      "slug": "hone-claws",
+      "type": "dark"
+    },
+    {
+      "name": "Baton Pass",
+      "slug": "baton-pass",
+      "type": "normal"
+    }
+  ]
 }

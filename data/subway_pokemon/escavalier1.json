@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 36
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png",
+  "dex_number": 589,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Megahorn",
+      "slug": "megahorn",
+      "type": "bug"
+    },
+    {
+      "name": "Quick Guard",
+      "slug": "quick-guard",
+      "type": "fighting"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    },
+    {
+      "name": "Reversal",
+      "slug": "reversal",
+      "type": "fighting"
+    }
+  ]
 }

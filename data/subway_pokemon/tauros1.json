@@ -38,5 +38,29 @@
     "SpD": 81,
     "Spe": 162
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+  "dex_number": 128,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Endure",
+      "slug": "endure",
+      "type": "normal"
+    },
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    }
+  ]
 }

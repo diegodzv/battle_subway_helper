@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 115
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png",
+  "dex_number": 495,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/binding-band.png",
+  "moves_meta": [
+    {
+      "name": "Leaf Tornado",
+      "slug": "leaf-tornado",
+      "type": "grass"
+    },
+    {
+      "name": "Wring Out",
+      "slug": "wring-out",
+      "type": "normal"
+    },
+    {
+      "name": "Wrap",
+      "slug": "wrap",
+      "type": "normal"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    }
+  ]
 }

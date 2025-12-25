@@ -38,5 +38,29 @@
     "SpD": 116,
     "Spe": 120
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
+  "dex_number": 244,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Calm Mind",
+      "slug": "calm-mind",
+      "type": "psychic"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    }
+  ]
 }

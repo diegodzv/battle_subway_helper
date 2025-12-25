@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 58
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/538.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/538.png",
+  "dex_number": 538,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Revenge",
+      "slug": "revenge",
+      "type": "fighting"
+    },
+    {
+      "name": "Storm Throw",
+      "slug": "storm-throw",
+      "type": "fighting"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Seismic Toss",
+      "slug": "seismic-toss",
+      "type": "fighting"
+    }
+  ]
 }

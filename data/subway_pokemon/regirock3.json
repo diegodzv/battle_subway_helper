@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/377.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/377.png",
+  "dex_number": 377,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-gem.png",
+  "moves_meta": [
+    {
+      "name": "Ice Punch",
+      "slug": "ice-punch",
+      "type": "ice"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Drain Punch",
+      "slug": "drain-punch",
+      "type": "fighting"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

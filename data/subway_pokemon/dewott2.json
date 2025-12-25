@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/502.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/502.png",
+  "dex_number": 502,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png",
+  "moves_meta": [
+    {
+      "name": "Hydro Pump",
+      "slug": "hydro-pump",
+      "type": "water"
+    },
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    },
+    {
+      "name": "Scald",
+      "slug": "scald",
+      "type": "water"
+    },
+    {
+      "name": "Air Slash",
+      "slug": "air-slash",
+      "type": "flying"
+    }
+  ]
 }

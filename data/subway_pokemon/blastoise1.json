@@ -38,5 +38,29 @@
     "SpD": 146,
     "Spe": 88
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+  "dex_number": 9,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png",
+  "moves_meta": [
+    {
+      "name": "Aqua Ring",
+      "slug": "aqua-ring",
+      "type": "water"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Aqua Tail",
+      "slug": "aqua-tail",
+      "type": "water"
+    },
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+  "dex_number": 3,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png",
+  "moves_meta": [
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    },
+    {
+      "name": "Venoshock",
+      "slug": "venoshock",
+      "type": "poison"
+    },
+    {
+      "name": "Power Whip",
+      "slug": "power-whip",
+      "type": "grass"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

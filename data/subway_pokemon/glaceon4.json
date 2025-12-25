@@ -38,5 +38,28 @@
     "SpD": 115,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png",
+  "dex_number": 471,
+  "moves_meta": [
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Signal Beam",
+      "slug": "signal-beam",
+      "type": "bug"
+    },
+    {
+      "name": "Detect",
+      "slug": "detect",
+      "type": "fighting"
+    }
+  ]
 }

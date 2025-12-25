@@ -38,5 +38,29 @@
     "SpD": 135,
     "Spe": 145
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png",
+  "dex_number": 475,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png",
+  "moves_meta": [
+    {
+      "name": "Psycho Cut",
+      "slug": "psycho-cut",
+      "type": "psychic"
+    },
+    {
+      "name": "Leaf Blade",
+      "slug": "leaf-blade",
+      "type": "grass"
+    },
+    {
+      "name": "Slash",
+      "slug": "slash",
+      "type": "normal"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

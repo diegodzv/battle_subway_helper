@@ -38,5 +38,29 @@
     "SpD": 128,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png",
+  "dex_number": 574,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psybeam",
+      "slug": "psybeam",
+      "type": "psychic"
+    },
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    },
+    {
+      "name": "Fake Tears",
+      "slug": "fake-tears",
+      "type": "dark"
+    },
+    {
+      "name": "Trick Room",
+      "slug": "trick-room",
+      "type": "psychic"
+    }
+  ]
 }

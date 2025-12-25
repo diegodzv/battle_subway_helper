@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 178
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+  "dex_number": 128,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png",
+  "moves_meta": [
+    {
+      "name": "Double-Edge",
+      "slug": "double-edge",
+      "type": "normal"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Giga Impact",
+      "slug": "giga-impact",
+      "type": "normal"
+    }
+  ]
 }

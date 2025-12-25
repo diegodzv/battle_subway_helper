@@ -38,5 +38,29 @@
     "SpD": 187,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
+  "dex_number": 242,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png",
+  "moves_meta": [
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Minimize",
+      "slug": "minimize",
+      "type": "normal"
+    },
+    {
+      "name": "Mud Bomb",
+      "slug": "mud-bomb",
+      "type": "ground"
+    },
+    {
+      "name": "Softboiled",
+      "slug": "softboiled",
+      "type": null
+    }
+  ]
 }

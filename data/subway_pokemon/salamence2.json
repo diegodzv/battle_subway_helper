@@ -38,5 +38,29 @@
     "SpD": 121,
     "Spe": 141
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png",
+  "dex_number": 373,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Dragon Claw",
+      "slug": "dragon-claw",
+      "type": "dragon"
+    },
+    {
+      "name": "Zen Headbutt",
+      "slug": "zen-headbutt",
+      "type": "psychic"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Dragon Dance",
+      "slug": "dragon-dance",
+      "type": "dragon"
+    }
+  ]
 }

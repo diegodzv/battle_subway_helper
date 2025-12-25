@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 142
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png",
+  "dex_number": 407,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Weather Ball",
+      "slug": "weather-ball",
+      "type": "normal"
+    },
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Natural Gift",
+      "slug": "natural-gift",
+      "type": "normal"
+    },
+    {
+      "name": "Attract",
+      "slug": "attract",
+      "type": "normal"
+    }
+  ]
 }

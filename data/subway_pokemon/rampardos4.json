@@ -38,5 +38,29 @@
     "SpD": 102,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png",
+  "dex_number": 409,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Head Smash",
+      "slug": "head-smash",
+      "type": "rock"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

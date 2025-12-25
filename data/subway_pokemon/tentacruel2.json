@@ -38,5 +38,29 @@
     "SpD": 140,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+  "dex_number": 73,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png",
+  "moves_meta": [
+    {
+      "name": "Rapid Spin",
+      "slug": "rapid-spin",
+      "type": "normal"
+    },
+    {
+      "name": "Poison Jab",
+      "slug": "poison-jab",
+      "type": "poison"
+    },
+    {
+      "name": "Waterfall",
+      "slug": "waterfall",
+      "type": "water"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    }
+  ]
 }

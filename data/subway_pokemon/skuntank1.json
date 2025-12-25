@@ -38,5 +38,29 @@
     "SpD": 72,
     "Spe": 136
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/435.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/435.png",
+  "dex_number": 435,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png",
+  "moves_meta": [
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Night Slash",
+      "slug": "night-slash",
+      "type": "dark"
+    },
+    {
+      "name": "Incinerate",
+      "slug": "incinerate",
+      "type": "fire"
+    },
+    {
+      "name": "Memento",
+      "slug": "memento",
+      "type": "dark"
+    }
+  ]
 }

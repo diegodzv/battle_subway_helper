@@ -38,5 +38,29 @@
     "SpD": 83,
     "Spe": 150
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/581.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/581.png",
+  "dex_number": 581,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png",
+  "moves_meta": [
+    {
+      "name": "Hurricane",
+      "slug": "hurricane",
+      "type": "flying"
+    },
+    {
+      "name": "Surf",
+      "slug": "surf",
+      "type": "water"
+    },
+    {
+      "name": "Scald",
+      "slug": "scald",
+      "type": "water"
+    },
+    {
+      "name": "Rain Dance",
+      "slug": "rain-dance",
+      "type": "water"
+    }
+  ]
 }

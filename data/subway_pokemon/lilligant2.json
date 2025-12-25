@@ -38,5 +38,29 @@
     "SpD": 116,
     "Spe": 110
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png",
+  "dex_number": 549,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png",
+  "moves_meta": [
+    {
+      "name": "Ingrain",
+      "slug": "ingrain",
+      "type": "grass"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

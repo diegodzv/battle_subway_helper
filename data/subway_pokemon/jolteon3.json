@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 200
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+  "dex_number": 135,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "moves_meta": [
+    {
+      "name": "Thunder",
+      "slug": "thunder",
+      "type": "electric"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Rain Dance",
+      "slug": "rain-dance",
+      "type": "water"
+    },
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    }
+  ]
 }

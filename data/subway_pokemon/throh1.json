@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/538.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/538.png",
+  "dex_number": 538,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Circle Throw",
+      "slug": "circle-throw",
+      "type": "fighting"
+    },
+    {
+      "name": "Wide Guard",
+      "slug": "wide-guard",
+      "type": "rock"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 132
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/628.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/628.png",
+  "dex_number": 628,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Thrash",
+      "slug": "thrash",
+      "type": "normal"
+    },
+    {
+      "name": "Bulk Up",
+      "slug": "bulk-up",
+      "type": "fighting"
+    },
+    {
+      "name": "Superpower",
+      "slug": "superpower",
+      "type": "fighting"
+    },
+    {
+      "name": "Pluck",
+      "slug": "pluck",
+      "type": "flying"
+    }
+  ]
 }

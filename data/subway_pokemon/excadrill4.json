@@ -38,5 +38,29 @@
     "SpD": 106,
     "Spe": 108
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
+  "dex_number": 530,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png",
+  "moves_meta": [
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Aerial Ace",
+      "slug": "aerial-ace",
+      "type": "flying"
+    },
+    {
+      "name": "Poison Jab",
+      "slug": "poison-jab",
+      "type": "poison"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    }
+  ]
 }

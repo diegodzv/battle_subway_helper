@@ -38,5 +38,29 @@
     "SpD": 172,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
+  "dex_number": 334,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Cotton Guard",
+      "slug": "cotton-guard",
+      "type": "grass"
+    },
+    {
+      "name": "Roost",
+      "slug": "roost",
+      "type": "flying"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Dragon Pulse",
+      "slug": "dragon-pulse",
+      "type": "dragon"
+    }
+  ]
 }

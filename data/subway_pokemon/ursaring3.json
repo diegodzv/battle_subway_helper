@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png",
+  "dex_number": 217,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png",
+  "moves_meta": [
+    {
+      "name": "Facade",
+      "slug": "facade",
+      "type": "normal"
+    },
+    {
+      "name": "Superpower",
+      "slug": "superpower",
+      "type": "fighting"
+    },
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 123,
     "Spe": 64
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/582.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/582.png",
+  "dex_number": 582,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/petaya-berry.png",
+  "moves_meta": [
+    {
+      "name": "Icy Wind",
+      "slug": "icy-wind",
+      "type": "ice"
+    },
+    {
+      "name": "Mirror Shot",
+      "slug": "mirror-shot",
+      "type": "steel"
+    },
+    {
+      "name": "Mist",
+      "slug": "mist",
+      "type": "ice"
+    },
+    {
+      "name": "Hail",
+      "slug": "hail",
+      "type": "ice"
+    }
+  ]
 }

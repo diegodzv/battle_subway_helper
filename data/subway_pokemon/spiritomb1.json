@@ -38,5 +38,29 @@
     "SpD": 176,
     "Spe": 55
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png",
+  "dex_number": 442,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Sucker Punch",
+      "slug": "sucker-punch",
+      "type": "dark"
+    },
+    {
+      "name": "Pain Split",
+      "slug": "pain-split",
+      "type": "normal"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Grudge",
+      "slug": "grudge",
+      "type": "ghost"
+    }
+  ]
 }

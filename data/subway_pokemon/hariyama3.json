@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 63
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png",
+  "dex_number": 297,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png",
+  "moves_meta": [
+    {
+      "name": "Fake Out",
+      "slug": "fake-out",
+      "type": "normal"
+    },
+    {
+      "name": "Close Combat",
+      "slug": "close-combat",
+      "type": "fighting"
+    },
+    {
+      "name": "Detect",
+      "slug": "detect",
+      "type": "fighting"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

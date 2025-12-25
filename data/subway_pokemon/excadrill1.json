@@ -38,5 +38,29 @@
     "SpD": 76,
     "Spe": 108
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
+  "dex_number": 530,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png",
+  "moves_meta": [
+    {
+      "name": "Hone Claws",
+      "slug": "hone-claws",
+      "type": "dark"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Drill Run",
+      "slug": "drill-run",
+      "type": "ground"
+    },
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    }
+  ]
 }

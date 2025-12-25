@@ -38,5 +38,29 @@
     "SpD": 144,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png",
+  "dex_number": 405,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+  "moves_meta": [
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    },
+    {
+      "name": "Helping Hand",
+      "slug": "helping-hand",
+      "type": "normal"
+    },
+    {
+      "name": "Discharge",
+      "slug": "discharge",
+      "type": "electric"
+    },
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 157,
     "Spe": 53
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/437.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/437.png",
+  "dex_number": 437,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Hypnosis",
+      "slug": "hypnosis",
+      "type": "psychic"
+    },
+    {
+      "name": "Rain Dance",
+      "slug": "rain-dance",
+      "type": "water"
+    },
+    {
+      "name": "Gyro Ball",
+      "slug": "gyro-ball",
+      "type": "steel"
+    },
+    {
+      "name": "Trick Room",
+      "slug": "trick-room",
+      "type": "psychic"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 157,
     "Spe": 54
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/416.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/416.png",
+  "dex_number": 416,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+  "moves_meta": [
+    {
+      "name": "Defend Order",
+      "slug": "defend-order",
+      "type": "bug"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Heal Order",
+      "slug": "heal-order",
+      "type": "bug"
+    }
+  ]
 }

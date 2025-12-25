@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 183
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png",
+  "dex_number": 467,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
+  "moves_meta": [
+    {
+      "name": "Flare Blitz",
+      "slug": "flare-blitz",
+      "type": "fire"
+    },
+    {
+      "name": "ThunderPunch",
+      "slug": "thunderpunch",
+      "type": null
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    }
+  ]
 }

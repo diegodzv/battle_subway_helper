@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 172
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png",
+  "dex_number": 310,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+  "moves_meta": [
+    {
+      "name": "Switcheroo",
+      "slug": "switcheroo",
+      "type": "dark"
+    },
+    {
+      "name": "Thunder",
+      "slug": "thunder",
+      "type": "electric"
+    },
+    {
+      "name": "Volt Switch",
+      "slug": "volt-switch",
+      "type": "electric"
+    },
+    {
+      "name": "Overheat",
+      "slug": "overheat",
+      "type": "fire"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 121
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png",
+  "dex_number": 409,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+  "moves_meta": [
+    {
+      "name": "Head Smash",
+      "slug": "head-smash",
+      "type": "rock"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "ThunderPunch",
+      "slug": "thunderpunch",
+      "type": null
+    }
+  ]
 }

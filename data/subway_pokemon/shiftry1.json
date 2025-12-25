@@ -38,5 +38,29 @@
     "SpD": 101,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/275.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/275.png",
+  "dex_number": 275,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-ball.png",
+  "moves_meta": [
+    {
+      "name": "Fling",
+      "slug": "fling",
+      "type": "dark"
+    },
+    {
+      "name": "Razor Leaf",
+      "slug": "razor-leaf",
+      "type": "grass"
+    },
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    }
+  ]
 }

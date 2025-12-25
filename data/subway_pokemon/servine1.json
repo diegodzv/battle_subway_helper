@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 135
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/496.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/496.png",
+  "dex_number": 496,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grip-claw.png",
+  "moves_meta": [
+    {
+      "name": "Leaf Blade",
+      "slug": "leaf-blade",
+      "type": "grass"
+    },
+    {
+      "name": "Slam",
+      "slug": "slam",
+      "type": "normal"
+    },
+    {
+      "name": "Iron Tail",
+      "slug": "iron-tail",
+      "type": "steel"
+    },
+    {
+      "name": "Wrap",
+      "slug": "wrap",
+      "type": "normal"
+    }
+  ]
 }

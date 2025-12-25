@@ -38,5 +38,29 @@
     "SpD": 130,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/576.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/576.png",
+  "dex_number": 576,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Charm",
+      "slug": "charm",
+      "type": "fairy"
+    },
+    {
+      "name": "Safeguard",
+      "slug": "safeguard",
+      "type": "normal"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    }
+  ]
 }

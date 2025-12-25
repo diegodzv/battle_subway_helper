@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 183
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+  "dex_number": 121,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Cosmic Power",
+      "slug": "cosmic-power",
+      "type": "psychic"
+    },
+    {
+      "name": "Recover",
+      "slug": "recover",
+      "type": "normal"
+    },
+    {
+      "name": "Reflect Type",
+      "slug": "reflect-type",
+      "type": "normal"
+    }
+  ]
 }

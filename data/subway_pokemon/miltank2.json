@@ -38,5 +38,29 @@
     "SpD": 81,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
+  "dex_number": 241,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png",
+  "moves_meta": [
+    {
+      "name": "Body Slam",
+      "slug": "body-slam",
+      "type": "normal"
+    },
+    {
+      "name": "Fling",
+      "slug": "fling",
+      "type": "dark"
+    },
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "Captivate",
+      "slug": "captivate",
+      "type": "normal"
+    }
+  ]
 }

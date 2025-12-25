@@ -38,5 +38,29 @@
     "SpD": 147,
     "Spe": 59
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png",
+  "dex_number": 423,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png",
+  "moves_meta": [
+    {
+      "name": "Rain Dance",
+      "slug": "rain-dance",
+      "type": "water"
+    },
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "Muddy Water",
+      "slug": "muddy-water",
+      "type": "water"
+    },
+    {
+      "name": "Counter",
+      "slug": "counter",
+      "type": "fighting"
+    }
+  ]
 }

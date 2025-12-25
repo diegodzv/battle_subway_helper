@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png",
+  "dex_number": 321,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png",
+  "moves_meta": [
+    {
+      "name": "Hydro Pump",
+      "slug": "hydro-pump",
+      "type": "water"
+    },
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    },
+    {
+      "name": "Fissure",
+      "slug": "fissure",
+      "type": "ground"
+    },
+    {
+      "name": "Hyper Beam",
+      "slug": "hyper-beam",
+      "type": "normal"
+    }
+  ]
 }

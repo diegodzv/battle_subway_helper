@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 128
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/595.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/595.png",
+  "dex_number": 595,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
+  "moves_meta": [
+    {
+      "name": "Signal Beam",
+      "slug": "signal-beam",
+      "type": "bug"
+    },
+    {
+      "name": "Electro Ball",
+      "slug": "electro-ball",
+      "type": "electric"
+    },
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Agility",
+      "slug": "agility",
+      "type": "psychic"
+    }
+  ]
 }

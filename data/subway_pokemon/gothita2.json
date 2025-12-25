@@ -38,5 +38,29 @@
     "SpD": 128,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png",
+  "dex_number": 574,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Heal Block",
+      "slug": "heal-block",
+      "type": "psychic"
+    },
+    {
+      "name": "Trick Room",
+      "slug": "trick-room",
+      "type": "psychic"
+    }
+  ]
 }

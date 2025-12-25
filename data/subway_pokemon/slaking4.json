@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png",
+  "dex_number": 289,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png",
+  "moves_meta": [
+    {
+      "name": "Return",
+      "slug": "return",
+      "type": "normal"
+    },
+    {
+      "name": "Night Slash",
+      "slug": "night-slash",
+      "type": "dark"
+    },
+    {
+      "name": "Gunk Shot",
+      "slug": "gunk-shot",
+      "type": "poison"
+    },
+    {
+      "name": "Aerial Ace",
+      "slug": "aerial-ace",
+      "type": "flying"
+    }
+  ]
 }

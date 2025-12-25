@@ -38,5 +38,29 @@
     "SpD": 137,
     "Spe": 76
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png",
+  "dex_number": 389,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Stockpile",
+      "slug": "stockpile",
+      "type": "normal"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

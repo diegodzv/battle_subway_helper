@@ -38,5 +38,29 @@
     "SpD": 117,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/534.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/534.png",
+  "dex_number": 534,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Bulk Up",
+      "slug": "bulk-up",
+      "type": "fighting"
+    },
+    {
+      "name": "Drain Punch",
+      "slug": "drain-punch",
+      "type": "fighting"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    }
+  ]
 }

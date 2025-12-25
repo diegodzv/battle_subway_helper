@@ -38,5 +38,29 @@
     "SpD": 52,
     "Spe": 140
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/522.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/522.png",
+  "dex_number": 522,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png",
+  "moves_meta": [
+    {
+      "name": "Spark",
+      "slug": "spark",
+      "type": "electric"
+    },
+    {
+      "name": "Quick Attack",
+      "slug": "quick-attack",
+      "type": "normal"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    },
+    {
+      "name": "Tail Whip",
+      "slug": "tail-whip",
+      "type": "normal"
+    }
+  ]
 }

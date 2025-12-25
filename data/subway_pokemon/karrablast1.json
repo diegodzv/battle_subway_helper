@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 123
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/588.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/588.png",
+  "dex_number": 588,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png",
+  "moves_meta": [
+    {
+      "name": "Fury Cutter",
+      "slug": "fury-cutter",
+      "type": "bug"
+    },
+    {
+      "name": "Aerial Ace",
+      "slug": "aerial-ace",
+      "type": "flying"
+    },
+    {
+      "name": "Flail",
+      "slug": "flail",
+      "type": "normal"
+    },
+    {
+      "name": "Endure",
+      "slug": "endure",
+      "type": "normal"
+    }
+  ]
 }

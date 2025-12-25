@@ -38,5 +38,29 @@
     "SpD": 55,
     "Spe": 128
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png",
+  "dex_number": 551,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png",
+  "moves_meta": [
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Foul Play",
+      "slug": "foul-play",
+      "type": "dark"
+    },
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    },
+    {
+      "name": "Scary Face",
+      "slug": "scary-face",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 250,
     "Spe": 22
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
+  "dex_number": 213,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Sandstorm",
+      "slug": "sandstorm",
+      "type": "rock"
+    },
+    {
+      "name": "Wrap",
+      "slug": "wrap",
+      "type": "normal"
+    }
+  ]
 }

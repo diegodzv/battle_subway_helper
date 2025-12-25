@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 112
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/636.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/636.png",
+  "dex_number": 636,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png",
+  "moves_meta": [
+    {
+      "name": "Flame Wheel",
+      "slug": "flame-wheel",
+      "type": "fire"
+    },
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    },
+    {
+      "name": "Acrobatics",
+      "slug": "acrobatics",
+      "type": "flying"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 128
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png",
+  "dex_number": 500,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
+  "moves_meta": [
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Focus Blast",
+      "slug": "focus-blast",
+      "type": "fighting"
+    },
+    {
+      "name": "Scald",
+      "slug": "scald",
+      "type": "water"
+    }
+  ]
 }

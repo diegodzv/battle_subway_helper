@@ -38,5 +38,29 @@
     "SpD": 60,
     "Spe": 60
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/613.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/613.png",
+  "dex_number": 613,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Avalanche",
+      "slug": "avalanche",
+      "type": "ice"
+    },
+    {
+      "name": "Shadow Claw",
+      "slug": "shadow-claw",
+      "type": "ghost"
+    },
+    {
+      "name": "Aerial Ace",
+      "slug": "aerial-ace",
+      "type": "flying"
+    },
+    {
+      "name": "Slash",
+      "slug": "slash",
+      "type": "normal"
+    }
+  ]
 }

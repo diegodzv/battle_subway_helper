@@ -37,5 +37,24 @@
     "SpD": 90,
     "Spe": 163
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png",
+  "dex_number": 612,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png",
+  "moves_meta": [
+    {
+      "name": "Outrage",
+      "slug": "outrage",
+      "type": "dragon"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Dragon Claw",
+      "slug": "dragon-claw",
+      "type": "dragon"
+    }
+  ]
 }

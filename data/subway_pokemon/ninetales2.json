@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+  "dex_number": 38,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-gem.png",
+  "moves_meta": [
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    },
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    },
+    {
+      "name": "Confuse Ray",
+      "slug": "confuse-ray",
+      "type": "ghost"
+    },
+    {
+      "name": "Nasty Plot",
+      "slug": "nasty-plot",
+      "type": "dark"
+    }
+  ]
 }

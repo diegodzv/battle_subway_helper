@@ -38,5 +38,29 @@
     "SpD": 60,
     "Spe": 40
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/525.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/525.png",
+  "dex_number": 525,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png",
+  "moves_meta": [
+    {
+      "name": "Smack Down",
+      "slug": "smack-down",
+      "type": "rock"
+    },
+    {
+      "name": "Headbutt",
+      "slug": "headbutt",
+      "type": "normal"
+    },
+    {
+      "name": "Sand-Attack",
+      "slug": "sand-attack",
+      "type": "ground"
+    },
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    }
+  ]
 }

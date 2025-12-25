@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 98
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+  "dex_number": 9,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/custap-berry.png",
+  "moves_meta": [
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    },
+    {
+      "name": "Waterfall",
+      "slug": "waterfall",
+      "type": "water"
+    },
+    {
+      "name": "Focus Punch",
+      "slug": "focus-punch",
+      "type": "fighting"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    }
+  ]
 }

@@ -35,5 +35,14 @@
     "SpD": 95,
     "Spe": 142
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/474.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/474.png",
+  "dex_number": 474,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png",
+  "moves_meta": [
+    {
+      "name": "Hyper Beam",
+      "slug": "hyper-beam",
+      "type": "normal"
+    }
+  ]
 }

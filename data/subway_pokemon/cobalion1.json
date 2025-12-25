@@ -38,5 +38,29 @@
     "SpD": 124,
     "Spe": 128
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png",
+  "dex_number": 638,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Focus Blast",
+      "slug": "focus-blast",
+      "type": "fighting"
+    },
+    {
+      "name": "Flash Cannon",
+      "slug": "flash-cannon",
+      "type": "steel"
+    },
+    {
+      "name": "Calm Mind",
+      "slug": "calm-mind",
+      "type": "psychic"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    }
+  ]
 }

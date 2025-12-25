@@ -38,5 +38,28 @@
     "SpD": 130,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/576.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/576.png",
+  "dex_number": 576,
+  "moves_meta": [
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    },
+    {
+      "name": "Flatter",
+      "slug": "flatter",
+      "type": "dark"
+    },
+    {
+      "name": "Psych Up",
+      "slug": "psych-up",
+      "type": "normal"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    }
+  ]
 }

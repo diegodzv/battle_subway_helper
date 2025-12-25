@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 172
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/620.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/620.png",
+  "dex_number": 620,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+  "moves_meta": [
+    {
+      "name": "Low Kick",
+      "slug": "low-kick",
+      "type": "fighting"
+    },
+    {
+      "name": "Fake Out",
+      "slug": "fake-out",
+      "type": "normal"
+    },
+    {
+      "name": "Hi Jump Kick",
+      "slug": "hi-jump-kick",
+      "type": null
+    },
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    }
+  ]
 }

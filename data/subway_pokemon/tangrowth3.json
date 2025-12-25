@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/465.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/465.png",
+  "dex_number": 465,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png",
+  "moves_meta": [
+    {
+      "name": "Sunny Day",
+      "slug": "sunny-day",
+      "type": "fire"
+    },
+    {
+      "name": "SolarBeam",
+      "slug": "solarbeam",
+      "type": null
+    },
+    {
+      "name": "Synthesis",
+      "slug": "synthesis",
+      "type": "grass"
+    },
+    {
+      "name": "Wring Out",
+      "slug": "wring-out",
+      "type": "normal"
+    }
+  ]
 }

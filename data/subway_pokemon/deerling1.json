@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 127
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/585.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/585.png",
+  "dex_number": 585,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png",
+  "moves_meta": [
+    {
+      "name": "Double Kick",
+      "slug": "double-kick",
+      "type": "fighting"
+    },
+    {
+      "name": "Faint Attack",
+      "slug": "faint-attack",
+      "type": null
+    },
+    {
+      "name": "Sand-Attack",
+      "slug": "sand-attack",
+      "type": "ground"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    }
+  ]
 }

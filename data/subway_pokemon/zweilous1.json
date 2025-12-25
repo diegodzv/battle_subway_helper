@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 78
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/634.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/634.png",
+  "dex_number": 634,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png",
+  "moves_meta": [
+    {
+      "name": "Dragon Tail",
+      "slug": "dragon-tail",
+      "type": "dragon"
+    },
+    {
+      "name": "Headbutt",
+      "slug": "headbutt",
+      "type": "normal"
+    },
+    {
+      "name": "Rock Smash",
+      "slug": "rock-smash",
+      "type": "fighting"
+    },
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    }
+  ]
 }

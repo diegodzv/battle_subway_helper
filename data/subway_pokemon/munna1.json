@@ -38,5 +38,28 @@
     "SpD": 75,
     "Spe": 44
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png",
+  "dex_number": 517,
+  "moves_meta": [
+    {
+      "name": "Synchronoise",
+      "slug": "synchronoise",
+      "type": "psychic"
+    },
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    },
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    },
+    {
+      "name": "Moonlight",
+      "slug": "moonlight",
+      "type": "fairy"
+    }
+  ]
 }

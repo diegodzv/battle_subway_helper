@@ -38,5 +38,29 @@
     "SpD": 142,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
+  "dex_number": 609,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Calm Mind",
+      "slug": "calm-mind",
+      "type": "psychic"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    }
+  ]
 }

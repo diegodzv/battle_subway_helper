@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
+  "dex_number": 233,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    },
+    {
+      "name": "Magic Coat",
+      "slug": "magic-coat",
+      "type": "psychic"
+    },
+    {
+      "name": "Lock-On",
+      "slug": "lock-on",
+      "type": "normal"
+    },
+    {
+      "name": "Zap Cannon",
+      "slug": "zap-cannon",
+      "type": "electric"
+    }
+  ]
 }

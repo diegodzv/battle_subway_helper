@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+  "dex_number": 62,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Waterfall",
+      "slug": "waterfall",
+      "type": "water"
+    },
+    {
+      "name": "Focus Punch",
+      "slug": "focus-punch",
+      "type": "fighting"
+    },
+    {
+      "name": "Encore",
+      "slug": "encore",
+      "type": "normal"
+    },
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    }
+  ]
 }

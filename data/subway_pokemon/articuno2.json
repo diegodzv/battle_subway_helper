@@ -38,5 +38,29 @@
     "SpD": 177,
     "Spe": 105
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+  "dex_number": 144,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+  "moves_meta": [
+    {
+      "name": "Sheer Cold",
+      "slug": "sheer-cold",
+      "type": "ice"
+    },
+    {
+      "name": "Mind Reader",
+      "slug": "mind-reader",
+      "type": "normal"
+    },
+    {
+      "name": "Ice Shard",
+      "slug": "ice-shard",
+      "type": "ice"
+    },
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 121
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
+  "dex_number": 609,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png",
+  "moves_meta": [
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Confuse Ray",
+      "slug": "confuse-ray",
+      "type": "ghost"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    },
+    {
+      "name": "Hex",
+      "slug": "hex",
+      "type": "ghost"
+    }
+  ]
 }

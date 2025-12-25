@@ -38,5 +38,29 @@
     "SpD": 107,
     "Spe": 115
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/555.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/555.png",
+  "dex_number": 555,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Belly Drum",
+      "slug": "belly-drum",
+      "type": "normal"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Fire Punch",
+      "slug": "fire-punch",
+      "type": "fire"
+    },
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    }
+  ]
 }

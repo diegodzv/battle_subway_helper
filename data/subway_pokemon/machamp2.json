@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 67
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+  "dex_number": 68,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Ice Punch",
+      "slug": "ice-punch",
+      "type": "ice"
+    },
+    {
+      "name": "Cross Chop",
+      "slug": "cross-chop",
+      "type": "fighting"
+    },
+    {
+      "name": "Fire Punch",
+      "slug": "fire-punch",
+      "type": "fire"
+    },
+    {
+      "name": "Focus Energy",
+      "slug": "focus-energy",
+      "type": "normal"
+    }
+  ]
 }

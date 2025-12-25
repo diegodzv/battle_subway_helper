@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 141
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+  "dex_number": 6,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+  "moves_meta": [
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Air Slash",
+      "slug": "air-slash",
+      "type": "flying"
+    },
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    }
+  ]
 }

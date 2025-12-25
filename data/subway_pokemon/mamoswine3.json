@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
+  "dex_number": 473,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png",
+  "moves_meta": [
+    {
+      "name": "Hail",
+      "slug": "hail",
+      "type": "ice"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Superpower",
+      "slug": "superpower",
+      "type": "fighting"
+    },
+    {
+      "name": "Fissure",
+      "slug": "fissure",
+      "type": "ground"
+    }
+  ]
 }

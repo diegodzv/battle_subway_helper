@@ -38,5 +38,29 @@
     "SpD": 126,
     "Spe": 86
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+  "dex_number": 31,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Chip Away",
+      "slug": "chip-away",
+      "type": "normal"
+    },
+    {
+      "name": "Swagger",
+      "slug": "swagger",
+      "type": "normal"
+    },
+    {
+      "name": "Helping Hand",
+      "slug": "helping-hand",
+      "type": "normal"
+    },
+    {
+      "name": "Flatter",
+      "slug": "flatter",
+      "type": "dark"
+    }
+  ]
 }

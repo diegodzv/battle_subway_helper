@@ -38,5 +38,29 @@
     "SpD": 94,
     "Spe": 136
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png",
+  "dex_number": 466,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Low Kick",
+      "slug": "low-kick",
+      "type": "fighting"
+    },
+    {
+      "name": "Dig",
+      "slug": "dig",
+      "type": "ground"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Screech",
+      "slug": "screech",
+      "type": "normal"
+    }
+  ]
 }

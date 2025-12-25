@@ -38,5 +38,28 @@
     "SpD": 80,
     "Spe": 62
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/540.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/540.png",
+  "dex_number": 540,
+  "moves_meta": [
+    {
+      "name": "Bug Bite",
+      "slug": "bug-bite",
+      "type": "bug"
+    },
+    {
+      "name": "Razor Leaf",
+      "slug": "razor-leaf",
+      "type": "grass"
+    },
+    {
+      "name": "String Shot",
+      "slug": "string-shot",
+      "type": "bug"
+    },
+    {
+      "name": "Grass Knot",
+      "slug": "grass-knot",
+      "type": "grass"
+    }
+  ]
 }

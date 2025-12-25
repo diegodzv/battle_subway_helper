@@ -38,5 +38,29 @@
     "SpD": 156,
     "Spe": 102
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+  "dex_number": 45,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Petal Dance",
+      "slug": "petal-dance",
+      "type": "grass"
+    },
+    {
+      "name": "Stun Spore",
+      "slug": "stun-spore",
+      "type": "grass"
+    },
+    {
+      "name": "Teeter Dance",
+      "slug": "teeter-dance",
+      "type": "normal"
+    },
+    {
+      "name": "Moonlight",
+      "slug": "moonlight",
+      "type": "fairy"
+    }
+  ]
 }

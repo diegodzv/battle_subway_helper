@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 152
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
+  "dex_number": 637,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png",
+  "moves_meta": [
+    {
+      "name": "Fire Spin",
+      "slug": "fire-spin",
+      "type": "fire"
+    },
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    },
+    {
+      "name": "SolarBeam",
+      "slug": "solarbeam",
+      "type": null
+    },
+    {
+      "name": "Whirlwind",
+      "slug": "whirlwind",
+      "type": "normal"
+    }
+  ]
 }

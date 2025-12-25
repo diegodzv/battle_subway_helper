@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 183
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/419.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/419.png",
+  "dex_number": 419,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png",
+  "moves_meta": [
+    {
+      "name": "Waterfall",
+      "slug": "waterfall",
+      "type": "water"
+    },
+    {
+      "name": "Aqua Jet",
+      "slug": "aqua-jet",
+      "type": "water"
+    },
+    {
+      "name": "Low Kick",
+      "slug": "low-kick",
+      "type": "fighting"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

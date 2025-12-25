@@ -38,5 +38,29 @@
     "SpD": 132,
     "Spe": 131
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
+  "dex_number": 641,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    },
+    {
+      "name": "Air Slash",
+      "slug": "air-slash",
+      "type": "flying"
+    },
+    {
+      "name": "Dark Pulse",
+      "slug": "dark-pulse",
+      "type": "dark"
+    },
+    {
+      "name": "Focus Blast",
+      "slug": "focus-blast",
+      "type": "fighting"
+    }
+  ]
 }

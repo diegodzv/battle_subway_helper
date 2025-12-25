@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/575.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/575.png",
+  "dex_number": 575,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psybeam",
+      "slug": "psybeam",
+      "type": "psychic"
+    },
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    },
+    {
+      "name": "Future Sight",
+      "slug": "future-sight",
+      "type": "psychic"
+    },
+    {
+      "name": "Fake Tears",
+      "slug": "fake-tears",
+      "type": "dark"
+    }
+  ]
 }

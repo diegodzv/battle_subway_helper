@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 115
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png",
+  "dex_number": 470,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png",
+  "moves_meta": [
+    {
+      "name": "Sunny Day",
+      "slug": "sunny-day",
+      "type": "fire"
+    },
+    {
+      "name": "Leaf Blade",
+      "slug": "leaf-blade",
+      "type": "grass"
+    },
+    {
+      "name": "X-Scissor",
+      "slug": "x-scissor",
+      "type": "bug"
+    },
+    {
+      "name": "Synthesis",
+      "slug": "synthesis",
+      "type": "grass"
+    }
+  ]
 }

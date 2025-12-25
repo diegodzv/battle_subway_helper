@@ -38,5 +38,29 @@
     "SpD": 83,
     "Spe": 168
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png",
+  "dex_number": 512,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png",
+  "moves_meta": [
+    {
+      "name": "Giga Impact",
+      "slug": "giga-impact",
+      "type": "normal"
+    },
+    {
+      "name": "Shadow Claw",
+      "slug": "shadow-claw",
+      "type": "ghost"
+    },
+    {
+      "name": "Low Sweep",
+      "slug": "low-sweep",
+      "type": "fighting"
+    },
+    {
+      "name": "Acrobatics",
+      "slug": "acrobatics",
+      "type": "flying"
+    }
+  ]
 }

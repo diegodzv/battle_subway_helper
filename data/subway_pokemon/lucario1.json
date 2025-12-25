@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 142
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
+  "dex_number": 448,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png",
+  "moves_meta": [
+    {
+      "name": "Metal Sound",
+      "slug": "metal-sound",
+      "type": "steel"
+    },
+    {
+      "name": "Dark Pulse",
+      "slug": "dark-pulse",
+      "type": "dark"
+    },
+    {
+      "name": "Aura Sphere",
+      "slug": "aura-sphere",
+      "type": "fighting"
+    },
+    {
+      "name": "Heal Pulse",
+      "slug": "heal-pulse",
+      "type": "psychic"
+    }
+  ]
 }

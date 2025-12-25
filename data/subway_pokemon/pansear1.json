@@ -38,5 +38,29 @@
     "SpD": 68,
     "Spe": 116
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/513.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/513.png",
+  "dex_number": 513,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
+  "moves_meta": [
+    {
+      "name": "Flame Burst",
+      "slug": "flame-burst",
+      "type": "fire"
+    },
+    {
+      "name": "Fury Swipes",
+      "slug": "fury-swipes",
+      "type": "normal"
+    },
+    {
+      "name": "Leer",
+      "slug": "leer",
+      "type": "normal"
+    },
+    {
+      "name": "Hone Claws",
+      "slug": "hone-claws",
+      "type": "dark"
+    }
+  ]
 }

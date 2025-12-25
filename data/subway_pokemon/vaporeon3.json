@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+  "dex_number": 134,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Muddy Water",
+      "slug": "muddy-water",
+      "type": "water"
+    },
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    },
+    {
+      "name": "Aqua Ring",
+      "slug": "aqua-ring",
+      "type": "water"
+    },
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    }
+  ]
 }

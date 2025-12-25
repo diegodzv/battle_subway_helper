@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 63
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+  "dex_number": 89,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png",
+  "moves_meta": [
+    {
+      "name": "Gunk Shot",
+      "slug": "gunk-shot",
+      "type": "poison"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Shadow Sneak",
+      "slug": "shadow-sneak",
+      "type": "ghost"
+    },
+    {
+      "name": "Curse",
+      "slug": "curse",
+      "type": "ghost"
+    }
+  ]
 }

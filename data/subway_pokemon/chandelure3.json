@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
+  "dex_number": 609,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+  "moves_meta": [
+    {
+      "name": "Overheat",
+      "slug": "overheat",
+      "type": "fire"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    }
+  ]
 }

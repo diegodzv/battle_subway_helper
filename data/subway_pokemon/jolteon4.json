@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 200
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+  "dex_number": 135,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png",
+  "moves_meta": [
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Hyper Beam",
+      "slug": "hyper-beam",
+      "type": "normal"
+    },
+    {
+      "name": "Fake Tears",
+      "slug": "fake-tears",
+      "type": "dark"
+    },
+    {
+      "name": "Signal Beam",
+      "slug": "signal-beam",
+      "type": "bug"
+    }
+  ]
 }

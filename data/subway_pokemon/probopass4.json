@@ -38,5 +38,29 @@
     "SpD": 202,
     "Spe": 60
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/476.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/476.png",
+  "dex_number": 476,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png",
+  "moves_meta": [
+    {
+      "name": "Flash Cannon",
+      "slug": "flash-cannon",
+      "type": "steel"
+    },
+    {
+      "name": "Power Gem",
+      "slug": "power-gem",
+      "type": "rock"
+    },
+    {
+      "name": "Earth Power",
+      "slug": "earth-power",
+      "type": "ground"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    }
+  ]
 }

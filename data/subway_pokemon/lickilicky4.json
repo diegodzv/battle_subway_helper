@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png",
+  "dex_number": 463,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png",
+  "moves_meta": [
+    {
+      "name": "Body Slam",
+      "slug": "body-slam",
+      "type": "normal"
+    },
+    {
+      "name": "Power Whip",
+      "slug": "power-whip",
+      "type": "grass"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Explosion",
+      "slug": "explosion",
+      "type": "normal"
+    }
+  ]
 }

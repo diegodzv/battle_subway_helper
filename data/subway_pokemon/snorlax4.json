@@ -38,5 +38,29 @@
     "SpD": 162,
     "Spe": 45
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+  "dex_number": 143,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Belly Drum",
+      "slug": "belly-drum",
+      "type": "normal"
+    },
+    {
+      "name": "Double-Edge",
+      "slug": "double-edge",
+      "type": "normal"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    }
+  ]
 }

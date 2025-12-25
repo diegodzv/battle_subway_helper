@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 159
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/521.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/521.png",
+  "dex_number": 521,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png",
+  "moves_meta": [
+    {
+      "name": "Giga Impact",
+      "slug": "giga-impact",
+      "type": "normal"
+    },
+    {
+      "name": "Quick Attack",
+      "slug": "quick-attack",
+      "type": "normal"
+    },
+    {
+      "name": "Hypnosis",
+      "slug": "hypnosis",
+      "type": "psychic"
+    },
+    {
+      "name": "Sky Attack",
+      "slug": "sky-attack",
+      "type": "flying"
+    }
+  ]
 }

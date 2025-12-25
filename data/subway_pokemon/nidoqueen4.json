@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 96
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+  "dex_number": 31,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png",
+  "moves_meta": [
+    {
+      "name": "Poison Jab",
+      "slug": "poison-jab",
+      "type": "poison"
+    },
+    {
+      "name": "Dragon Tail",
+      "slug": "dragon-tail",
+      "type": "dragon"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

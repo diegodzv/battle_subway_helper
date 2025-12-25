@@ -38,5 +38,29 @@
     "SpD": 150,
     "Spe": 60
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/592.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/592.png",
+  "dex_number": 592,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png",
+  "moves_meta": [
+    {
+      "name": "Surf",
+      "slug": "surf",
+      "type": "water"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Recover",
+      "slug": "recover",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 138
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/552.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/552.png",
+  "dex_number": 552,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Foul Play",
+      "slug": "foul-play",
+      "type": "dark"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Sand Tomb",
+      "slug": "sand-tomb",
+      "type": "ground"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 99,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png",
+  "dex_number": 405,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+  "moves_meta": [
+    {
+      "name": "Thunder Fang",
+      "slug": "thunder-fang",
+      "type": "electric"
+    },
+    {
+      "name": "Ice Fang",
+      "slug": "ice-fang",
+      "type": "ice"
+    },
+    {
+      "name": "Superpower",
+      "slug": "superpower",
+      "type": "fighting"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    }
+  ]
 }

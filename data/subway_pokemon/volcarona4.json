@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 120
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
+  "dex_number": 637,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Hurricane",
+      "slug": "hurricane",
+      "type": "flying"
+    },
+    {
+      "name": "Quiver Dance",
+      "slug": "quiver-dance",
+      "type": "bug"
+    },
+    {
+      "name": "Bug Buzz",
+      "slug": "bug-buzz",
+      "type": "bug"
+    },
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    }
+  ]
 }

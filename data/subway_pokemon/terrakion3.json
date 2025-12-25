@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 176
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/639.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/639.png",
+  "dex_number": 639,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    },
+    {
+      "name": "Sacred Sword",
+      "slug": "sacred-sword",
+      "type": "fighting"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    }
+  ]
 }

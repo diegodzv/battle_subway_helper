@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 44
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png",
+  "dex_number": 517,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png",
+  "moves_meta": [
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 60
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/533.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/533.png",
+  "dex_number": 533,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+  "moves_meta": [
+    {
+      "name": "Superpower",
+      "slug": "superpower",
+      "type": "fighting"
+    },
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    },
+    {
+      "name": "Chip Away",
+      "slug": "chip-away",
+      "type": "normal"
+    },
+    {
+      "name": "Bulk Up",
+      "slug": "bulk-up",
+      "type": "fighting"
+    }
+  ]
 }

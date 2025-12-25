@@ -38,5 +38,29 @@
     "SpD": 45,
     "Spe": 35
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/524.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/524.png",
+  "dex_number": 524,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png",
+  "moves_meta": [
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    },
+    {
+      "name": "Sandstorm",
+      "slug": "sandstorm",
+      "type": "rock"
+    }
+  ]
 }

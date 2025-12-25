@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 128
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/595.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/595.png",
+  "dex_number": 595,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Electroweb",
+      "slug": "electroweb",
+      "type": "electric"
+    },
+    {
+      "name": "Bug Bite",
+      "slug": "bug-bite",
+      "type": "bug"
+    },
+    {
+      "name": "String Shot",
+      "slug": "string-shot",
+      "type": "bug"
+    },
+    {
+      "name": "Gastro Acid",
+      "slug": "gastro-acid",
+      "type": "poison"
+    }
+  ]
 }

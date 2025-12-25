@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 60
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/603.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/603.png",
+  "dex_number": 603,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Wild Charge",
+      "slug": "wild-charge",
+      "type": "electric"
+    },
+    {
+      "name": "Thrash",
+      "slug": "thrash",
+      "type": "normal"
+    },
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Coil",
+      "slug": "coil",
+      "type": "poison"
+    }
+  ]
 }

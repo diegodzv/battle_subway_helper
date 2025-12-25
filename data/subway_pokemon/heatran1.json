@@ -38,5 +38,29 @@
     "SpD": 126,
     "Spe": 97
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/485.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/485.png",
+  "dex_number": 485,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+  "moves_meta": [
+    {
+      "name": "Lava Plume",
+      "slug": "lava-plume",
+      "type": "fire"
+    },
+    {
+      "name": "Earth Power",
+      "slug": "earth-power",
+      "type": "ground"
+    },
+    {
+      "name": "Flash Cannon",
+      "slug": "flash-cannon",
+      "type": "steel"
+    },
+    {
+      "name": "Dark Pulse",
+      "slug": "dark-pulse",
+      "type": "dark"
+    }
+  ]
 }

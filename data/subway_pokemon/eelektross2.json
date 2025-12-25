@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png",
+  "dex_number": 604,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+  "moves_meta": [
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Wild Charge",
+      "slug": "wild-charge",
+      "type": "electric"
+    },
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "Coil",
+      "slug": "coil",
+      "type": "poison"
+    }
+  ]
 }

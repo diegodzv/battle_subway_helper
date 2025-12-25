@@ -38,5 +38,29 @@
     "SpD": 132,
     "Spe": 67
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png",
+  "dex_number": 623,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png",
+  "moves_meta": [
+    {
+      "name": "Hammer Arm",
+      "slug": "hammer-arm",
+      "type": "fighting"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Curse",
+      "slug": "curse",
+      "type": "ghost"
+    },
+    {
+      "name": "Gyro Ball",
+      "slug": "gyro-ball",
+      "type": "steel"
+    }
+  ]
 }

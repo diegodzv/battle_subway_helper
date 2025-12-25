@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 67
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
+  "dex_number": 181,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+  "moves_meta": [
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "ThunderPunch",
+      "slug": "thunderpunch",
+      "type": null
+    },
+    {
+      "name": "Screech",
+      "slug": "screech",
+      "type": "normal"
+    },
+    {
+      "name": "Odor Sleuth",
+      "slug": "odor-sleuth",
+      "type": "normal"
+    }
+  ]
 }

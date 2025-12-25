@@ -38,5 +38,29 @@
     "SpD": 81,
     "Spe": 122
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
+  "dex_number": 227,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cell-battery.png",
+  "moves_meta": [
+    {
+      "name": "Brave Bird",
+      "slug": "brave-bird",
+      "type": "flying"
+    },
+    {
+      "name": "Steel Wing",
+      "slug": "steel-wing",
+      "type": "steel"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    },
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    }
+  ]
 }

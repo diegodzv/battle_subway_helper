@@ -38,5 +38,29 @@
     "SpD": 63,
     "Spe": 183
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/419.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/419.png",
+  "dex_number": 419,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/binding-band.png",
+  "moves_meta": [
+    {
+      "name": "Aqua Tail",
+      "slug": "aqua-tail",
+      "type": "water"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Pursuit",
+      "slug": "pursuit",
+      "type": "dark"
+    },
+    {
+      "name": "Whirlpool",
+      "slug": "whirlpool",
+      "type": "water"
+    }
+  ]
 }

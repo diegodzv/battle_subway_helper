@@ -38,5 +38,29 @@
     "SpD": 156,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png",
+  "dex_number": 260,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Curse",
+      "slug": "curse",
+      "type": "ghost"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Waterfall",
+      "slug": "waterfall",
+      "type": "water"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 165
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png",
+  "dex_number": 635,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+  "moves_meta": [
+    {
+      "name": "Draco Meteor",
+      "slug": "draco-meteor",
+      "type": "dragon"
+    },
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    },
+    {
+      "name": "Earth Power",
+      "slug": "earth-power",
+      "type": "ground"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    }
+  ]
 }

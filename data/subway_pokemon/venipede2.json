@@ -38,5 +38,29 @@
     "SpD": 59,
     "Spe": 77
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/543.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/543.png",
+  "dex_number": 543,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png",
+  "moves_meta": [
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "Steamroller",
+      "slug": "steamroller",
+      "type": "bug"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Screech",
+      "slug": "screech",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 131,
     "Spe": 67
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/544.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/544.png",
+  "dex_number": 544,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png",
+  "moves_meta": [
+    {
+      "name": "Poison Tail",
+      "slug": "poison-tail",
+      "type": "poison"
+    },
+    {
+      "name": "Bug Bite",
+      "slug": "bug-bite",
+      "type": "bug"
+    },
+    {
+      "name": "Rollout",
+      "slug": "rollout",
+      "type": "rock"
+    },
+    {
+      "name": "Defense Curl",
+      "slug": "defense-curl",
+      "type": "normal"
+    }
+  ]
 }

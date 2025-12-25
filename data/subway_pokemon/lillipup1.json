@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 107
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png",
+  "dex_number": 506,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png",
+  "moves_meta": [
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Take Down",
+      "slug": "take-down",
+      "type": "normal"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    },
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    }
+  ]
 }

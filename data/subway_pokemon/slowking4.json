@@ -38,5 +38,29 @@
     "SpD": 162,
     "Spe": 45
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
+  "dex_number": 199,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Surf",
+      "slug": "surf",
+      "type": "water"
+    },
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    },
+    {
+      "name": "Trick Room",
+      "slug": "trick-room",
+      "type": "psychic"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png",
+  "dex_number": 554,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Fire Fang",
+      "slug": "fire-fang",
+      "type": "fire"
+    },
+    {
+      "name": "Headbutt",
+      "slug": "headbutt",
+      "type": "normal"
+    },
+    {
+      "name": "Rock Tomb",
+      "slug": "rock-tomb",
+      "type": "rock"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

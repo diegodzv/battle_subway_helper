@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png",
+  "dex_number": 398,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Brave Bird",
+      "slug": "brave-bird",
+      "type": "flying"
+    },
+    {
+      "name": "Double-Edge",
+      "slug": "double-edge",
+      "type": "normal"
+    },
+    {
+      "name": "Roost",
+      "slug": "roost",
+      "type": "flying"
+    },
+    {
+      "name": "FeatherDance",
+      "slug": "featherdance",
+      "type": null
+    }
+  ]
 }

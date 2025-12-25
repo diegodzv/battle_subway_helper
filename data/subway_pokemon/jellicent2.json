@@ -38,5 +38,29 @@
     "SpD": 172,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/593.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/593.png",
+  "dex_number": 593,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Hydro Pump",
+      "slug": "hydro-pump",
+      "type": "water"
+    },
+    {
+      "name": "Hex",
+      "slug": "hex",
+      "type": "ghost"
+    },
+    {
+      "name": "Recover",
+      "slug": "recover",
+      "type": "normal"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    }
+  ]
 }

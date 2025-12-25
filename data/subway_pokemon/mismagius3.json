@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 172
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png",
+  "dex_number": 429,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Icy Wind",
+      "slug": "icy-wind",
+      "type": "ice"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Destiny Bond",
+      "slug": "destiny-bond",
+      "type": "ghost"
+    }
+  ]
 }

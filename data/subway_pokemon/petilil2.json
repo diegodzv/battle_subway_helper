@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 50
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/548.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/548.png",
+  "dex_number": 548,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rose-incense.png",
+  "moves_meta": [
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Round",
+      "slug": "round",
+      "type": "normal"
+    },
+    {
+      "name": "Grass Knot",
+      "slug": "grass-knot",
+      "type": "grass"
+    },
+    {
+      "name": "Sleep Powder",
+      "slug": "sleep-powder",
+      "type": "grass"
+    }
+  ]
 }

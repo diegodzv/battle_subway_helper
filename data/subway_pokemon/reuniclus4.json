@@ -38,5 +38,29 @@
     "SpD": 137,
     "Spe": 45
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/579.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/579.png",
+  "dex_number": 579,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png",
+  "moves_meta": [
+    {
+      "name": "Trick",
+      "slug": "trick",
+      "type": "psychic"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Focus Blast",
+      "slug": "focus-blast",
+      "type": "fighting"
+    },
+    {
+      "name": "Recover",
+      "slug": "recover",
+      "type": "normal"
+    }
+  ]
 }

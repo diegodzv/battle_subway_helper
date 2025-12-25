@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+  "dex_number": 45,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png",
+  "moves_meta": [
+    {
+      "name": "SolarBeam",
+      "slug": "solarbeam",
+      "type": null
+    },
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "Synthesis",
+      "slug": "synthesis",
+      "type": "grass"
+    },
+    {
+      "name": "Double Team",
+      "slug": "double-team",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+  "dex_number": 145,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png",
+  "moves_meta": [
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Signal Beam",
+      "slug": "signal-beam",
+      "type": "bug"
+    },
+    {
+      "name": "Air Cutter",
+      "slug": "air-cutter",
+      "type": "flying"
+    },
+    {
+      "name": "AncientPower",
+      "slug": "ancientpower",
+      "type": null
+    }
+  ]
 }

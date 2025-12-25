@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 138
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/537.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/537.png",
+  "dex_number": 537,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "Poison Jab",
+      "slug": "poison-jab",
+      "type": "poison"
+    },
+    {
+      "name": "Dig",
+      "slug": "dig",
+      "type": "ground"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    }
+  ]
 }

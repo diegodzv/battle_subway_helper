@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 102
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png",
+  "dex_number": 554,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png",
+  "moves_meta": [
+    {
+      "name": "Fire Punch",
+      "slug": "fire-punch",
+      "type": "fire"
+    },
+    {
+      "name": "Uproar",
+      "slug": "uproar",
+      "type": "normal"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    }
+  ]
 }

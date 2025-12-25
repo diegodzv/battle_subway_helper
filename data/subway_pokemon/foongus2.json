@@ -38,5 +38,28 @@
     "SpD": 75,
     "Spe": 35
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/590.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/590.png",
+  "dex_number": 590,
+  "moves_meta": [
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Clear Smog",
+      "slug": "clear-smog",
+      "type": "poison"
+    },
+    {
+      "name": "Rage Powder",
+      "slug": "rage-powder",
+      "type": "bug"
+    },
+    {
+      "name": "Spore",
+      "slug": "spore",
+      "type": "grass"
+    }
+  ]
 }

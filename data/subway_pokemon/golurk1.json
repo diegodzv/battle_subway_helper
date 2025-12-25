@@ -38,5 +38,29 @@
     "SpD": 132,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png",
+  "dex_number": 623,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png",
+  "moves_meta": [
+    {
+      "name": "Shadow Punch",
+      "slug": "shadow-punch",
+      "type": "ghost"
+    },
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    },
+    {
+      "name": "Heavy Slam",
+      "slug": "heavy-slam",
+      "type": "steel"
+    }
+  ]
 }

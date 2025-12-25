@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 120
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
+  "dex_number": 241,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png",
+  "moves_meta": [
+    {
+      "name": "Dizzy Punch",
+      "slug": "dizzy-punch",
+      "type": "normal"
+    },
+    {
+      "name": "Fire Punch",
+      "slug": "fire-punch",
+      "type": "fire"
+    },
+    {
+      "name": "ThunderPunch",
+      "slug": "thunderpunch",
+      "type": null
+    },
+    {
+      "name": "Ice Punch",
+      "slug": "ice-punch",
+      "type": "ice"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 152
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png",
+  "dex_number": 398,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png",
+  "moves_meta": [
+    {
+      "name": "Close Combat",
+      "slug": "close-combat",
+      "type": "fighting"
+    },
+    {
+      "name": "Brave Bird",
+      "slug": "brave-bird",
+      "type": "flying"
+    },
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    },
+    {
+      "name": "Giga Impact",
+      "slug": "giga-impact",
+      "type": "normal"
+    }
+  ]
 }

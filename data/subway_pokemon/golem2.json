@@ -38,5 +38,29 @@
     "SpD": 76,
     "Spe": 97
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+  "dex_number": 76,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/absorb-bulb.png",
+  "moves_meta": [
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    },
+    {
+      "name": "Autotomize",
+      "slug": "autotomize",
+      "type": "steel"
+    }
+  ]
 }

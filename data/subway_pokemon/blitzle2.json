@@ -38,5 +38,29 @@
     "SpD": 52,
     "Spe": 140
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/522.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/522.png",
+  "dex_number": 522,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-balloon.png",
+  "moves_meta": [
+    {
+      "name": "Spark",
+      "slug": "spark",
+      "type": "electric"
+    },
+    {
+      "name": "Facade",
+      "slug": "facade",
+      "type": "normal"
+    },
+    {
+      "name": "Pursuit",
+      "slug": "pursuit",
+      "type": "dark"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    }
+  ]
 }

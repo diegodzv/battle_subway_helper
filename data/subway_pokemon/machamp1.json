@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 67
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+  "dex_number": 68,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png",
+  "moves_meta": [
+    {
+      "name": "DynamicPunch",
+      "slug": "dynamicpunch",
+      "type": null
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Foresight",
+      "slug": "foresight",
+      "type": "normal"
+    },
+    {
+      "name": "Wide Guard",
+      "slug": "wide-guard",
+      "type": "rock"
+    }
+  ]
 }

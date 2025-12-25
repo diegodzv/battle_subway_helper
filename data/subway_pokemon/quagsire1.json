@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 55
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
+  "dex_number": 195,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png",
+  "moves_meta": [
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    },
+    {
+      "name": "Sleep Talk",
+      "slug": "sleep-talk",
+      "type": "normal"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    }
+  ]
 }

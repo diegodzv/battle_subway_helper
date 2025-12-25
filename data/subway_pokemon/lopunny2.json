@@ -38,5 +38,29 @@
     "SpD": 116,
     "Spe": 172
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png",
+  "dex_number": 428,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Charm",
+      "slug": "charm",
+      "type": "fairy"
+    },
+    {
+      "name": "Focus Punch",
+      "slug": "focus-punch",
+      "type": "fighting"
+    },
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    },
+    {
+      "name": "ThunderPunch",
+      "slug": "thunderpunch",
+      "type": null
+    }
+  ]
 }

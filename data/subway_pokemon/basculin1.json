@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 150
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png",
+  "dex_number": 550,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+  "moves_meta": [
+    {
+      "name": "Aqua Tail",
+      "slug": "aqua-tail",
+      "type": "water"
+    },
+    {
+      "name": "Chip Away",
+      "slug": "chip-away",
+      "type": "normal"
+    },
+    {
+      "name": "Flail",
+      "slug": "flail",
+      "type": "normal"
+    },
+    {
+      "name": "Final Gambit",
+      "slug": "final-gambit",
+      "type": "fighting"
+    }
+  ]
 }

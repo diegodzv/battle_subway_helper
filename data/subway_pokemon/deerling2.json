@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 139
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/585.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/585.png",
+  "dex_number": 585,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
+  "moves_meta": [
+    {
+      "name": "Take Down",
+      "slug": "take-down",
+      "type": "normal"
+    },
+    {
+      "name": "Jump Kick",
+      "slug": "jump-kick",
+      "type": "fighting"
+    },
+    {
+      "name": "Retaliate",
+      "slug": "retaliate",
+      "type": "normal"
+    },
+    {
+      "name": "Charm",
+      "slug": "charm",
+      "type": "fairy"
+    }
+  ]
 }

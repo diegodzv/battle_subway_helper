@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 134
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
+  "dex_number": 227,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+  "moves_meta": [
+    {
+      "name": "Brave Bird",
+      "slug": "brave-bird",
+      "type": "flying"
+    },
+    {
+      "name": "Steel Wing",
+      "slug": "steel-wing",
+      "type": "steel"
+    },
+    {
+      "name": "Night Slash",
+      "slug": "night-slash",
+      "type": "dark"
+    },
+    {
+      "name": "Rock Slide",
+      "slug": "rock-slide",
+      "type": "rock"
+    }
+  ]
 }

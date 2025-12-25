@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 182
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png",
+  "dex_number": 528,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psyshock",
+      "slug": "psyshock",
+      "type": "psychic"
+    },
+    {
+      "name": "Air Cutter",
+      "slug": "air-cutter",
+      "type": "flying"
+    },
+    {
+      "name": "Round",
+      "slug": "round",
+      "type": "normal"
+    },
+    {
+      "name": "Attract",
+      "slug": "attract",
+      "type": "normal"
+    }
+  ]
 }

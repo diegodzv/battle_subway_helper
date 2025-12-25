@@ -38,5 +38,29 @@
     "SpD": 60,
     "Spe": 127
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/535.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/535.png",
+  "dex_number": 535,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png",
+  "moves_meta": [
+    {
+      "name": "BubbleBeam",
+      "slug": "bubblebeam",
+      "type": null
+    },
+    {
+      "name": "Round",
+      "slug": "round",
+      "type": "normal"
+    },
+    {
+      "name": "Growl",
+      "slug": "growl",
+      "type": "normal"
+    },
+    {
+      "name": "Aqua Ring",
+      "slug": "aqua-ring",
+      "type": "water"
+    }
+  ]
 }

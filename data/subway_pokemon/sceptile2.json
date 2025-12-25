@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 189
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
+  "dex_number": 254,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png",
+  "moves_meta": [
+    {
+      "name": "Leaf Blade",
+      "slug": "leaf-blade",
+      "type": "grass"
+    },
+    {
+      "name": "Night Slash",
+      "slug": "night-slash",
+      "type": "dark"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    }
+  ]
 }

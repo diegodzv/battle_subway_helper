@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
+  "dex_number": 637,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+  "moves_meta": [
+    {
+      "name": "Bug Buzz",
+      "slug": "bug-buzz",
+      "type": "bug"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Calm Mind",
+      "slug": "calm-mind",
+      "type": "psychic"
+    }
+  ]
 }

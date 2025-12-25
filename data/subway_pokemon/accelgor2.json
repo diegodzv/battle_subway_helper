@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 197
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/617.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/617.png",
+  "dex_number": 617,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/petaya-berry.png",
+  "moves_meta": [
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "Bug Buzz",
+      "slug": "bug-buzz",
+      "type": "bug"
+    },
+    {
+      "name": "Endure",
+      "slug": "endure",
+      "type": "normal"
+    }
+  ]
 }

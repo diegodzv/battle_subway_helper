@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/626.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/626.png",
+  "dex_number": 626,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png",
+  "moves_meta": [
+    {
+      "name": "Head Charge",
+      "slug": "head-charge",
+      "type": "normal"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    },
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    },
+    {
+      "name": "Revenge",
+      "slug": "revenge",
+      "type": "fighting"
+    }
+  ]
 }

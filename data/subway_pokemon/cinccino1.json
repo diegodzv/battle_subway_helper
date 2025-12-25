@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png",
+  "dex_number": 573,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png",
+  "moves_meta": [
+    {
+      "name": "DoubleSlap",
+      "slug": "doubleslap",
+      "type": null
+    },
+    {
+      "name": "Dig",
+      "slug": "dig",
+      "type": "ground"
+    },
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    },
+    {
+      "name": "Aqua Tail",
+      "slug": "aqua-tail",
+      "type": "water"
+    }
+  ]
 }

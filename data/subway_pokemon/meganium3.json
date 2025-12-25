@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
+  "dex_number": 154,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-clay.png",
+  "moves_meta": [
+    {
+      "name": "Seed Bomb",
+      "slug": "seed-bomb",
+      "type": "grass"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Reflect",
+      "slug": "reflect",
+      "type": "psychic"
+    },
+    {
+      "name": "Light Screen",
+      "slug": "light-screen",
+      "type": "psychic"
+    }
+  ]
 }

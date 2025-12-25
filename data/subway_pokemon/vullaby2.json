@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/629.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/629.png",
+  "dex_number": 629,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png",
+  "moves_meta": [
+    {
+      "name": "Air Slash",
+      "slug": "air-slash",
+      "type": "flying"
+    },
+    {
+      "name": "Dark Pulse",
+      "slug": "dark-pulse",
+      "type": "dark"
+    },
+    {
+      "name": "Tailwind",
+      "slug": "tailwind",
+      "type": "flying"
+    },
+    {
+      "name": "Nasty Plot",
+      "slug": "nasty-plot",
+      "type": "dark"
+    }
+  ]
 }

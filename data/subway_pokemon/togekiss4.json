@@ -38,5 +38,29 @@
     "SpD": 167,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png",
+  "dex_number": 468,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Follow Me",
+      "slug": "follow-me",
+      "type": "normal"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    },
+    {
+      "name": "Air Slash",
+      "slug": "air-slash",
+      "type": "flying"
+    },
+    {
+      "name": "Encore",
+      "slug": "encore",
+      "type": "normal"
+    }
+  ]
 }

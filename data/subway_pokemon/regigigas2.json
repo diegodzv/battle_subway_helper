@@ -38,5 +38,29 @@
     "SpD": 130,
     "Spe": 136
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png",
+  "dex_number": 486,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png",
+  "moves_meta": [
+    {
+      "name": "Thunder",
+      "slug": "thunder",
+      "type": "electric"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Focus Blast",
+      "slug": "focus-blast",
+      "type": "fighting"
+    },
+    {
+      "name": "Confuse Ray",
+      "slug": "confuse-ray",
+      "type": "ghost"
+    }
+  ]
 }

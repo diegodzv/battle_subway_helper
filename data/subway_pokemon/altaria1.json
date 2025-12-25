@@ -38,5 +38,29 @@
     "SpD": 172,
     "Spe": 100
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
+  "dex_number": 334,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png",
+  "moves_meta": [
+    {
+      "name": "Sing",
+      "slug": "sing",
+      "type": "normal"
+    },
+    {
+      "name": "Cotton Guard",
+      "slug": "cotton-guard",
+      "type": "grass"
+    },
+    {
+      "name": "Echoed Voice",
+      "slug": "echoed-voice",
+      "type": "normal"
+    },
+    {
+      "name": "Roost",
+      "slug": "roost",
+      "type": "flying"
+    }
+  ]
 }

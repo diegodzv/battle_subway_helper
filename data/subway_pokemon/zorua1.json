@@ -38,5 +38,28 @@
     "SpD": 60,
     "Spe": 117
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/570.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/570.png",
+  "dex_number": 570,
+  "moves_meta": [
+    {
+      "name": "Foul Play",
+      "slug": "foul-play",
+      "type": "dark"
+    },
+    {
+      "name": "Aerial Ace",
+      "slug": "aerial-ace",
+      "type": "flying"
+    },
+    {
+      "name": "Pursuit",
+      "slug": "pursuit",
+      "type": "dark"
+    },
+    {
+      "name": "Leer",
+      "slug": "leer",
+      "type": "normal"
+    }
+  ]
 }

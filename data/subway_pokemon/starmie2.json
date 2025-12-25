@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+  "dex_number": 121,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png",
+  "moves_meta": [
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Hydro Pump",
+      "slug": "hydro-pump",
+      "type": "water"
+    },
+    {
+      "name": "Rapid Spin",
+      "slug": "rapid-spin",
+      "type": "normal"
+    }
+  ]
 }

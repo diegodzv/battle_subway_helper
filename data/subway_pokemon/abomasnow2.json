@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png",
+  "dex_number": 460,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png",
+  "moves_meta": [
+    {
+      "name": "Wood Hammer",
+      "slug": "wood-hammer",
+      "type": "grass"
+    },
+    {
+      "name": "Brick Break",
+      "slug": "brick-break",
+      "type": "fighting"
+    },
+    {
+      "name": "Double Team",
+      "slug": "double-team",
+      "type": "normal"
+    },
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    }
+  ]
 }

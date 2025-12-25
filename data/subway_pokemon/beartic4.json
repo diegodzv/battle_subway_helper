@@ -38,5 +38,28 @@
     "SpD": 90,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/614.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/614.png",
+  "dex_number": 614,
+  "moves_meta": [
+    {
+      "name": "Hail",
+      "slug": "hail",
+      "type": "ice"
+    },
+    {
+      "name": "Icy Wind",
+      "slug": "icy-wind",
+      "type": "ice"
+    },
+    {
+      "name": "Grass Knot",
+      "slug": "grass-knot",
+      "type": "grass"
+    },
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 102,
     "Spe": 40
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/577.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/577.png",
+  "dex_number": 577,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Recover",
+      "slug": "recover",
+      "type": "normal"
+    },
+    {
+      "name": "Wonder Room",
+      "slug": "wonder-room",
+      "type": "psychic"
+    }
+  ]
 }

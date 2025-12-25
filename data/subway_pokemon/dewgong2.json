@@ -38,5 +38,28 @@
     "SpD": 103,
     "Spe": 122
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+  "dex_number": 87,
+  "moves_meta": [
+    {
+      "name": "Ice Shard",
+      "slug": "ice-shard",
+      "type": "ice"
+    },
+    {
+      "name": "Signal Beam",
+      "slug": "signal-beam",
+      "type": "bug"
+    },
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    },
+    {
+      "name": "Encore",
+      "slug": "encore",
+      "type": "normal"
+    }
+  ]
 }

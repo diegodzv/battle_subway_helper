@@ -38,5 +38,29 @@
     "SpD": 172,
     "Spe": 45
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png",
+  "dex_number": 563,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Night Shade",
+      "slug": "night-shade",
+      "type": "ghost"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    },
+    {
+      "name": "Mean Look",
+      "slug": "mean-look",
+      "type": "normal"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    }
+  ]
 }

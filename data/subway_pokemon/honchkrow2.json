@@ -38,5 +38,28 @@
     "SpD": 104,
     "Spe": 81
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/430.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/430.png",
+  "dex_number": 430,
+  "moves_meta": [
+    {
+      "name": "Sucker Punch",
+      "slug": "sucker-punch",
+      "type": "dark"
+    },
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    },
+    {
+      "name": "Pursuit",
+      "slug": "pursuit",
+      "type": "dark"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

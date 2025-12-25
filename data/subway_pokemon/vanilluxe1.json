@@ -38,5 +38,28 @@
     "SpD": 149,
     "Spe": 99
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/584.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/584.png",
+  "dex_number": 584,
+  "moves_meta": [
+    {
+      "name": "Ice Beam",
+      "slug": "ice-beam",
+      "type": "ice"
+    },
+    {
+      "name": "Frost Breath",
+      "slug": "frost-breath",
+      "type": "ice"
+    },
+    {
+      "name": "Mirror Coat",
+      "slug": "mirror-coat",
+      "type": "psychic"
+    },
+    {
+      "name": "Icy Wind",
+      "slug": "icy-wind",
+      "type": "ice"
+    }
+  ]
 }

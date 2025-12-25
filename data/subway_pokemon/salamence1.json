@@ -38,5 +38,29 @@
     "SpD": 108,
     "Spe": 120
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png",
+  "dex_number": 373,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png",
+  "moves_meta": [
+    {
+      "name": "Roost",
+      "slug": "roost",
+      "type": "flying"
+    },
+    {
+      "name": "Scary Face",
+      "slug": "scary-face",
+      "type": "normal"
+    },
+    {
+      "name": "Dragon Tail",
+      "slug": "dragon-tail",
+      "type": "dragon"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

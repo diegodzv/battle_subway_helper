@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 150
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png",
+  "dex_number": 214,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
+  "moves_meta": [
+    {
+      "name": "Megahorn",
+      "slug": "megahorn",
+      "type": "bug"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Reversal",
+      "slug": "reversal",
+      "type": "fighting"
+    },
+    {
+      "name": "Endure",
+      "slug": "endure",
+      "type": "normal"
+    }
+  ]
 }

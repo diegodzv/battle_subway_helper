@@ -38,5 +38,28 @@
     "SpD": 105,
     "Spe": 194
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png",
+  "dex_number": 461,
+  "moves_meta": [
+    {
+      "name": "Ice Shard",
+      "slug": "ice-shard",
+      "type": "ice"
+    },
+    {
+      "name": "Ice Punch",
+      "slug": "ice-punch",
+      "type": "ice"
+    },
+    {
+      "name": "Torment",
+      "slug": "torment",
+      "type": "dark"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 157
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png",
+  "dex_number": 310,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png",
+  "moves_meta": [
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Overheat",
+      "slug": "overheat",
+      "type": "fire"
+    },
+    {
+      "name": "Discharge",
+      "slug": "discharge",
+      "type": "electric"
+    },
+    {
+      "name": "Charge",
+      "slug": "charge",
+      "type": "electric"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 126,
     "Spe": 115
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+  "dex_number": 124,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/enigma-berry.png",
+  "moves_meta": [
+    {
+      "name": "Captivate",
+      "slug": "captivate",
+      "type": "normal"
+    },
+    {
+      "name": "Mean Look",
+      "slug": "mean-look",
+      "type": "normal"
+    },
+    {
+      "name": "Lovely Kiss",
+      "slug": "lovely-kiss",
+      "type": "normal"
+    },
+    {
+      "name": "Attract",
+      "slug": "attract",
+      "type": "normal"
+    }
+  ]
 }

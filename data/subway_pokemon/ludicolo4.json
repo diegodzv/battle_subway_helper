@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 122
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png",
+  "dex_number": 272,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+  "moves_meta": [
+    {
+      "name": "Fake Out",
+      "slug": "fake-out",
+      "type": "normal"
+    },
+    {
+      "name": "Hydro Pump",
+      "slug": "hydro-pump",
+      "type": "water"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    },
+    {
+      "name": "Grass Knot",
+      "slug": "grass-knot",
+      "type": "grass"
+    }
+  ]
 }

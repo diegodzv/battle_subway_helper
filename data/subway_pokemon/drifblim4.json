@@ -38,5 +38,29 @@
     "SpD": 106,
     "Spe": 132
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/426.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/426.png",
+  "dex_number": 426,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/custap-berry.png",
+  "moves_meta": [
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Hypnosis",
+      "slug": "hypnosis",
+      "type": "psychic"
+    },
+    {
+      "name": "Destiny Bond",
+      "slug": "destiny-bond",
+      "type": "ghost"
+    }
+  ]
 }

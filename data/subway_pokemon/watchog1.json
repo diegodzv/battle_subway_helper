@@ -38,5 +38,29 @@
     "SpD": 89,
     "Spe": 141
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png",
+  "dex_number": 505,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+  "moves_meta": [
+    {
+      "name": "Super Fang",
+      "slug": "super-fang",
+      "type": "normal"
+    },
+    {
+      "name": "Low Kick",
+      "slug": "low-kick",
+      "type": "fighting"
+    },
+    {
+      "name": "Iron Tail",
+      "slug": "iron-tail",
+      "type": "steel"
+    },
+    {
+      "name": "Hypnosis",
+      "slug": "hypnosis",
+      "type": "psychic"
+    }
+  ]
 }

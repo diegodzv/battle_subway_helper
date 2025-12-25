@@ -38,5 +38,29 @@
     "SpD": 101,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
+  "dex_number": 473,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png",
+  "moves_meta": [
+    {
+      "name": "Stone Edge",
+      "slug": "stone-edge",
+      "type": "rock"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    },
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    },
+    {
+      "name": "Ice Fang",
+      "slug": "ice-fang",
+      "type": "ice"
+    }
+  ]
 }

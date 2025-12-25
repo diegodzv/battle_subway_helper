@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 72
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+  "dex_number": 131,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png",
+  "moves_meta": [
+    {
+      "name": "Rain Dance",
+      "slug": "rain-dance",
+      "type": "water"
+    },
+    {
+      "name": "Thunder",
+      "slug": "thunder",
+      "type": "electric"
+    },
+    {
+      "name": "Ice Shard",
+      "slug": "ice-shard",
+      "type": "ice"
+    },
+    {
+      "name": "Confuse Ray",
+      "slug": "confuse-ray",
+      "type": "ghost"
+    }
+  ]
 }

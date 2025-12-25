@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 156
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png",
+  "dex_number": 549,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+  "moves_meta": [
+    {
+      "name": "Charm",
+      "slug": "charm",
+      "type": "fairy"
+    },
+    {
+      "name": "Sleep Powder",
+      "slug": "sleep-powder",
+      "type": "grass"
+    },
+    {
+      "name": "Petal Dance",
+      "slug": "petal-dance",
+      "type": "grass"
+    },
+    {
+      "name": "Healing Wish",
+      "slug": "healing-wish",
+      "type": "psychic"
+    }
+  ]
 }

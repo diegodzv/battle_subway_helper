@@ -38,5 +38,29 @@
     "SpD": 125,
     "Spe": 145
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
+  "dex_number": 334,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png",
+  "moves_meta": [
+    {
+      "name": "Dragon Dance",
+      "slug": "dragon-dance",
+      "type": "dragon"
+    },
+    {
+      "name": "Dragon Rush",
+      "slug": "dragon-rush",
+      "type": "dragon"
+    },
+    {
+      "name": "Sky Attack",
+      "slug": "sky-attack",
+      "type": "flying"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

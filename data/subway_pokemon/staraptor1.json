@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png",
+  "dex_number": 398,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+  "moves_meta": [
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    },
+    {
+      "name": "FeatherDance",
+      "slug": "featherdance",
+      "type": null
+    },
+    {
+      "name": "Quick Attack",
+      "slug": "quick-attack",
+      "type": "normal"
+    },
+    {
+      "name": "Endeavor",
+      "slug": "endeavor",
+      "type": "normal"
+    }
+  ]
 }

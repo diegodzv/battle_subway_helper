@@ -38,5 +38,29 @@
     "SpD": 101,
     "Spe": 121
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
+  "dex_number": 473,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
+  "moves_meta": [
+    {
+      "name": "Double Hit",
+      "slug": "double-hit",
+      "type": "normal"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Ice Shard",
+      "slug": "ice-shard",
+      "type": "ice"
+    },
+    {
+      "name": "Stealth Rock",
+      "slug": "stealth-rock",
+      "type": "rock"
+    }
+  ]
 }

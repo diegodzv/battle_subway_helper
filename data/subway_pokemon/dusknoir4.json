@@ -38,5 +38,29 @@
     "SpD": 187,
     "Spe": 58
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png",
+  "dex_number": 477,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+  "moves_meta": [
+    {
+      "name": "Shadow Sneak",
+      "slug": "shadow-sneak",
+      "type": "ghost"
+    },
+    {
+      "name": "Pain Split",
+      "slug": "pain-split",
+      "type": "normal"
+    },
+    {
+      "name": "Destiny Bond",
+      "slug": "destiny-bond",
+      "type": "ghost"
+    },
+    {
+      "name": "Trick Room",
+      "slug": "trick-room",
+      "type": "psychic"
+    }
+  ]
 }

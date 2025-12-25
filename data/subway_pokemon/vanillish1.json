@@ -38,5 +38,29 @@
     "SpD": 127,
     "Spe": 79
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/583.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/583.png",
+  "dex_number": 583,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png",
+  "moves_meta": [
+    {
+      "name": "Icy Wind",
+      "slug": "icy-wind",
+      "type": "ice"
+    },
+    {
+      "name": "Mirror Shot",
+      "slug": "mirror-shot",
+      "type": "steel"
+    },
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    },
+    {
+      "name": "Acid Armor",
+      "slug": "acid-armor",
+      "type": "poison"
+    }
+  ]
 }

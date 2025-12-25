@@ -38,5 +38,29 @@
     "SpD": 111,
     "Spe": 90
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png",
+  "dex_number": 286,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png",
+  "moves_meta": [
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Leech Seed",
+      "slug": "leech-seed",
+      "type": "grass"
+    },
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    },
+    {
+      "name": "Focus Punch",
+      "slug": "focus-punch",
+      "type": "fighting"
+    }
+  ]
 }

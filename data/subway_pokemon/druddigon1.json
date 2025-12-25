@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 68
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/621.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/621.png",
+  "dex_number": 621,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png",
+  "moves_meta": [
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Scary Face",
+      "slug": "scary-face",
+      "type": "normal"
+    },
+    {
+      "name": "Glare",
+      "slug": "glare",
+      "type": "normal"
+    },
+    {
+      "name": "Dragon Tail",
+      "slug": "dragon-tail",
+      "type": "dragon"
+    }
+  ]
 }

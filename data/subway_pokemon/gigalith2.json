@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 45
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/526.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/526.png",
+  "dex_number": 526,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png",
+  "moves_meta": [
+    {
+      "name": "Iron Defense",
+      "slug": "iron-defense",
+      "type": "steel"
+    },
+    {
+      "name": "Sandstorm",
+      "slug": "sandstorm",
+      "type": "rock"
+    },
+    {
+      "name": "Lock-On",
+      "slug": "lock-on",
+      "type": "normal"
+    },
+    {
+      "name": "Rock Blast",
+      "slug": "rock-blast",
+      "type": "rock"
+    }
+  ]
 }

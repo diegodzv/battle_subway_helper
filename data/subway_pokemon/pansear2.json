@@ -38,5 +38,29 @@
     "SpD": 68,
     "Spe": 127
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/513.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/513.png",
+  "dex_number": 513,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Flame Charge",
+      "slug": "flame-charge",
+      "type": "fire"
+    },
+    {
+      "name": "Shadow Claw",
+      "slug": "shadow-claw",
+      "type": "ghost"
+    },
+    {
+      "name": "Acrobatics",
+      "slug": "acrobatics",
+      "type": "flying"
+    },
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    }
+  ]
 }

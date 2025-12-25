@@ -38,5 +38,29 @@
     "SpD": 135,
     "Spe": 78
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/560.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/560.png",
+  "dex_number": 560,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png",
+  "moves_meta": [
+    {
+      "name": "Substitute",
+      "slug": "substitute",
+      "type": "normal"
+    },
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Hi Jump Kick",
+      "slug": "hi-jump-kick",
+      "type": null
+    },
+    {
+      "name": "Focus Punch",
+      "slug": "focus-punch",
+      "type": "fighting"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 112,
     "Spe": 40
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png",
+  "dex_number": 589,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+  "moves_meta": [
+    {
+      "name": "Pursuit",
+      "slug": "pursuit",
+      "type": "dark"
+    },
+    {
+      "name": "Counter",
+      "slug": "counter",
+      "type": "fighting"
+    },
+    {
+      "name": "X-Scissor",
+      "slug": "x-scissor",
+      "type": "bug"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    }
+  ]
 }

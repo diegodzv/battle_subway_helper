@@ -38,5 +38,29 @@
     "SpD": 77,
     "Spe": 183
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/424.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/424.png",
+  "dex_number": 424,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "moves_meta": [
+    {
+      "name": "Fake Out",
+      "slug": "fake-out",
+      "type": "normal"
+    },
+    {
+      "name": "Fling",
+      "slug": "fling",
+      "type": "dark"
+    },
+    {
+      "name": "Thief",
+      "slug": "thief",
+      "type": "dark"
+    },
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    }
+  ]
 }

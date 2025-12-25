@@ -38,5 +38,29 @@
     "SpD": 81,
     "Spe": 121
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png",
+  "dex_number": 257,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
+  "moves_meta": [
+    {
+      "name": "Hi Jump Kick",
+      "slug": "hi-jump-kick",
+      "type": null
+    },
+    {
+      "name": "Counter",
+      "slug": "counter",
+      "type": "fighting"
+    },
+    {
+      "name": "Flamethrower",
+      "slug": "flamethrower",
+      "type": "fire"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    }
+  ]
 }

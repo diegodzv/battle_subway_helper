@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 142
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/601.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/601.png",
+  "dex_number": 601,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-gem.png",
+  "moves_meta": [
+    {
+      "name": "Flash Cannon",
+      "slug": "flash-cannon",
+      "type": "steel"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    }
+  ]
 }

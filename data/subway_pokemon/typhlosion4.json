@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 152
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
+  "dex_number": 157,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png",
+  "moves_meta": [
+    {
+      "name": "Extrasensory",
+      "slug": "extrasensory",
+      "type": "psychic"
+    },
+    {
+      "name": "Lava Plume",
+      "slug": "lava-plume",
+      "type": "fire"
+    },
+    {
+      "name": "Bulldoze",
+      "slug": "bulldoze",
+      "type": "ground"
+    },
+    {
+      "name": "SolarBeam",
+      "slug": "solarbeam",
+      "type": null
+    }
+  ]
 }

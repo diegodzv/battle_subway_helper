@@ -38,5 +38,29 @@
     "SpD": 149,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
+  "dex_number": 233,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/petaya-berry.png",
+  "moves_meta": [
+    {
+      "name": "Tri Attack",
+      "slug": "tri-attack",
+      "type": "normal"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Recycle",
+      "slug": "recycle",
+      "type": "normal"
+    },
+    {
+      "name": "Recover",
+      "slug": "recover",
+      "type": "normal"
+    }
+  ]
 }

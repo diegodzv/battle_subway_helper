@@ -38,5 +38,29 @@
     "SpD": 70,
     "Spe": 107
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/580.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/580.png",
+  "dex_number": 580,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png",
+  "moves_meta": [
+    {
+      "name": "Aerial Ace",
+      "slug": "aerial-ace",
+      "type": "flying"
+    },
+    {
+      "name": "Water Pulse",
+      "slug": "water-pulse",
+      "type": "water"
+    },
+    {
+      "name": "FeatherDance",
+      "slug": "featherdance",
+      "type": null
+    },
+    {
+      "name": "Defog",
+      "slug": "defog",
+      "type": "flying"
+    }
+  ]
 }

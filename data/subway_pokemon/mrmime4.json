@@ -38,5 +38,29 @@
     "SpD": 140,
     "Spe": 110
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+  "dex_number": 122,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-clay.png",
+  "moves_meta": [
+    {
+      "name": "Light Screen",
+      "slug": "light-screen",
+      "type": "psychic"
+    },
+    {
+      "name": "Reflect",
+      "slug": "reflect",
+      "type": "psychic"
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Signal Beam",
+      "slug": "signal-beam",
+      "type": "bug"
+    }
+  ]
 }

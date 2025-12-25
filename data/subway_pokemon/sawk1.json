@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 137
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/539.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/539.png",
+  "dex_number": 539,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png",
+  "moves_meta": [
+    {
+      "name": "Low Sweep",
+      "slug": "low-sweep",
+      "type": "fighting"
+    },
+    {
+      "name": "Quick Guard",
+      "slug": "quick-guard",
+      "type": "fighting"
+    },
+    {
+      "name": "Retaliate",
+      "slug": "retaliate",
+      "type": "normal"
+    },
+    {
+      "name": "Taunt",
+      "slug": "taunt",
+      "type": "dark"
+    }
+  ]
 }

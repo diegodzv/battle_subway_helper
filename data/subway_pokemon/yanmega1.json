@@ -38,5 +38,29 @@
     "SpD": 97,
     "Spe": 115
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/469.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/469.png",
+  "dex_number": 469,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png",
+  "moves_meta": [
+    {
+      "name": "Air Slash",
+      "slug": "air-slash",
+      "type": "flying"
+    },
+    {
+      "name": "Bug Buzz",
+      "slug": "bug-buzz",
+      "type": "bug"
+    },
+    {
+      "name": "Detect",
+      "slug": "detect",
+      "type": "fighting"
+    },
+    {
+      "name": "U-turn",
+      "slug": "u-turn",
+      "type": "bug"
+    }
+  ]
 }

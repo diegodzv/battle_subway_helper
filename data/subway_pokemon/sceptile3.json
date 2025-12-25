@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 189
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
+  "dex_number": 254,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+  "moves_meta": [
+    {
+      "name": "Leaf Storm",
+      "slug": "leaf-storm",
+      "type": "grass"
+    },
+    {
+      "name": "Dragon Pulse",
+      "slug": "dragon-pulse",
+      "type": "dragon"
+    },
+    {
+      "name": "Energy Ball",
+      "slug": "energy-ball",
+      "type": "grass"
+    },
+    {
+      "name": "Detect",
+      "slug": "detect",
+      "type": "fighting"
+    }
+  ]
 }

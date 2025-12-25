@@ -38,5 +38,29 @@
     "SpD": 142,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/365.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/365.png",
+  "dex_number": 365,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png",
+  "moves_meta": [
+    {
+      "name": "Sheer Cold",
+      "slug": "sheer-cold",
+      "type": "ice"
+    },
+    {
+      "name": "Fissure",
+      "slug": "fissure",
+      "type": "ground"
+    },
+    {
+      "name": "Rest",
+      "slug": "rest",
+      "type": "psychic"
+    },
+    {
+      "name": "Sleep Talk",
+      "slug": "sleep-talk",
+      "type": "normal"
+    }
+  ]
 }

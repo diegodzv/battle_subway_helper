@@ -38,5 +38,29 @@
     "SpD": 91,
     "Spe": 149
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png",
+  "dex_number": 392,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png",
+  "moves_meta": [
+    {
+      "name": "Heat Wave",
+      "slug": "heat-wave",
+      "type": "fire"
+    },
+    {
+      "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
+      "type": "fire"
+    },
+    {
+      "name": "Grass Knot",
+      "slug": "grass-knot",
+      "type": "grass"
+    },
+    {
+      "name": "Calm Mind",
+      "slug": "calm-mind",
+      "type": "psychic"
+    }
+  ]
 }

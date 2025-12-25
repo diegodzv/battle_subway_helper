@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 76
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+  "dex_number": 134,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+  "moves_meta": [
+    {
+      "name": "Wish",
+      "slug": "wish",
+      "type": "normal"
+    },
+    {
+      "name": "Surf",
+      "slug": "surf",
+      "type": "water"
+    },
+    {
+      "name": "Helping Hand",
+      "slug": "helping-hand",
+      "type": "normal"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    }
+  ]
 }

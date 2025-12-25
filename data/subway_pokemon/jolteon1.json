@@ -38,5 +38,29 @@
     "SpD": 115,
     "Spe": 200
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+  "dex_number": 135,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png",
+  "moves_meta": [
+    {
+      "name": "Quick Attack",
+      "slug": "quick-attack",
+      "type": "normal"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    },
+    {
+      "name": "Swagger",
+      "slug": "swagger",
+      "type": "normal"
+    }
+  ]
 }

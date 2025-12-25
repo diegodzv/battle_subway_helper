@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 115
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png",
+  "dex_number": 472,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+  "moves_meta": [
+    {
+      "name": "Agility",
+      "slug": "agility",
+      "type": "psychic"
+    },
+    {
+      "name": "Acrobatics",
+      "slug": "acrobatics",
+      "type": "flying"
+    },
+    {
+      "name": "Swords Dance",
+      "slug": "swords-dance",
+      "type": "normal"
+    },
+    {
+      "name": "Baton Pass",
+      "slug": "baton-pass",
+      "type": "normal"
+    }
+  ]
 }

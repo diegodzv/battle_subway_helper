@@ -38,5 +38,29 @@
     "SpD": 110,
     "Spe": 81
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png",
+  "dex_number": 376,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Meteor Mash",
+      "slug": "meteor-mash",
+      "type": "steel"
+    },
+    {
+      "name": "Magnet Rise",
+      "slug": "magnet-rise",
+      "type": "electric"
+    }
+  ]
 }

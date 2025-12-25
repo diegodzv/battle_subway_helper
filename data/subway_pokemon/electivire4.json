@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 161
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png",
+  "dex_number": 466,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png",
+  "moves_meta": [
+    {
+      "name": "ThunderPunch",
+      "slug": "thunderpunch",
+      "type": null
+    },
+    {
+      "name": "Fire Punch",
+      "slug": "fire-punch",
+      "type": "fire"
+    },
+    {
+      "name": "Ice Punch",
+      "slug": "ice-punch",
+      "type": "ice"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    }
+  ]
 }

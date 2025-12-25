@@ -38,5 +38,29 @@
     "SpD": 90,
     "Spe": 150
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+  "dex_number": 127,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+  "moves_meta": [
+    {
+      "name": "X-Scissor",
+      "slug": "x-scissor",
+      "type": "bug"
+    },
+    {
+      "name": "Earthquake",
+      "slug": "earthquake",
+      "type": "ground"
+    },
+    {
+      "name": "Close Combat",
+      "slug": "close-combat",
+      "type": "fighting"
+    },
+    {
+      "name": "Guillotine",
+      "slug": "guillotine",
+      "type": "normal"
+    }
+  ]
 }

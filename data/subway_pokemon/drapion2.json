@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 161
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/452.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/452.png",
+  "dex_number": 452,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dark-gem.png",
+  "moves_meta": [
+    {
+      "name": "Cross Poison",
+      "slug": "cross-poison",
+      "type": "poison"
+    },
+    {
+      "name": "Crunch",
+      "slug": "crunch",
+      "type": "dark"
+    },
+    {
+      "name": "Scary Face",
+      "slug": "scary-face",
+      "type": "normal"
+    },
+    {
+      "name": "Screech",
+      "slug": "screech",
+      "type": "normal"
+    }
+  ]
 }

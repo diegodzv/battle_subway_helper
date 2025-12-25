@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 70
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/600.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/600.png",
+  "dex_number": 600,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Gear Grind",
+      "slug": "gear-grind",
+      "type": "steel"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Hyper Beam",
+      "slug": "hyper-beam",
+      "type": "normal"
+    },
+    {
+      "name": "Shift Gear",
+      "slug": "shift-gear",
+      "type": "steel"
+    }
+  ]
 }

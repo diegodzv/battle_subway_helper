@@ -38,5 +38,28 @@
     "SpD": 125,
     "Spe": 125
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png",
+  "dex_number": 429,
+  "moves_meta": [
+    {
+      "name": "Confuse Ray",
+      "slug": "confuse-ray",
+      "type": "ghost"
+    },
+    {
+      "name": "Protect",
+      "slug": "protect",
+      "type": "normal"
+    },
+    {
+      "name": "Perish Song",
+      "slug": "perish-song",
+      "type": "normal"
+    },
+    {
+      "name": "Mean Look",
+      "slug": "mean-look",
+      "type": "normal"
+    }
+  ]
 }

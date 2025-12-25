@@ -38,5 +38,29 @@
     "SpD": 60,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/602.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/602.png",
+  "dex_number": 602,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png",
+  "moves_meta": [
+    {
+      "name": "Charge Beam",
+      "slug": "charge-beam",
+      "type": "electric"
+    },
+    {
+      "name": "Spark",
+      "slug": "spark",
+      "type": "electric"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    },
+    {
+      "name": "Tackle",
+      "slug": "tackle",
+      "type": "normal"
+    }
+  ]
 }

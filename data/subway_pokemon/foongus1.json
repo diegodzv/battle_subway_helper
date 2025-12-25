@@ -38,5 +38,29 @@
     "SpD": 75,
     "Spe": 35
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/590.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/590.png",
+  "dex_number": 590,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png",
+  "moves_meta": [
+    {
+      "name": "Giga Drain",
+      "slug": "giga-drain",
+      "type": "grass"
+    },
+    {
+      "name": "Venoshock",
+      "slug": "venoshock",
+      "type": "poison"
+    },
+    {
+      "name": "Toxic",
+      "slug": "toxic",
+      "type": "poison"
+    },
+    {
+      "name": "Ingrain",
+      "slug": "ingrain",
+      "type": "grass"
+    }
+  ]
 }

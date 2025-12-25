@@ -38,5 +38,29 @@
     "SpD": 103,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png",
+  "dex_number": 471,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+  "moves_meta": [
+    {
+      "name": "Ice Shard",
+      "slug": "ice-shard",
+      "type": "ice"
+    },
+    {
+      "name": "Blizzard",
+      "slug": "blizzard",
+      "type": "ice"
+    },
+    {
+      "name": "Mirror Coat",
+      "slug": "mirror-coat",
+      "type": "psychic"
+    },
+    {
+      "name": "Helping Hand",
+      "slug": "helping-hand",
+      "type": "normal"
+    }
+  ]
 }

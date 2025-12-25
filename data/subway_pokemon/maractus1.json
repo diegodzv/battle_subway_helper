@@ -38,5 +38,29 @@
     "SpD": 87,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png",
+  "dex_number": 556,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png",
+  "moves_meta": [
+    {
+      "name": "Giga Drain",
+      "slug": "giga-drain",
+      "type": "grass"
+    },
+    {
+      "name": "Double Team",
+      "slug": "double-team",
+      "type": "normal"
+    },
+    {
+      "name": "Synthesis",
+      "slug": "synthesis",
+      "type": "grass"
+    },
+    {
+      "name": "Ingrain",
+      "slug": "ingrain",
+      "type": "grass"
+    }
+  ]
 }

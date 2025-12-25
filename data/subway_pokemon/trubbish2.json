@@ -38,5 +38,29 @@
     "SpD": 82,
     "Spe": 117
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/568.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/568.png",
+  "dex_number": 568,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png",
+  "moves_meta": [
+    {
+      "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
+      "type": "poison"
+    },
+    {
+      "name": "Amnesia",
+      "slug": "amnesia",
+      "type": "psychic"
+    },
+    {
+      "name": "Stockpile",
+      "slug": "stockpile",
+      "type": "normal"
+    },
+    {
+      "name": "Swallow",
+      "slug": "swallow",
+      "type": "normal"
+    }
+  ]
 }

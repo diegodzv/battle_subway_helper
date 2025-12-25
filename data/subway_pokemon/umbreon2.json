@@ -38,5 +38,29 @@
     "SpD": 165,
     "Spe": 85
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
+  "dex_number": 197,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png",
+  "moves_meta": [
+    {
+      "name": "Payback",
+      "slug": "payback",
+      "type": "dark"
+    },
+    {
+      "name": "Moonlight",
+      "slug": "moonlight",
+      "type": "fairy"
+    },
+    {
+      "name": "Stored Power",
+      "slug": "stored-power",
+      "type": "psychic"
+    },
+    {
+      "name": "Work Up",
+      "slug": "work-up",
+      "type": "normal"
+    }
+  ]
 }

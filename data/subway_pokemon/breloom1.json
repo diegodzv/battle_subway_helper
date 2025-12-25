@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 81
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png",
+  "dex_number": 286,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png",
+  "moves_meta": [
+    {
+      "name": "Fake Tears",
+      "slug": "fake-tears",
+      "type": "dark"
+    },
+    {
+      "name": "Helping Hand",
+      "slug": "helping-hand",
+      "type": "normal"
+    },
+    {
+      "name": "Mach Punch",
+      "slug": "mach-punch",
+      "type": "fighting"
+    },
+    {
+      "name": "Stun Spore",
+      "slug": "stun-spore",
+      "type": "grass"
+    }
+  ]
 }

@@ -38,5 +38,29 @@
     "SpD": 120,
     "Spe": 122
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+  "dex_number": 130,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png",
+  "moves_meta": [
+    {
+      "name": "Ice Fang",
+      "slug": "ice-fang",
+      "type": "ice"
+    },
+    {
+      "name": "Aqua Tail",
+      "slug": "aqua-tail",
+      "type": "water"
+    },
+    {
+      "name": "Thunder Wave",
+      "slug": "thunder-wave",
+      "type": "electric"
+    },
+    {
+      "name": "Dragon Dance",
+      "slug": "dragon-dance",
+      "type": "dragon"
+    }
+  ]
 }

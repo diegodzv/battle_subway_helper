@@ -38,5 +38,29 @@
     "SpD": 99,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/462.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/462.png",
+  "dex_number": 462,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png",
+  "moves_meta": [
+    {
+      "name": "Metal Sound",
+      "slug": "metal-sound",
+      "type": "steel"
+    },
+    {
+      "name": "Flash Cannon",
+      "slug": "flash-cannon",
+      "type": "steel"
+    },
+    {
+      "name": "Thunderbolt",
+      "slug": "thunderbolt",
+      "type": "electric"
+    },
+    {
+      "name": "Magnet Rise",
+      "slug": "magnet-rise",
+      "type": "electric"
+    }
+  ]
 }

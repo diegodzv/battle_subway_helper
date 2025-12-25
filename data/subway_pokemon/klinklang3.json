@@ -38,5 +38,29 @@
     "SpD": 105,
     "Spe": 142
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/601.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/601.png",
+  "dex_number": 601,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png",
+  "moves_meta": [
+    {
+      "name": "Shift Gear",
+      "slug": "shift-gear",
+      "type": "steel"
+    },
+    {
+      "name": "Gear Grind",
+      "slug": "gear-grind",
+      "type": "steel"
+    },
+    {
+      "name": "Volt Switch",
+      "slug": "volt-switch",
+      "type": "electric"
+    },
+    {
+      "name": "Giga Impact",
+      "slug": "giga-impact",
+      "type": "normal"
+    }
+  ]
 }

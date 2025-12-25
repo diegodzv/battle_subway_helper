@@ -38,5 +38,29 @@
     "SpD": 85,
     "Spe": 184
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png",
+  "dex_number": 547,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png",
+  "moves_meta": [
+    {
+      "name": "SolarBeam",
+      "slug": "solarbeam",
+      "type": null
+    },
+    {
+      "name": "Psychic",
+      "slug": "psychic",
+      "type": "psychic"
+    },
+    {
+      "name": "Shadow Ball",
+      "slug": "shadow-ball",
+      "type": "ghost"
+    },
+    {
+      "name": "Sunny Day",
+      "slug": "sunny-day",
+      "type": "fire"
+    }
+  ]
 }

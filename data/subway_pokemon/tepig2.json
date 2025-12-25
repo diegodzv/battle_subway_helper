@@ -38,5 +38,29 @@
     "SpD": 65,
     "Spe": 65
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/498.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/498.png",
+  "dex_number": 498,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
+  "moves_meta": [
+    {
+      "name": "Heat Crash",
+      "slug": "heat-crash",
+      "type": "fire"
+    },
+    {
+      "name": "Assurance",
+      "slug": "assurance",
+      "type": "dark"
+    },
+    {
+      "name": "Rock Tomb",
+      "slug": "rock-tomb",
+      "type": "rock"
+    },
+    {
+      "name": "Roar",
+      "slug": "roar",
+      "type": "normal"
+    }
+  ]
 }

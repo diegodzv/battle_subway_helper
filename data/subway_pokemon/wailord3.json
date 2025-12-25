@@ -38,5 +38,29 @@
     "SpD": 106,
     "Spe": 80
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png",
+  "dex_number": 321,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+  "moves_meta": [
+    {
+      "name": "Waterfall",
+      "slug": "waterfall",
+      "type": "water"
+    },
+    {
+      "name": "Avalanche",
+      "slug": "avalanche",
+      "type": "ice"
+    },
+    {
+      "name": "Aqua Ring",
+      "slug": "aqua-ring",
+      "type": "water"
+    },
+    {
+      "name": "Curse",
+      "slug": "curse",
+      "type": "ghost"
+    }
+  ]
 }

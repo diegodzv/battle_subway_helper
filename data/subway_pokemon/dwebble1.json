@@ -38,5 +38,29 @@
     "SpD": 55,
     "Spe": 75
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/557.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/557.png",
+  "dex_number": 557,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ring-target.png",
+  "moves_meta": [
+    {
+      "name": "Bug Bite",
+      "slug": "bug-bite",
+      "type": "bug"
+    },
+    {
+      "name": "Smack Down",
+      "slug": "smack-down",
+      "type": "rock"
+    },
+    {
+      "name": "Double Team",
+      "slug": "double-team",
+      "type": "normal"
+    },
+    {
+      "name": "Sand-Attack",
+      "slug": "sand-attack",
+      "type": "ground"
+    }
+  ]
 }

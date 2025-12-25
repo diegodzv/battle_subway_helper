@@ -38,5 +38,29 @@
     "SpD": 95,
     "Spe": 117
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png",
+  "dex_number": 217,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png",
+  "moves_meta": [
+    {
+      "name": "Facade",
+      "slug": "facade",
+      "type": "normal"
+    },
+    {
+      "name": "Hammer Arm",
+      "slug": "hammer-arm",
+      "type": "fighting"
+    },
+    {
+      "name": "Scary Face",
+      "slug": "scary-face",
+      "type": "normal"
+    },
+    {
+      "name": "Yawn",
+      "slug": "yawn",
+      "type": "normal"
+    }
+  ]
 }

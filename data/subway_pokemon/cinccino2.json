@@ -38,5 +38,29 @@
     "SpD": 80,
     "Spe": 167
   },
-  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png"
+  "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png",
+  "dex_number": 573,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/normal-gem.png",
+  "moves_meta": [
+    {
+      "name": "DoubleSlap",
+      "slug": "doubleslap",
+      "type": null
+    },
+    {
+      "name": "Bullet Seed",
+      "slug": "bullet-seed",
+      "type": "grass"
+    },
+    {
+      "name": "Rock Blast",
+      "slug": "rock-blast",
+      "type": "rock"
+    },
+    {
+      "name": "Sing",
+      "slug": "sing",
+      "type": "normal"
+    }
+  ]
 }
