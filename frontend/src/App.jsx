@@ -10,18 +10,45 @@ function useDebouncedValue(value, delayMs) {
   return debounced;
 }
 
-function StatRow({ label, value }) {
-  return (
-    <div className="statRow">
-      <span className="muted">{label}</span>
-      <span className="mono">{value}</span>
-    </div>
-  );
-}
-
 function Sprite({ url, alt }) {
   if (!url) return <div className="spriteFallback">?</div>;
   return <img className="sprite" src={url} alt={alt} loading="lazy" />;
+}
+
+function ItemIcon({ url, alt }) {
+  if (!url) return <span className="itemIconFallback" title="Sin icono">◻</span>;
+  return <img className="itemIcon" src={url} alt={alt} loading="lazy" />;
+}
+
+function TypeBadge({ type }) {
+  if (!type) return <span className="typeBadge type-unknown">???</span>;
+  return <span className={`typeBadge type-${type}`}>{type.toUpperCase()}</span>;
+}
+
+function StatBar({ label, value, max = 250 }) {
+  // value en Lv50 suele estar 50..200 aprox (HP puede subir más).
+  const v = typeof value === "number" ? value : 0;
+  const pct = Math.max(0, Math.min(100, Math.round((v / max) * 100)));
+
+  // Color por “tier” (no depende de tipo)
+  let tier = "low";
+  if (v >= 170) tier = "high";
+  else if (v >= 120) tier = "mid";
+
+  return (
+    <div className="statBarRow">
+      <div className="statBarTop">
+        <span className="muted">{label}</span>
+        <span className="mono">{typeof value === "number" ? value : "-"}</span>
+      </div>
+      <div className="statBarTrack">
+        <div
+          className={`statBarFill statBar-${tier}`}
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+    </div>
+  );
 }
 
 function SetCard({ set, onClick, selected, tag, tone = "default" }) {
@@ -39,8 +66,10 @@ function SetCard({ set, onClick, selected, tag, tone = "default" }) {
         <div className="cardTitle">
           <div className="name">{set.species}</div>
           <div className="meta muted">
-            <span className="mono">#{set.global_id}</span> · Spe{" "}
-            <span className="mono">{spe}</span>
+            <span className="mono">
+              #{set.global_id} · Dex {set.dex_number ?? "?"}
+            </span>{" "}
+            · Spe <span className="mono">{spe}</span>
           </div>
         </div>
       </div>
@@ -60,6 +89,9 @@ function DetailPanel({ set, index, onRemoveSeen }) {
     );
   }
 
+  const movesMeta = Array.isArray(set.moves_meta) ? set.moves_meta : null;
+  const movesFallback = Array.isArray(set.moves) ? set.moves : [];
+
   return (
     <div className="teamPanel">
       <div className="teamHeader">
@@ -69,8 +101,15 @@ function DetailPanel({ set, index, onRemoveSeen }) {
           <div>
             <div className="h2">{set.species}</div>
             <div className="muted">
-              <span className="mono">#{set.global_id}</span> · {set.nature} ·{" "}
-              {set.item}
+              <span className="mono">
+                #{set.global_id} · Dex {set.dex_number ?? "?"}
+              </span>{" "}
+              · {set.nature}
+            </div>
+
+            <div className="itemLine">
+              <ItemIcon url={set.item_sprite_url} alt={set.item} />
+              <span className="itemName">{set.item}</span>
             </div>
           </div>
         </div>
@@ -86,22 +125,32 @@ function DetailPanel({ set, index, onRemoveSeen }) {
 
       <div className="box">
         <div className="h3">Stats (Lv 50)</div>
-        <StatRow label="HP" value={set.stats_lv50?.HP ?? "-"} />
-        <StatRow label="Atk" value={set.stats_lv50?.Atk ?? "-"} />
-        <StatRow label="Def" value={set.stats_lv50?.Def ?? "-"} />
-        <StatRow label="SpA" value={set.stats_lv50?.SpA ?? "-"} />
-        <StatRow label="SpD" value={set.stats_lv50?.SpD ?? "-"} />
-        <StatRow label="Spe" value={set.stats_lv50?.Spe ?? "-"} />
+        <div className="statBars">
+          <StatBar label="HP" value={set.stats_lv50?.HP} max={260} />
+          <StatBar label="Atk" value={set.stats_lv50?.Atk} max={220} />
+          <StatBar label="Def" value={set.stats_lv50?.Def} max={220} />
+          <StatBar label="SpA" value={set.stats_lv50?.SpA} max={220} />
+          <StatBar label="SpD" value={set.stats_lv50?.SpD} max={220} />
+          <StatBar label="Spe" value={set.stats_lv50?.Spe} max={220} />
+        </div>
       </div>
 
       <div className="box">
         <div className="h3">Movimientos</div>
         <ul className="moves">
-          {(set.moves ?? []).map((m) => (
-            <li key={m} className="mono">
-              {m}
-            </li>
-          ))}
+          {movesMeta
+            ? movesMeta.map((m) => (
+                <li key={m.slug ?? m.name} className="moveRow">
+                  <TypeBadge type={m.type} />
+                  <span className="mono">{m.name}</span>
+                </li>
+              ))
+            : movesFallback.map((m) => (
+                <li key={m} className="moveRow">
+                  <TypeBadge type={null} />
+                  <span className="mono">{m}</span>
+                </li>
+              ))}
         </ul>
       </div>
 
@@ -206,12 +255,13 @@ export default function App() {
   const poolSets = trainer?.sets ?? [];
   const remainingSets = filterInfo?.possible_remaining_sets ?? [];
 
-  // ✅ Pool ordenado alfabéticamente (species), empate por global_id
-  const poolSetsAlphabetical = useMemo(() => {
+  // ✅ Pool ordenado por pokédex, luego global_id
+  const poolSortedDex = useMemo(() => {
     const copy = [...poolSets];
     copy.sort((a, b) => {
-      const sa = (a.species ?? "").localeCompare(b.species ?? "");
-      if (sa !== 0) return sa;
+      const da = typeof a.dex_number === "number" ? a.dex_number : 999999;
+      const db = typeof b.dex_number === "number" ? b.dex_number : 999999;
+      if (da !== db) return da - db;
       return (a.global_id ?? 0) - (b.global_id ?? 0);
     });
     return copy;
@@ -236,7 +286,7 @@ export default function App() {
     setSuggestions([]);
   }
 
-  // Para pintar el equipo: siempre 4 slots (vistos en orden)
+  // 4 slots (vistos en orden)
   const teamSets = useMemo(() => {
     const byId = new Map(poolSets.map((s) => [s.global_id, s]));
     const slots = [null, null, null, null];
@@ -298,7 +348,6 @@ export default function App() {
           </div>
         ) : (
           <div className="grid gridTwoCols">
-            {/* LEFT: Pool en 1 columna */}
             <section className="panel">
               <div className="panelTitle">
                 <div>
@@ -311,25 +360,21 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="subTitle">Pool (A-Z)</div>
+              <div className="subTitle">Pool (por Pokédex)</div>
               <div className="cards poolOneCol">
-                {poolSetsAlphabetical.map((s) => (
+                {poolSortedDex.map((s) => (
                   <SetCard
                     key={s.global_id}
                     set={s}
                     selected={selectedSet?.global_id === s.global_id}
                     tag={seenSet.has(s.global_id) ? "Visto" : ""}
                     tone={seenSet.has(s.global_id) ? "seen" : "default"}
-                    onClick={() => {
-                      setSelectedSet(s);
-                      // mantener selección para “Marcar visto” rápido
-                    }}
+                    onClick={() => setSelectedSet(s)}
                   />
                 ))}
               </div>
             </section>
 
-            {/* RIGHT: equipo completo + stats + restantes */}
             <aside className="side">
               <section className="panel">
                 <div className="panelTitle">
@@ -359,22 +404,31 @@ export default function App() {
                 <div className="box">
                   <div className="statRow">
                     <span className="muted">Equipos posibles</span>
-                    <span className="mono">{filterInfo?.num_possible_teams ?? "-"}</span>
+                    <span className="mono">
+                      {filterInfo?.num_possible_teams ?? "-"}
+                    </span>
                   </div>
                   <div className="statRow">
                     <span className="muted">Restantes posibles</span>
                     <span className="mono">
-                      {filterInfo ? filterInfo.possible_remaining_global_ids.length : "-"}
+                      {filterInfo
+                        ? filterInfo.possible_remaining_global_ids.length
+                        : "-"}
                     </span>
                   </div>
                 </div>
 
-                {/* Botón rápido para marcar el que tengas seleccionado */}
                 <div className="actionsRow">
                   <button
                     className="primaryBtn"
-                    onClick={() => selectedSet && markSeen(selectedSet.global_id)}
-                    disabled={!selectedSet || seenSet.has(selectedSet.global_id) || seen.length >= 4}
+                    onClick={() =>
+                      selectedSet && markSeen(selectedSet.global_id)
+                    }
+                    disabled={
+                      !selectedSet ||
+                      seenSet.has(selectedSet.global_id) ||
+                      seen.length >= 4
+                    }
                     title={
                       !selectedSet
                         ? "Selecciona uno en el pool"
@@ -393,7 +447,7 @@ export default function App() {
               <section className="panel">
                 <div className="panelTitle">
                   <div className="h2">Equipo detectado</div>
-                  <div className="muted">1–4 (de izquierda a derecha)</div>
+                  <div className="muted">1–4 (izquierda → derecha)</div>
                 </div>
 
                 <div className="teamRow">
@@ -438,8 +492,7 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Tip: los 4 vistos se muestran siempre a la derecha (equipo completo). El pool está
-        en 1 columna y ordenado A-Z.
+        Pool ordenado por Pokédex. Items y tipos de movimientos en modo visual.
       </footer>
     </div>
   );
