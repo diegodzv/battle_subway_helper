@@ -25,28 +25,52 @@ function TypeBadge({ type }) {
   return <span className={`typeBadge type-${type}`}>{type.toUpperCase()}</span>;
 }
 
-function StatBar({ label, value, max = 250 }) {
-  // Lv50 values are usually ~50..200 (HP can go a bit higher).
-  const v = typeof value === "number" ? value : 0;
-  const pct = Math.max(0, Math.min(100, Math.round((v / max) * 100)));
+function getTierClass(v) {
+  if (v < 60) return "stat-rDark";
+  if (v < 80) return "stat-rLight";
+  if (v < 100) return "stat-orange";
+  if (v < 130) return "stat-yellow";
+  if (v < 160) return "stat-gLight";
+  return "stat-gDark"; // 160..200 (and also base for >=200)
+}
 
-  // Tier color
-  let tier = "low";
-  if (v >= 170) tier = "high";
-  else if (v >= 120) tier = "mid";
+function clamp01(x) {
+  return Math.max(0, Math.min(1, x));
+}
+
+function StatRow({ label, value, max = 200 }) {
+  const v = typeof value === "number" ? value : 0;
+
+  // Base fill is capped at max (200).
+  const basePct = Math.round(clamp01(v / max) * 100);
+
+  // Overflow: for v > max, overlay from left with (v-max)/max, capped at 100%.
+  // Example: v=220 -> overflowPct=10; v=210 -> 5; v=400 -> 100
+  const overflowPct = v > max ? Math.round(clamp01((v - max) / max) * 100) : 0;
+
+  const tierClass = getTierClass(v);
 
   return (
-    <div className="statBarRow">
-      <div className="statBarTop">
-        <span className="muted">{label}</span>
-        <span className="mono">{typeof value === "number" ? value : "-"}</span>
+    <div className="statLine">
+      <div className="statLabel muted">{label}</div>
+
+      <div className="statTrackWrap">
+        <div className="statBarTrack" aria-label={`${label} ${v}`}>
+          <div
+            className={`statBarFill ${tierClass}`}
+            style={{ width: `${basePct}%` }}
+          />
+          {overflowPct > 0 ? (
+            <div
+              className="statOverflow"
+              style={{ width: `${overflowPct}%` }}
+              title={`Overflow +${v - max}`}
+            />
+          ) : null}
+        </div>
       </div>
-      <div className="statBarTrack">
-        <div
-          className={`statBarFill statBar-${tier}`}
-          style={{ width: `${pct}%` }}
-        />
-      </div>
+
+      <div className="statValue mono">{typeof value === "number" ? value : "-"}</div>
     </div>
   );
 }
@@ -125,13 +149,13 @@ function DetailPanel({ set, index, onRemoveSeen }) {
 
       <div className="box">
         <div className="h3">Stats (Lv 50)</div>
-        <div className="statBars">
-          <StatBar label="HP" value={set.stats_lv50?.HP} max={260} />
-          <StatBar label="Atk" value={set.stats_lv50?.Atk} max={220} />
-          <StatBar label="Def" value={set.stats_lv50?.Def} max={220} />
-          <StatBar label="SpA" value={set.stats_lv50?.SpA} max={220} />
-          <StatBar label="SpD" value={set.stats_lv50?.SpD} max={220} />
-          <StatBar label="Spe" value={set.stats_lv50?.Spe} max={220} />
+        <div className="statTable">
+          <StatRow label="HP" value={set.stats_lv50?.HP} max={200} />
+          <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} />
+          <StatRow label="Def" value={set.stats_lv50?.Def} max={200} />
+          <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} />
+          <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} />
+          <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} />
         </div>
       </div>
 
@@ -255,7 +279,6 @@ export default function App() {
   const poolSets = trainer?.sets ?? [];
   const remainingSets = filterInfo?.possible_remaining_sets ?? [];
 
-  // Pool sorted by dex number, then global_id
   const poolSortedDex = useMemo(() => {
     const copy = [...poolSets];
     copy.sort((a, b) => {
@@ -286,7 +309,6 @@ export default function App() {
     setSuggestions([]);
   }
 
-  // 4 slots (seen in order)
   const teamSets = useMemo(() => {
     const byId = new Map(poolSets.map((s) => [s.global_id, s]));
     const slots = [null, null, null, null];
