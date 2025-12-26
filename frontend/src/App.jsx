@@ -50,6 +50,69 @@ function SetCard({ set, onClick, selected, tag, tone = "default" }) {
   );
 }
 
+function DetailPanel({ set, index, onRemoveSeen }) {
+  if (!set) {
+    return (
+      <div className="teamSlotEmpty">
+        <div className="teamSlotIndex mono">#{index + 1}</div>
+        <div className="muted">Hueco vacío</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="teamPanel">
+      <div className="teamHeader">
+        <div className="teamHeaderLeft">
+          <div className="teamSlotIndex mono">#{index + 1}</div>
+          <Sprite url={set.sprite_url_pokeapi} alt={set.species} />
+          <div>
+            <div className="h2">{set.species}</div>
+            <div className="muted">
+              <span className="mono">#{set.global_id}</span> · {set.nature} ·{" "}
+              {set.item}
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="chip chipDanger"
+          onClick={() => onRemoveSeen(set.global_id)}
+          title="Quitar de vistos"
+        >
+          Quitar ✕
+        </button>
+      </div>
+
+      <div className="box">
+        <div className="h3">Stats (Lv 50)</div>
+        <StatRow label="HP" value={set.stats_lv50?.HP ?? "-"} />
+        <StatRow label="Atk" value={set.stats_lv50?.Atk ?? "-"} />
+        <StatRow label="Def" value={set.stats_lv50?.Def ?? "-"} />
+        <StatRow label="SpA" value={set.stats_lv50?.SpA ?? "-"} />
+        <StatRow label="SpD" value={set.stats_lv50?.SpD ?? "-"} />
+        <StatRow label="Spe" value={set.stats_lv50?.Spe ?? "-"} />
+      </div>
+
+      <div className="box">
+        <div className="h3">Movimientos</div>
+        <ul className="moves">
+          {(set.moves ?? []).map((m) => (
+            <li key={m} className="mono">
+              {m}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="box">
+        <div className="h3">EVs</div>
+        <div className="mono">{set.evs}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [q, setQ] = useState("");
   const debouncedQ = useDebouncedValue(q, 150);
@@ -143,23 +206,16 @@ export default function App() {
   const poolSets = trainer?.sets ?? [];
   const remainingSets = filterInfo?.possible_remaining_sets ?? [];
 
-  // ✅ Pool layout fijo: vistos primero (en orden de vistos), luego el resto
-  const orderedPoolSets = useMemo(() => {
-    if (!poolSets.length) return [];
-    const byId = new Map(poolSets.map((s) => [s.global_id, s]));
-
-    const seenFirst = seen
-      .map((gid) => byId.get(gid))
-      .filter(Boolean);
-
-    const seenIds = new Set(seen);
-    const rest = poolSets.filter((s) => !seenIds.has(s.global_id));
-
-    // Puedes decidir orden del resto: por especie, por id, etc. Aquí por global_id
-    rest.sort((a, b) => a.global_id - b.global_id);
-
-    return [...seenFirst, ...rest];
-  }, [poolSets, seen]);
+  // ✅ Pool ordenado alfabéticamente (species), empate por global_id
+  const poolSetsAlphabetical = useMemo(() => {
+    const copy = [...poolSets];
+    copy.sort((a, b) => {
+      const sa = (a.species ?? "").localeCompare(b.species ?? "");
+      if (sa !== 0) return sa;
+      return (a.global_id ?? 0) - (b.global_id ?? 0);
+    });
+    return copy;
+  }, [poolSets]);
 
   function markSeen(globalId) {
     if (seenSet.has(globalId)) return;
@@ -179,6 +235,16 @@ export default function App() {
     setQ("");
     setSuggestions([]);
   }
+
+  // Para pintar el equipo: siempre 4 slots (vistos en orden)
+  const teamSets = useMemo(() => {
+    const byId = new Map(poolSets.map((s) => [s.global_id, s]));
+    const slots = [null, null, null, null];
+    for (let i = 0; i < Math.min(4, seen.length); i++) {
+      slots[i] = byId.get(seen[i]) ?? null;
+    }
+    return slots;
+  }, [poolSets, seen]);
 
   return (
     <div className="page">
@@ -231,7 +297,8 @@ export default function App() {
             </div>
           </div>
         ) : (
-          <div className="grid">
+          <div className="grid gridTwoCols">
+            {/* LEFT: Pool en 1 columna */}
             <section className="panel">
               <div className="panelTitle">
                 <div>
@@ -244,21 +311,25 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="subTitle">Pool completo (vistos fijados)</div>
-              <div className="cards">
-                {orderedPoolSets.map((s) => (
+              <div className="subTitle">Pool (A-Z)</div>
+              <div className="cards poolOneCol">
+                {poolSetsAlphabetical.map((s) => (
                   <SetCard
                     key={s.global_id}
                     set={s}
                     selected={selectedSet?.global_id === s.global_id}
                     tag={seenSet.has(s.global_id) ? "Visto" : ""}
                     tone={seenSet.has(s.global_id) ? "seen" : "default"}
-                    onClick={() => setSelectedSet(s)}
+                    onClick={() => {
+                      setSelectedSet(s);
+                      // mantener selección para “Marcar visto” rápido
+                    }}
                   />
                 ))}
               </div>
             </section>
 
+            {/* RIGHT: equipo completo + stats + restantes */}
             <aside className="side">
               <section className="panel">
                 <div className="panelTitle">
@@ -285,83 +356,56 @@ export default function App() {
                   </div>
                 )}
 
-                {filterInfo ? (
-                  <div className="box">
-                    <div className="statRow">
-                      <span className="muted">Equipos posibles</span>
-                      <span className="mono">{filterInfo.num_possible_teams}</span>
-                    </div>
-                    <div className="statRow">
-                      <span className="muted">Restantes posibles</span>
-                      <span className="mono">
-                        {filterInfo.possible_remaining_global_ids.length}
-                      </span>
-                    </div>
+                <div className="box">
+                  <div className="statRow">
+                    <span className="muted">Equipos posibles</span>
+                    <span className="mono">{filterInfo?.num_possible_teams ?? "-"}</span>
                   </div>
-                ) : null}
+                  <div className="statRow">
+                    <span className="muted">Restantes posibles</span>
+                    <span className="mono">
+                      {filterInfo ? filterInfo.possible_remaining_global_ids.length : "-"}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Botón rápido para marcar el que tengas seleccionado */}
+                <div className="actionsRow">
+                  <button
+                    className="primaryBtn"
+                    onClick={() => selectedSet && markSeen(selectedSet.global_id)}
+                    disabled={!selectedSet || seenSet.has(selectedSet.global_id) || seen.length >= 4}
+                    title={
+                      !selectedSet
+                        ? "Selecciona uno en el pool"
+                        : seenSet.has(selectedSet.global_id)
+                        ? "Ya está visto"
+                        : seen.length >= 4
+                        ? "Ya tienes 4 vistos"
+                        : "Marcar seleccionado como visto"
+                    }
+                  >
+                    Marcar seleccionado como visto
+                  </button>
+                </div>
               </section>
 
               <section className="panel">
                 <div className="panelTitle">
-                  <div className="h2">Detalle</div>
-                  {selectedSet ? (
-                    <button
-                      className="primaryBtn"
-                      onClick={() => markSeen(selectedSet.global_id)}
-                      disabled={seenSet.has(selectedSet.global_id) || seen.length >= 4}
-                    >
-                      Marcar visto
-                    </button>
-                  ) : null}
+                  <div className="h2">Equipo detectado</div>
+                  <div className="muted">1–4 (de izquierda a derecha)</div>
                 </div>
 
-                {!selectedSet ? (
-                  <div className="muted">
-                    Haz click en un Pokémon para ver su set.
-                  </div>
-                ) : (
-                  <div className="detail">
-                    <div className="detailTop">
-                      <Sprite
-                        url={selectedSet.sprite_url_pokeapi}
-                        alt={selectedSet.species}
-                      />
-                      <div>
-                        <div className="h2">{selectedSet.species}</div>
-                        <div className="muted">
-                          <span className="mono">#{selectedSet.global_id}</span> ·{" "}
-                          {selectedSet.nature} · {selectedSet.item}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="box">
-                      <div className="h3">Stats (Lv 50)</div>
-                      <StatRow label="HP" value={selectedSet.stats_lv50?.HP ?? "-"} />
-                      <StatRow label="Atk" value={selectedSet.stats_lv50?.Atk ?? "-"} />
-                      <StatRow label="Def" value={selectedSet.stats_lv50?.Def ?? "-"} />
-                      <StatRow label="SpA" value={selectedSet.stats_lv50?.SpA ?? "-"} />
-                      <StatRow label="SpD" value={selectedSet.stats_lv50?.SpD ?? "-"} />
-                      <StatRow label="Spe" value={selectedSet.stats_lv50?.Spe ?? "-"} />
-                    </div>
-
-                    <div className="box">
-                      <div className="h3">Movimientos</div>
-                      <ul className="moves">
-                        {(selectedSet.moves ?? []).map((m) => (
-                          <li key={m} className="mono">
-                            {m}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="box">
-                      <div className="h3">EVs</div>
-                      <div className="mono">{selectedSet.evs}</div>
-                    </div>
-                  </div>
-                )}
+                <div className="teamRow">
+                  {teamSets.map((s, idx) => (
+                    <DetailPanel
+                      key={idx}
+                      set={s}
+                      index={idx}
+                      onRemoveSeen={unmarkSeen}
+                    />
+                  ))}
+                </div>
               </section>
 
               <section className="panel">
@@ -394,8 +438,8 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Tip: puedes quitar “vistos” haciendo click en los chips. Los vistos quedan
-        fijados al principio del pool.
+        Tip: los 4 vistos se muestran siempre a la derecha (equipo completo). El pool está
+        en 1 columna y ordenado A-Z.
       </footer>
     </div>
   );
