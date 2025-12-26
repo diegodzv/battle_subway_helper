@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "pokeapi",
-    "moves_total": 414,
+    "moves_total": 413,
     "items_total": 106,
     "rate_limit_ms": 120,
-    "updated_at_unix": 1766701324
+    "updated_at_unix": 1766750026
   },
   "moves": {
     "acid-armor": {
@@ -407,10 +407,6 @@
       "name": "facade",
       "type": "normal"
     },
-    "faint-attack": {
-      "type": null,
-      "not_found": true
-    },
     "fake-out": {
       "name": "fake-out",
       "type": "normal"
@@ -654,10 +650,6 @@
     "hex": {
       "name": "hex",
       "type": "ghost"
-    },
-    "hi-jump-kick": {
-      "type": null,
-      "not_found": true
     },
     "hidden-power": {
       "name": "hidden-power",
@@ -1291,11 +1283,6 @@
       "name": "smack-down",
       "type": "rock"
     },
-    "smellingsalt": {
-      "name": "smellingsalt",
-      "type": null,
-      "not_found": true
-    },
     "smog": {
       "name": "smog",
       "type": "poison"
@@ -1307,10 +1294,6 @@
     "snore": {
       "name": "snore",
       "type": "normal"
-    },
-    "softboiled": {
-      "type": null,
-      "not_found": true
     },
     "spark": {
       "name": "spark",
@@ -1660,10 +1643,6 @@
       "type": "poison",
       "not_found": false
     },
-    "smelling-salt": {
-      "type": null,
-      "not_found": true
-    },
     "solar-beam": {
       "name": "solar-beam",
       "type": "grass",
@@ -1672,6 +1651,26 @@
     "thunder-punch": {
       "name": "thunder-punch",
       "type": "electric",
+      "not_found": false
+    },
+    "feint-attack": {
+      "name": "feint-attack",
+      "type": "dark",
+      "not_found": false
+    },
+    "high-jump-kick": {
+      "name": "high-jump-kick",
+      "type": "fighting",
+      "not_found": false
+    },
+    "smelling-salts": {
+      "name": "smelling-salts",
+      "type": "normal",
+      "not_found": false
+    },
+    "soft-boiled": {
+      "name": "soft-boiled",
+      "type": "normal",
       "not_found": false
     }
   },

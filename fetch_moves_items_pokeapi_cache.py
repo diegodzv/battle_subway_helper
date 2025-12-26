@@ -13,7 +13,6 @@ import requests
 
 POKEAPI_BASE = "https://pokeapi.co/api/v2"
 
-
 # ----------------------------
 # Slug helpers (moves/items)
 # ----------------------------
@@ -21,26 +20,35 @@ POKEAPI_BASE = "https://pokeapi.co/api/v2"
 _CAMEL_SPLIT = re.compile(r"(?<=[a-z0-9])(?=[A-Z])")
 _NON_ALNUM = re.compile(r"[^a-zA-Z0-9]+")
 
+# Irregular PokeAPI names (not fixable by kebab/camel normalization)
+MOVE_ALIAS_MAP: Dict[str, str] = {
+    "faint-attack": "feint-attack",
+    "hi-jump-kick": "high-jump-kick",
+    "softboiled": "soft-boiled",
+    "smellingsalt": "smelling-salts",
+    "smelling-salt": "smelling-salts",
+}
+
+ITEM_ALIAS_MAP: Dict[str, str] = {
+    "king-s-rock": "kings-rock",
+}
+
 
 def canonical_slug(name: str) -> str:
     """
-    Convert Smogon-ish names like:
+    Convert Smogon-ish names into a PokeAPI-friendly slug.
+
+    Examples:
       - "BrightPowder" -> "bright-powder"
       - "BlackGlasses" -> "black-glasses"
       - "BubbleBeam"   -> "bubble-beam"
       - "Will-O-Wisp"  -> "will-o-wisp"
       - "DoubleSlap"   -> "double-slap"
-    into a PokeAPI-friendly kebab-case slug.
-
-    NOTE: This is not perfect for every edge case in Pokémon naming,
-    but works for the known Battle Subway data patterns.
     """
     if not name:
         return ""
 
     s = name.strip()
-
-    # If it has spaces/underscores already, normalize separators.
     s = s.replace("_", " ").strip()
 
     # Split camelCase/PascalCase boundaries if it looks like "BrightPowder"
@@ -50,30 +58,19 @@ def canonical_slug(name: str) -> str:
     # Replace any remaining punctuation with hyphen
     s = _NON_ALNUM.sub("-", s)
 
-    # collapse hyphens
+    # Collapse hyphens
     s = re.sub(r"-{2,}", "-", s).strip("-").lower()
     return s
 
 
-def slug_candidates(raw: str) -> List[str]:
-    """
-    Return likely keys that might exist in cache / might work in PokeAPI.
-    Prefer canonical kebab-case first.
-    """
-    c = canonical_slug(raw)
-    if not c:
-        return []
+def canonical_move_slug(raw: str) -> str:
+    base = canonical_slug(raw)
+    return MOVE_ALIAS_MAP.get(base, base)
 
-    candidates = [c]
 
-    # Some older cache keys might have no hyphens
-    nohy = c.replace("-", "")
-    if nohy != c:
-        candidates.append(nohy)
-
-    # Some might have spaces normalized differently (rare)
-    # (kept for completeness)
-    return list(dict.fromkeys(candidates))
+def canonical_item_slug(raw: str) -> str:
+    base = canonical_slug(raw)
+    return ITEM_ALIAS_MAP.get(base, base)
 
 
 # ----------------------------
@@ -88,7 +85,11 @@ class FetchResult:
 
 def http_get_json(url: str, timeout: float = 15.0) -> FetchResult:
     try:
-        r = requests.get(url, timeout=timeout, headers={"User-Agent": "battle-subway-helper/1.0"})
+        r = requests.get(
+            url,
+            timeout=timeout,
+            headers={"User-Agent": "battle-subway-helper/1.0"},
+        )
         if r.status_code != 200:
             return FetchResult(False, {"status": r.status_code})
         return FetchResult(True, r.json())
@@ -142,6 +143,7 @@ def save_json(path: str, obj: Any) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
 
 def extract_unique_moves_items(sets_dir: str) -> Tuple[Set[str], Set[str]]:
@@ -160,69 +162,43 @@ def extract_unique_moves_items(sets_dir: str) -> Tuple[Set[str], Set[str]]:
     return moves, items
 
 
-def migrate_cache_in_place(cache: Dict[str, Any]) -> None:
+# ----------------------------
+# Cache schema helpers (nested)
+# ----------------------------
+
+def ensure_nested_cache(cache_obj: Any) -> Dict[str, Any]:
     """
-    Ensure that if we already have a good entry under e.g. "bright-powder",
-    we also have the same good data under the canonical key, and that
-    canonical key is what enrichment will look for.
-
-    We keep old keys as-is (non-breaking), but we "promote" good data
-    to canonical keys.
+    Ensure schema:
+    {
+      "meta": {...},
+      "moves": { slug: {...} },
+      "items": { slug: {...} }
+    }
     """
-    # Move-like entries contain "type"
-    # Item-like entries contain "sprite_url"
-    keys = list(cache.keys())
+    if isinstance(cache_obj, dict) and isinstance(cache_obj.get("moves"), dict) and isinstance(cache_obj.get("items"), dict):
+        cache_obj.setdefault("meta", {})
+        return cache_obj
 
-    for k in keys:
-        entry = cache.get(k)
-        if not isinstance(entry, dict):
-            continue
-
-        # Item-like
-        if "sprite_url" in entry:
-            raw_name = entry.get("name") or k
-            canon = canonical_slug(raw_name)
-            if not canon:
+    # If it's a flat dict (legacy), try to split by field presence
+    nested = {"meta": {}, "moves": {}, "items": {}}
+    if isinstance(cache_obj, dict):
+        for k, v in cache_obj.items():
+            if not isinstance(v, dict):
                 continue
+            if "type" in v:
+                nested["moves"][k] = v
+            elif "sprite_url" in v:
+                nested["items"][k] = v
+    return nested
 
-            # If this key is a non-canonical alias, and canonical has no data or is not_found,
-            # but alias has good sprite, copy to canonical.
-            alias_is_bad = entry.get("not_found") is True or entry.get("sprite_url") in (None, "")
-            if k != canon:
-                canon_entry = cache.get(canon)
-                if isinstance(canon_entry, dict):
-                    canon_bad = canon_entry.get("not_found") is True or canon_entry.get("sprite_url") in (None, "")
-                else:
-                    canon_bad = True
 
-                if not alias_is_bad and canon_bad:
-                    cache[canon] = {
-                        "name": canon,
-                        "sprite_url": entry.get("sprite_url"),
-                        "not_found": False,
-                    }
-
-        # Move-like
-        if "type" in entry:
-            raw_name = entry.get("name") or k
-            canon = canonical_slug(raw_name)
-            if not canon:
-                continue
-
-            alias_is_bad = entry.get("not_found") is True or entry.get("type") in (None, "")
-            if k != canon:
-                canon_entry = cache.get(canon)
-                if isinstance(canon_entry, dict):
-                    canon_bad = canon_entry.get("not_found") is True or canon_entry.get("type") in (None, "")
-                else:
-                    canon_bad = True
-
-                if not alias_is_bad and canon_bad:
-                    cache[canon] = {
-                        "name": canon,
-                        "type": entry.get("type"),
-                        "not_found": False,
-                    }
+def update_meta(cache: Dict[str, Any], rate_limit_ms: int) -> None:
+    meta = cache.setdefault("meta", {})
+    meta["source"] = "pokeapi"
+    meta["moves_total"] = len(cache.get("moves", {}))
+    meta["items_total"] = len(cache.get("items", {}))
+    meta["rate_limit_ms"] = rate_limit_ms
+    meta["updated_at_unix"] = int(time.time())
 
 
 # ----------------------------
@@ -241,40 +217,37 @@ def main() -> int:
     ap.add_argument(
         "--sleep",
         type=float,
-        default=0.0,
-        help="Optional sleep (seconds) between requests (avoid rate limits)",
+        default=0.12,
+        help="Sleep (seconds) between requests (avoid rate limits). Default 0.12 (~120ms).",
     )
     args = ap.parse_args()
 
     moves_raw, items_raw = extract_unique_moves_items(args.sets_dir)
 
-    # Canonical slugs we actually want
-    moves = {canonical_slug(m) for m in moves_raw if canonical_slug(m)}
-    items = {canonical_slug(i) for i in items_raw if canonical_slug(i)}
+    # Canonical slugs we actually want (with alias fixups)
+    moves = {canonical_move_slug(m) for m in moves_raw if canonical_move_slug(m)}
+    items = {canonical_item_slug(i) for i in items_raw if canonical_item_slug(i)}
 
-    cache: Dict[str, Any] = {}
+    cache: Dict[str, Any] = {"meta": {}, "moves": {}, "items": {}}
     if os.path.exists(args.cache):
-        cache = load_json(args.cache)
-        if not isinstance(cache, dict):
-            cache = {}
+        loaded = load_json(args.cache)
+        cache = ensure_nested_cache(loaded)
 
-    # Migrate/promote existing good data to canonical keys
-    migrate_cache_in_place(cache)
+    moves_cache: Dict[str, Any] = cache.setdefault("moves", {})
+    items_cache: Dict[str, Any] = cache.setdefault("items", {})
 
-    # Determine what we need to query
     def needs_fetch_move(slug: str) -> bool:
-        e = cache.get(slug)
+        e = moves_cache.get(slug)
         if not isinstance(e, dict):
             return True
         if args.refetch_not_found and e.get("not_found") is True:
             return True
         if e.get("type") in (None, ""):
-            # If it is missing type, refetch
             return True
         return False
 
     def needs_fetch_item(slug: str) -> bool:
-        e = cache.get(slug)
+        e = items_cache.get(slug)
         if not isinstance(e, dict):
             return True
         if args.refetch_not_found and e.get("not_found") is True:
@@ -292,7 +265,7 @@ def main() -> int:
     # Fetch moves
     for idx, slug in enumerate(moves_to_fetch, start=1):
         t, nf = fetch_move_type(slug)
-        cache[slug] = {"name": slug, "type": t, "not_found": nf}
+        moves_cache[slug] = {"name": slug, "type": t, "not_found": nf}
         if args.sleep:
             time.sleep(args.sleep)
         if idx % 50 == 0:
@@ -301,15 +274,13 @@ def main() -> int:
     # Fetch items
     for idx, slug in enumerate(items_to_fetch, start=1):
         sprite, nf = fetch_item_sprite(slug)
-        cache[slug] = {"name": slug, "sprite_url": sprite, "not_found": nf}
+        items_cache[slug] = {"name": slug, "sprite_url": sprite, "not_found": nf}
         if args.sleep:
             time.sleep(args.sleep)
         if idx % 50 == 0:
             print(f"  items: {idx}/{len(items_to_fetch)}")
 
-    # Promote again after fetch (covers the case where old bad keys exist)
-    migrate_cache_in_place(cache)
-
+    update_meta(cache, rate_limit_ms=int(args.sleep * 1000) if args.sleep else 0)
     save_json(args.cache, cache)
     print(f"[+] Guardado caché: {args.cache}")
     return 0
