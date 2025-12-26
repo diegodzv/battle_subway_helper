@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Shadow Punch",
-      "slug": "shadow-punch",
       "type": "ghost"
     },
     {
       "name": "Magnitude",
-      "slug": "magnitude",
       "type": "ground"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     }
   ]

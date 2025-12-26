@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Hi Jump Kick",
-      "slug": "hi-jump-kick",
       "type": null
     },
     {
       "name": "Bulk Up",
-      "slug": "bulk-up",
       "type": "fighting"
     },
     {
       "name": "Feint",
-      "slug": "feint",
       "type": "normal"
     }
   ]

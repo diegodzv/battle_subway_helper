@@ -43,17 +43,14 @@
   "moves_meta": [
     {
       "name": "Outrage",
-      "slug": "outrage",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Dragon Claw",
-      "slug": "dragon-claw",
       "type": "dragon"
     }
   ]

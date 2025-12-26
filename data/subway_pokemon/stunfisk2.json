@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Muddy Water",
-      "slug": "muddy-water",
       "type": "water"
     },
     {
       "name": "Scald",
-      "slug": "scald",
       "type": "water"
     },
     {
       "name": "Fissure",
-      "slug": "fissure",
       "type": "ground"
     }
   ]

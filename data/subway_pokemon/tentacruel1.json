@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Sludge Wave",
-      "slug": "sludge-wave",
       "type": "poison"
     },
     {
       "name": "Hex",
-      "slug": "hex",
       "type": "ghost"
     },
     {
       "name": "Toxic Spikes",
-      "slug": "toxic-spikes",
       "type": "poison"
     }
   ]

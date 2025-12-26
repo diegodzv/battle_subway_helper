@@ -8,161 +8,140 @@ import json
 import os
 import re
 import time
-from typing import Any, Dict, Set, Tuple, Optional
+from typing import Dict, Set, Tuple, Optional
 
 import requests
-
 
 POKEAPI_BASE = "https://pokeapi.co/api/v2"
 
 
-def read_json(path: str) -> Any:
+# ---------- Utils ----------
+
+def read_json(path: str):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def write_json(path: str, payload: Any) -> None:
+def write_json(path: str, data):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def load_cache(path: str) -> dict:
-    if not os.path.exists(path):
-        return {"meta": {"source": "pokeapi"}, "moves": {}, "items": {}}
-    data = read_json(path)
-    data.setdefault("moves", {})
-    data.setdefault("items", {})
-    data.setdefault("meta", {"source": "pokeapi"})
-    return data
+# ---------- Slug logic ----------
 
-
-def slugify_pokeapi(name: str) -> str:
-    """
-    Convierte nombres tipo:
-      - "Will-O-Wisp" -> "will-o-wisp"
-      - "King's Rock" -> "kings-rock"
-      - "Frost Breath" -> "frost-breath"
-    """
-    s = name.strip().lower()
-    s = s.replace("’", "'")
-    # casos típicos
-    if s.startswith("hidden power"):
-        return "hidden-power"
-    # quita apóstrofes
-    s = s.replace("'", "")
-    # espacios -> -
-    s = re.sub(r"\s+", "-", s)
-    # quita caracteres raros excepto -
-    s = re.sub(r"[^a-z0-9\-]+", "", s)
-    s = re.sub(r"\-+", "-", s).strip("-")
+def split_camel_case(s: str) -> str:
+    s = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", s)
+    s = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", s)
     return s
 
 
+def canonical_move_slug(name: str) -> str:
+    s = name.strip().replace("’", "'")
+    s = split_camel_case(s).lower()
+    s = s.replace("'", "")
+    s = re.sub(r"\s+", "-", s)
+    s = re.sub(r"[^a-z0-9\-]", "", s)
+    s = re.sub(r"-+", "-", s).strip("-")
+
+    # Casos especiales conocidos
+    SPECIAL = {
+        "doubleslap": "double-slap",
+        "dynamicpunch": "dynamic-punch",
+        "ancientpower": "ancient-power",
+    }
+    return SPECIAL.get(s, s)
+
+
+def canonical_item_slug(name: str) -> str:
+    s = name.strip().lower()
+    s = s.replace("’", "")
+    s = re.sub(r"\s+", "-", s)
+    s = re.sub(r"[^a-z0-9\-]", "", s)
+    s = re.sub(r"-+", "-", s).strip("-")
+    return s
+
+
+# ---------- Collect from sets ----------
+
 def collect_needed_from_sets(sets_dir: str) -> Tuple[Set[str], Set[str]]:
-    moves: Set[str] = set()
-    items: Set[str] = set()
+    moves, items = set(), set()
 
     for fn in os.listdir(sets_dir):
         if not fn.endswith(".json") or fn.startswith("_"):
             continue
-        path = os.path.join(sets_dir, fn)
-        data = read_json(path)
+        data = read_json(os.path.join(sets_dir, fn))
 
-        item = data.get("item")
-        if isinstance(item, str) and item.strip():
-            items.add(slugify_pokeapi(item))
+        if isinstance(data.get("item"), str):
+            items.add(canonical_item_slug(data["item"]))
 
-        mv = data.get("moves")
-        if isinstance(mv, list):
-            for m in mv:
-                if isinstance(m, str) and m.strip():
-                    moves.add(slugify_pokeapi(m))
+        for m in data.get("moves", []):
+            if isinstance(m, str):
+                moves.add(canonical_move_slug(m))
 
     return moves, items
 
 
-def get_json_with_retries(url: str, session: requests.Session, retries: int = 3, sleep_s: float = 0.5) -> Optional[dict]:
-    last_err = None
-    for i in range(retries):
-        try:
-            r = session.get(url, timeout=20)
-            if r.status_code == 404:
-                return None
-            r.raise_for_status()
-            return r.json()
-        except Exception as e:
-            last_err = e
-            time.sleep(sleep_s * (i + 1))
-    print(f"[!] ERROR GET {url}: {last_err}")
-    return None
+# ---------- Fetch ----------
+
+def fetch_json(url: str, session: requests.Session) -> Optional[dict]:
+    r = session.get(url, timeout=20)
+    if r.status_code == 404:
+        return None
+    r.raise_for_status()
+    return r.json()
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--sets_dir", default="data/subway_pokemon")
     ap.add_argument("--cache", default="data/moves_items_cache.json")
-    ap.add_argument("--rate_limit_ms", type=int, default=120, help="espera entre requests")
+    ap.add_argument("--rate_limit_ms", type=int, default=120)
     args = ap.parse_args()
 
-    cache = load_cache(args.cache)
-    cached_moves: Dict[str, dict] = cache["moves"]
-    cached_items: Dict[str, dict] = cache["items"]
+    cache = {"moves": {}, "items": {}}
+    if os.path.exists(args.cache):
+        cache = read_json(args.cache)
 
     needed_moves, needed_items = collect_needed_from_sets(args.sets_dir)
 
-    to_fetch_moves = sorted([m for m in needed_moves if m not in cached_moves])
-    to_fetch_items = sorted([it for it in needed_items if it not in cached_items])
-
-    print(f"[+] Moves únicos necesarios: {len(needed_moves)} (faltan {len(to_fetch_moves)})")
-    print(f"[+] Items únicos necesarios: {len(needed_items)} (faltan {len(to_fetch_items)})")
-
     session = requests.Session()
-    session.headers.update({"User-Agent": "MetroBatallaPokeAPI/1.0"})
+    session.headers["User-Agent"] = "BattleSubwayHelper/1.0"
 
-    delay = max(0, args.rate_limit_ms) / 1000.0
+    delay = args.rate_limit_ms / 1000
 
-    # Fetch moves
-    for i, slug in enumerate(to_fetch_moves, 1):
-        url = f"{POKEAPI_BASE}/move/{slug}/"
-        data = get_json_with_retries(url, session)
+    # ---- MOVES ----
+    for slug in sorted(needed_moves):
+        if slug in cache["moves"] and not cache["moves"][slug].get("not_found"):
+            continue
+
+        data = fetch_json(f"{POKEAPI_BASE}/move/{slug}/", session)
         if data is None:
-            cached_moves[slug] = {"name": slug, "type": None, "not_found": True}
+            cache["moves"][slug] = {"type": None, "not_found": True}
         else:
-            mtype = data.get("type", {}).get("name")
-            cached_moves[slug] = {"name": slug, "type": mtype}
-        if i % 50 == 0:
-            print(f"  moves: {i}/{len(to_fetch_moves)}")
-            write_json(args.cache, cache)
+            cache["moves"][slug] = {
+                "type": data["type"]["name"],
+                "not_found": False,
+            }
         time.sleep(delay)
 
-    # Fetch items
-    for i, slug in enumerate(to_fetch_items, 1):
-        url = f"{POKEAPI_BASE}/item/{slug}/"
-        data = get_json_with_retries(url, session)
-        if data is None:
-            cached_items[slug] = {"name": slug, "sprite_url": None, "not_found": True}
-        else:
-            sprite = None
-            sprites = data.get("sprites")
-            if isinstance(sprites, dict):
-                sprite = sprites.get("default")
-            cached_items[slug] = {"name": slug, "sprite_url": sprite}
-        if i % 50 == 0:
-            print(f"  items: {i}/{len(to_fetch_items)}")
-            write_json(args.cache, cache)
-        time.sleep(delay)
+    # ---- ITEMS ----
+    for slug in sorted(needed_items):
+        if slug in cache["items"] and not cache["items"][slug].get("not_found"):
+            continue
 
-    cache["meta"] = {
-        "source": "pokeapi",
-        "moves_total": len(cached_moves),
-        "items_total": len(cached_items),
-        "rate_limit_ms": args.rate_limit_ms,
-        "updated_at_unix": int(time.time()),
-    }
+        data = fetch_json(f"{POKEAPI_BASE}/item/{slug}/", session)
+        if data is None:
+            cache["items"][slug] = {"sprite_url": None, "not_found": True}
+        else:
+            cache["items"][slug] = {
+                "sprite_url": data["sprites"]["default"],
+                "not_found": False,
+            }
+        time.sleep(delay)
 
     write_json(args.cache, cache)
-    print(f"[+] Guardado caché: {args.cache}")
+    print(f"[+] Caché consolidada guardada: {args.cache}")
     return 0
 
 

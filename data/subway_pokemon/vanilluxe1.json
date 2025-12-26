@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Frost Breath",
-      "slug": "frost-breath",
       "type": "ice"
     },
     {
       "name": "Mirror Coat",
-      "slug": "mirror-coat",
       "type": "psychic"
     },
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     }
   ]

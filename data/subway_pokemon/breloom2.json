@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Seed Bomb",
-      "slug": "seed-bomb",
       "type": "grass"
     },
     {
       "name": "Wake-Up Slap",
-      "slug": "wake-up-slap",
       "type": "fighting"
     },
     {
       "name": "Spore",
-      "slug": "spore",
       "type": "grass"
     }
   ]

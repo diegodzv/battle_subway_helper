@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Rock Smash",
-      "slug": "rock-smash",
       "type": "fighting"
     },
     {
       "name": "Iron Head",
-      "slug": "iron-head",
       "type": "steel"
     }
   ]

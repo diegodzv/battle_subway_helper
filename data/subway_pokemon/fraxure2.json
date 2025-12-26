@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Tail",
-      "slug": "dragon-tail",
       "type": "dragon"
     },
     {
       "name": "Guillotine",
-      "slug": "guillotine",
       "type": "normal"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Dragon Dance",
-      "slug": "dragon-dance",
       "type": "dragon"
     }
   ]

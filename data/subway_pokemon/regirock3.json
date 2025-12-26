@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Ice Punch",
-      "slug": "ice-punch",
       "type": "ice"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Drain Punch",
-      "slug": "drain-punch",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

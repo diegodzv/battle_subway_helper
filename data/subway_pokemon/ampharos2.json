@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "ThunderPunch",
-      "slug": "thunderpunch",
-      "type": null
+      "type": "electric"
     },
     {
       "name": "Screech",
-      "slug": "screech",
       "type": "normal"
     },
     {
       "name": "Odor Sleuth",
-      "slug": "odor-sleuth",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Rock Smash",
-      "slug": "rock-smash",
       "type": "fighting"
     },
     {
       "name": "Gyro Ball",
-      "slug": "gyro-ball",
       "type": "steel"
     },
     {
       "name": "Ingrain",
-      "slug": "ingrain",
       "type": "grass"
     }
   ]

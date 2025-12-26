@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Round",
-      "slug": "round",
       "type": "normal"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

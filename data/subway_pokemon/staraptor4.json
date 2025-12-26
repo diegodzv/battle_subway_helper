@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Brave Bird",
-      "slug": "brave-bird",
       "type": "flying"
     },
     {
       "name": "Double-Edge",
-      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "FeatherDance",
-      "slug": "featherdance",
-      "type": null
+      "type": "flying"
     }
   ]
 }

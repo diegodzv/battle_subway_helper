@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Leaf Storm",
-      "slug": "leaf-storm",
       "type": "grass"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "AncientPower",
-      "slug": "ancientpower",
-      "type": null
+      "type": "rock"
     }
   ]
 }

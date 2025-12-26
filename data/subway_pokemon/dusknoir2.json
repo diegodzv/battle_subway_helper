@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Shadow Sneak",
-      "slug": "shadow-sneak",
       "type": "ghost"
     },
     {
       "name": "Fire Punch",
-      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Trick Room",
-      "slug": "trick-room",
       "type": "psychic"
     }
   ]

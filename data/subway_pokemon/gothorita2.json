@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Psyshock",
-      "slug": "psyshock",
       "type": "psychic"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Flatter",
-      "slug": "flatter",
       "type": "dark"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     }
   ]

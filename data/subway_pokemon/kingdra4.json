@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Draco Meteor",
-      "slug": "draco-meteor",
       "type": "dragon"
     },
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

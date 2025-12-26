@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Tickle",
-      "slug": "tickle",
       "type": "normal"
     },
     {
       "name": "Amnesia",
-      "slug": "amnesia",
       "type": "psychic"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     }
   ]

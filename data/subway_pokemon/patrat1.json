@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Super Fang",
-      "slug": "super-fang",
       "type": "normal"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Hypnosis",
-      "slug": "hypnosis",
       "type": "psychic"
     },
     {
       "name": "Sand-Attack",
-      "slug": "sand-attack",
       "type": "ground"
     }
   ]

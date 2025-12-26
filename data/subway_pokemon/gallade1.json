@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Shadow Sneak",
-      "slug": "shadow-sneak",
       "type": "ghost"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Psycho Cut",
-      "slug": "psycho-cut",
       "type": "psychic"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     }
   ]

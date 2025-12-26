@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Sandstorm",
-      "slug": "sandstorm",
       "type": "rock"
     }
   ]

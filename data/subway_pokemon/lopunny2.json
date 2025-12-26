@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Charm",
-      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Focus Punch",
-      "slug": "focus-punch",
       "type": "fighting"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "ThunderPunch",
-      "slug": "thunderpunch",
-      "type": null
+      "type": "electric"
     }
   ]
 }

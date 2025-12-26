@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunder",
-      "slug": "thunder",
       "type": "electric"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Charm",
-      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Rain Dance",
-      "slug": "rain-dance",
       "type": "water"
     }
   ]

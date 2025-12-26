@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rain Dance",
-      "slug": "rain-dance",
       "type": "water"
     },
     {
       "name": "Hydro Pump",
-      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Dragon Pulse",
-      "slug": "dragon-pulse",
       "type": "dragon"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     }
   ]

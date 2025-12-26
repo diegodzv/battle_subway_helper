@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Scary Face",
-      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Rollout",
-      "slug": "rollout",
       "type": "rock"
     },
     {
       "name": "Defense Curl",
-      "slug": "defense-curl",
       "type": "normal"
     }
   ]

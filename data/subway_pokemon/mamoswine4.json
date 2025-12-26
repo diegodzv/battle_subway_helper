@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Ice Fang",
-      "slug": "ice-fang",
       "type": "ice"
     },
     {
       "name": "Double-Edge",
-      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Overheat",
-      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Dark Pulse",
-      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Sunny Day",
-      "slug": "sunny-day",
       "type": "fire"
     }
   ]

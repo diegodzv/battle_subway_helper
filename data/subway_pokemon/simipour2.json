@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Shadow Claw",
-      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Acrobatics",
-      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     }
   ]

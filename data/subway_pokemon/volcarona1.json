@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fire Spin",
-      "slug": "fire-spin",
       "type": "fire"
     },
     {
       "name": "Heat Wave",
-      "slug": "heat-wave",
       "type": "fire"
     },
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Whirlwind",
-      "slug": "whirlwind",
       "type": "normal"
     }
   ]

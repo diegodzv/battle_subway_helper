@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Seed Bomb",
-      "slug": "seed-bomb",
       "type": "grass"
     },
     {
       "name": "Iron Head",
-      "slug": "iron-head",
       "type": "steel"
     }
   ]

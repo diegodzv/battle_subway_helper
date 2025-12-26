@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Punishment",
-      "slug": "punishment",
       "type": "dark"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     }
   ]

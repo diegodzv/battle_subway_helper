@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Hyper Voice",
-      "slug": "hyper-voice",
       "type": "normal"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     }
   ]

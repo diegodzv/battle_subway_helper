@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Faint Attack",
-      "slug": "faint-attack",
       "type": null
     },
     {
       "name": "Metal Claw",
-      "slug": "metal-claw",
       "type": "steel"
     },
     {
       "name": "Torment",
-      "slug": "torment",
       "type": "dark"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     }
   ]

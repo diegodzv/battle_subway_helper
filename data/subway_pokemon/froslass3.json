@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hail",
-      "slug": "hail",
       "type": "ice"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Ice Shard",
-      "slug": "ice-shard",
       "type": "ice"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     }
   ]

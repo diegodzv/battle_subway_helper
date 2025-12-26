@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Horn Leech",
-      "slug": "horn-leech",
       "type": "grass"
     },
     {
       "name": "Double-Edge",
-      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Megahorn",
-      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Leech Seed",
-      "slug": "leech-seed",
       "type": "grass"
     }
   ]

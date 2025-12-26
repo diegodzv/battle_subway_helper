@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Coil",
-      "slug": "coil",
       "type": "poison"
     }
   ]

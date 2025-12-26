@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dual Chop",
-      "slug": "dual-chop",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     }
   ]

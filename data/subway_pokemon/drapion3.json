@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Cross Poison",
-      "slug": "cross-poison",
       "type": "poison"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Fire Fang",
-      "slug": "fire-fang",
       "type": "fire"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fire Punch",
-      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "Uproar",
-      "slug": "uproar",
       "type": "normal"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     }
   ]

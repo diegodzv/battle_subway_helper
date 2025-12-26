@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Zen Headbutt",
-      "slug": "zen-headbutt",
       "type": "psychic"
     }
   ]

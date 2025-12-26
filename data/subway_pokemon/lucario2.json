@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Close Combat",
-      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Hone Claws",
-      "slug": "hone-claws",
       "type": "dark"
     },
     {
       "name": "Endure",
-      "slug": "endure",
       "type": "normal"
     },
     {
       "name": "Reversal",
-      "slug": "reversal",
       "type": "fighting"
     }
   ]

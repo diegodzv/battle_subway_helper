@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Lovely Kiss",
-      "slug": "lovely-kiss",
       "type": "normal"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Disable",
-      "slug": "disable",
       "type": "normal"
     },
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Pain Split",
-      "slug": "pain-split",
       "type": "normal"
     },
     {
       "name": "Mean Look",
-      "slug": "mean-look",
       "type": "normal"
     }
   ]

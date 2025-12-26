@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Belly Drum",
-      "slug": "belly-drum",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Fire Punch",
-      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "Yawn",
-      "slug": "yawn",
       "type": "normal"
     }
   ]

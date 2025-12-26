@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Round",
-      "slug": "round",
       "type": "normal"
     },
     {
       "name": "Grass Knot",
-      "slug": "grass-knot",
       "type": "grass"
     },
     {
       "name": "Sleep Powder",
-      "slug": "sleep-powder",
       "type": "grass"
     }
   ]

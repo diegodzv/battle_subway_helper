@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Acid Armor",
-      "slug": "acid-armor",
       "type": "poison"
     },
     {
       "name": "Mirror Coat",
-      "slug": "mirror-coat",
       "type": "psychic"
     }
   ]

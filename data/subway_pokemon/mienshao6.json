@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Feint",
-      "slug": "feint",
       "type": "normal"
     },
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Hi Jump Kick",
-      "slug": "hi-jump-kick",
       "type": null
     },
     {
       "name": "Wide Guard",
-      "slug": "wide-guard",
       "type": "rock"
     }
   ]

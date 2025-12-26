@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fire Blast",
-      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Uproar",
-      "slug": "uproar",
       "type": "normal"
     },
     {
       "name": "Hyper Voice",
-      "slug": "hyper-voice",
       "type": "normal"
     }
   ]

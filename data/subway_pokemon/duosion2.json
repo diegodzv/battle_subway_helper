@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Pain Split",
-      "slug": "pain-split",
       "type": "normal"
     },
     {
       "name": "Reflect",
-      "slug": "reflect",
       "type": "psychic"
     }
   ]

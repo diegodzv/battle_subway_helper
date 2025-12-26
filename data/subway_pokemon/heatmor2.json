@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Inferno",
-      "slug": "inferno",
       "type": "fire"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     }
   ]

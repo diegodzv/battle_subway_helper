@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Dark Pulse",
-      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Nasty Plot",
-      "slug": "nasty-plot",
       "type": "dark"
     }
   ]

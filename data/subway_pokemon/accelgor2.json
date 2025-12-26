@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Bug Buzz",
-      "slug": "bug-buzz",
       "type": "bug"
     },
     {
       "name": "Endure",
-      "slug": "endure",
       "type": "normal"
     }
   ]

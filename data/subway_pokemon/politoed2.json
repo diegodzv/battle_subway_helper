@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thief",
-      "slug": "thief",
       "type": "dark"
     },
     {
       "name": "Echoed Voice",
-      "slug": "echoed-voice",
       "type": "normal"
     },
     {
       "name": "Refresh",
-      "slug": "refresh",
       "type": "normal"
     },
     {
       "name": "Hydro Pump",
-      "slug": "hydro-pump",
       "type": "water"
     }
   ]

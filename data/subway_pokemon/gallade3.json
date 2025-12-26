@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psycho Cut",
-      "slug": "psycho-cut",
       "type": "psychic"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     }
   ]

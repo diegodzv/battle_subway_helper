@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Heat Crash",
-      "slug": "heat-crash",
       "type": "fire"
     },
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     }
   ]

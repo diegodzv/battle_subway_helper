@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Calm Mind",
-      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     }
   ]

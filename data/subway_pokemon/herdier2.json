@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Return",
-      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Retaliate",
-      "slug": "retaliate",
       "type": "normal"
     },
     {
       "name": "Reversal",
-      "slug": "reversal",
       "type": "fighting"
     },
     {
       "name": "Work Up",
-      "slug": "work-up",
       "type": "normal"
     }
   ]

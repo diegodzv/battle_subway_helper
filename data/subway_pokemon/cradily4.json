@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Stockpile",
-      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Ingrain",
-      "slug": "ingrain",
       "type": "grass"
     },
     {
       "name": "Giga Drain",
-      "slug": "giga-drain",
       "type": "grass"
     }
   ]

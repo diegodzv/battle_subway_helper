@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hi Jump Kick",
-      "slug": "hi-jump-kick",
       "type": null
     },
     {
       "name": "Counter",
-      "slug": "counter",
       "type": "fighting"
     },
     {
       "name": "Flamethrower",
-      "slug": "flamethrower",
       "type": "fire"
     },
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     }
   ]

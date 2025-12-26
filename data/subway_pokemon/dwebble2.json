@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Stealth Rock",
-      "slug": "stealth-rock",
       "type": "rock"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     }
   ]

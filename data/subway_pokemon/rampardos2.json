@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Head Smash",
-      "slug": "head-smash",
       "type": "rock"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Hammer Arm",
-      "slug": "hammer-arm",
       "type": "fighting"
     },
     {
       "name": "Scary Face",
-      "slug": "scary-face",
       "type": "normal"
     }
   ]

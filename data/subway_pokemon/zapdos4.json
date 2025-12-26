@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Volt Switch",
-      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Heat Wave",
-      "slug": "heat-wave",
       "type": "fire"
     },
     {
       "name": "Detect",
-      "slug": "detect",
       "type": "fighting"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Struggle Bug",
-      "slug": "struggle-bug",
       "type": "bug"
     },
     {
       "name": "Bide",
-      "slug": "bide",
       "type": "normal"
     },
     {
       "name": "Acid Armor",
-      "slug": "acid-armor",
       "type": "poison"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

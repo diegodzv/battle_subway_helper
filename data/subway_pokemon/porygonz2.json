@@ -41,7 +41,6 @@
   "moves_meta": [
     {
       "name": "Hyper Beam",
-      "slug": "hyper-beam",
       "type": "normal"
     }
   ]

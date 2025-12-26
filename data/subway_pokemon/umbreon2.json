@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Moonlight",
-      "slug": "moonlight",
       "type": "fairy"
     },
     {
       "name": "Stored Power",
-      "slug": "stored-power",
       "type": "psychic"
     },
     {
       "name": "Work Up",
-      "slug": "work-up",
       "type": "normal"
     }
   ]

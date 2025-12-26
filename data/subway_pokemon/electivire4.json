@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "ThunderPunch",
-      "slug": "thunderpunch",
-      "type": null
+      "type": "electric"
     },
     {
       "name": "Fire Punch",
-      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "Ice Punch",
-      "slug": "ice-punch",
       "type": "ice"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

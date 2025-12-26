@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Seed Bomb",
-      "slug": "seed-bomb",
       "type": "grass"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Reflect",
-      "slug": "reflect",
       "type": "psychic"
     },
     {
       "name": "Light Screen",
-      "slug": "light-screen",
       "type": "psychic"
     }
   ]

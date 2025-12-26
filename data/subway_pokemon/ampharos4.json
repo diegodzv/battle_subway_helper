@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunder",
-      "slug": "thunder",
       "type": "electric"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Signal Beam",
-      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Power Gem",
-      "slug": "power-gem",
       "type": "rock"
     }
   ]

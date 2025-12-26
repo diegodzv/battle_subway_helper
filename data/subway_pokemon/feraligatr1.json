@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Screech",
-      "slug": "screech",
       "type": "normal"
     },
     {
       "name": "Aqua Jet",
-      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Block",
-      "slug": "block",
       "type": "normal"
     }
   ]

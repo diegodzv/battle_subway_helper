@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Double Hit",
-      "slug": "double-hit",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Ice Shard",
-      "slug": "ice-shard",
       "type": "ice"
     },
     {
       "name": "Stealth Rock",
-      "slug": "stealth-rock",
       "type": "rock"
     }
   ]

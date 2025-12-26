@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Bug Buzz",
-      "slug": "bug-buzz",
       "type": "bug"
     },
     {
       "name": "Giga Drain",
-      "slug": "giga-drain",
       "type": "grass"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     },
     {
       "name": "Final Gambit",
-      "slug": "final-gambit",
       "type": "fighting"
     }
   ]

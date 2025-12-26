@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Fissure",
-      "slug": "fissure",
       "type": "ground"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     }
   ]

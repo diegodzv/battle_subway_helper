@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Feint",
-      "slug": "feint",
       "type": "normal"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Bug Bite",
-      "slug": "bug-bite",
       "type": "bug"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Metal Burst",
-      "slug": "metal-burst",
       "type": "steel"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Shadow Claw",
-      "slug": "shadow-claw",
       "type": "ghost"
     }
   ]

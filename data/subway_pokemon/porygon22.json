@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Tri Attack",
-      "slug": "tri-attack",
       "type": "normal"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Recycle",
-      "slug": "recycle",
       "type": "normal"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     }
   ]

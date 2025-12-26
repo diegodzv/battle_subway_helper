@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

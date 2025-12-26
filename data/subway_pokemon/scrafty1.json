@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Bulk Up",
-      "slug": "bulk-up",
       "type": "fighting"
     },
     {
       "name": "Focus Punch",
-      "slug": "focus-punch",
       "type": "fighting"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     }
   ]

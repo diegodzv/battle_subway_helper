@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Reflect",
-      "slug": "reflect",
       "type": "psychic"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     }
   ]

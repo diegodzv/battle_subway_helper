@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Pursuit",
-      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Revenge",
-      "slug": "revenge",
       "type": "fighting"
     },
     {
       "name": "Retaliate",
-      "slug": "retaliate",
       "type": "normal"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Shadow Sneak",
-      "slug": "shadow-sneak",
       "type": "ghost"
     },
     {
       "name": "Pain Split",
-      "slug": "pain-split",
       "type": "normal"
     },
     {
       "name": "Destiny Bond",
-      "slug": "destiny-bond",
       "type": "ghost"
     },
     {
       "name": "Trick Room",
-      "slug": "trick-room",
       "type": "psychic"
     }
   ]

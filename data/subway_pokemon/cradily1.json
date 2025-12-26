@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Stealth Rock",
-      "slug": "stealth-rock",
       "type": "rock"
     },
     {
       "name": "Gastro Acid",
-      "slug": "gastro-acid",
       "type": "poison"
     },
     {
       "name": "Stockpile",
-      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Swallow",
-      "slug": "swallow",
       "type": "normal"
     }
   ]

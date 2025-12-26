@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Flail",
-      "slug": "flail",
       "type": "normal"
     },
     {
       "name": "Endure",
-      "slug": "endure",
       "type": "normal"
     }
   ]

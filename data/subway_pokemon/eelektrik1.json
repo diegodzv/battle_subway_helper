@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Acid Spray",
-      "slug": "acid-spray",
       "type": "poison"
     },
     {
       "name": "Acrobatics",
-      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Gastro Acid",
-      "slug": "gastro-acid",
       "type": "poison"
     }
   ]

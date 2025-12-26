@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     }
   ]

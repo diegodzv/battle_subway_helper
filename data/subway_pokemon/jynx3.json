@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     }
   ]

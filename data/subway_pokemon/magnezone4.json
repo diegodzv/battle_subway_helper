@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Tri Attack",
-      "slug": "tri-attack",
       "type": "normal"
     },
     {
       "name": "Volt Switch",
-      "slug": "volt-switch",
       "type": "electric"
     }
   ]

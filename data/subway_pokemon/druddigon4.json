@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Outrage",
-      "slug": "outrage",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Dragon Tail",
-      "slug": "dragon-tail",
       "type": "dragon"
     }
   ]

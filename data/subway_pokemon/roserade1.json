@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Leech Seed",
-      "slug": "leech-seed",
       "type": "grass"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Giga Drain",
-      "slug": "giga-drain",
       "type": "grass"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Attack Order",
-      "slug": "attack-order",
       "type": "bug"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Destiny Bond",
-      "slug": "destiny-bond",
       "type": "ghost"
     }
   ]

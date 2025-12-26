@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hypnosis",
-      "slug": "hypnosis",
       "type": "psychic"
     },
     {
       "name": "Calm Mind",
-      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Imprison",
-      "slug": "imprison",
       "type": "psychic"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     }
   ]

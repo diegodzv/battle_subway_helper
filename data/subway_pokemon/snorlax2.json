@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Body Slam",
-      "slug": "body-slam",
       "type": "normal"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Belly Drum",
-      "slug": "belly-drum",
       "type": "normal"
     }
   ]

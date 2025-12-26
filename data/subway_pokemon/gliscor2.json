@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Agility",
-      "slug": "agility",
       "type": "psychic"
     },
     {
       "name": "Acrobatics",
-      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     },
     {
       "name": "Baton Pass",
-      "slug": "baton-pass",
       "type": "normal"
     }
   ]

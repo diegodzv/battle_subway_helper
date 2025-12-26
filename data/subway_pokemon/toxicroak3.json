@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Dark Pulse",
-      "slug": "dark-pulse",
       "type": "dark"
     }
   ]

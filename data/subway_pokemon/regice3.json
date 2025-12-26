@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Amnesia",
-      "slug": "amnesia",
       "type": "psychic"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

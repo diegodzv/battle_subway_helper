@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Close Combat",
-      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Flare Blitz",
-      "slug": "flare-blitz",
       "type": "fire"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "ExtremeSpeed",
-      "slug": "extremespeed",
-      "type": null
+      "type": "normal"
     }
   ]
 }

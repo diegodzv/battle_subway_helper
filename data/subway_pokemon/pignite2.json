@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flare Blitz",
-      "slug": "flare-blitz",
       "type": "fire"
     },
     {
       "name": "Head Smash",
-      "slug": "head-smash",
       "type": "rock"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Heavy Slam",
-      "slug": "heavy-slam",
       "type": "steel"
     }
   ]

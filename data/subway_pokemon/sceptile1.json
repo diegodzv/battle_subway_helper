@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Quick Attack",
-      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Endeavor",
-      "slug": "endeavor",
       "type": "normal"
     },
     {
       "name": "Detect",
-      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "Leaf Storm",
-      "slug": "leaf-storm",
       "type": "grass"
     }
   ]

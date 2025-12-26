@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Hail",
-      "slug": "hail",
       "type": "ice"
     },
     {
       "name": "Signal Beam",
-      "slug": "signal-beam",
       "type": "bug"
     }
   ]

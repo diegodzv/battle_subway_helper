@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hydro Pump",
-      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Attract",
-      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Aqua Ring",
-      "slug": "aqua-ring",
       "type": "water"
     }
   ]

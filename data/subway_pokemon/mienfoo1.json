@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Low Sweep",
-      "slug": "low-sweep",
       "type": "fighting"
     },
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Quick Guard",
-      "slug": "quick-guard",
       "type": "fighting"
     },
     {
       "name": "Detect",
-      "slug": "detect",
       "type": "fighting"
     }
   ]

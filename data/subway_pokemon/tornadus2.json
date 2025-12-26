@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Hurricane",
-      "slug": "hurricane",
       "type": "flying"
     }
   ]

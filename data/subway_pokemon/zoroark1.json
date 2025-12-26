@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Shadow Claw",
-      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Counter",
-      "slug": "counter",
       "type": "fighting"
     }
   ]

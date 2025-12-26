@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Avalanche",
-      "slug": "avalanche",
       "type": "ice"
     },
     {
       "name": "Aqua Ring",
-      "slug": "aqua-ring",
       "type": "water"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     }
   ]

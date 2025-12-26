@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Power Gem",
-      "slug": "power-gem",
       "type": "rock"
     },
     {
       "name": "Earth Power",
-      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     }
   ]

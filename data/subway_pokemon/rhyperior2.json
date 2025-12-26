@@ -42,12 +42,10 @@
   "moves_meta": [
     {
       "name": "Rock Wrecker",
-      "slug": "rock-wrecker",
       "type": "rock"
     },
     {
       "name": "Rock Polish",
-      "slug": "rock-polish",
       "type": "rock"
     }
   ]

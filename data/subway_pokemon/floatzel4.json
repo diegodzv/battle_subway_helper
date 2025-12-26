@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Aqua Jet",
-      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Low Kick",
-      "slug": "low-kick",
       "type": "fighting"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

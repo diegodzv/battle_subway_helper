@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Sunny Day",
-      "slug": "sunny-day",
       "type": "fire"
     }
   ]

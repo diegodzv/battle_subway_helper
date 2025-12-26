@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hurricane",
-      "slug": "hurricane",
       "type": "flying"
     },
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Scald",
-      "slug": "scald",
       "type": "water"
     },
     {
       "name": "Rain Dance",
-      "slug": "rain-dance",
       "type": "water"
     }
   ]

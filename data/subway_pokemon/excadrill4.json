@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     }
   ]

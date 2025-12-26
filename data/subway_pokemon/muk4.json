@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Gunk Shot",
-      "slug": "gunk-shot",
       "type": "poison"
     },
     {
       "name": "Shadow Sneak",
-      "slug": "shadow-sneak",
       "type": "ghost"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Explosion",
-      "slug": "explosion",
       "type": "normal"
     }
   ]

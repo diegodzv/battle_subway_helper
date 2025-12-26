@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Rush",
-      "slug": "dragon-rush",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Dragon Tail",
-      "slug": "dragon-tail",
       "type": "dragon"
     }
   ]

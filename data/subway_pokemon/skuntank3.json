@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Foul Play",
-      "slug": "foul-play",
       "type": "dark"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     }
   ]

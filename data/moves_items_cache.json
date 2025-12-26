@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "pokeapi",
-    "moves_total": 413,
-    "items_total": 106,
+    "moves_total": 424,
+    "items_total": 111,
     "rate_limit_ms": 120,
-    "updated_at_unix": 1766697531
+    "updated_at_unix": 1766701324
   },
   "moves": {
     "acid-armor": {
@@ -433,7 +433,6 @@
       "type": "normal"
     },
     "faint-attack": {
-      "name": "faint-attack",
       "type": null,
       "not_found": true
     },
@@ -692,7 +691,6 @@
       "type": "ghost"
     },
     "hi-jump-kick": {
-      "name": "hi-jump-kick",
       "type": null,
       "not_found": true
     },
@@ -1351,7 +1349,6 @@
       "type": "normal"
     },
     "softboiled": {
-      "name": "softboiled",
       "type": null,
       "not_found": true
     },
@@ -1672,6 +1669,60 @@
     "zen-headbutt": {
       "name": "zen-headbutt",
       "type": "psychic"
+    },
+    "ancient-power": {
+      "name": "ancient-power",
+      "type": "rock",
+      "not_found": false
+    },
+    "bubble-beam": {
+      "name": "bubble-beam",
+      "type": "water",
+      "not_found": false
+    },
+    "double-slap": {
+      "name": "double-slap",
+      "type": "normal",
+      "not_found": false
+    },
+    "dynamic-punch": {
+      "name": "dynamic-punch",
+      "type": "fighting",
+      "not_found": false
+    },
+    "extreme-speed": {
+      "name": "extreme-speed",
+      "type": "normal",
+      "not_found": false
+    },
+    "feather-dance": {
+      "name": "feather-dance",
+      "type": "flying",
+      "not_found": false
+    },
+    "grass-whistle": {
+      "name": "grass-whistle",
+      "type": "grass",
+      "not_found": false
+    },
+    "poison-powder": {
+      "name": "poison-powder",
+      "type": "poison",
+      "not_found": false
+    },
+    "smelling-salt": {
+      "type": null,
+      "not_found": true
+    },
+    "solar-beam": {
+      "name": "solar-beam",
+      "type": "grass",
+      "not_found": false
+    },
+    "thunder-punch": {
+      "name": "thunder-punch",
+      "type": "electric",
+      "not_found": false
     }
   },
   "items": {
@@ -1700,12 +1751,10 @@
       "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png"
     },
     "blackglasses": {
-      "name": "blackglasses",
       "sprite_url": null,
       "not_found": true
     },
     "brightpowder": {
-      "name": "brightpowder",
       "sprite_url": null,
       "not_found": true
     },
@@ -1918,7 +1967,6 @@
       "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png"
     },
     "nevermeltice": {
-      "name": "nevermeltice",
       "sprite_url": null,
       "not_found": true
     },
@@ -2027,7 +2075,6 @@
       "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png"
     },
     "silverpowder": {
-      "name": "silverpowder",
       "sprite_url": null,
       "not_found": true
     },
@@ -2072,7 +2119,6 @@
       "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-plate.png"
     },
     "twistedspoon": {
-      "name": "twistedspoon",
       "sprite_url": null,
       "not_found": true
     },
@@ -2103,6 +2149,31 @@
     "zoom-lens": {
       "name": "zoom-lens",
       "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png"
+    },
+    "black-glasses": {
+      "name": "black-glasses",
+      "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png",
+      "not_found": false
+    },
+    "bright-powder": {
+      "name": "bright-powder",
+      "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png",
+      "not_found": false
+    },
+    "never-melt-ice": {
+      "name": "never-melt-ice",
+      "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png",
+      "not_found": false
+    },
+    "silver-powder": {
+      "name": "silver-powder",
+      "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png",
+      "not_found": false
+    },
+    "twisted-spoon": {
+      "name": "twisted-spoon",
+      "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png",
+      "not_found": false
     }
   }
 }

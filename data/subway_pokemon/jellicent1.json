@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Trick Room",
-      "slug": "trick-room",
       "type": "psychic"
     }
   ]

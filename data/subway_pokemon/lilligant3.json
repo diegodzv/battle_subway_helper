@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Quiver Dance",
-      "slug": "quiver-dance",
       "type": "bug"
     },
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Leech Seed",
-      "slug": "leech-seed",
       "type": "grass"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

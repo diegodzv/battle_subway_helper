@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rock Wrecker",
-      "slug": "rock-wrecker",
       "type": "rock"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     }
   ]

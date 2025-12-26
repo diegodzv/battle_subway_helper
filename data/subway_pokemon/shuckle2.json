@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Power Trick",
-      "slug": "power-trick",
       "type": "psychic"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Bug Bite",
-      "slug": "bug-bite",
       "type": "bug"
     }
   ]

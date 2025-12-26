@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Volt Switch",
-      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Acrobatics",
-      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Light Screen",
-      "slug": "light-screen",
       "type": "psychic"
     }
   ]

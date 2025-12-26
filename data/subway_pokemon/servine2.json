@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Leaf Storm",
-      "slug": "leaf-storm",
       "type": "grass"
     },
     {
       "name": "Wring Out",
-      "slug": "wring-out",
       "type": "normal"
     },
     {
       "name": "Gastro Acid",
-      "slug": "gastro-acid",
       "type": "poison"
     },
     {
       "name": "Mirror Coat",
-      "slug": "mirror-coat",
       "type": "psychic"
     }
   ]

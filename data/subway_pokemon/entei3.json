@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Eruption",
-      "slug": "eruption",
       "type": "fire"
     },
     {
       "name": "Heat Wave",
-      "slug": "heat-wave",
       "type": "fire"
     },
     {
       "name": "Extrasensory",
-      "slug": "extrasensory",
       "type": "psychic"
     },
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     }
   ]
 }

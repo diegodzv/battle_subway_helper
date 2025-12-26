@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Sandstorm",
-      "slug": "sandstorm",
       "type": "rock"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Drain Punch",
-      "slug": "drain-punch",
       "type": "fighting"
     }
   ]

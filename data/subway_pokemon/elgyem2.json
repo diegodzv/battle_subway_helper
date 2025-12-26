@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psyshock",
-      "slug": "psyshock",
       "type": "psychic"
     },
     {
       "name": "Hidden Power",
-      "slug": "hidden-power",
       "type": "normal"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     },
     {
       "name": "Calm Mind",
-      "slug": "calm-mind",
       "type": "psychic"
     }
   ]

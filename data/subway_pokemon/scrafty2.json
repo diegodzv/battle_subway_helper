@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hi Jump Kick",
-      "slug": "hi-jump-kick",
       "type": null
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Dragon Dance",
-      "slug": "dragon-dance",
       "type": "dragon"
     }
   ]

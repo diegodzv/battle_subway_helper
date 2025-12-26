@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Gear Grind",
-      "slug": "gear-grind",
       "type": "steel"
     },
     {
       "name": "Rock Smash",
-      "slug": "rock-smash",
       "type": "fighting"
     },
     {
       "name": "Shift Gear",
-      "slug": "shift-gear",
       "type": "steel"
     },
     {
       "name": "Screech",
-      "slug": "screech",
       "type": "normal"
     }
   ]

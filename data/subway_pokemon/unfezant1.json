@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Razor Wind",
-      "slug": "razor-wind",
       "type": "normal"
     },
     {
       "name": "Tailwind",
-      "slug": "tailwind",
       "type": "flying"
     }
   ]

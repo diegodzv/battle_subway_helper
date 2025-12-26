@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Super Fang",
-      "slug": "super-fang",
       "type": "normal"
     },
     {
       "name": "Low Kick",
-      "slug": "low-kick",
       "type": "fighting"
     },
     {
       "name": "Iron Tail",
-      "slug": "iron-tail",
       "type": "steel"
     },
     {
       "name": "Hypnosis",
-      "slug": "hypnosis",
       "type": "psychic"
     }
   ]

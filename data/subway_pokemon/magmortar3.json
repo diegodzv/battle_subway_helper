@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flare Blitz",
-      "slug": "flare-blitz",
       "type": "fire"
     },
     {
       "name": "ThunderPunch",
-      "slug": "thunderpunch",
-      "type": null
+      "type": "electric"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     }
   ]

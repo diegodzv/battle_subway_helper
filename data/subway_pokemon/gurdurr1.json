@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "DynamicPunch",
-      "slug": "dynamicpunch",
-      "type": null
+      "type": "fighting"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Smack Down",
-      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Mach Punch",
-      "slug": "mach-punch",
       "type": "fighting"
     }
   ]

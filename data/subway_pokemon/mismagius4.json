@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Perish Song",
-      "slug": "perish-song",
       "type": "normal"
     },
     {
       "name": "Mean Look",
-      "slug": "mean-look",
       "type": "normal"
     }
   ]

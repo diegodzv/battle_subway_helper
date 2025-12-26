@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flamethrower",
-      "slug": "flamethrower",
       "type": "fire"
     },
     {
       "name": "Overheat",
-      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Discharge",
-      "slug": "discharge",
       "type": "electric"
     },
     {
       "name": "Charge",
-      "slug": "charge",
       "type": "electric"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Bulldoze",
-      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     }
   ]

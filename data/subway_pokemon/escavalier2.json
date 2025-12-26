@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Pursuit",
-      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Counter",
-      "slug": "counter",
       "type": "fighting"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fire Fang",
-      "slug": "fire-fang",
       "type": "fire"
     },
     {
       "name": "Headbutt",
-      "slug": "headbutt",
       "type": "normal"
     },
     {
       "name": "Rock Tomb",
-      "slug": "rock-tomb",
       "type": "rock"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Zen Headbutt",
-      "slug": "zen-headbutt",
       "type": "psychic"
     },
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     }
   ]

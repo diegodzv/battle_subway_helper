@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Tail Slap",
-      "slug": "tail-slap",
       "type": "normal"
     },
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Captivate",
-      "slug": "captivate",
       "type": "normal"
     }
   ]

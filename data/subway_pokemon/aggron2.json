@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Iron Head",
-      "slug": "iron-head",
       "type": "steel"
     },
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Stomp",
-      "slug": "stomp",
       "type": "normal"
     }
   ]

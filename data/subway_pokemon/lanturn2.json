@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Stockpile",
-      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Swallow",
-      "slug": "swallow",
       "type": "normal"
     }
   ]

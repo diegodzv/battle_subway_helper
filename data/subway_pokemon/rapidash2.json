@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Fire Blast",
-      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Sunny Day",
-      "slug": "sunny-day",
       "type": "fire"
     }
   ]

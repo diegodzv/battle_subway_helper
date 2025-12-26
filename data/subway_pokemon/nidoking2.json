@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Amnesia",
-      "slug": "amnesia",
       "type": "psychic"
     },
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Flamethrower",
-      "slug": "flamethrower",
       "type": "fire"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

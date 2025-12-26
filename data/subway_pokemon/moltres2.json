@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flame Charge",
-      "slug": "flame-charge",
       "type": "fire"
     },
     {
       "name": "Sky Attack",
-      "slug": "sky-attack",
       "type": "flying"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Fire Blast",
-      "slug": "fire-blast",
       "type": "fire"
     }
   ]

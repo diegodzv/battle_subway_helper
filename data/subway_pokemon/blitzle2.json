@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Spark",
-      "slug": "spark",
       "type": "electric"
     },
     {
       "name": "Facade",
-      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "Pursuit",
-      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Drill Peck",
-      "slug": "drill-peck",
       "type": "flying"
     },
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     }
   ]

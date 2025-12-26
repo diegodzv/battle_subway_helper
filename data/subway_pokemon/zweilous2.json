@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Rush",
-      "slug": "dragon-rush",
       "type": "dragon"
     },
     {
       "name": "Body Slam",
-      "slug": "body-slam",
       "type": "normal"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Double Hit",
-      "slug": "double-hit",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "ExtremeSpeed",
-      "slug": "extremespeed",
-      "type": null
+      "type": "normal"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Overheat",
-      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     }
   ]

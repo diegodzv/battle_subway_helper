@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rapid Spin",
-      "slug": "rapid-spin",
       "type": "normal"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     }
   ]

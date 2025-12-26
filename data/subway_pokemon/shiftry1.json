@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Razor Leaf",
-      "slug": "razor-leaf",
       "type": "grass"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     }
   ]

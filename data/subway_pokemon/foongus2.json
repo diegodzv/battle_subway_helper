@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Clear Smog",
-      "slug": "clear-smog",
       "type": "poison"
     },
     {
       "name": "Rage Powder",
-      "slug": "rage-powder",
       "type": "bug"
     },
     {
       "name": "Spore",
-      "slug": "spore",
       "type": "grass"
     }
   ]

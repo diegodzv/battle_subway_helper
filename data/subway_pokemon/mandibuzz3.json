@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Nasty Plot",
-      "slug": "nasty-plot",
       "type": "dark"
     },
     {
       "name": "Dark Pulse",
-      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "Air Slash",
-      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Incinerate",
-      "slug": "incinerate",
       "type": "fire"
     }
   ]

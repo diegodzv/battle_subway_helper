@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Heal Block",
-      "slug": "heal-block",
       "type": "psychic"
     },
     {
       "name": "Trick Room",
-      "slug": "trick-room",
       "type": "psychic"
     }
   ]

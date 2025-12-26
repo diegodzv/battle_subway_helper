@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Leaf Storm",
-      "slug": "leaf-storm",
       "type": "grass"
     },
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Hyper Beam",
-      "slug": "hyper-beam",
       "type": "normal"
     },
     {
       "name": "GrassWhistle",
-      "slug": "grasswhistle",
-      "type": null
+      "type": "grass"
     }
   ]
 }

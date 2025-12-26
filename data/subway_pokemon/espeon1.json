@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Yawn",
-      "slug": "yawn",
       "type": "normal"
     },
     {
       "name": "Dream Eater",
-      "slug": "dream-eater",
       "type": "psychic"
     },
     {
       "name": "Calm Mind",
-      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "DoubleSlap",
-      "slug": "doubleslap",
-      "type": null
+      "type": "normal"
     },
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Aqua Tail",
-      "slug": "aqua-tail",
       "type": "water"
     }
   ]

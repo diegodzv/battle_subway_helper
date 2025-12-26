@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

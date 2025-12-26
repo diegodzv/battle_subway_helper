@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Charm",
-      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

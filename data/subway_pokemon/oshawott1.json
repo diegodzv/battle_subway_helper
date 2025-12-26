@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Razor Shell",
-      "slug": "razor-shell",
       "type": "water"
     },
     {
       "name": "Aqua Jet",
-      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Revenge",
-      "slug": "revenge",
       "type": "fighting"
     },
     {
       "name": "Tail Whip",
-      "slug": "tail-whip",
       "type": "normal"
     }
   ]

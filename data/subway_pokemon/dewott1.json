@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Razor Shell",
-      "slug": "razor-shell",
       "type": "water"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Aqua Jet",
-      "slug": "aqua-jet",
       "type": "water"
     }
   ]

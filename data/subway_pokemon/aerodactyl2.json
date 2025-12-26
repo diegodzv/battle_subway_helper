@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Sky Drop",
-      "slug": "sky-drop",
       "type": "flying"
     }
   ]

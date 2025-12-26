@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Megahorn",
-      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Endure",
-      "slug": "endure",
       "type": "normal"
     },
     {
       "name": "Reversal",
-      "slug": "reversal",
       "type": "fighting"
     }
   ]

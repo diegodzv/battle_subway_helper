@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Draco Meteor",
-      "slug": "draco-meteor",
       "type": "dragon"
     },
     {
       "name": "Dragon Rush",
-      "slug": "dragon-rush",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     }
   ]

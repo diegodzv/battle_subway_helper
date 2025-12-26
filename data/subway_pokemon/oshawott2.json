@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Scald",
-      "slug": "scald",
       "type": "water"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     }
   ]

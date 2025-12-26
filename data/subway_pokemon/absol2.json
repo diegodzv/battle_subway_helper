@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Magic Coat",
-      "slug": "magic-coat",
       "type": "psychic"
     },
     {
       "name": "Psycho Cut",
-      "slug": "psycho-cut",
       "type": "psychic"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     }
   ]

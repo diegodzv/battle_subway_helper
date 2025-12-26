@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Bulldoze",
-      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Megahorn",
-      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Hone Claws",
-      "slug": "hone-claws",
       "type": "dark"
     }
   ]

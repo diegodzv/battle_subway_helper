@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Electro Ball",
-      "slug": "electro-ball",
       "type": "electric"
     },
     {
       "name": "Acrobatics",
-      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     }
   ]

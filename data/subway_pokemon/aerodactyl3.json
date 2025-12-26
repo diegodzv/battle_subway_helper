@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     }
   ]

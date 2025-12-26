@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Switcheroo",
-      "slug": "switcheroo",
       "type": "dark"
     },
     {
       "name": "Thunder",
-      "slug": "thunder",
       "type": "electric"
     },
     {
       "name": "Volt Switch",
-      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Overheat",
-      "slug": "overheat",
       "type": "fire"
     }
   ]

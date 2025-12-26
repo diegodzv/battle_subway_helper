@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Attack Order",
-      "slug": "attack-order",
       "type": "bug"
     },
     {
       "name": "Defend Order",
-      "slug": "defend-order",
       "type": "bug"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     }
   ]

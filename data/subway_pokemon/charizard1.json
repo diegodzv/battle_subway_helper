@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Claw",
-      "slug": "dragon-claw",
       "type": "dragon"
     },
     {
       "name": "Flame Charge",
-      "slug": "flame-charge",
       "type": "fire"
     },
     {
       "name": "Belly Drum",
-      "slug": "belly-drum",
       "type": "normal"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     }
   ]

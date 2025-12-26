@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Safeguard",
-      "slug": "safeguard",
       "type": "normal"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Zen Headbutt",
-      "slug": "zen-headbutt",
       "type": "psychic"
     },
     {
       "name": "Trick Room",
-      "slug": "trick-room",
       "type": "psychic"
     }
   ]

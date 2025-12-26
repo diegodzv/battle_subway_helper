@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flame Charge",
-      "slug": "flame-charge",
       "type": "fire"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Volt Switch",
-      "slug": "volt-switch",
       "type": "electric"
     }
   ]

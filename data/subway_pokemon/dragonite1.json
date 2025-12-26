@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     }
   ]

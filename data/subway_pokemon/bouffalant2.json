@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Head Charge",
-      "slug": "head-charge",
       "type": "normal"
     },
     {
       "name": "Megahorn",
-      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Thrash",
-      "slug": "thrash",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

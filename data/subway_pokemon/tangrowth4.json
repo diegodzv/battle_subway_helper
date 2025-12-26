@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Power Whip",
-      "slug": "power-whip",
       "type": "grass"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     }
   ]

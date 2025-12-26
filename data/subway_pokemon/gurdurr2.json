@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Chip Away",
-      "slug": "chip-away",
       "type": "normal"
     },
     {
       "name": "Bulk Up",
-      "slug": "bulk-up",
       "type": "fighting"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Extrasensory",
-      "slug": "extrasensory",
       "type": "psychic"
     },
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     }
   ]

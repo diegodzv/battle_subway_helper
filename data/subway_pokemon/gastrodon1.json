@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rain Dance",
-      "slug": "rain-dance",
       "type": "water"
     },
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Muddy Water",
-      "slug": "muddy-water",
       "type": "water"
     },
     {
       "name": "Counter",
-      "slug": "counter",
       "type": "fighting"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "FeatherDance",
-      "slug": "featherdance",
-      "type": null
+      "type": "flying"
     },
     {
       "name": "Quick Attack",
-      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Endeavor",
-      "slug": "endeavor",
       "type": "normal"
     }
   ]

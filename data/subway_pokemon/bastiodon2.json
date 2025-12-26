@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Block",
-      "slug": "block",
       "type": "normal"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     }
   ]

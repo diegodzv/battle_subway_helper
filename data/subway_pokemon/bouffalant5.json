@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Head Charge",
-      "slug": "head-charge",
       "type": "normal"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     }
   ]

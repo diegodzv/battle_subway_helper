@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hex",
-      "slug": "hex",
       "type": "ghost"
     },
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     }
   ]

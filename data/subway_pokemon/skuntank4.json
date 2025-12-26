@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Fire Blast",
-      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Explosion",
-      "slug": "explosion",
       "type": "normal"
     }
   ]

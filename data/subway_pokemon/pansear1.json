@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flame Burst",
-      "slug": "flame-burst",
       "type": "fire"
     },
     {
       "name": "Fury Swipes",
-      "slug": "fury-swipes",
       "type": "normal"
     },
     {
       "name": "Leer",
-      "slug": "leer",
       "type": "normal"
     },
     {
       "name": "Hone Claws",
-      "slug": "hone-claws",
       "type": "dark"
     }
   ]

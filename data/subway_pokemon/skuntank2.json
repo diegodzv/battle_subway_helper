@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Pursuit",
-      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Foul Play",
-      "slug": "foul-play",
       "type": "dark"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     }
   ]

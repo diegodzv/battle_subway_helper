@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Water Spout",
-      "slug": "water-spout",
       "type": "water"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Sleep Talk",
-      "slug": "sleep-talk",
       "type": "normal"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     }
   ]

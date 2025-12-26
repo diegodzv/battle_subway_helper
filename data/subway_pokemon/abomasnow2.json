@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Wood Hammer",
-      "slug": "wood-hammer",
       "type": "grass"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     }
   ]

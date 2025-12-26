@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Steamroller",
-      "slug": "steamroller",
       "type": "bug"
     },
     {
       "name": "Poison Jab",
-      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Magnet Rise",
-      "slug": "magnet-rise",
       "type": "electric"
     },
     {
       "name": "Calm Mind",
-      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     }
   ]

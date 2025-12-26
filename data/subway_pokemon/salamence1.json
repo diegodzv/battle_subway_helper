@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Scary Face",
-      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Dragon Tail",
-      "slug": "dragon-tail",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

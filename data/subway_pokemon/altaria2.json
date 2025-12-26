@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Claw",
-      "slug": "dragon-claw",
       "type": "dragon"
     },
     {
       "name": "Pluck",
-      "slug": "pluck",
       "type": "flying"
     },
     {
       "name": "Mist",
-      "slug": "mist",
       "type": "ice"
     },
     {
       "name": "Hone Claws",
-      "slug": "hone-claws",
       "type": "dark"
     }
   ]

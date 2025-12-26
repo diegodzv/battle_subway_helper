@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Head Charge",
-      "slug": "head-charge",
       "type": "normal"
     },
     {
       "name": "Bulldoze",
-      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Revenge",
-      "slug": "revenge",
       "type": "fighting"
     }
   ]

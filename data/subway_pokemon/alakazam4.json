@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Disable",
-      "slug": "disable",
       "type": "normal"
     },
     {
       "name": "Trick",
-      "slug": "trick",
       "type": "psychic"
     }
   ]

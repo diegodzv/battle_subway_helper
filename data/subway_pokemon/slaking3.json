@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     },
     {
       "name": "Shadow Claw",
-      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Hammer Arm",
-      "slug": "hammer-arm",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     }
   ]

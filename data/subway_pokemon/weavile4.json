@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Ice Punch",
-      "slug": "ice-punch",
       "type": "ice"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     }
   ]

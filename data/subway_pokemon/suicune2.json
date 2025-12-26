@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hydro Pump",
-      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Mirror Coat",
-      "slug": "mirror-coat",
       "type": "psychic"
     }
   ]

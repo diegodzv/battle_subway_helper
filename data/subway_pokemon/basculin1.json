@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Aqua Tail",
-      "slug": "aqua-tail",
       "type": "water"
     },
     {
       "name": "Chip Away",
-      "slug": "chip-away",
       "type": "normal"
     },
     {
       "name": "Flail",
-      "slug": "flail",
       "type": "normal"
     },
     {
       "name": "Final Gambit",
-      "slug": "final-gambit",
       "type": "fighting"
     }
   ]

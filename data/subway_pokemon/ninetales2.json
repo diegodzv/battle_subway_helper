@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Heat Wave",
-      "slug": "heat-wave",
       "type": "fire"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Nasty Plot",
-      "slug": "nasty-plot",
       "type": "dark"
     }
   ]

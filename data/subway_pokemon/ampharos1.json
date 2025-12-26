@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Power Gem",
-      "slug": "power-gem",
       "type": "rock"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Discharge",
-      "slug": "discharge",
       "type": "electric"
     },
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Spark",
-      "slug": "spark",
       "type": "electric"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Tackle",
-      "slug": "tackle",
       "type": "normal"
     }
   ]

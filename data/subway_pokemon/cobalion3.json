@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Psych Up",
-      "slug": "psych-up",
       "type": "normal"
     },
     {
       "name": "Iron Head",
-      "slug": "iron-head",
       "type": "steel"
     }
   ]

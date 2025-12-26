@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Belly Drum",
-      "slug": "belly-drum",
       "type": "normal"
     },
     {
       "name": "Double-Edge",
-      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Pain Split",
-      "slug": "pain-split",
       "type": "normal"
     }
   ]

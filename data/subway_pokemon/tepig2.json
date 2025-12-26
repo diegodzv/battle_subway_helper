@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Heat Crash",
-      "slug": "heat-crash",
       "type": "fire"
     },
     {
       "name": "Assurance",
-      "slug": "assurance",
       "type": "dark"
     },
     {
       "name": "Rock Tomb",
-      "slug": "rock-tomb",
       "type": "rock"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     }
   ]

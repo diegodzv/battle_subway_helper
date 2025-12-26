@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Sacred Sword",
-      "slug": "sacred-sword",
       "type": "fighting"
     },
     {
       "name": "Leaf Blade",
-      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Stone Edge",
-      "slug": "stone-edge",
       "type": "rock"
     }
   ]

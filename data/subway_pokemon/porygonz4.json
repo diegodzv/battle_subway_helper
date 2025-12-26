@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Tri Attack",
-      "slug": "tri-attack",
       "type": "normal"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Return",
-      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Retaliate",
-      "slug": "retaliate",
       "type": "normal"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     }
   ]

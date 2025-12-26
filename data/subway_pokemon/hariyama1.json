@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Feint",
-      "slug": "feint",
       "type": "normal"
     },
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Smack Down",
-      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Vital Throw",
-      "slug": "vital-throw",
       "type": "fighting"
     }
   ]

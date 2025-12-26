@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Return",
-      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Cross Chop",
-      "slug": "cross-chop",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     }
   ]

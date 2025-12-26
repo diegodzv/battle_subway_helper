@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     },
     {
       "name": "Avalanche",
-      "slug": "avalanche",
       "type": "ice"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Brick Break",
-      "slug": "brick-break",
       "type": "fighting"
     }
   ]

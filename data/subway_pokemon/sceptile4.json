@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Leech Seed",
-      "slug": "leech-seed",
       "type": "grass"
     },
     {
       "name": "Endeavor",
-      "slug": "endeavor",
       "type": "normal"
     },
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     }
   ]

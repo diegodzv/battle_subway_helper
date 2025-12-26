@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Focus Punch",
-      "slug": "focus-punch",
       "type": "fighting"
     },
     {
       "name": "Circle Throw",
-      "slug": "circle-throw",
       "type": "fighting"
     }
   ]

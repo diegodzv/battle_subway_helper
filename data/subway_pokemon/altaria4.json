@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Cotton Guard",
-      "slug": "cotton-guard",
       "type": "grass"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Flamethrower",
-      "slug": "flamethrower",
       "type": "fire"
     },
     {
       "name": "Dragon Pulse",
-      "slug": "dragon-pulse",
       "type": "dragon"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     },
     {
       "name": "Wonder Room",
-      "slug": "wonder-room",
       "type": "psychic"
     }
   ]

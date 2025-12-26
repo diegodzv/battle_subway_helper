@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flamethrower",
-      "slug": "flamethrower",
       "type": "fire"
     },
     {
       "name": "Extrasensory",
-      "slug": "extrasensory",
       "type": "psychic"
     },
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Calm Mind",
-      "slug": "calm-mind",
       "type": "psychic"
     }
   ]

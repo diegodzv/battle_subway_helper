@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Captivate",
-      "slug": "captivate",
       "type": "normal"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     }
   ]

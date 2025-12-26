@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Bounce",
-      "slug": "bounce",
       "type": "flying"
     }
   ]

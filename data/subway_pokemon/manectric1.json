@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Odor Sleuth",
-      "slug": "odor-sleuth",
       "type": "normal"
     },
     {
       "name": "Quick Attack",
-      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     }
   ]

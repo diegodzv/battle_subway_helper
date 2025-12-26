@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Scary Face",
-      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Glare",
-      "slug": "glare",
       "type": "normal"
     },
     {
       "name": "Dragon Tail",
-      "slug": "dragon-tail",
       "type": "dragon"
     }
   ]

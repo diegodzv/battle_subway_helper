@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Counter",
-      "slug": "counter",
       "type": "fighting"
     },
     {
       "name": "Dark Pulse",
-      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     }
   ]

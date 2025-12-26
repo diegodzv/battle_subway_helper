@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Stockpile",
-      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Swallow",
-      "slug": "swallow",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Steamroller",
-      "slug": "steamroller",
       "type": "bug"
     },
     {
       "name": "Poison Tail",
-      "slug": "poison-tail",
       "type": "poison"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     }
   ]

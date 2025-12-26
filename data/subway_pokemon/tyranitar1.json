@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Stealth Rock",
-      "slug": "stealth-rock",
       "type": "rock"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     }
   ]

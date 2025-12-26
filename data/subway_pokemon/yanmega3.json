@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Silver Wind",
-      "slug": "silver-wind",
       "type": "bug"
     },
     {
       "name": "Air Slash",
-      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Detect",
-      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "Giga Drain",
-      "slug": "giga-drain",
       "type": "grass"
     }
   ]

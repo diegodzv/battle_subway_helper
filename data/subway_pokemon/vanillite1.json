@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Mirror Shot",
-      "slug": "mirror-shot",
       "type": "steel"
     },
     {
       "name": "Mist",
-      "slug": "mist",
       "type": "ice"
     },
     {
       "name": "Hail",
-      "slug": "hail",
       "type": "ice"
     }
   ]

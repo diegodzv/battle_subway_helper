@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Rock Polish",
-      "slug": "rock-polish",
       "type": "rock"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Iron Head",
-      "slug": "iron-head",
       "type": "steel"
     },
     {
       "name": "ThunderPunch",
-      "slug": "thunderpunch",
-      "type": null
+      "type": "electric"
     }
   ]
 }

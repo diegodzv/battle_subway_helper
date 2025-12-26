@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "DoubleSlap",
-      "slug": "doubleslap",
-      "type": null
+      "type": "normal"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Tickle",
-      "slug": "tickle",
       "type": "normal"
     }
   ]

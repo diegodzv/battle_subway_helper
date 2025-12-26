@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Bite",
-      "slug": "bite",
       "type": "dark"
     },
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     },
     {
       "name": "Fire Fang",
-      "slug": "fire-fang",
       "type": "fire"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Wood Hammer",
-      "slug": "wood-hammer",
       "type": "grass"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Ice Shard",
-      "slug": "ice-shard",
       "type": "ice"
     }
   ]

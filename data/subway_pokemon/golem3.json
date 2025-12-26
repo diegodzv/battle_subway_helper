@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Explosion",
-      "slug": "explosion",
       "type": "normal"
     },
     {
       "name": "Autotomize",
-      "slug": "autotomize",
       "type": "steel"
     }
   ]

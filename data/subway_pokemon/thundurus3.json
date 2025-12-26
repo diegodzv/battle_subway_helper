@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Sky Drop",
-      "slug": "sky-drop",
       "type": "flying"
     }
   ]

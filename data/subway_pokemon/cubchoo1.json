@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Slash",
-      "slug": "slash",
       "type": "normal"
     },
     {
       "name": "Shadow Claw",
-      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Bide",
-      "slug": "bide",
       "type": "normal"
     },
     {
       "name": "Hail",
-      "slug": "hail",
       "type": "ice"
     }
   ]

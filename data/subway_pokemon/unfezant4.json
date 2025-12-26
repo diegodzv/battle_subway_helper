@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Detect",
-      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "FeatherDance",
-      "slug": "featherdance",
-      "type": null
+      "type": "flying"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Fly",
-      "slug": "fly",
       "type": "flying"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Mean Look",
-      "slug": "mean-look",
       "type": "normal"
     },
     {
       "name": "Hone Claws",
-      "slug": "hone-claws",
       "type": "dark"
     },
     {
       "name": "Baton Pass",
-      "slug": "baton-pass",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Force Palm",
-      "slug": "force-palm",
       "type": "fighting"
     },
     {
       "name": "SmellingSalt",
-      "slug": "smellingsalt",
       "type": null
     },
     {
       "name": "Bulk Up",
-      "slug": "bulk-up",
       "type": "fighting"
     }
   ]

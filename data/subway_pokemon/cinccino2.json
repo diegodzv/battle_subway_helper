@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "DoubleSlap",
-      "slug": "doubleslap",
-      "type": null
+      "type": "normal"
     },
     {
       "name": "Bullet Seed",
-      "slug": "bullet-seed",
       "type": "grass"
     },
     {
       "name": "Rock Blast",
-      "slug": "rock-blast",
       "type": "rock"
     },
     {
       "name": "Sing",
-      "slug": "sing",
       "type": "normal"
     }
   ]

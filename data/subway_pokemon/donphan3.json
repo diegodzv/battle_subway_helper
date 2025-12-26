@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Gyro Ball",
-      "slug": "gyro-ball",
       "type": "steel"
     },
     {
       "name": "Fire Fang",
-      "slug": "fire-fang",
       "type": "fire"
     },
     {
       "name": "Thunder Fang",
-      "slug": "thunder-fang",
       "type": "electric"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Return",
-      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Night Slash",
-      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Gunk Shot",
-      "slug": "gunk-shot",
       "type": "poison"
     },
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     }
   ]

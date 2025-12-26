@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "BubbleBeam",
-      "slug": "bubblebeam",
-      "type": null
+      "type": "water"
     },
     {
       "name": "Night Shade",
-      "slug": "night-shade",
       "type": "ghost"
     },
     {
       "name": "Attract",
-      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Flash",
-      "slug": "flash",
       "type": "normal"
     }
   ]

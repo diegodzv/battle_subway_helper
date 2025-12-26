@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Endeavor",
-      "slug": "endeavor",
       "type": "normal"
     },
     {
       "name": "Flail",
-      "slug": "flail",
       "type": "normal"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     }
   ]

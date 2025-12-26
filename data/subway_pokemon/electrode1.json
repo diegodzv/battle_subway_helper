@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Light Screen",
-      "slug": "light-screen",
       "type": "psychic"
     },
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     }
   ]

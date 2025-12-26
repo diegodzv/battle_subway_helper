@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Light Screen",
-      "slug": "light-screen",
       "type": "psychic"
     },
     {
       "name": "Reflect",
-      "slug": "reflect",
       "type": "psychic"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Signal Beam",
-      "slug": "signal-beam",
       "type": "bug"
     }
   ]

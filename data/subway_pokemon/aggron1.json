@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Roar",
-      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Stealth Rock",
-      "slug": "stealth-rock",
       "type": "rock"
     },
     {
       "name": "Metal Burst",
-      "slug": "metal-burst",
       "type": "steel"
     }
   ]

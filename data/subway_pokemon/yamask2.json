@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Grudge",
-      "slug": "grudge",
       "type": "ghost"
     },
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     }
   ]

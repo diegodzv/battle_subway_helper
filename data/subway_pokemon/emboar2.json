@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Yawn",
-      "slug": "yawn",
       "type": "normal"
     },
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Bulldoze",
-      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Heat Crash",
-      "slug": "heat-crash",
       "type": "fire"
     }
   ]

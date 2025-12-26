@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Flatter",
-      "slug": "flatter",
       "type": "dark"
     },
     {
       "name": "Roost",
-      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     }
   ]

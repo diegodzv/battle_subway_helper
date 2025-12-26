@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Venoshock",
-      "slug": "venoshock",
       "type": "poison"
     },
     {
       "name": "Struggle Bug",
-      "slug": "struggle-bug",
       "type": "bug"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     }
   ]

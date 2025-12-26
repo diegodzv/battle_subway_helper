@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Pursuit",
-      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Low Sweep",
-      "slug": "low-sweep",
       "type": "fighting"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     }
   ]

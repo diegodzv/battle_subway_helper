@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Magic Coat",
-      "slug": "magic-coat",
       "type": "psychic"
     },
     {
       "name": "Lock-On",
-      "slug": "lock-on",
       "type": "normal"
     },
     {
       "name": "Zap Cannon",
-      "slug": "zap-cannon",
       "type": "electric"
     }
   ]

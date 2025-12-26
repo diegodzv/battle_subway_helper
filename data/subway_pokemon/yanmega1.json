@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Air Slash",
-      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Bug Buzz",
-      "slug": "bug-buzz",
       "type": "bug"
     },
     {
       "name": "Detect",
-      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     }
   ]

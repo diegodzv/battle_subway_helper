@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Gunk Shot",
-      "slug": "gunk-shot",
       "type": "poison"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Shadow Sneak",
-      "slug": "shadow-sneak",
       "type": "ghost"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     }
   ]

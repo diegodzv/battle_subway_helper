@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Avalanche",
-      "slug": "avalanche",
       "type": "ice"
     },
     {
       "name": "Dive",
-      "slug": "dive",
       "type": "water"
     },
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Sheer Cold",
-      "slug": "sheer-cold",
       "type": "ice"
     }
   ]

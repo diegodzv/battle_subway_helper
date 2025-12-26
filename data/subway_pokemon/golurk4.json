@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hammer Arm",
-      "slug": "hammer-arm",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Shadow Punch",
-      "slug": "shadow-punch",
       "type": "ghost"
     },
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     }
   ]

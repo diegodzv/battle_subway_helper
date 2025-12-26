@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Spore",
-      "slug": "spore",
       "type": "grass"
     },
     {
       "name": "Focus Punch",
-      "slug": "focus-punch",
       "type": "fighting"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Seed Bomb",
-      "slug": "seed-bomb",
       "type": "grass"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Close Combat",
-      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Brave Bird",
-      "slug": "brave-bird",
       "type": "flying"
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Giga Impact",
-      "slug": "giga-impact",
       "type": "normal"
     }
   ]

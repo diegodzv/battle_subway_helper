@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psyshock",
-      "slug": "psyshock",
       "type": "psychic"
     },
     {
       "name": "Grass Knot",
-      "slug": "grass-knot",
       "type": "grass"
     },
     {
       "name": "Telekinesis",
-      "slug": "telekinesis",
       "type": "psychic"
     },
     {
       "name": "Charm",
-      "slug": "charm",
       "type": "fairy"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Safeguard",
-      "slug": "safeguard",
       "type": "normal"
     },
     {
       "name": "Helping Hand",
-      "slug": "helping-hand",
       "type": "normal"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     },
     {
       "name": "Agility",
-      "slug": "agility",
       "type": "psychic"
     },
     {
       "name": "Baton Pass",
-      "slug": "baton-pass",
       "type": "normal"
     }
   ]

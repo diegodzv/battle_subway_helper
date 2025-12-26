@@ -44,23 +44,19 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Earth Power",
-      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Endeavor",
-      "slug": "endeavor",
       "type": "normal"
     },
     {
       "name": "AncientPower",
-      "slug": "ancientpower",
-      "type": null
+      "type": "rock"
     }
   ]
 }

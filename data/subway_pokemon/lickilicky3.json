@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Return",
-      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Gyro Ball",
-      "slug": "gyro-ball",
       "type": "steel"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     }
   ]

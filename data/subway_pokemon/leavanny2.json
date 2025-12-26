@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Leaf Blade",
-      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "X-Scissor",
-      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Slash",
-      "slug": "slash",
       "type": "normal"
     },
     {
       "name": "Swords Dance",
-      "slug": "swords-dance",
       "type": "normal"
     }
   ]

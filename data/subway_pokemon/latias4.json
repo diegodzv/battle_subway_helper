@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Draco Meteor",
-      "slug": "draco-meteor",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Hone Claws",
-      "slug": "hone-claws",
       "type": "dark"
     },
     {
       "name": "Dragon Claw",
-      "slug": "dragon-claw",
       "type": "dragon"
     }
   ]

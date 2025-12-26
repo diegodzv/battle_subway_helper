@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "GrassWhistle",
-      "slug": "grasswhistle",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     }
   ]

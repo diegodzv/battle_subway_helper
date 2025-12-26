@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Return",
-      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
-      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Light Screen",
-      "slug": "light-screen",
       "type": "psychic"
     }
   ]

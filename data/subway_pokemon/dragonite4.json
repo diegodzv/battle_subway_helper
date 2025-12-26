@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "ThunderPunch",
-      "slug": "thunderpunch",
-      "type": null
+      "type": "electric"
     },
     {
       "name": "Fire Punch",
-      "slug": "fire-punch",
       "type": "fire"
     }
   ]

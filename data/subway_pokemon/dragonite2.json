@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Rush",
-      "slug": "dragon-rush",
       "type": "dragon"
     },
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Safeguard",
-      "slug": "safeguard",
       "type": "normal"
     }
   ]

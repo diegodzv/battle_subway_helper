@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Foul Play",
-      "slug": "foul-play",
       "type": "dark"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Sand Tomb",
-      "slug": "sand-tomb",
       "type": "ground"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Signal Beam",
-      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Electro Ball",
-      "slug": "electro-ball",
       "type": "electric"
     },
     {
       "name": "Energy Ball",
-      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Agility",
-      "slug": "agility",
       "type": "psychic"
     }
   ]

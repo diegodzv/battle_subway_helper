@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Discharge",
-      "slug": "discharge",
       "type": "electric"
     },
     {
       "name": "Electro Ball",
-      "slug": "electro-ball",
       "type": "electric"
     },
     {
       "name": "Agility",
-      "slug": "agility",
       "type": "psychic"
     }
   ]

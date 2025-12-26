@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Moonlight",
-      "slug": "moonlight",
       "type": "fairy"
     }
   ]

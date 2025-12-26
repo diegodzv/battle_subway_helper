@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Power Split",
-      "slug": "power-split",
       "type": "psychic"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Gastro Acid",
-      "slug": "gastro-acid",
       "type": "poison"
     },
     {
       "name": "Sand Tomb",
-      "slug": "sand-tomb",
       "type": "ground"
     }
   ]

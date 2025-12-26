@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Giga Drain",
-      "slug": "giga-drain",
       "type": "grass"
     },
     {
       "name": "SolarBeam",
-      "slug": "solarbeam",
-      "type": null
+      "type": "grass"
     },
     {
       "name": "Teeter Dance",
-      "slug": "teeter-dance",
       "type": "normal"
     },
     {
       "name": "Sludge Bomb",
-      "slug": "sludge-bomb",
       "type": "poison"
     }
   ]

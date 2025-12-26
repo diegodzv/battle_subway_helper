@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Metal Sound",
-      "slug": "metal-sound",
       "type": "steel"
     },
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Magnet Rise",
-      "slug": "magnet-rise",
       "type": "electric"
     }
   ]

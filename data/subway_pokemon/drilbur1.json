@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Metal Claw",
-      "slug": "metal-claw",
       "type": "steel"
     },
     {
       "name": "Rapid Spin",
-      "slug": "rapid-spin",
       "type": "normal"
     },
     {
       "name": "Sandstorm",
-      "slug": "sandstorm",
       "type": "rock"
     }
   ]

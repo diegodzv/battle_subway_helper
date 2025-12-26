@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Shadow Ball",
-      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Aerial Ace",
-      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Water Pulse",
-      "slug": "water-pulse",
       "type": "water"
     },
     {
       "name": "FeatherDance",
-      "slug": "featherdance",
-      "type": null
+      "type": "flying"
     },
     {
       "name": "Defog",
-      "slug": "defog",
       "type": "flying"
     }
   ]

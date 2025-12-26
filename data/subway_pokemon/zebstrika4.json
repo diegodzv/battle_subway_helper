@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Me First",
-      "slug": "me-first",
       "type": "normal"
     },
     {
       "name": "Wild Charge",
-      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Volt Switch",
-      "slug": "volt-switch",
       "type": "electric"
     }
   ]

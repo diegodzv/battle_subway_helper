@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Spikes",
-      "slug": "spikes",
       "type": "ground"
     },
     {
       "name": "Stealth Rock",
-      "slug": "stealth-rock",
       "type": "rock"
     },
     {
       "name": "Sky Drop",
-      "slug": "sky-drop",
       "type": "flying"
     },
     {
       "name": "Whirlwind",
-      "slug": "whirlwind",
       "type": "normal"
     }
   ]

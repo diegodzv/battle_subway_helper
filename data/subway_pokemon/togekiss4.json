@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Follow Me",
-      "slug": "follow-me",
       "type": "normal"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Air Slash",
-      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Hydro Pump",
-      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Rapid Spin",
-      "slug": "rapid-spin",
       "type": "normal"
     }
   ]

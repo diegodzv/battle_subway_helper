@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Amnesia",
-      "slug": "amnesia",
       "type": "psychic"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     },
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     }
   ]

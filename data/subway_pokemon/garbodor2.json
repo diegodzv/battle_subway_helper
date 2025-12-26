@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Gunk Shot",
-      "slug": "gunk-shot",
       "type": "poison"
     },
     {
       "name": "Body Slam",
-      "slug": "body-slam",
       "type": "normal"
     },
     {
       "name": "Smack Down",
-      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Explosion",
-      "slug": "explosion",
       "type": "normal"
     }
   ]

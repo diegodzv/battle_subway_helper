@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Mirror Coat",
-      "slug": "mirror-coat",
       "type": "psychic"
     },
     {
       "name": "Signal Beam",
-      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Earth Power",
-      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

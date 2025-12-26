@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psybeam",
-      "slug": "psybeam",
       "type": "psychic"
     },
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Future Sight",
-      "slug": "future-sight",
       "type": "psychic"
     },
     {
       "name": "Fake Tears",
-      "slug": "fake-tears",
       "type": "dark"
     }
   ]

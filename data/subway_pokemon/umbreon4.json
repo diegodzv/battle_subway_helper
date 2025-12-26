@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Trump Card",
-      "slug": "trump-card",
       "type": "normal"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     }
   ]

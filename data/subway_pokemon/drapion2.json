@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Cross Poison",
-      "slug": "cross-poison",
       "type": "poison"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Scary Face",
-      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Screech",
-      "slug": "screech",
       "type": "normal"
     }
   ]

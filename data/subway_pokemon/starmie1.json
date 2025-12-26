@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Cosmic Power",
-      "slug": "cosmic-power",
       "type": "psychic"
     },
     {
       "name": "Recover",
-      "slug": "recover",
       "type": "normal"
     },
     {
       "name": "Reflect Type",
-      "slug": "reflect-type",
       "type": "normal"
     }
   ]

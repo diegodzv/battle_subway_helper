@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Low Sweep",
-      "slug": "low-sweep",
       "type": "fighting"
     },
     {
       "name": "Low Kick",
-      "slug": "low-kick",
       "type": "fighting"
     },
     {
       "name": "Chip Away",
-      "slug": "chip-away",
       "type": "normal"
     },
     {
       "name": "Facade",
-      "slug": "facade",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Waterfall",
-      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Hammer Arm",
-      "slug": "hammer-arm",
       "type": "fighting"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Curse",
-      "slug": "curse",
       "type": "ghost"
     }
   ]

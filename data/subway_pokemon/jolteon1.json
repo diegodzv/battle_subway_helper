@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Quick Attack",
-      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Thunderbolt",
-      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Thunder Wave",
-      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Swagger",
-      "slug": "swagger",
       "type": "normal"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Dig",
-      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Bug Bite",
-      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "Metal Sound",
-      "slug": "metal-sound",
       "type": "steel"
     }
   ]

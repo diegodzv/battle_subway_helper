@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Ice Beam",
-      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Acid Armor",
-      "slug": "acid-armor",
       "type": "poison"
     },
     {
       "name": "Hail",
-      "slug": "hail",
       "type": "ice"
     }
   ]

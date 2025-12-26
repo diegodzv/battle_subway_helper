@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Ice Punch",
-      "slug": "ice-punch",
       "type": "ice"
     },
     {
       "name": "Cross Chop",
-      "slug": "cross-chop",
       "type": "fighting"
     },
     {
       "name": "Fire Punch",
-      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "Focus Energy",
-      "slug": "focus-energy",
       "type": "normal"
     }
   ]

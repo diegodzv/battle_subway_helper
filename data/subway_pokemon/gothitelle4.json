@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Substitute",
-      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Flatter",
-      "slug": "flatter",
       "type": "dark"
     },
     {
       "name": "Psych Up",
-      "slug": "psych-up",
       "type": "normal"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     }
   ]

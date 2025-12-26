@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Cross Chop",
-      "slug": "cross-chop",
       "type": "fighting"
     },
     {
       "name": "Sucker Punch",
-      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Gunk Shot",
-      "slug": "gunk-shot",
       "type": "poison"
     },
     {
       "name": "Taunt",
-      "slug": "taunt",
       "type": "dark"
     }
   ]

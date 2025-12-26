@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Magma Storm",
-      "slug": "magma-storm",
       "type": "fire"
     },
     {
       "name": "Earth Power",
-      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Dragon Pulse",
-      "slug": "dragon-pulse",
       "type": "dragon"
     },
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     }
   ]

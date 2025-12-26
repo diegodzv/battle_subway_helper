@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Facade",
-      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

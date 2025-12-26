@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fire Blast",
-      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Extrasensory",
-      "slug": "extrasensory",
       "type": "psychic"
     },
     {
       "name": "Hypnosis",
-      "slug": "hypnosis",
       "type": "psychic"
     },
     {
       "name": "Disable",
-      "slug": "disable",
       "type": "normal"
     }
   ]

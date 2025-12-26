@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Low Kick",
-      "slug": "low-kick",
       "type": "fighting"
     },
     {
       "name": "Fake Out",
-      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Hi Jump Kick",
-      "slug": "hi-jump-kick",
       "type": null
     },
     {
       "name": "U-turn",
-      "slug": "u-turn",
       "type": "bug"
     }
   ]

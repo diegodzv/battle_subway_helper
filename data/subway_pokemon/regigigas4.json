@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Wide Guard",
-      "slug": "wide-guard",
       "type": "rock"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     }
   ]

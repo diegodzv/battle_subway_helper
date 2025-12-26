@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Smack Down",
-      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Headbutt",
-      "slug": "headbutt",
       "type": "normal"
     },
     {
       "name": "Sand-Attack",
-      "slug": "sand-attack",
       "type": "ground"
     },
     {
       "name": "Iron Defense",
-      "slug": "iron-defense",
       "type": "steel"
     }
   ]

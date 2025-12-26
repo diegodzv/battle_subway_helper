@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Hydro Pump",
-      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Blizzard",
-      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Fissure",
-      "slug": "fissure",
       "type": "ground"
     },
     {
       "name": "Hyper Beam",
-      "slug": "hyper-beam",
       "type": "normal"
     }
   ]

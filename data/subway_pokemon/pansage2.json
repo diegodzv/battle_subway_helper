@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Seed Bomb",
-      "slug": "seed-bomb",
       "type": "grass"
     },
     {
       "name": "Crunch",
-      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Acrobatics",
-      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Torment",
-      "slug": "torment",
       "type": "dark"
     }
   ]

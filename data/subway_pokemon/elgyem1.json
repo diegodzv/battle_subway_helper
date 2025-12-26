@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psybeam",
-      "slug": "psybeam",
       "type": "psychic"
     },
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Simple Beam",
-      "slug": "simple-beam",
       "type": "normal"
     },
     {
       "name": "Heal Block",
-      "slug": "heal-block",
       "type": "psychic"
     }
   ]

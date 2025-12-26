@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Dragon Pulse",
-      "slug": "dragon-pulse",
       "type": "dragon"
     },
     {
       "name": "Earth Power",
-      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Surf",
-      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Dragon Tail",
-      "slug": "dragon-tail",
       "type": "dragon"
     }
   ]

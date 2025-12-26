@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Psych Up",
-      "slug": "psych-up",
       "type": "normal"
     },
     {
       "name": "Encore",
-      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Psychic",
-      "slug": "psychic",
       "type": "psychic"
     }
   ]

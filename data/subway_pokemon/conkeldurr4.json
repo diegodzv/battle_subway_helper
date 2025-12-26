@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Superpower",
-      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Mach Punch",
-      "slug": "mach-punch",
       "type": "fighting"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Flare Blitz",
-      "slug": "flare-blitz",
       "type": "fire"
     },
     {
       "name": "Megahorn",
-      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Double-Edge",
-      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

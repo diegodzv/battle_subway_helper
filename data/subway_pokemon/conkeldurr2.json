@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Mach Punch",
-      "slug": "mach-punch",
       "type": "fighting"
     },
     {
       "name": "Hammer Arm",
-      "slug": "hammer-arm",
       "type": "fighting"
     },
     {
       "name": "Bulk Up",
-      "slug": "bulk-up",
       "type": "fighting"
     },
     {
       "name": "Fling",
-      "slug": "fling",
       "type": "dark"
     }
   ]

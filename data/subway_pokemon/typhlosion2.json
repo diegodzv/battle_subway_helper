@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Inferno",
-      "slug": "inferno",
       "type": "fire"
     },
     {
       "name": "Focus Blast",
-      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Extrasensory",
-      "slug": "extrasensory",
       "type": "psychic"
     },
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     }
   ]

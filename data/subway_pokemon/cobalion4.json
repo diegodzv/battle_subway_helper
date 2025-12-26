@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Iron Head",
-      "slug": "iron-head",
       "type": "steel"
     },
     {
       "name": "Close Combat",
-      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Quick Guard",
-      "slug": "quick-guard",
       "type": "fighting"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

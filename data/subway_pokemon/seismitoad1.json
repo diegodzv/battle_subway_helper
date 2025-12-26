@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Round",
-      "slug": "round",
       "type": "normal"
     },
     {
       "name": "Rest",
-      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Water Pulse",
-      "slug": "water-pulse",
       "type": "water"
     },
     {
       "name": "Sludge Wave",
-      "slug": "sludge-wave",
       "type": "poison"
     }
   ]

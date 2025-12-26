@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Toxic",
-      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Will-O-Wisp",
-      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     }
   ]

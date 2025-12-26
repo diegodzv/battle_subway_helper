@@ -43,22 +43,18 @@
   "moves_meta": [
     {
       "name": "Confuse Ray",
-      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Double Team",
-      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Drain Punch",
-      "slug": "drain-punch",
       "type": "fighting"
     },
     {
       "name": "Payback",
-      "slug": "payback",
       "type": "dark"
     }
   ]

@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Head Smash",
-      "slug": "head-smash",
       "type": "rock"
     },
     {
       "name": "Earthquake",
-      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
-      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Protect",
-      "slug": "protect",
       "type": "normal"
     }
   ]

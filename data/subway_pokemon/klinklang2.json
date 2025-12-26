@@ -44,22 +44,18 @@
   "moves_meta": [
     {
       "name": "Charge Beam",
-      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Metal Sound",
-      "slug": "metal-sound",
       "type": "steel"
     },
     {
       "name": "Flash Cannon",
-      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Autotomize",
-      "slug": "autotomize",
       "type": "steel"
     }
   ]
