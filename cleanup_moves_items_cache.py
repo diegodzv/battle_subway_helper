@@ -1,209 +1,223 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+cleanup_moves_items_cache.py
+
+Limpia el cache data/moves_items_cache.json.
+
+Soporta:
+- Esquema NESTED: {"meta":..., "moves":{...}, "items":{...}}
+- Esquema FLAT (legacy): {"move_key":{...}, "item_key":{...}}  (no recomendado)
+
+Hace:
+1) En nested: elimina "basura" del root (claves fuera de meta/moves/items).
+2) Elimina entradas not_found:true que tienen un "equivalente bueno":
+   - por compact match (quitar guiones/espacios/puntuación)
+   - por alias map explícito (casos irregulares: feint-attack, high-jump-kick, etc.)
+3) Opcionalmente escribe el JSON actualizado con --write.
+"""
+
+from __future__ import annotations
+
 import argparse
 import json
-import os
 import re
-from typing import Any, Dict, Optional, Tuple
-
-NON_ALNUM = re.compile(r"[^a-z0-9]+")
-
-
-def load_json(path: str) -> Any:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
 
 
-def save_json(path: str, obj: Any) -> None:
-    out_dir = os.path.dirname(path)
-    if out_dir:
-        os.makedirs(out_dir, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+ROOT_ALLOWED_KEYS = {"meta", "moves", "items"}
+
+
+# Casos irregulares (no arreglables con compact-match)
+MOVE_ALIAS_MAP = {
+    # dataset -> pokeapi
+    "faint-attack": "feint-attack",
+    "hi-jump-kick": "high-jump-kick",
+    "softboiled": "soft-boiled",
+    "smellingsalt": "smelling-salts",  # ojo: plural en PokeAPI
+}
+
+ITEM_ALIAS_MAP = {
+    "king-s-rock": "kings-rock",
+}
 
 
 def compact_key(s: str) -> str:
-    """
-    'ancient-power' -> 'ancientpower'
-    'king-s-rock'   -> 'kingsrock'
-    """
-    if not s:
-        return ""
+    """Normaliza una key para comparación flexible."""
     s = s.strip().lower()
-    return NON_ALNUM.sub("", s)
+    # deja solo letras/números para comparar
+    return re.sub(r"[^a-z0-9]+", "", s)
 
 
-def is_move_entry(e: Any) -> bool:
-    return isinstance(e, dict) and "type" in e
+def is_not_found(entry: Any) -> bool:
+    return isinstance(entry, dict) and entry.get("not_found") is True
 
 
-def is_item_entry(e: Any) -> bool:
-    return isinstance(e, dict) and "sprite_url" in e
+def is_good(entry: Any) -> bool:
+    # "good" = existe dict, y not_found no es True
+    return isinstance(entry, dict) and entry.get("not_found") is not True
 
 
-def is_good_move(e: Dict[str, Any]) -> bool:
-    return e.get("not_found") is False and isinstance(e.get("type"), str) and bool(e.get("type"))
+@dataclass(frozen=True)
+class Deletion:
+    kind: str  # "move" | "item" | "root"
+    key: str
+    reason: str
 
 
-def is_bad_move(e: Dict[str, Any]) -> bool:
-    return e.get("not_found") is True and e.get("type") in (None, "")
+def detect_schema(data: Dict[str, Any]) -> str:
+    if isinstance(data.get("moves"), dict) and isinstance(data.get("items"), dict):
+        return "nested"
+    return "flat"
 
 
-def is_good_item(e: Dict[str, Any]) -> bool:
-    return e.get("not_found") is False and isinstance(e.get("sprite_url"), str) and bool(e.get("sprite_url"))
+def root_junk_keys(data: Dict[str, Any]) -> List[str]:
+    return [k for k in data.keys() if k not in ROOT_ALLOWED_KEYS]
 
 
-def is_bad_item(e: Dict[str, Any]) -> bool:
-    return e.get("not_found") is True and e.get("sprite_url") in (None, "")
-
-
-def pick_preferred_key(a: str, b: str) -> str:
+def build_compact_index(d: Dict[str, Any]) -> Dict[str, List[str]]:
     """
-    Prefer keys that look like PokeAPI slugs:
-    - more hyphens is usually better than none (ancient-power > ancientpower)
-    - if tie, longer key is slightly preferred
+    compact_value -> list of keys that share that compact form
     """
-    a_score = (a.count("-"), len(a))
-    b_score = (b.count("-"), len(b))
-    return a if a_score >= b_score else b
+    idx: Dict[str, List[str]] = {}
+    for k in d.keys():
+        ck = compact_key(k)
+        idx.setdefault(ck, []).append(k)
+    return idx
 
 
-def detect_cache_sections(cache: Any) -> Tuple[Dict[str, Dict[str, Any]], str]:
+def find_compact_good_match(bad_key: str, table: Dict[str, Any]) -> str | None:
     """
-    Returns (sections, mode):
-      sections = {"moves": <dict>, "items": <dict>}
-      mode is "nested" or "flat"
-
-    Accepted schemas:
-      1) Nested:
-         {"moves": {...}, "items": {...}}
-      2) Flat:
-         {"ancientpower": {...}, "blackglasses": {...}}  (mixed move+item entries)
+    Si bad_key (not_found) tiene otro key en table con mismo compact_key y "good", lo devuelve.
+    Si hay varios, preferimos uno "good". Si no hay ninguno good, None.
     """
-    if isinstance(cache, dict) and isinstance(cache.get("moves"), dict) and isinstance(cache.get("items"), dict):
-        return {"moves": cache["moves"], "items": cache["items"]}, "nested"
+    target = compact_key(bad_key)
+    # buscar candidatos
+    candidates = [k for k in table.keys() if compact_key(k) == target and k != bad_key]
+    good = [k for k in candidates if is_good(table.get(k))]
+    return good[0] if good else None
 
-    # flat: split by entry shape
-    if isinstance(cache, dict):
-        moves = {}
-        items = {}
-        for k, v in cache.items():
-            if is_move_entry(v):
-                moves[k] = v
-            elif is_item_entry(v):
-                items[k] = v
-        # still return both; could be empty if schema is unexpected
-        return {"moves": moves, "items": items}, "flat"
 
-    return {"moves": {}, "items": {}}, "unknown"
+def apply_alias_deletions(
+    kind: str, table: Dict[str, Any], alias_map: Dict[str, str]
+) -> List[Deletion]:
+    deletions: List[Deletion] = []
+
+    for bad, good in alias_map.items():
+        if bad in table and is_not_found(table.get(bad)) and good in table and is_good(table.get(good)):
+            deletions.append(Deletion(kind=kind, key=bad, reason=f"alias_map keep '{good}'"))
+    return deletions
+
+
+def apply_compact_deletions(kind: str, table: Dict[str, Any]) -> List[Deletion]:
+    deletions: List[Deletion] = []
+    for k, v in table.items():
+        if not is_not_found(v):
+            continue
+        keep = find_compact_good_match(k, table)
+        if keep:
+            deletions.append(Deletion(kind=kind, key=k, reason=f"has_good_compact_match keep '{keep}'"))
+    return deletions
+
+
+def apply_root_cleanup(data: Dict[str, Any]) -> List[Deletion]:
+    deletions: List[Deletion] = []
+    for k in root_junk_keys(data):
+        deletions.append(Deletion(kind="root", key=k, reason="remove junk root key (legacy flat dump)"))
+    return deletions
+
+
+def delete_keys(table: Dict[str, Any], keys: List[str]) -> None:
+    for k in keys:
+        table.pop(k, None)
+
+
+def recalc_meta(data: Dict[str, Any]) -> None:
+    meta = data.get("meta")
+    if not isinstance(meta, dict):
+        return
+    moves = data.get("moves")
+    items = data.get("items")
+    if isinstance(moves, dict):
+        meta["moves_total"] = len(moves)
+    if isinstance(items, dict):
+        meta["items_total"] = len(items)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cache", required=True, help="Path to data/moves_items_cache.json")
-    ap.add_argument("--write", action="store_true", help="Write changes (otherwise dry-run)")
-    ap.add_argument(
-        "--delete_orphans",
-        action="store_true",
-        help="Also delete not_found=true entries even if no good counterpart exists",
-    )
+    ap.add_argument("--cache", required=True, help="Path to moves_items_cache.json")
+    ap.add_argument("--write", action="store_true", help="Write changes in place")
     args = ap.parse_args()
 
-    cache = load_json(args.cache)
-    sections, mode = detect_cache_sections(cache)
+    path = Path(args.cache)
+    data = json.loads(path.read_text(encoding="utf-8"))
 
-    moves = sections["moves"]
-    items = sections["items"]
+    schema = detect_schema(data)
+    print(f"[i] cache schema: {schema}")
 
-    print(f"[i] cache schema: {mode}")
-    print(f"[i] moves entries: {len(moves)} | items entries: {len(items)}")
+    deletions: List[Deletion] = []
 
-    # Build "best good" map by compact key
-    best_good_move_by_compact: Dict[str, str] = {}
-    best_good_item_by_compact: Dict[str, str] = {}
+    if schema == "nested":
+        moves = data.get("moves", {})
+        items = data.get("items", {})
 
-    for k, e in moves.items():
-        if isinstance(e, dict) and is_good_move(e):
-            ck = compact_key(k)
-            if not ck:
-                continue
-            prev = best_good_move_by_compact.get(ck)
-            best_good_move_by_compact[ck] = k if prev is None else pick_preferred_key(prev, k)
+        if not isinstance(moves, dict) or not isinstance(items, dict):
+            raise SystemExit("[!] Invalid nested schema: moves/items must be objects")
 
-    for k, e in items.items():
-        if isinstance(e, dict) and is_good_item(e):
-            ck = compact_key(k)
-            if not ck:
-                continue
-            prev = best_good_item_by_compact.get(ck)
-            best_good_item_by_compact[ck] = k if prev is None else pick_preferred_key(prev, k)
+        print(f"[i] moves entries: {len(moves)} | items entries: {len(items)}")
 
-    # Collect deletions
-    deletions = []  # (kind, bad_key, kept_key|None, reason)
+        # 1) root cleanup (elimina la “segunda capa” plana)
+        deletions.extend(apply_root_cleanup(data))
 
-    for k, e in moves.items():
-        if not isinstance(e, dict):
-            continue
-        if is_bad_move(e):
-            ck = compact_key(k)
-            kept = best_good_move_by_compact.get(ck)
-            if kept and kept != k:
-                deletions.append(("move", k, kept, "has_good_compact_match"))
-            elif args.delete_orphans:
-                deletions.append(("move", k, None, "orphan_not_found"))
+        # 2) alias map explicit
+        deletions.extend(apply_alias_deletions("move", moves, MOVE_ALIAS_MAP))
+        deletions.extend(apply_alias_deletions("item", items, ITEM_ALIAS_MAP))
 
-    for k, e in items.items():
-        if not isinstance(e, dict):
-            continue
-        if is_bad_item(e):
-            ck = compact_key(k)
-            kept = best_good_item_by_compact.get(ck)
-            if kept and kept != k:
-                deletions.append(("item", k, kept, "has_good_compact_match"))
-            elif args.delete_orphans:
-                deletions.append(("item", k, None, "orphan_not_found"))
+        # 3) compact-match deletions (guiones/espacios etc.)
+        deletions.extend(apply_compact_deletions("move", moves))
+        deletions.extend(apply_compact_deletions("item", items))
+
+        # aplicar
+        if deletions:
+            # root junk
+            root_keys = [d.key for d in deletions if d.kind == "root"]
+            for k in root_keys:
+                data.pop(k, None)
+
+            # moves/items
+            move_keys = [d.key for d in deletions if d.kind == "move"]
+            item_keys = [d.key for d in deletions if d.kind == "item"]
+            delete_keys(moves, move_keys)
+            delete_keys(items, item_keys)
+
+        # Recalcular meta
+        recalc_meta(data)
+
+    else:
+        # Si te interesa, aquí podríamos migrar flat->nested, pero en tu caso ya es nested.
+        print("[!] Flat schema detected. This script is mainly intended for nested schema.")
+        print("[!] Consider regenerating cache in nested form.")
+        return 2
 
     if not deletions:
-        # extra debug: count bads so we know what's happening
-        bad_moves = sum(1 for e in moves.values() if isinstance(e, dict) and is_bad_move(e))
-        bad_items = sum(1 for e in items.values() if isinstance(e, dict) and is_bad_item(e))
-        print(f"[i] bad moves (not_found=true + missing type): {bad_moves}")
-        print(f"[i] bad items (not_found=true + missing sprite): {bad_items}")
         print("[+] No bad entries to delete.")
         return 0
 
+    # mostrar resumen
     print(f"[+] Found {len(deletions)} deletions:")
-    for kind, bad_k, kept_k, reason in deletions[:150]:
-        if kept_k:
-            print(f"  - ({kind}) delete '{bad_k}' (keep '{kept_k}') [{reason}]")
-        else:
-            print(f"  - ({kind}) delete '{bad_k}' [{reason}]")
-    if len(deletions) > 150:
-        print(f"  ... and {len(deletions) - 150} more")
+    for d in deletions:
+        print(f"  - ({d.kind}) delete '{d.key}' [{d.reason}]")
 
     if not args.write:
         print("[dry-run] Not writing. Re-run with --write to apply.")
         return 0
 
-    # Apply deletions in the actual structure
-    for kind, bad_k, _, _ in deletions:
-        if kind == "move":
-            moves.pop(bad_k, None)
-        else:
-            items.pop(bad_k, None)
-
-    if mode == "nested":
-        cache["moves"] = moves
-        cache["items"] = items
-    else:
-        # flat: rebuild cache but preserve other unknown keys
-        # remove bad keys from original cache
-        for kind, bad_k, _, _ in deletions:
-            cache.pop(bad_k, None)
-
-    save_json(args.cache, cache)
-    print(f"[+] Updated cache written: {args.cache}")
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"[+] Updated cache written: {path}")
     return 0
 
 
