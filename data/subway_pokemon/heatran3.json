@@ -58,5 +58,6 @@
       "name": "Earth Power",
       "type": "ground"
     }
-  ]
+  ],
+  "item_slug": "shuca-berry"
 }

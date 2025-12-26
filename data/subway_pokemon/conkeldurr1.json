@@ -58,5 +58,6 @@
       "name": "Bulk Up",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "black-belt"
 }

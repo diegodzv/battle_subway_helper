@@ -58,5 +58,6 @@
       "name": "Heal Bell",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "lum-berry"
 }

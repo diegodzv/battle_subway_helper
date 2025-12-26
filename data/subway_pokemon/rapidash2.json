@@ -58,5 +58,6 @@
       "name": "Sunny Day",
       "type": "fire"
     }
-  ]
+  ],
+  "item_slug": "heat-rock"
 }

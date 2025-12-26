@@ -58,5 +58,6 @@
       "name": "Shadow Ball",
       "type": "ghost"
     }
-  ]
+  ],
+  "item_slug": "icy-rock"
 }

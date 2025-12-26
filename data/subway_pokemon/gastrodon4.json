@@ -58,5 +58,6 @@
       "name": "Waterfall",
       "type": "water"
     }
-  ]
+  ],
+  "item_slug": "leftovers"
 }

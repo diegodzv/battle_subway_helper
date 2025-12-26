@@ -58,5 +58,6 @@
       "name": "Drain Punch",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "leftovers"
 }

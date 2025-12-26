@@ -58,5 +58,6 @@
       "name": "Sing",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "normal-gem"
 }

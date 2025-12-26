@@ -58,5 +58,6 @@
       "name": "GrassWhistle",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "scope-lens"
 }

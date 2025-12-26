@@ -58,5 +58,6 @@
       "name": "Hydro Pump",
       "type": "water"
     }
-  ]
+  ],
+  "item_slug": "wide-lens"
 }

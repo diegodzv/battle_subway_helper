@@ -40,7 +40,7 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png",
   "dex_number": 306,
-  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "item_sprite_url": null,
   "moves_meta": [
     {
       "name": "Thunder Wave",
@@ -58,5 +58,6 @@
       "name": "Stomp",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "king-s-rock"
 }

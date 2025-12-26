@@ -58,5 +58,6 @@
       "name": "Aromatherapy",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "leftovers"
 }

@@ -58,5 +58,6 @@
       "name": "Stockpile",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "salac-berry"
 }

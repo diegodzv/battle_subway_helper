@@ -40,7 +40,7 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png",
   "dex_number": 379,
-  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "item_sprite_url": null,
   "moves_meta": [
     {
       "name": "Rock Polish",
@@ -58,5 +58,6 @@
       "name": "ThunderPunch",
       "type": "electric"
     }
-  ]
+  ],
+  "item_slug": "king-s-rock"
 }

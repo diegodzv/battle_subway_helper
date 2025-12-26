@@ -58,5 +58,6 @@
       "name": "Heat Crash",
       "type": "fire"
     }
-  ]
+  ],
+  "item_slug": "quick-claw"
 }

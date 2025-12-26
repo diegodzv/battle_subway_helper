@@ -44,7 +44,7 @@
   "moves_meta": [
     {
       "name": "Metronome",
-      "type": "normal"
+      "type": null
     },
     {
       "name": "Attract",
@@ -58,5 +58,6 @@
       "name": "Return",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "jaboca-berry"
 }

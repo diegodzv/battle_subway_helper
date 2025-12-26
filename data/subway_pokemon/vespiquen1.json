@@ -58,5 +58,6 @@
       "name": "Heal Order",
       "type": "bug"
     }
-  ]
+  ],
+  "item_slug": "quick-claw"
 }

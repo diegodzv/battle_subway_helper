@@ -58,5 +58,6 @@
       "name": "Energy Ball",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "expert-belt"
 }

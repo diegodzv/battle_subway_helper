@@ -58,5 +58,6 @@
       "name": "Sky Attack",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "power-herb"
 }

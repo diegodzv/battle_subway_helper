@@ -58,5 +58,6 @@
       "name": "Dragon Claw",
       "type": "dragon"
     }
-  ]
+  ],
+  "item_slug": "life-orb"
 }

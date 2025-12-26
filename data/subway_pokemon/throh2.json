@@ -58,5 +58,6 @@
       "name": "Seismic Toss",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "expert-belt"
 }

@@ -57,5 +57,7 @@
       "name": "Mean Look",
       "type": "normal"
     }
-  ]
+  ],
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png",
+  "item_slug": "bright-powder"
 }

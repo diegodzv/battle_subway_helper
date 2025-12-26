@@ -58,5 +58,6 @@
       "name": "Toxic Spikes",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "black-sludge"
 }

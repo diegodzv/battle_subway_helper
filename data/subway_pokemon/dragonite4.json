@@ -58,5 +58,6 @@
       "name": "Fire Punch",
       "type": "fire"
     }
-  ]
+  ],
+  "item_slug": "quick-claw"
 }

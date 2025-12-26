@@ -58,5 +58,6 @@
       "name": "Giga Drain",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "leftovers"
 }

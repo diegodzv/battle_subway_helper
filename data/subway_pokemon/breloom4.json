@@ -58,5 +58,6 @@
       "name": "Focus Punch",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "toxic-orb"
 }

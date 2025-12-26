@@ -58,5 +58,6 @@
       "name": "PoisonPowder",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "big-root"
 }

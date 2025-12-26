@@ -58,5 +58,6 @@
       "name": "Focus Blast",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "choice-specs"
 }

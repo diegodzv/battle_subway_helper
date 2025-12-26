@@ -58,5 +58,6 @@
       "name": "Sludge Bomb",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "lum-berry"
 }

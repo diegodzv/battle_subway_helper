@@ -58,5 +58,6 @@
       "name": "Superpower",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "choice-band"
 }

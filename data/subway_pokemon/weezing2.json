@@ -58,5 +58,6 @@
       "name": "Swallow",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "poison-gem"
 }

@@ -58,5 +58,6 @@
       "name": "Shadow Claw",
       "type": "ghost"
     }
-  ]
+  ],
+  "item_slug": "focus-sash"
 }

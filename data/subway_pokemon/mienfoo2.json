@@ -58,5 +58,6 @@
       "name": "Quick Guard",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "muscle-band"
 }

@@ -58,5 +58,6 @@
       "name": "Sky Drop",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "sitrus-berry"
 }

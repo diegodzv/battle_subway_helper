@@ -58,5 +58,6 @@
       "name": "Will-O-Wisp",
       "type": "fire"
     }
-  ]
+  ],
+  "item_slug": "absorb-bulb"
 }

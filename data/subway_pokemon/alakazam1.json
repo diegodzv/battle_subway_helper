@@ -57,5 +57,7 @@
       "name": "Guard Split",
       "type": "psychic"
     }
-  ]
+  ],
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png",
+  "item_slug": "twisted-spoon"
 }

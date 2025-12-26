@@ -40,7 +40,7 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/572.png",
   "dex_number": 572,
-  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "item_sprite_url": null,
   "moves_meta": [
     {
       "name": "Tail Slap",
@@ -58,5 +58,6 @@
       "name": "Captivate",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "king-s-rock"
 }

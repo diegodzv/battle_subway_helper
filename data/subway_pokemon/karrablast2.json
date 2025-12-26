@@ -57,5 +57,7 @@
       "name": "Swords Dance",
       "type": "normal"
     }
-  ]
+  ],
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png",
+  "item_slug": "silver-powder"
 }

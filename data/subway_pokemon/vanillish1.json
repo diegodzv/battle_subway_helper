@@ -58,5 +58,6 @@
       "name": "Acid Armor",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "pecha-berry"
 }

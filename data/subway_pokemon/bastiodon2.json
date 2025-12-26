@@ -58,5 +58,6 @@
       "name": "Iron Defense",
       "type": "steel"
     }
-  ]
+  ],
+  "item_slug": "chesto-berry"
 }

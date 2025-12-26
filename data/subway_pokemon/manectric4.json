@@ -58,5 +58,6 @@
       "name": "Overheat",
       "type": "fire"
     }
-  ]
+  ],
+  "item_slug": "choice-scarf"
 }

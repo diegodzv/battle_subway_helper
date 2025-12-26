@@ -58,5 +58,6 @@
       "name": "Air Slash",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "shell-bell"
 }

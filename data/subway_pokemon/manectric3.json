@@ -58,5 +58,6 @@
       "name": "Quick Attack",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "air-balloon"
 }

@@ -58,5 +58,6 @@
       "name": "Belly Drum",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "shell-bell"
 }

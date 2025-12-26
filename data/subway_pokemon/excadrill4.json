@@ -58,5 +58,6 @@
       "name": "Rock Slide",
       "type": "rock"
     }
-  ]
+  ],
+  "item_slug": "life-orb"
 }

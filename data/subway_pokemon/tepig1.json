@@ -58,5 +58,6 @@
       "name": "Smog",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "shuca-berry"
 }

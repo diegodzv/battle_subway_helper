@@ -58,5 +58,6 @@
       "name": "Psychic",
       "type": "psychic"
     }
-  ]
+  ],
+  "item_slug": "focus-sash"
 }

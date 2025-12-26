@@ -43,5 +43,6 @@
       "name": "Leaf Storm",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "choice-specs"
 }

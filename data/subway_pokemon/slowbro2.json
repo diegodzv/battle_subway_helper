@@ -58,5 +58,6 @@
       "name": "Water Pulse",
       "type": "water"
     }
-  ]
+  ],
+  "item_slug": "quick-claw"
 }

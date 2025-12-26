@@ -58,5 +58,6 @@
       "name": "Leech Seed",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "pecha-berry"
 }

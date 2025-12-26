@@ -58,5 +58,6 @@
       "name": "Incinerate",
       "type": "fire"
     }
-  ]
+  ],
+  "item_slug": "sitrus-berry"
 }

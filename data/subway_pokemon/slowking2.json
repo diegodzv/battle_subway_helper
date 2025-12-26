@@ -40,7 +40,7 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
   "dex_number": 199,
-  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "item_sprite_url": null,
   "moves_meta": [
     {
       "name": "Zen Headbutt",
@@ -58,5 +58,6 @@
       "name": "Psych Up",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "king-s-rock"
 }

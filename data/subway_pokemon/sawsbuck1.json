@@ -58,5 +58,6 @@
       "name": "Jump Kick",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "lum-berry"
 }

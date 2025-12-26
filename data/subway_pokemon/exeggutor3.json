@@ -58,5 +58,6 @@
       "name": "AncientPower",
       "type": "rock"
     }
-  ]
+  ],
+  "item_slug": "expert-belt"
 }

@@ -58,5 +58,6 @@
       "name": "Toxic",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "sitrus-berry"
 }

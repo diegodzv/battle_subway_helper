@@ -58,5 +58,6 @@
       "name": "Heavy Slam",
       "type": "steel"
     }
-  ]
+  ],
+  "item_slug": "quick-claw"
 }

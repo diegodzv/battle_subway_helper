@@ -58,5 +58,6 @@
       "name": "Seed Bomb",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "focus-sash"
 }

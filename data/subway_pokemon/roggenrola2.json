@@ -58,5 +58,6 @@
       "name": "Sandstorm",
       "type": "rock"
     }
-  ]
+  ],
+  "item_slug": "smooth-rock"
 }

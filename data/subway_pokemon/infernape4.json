@@ -58,5 +58,6 @@
       "name": "Close Combat",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "focus-sash"
 }

@@ -58,5 +58,6 @@
       "name": "Cotton Guard",
       "type": "grass"
     }
-  ]
+  ],
+  "item_slug": "heat-rock"
 }

@@ -58,5 +58,6 @@
       "name": "Hex",
       "type": "ghost"
     }
-  ]
+  ],
+  "item_slug": "spell-tag"
 }

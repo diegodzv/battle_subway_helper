@@ -58,5 +58,6 @@
       "name": "Bounce",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "full-incense"
 }

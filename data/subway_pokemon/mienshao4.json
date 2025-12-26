@@ -40,7 +40,7 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/620.png",
   "dex_number": 620,
-  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "item_sprite_url": null,
   "moves_meta": [
     {
       "name": "Fake Out",
@@ -58,5 +58,6 @@
       "name": "Hi Jump Kick",
       "type": null
     }
-  ]
+  ],
+  "item_slug": "king-s-rock"
 }

@@ -58,5 +58,6 @@
       "name": "Heal Pulse",
       "type": "psychic"
     }
-  ]
+  ],
+  "item_slug": "leftovers"
 }

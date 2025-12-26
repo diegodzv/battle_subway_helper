@@ -58,5 +58,6 @@
       "name": "Pluck",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "persim-berry"
 }

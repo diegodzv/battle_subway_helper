@@ -58,5 +58,6 @@
       "name": "Shell Smash",
       "type": "normal"
     }
-  ]
+  ],
+  "item_slug": "shell-bell"
 }

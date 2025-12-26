@@ -58,5 +58,6 @@
       "name": "Charge Beam",
       "type": "electric"
     }
-  ]
+  ],
+  "item_slug": "shuca-berry"
 }

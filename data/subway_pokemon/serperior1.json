@@ -58,5 +58,6 @@
       "name": "Gastro Acid",
       "type": "poison"
     }
-  ]
+  ],
+  "item_slug": "lum-berry"
 }

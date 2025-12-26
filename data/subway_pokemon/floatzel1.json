@@ -58,5 +58,6 @@
       "name": "Whirlpool",
       "type": "water"
     }
-  ]
+  ],
+  "item_slug": "binding-band"
 }

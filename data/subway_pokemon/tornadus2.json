@@ -58,5 +58,6 @@
       "name": "Hurricane",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "leftovers"
 }

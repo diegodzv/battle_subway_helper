@@ -58,5 +58,6 @@
       "name": "Counter",
       "type": "fighting"
     }
-  ]
+  ],
+  "item_slug": "focus-sash"
 }

@@ -40,7 +40,7 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
   "dex_number": 248,
-  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+  "item_sprite_url": null,
   "moves_meta": [
     {
       "name": "Rock Slide",
@@ -58,5 +58,6 @@
       "name": "Dragon Dance",
       "type": "dragon"
     }
-  ]
+  ],
+  "item_slug": "king-s-rock"
 }

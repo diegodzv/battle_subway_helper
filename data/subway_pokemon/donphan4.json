@@ -58,5 +58,6 @@
       "name": "Fissure",
       "type": "ground"
     }
-  ]
+  ],
+  "item_slug": "quick-claw"
 }

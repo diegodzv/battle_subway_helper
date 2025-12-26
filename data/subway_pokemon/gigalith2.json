@@ -58,5 +58,6 @@
       "name": "Rock Blast",
       "type": "rock"
     }
-  ]
+  ],
+  "item_slug": "hard-stone"
 }

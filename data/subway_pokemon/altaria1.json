@@ -58,5 +58,6 @@
       "name": "Roost",
       "type": "flying"
     }
-  ]
+  ],
+  "item_slug": "pecha-berry"
 }

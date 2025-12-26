@@ -2175,5 +2175,2595 @@
       "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png",
       "not_found": false
     }
+  },
+  "acid-armor": {
+    "name": "acid-armor",
+    "type": "poison",
+    "not_found": false
+  },
+  "acid-spray": {
+    "name": "acid-spray",
+    "type": "poison",
+    "not_found": false
+  },
+  "acrobatics": {
+    "name": "acrobatics",
+    "type": "flying",
+    "not_found": false
+  },
+  "aerial-ace": {
+    "name": "aerial-ace",
+    "type": "flying",
+    "not_found": false
+  },
+  "agility": {
+    "name": "agility",
+    "type": "psychic",
+    "not_found": false
+  },
+  "air-cutter": {
+    "name": "air-cutter",
+    "type": "flying",
+    "not_found": false
+  },
+  "air-slash": {
+    "name": "air-slash",
+    "type": "flying",
+    "not_found": false
+  },
+  "ally-switch": {
+    "name": "ally-switch",
+    "type": "psychic",
+    "not_found": false
+  },
+  "amnesia": {
+    "name": "amnesia",
+    "type": "psychic",
+    "not_found": false
+  },
+  "ancient-power": {
+    "name": "ancient-power",
+    "type": "rock",
+    "not_found": false
+  },
+  "aqua-jet": {
+    "name": "aqua-jet",
+    "type": "water",
+    "not_found": false
+  },
+  "aqua-ring": {
+    "name": "aqua-ring",
+    "type": "water",
+    "not_found": false
+  },
+  "aqua-tail": {
+    "name": "aqua-tail",
+    "type": "water",
+    "not_found": false
+  },
+  "aromatherapy": {
+    "name": "aromatherapy",
+    "type": "grass",
+    "not_found": false
+  },
+  "assist": {
+    "name": "assist",
+    "type": "normal",
+    "not_found": false
+  },
+  "assurance": {
+    "name": "assurance",
+    "type": "dark",
+    "not_found": false
+  },
+  "attack-order": {
+    "name": "attack-order",
+    "type": "bug",
+    "not_found": false
+  },
+  "attract": {
+    "name": "attract",
+    "type": "normal",
+    "not_found": false
+  },
+  "aura-sphere": {
+    "name": "aura-sphere",
+    "type": "fighting",
+    "not_found": false
+  },
+  "autotomize": {
+    "name": "autotomize",
+    "type": "steel",
+    "not_found": false
+  },
+  "avalanche": {
+    "name": "avalanche",
+    "type": "ice",
+    "not_found": false
+  },
+  "barrier": {
+    "name": "barrier",
+    "type": "psychic",
+    "not_found": false
+  },
+  "baton-pass": {
+    "name": "baton-pass",
+    "type": "normal",
+    "not_found": false
+  },
+  "belly-drum": {
+    "name": "belly-drum",
+    "type": "normal",
+    "not_found": false
+  },
+  "bide": {
+    "name": "bide",
+    "type": "normal",
+    "not_found": false
+  },
+  "bind": {
+    "name": "bind",
+    "type": "normal",
+    "not_found": false
+  },
+  "bite": {
+    "name": "bite",
+    "type": "dark",
+    "not_found": false
+  },
+  "blaze-kick": {
+    "name": "blaze-kick",
+    "type": "fire",
+    "not_found": false
+  },
+  "blizzard": {
+    "name": "blizzard",
+    "type": "ice",
+    "not_found": false
+  },
+  "block": {
+    "name": "block",
+    "type": "normal",
+    "not_found": false
+  },
+  "body-slam": {
+    "name": "body-slam",
+    "type": "normal",
+    "not_found": false
+  },
+  "bounce": {
+    "name": "bounce",
+    "type": "flying",
+    "not_found": false
+  },
+  "brave-bird": {
+    "name": "brave-bird",
+    "type": "flying",
+    "not_found": false
+  },
+  "brick-break": {
+    "name": "brick-break",
+    "type": "fighting",
+    "not_found": false
+  },
+  "bubble-beam": {
+    "name": "bubble-beam",
+    "type": "water",
+    "not_found": false
+  },
+  "bug-bite": {
+    "name": "bug-bite",
+    "type": "bug",
+    "not_found": false
+  },
+  "bug-buzz": {
+    "name": "bug-buzz",
+    "type": "bug",
+    "not_found": false
+  },
+  "bulk-up": {
+    "name": "bulk-up",
+    "type": "fighting",
+    "not_found": false
+  },
+  "bulldoze": {
+    "name": "bulldoze",
+    "type": "ground",
+    "not_found": false
+  },
+  "bullet-punch": {
+    "name": "bullet-punch",
+    "type": "steel",
+    "not_found": false
+  },
+  "bullet-seed": {
+    "name": "bullet-seed",
+    "type": "grass",
+    "not_found": false
+  },
+  "calm-mind": {
+    "name": "calm-mind",
+    "type": "psychic",
+    "not_found": false
+  },
+  "captivate": {
+    "name": "captivate",
+    "type": "normal",
+    "not_found": false
+  },
+  "charge": {
+    "name": "charge",
+    "type": "electric",
+    "not_found": false
+  },
+  "charge-beam": {
+    "name": "charge-beam",
+    "type": "electric",
+    "not_found": false
+  },
+  "charm": {
+    "name": "charm",
+    "type": "fairy",
+    "not_found": false
+  },
+  "chip-away": {
+    "name": "chip-away",
+    "type": "normal",
+    "not_found": false
+  },
+  "circle-throw": {
+    "name": "circle-throw",
+    "type": "fighting",
+    "not_found": false
+  },
+  "clear-smog": {
+    "name": "clear-smog",
+    "type": "poison",
+    "not_found": false
+  },
+  "close-combat": {
+    "name": "close-combat",
+    "type": "fighting",
+    "not_found": false
+  },
+  "coil": {
+    "name": "coil",
+    "type": "poison",
+    "not_found": false
+  },
+  "confuse-ray": {
+    "name": "confuse-ray",
+    "type": "ghost",
+    "not_found": false
+  },
+  "cosmic-power": {
+    "name": "cosmic-power",
+    "type": "psychic",
+    "not_found": false
+  },
+  "cotton-guard": {
+    "name": "cotton-guard",
+    "type": "grass",
+    "not_found": false
+  },
+  "counter": {
+    "name": "counter",
+    "type": "fighting",
+    "not_found": false
+  },
+  "cross-chop": {
+    "name": "cross-chop",
+    "type": "fighting",
+    "not_found": false
+  },
+  "cross-poison": {
+    "name": "cross-poison",
+    "type": "poison",
+    "not_found": false
+  },
+  "crunch": {
+    "name": "crunch",
+    "type": "dark",
+    "not_found": false
+  },
+  "crush-claw": {
+    "name": "crush-claw",
+    "type": "normal",
+    "not_found": false
+  },
+  "curse": {
+    "name": "curse",
+    "type": "ghost",
+    "not_found": false
+  },
+  "dark-pulse": {
+    "name": "dark-pulse",
+    "type": "dark",
+    "not_found": false
+  },
+  "defend-order": {
+    "name": "defend-order",
+    "type": "bug",
+    "not_found": false
+  },
+  "defense-curl": {
+    "name": "defense-curl",
+    "type": "normal",
+    "not_found": false
+  },
+  "defog": {
+    "name": "defog",
+    "type": "flying",
+    "not_found": false
+  },
+  "destiny-bond": {
+    "name": "destiny-bond",
+    "type": "ghost",
+    "not_found": false
+  },
+  "detect": {
+    "name": "detect",
+    "type": "fighting",
+    "not_found": false
+  },
+  "dig": {
+    "name": "dig",
+    "type": "ground",
+    "not_found": false
+  },
+  "disable": {
+    "name": "disable",
+    "type": "normal",
+    "not_found": false
+  },
+  "discharge": {
+    "name": "discharge",
+    "type": "electric",
+    "not_found": false
+  },
+  "dive": {
+    "name": "dive",
+    "type": "water",
+    "not_found": false
+  },
+  "dizzy-punch": {
+    "name": "dizzy-punch",
+    "type": "normal",
+    "not_found": false
+  },
+  "double-edge": {
+    "name": "double-edge",
+    "type": "normal",
+    "not_found": false
+  },
+  "double-hit": {
+    "name": "double-hit",
+    "type": "normal",
+    "not_found": false
+  },
+  "double-kick": {
+    "name": "double-kick",
+    "type": "fighting",
+    "not_found": false
+  },
+  "double-slap": {
+    "name": "double-slap",
+    "type": "normal",
+    "not_found": false
+  },
+  "double-team": {
+    "name": "double-team",
+    "type": "normal",
+    "not_found": false
+  },
+  "draco-meteor": {
+    "name": "draco-meteor",
+    "type": "dragon",
+    "not_found": false
+  },
+  "dragon-claw": {
+    "name": "dragon-claw",
+    "type": "dragon",
+    "not_found": false
+  },
+  "dragon-dance": {
+    "name": "dragon-dance",
+    "type": "dragon",
+    "not_found": false
+  },
+  "dragon-pulse": {
+    "name": "dragon-pulse",
+    "type": "dragon",
+    "not_found": false
+  },
+  "dragon-rush": {
+    "name": "dragon-rush",
+    "type": "dragon",
+    "not_found": false
+  },
+  "dragon-tail": {
+    "name": "dragon-tail",
+    "type": "dragon",
+    "not_found": false
+  },
+  "drain-punch": {
+    "name": "drain-punch",
+    "type": "fighting",
+    "not_found": false
+  },
+  "dream-eater": {
+    "name": "dream-eater",
+    "type": "psychic",
+    "not_found": false
+  },
+  "drill-peck": {
+    "name": "drill-peck",
+    "type": "flying",
+    "not_found": false
+  },
+  "drill-run": {
+    "name": "drill-run",
+    "type": "ground",
+    "not_found": false
+  },
+  "dual-chop": {
+    "name": "dual-chop",
+    "type": "dragon",
+    "not_found": false
+  },
+  "dynamic-punch": {
+    "name": "dynamic-punch",
+    "type": "fighting",
+    "not_found": false
+  },
+  "earth-power": {
+    "name": "earth-power",
+    "type": "ground",
+    "not_found": false
+  },
+  "earthquake": {
+    "name": "earthquake",
+    "type": "ground",
+    "not_found": false
+  },
+  "echoed-voice": {
+    "name": "echoed-voice",
+    "type": "normal",
+    "not_found": false
+  },
+  "egg-bomb": {
+    "name": "egg-bomb",
+    "type": "normal",
+    "not_found": false
+  },
+  "electro-ball": {
+    "name": "electro-ball",
+    "type": "electric",
+    "not_found": false
+  },
+  "electroweb": {
+    "name": "electroweb",
+    "type": "electric",
+    "not_found": false
+  },
+  "embargo": {
+    "name": "embargo",
+    "type": "dark",
+    "not_found": false
+  },
+  "encore": {
+    "name": "encore",
+    "type": "normal",
+    "not_found": false
+  },
+  "endeavor": {
+    "name": "endeavor",
+    "type": "normal",
+    "not_found": false
+  },
+  "endure": {
+    "name": "endure",
+    "type": "normal",
+    "not_found": false
+  },
+  "energy-ball": {
+    "name": "energy-ball",
+    "type": "grass",
+    "not_found": false
+  },
+  "entrainment": {
+    "name": "entrainment",
+    "type": "normal",
+    "not_found": false
+  },
+  "eruption": {
+    "name": "eruption",
+    "type": "fire",
+    "not_found": false
+  },
+  "explosion": {
+    "name": "explosion",
+    "type": "normal",
+    "not_found": false
+  },
+  "extrasensory": {
+    "name": "extrasensory",
+    "type": "psychic",
+    "not_found": false
+  },
+  "extreme-speed": {
+    "name": "extreme-speed",
+    "type": "normal",
+    "not_found": false
+  },
+  "facade": {
+    "name": "facade",
+    "type": "normal",
+    "not_found": false
+  },
+  "faint-attack": {
+    "name": "faint-attack",
+    "type": null,
+    "not_found": true
+  },
+  "fake-out": {
+    "name": "fake-out",
+    "type": "normal",
+    "not_found": false
+  },
+  "fake-tears": {
+    "name": "fake-tears",
+    "type": "dark",
+    "not_found": false
+  },
+  "feather-dance": {
+    "name": "feather-dance",
+    "type": "flying",
+    "not_found": false
+  },
+  "feint": {
+    "name": "feint",
+    "type": "normal",
+    "not_found": false
+  },
+  "final-gambit": {
+    "name": "final-gambit",
+    "type": "fighting",
+    "not_found": false
+  },
+  "fire-blast": {
+    "name": "fire-blast",
+    "type": "fire",
+    "not_found": false
+  },
+  "fire-fang": {
+    "name": "fire-fang",
+    "type": "fire",
+    "not_found": false
+  },
+  "fire-punch": {
+    "name": "fire-punch",
+    "type": "fire",
+    "not_found": false
+  },
+  "fire-spin": {
+    "name": "fire-spin",
+    "type": "fire",
+    "not_found": false
+  },
+  "fissure": {
+    "name": "fissure",
+    "type": "ground",
+    "not_found": false
+  },
+  "flail": {
+    "name": "flail",
+    "type": "normal",
+    "not_found": false
+  },
+  "flame-burst": {
+    "name": "flame-burst",
+    "type": "fire",
+    "not_found": false
+  },
+  "flame-charge": {
+    "name": "flame-charge",
+    "type": "fire",
+    "not_found": false
+  },
+  "flame-wheel": {
+    "name": "flame-wheel",
+    "type": "fire",
+    "not_found": false
+  },
+  "flamethrower": {
+    "name": "flamethrower",
+    "type": "fire",
+    "not_found": false
+  },
+  "flare-blitz": {
+    "name": "flare-blitz",
+    "type": "fire",
+    "not_found": false
+  },
+  "flash": {
+    "name": "flash",
+    "type": "normal",
+    "not_found": false
+  },
+  "flash-cannon": {
+    "name": "flash-cannon",
+    "type": "steel",
+    "not_found": false
+  },
+  "flatter": {
+    "name": "flatter",
+    "type": "dark",
+    "not_found": false
+  },
+  "fling": {
+    "name": "fling",
+    "type": "dark",
+    "not_found": false
+  },
+  "fly": {
+    "name": "fly",
+    "type": "flying",
+    "not_found": false
+  },
+  "focus-blast": {
+    "name": "focus-blast",
+    "type": "fighting",
+    "not_found": false
+  },
+  "focus-energy": {
+    "name": "focus-energy",
+    "type": "normal",
+    "not_found": false
+  },
+  "focus-punch": {
+    "name": "focus-punch",
+    "type": "fighting",
+    "not_found": false
+  },
+  "follow-me": {
+    "name": "follow-me",
+    "type": "normal",
+    "not_found": false
+  },
+  "force-palm": {
+    "name": "force-palm",
+    "type": "fighting",
+    "not_found": false
+  },
+  "foresight": {
+    "name": "foresight",
+    "type": "normal",
+    "not_found": false
+  },
+  "foul-play": {
+    "name": "foul-play",
+    "type": "dark",
+    "not_found": false
+  },
+  "frost-breath": {
+    "name": "frost-breath",
+    "type": "ice",
+    "not_found": false
+  },
+  "fury-attack": {
+    "name": "fury-attack",
+    "type": "normal",
+    "not_found": false
+  },
+  "fury-cutter": {
+    "name": "fury-cutter",
+    "type": "bug",
+    "not_found": false
+  },
+  "fury-swipes": {
+    "name": "fury-swipes",
+    "type": "normal",
+    "not_found": false
+  },
+  "future-sight": {
+    "name": "future-sight",
+    "type": "psychic",
+    "not_found": false
+  },
+  "gastro-acid": {
+    "name": "gastro-acid",
+    "type": "poison",
+    "not_found": false
+  },
+  "gear-grind": {
+    "name": "gear-grind",
+    "type": "steel",
+    "not_found": false
+  },
+  "giga-drain": {
+    "name": "giga-drain",
+    "type": "grass",
+    "not_found": false
+  },
+  "giga-impact": {
+    "name": "giga-impact",
+    "type": "normal",
+    "not_found": false
+  },
+  "glare": {
+    "name": "glare",
+    "type": "normal",
+    "not_found": false
+  },
+  "grass-knot": {
+    "name": "grass-knot",
+    "type": "grass",
+    "not_found": false
+  },
+  "grass-whistle": {
+    "name": "grass-whistle",
+    "type": "grass",
+    "not_found": false
+  },
+  "gravity": {
+    "name": "gravity",
+    "type": "psychic",
+    "not_found": false
+  },
+  "growl": {
+    "name": "growl",
+    "type": "normal",
+    "not_found": false
+  },
+  "grudge": {
+    "name": "grudge",
+    "type": "ghost",
+    "not_found": false
+  },
+  "guard-split": {
+    "name": "guard-split",
+    "type": "psychic",
+    "not_found": false
+  },
+  "guillotine": {
+    "name": "guillotine",
+    "type": "normal",
+    "not_found": false
+  },
+  "gunk-shot": {
+    "name": "gunk-shot",
+    "type": "poison",
+    "not_found": false
+  },
+  "gyro-ball": {
+    "name": "gyro-ball",
+    "type": "steel",
+    "not_found": false
+  },
+  "hail": {
+    "name": "hail",
+    "type": "ice",
+    "not_found": false
+  },
+  "hammer-arm": {
+    "name": "hammer-arm",
+    "type": "fighting",
+    "not_found": false
+  },
+  "haze": {
+    "name": "haze",
+    "type": "ice",
+    "not_found": false
+  },
+  "head-charge": {
+    "name": "head-charge",
+    "type": "normal",
+    "not_found": false
+  },
+  "head-smash": {
+    "name": "head-smash",
+    "type": "rock",
+    "not_found": false
+  },
+  "headbutt": {
+    "name": "headbutt",
+    "type": "normal",
+    "not_found": false
+  },
+  "heal-bell": {
+    "name": "heal-bell",
+    "type": "normal",
+    "not_found": false
+  },
+  "heal-block": {
+    "name": "heal-block",
+    "type": "psychic",
+    "not_found": false
+  },
+  "heal-order": {
+    "name": "heal-order",
+    "type": "bug",
+    "not_found": false
+  },
+  "heal-pulse": {
+    "name": "heal-pulse",
+    "type": "psychic",
+    "not_found": false
+  },
+  "healing-wish": {
+    "name": "healing-wish",
+    "type": "psychic",
+    "not_found": false
+  },
+  "heat-crash": {
+    "name": "heat-crash",
+    "type": "fire",
+    "not_found": false
+  },
+  "heat-wave": {
+    "name": "heat-wave",
+    "type": "fire",
+    "not_found": false
+  },
+  "heavy-slam": {
+    "name": "heavy-slam",
+    "type": "steel",
+    "not_found": false
+  },
+  "helping-hand": {
+    "name": "helping-hand",
+    "type": "normal",
+    "not_found": false
+  },
+  "hex": {
+    "name": "hex",
+    "type": "ghost",
+    "not_found": false
+  },
+  "hi-jump-kick": {
+    "name": "hi-jump-kick",
+    "type": null,
+    "not_found": true
+  },
+  "hidden-power": {
+    "name": "hidden-power",
+    "type": "normal",
+    "not_found": false
+  },
+  "hone-claws": {
+    "name": "hone-claws",
+    "type": "dark",
+    "not_found": false
+  },
+  "horn-drill": {
+    "name": "horn-drill",
+    "type": "normal",
+    "not_found": false
+  },
+  "horn-leech": {
+    "name": "horn-leech",
+    "type": "grass",
+    "not_found": false
+  },
+  "hurricane": {
+    "name": "hurricane",
+    "type": "flying",
+    "not_found": false
+  },
+  "hydro-pump": {
+    "name": "hydro-pump",
+    "type": "water",
+    "not_found": false
+  },
+  "hyper-beam": {
+    "name": "hyper-beam",
+    "type": "normal",
+    "not_found": false
+  },
+  "hyper-fang": {
+    "name": "hyper-fang",
+    "type": "normal",
+    "not_found": false
+  },
+  "hyper-voice": {
+    "name": "hyper-voice",
+    "type": "normal",
+    "not_found": false
+  },
+  "hypnosis": {
+    "name": "hypnosis",
+    "type": "psychic",
+    "not_found": false
+  },
+  "ice-ball": {
+    "name": "ice-ball",
+    "type": "ice",
+    "not_found": false
+  },
+  "ice-beam": {
+    "name": "ice-beam",
+    "type": "ice",
+    "not_found": false
+  },
+  "ice-fang": {
+    "name": "ice-fang",
+    "type": "ice",
+    "not_found": false
+  },
+  "ice-punch": {
+    "name": "ice-punch",
+    "type": "ice",
+    "not_found": false
+  },
+  "ice-shard": {
+    "name": "ice-shard",
+    "type": "ice",
+    "not_found": false
+  },
+  "icicle-crash": {
+    "name": "icicle-crash",
+    "type": "ice",
+    "not_found": false
+  },
+  "icy-wind": {
+    "name": "icy-wind",
+    "type": "ice",
+    "not_found": false
+  },
+  "imprison": {
+    "name": "imprison",
+    "type": "psychic",
+    "not_found": false
+  },
+  "incinerate": {
+    "name": "incinerate",
+    "type": "fire",
+    "not_found": false
+  },
+  "inferno": {
+    "name": "inferno",
+    "type": "fire",
+    "not_found": false
+  },
+  "ingrain": {
+    "name": "ingrain",
+    "type": "grass",
+    "not_found": false
+  },
+  "iron-defense": {
+    "name": "iron-defense",
+    "type": "steel",
+    "not_found": false
+  },
+  "iron-head": {
+    "name": "iron-head",
+    "type": "steel",
+    "not_found": false
+  },
+  "iron-tail": {
+    "name": "iron-tail",
+    "type": "steel",
+    "not_found": false
+  },
+  "jump-kick": {
+    "name": "jump-kick",
+    "type": "fighting",
+    "not_found": false
+  },
+  "lava-plume": {
+    "name": "lava-plume",
+    "type": "fire",
+    "not_found": false
+  },
+  "leaf-blade": {
+    "name": "leaf-blade",
+    "type": "grass",
+    "not_found": false
+  },
+  "leaf-storm": {
+    "name": "leaf-storm",
+    "type": "grass",
+    "not_found": false
+  },
+  "leaf-tornado": {
+    "name": "leaf-tornado",
+    "type": "grass",
+    "not_found": false
+  },
+  "leech-seed": {
+    "name": "leech-seed",
+    "type": "grass",
+    "not_found": false
+  },
+  "leer": {
+    "name": "leer",
+    "type": "normal",
+    "not_found": false
+  },
+  "light-screen": {
+    "name": "light-screen",
+    "type": "psychic",
+    "not_found": false
+  },
+  "lock-on": {
+    "name": "lock-on",
+    "type": "normal",
+    "not_found": false
+  },
+  "lovely-kiss": {
+    "name": "lovely-kiss",
+    "type": "normal",
+    "not_found": false
+  },
+  "low-kick": {
+    "name": "low-kick",
+    "type": "fighting",
+    "not_found": false
+  },
+  "low-sweep": {
+    "name": "low-sweep",
+    "type": "fighting",
+    "not_found": false
+  },
+  "luster-purge": {
+    "name": "luster-purge",
+    "type": "psychic",
+    "not_found": false
+  },
+  "mach-punch": {
+    "name": "mach-punch",
+    "type": "fighting",
+    "not_found": false
+  },
+  "magic-coat": {
+    "name": "magic-coat",
+    "type": "psychic",
+    "not_found": false
+  },
+  "magical-leaf": {
+    "name": "magical-leaf",
+    "type": "grass",
+    "not_found": false
+  },
+  "magma-storm": {
+    "name": "magma-storm",
+    "type": "fire",
+    "not_found": false
+  },
+  "magnet-rise": {
+    "name": "magnet-rise",
+    "type": "electric",
+    "not_found": false
+  },
+  "magnitude": {
+    "name": "magnitude",
+    "type": "ground",
+    "not_found": false
+  },
+  "me-first": {
+    "name": "me-first",
+    "type": "normal",
+    "not_found": false
+  },
+  "mean-look": {
+    "name": "mean-look",
+    "type": "normal",
+    "not_found": false
+  },
+  "megahorn": {
+    "name": "megahorn",
+    "type": "bug",
+    "not_found": false
+  },
+  "memento": {
+    "name": "memento",
+    "type": "dark",
+    "not_found": false
+  },
+  "metal-burst": {
+    "name": "metal-burst",
+    "type": "steel",
+    "not_found": false
+  },
+  "metal-claw": {
+    "name": "metal-claw",
+    "type": "steel",
+    "not_found": false
+  },
+  "metal-sound": {
+    "name": "metal-sound",
+    "type": "steel",
+    "not_found": false
+  },
+  "meteor-mash": {
+    "name": "meteor-mash",
+    "type": "steel",
+    "not_found": false
+  },
+  "metronome": {
+    "name": "metronome",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metronome.png",
+    "not_found": false
+  },
+  "milk-drink": {
+    "name": "milk-drink",
+    "type": "normal",
+    "not_found": false
+  },
+  "mimic": {
+    "name": "mimic",
+    "type": "normal",
+    "not_found": false
+  },
+  "mind-reader": {
+    "name": "mind-reader",
+    "type": "normal",
+    "not_found": false
+  },
+  "minimize": {
+    "name": "minimize",
+    "type": "normal",
+    "not_found": false
+  },
+  "miracle-eye": {
+    "name": "miracle-eye",
+    "type": "psychic",
+    "not_found": false
+  },
+  "mirror-coat": {
+    "name": "mirror-coat",
+    "type": "psychic",
+    "not_found": false
+  },
+  "mirror-shot": {
+    "name": "mirror-shot",
+    "type": "steel",
+    "not_found": false
+  },
+  "mist": {
+    "name": "mist",
+    "type": "ice",
+    "not_found": false
+  },
+  "moonlight": {
+    "name": "moonlight",
+    "type": "fairy",
+    "not_found": false
+  },
+  "morning-sun": {
+    "name": "morning-sun",
+    "type": "normal",
+    "not_found": false
+  },
+  "mud-bomb": {
+    "name": "mud-bomb",
+    "type": "ground",
+    "not_found": false
+  },
+  "mud-shot": {
+    "name": "mud-shot",
+    "type": "ground",
+    "not_found": false
+  },
+  "muddy-water": {
+    "name": "muddy-water",
+    "type": "water",
+    "not_found": false
+  },
+  "nasty-plot": {
+    "name": "nasty-plot",
+    "type": "dark",
+    "not_found": false
+  },
+  "natural-gift": {
+    "name": "natural-gift",
+    "type": "normal",
+    "not_found": false
+  },
+  "night-daze": {
+    "name": "night-daze",
+    "type": "dark",
+    "not_found": false
+  },
+  "night-shade": {
+    "name": "night-shade",
+    "type": "ghost",
+    "not_found": false
+  },
+  "night-slash": {
+    "name": "night-slash",
+    "type": "dark",
+    "not_found": false
+  },
+  "nightmare": {
+    "name": "nightmare",
+    "type": "ghost",
+    "not_found": false
+  },
+  "odor-sleuth": {
+    "name": "odor-sleuth",
+    "type": "normal",
+    "not_found": false
+  },
+  "ominous-wind": {
+    "name": "ominous-wind",
+    "type": "ghost",
+    "not_found": false
+  },
+  "outrage": {
+    "name": "outrage",
+    "type": "dragon",
+    "not_found": false
+  },
+  "overheat": {
+    "name": "overheat",
+    "type": "fire",
+    "not_found": false
+  },
+  "pain-split": {
+    "name": "pain-split",
+    "type": "normal",
+    "not_found": false
+  },
+  "payback": {
+    "name": "payback",
+    "type": "dark",
+    "not_found": false
+  },
+  "perish-song": {
+    "name": "perish-song",
+    "type": "normal",
+    "not_found": false
+  },
+  "petal-dance": {
+    "name": "petal-dance",
+    "type": "grass",
+    "not_found": false
+  },
+  "pluck": {
+    "name": "pluck",
+    "type": "flying",
+    "not_found": false
+  },
+  "poison-jab": {
+    "name": "poison-jab",
+    "type": "poison",
+    "not_found": false
+  },
+  "poison-powder": {
+    "name": "poison-powder",
+    "type": "poison",
+    "not_found": false
+  },
+  "poison-tail": {
+    "name": "poison-tail",
+    "type": "poison",
+    "not_found": false
+  },
+  "power-gem": {
+    "name": "power-gem",
+    "type": "rock",
+    "not_found": false
+  },
+  "power-split": {
+    "name": "power-split",
+    "type": "psychic",
+    "not_found": false
+  },
+  "power-trick": {
+    "name": "power-trick",
+    "type": "psychic",
+    "not_found": false
+  },
+  "power-whip": {
+    "name": "power-whip",
+    "type": "grass",
+    "not_found": false
+  },
+  "protect": {
+    "name": "protect",
+    "type": "normal",
+    "not_found": false
+  },
+  "psybeam": {
+    "name": "psybeam",
+    "type": "psychic",
+    "not_found": false
+  },
+  "psych-up": {
+    "name": "psych-up",
+    "type": "normal",
+    "not_found": false
+  },
+  "psychic": {
+    "name": "psychic",
+    "type": "psychic",
+    "not_found": false
+  },
+  "psycho-cut": {
+    "name": "psycho-cut",
+    "type": "psychic",
+    "not_found": false
+  },
+  "psyshock": {
+    "name": "psyshock",
+    "type": "psychic",
+    "not_found": false
+  },
+  "psywave": {
+    "name": "psywave",
+    "type": "psychic",
+    "not_found": false
+  },
+  "punishment": {
+    "name": "punishment",
+    "type": "dark",
+    "not_found": false
+  },
+  "pursuit": {
+    "name": "pursuit",
+    "type": "dark",
+    "not_found": false
+  },
+  "quash": {
+    "name": "quash",
+    "type": "dark",
+    "not_found": false
+  },
+  "quick-attack": {
+    "name": "quick-attack",
+    "type": "normal",
+    "not_found": false
+  },
+  "quick-guard": {
+    "name": "quick-guard",
+    "type": "fighting",
+    "not_found": false
+  },
+  "quiver-dance": {
+    "name": "quiver-dance",
+    "type": "bug",
+    "not_found": false
+  },
+  "rage-powder": {
+    "name": "rage-powder",
+    "type": "bug",
+    "not_found": false
+  },
+  "rain-dance": {
+    "name": "rain-dance",
+    "type": "water",
+    "not_found": false
+  },
+  "rapid-spin": {
+    "name": "rapid-spin",
+    "type": "normal",
+    "not_found": false
+  },
+  "razor-leaf": {
+    "name": "razor-leaf",
+    "type": "grass",
+    "not_found": false
+  },
+  "razor-shell": {
+    "name": "razor-shell",
+    "type": "water",
+    "not_found": false
+  },
+  "razor-wind": {
+    "name": "razor-wind",
+    "type": "normal",
+    "not_found": false
+  },
+  "recover": {
+    "name": "recover",
+    "type": "normal",
+    "not_found": false
+  },
+  "recycle": {
+    "name": "recycle",
+    "type": "normal",
+    "not_found": false
+  },
+  "reflect": {
+    "name": "reflect",
+    "type": "psychic",
+    "not_found": false
+  },
+  "reflect-type": {
+    "name": "reflect-type",
+    "type": "normal",
+    "not_found": false
+  },
+  "refresh": {
+    "name": "refresh",
+    "type": "normal",
+    "not_found": false
+  },
+  "rest": {
+    "name": "rest",
+    "type": "psychic",
+    "not_found": false
+  },
+  "retaliate": {
+    "name": "retaliate",
+    "type": "normal",
+    "not_found": false
+  },
+  "return": {
+    "name": "return",
+    "type": "normal",
+    "not_found": false
+  },
+  "revenge": {
+    "name": "revenge",
+    "type": "fighting",
+    "not_found": false
+  },
+  "reversal": {
+    "name": "reversal",
+    "type": "fighting",
+    "not_found": false
+  },
+  "roar": {
+    "name": "roar",
+    "type": "normal",
+    "not_found": false
+  },
+  "rock-blast": {
+    "name": "rock-blast",
+    "type": "rock",
+    "not_found": false
+  },
+  "rock-climb": {
+    "name": "rock-climb",
+    "type": "normal",
+    "not_found": false
+  },
+  "rock-polish": {
+    "name": "rock-polish",
+    "type": "rock",
+    "not_found": false
+  },
+  "rock-slide": {
+    "name": "rock-slide",
+    "type": "rock",
+    "not_found": false
+  },
+  "rock-smash": {
+    "name": "rock-smash",
+    "type": "fighting",
+    "not_found": false
+  },
+  "rock-throw": {
+    "name": "rock-throw",
+    "type": "rock",
+    "not_found": false
+  },
+  "rock-tomb": {
+    "name": "rock-tomb",
+    "type": "rock",
+    "not_found": false
+  },
+  "rock-wrecker": {
+    "name": "rock-wrecker",
+    "type": "rock",
+    "not_found": false
+  },
+  "rollout": {
+    "name": "rollout",
+    "type": "rock",
+    "not_found": false
+  },
+  "roost": {
+    "name": "roost",
+    "type": "flying",
+    "not_found": false
+  },
+  "round": {
+    "name": "round",
+    "type": "normal",
+    "not_found": false
+  },
+  "sacred-sword": {
+    "name": "sacred-sword",
+    "type": "fighting",
+    "not_found": false
+  },
+  "safeguard": {
+    "name": "safeguard",
+    "type": "normal",
+    "not_found": false
+  },
+  "sand-attack": {
+    "name": "sand-attack",
+    "type": "ground",
+    "not_found": false
+  },
+  "sand-tomb": {
+    "name": "sand-tomb",
+    "type": "ground",
+    "not_found": false
+  },
+  "sandstorm": {
+    "name": "sandstorm",
+    "type": "rock",
+    "not_found": false
+  },
+  "scald": {
+    "name": "scald",
+    "type": "water",
+    "not_found": false
+  },
+  "scary-face": {
+    "name": "scary-face",
+    "type": "normal",
+    "not_found": false
+  },
+  "screech": {
+    "name": "screech",
+    "type": "normal",
+    "not_found": false
+  },
+  "seed-bomb": {
+    "name": "seed-bomb",
+    "type": "grass",
+    "not_found": false
+  },
+  "seismic-toss": {
+    "name": "seismic-toss",
+    "type": "fighting",
+    "not_found": false
+  },
+  "shadow-ball": {
+    "name": "shadow-ball",
+    "type": "ghost",
+    "not_found": false
+  },
+  "shadow-claw": {
+    "name": "shadow-claw",
+    "type": "ghost",
+    "not_found": false
+  },
+  "shadow-punch": {
+    "name": "shadow-punch",
+    "type": "ghost",
+    "not_found": false
+  },
+  "shadow-sneak": {
+    "name": "shadow-sneak",
+    "type": "ghost",
+    "not_found": false
+  },
+  "sheer-cold": {
+    "name": "sheer-cold",
+    "type": "ice",
+    "not_found": false
+  },
+  "shell-smash": {
+    "name": "shell-smash",
+    "type": "normal",
+    "not_found": false
+  },
+  "shift-gear": {
+    "name": "shift-gear",
+    "type": "steel",
+    "not_found": false
+  },
+  "signal-beam": {
+    "name": "signal-beam",
+    "type": "bug",
+    "not_found": false
+  },
+  "silver-wind": {
+    "name": "silver-wind",
+    "type": "bug",
+    "not_found": false
+  },
+  "simple-beam": {
+    "name": "simple-beam",
+    "type": "normal",
+    "not_found": false
+  },
+  "sing": {
+    "name": "sing",
+    "type": "normal",
+    "not_found": false
+  },
+  "sky-attack": {
+    "name": "sky-attack",
+    "type": "flying",
+    "not_found": false
+  },
+  "sky-drop": {
+    "name": "sky-drop",
+    "type": "flying",
+    "not_found": false
+  },
+  "slack-off": {
+    "name": "slack-off",
+    "type": "normal",
+    "not_found": false
+  },
+  "slam": {
+    "name": "slam",
+    "type": "normal",
+    "not_found": false
+  },
+  "slash": {
+    "name": "slash",
+    "type": "normal",
+    "not_found": false
+  },
+  "sleep-powder": {
+    "name": "sleep-powder",
+    "type": "grass",
+    "not_found": false
+  },
+  "sleep-talk": {
+    "name": "sleep-talk",
+    "type": "normal",
+    "not_found": false
+  },
+  "sludge-bomb": {
+    "name": "sludge-bomb",
+    "type": "poison",
+    "not_found": false
+  },
+  "sludge-wave": {
+    "name": "sludge-wave",
+    "type": "poison",
+    "not_found": false
+  },
+  "smack-down": {
+    "name": "smack-down",
+    "type": "rock",
+    "not_found": false
+  },
+  "smelling-salt": {
+    "name": "smelling-salt",
+    "type": null,
+    "not_found": true
+  },
+  "smog": {
+    "name": "smog",
+    "type": "poison",
+    "not_found": false
+  },
+  "snatch": {
+    "name": "snatch",
+    "type": "dark",
+    "not_found": false
+  },
+  "snore": {
+    "name": "snore",
+    "type": "normal",
+    "not_found": false
+  },
+  "softboiled": {
+    "name": "softboiled",
+    "type": null,
+    "not_found": true
+  },
+  "solar-beam": {
+    "name": "solar-beam",
+    "type": "grass",
+    "not_found": false
+  },
+  "spark": {
+    "name": "spark",
+    "type": "electric",
+    "not_found": false
+  },
+  "spikes": {
+    "name": "spikes",
+    "type": "ground",
+    "not_found": false
+  },
+  "spit-up": {
+    "name": "spit-up",
+    "type": "normal",
+    "not_found": false
+  },
+  "spore": {
+    "name": "spore",
+    "type": "grass",
+    "not_found": false
+  },
+  "stealth-rock": {
+    "name": "stealth-rock",
+    "type": "rock",
+    "not_found": false
+  },
+  "steamroller": {
+    "name": "steamroller",
+    "type": "bug",
+    "not_found": false
+  },
+  "steel-wing": {
+    "name": "steel-wing",
+    "type": "steel",
+    "not_found": false
+  },
+  "stockpile": {
+    "name": "stockpile",
+    "type": "normal",
+    "not_found": false
+  },
+  "stomp": {
+    "name": "stomp",
+    "type": "normal",
+    "not_found": false
+  },
+  "stone-edge": {
+    "name": "stone-edge",
+    "type": "rock",
+    "not_found": false
+  },
+  "stored-power": {
+    "name": "stored-power",
+    "type": "psychic",
+    "not_found": false
+  },
+  "storm-throw": {
+    "name": "storm-throw",
+    "type": "fighting",
+    "not_found": false
+  },
+  "string-shot": {
+    "name": "string-shot",
+    "type": "bug",
+    "not_found": false
+  },
+  "struggle-bug": {
+    "name": "struggle-bug",
+    "type": "bug",
+    "not_found": false
+  },
+  "stun-spore": {
+    "name": "stun-spore",
+    "type": "grass",
+    "not_found": false
+  },
+  "substitute": {
+    "name": "substitute",
+    "type": "normal",
+    "not_found": false
+  },
+  "sucker-punch": {
+    "name": "sucker-punch",
+    "type": "dark",
+    "not_found": false
+  },
+  "sunny-day": {
+    "name": "sunny-day",
+    "type": "fire",
+    "not_found": false
+  },
+  "super-fang": {
+    "name": "super-fang",
+    "type": "normal",
+    "not_found": false
+  },
+  "superpower": {
+    "name": "superpower",
+    "type": "fighting",
+    "not_found": false
+  },
+  "supersonic": {
+    "name": "supersonic",
+    "type": "normal",
+    "not_found": false
+  },
+  "surf": {
+    "name": "surf",
+    "type": "water",
+    "not_found": false
+  },
+  "swagger": {
+    "name": "swagger",
+    "type": "normal",
+    "not_found": false
+  },
+  "swallow": {
+    "name": "swallow",
+    "type": "normal",
+    "not_found": false
+  },
+  "sweet-kiss": {
+    "name": "sweet-kiss",
+    "type": "fairy",
+    "not_found": false
+  },
+  "switcheroo": {
+    "name": "switcheroo",
+    "type": "dark",
+    "not_found": false
+  },
+  "swords-dance": {
+    "name": "swords-dance",
+    "type": "normal",
+    "not_found": false
+  },
+  "synchronoise": {
+    "name": "synchronoise",
+    "type": "psychic",
+    "not_found": false
+  },
+  "synthesis": {
+    "name": "synthesis",
+    "type": "grass",
+    "not_found": false
+  },
+  "tackle": {
+    "name": "tackle",
+    "type": "normal",
+    "not_found": false
+  },
+  "tail-slap": {
+    "name": "tail-slap",
+    "type": "normal",
+    "not_found": false
+  },
+  "tail-whip": {
+    "name": "tail-whip",
+    "type": "normal",
+    "not_found": false
+  },
+  "tailwind": {
+    "name": "tailwind",
+    "type": "flying",
+    "not_found": false
+  },
+  "take-down": {
+    "name": "take-down",
+    "type": "normal",
+    "not_found": false
+  },
+  "taunt": {
+    "name": "taunt",
+    "type": "dark",
+    "not_found": false
+  },
+  "teeter-dance": {
+    "name": "teeter-dance",
+    "type": "normal",
+    "not_found": false
+  },
+  "telekinesis": {
+    "name": "telekinesis",
+    "type": "psychic",
+    "not_found": false
+  },
+  "thief": {
+    "name": "thief",
+    "type": "dark",
+    "not_found": false
+  },
+  "thrash": {
+    "name": "thrash",
+    "type": "normal",
+    "not_found": false
+  },
+  "thunder": {
+    "name": "thunder",
+    "type": "electric",
+    "not_found": false
+  },
+  "thunder-fang": {
+    "name": "thunder-fang",
+    "type": "electric",
+    "not_found": false
+  },
+  "thunder-punch": {
+    "name": "thunder-punch",
+    "type": "electric",
+    "not_found": false
+  },
+  "thunder-wave": {
+    "name": "thunder-wave",
+    "type": "electric",
+    "not_found": false
+  },
+  "thunderbolt": {
+    "name": "thunderbolt",
+    "type": "electric",
+    "not_found": false
+  },
+  "tickle": {
+    "name": "tickle",
+    "type": "normal",
+    "not_found": false
+  },
+  "torment": {
+    "name": "torment",
+    "type": "dark",
+    "not_found": false
+  },
+  "toxic": {
+    "name": "toxic",
+    "type": "poison",
+    "not_found": false
+  },
+  "toxic-spikes": {
+    "name": "toxic-spikes",
+    "type": "poison",
+    "not_found": false
+  },
+  "tri-attack": {
+    "name": "tri-attack",
+    "type": "normal",
+    "not_found": false
+  },
+  "trick": {
+    "name": "trick",
+    "type": "psychic",
+    "not_found": false
+  },
+  "trick-room": {
+    "name": "trick-room",
+    "type": "psychic",
+    "not_found": false
+  },
+  "trump-card": {
+    "name": "trump-card",
+    "type": "normal",
+    "not_found": false
+  },
+  "u-turn": {
+    "name": "u-turn",
+    "type": "bug",
+    "not_found": false
+  },
+  "uproar": {
+    "name": "uproar",
+    "type": "normal",
+    "not_found": false
+  },
+  "venoshock": {
+    "name": "venoshock",
+    "type": "poison",
+    "not_found": false
+  },
+  "vital-throw": {
+    "name": "vital-throw",
+    "type": "fighting",
+    "not_found": false
+  },
+  "volt-switch": {
+    "name": "volt-switch",
+    "type": "electric",
+    "not_found": false
+  },
+  "wake-up-slap": {
+    "name": "wake-up-slap",
+    "type": "fighting",
+    "not_found": false
+  },
+  "water-pulse": {
+    "name": "water-pulse",
+    "type": "water",
+    "not_found": false
+  },
+  "water-sport": {
+    "name": "water-sport",
+    "type": "water",
+    "not_found": false
+  },
+  "water-spout": {
+    "name": "water-spout",
+    "type": "water",
+    "not_found": false
+  },
+  "waterfall": {
+    "name": "waterfall",
+    "type": "water",
+    "not_found": false
+  },
+  "weather-ball": {
+    "name": "weather-ball",
+    "type": "normal",
+    "not_found": false
+  },
+  "whirlpool": {
+    "name": "whirlpool",
+    "type": "water",
+    "not_found": false
+  },
+  "whirlwind": {
+    "name": "whirlwind",
+    "type": "normal",
+    "not_found": false
+  },
+  "wide-guard": {
+    "name": "wide-guard",
+    "type": "rock",
+    "not_found": false
+  },
+  "wild-charge": {
+    "name": "wild-charge",
+    "type": "electric",
+    "not_found": false
+  },
+  "will-o-wisp": {
+    "name": "will-o-wisp",
+    "type": "fire",
+    "not_found": false
+  },
+  "wish": {
+    "name": "wish",
+    "type": "normal",
+    "not_found": false
+  },
+  "wonder-room": {
+    "name": "wonder-room",
+    "type": "psychic",
+    "not_found": false
+  },
+  "wood-hammer": {
+    "name": "wood-hammer",
+    "type": "grass",
+    "not_found": false
+  },
+  "work-up": {
+    "name": "work-up",
+    "type": "normal",
+    "not_found": false
+  },
+  "wrap": {
+    "name": "wrap",
+    "type": "normal",
+    "not_found": false
+  },
+  "wring-out": {
+    "name": "wring-out",
+    "type": "normal",
+    "not_found": false
+  },
+  "x-scissor": {
+    "name": "x-scissor",
+    "type": "bug",
+    "not_found": false
+  },
+  "yawn": {
+    "name": "yawn",
+    "type": "normal",
+    "not_found": false
+  },
+  "zap-cannon": {
+    "name": "zap-cannon",
+    "type": "electric",
+    "not_found": false
+  },
+  "zen-headbutt": {
+    "name": "zen-headbutt",
+    "type": "psychic",
+    "not_found": false
+  },
+  "absorb-bulb": {
+    "name": "absorb-bulb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/absorb-bulb.png",
+    "not_found": false
+  },
+  "air-balloon": {
+    "name": "air-balloon",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-balloon.png",
+    "not_found": false
+  },
+  "big-root": {
+    "name": "big-root",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png",
+    "not_found": false
+  },
+  "binding-band": {
+    "name": "binding-band",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/binding-band.png",
+    "not_found": false
+  },
+  "black-belt": {
+    "name": "black-belt",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png",
+    "not_found": false
+  },
+  "black-glasses": {
+    "name": "black-glasses",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png",
+    "not_found": false
+  },
+  "black-sludge": {
+    "name": "black-sludge",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png",
+    "not_found": false
+  },
+  "bright-powder": {
+    "name": "bright-powder",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png",
+    "not_found": false
+  },
+  "cell-battery": {
+    "name": "cell-battery",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cell-battery.png",
+    "not_found": false
+  },
+  "charcoal": {
+    "name": "charcoal",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png",
+    "not_found": false
+  },
+  "charti-berry": {
+    "name": "charti-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png",
+    "not_found": false
+  },
+  "cheri-berry": {
+    "name": "cheri-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png",
+    "not_found": false
+  },
+  "chesto-berry": {
+    "name": "chesto-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png",
+    "not_found": false
+  },
+  "choice-band": {
+    "name": "choice-band",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png",
+    "not_found": false
+  },
+  "choice-scarf": {
+    "name": "choice-scarf",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+    "not_found": false
+  },
+  "choice-specs": {
+    "name": "choice-specs",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png",
+    "not_found": false
+  },
+  "chople-berry": {
+    "name": "chople-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png",
+    "not_found": false
+  },
+  "coba-berry": {
+    "name": "coba-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png",
+    "not_found": false
+  },
+  "colbur-berry": {
+    "name": "colbur-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png",
+    "not_found": false
+  },
+  "custap-berry": {
+    "name": "custap-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/custap-berry.png",
+    "not_found": false
+  },
+  "damp-rock": {
+    "name": "damp-rock",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png",
+    "not_found": false
+  },
+  "dark-gem": {
+    "name": "dark-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dark-gem.png",
+    "not_found": false
+  },
+  "destiny-knot": {
+    "name": "destiny-knot",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/destiny-knot.png",
+    "not_found": false
+  },
+  "dragon-fang": {
+    "name": "dragon-fang",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-fang.png",
+    "not_found": false
+  },
+  "dragon-gem": {
+    "name": "dragon-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-gem.png",
+    "not_found": false
+  },
+  "electric-gem": {
+    "name": "electric-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-gem.png",
+    "not_found": false
+  },
+  "enigma-berry": {
+    "name": "enigma-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/enigma-berry.png",
+    "not_found": false
+  },
+  "expert-belt": {
+    "name": "expert-belt",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png",
+    "not_found": false
+  },
+  "fire-gem": {
+    "name": "fire-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-gem.png",
+    "not_found": false
+  },
+  "flame-orb": {
+    "name": "flame-orb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png",
+    "not_found": false
+  },
+  "flying-gem": {
+    "name": "flying-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flying-gem.png",
+    "not_found": false
+  },
+  "focus-band": {
+    "name": "focus-band",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png",
+    "not_found": false
+  },
+  "focus-sash": {
+    "name": "focus-sash",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+    "not_found": false
+  },
+  "full-incense": {
+    "name": "full-incense",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-incense.png",
+    "not_found": false
+  },
+  "ganlon-berry": {
+    "name": "ganlon-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ganlon-berry.png",
+    "not_found": false
+  },
+  "grass-gem": {
+    "name": "grass-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-gem.png",
+    "not_found": false
+  },
+  "grip-claw": {
+    "name": "grip-claw",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grip-claw.png",
+    "not_found": false
+  },
+  "ground-gem": {
+    "name": "ground-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ground-gem.png",
+    "not_found": false
+  },
+  "haban-berry": {
+    "name": "haban-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/haban-berry.png",
+    "not_found": false
+  },
+  "hard-stone": {
+    "name": "hard-stone",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png",
+    "not_found": false
+  },
+  "heat-rock": {
+    "name": "heat-rock",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png",
+    "not_found": false
+  },
+  "ice-gem": {
+    "name": "ice-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-gem.png",
+    "not_found": false
+  },
+  "icy-rock": {
+    "name": "icy-rock",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icy-rock.png",
+    "not_found": false
+  },
+  "insect-plate": {
+    "name": "insect-plate",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/insect-plate.png",
+    "not_found": false
+  },
+  "iron-ball": {
+    "name": "iron-ball",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-ball.png",
+    "not_found": false
+  },
+  "jaboca-berry": {
+    "name": "jaboca-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/jaboca-berry.png",
+    "not_found": false
+  },
+  "kasib-berry": {
+    "name": "kasib-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png",
+    "not_found": false
+  },
+  "king-s-rock": {
+    "name": "king-s-rock",
+    "sprite_url": null,
+    "not_found": true
+  },
+  "lax-incense": {
+    "name": "lax-incense",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png",
+    "not_found": false
+  },
+  "leftovers": {
+    "name": "leftovers",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+    "not_found": false
+  },
+  "liechi-berry": {
+    "name": "liechi-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
+    "not_found": false
+  },
+  "life-orb": {
+    "name": "life-orb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png",
+    "not_found": false
+  },
+  "light-clay": {
+    "name": "light-clay",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-clay.png",
+    "not_found": false
+  },
+  "lum-berry": {
+    "name": "lum-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+    "not_found": false
+  },
+  "magnet": {
+    "name": "magnet",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png",
+    "not_found": false
+  },
+  "metal-coat": {
+    "name": "metal-coat",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png",
+    "not_found": false
+  },
+  "miracle-seed": {
+    "name": "miracle-seed",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png",
+    "not_found": false
+  },
+  "muscle-band": {
+    "name": "muscle-band",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png",
+    "not_found": false
+  },
+  "mystic-water": {
+    "name": "mystic-water",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png",
+    "not_found": false
+  },
+  "never-melt-ice": {
+    "name": "never-melt-ice",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png",
+    "not_found": false
+  },
+  "normal-gem": {
+    "name": "normal-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/normal-gem.png",
+    "not_found": false
+  },
+  "occa-berry": {
+    "name": "occa-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png",
+    "not_found": false
+  },
+  "passho-berry": {
+    "name": "passho-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
+    "not_found": false
+  },
+  "payapa-berry": {
+    "name": "payapa-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png",
+    "not_found": false
+  },
+  "pecha-berry": {
+    "name": "pecha-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png",
+    "not_found": false
+  },
+  "persim-berry": {
+    "name": "persim-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png",
+    "not_found": false
+  },
+  "petaya-berry": {
+    "name": "petaya-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/petaya-berry.png",
+    "not_found": false
+  },
+  "poison-barb": {
+    "name": "poison-barb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png",
+    "not_found": false
+  },
+  "poison-gem": {
+    "name": "poison-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-gem.png",
+    "not_found": false
+  },
+  "power-herb": {
+    "name": "power-herb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png",
+    "not_found": false
+  },
+  "psychic-gem": {
+    "name": "psychic-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-gem.png",
+    "not_found": false
+  },
+  "quick-claw": {
+    "name": "quick-claw",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+    "not_found": false
+  },
+  "rawst-berry": {
+    "name": "rawst-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png",
+    "not_found": false
+  },
+  "razor-claw": {
+    "name": "razor-claw",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-claw.png",
+    "not_found": false
+  },
+  "razor-fang": {
+    "name": "razor-fang",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png",
+    "not_found": false
+  },
+  "rindo-berry": {
+    "name": "rindo-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png",
+    "not_found": false
+  },
+  "ring-target": {
+    "name": "ring-target",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ring-target.png",
+    "not_found": false
+  },
+  "rock-gem": {
+    "name": "rock-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-gem.png",
+    "not_found": false
+  },
+  "rocky-helmet": {
+    "name": "rocky-helmet",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png",
+    "not_found": false
+  },
+  "rose-incense": {
+    "name": "rose-incense",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rose-incense.png",
+    "not_found": false
+  },
+  "salac-berry": {
+    "name": "salac-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
+    "not_found": false
+  },
+  "scope-lens": {
+    "name": "scope-lens",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png",
+    "not_found": false
+  },
+  "sharp-beak": {
+    "name": "sharp-beak",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png",
+    "not_found": false
+  },
+  "shell-bell": {
+    "name": "shell-bell",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png",
+    "not_found": false
+  },
+  "shuca-berry": {
+    "name": "shuca-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png",
+    "not_found": false
+  },
+  "silk-scarf": {
+    "name": "silk-scarf",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png",
+    "not_found": false
+  },
+  "silver-powder": {
+    "name": "silver-powder",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png",
+    "not_found": false
+  },
+  "sitrus-berry": {
+    "name": "sitrus-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+    "not_found": false
+  },
+  "smooth-rock": {
+    "name": "smooth-rock",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png",
+    "not_found": false
+  },
+  "soft-sand": {
+    "name": "soft-sand",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png",
+    "not_found": false
+  },
+  "spell-tag": {
+    "name": "spell-tag",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png",
+    "not_found": false
+  },
+  "splash-plate": {
+    "name": "splash-plate",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/splash-plate.png",
+    "not_found": false
+  },
+  "steel-gem": {
+    "name": "steel-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-gem.png",
+    "not_found": false
+  },
+  "tanga-berry": {
+    "name": "tanga-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tanga-berry.png",
+    "not_found": false
+  },
+  "thick-club": {
+    "name": "thick-club",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thick-club.png",
+    "not_found": false
+  },
+  "toxic-orb": {
+    "name": "toxic-orb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png",
+    "not_found": false
+  },
+  "toxic-plate": {
+    "name": "toxic-plate",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-plate.png",
+    "not_found": false
+  },
+  "twisted-spoon": {
+    "name": "twisted-spoon",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png",
+    "not_found": false
+  },
+  "wacan-berry": {
+    "name": "wacan-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png",
+    "not_found": false
+  },
+  "water-gem": {
+    "name": "water-gem",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-gem.png",
+    "not_found": false
+  },
+  "white-herb": {
+    "name": "white-herb",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+    "not_found": false
+  },
+  "wide-lens": {
+    "name": "wide-lens",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png",
+    "not_found": false
+  },
+  "wise-glasses": {
+    "name": "wise-glasses",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png",
+    "not_found": false
+  },
+  "yache-berry": {
+    "name": "yache-berry",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png",
+    "not_found": false
+  },
+  "zoom-lens": {
+    "name": "zoom-lens",
+    "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png",
+    "not_found": false
   }
 }

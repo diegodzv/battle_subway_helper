@@ -58,5 +58,6 @@
       "name": "Heal Block",
       "type": "psychic"
     }
-  ]
+  ],
+  "item_slug": "persim-berry"
 }
