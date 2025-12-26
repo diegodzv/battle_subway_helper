@@ -16,7 +16,7 @@ function Sprite({ url, alt }) {
 }
 
 function ItemIcon({ url, alt }) {
-  if (!url) return <span className="itemIconFallback" title="Sin icono">◻</span>;
+  if (!url) return <span className="itemIconFallback" title="No icon">◻</span>;
   return <img className="itemIcon" src={url} alt={alt} loading="lazy" />;
 }
 
@@ -26,11 +26,11 @@ function TypeBadge({ type }) {
 }
 
 function StatBar({ label, value, max = 250 }) {
-  // value en Lv50 suele estar 50..200 aprox (HP puede subir más).
+  // Lv50 values are usually ~50..200 (HP can go a bit higher).
   const v = typeof value === "number" ? value : 0;
   const pct = Math.max(0, Math.min(100, Math.round((v / max) * 100)));
 
-  // Color por “tier” (no depende de tipo)
+  // Tier color
   let tier = "low";
   if (v >= 170) tier = "high";
   else if (v >= 120) tier = "mid";
@@ -84,7 +84,7 @@ function DetailPanel({ set, index, onRemoveSeen }) {
     return (
       <div className="teamSlotEmpty">
         <div className="teamSlotIndex mono">#{index + 1}</div>
-        <div className="muted">Hueco vacío</div>
+        <div className="muted">Empty slot</div>
       </div>
     );
   }
@@ -117,9 +117,9 @@ function DetailPanel({ set, index, onRemoveSeen }) {
         <button
           className="chip chipDanger"
           onClick={() => onRemoveSeen(set.global_id)}
-          title="Quitar de vistos"
+          title="Remove from seen"
         >
-          Quitar ✕
+          Remove ✕
         </button>
       </div>
 
@@ -136,7 +136,7 @@ function DetailPanel({ set, index, onRemoveSeen }) {
       </div>
 
       <div className="box">
-        <div className="h3">Movimientos</div>
+        <div className="h3">Moves</div>
         <ul className="moves">
           {movesMeta
             ? movesMeta.map((m) => (
@@ -215,7 +215,7 @@ export default function App() {
 
     const res = await fetch(`/trainers/${trainerId}`);
     if (!res.ok) {
-      alert("No pude cargar el entrenador.");
+      alert("Could not load trainer.");
       return;
     }
     const data = await res.json();
@@ -255,7 +255,7 @@ export default function App() {
   const poolSets = trainer?.sets ?? [];
   const remainingSets = filterInfo?.possible_remaining_sets ?? [];
 
-  // ✅ Pool ordenado por pokédex, luego global_id
+  // Pool sorted by dex number, then global_id
   const poolSortedDex = useMemo(() => {
     const copy = [...poolSets];
     copy.sort((a, b) => {
@@ -286,7 +286,7 @@ export default function App() {
     setSuggestions([]);
   }
 
-  // 4 slots (vistos en orden)
+  // 4 slots (seen in order)
   const teamSets = useMemo(() => {
     const byId = new Map(poolSets.map((s) => [s.global_id, s]));
     const slots = [null, null, null, null];
@@ -300,8 +300,8 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div className="brand">
-          <div className="brandTitle">Metro Batalla (B2/W2)</div>
-          <div className="muted">Set 4/5 · selector + filtro 4v4</div>
+          <div className="brandTitle">Battle Subway (B2/W2)</div>
+          <div className="muted">Super Set 4/5 · selector + 4v4 filter</div>
         </div>
 
         <div className="searchBox">
@@ -309,9 +309,9 @@ export default function App() {
             className="searchInput"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder='Busca entrenador (ej: "battle girl", "scientist")...'
+            placeholder='Search trainer (e.g. "battle girl", "scientist")...'
           />
-          {isSearching ? <div className="spinner" title="Buscando..." /> : null}
+          {isSearching ? <div className="spinner" title="Searching..." /> : null}
 
           {suggestions.length > 0 ? (
             <div className="dropdown">
@@ -340,10 +340,10 @@ export default function App() {
       <main className="content">
         {!trainer ? (
           <div className="empty">
-            <div className="emptyTitle">Selecciona un entrenador</div>
+            <div className="emptyTitle">Select a trainer</div>
             <div className="muted">
-              Escribe arriba para autocompletar y elige uno. Luego marca Pokémon
-              según te los enseñe.
+              Type in the search box and pick one. Then mark Pokémon as the
+              opponent reveals them.
             </div>
           </div>
         ) : (
@@ -360,14 +360,14 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="subTitle">Pool (por Pokédex)</div>
+              <div className="subTitle">Pool (by Pokédex)</div>
               <div className="cards poolOneCol">
                 {poolSortedDex.map((s) => (
                   <SetCard
                     key={s.global_id}
                     set={s}
                     selected={selectedSet?.global_id === s.global_id}
-                    tag={seenSet.has(s.global_id) ? "Visto" : ""}
+                    tag={seenSet.has(s.global_id) ? "Seen" : ""}
                     tone={seenSet.has(s.global_id) ? "seen" : "default"}
                     onClick={() => setSelectedSet(s)}
                   />
@@ -378,13 +378,13 @@ export default function App() {
             <aside className="side">
               <section className="panel">
                 <div className="panelTitle">
-                  <div className="h2">Vistos ({seen.length}/4)</div>
-                  {isFiltering ? <div className="muted">calculando…</div> : null}
+                  <div className="h2">Seen ({seen.length}/4)</div>
+                  {isFiltering ? <div className="muted">calculating…</div> : null}
                 </div>
 
                 {seen.length === 0 ? (
                   <div className="muted">
-                    Marca los Pokémon que vaya sacando el rival.
+                    Mark the Pokémon as the opponent sends them out.
                   </div>
                 ) : (
                   <div className="seenChips">
@@ -393,7 +393,7 @@ export default function App() {
                         key={gid}
                         className="chip"
                         onClick={() => unmarkSeen(gid)}
-                        title="Quitar"
+                        title="Remove"
                       >
                         <span className="mono">#{gid}</span> ✕
                       </button>
@@ -403,13 +403,13 @@ export default function App() {
 
                 <div className="box">
                   <div className="statRow">
-                    <span className="muted">Equipos posibles</span>
+                    <span className="muted">Possible teams</span>
                     <span className="mono">
                       {filterInfo?.num_possible_teams ?? "-"}
                     </span>
                   </div>
                   <div className="statRow">
-                    <span className="muted">Restantes posibles</span>
+                    <span className="muted">Possible remaining</span>
                     <span className="mono">
                       {filterInfo
                         ? filterInfo.possible_remaining_global_ids.length
@@ -421,9 +421,7 @@ export default function App() {
                 <div className="actionsRow">
                   <button
                     className="primaryBtn"
-                    onClick={() =>
-                      selectedSet && markSeen(selectedSet.global_id)
-                    }
+                    onClick={() => selectedSet && markSeen(selectedSet.global_id)}
                     disabled={
                       !selectedSet ||
                       seenSet.has(selectedSet.global_id) ||
@@ -431,23 +429,23 @@ export default function App() {
                     }
                     title={
                       !selectedSet
-                        ? "Selecciona uno en el pool"
+                        ? "Select a Pokémon from the pool"
                         : seenSet.has(selectedSet.global_id)
-                        ? "Ya está visto"
+                        ? "Already marked as seen"
                         : seen.length >= 4
-                        ? "Ya tienes 4 vistos"
-                        : "Marcar seleccionado como visto"
+                        ? "You already have 4 seen"
+                        : "Mark selected Pokémon as seen"
                     }
                   >
-                    Marcar seleccionado como visto
+                    Mark selected as seen
                   </button>
                 </div>
               </section>
 
               <section className="panel">
                 <div className="panelTitle">
-                  <div className="h2">Equipo detectado</div>
-                  <div className="muted">1–4 (izquierda → derecha)</div>
+                  <div className="h2">Detected team</div>
+                  <div className="muted">1–4 (left → right)</div>
                 </div>
 
                 <div className="teamRow">
@@ -464,14 +462,15 @@ export default function App() {
 
               <section className="panel">
                 <div className="panelTitle">
-                  <div className="h2">Posibles restantes</div>
+                  <div className="h2">Possible remaining</div>
                 </div>
 
                 {!filterInfo ? (
-                  <div className="muted">Selecciona un entrenador para empezar.</div>
+                  <div className="muted">Select a trainer to begin.</div>
                 ) : remainingSets.length === 0 && seen.length > 0 ? (
                   <div className="muted">
-                    No quedan posibilidades (¿marcaste un ID que no está en el pool?).
+                    No possibilities left (did you mark an ID that is not in the
+                    pool?).
                   </div>
                 ) : (
                   <div className="cards compact">
@@ -492,7 +491,7 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Pool ordenado por Pokédex. Items y tipos de movimientos en modo visual.
+        Pool sorted by Pokédex. Items and move types shown visually.
       </footer>
     </div>
   );
