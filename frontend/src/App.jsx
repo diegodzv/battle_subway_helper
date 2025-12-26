@@ -75,20 +75,28 @@ function StatRow({ label, value, max = 200 }) {
   );
 }
 
+function setDisplayName(set) {
+  if (!set) return "";
+  const v = typeof set.variant_index === "number" ? set.variant_index : null;
+  return v ? `${set.species}-${v}` : set.species;
+}
+
 function SetCard({ set, onClick, selected, tag, tone = "default" }) {
   const spe = set?.stats_lv50?.Spe ?? "-";
+  const display = setDisplayName(set);
+
   return (
     <button
       className={`card ${selected ? "cardSelected" : ""} ${
         tone === "seen" ? "cardSeen" : ""
       }`}
       onClick={onClick}
-      title={`${set.species} (#${set.global_id})`}
+      title={`${display} (#${set.global_id})`}
     >
       <div className="cardTop">
-        <Sprite url={set.sprite_url_pokeapi} alt={set.species} />
+        <Sprite url={set.sprite_url_pokeapi} alt={display} />
         <div className="cardTitle">
-          <div className="name">{set.species}</div>
+          <div className="name">{display}</div>
           <div className="meta muted">
             <span className="mono">
               #{set.global_id} · Dex {set.dex_number ?? "?"}
@@ -113,6 +121,7 @@ function DetailPanel({ set, index, onRemoveSeen }) {
     );
   }
 
+  const display = setDisplayName(set);
   const movesMeta = Array.isArray(set.moves_meta) ? set.moves_meta : null;
   const movesFallback = Array.isArray(set.moves) ? set.moves : [];
 
@@ -121,9 +130,9 @@ function DetailPanel({ set, index, onRemoveSeen }) {
       <div className="teamHeader">
         <div className="teamHeaderLeft">
           <div className="teamSlotIndex mono">#{index + 1}</div>
-          <Sprite url={set.sprite_url_pokeapi} alt={set.species} />
+          <Sprite url={set.sprite_url_pokeapi} alt={display} />
           <div>
-            <div className="h2">{set.species}</div>
+            <div className="h2">{display}</div>
             <div className="muted">
               <span className="mono">
                 #{set.global_id} · Dex {set.dex_number ?? "?"}
@@ -279,6 +288,7 @@ export default function App() {
   const poolSets = trainer?.sets ?? [];
   const remainingSets = filterInfo?.possible_remaining_sets ?? [];
 
+  // Pool sorted by Pokédex number, then global_id
   const poolSortedDex = useMemo(() => {
     const copy = [...poolSets];
     copy.sort((a, b) => {
@@ -309,6 +319,7 @@ export default function App() {
     setSuggestions([]);
   }
 
+  // 4 slots (seen order)
   const teamSets = useMemo(() => {
     const byId = new Map(poolSets.map((s) => [s.global_id, s]));
     const slots = [null, null, null, null];
@@ -364,8 +375,8 @@ export default function App() {
           <div className="empty">
             <div className="emptyTitle">Select a trainer</div>
             <div className="muted">
-              Type in the search box and pick one. Then mark Pokémon as the
-              opponent reveals them.
+              Type above to autocomplete and pick one. Then mark Pokémon as you
+              see them.
             </div>
           </div>
         ) : (
@@ -406,7 +417,7 @@ export default function App() {
 
                 {seen.length === 0 ? (
                   <div className="muted">
-                    Mark the Pokémon as the opponent sends them out.
+                    Mark the Pokémon as the opponent reveals them.
                   </div>
                 ) : (
                   <div className="seenChips">
