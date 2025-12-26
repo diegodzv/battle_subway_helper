@@ -319,8 +319,8 @@
   align-items: center;
 }
 .itemIcon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   image-rendering: pixelated;
   filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
 }
@@ -384,7 +384,7 @@
 .stat-orange { background: rgba(255, 160, 60, 0.80); }  /* 80-99 */
 .stat-yellow { background: rgba(255, 220, 70, 0.85); }  /* 100-129 */
 .stat-gLight { background: rgba(120, 255, 140, 0.70); } /* 130-159 */
-.stat-gDark  { background: rgba(0, 210, 120, 0.80); }   /* 160-200 */
+.stat-gDark  { background: rgba(27, 163, 156); }   /* 160-200 */
 
 /* overflow overlay: painted on top from the left */
 .statOverflow {
@@ -392,7 +392,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background: rgba(0, 46, 245, 0.8); /* blue */
+  background: rgb(213, 184, 255); /* mauve */
   mix-blend-mode: screen;
 }
 
