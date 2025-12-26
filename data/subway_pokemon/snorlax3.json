@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Double-Edge",
+      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

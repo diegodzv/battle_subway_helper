@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Aqua Jet",
+      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Switcheroo",
+      "slug": "switcheroo",
       "type": "dark"
     },
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     }
   ],

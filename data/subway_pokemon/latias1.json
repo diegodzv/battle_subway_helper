@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Calm Mind",
+      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Reflect Type",
+      "slug": "reflect-type",
       "type": "normal"
     },
     {
       "name": "Dragon Pulse",
+      "slug": "dragon-pulse",
       "type": "dragon"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     }
   ],

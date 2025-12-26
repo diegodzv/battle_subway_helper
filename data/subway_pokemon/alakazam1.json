@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Energy Ball",
+      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Telekinesis",
+      "slug": "telekinesis",
       "type": "psychic"
     },
     {
       "name": "Guard Split",
+      "slug": "guard-split",
       "type": "psychic"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Air Slash",
+      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Heat Wave",
+      "slug": "heat-wave",
       "type": "fire"
     },
     {
       "name": "Water Pulse",
+      "slug": "water-pulse",
       "type": "water"
     }
   ],

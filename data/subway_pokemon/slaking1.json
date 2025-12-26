@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     }
   ],

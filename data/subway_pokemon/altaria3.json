@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dragon Dance",
+      "slug": "dragon-dance",
       "type": "dragon"
     },
     {
       "name": "Dragon Rush",
+      "slug": "dragon-rush",
       "type": "dragon"
     },
     {
       "name": "Sky Attack",
+      "slug": "sky-attack",
       "type": "flying"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     }
   ],

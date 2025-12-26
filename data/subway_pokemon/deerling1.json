@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Double Kick",
+      "slug": "double-kick",
       "type": "fighting"
     },
     {
       "name": "Faint Attack",
-      "type": null
+      "slug": "feint-attack",
+      "type": "dark"
     },
     {
       "name": "Sand-Attack",
+      "slug": "sand-attack",
       "type": "ground"
     },
     {
       "name": "Leech Seed",
+      "slug": "leech-seed",
       "type": "grass"
     }
   ],

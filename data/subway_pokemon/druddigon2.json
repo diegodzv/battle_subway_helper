@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dragon Claw",
+      "slug": "dragon-claw",
       "type": "dragon"
     },
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Slash",
+      "slug": "slash",
       "type": "normal"
     },
     {
       "name": "Hone Claws",
+      "slug": "hone-claws",
       "type": "dark"
     }
   ],

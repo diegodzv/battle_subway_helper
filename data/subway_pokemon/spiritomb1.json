@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sucker Punch",
+      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Pain Split",
+      "slug": "pain-split",
       "type": "normal"
     },
     {
       "name": "Toxic",
+      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Grudge",
+      "slug": "grudge",
       "type": "ghost"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Weather Ball",
+      "slug": "weather-ball",
       "type": "normal"
     },
     {
       "name": "SolarBeam",
+      "slug": "solar-beam",
       "type": "grass"
     },
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Gastro Acid",
+      "slug": "gastro-acid",
       "type": "poison"
     }
   ],

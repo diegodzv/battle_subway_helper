@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Overheat",
+      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
       "type": "fire"
     }
   ],

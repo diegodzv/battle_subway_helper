@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Charge Beam",
+      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Flash Cannon",
+      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Magnet Rise",
+      "slug": "magnet-rise",
       "type": "electric"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     }
   ],

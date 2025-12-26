@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dragon Tail",
+      "slug": "dragon-tail",
       "type": "dragon"
     },
     {
       "name": "Headbutt",
+      "slug": "headbutt",
       "type": "normal"
     },
     {
       "name": "Rock Smash",
+      "slug": "rock-smash",
       "type": "fighting"
     },
     {
       "name": "Roar",
+      "slug": "roar",
       "type": "normal"
     }
   ],

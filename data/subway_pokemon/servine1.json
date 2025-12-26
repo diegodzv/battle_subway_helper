@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Leaf Blade",
+      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "Slam",
+      "slug": "slam",
       "type": "normal"
     },
     {
       "name": "Iron Tail",
+      "slug": "iron-tail",
       "type": "steel"
     },
     {
       "name": "Wrap",
+      "slug": "wrap",
       "type": "normal"
     }
   ],

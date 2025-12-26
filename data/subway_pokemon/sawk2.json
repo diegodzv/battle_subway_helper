@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Endure",
+      "slug": "endure",
       "type": "normal"
     },
     {
       "name": "Reversal",
+      "slug": "reversal",
       "type": "fighting"
     }
   ],

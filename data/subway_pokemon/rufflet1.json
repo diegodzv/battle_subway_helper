@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Fury Attack",
+      "slug": "fury-attack",
       "type": "normal"
     },
     {
       "name": "Scary Face",
+      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Defog",
+      "slug": "defog",
       "type": "flying"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Steamroller",
+      "slug": "steamroller",
       "type": "bug"
     },
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Screech",
+      "slug": "screech",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Psyshock",
+      "slug": "psyshock",
       "type": "psychic"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Energy Ball",
+      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Trick Room",
+      "slug": "trick-room",
       "type": "psychic"
     }
   ],

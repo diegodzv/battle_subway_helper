@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Body Slam",
+      "slug": "body-slam",
       "type": "normal"
     },
     {
       "name": "Helping Hand",
+      "slug": "helping-hand",
       "type": "normal"
     },
     {
       "name": "Milk Drink",
+      "slug": "milk-drink",
       "type": "normal"
     },
     {
       "name": "Heal Bell",
+      "slug": "heal-bell",
       "type": "normal"
     }
   ],

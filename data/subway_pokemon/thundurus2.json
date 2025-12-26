@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Dark Pulse",
+      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     }
   ],

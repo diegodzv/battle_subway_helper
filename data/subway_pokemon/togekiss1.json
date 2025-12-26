@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Reflect",
+      "slug": "reflect",
       "type": "psychic"
     },
     {
       "name": "Follow Me",
+      "slug": "follow-me",
       "type": "normal"
     }
   ],

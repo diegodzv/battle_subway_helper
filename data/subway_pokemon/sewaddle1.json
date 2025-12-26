@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Bug Bite",
+      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "Razor Leaf",
+      "slug": "razor-leaf",
       "type": "grass"
     },
     {
       "name": "String Shot",
+      "slug": "string-shot",
       "type": "bug"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     }
   ],

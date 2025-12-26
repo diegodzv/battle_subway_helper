@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Nasty Plot",
+      "slug": "nasty-plot",
       "type": "dark"
     },
     {
       "name": "Counter",
+      "slug": "counter",
       "type": "fighting"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hyper Fang",
+      "slug": "hyper-fang",
       "type": "normal"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Flail",
+      "slug": "flail",
       "type": "normal"
     },
     {
       "name": "Confuse Ray",
+      "slug": "confuse-ray",
       "type": "ghost"
     }
   ],

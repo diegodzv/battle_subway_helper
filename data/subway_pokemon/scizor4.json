@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Bug Bite",
+      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Bullet Punch",
+      "slug": "bullet-punch",
       "type": "steel"
     }
   ],

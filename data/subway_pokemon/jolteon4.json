@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Hyper Beam",
+      "slug": "hyper-beam",
       "type": "normal"
     },
     {
       "name": "Fake Tears",
+      "slug": "fake-tears",
       "type": "dark"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     }
   ],

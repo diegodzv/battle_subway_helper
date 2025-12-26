@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Overheat",
+      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

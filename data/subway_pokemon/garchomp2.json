@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fire Blast",
+      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Incinerate",
+      "slug": "incinerate",
       "type": "fire"
     },
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Scary Face",
+      "slug": "scary-face",
       "type": "normal"
     }
   ],

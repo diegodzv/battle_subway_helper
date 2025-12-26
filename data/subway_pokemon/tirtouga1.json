@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Aqua Jet",
+      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Smack Down",
+      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Wide Guard",
+      "slug": "wide-guard",
       "type": "rock"
     },
     {
       "name": "Shell Smash",
+      "slug": "shell-smash",
       "type": "normal"
     }
   ],

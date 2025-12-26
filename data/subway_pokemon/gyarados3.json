@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dragon Dance",
+      "slug": "dragon-dance",
       "type": "dragon"
     },
     {
       "name": "Waterfall",
+      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     }
   ],

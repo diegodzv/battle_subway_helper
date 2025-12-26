@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hydro Pump",
+      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Hex",
+      "slug": "hex",
       "type": "ghost"
     },
     {
       "name": "Recover",
+      "slug": "recover",
       "type": "normal"
     },
     {
       "name": "Toxic",
+      "slug": "toxic",
       "type": "poison"
     }
   ],

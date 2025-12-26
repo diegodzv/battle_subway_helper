@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fire Blast",
+      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Flame Burst",
+      "slug": "flame-burst",
       "type": "fire"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Taunt",
+      "slug": "taunt",
       "type": "dark"
     }
   ],

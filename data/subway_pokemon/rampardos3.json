@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Head Smash",
+      "slug": "head-smash",
       "type": "rock"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "ThunderPunch",
+      "slug": "thunder-punch",
       "type": "electric"
     }
   ],

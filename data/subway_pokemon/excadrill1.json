@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hone Claws",
+      "slug": "hone-claws",
       "type": "dark"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Drill Run",
+      "slug": "drill-run",
       "type": "ground"
     },
     {
       "name": "Iron Defense",
+      "slug": "iron-defense",
       "type": "steel"
     }
   ],

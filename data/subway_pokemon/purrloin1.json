@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Echoed Voice",
+      "slug": "echoed-voice",
       "type": "normal"
     },
     {
       "name": "Hone Claws",
+      "slug": "hone-claws",
       "type": "dark"
     },
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     }
   ],

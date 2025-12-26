@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hyper Fang",
+      "slug": "hyper-fang",
       "type": "normal"
     },
     {
       "name": "Slam",
+      "slug": "slam",
       "type": "normal"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Hypnosis",
+      "slug": "hypnosis",
       "type": "psychic"
     }
   ],

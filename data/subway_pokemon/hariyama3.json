@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Close Combat",
+      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Detect",
+      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     }
   ],

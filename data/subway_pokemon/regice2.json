@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Icy Wind",
+      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     }
   ],

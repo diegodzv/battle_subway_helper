@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Overheat",
+      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Quiver Dance",
+      "slug": "quiver-dance",
       "type": "bug"
     },
     {
       "name": "Bug Buzz",
+      "slug": "bug-buzz",
       "type": "bug"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

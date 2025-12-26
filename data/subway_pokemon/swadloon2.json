@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Razor Leaf",
+      "slug": "razor-leaf",
       "type": "grass"
     },
     {
       "name": "Dream Eater",
+      "slug": "dream-eater",
       "type": "psychic"
     },
     {
       "name": "GrassWhistle",
+      "slug": "grass-whistle",
       "type": "grass"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

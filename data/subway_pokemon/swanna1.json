@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Brave Bird",
+      "slug": "brave-bird",
       "type": "flying"
     },
     {
       "name": "Facade",
+      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "Pluck",
+      "slug": "pluck",
       "type": "flying"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     }
   ],

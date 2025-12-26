@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Charge Beam",
+      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Energy Ball",
+      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     }
   ],

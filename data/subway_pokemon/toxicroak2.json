@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Substitute",
+      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

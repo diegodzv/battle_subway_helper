@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Giga Drain",
+      "slug": "giga-drain",
       "type": "grass"
     },
     {
       "name": "Double Team",
+      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Ingrain",
+      "slug": "ingrain",
       "type": "grass"
     },
     {
       "name": "Spore",
+      "slug": "spore",
       "type": "grass"
     }
   ],

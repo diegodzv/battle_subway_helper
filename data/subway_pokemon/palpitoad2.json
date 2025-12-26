@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hyper Voice",
+      "slug": "hyper-voice",
       "type": "normal"
     },
     {
       "name": "Muddy Water",
+      "slug": "muddy-water",
       "type": "water"
     },
     {
       "name": "Mud Shot",
+      "slug": "mud-shot",
       "type": "ground"
     },
     {
       "name": "Aqua Ring",
+      "slug": "aqua-ring",
       "type": "water"
     }
   ],

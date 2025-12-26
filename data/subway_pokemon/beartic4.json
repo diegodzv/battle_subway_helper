@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Hail",
+      "slug": "hail",
       "type": "ice"
     },
     {
       "name": "Icy Wind",
+      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     },
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     }
   ],

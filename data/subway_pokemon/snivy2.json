@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Leaf Blade",
+      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "Slam",
+      "slug": "slam",
       "type": "normal"
     },
     {
       "name": "Gastro Acid",
+      "slug": "gastro-acid",
       "type": "poison"
     },
     {
       "name": "Coil",
+      "slug": "coil",
       "type": "poison"
     }
   ],

@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Sucker Punch",
+      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Taunt",
+      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

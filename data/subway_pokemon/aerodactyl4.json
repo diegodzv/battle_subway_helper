@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     }
   ],

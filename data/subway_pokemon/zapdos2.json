@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Charge Beam",
+      "slug": "charge-beam",
       "type": "electric"
     },
     {
       "name": "Heat Wave",
+      "slug": "heat-wave",
       "type": "fire"
     },
     {
       "name": "Double Team",
+      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     }
   ],

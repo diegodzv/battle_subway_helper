@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Smack Down",
+      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Volt Switch",
+      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Magnet Rise",
+      "slug": "magnet-rise",
       "type": "electric"
     }
   ],

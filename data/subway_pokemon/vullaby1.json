@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Pluck",
+      "slug": "pluck",
       "type": "flying"
     },
     {
       "name": "Faint Attack",
-      "type": null
+      "slug": "feint-attack",
+      "type": "dark"
     },
     {
       "name": "Flatter",
+      "slug": "flatter",
       "type": "dark"
     },
     {
       "name": "Tailwind",
+      "slug": "tailwind",
       "type": "flying"
     }
   ],

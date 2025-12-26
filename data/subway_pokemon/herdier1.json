@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Take Down",
+      "slug": "take-down",
       "type": "normal"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Odor Sleuth",
+      "slug": "odor-sleuth",
       "type": "normal"
     },
     {
       "name": "Roar",
+      "slug": "roar",
       "type": "normal"
     }
   ],

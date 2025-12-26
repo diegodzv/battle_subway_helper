@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Close Combat",
+      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     },
     {
       "name": "Final Gambit",
+      "slug": "final-gambit",
       "type": "fighting"
     }
   ],

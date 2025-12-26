@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hail",
+      "slug": "hail",
       "type": "ice"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Ominous Wind",
+      "slug": "ominous-wind",
       "type": "ghost"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     }
   ],

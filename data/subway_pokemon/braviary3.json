@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Brave Bird",
+      "slug": "brave-bird",
       "type": "flying"
     },
     {
       "name": "Return",
+      "slug": "return",
       "type": "normal"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     }
   ],

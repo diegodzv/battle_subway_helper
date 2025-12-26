@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "X-Scissor",
+      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Slash",
+      "slug": "slash",
       "type": "normal"
     },
     {
       "name": "Poison Jab",
+      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Swords Dance",
+      "slug": "swords-dance",
       "type": "normal"
     }
   ],

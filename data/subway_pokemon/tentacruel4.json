@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Toxic",
+      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Venoshock",
+      "slug": "venoshock",
       "type": "poison"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

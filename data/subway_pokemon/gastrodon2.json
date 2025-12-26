@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Waterfall",
+      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Amnesia",
+      "slug": "amnesia",
       "type": "psychic"
     },
     {
       "name": "Curse",
+      "slug": "curse",
       "type": "ghost"
     },
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     }
   ],

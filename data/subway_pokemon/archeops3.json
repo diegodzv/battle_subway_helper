@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Head Smash",
+      "slug": "head-smash",
       "type": "rock"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     }
   ],

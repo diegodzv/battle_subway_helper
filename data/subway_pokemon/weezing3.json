@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Thunder",
+      "slug": "thunder",
       "type": "electric"
     },
     {
       "name": "Fire Blast",
+      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     }
   ],

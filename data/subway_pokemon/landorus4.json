@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earth Power",
+      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     }
   ],

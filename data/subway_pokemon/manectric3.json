@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Overheat",
+      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Volt Switch",
+      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Quick Attack",
+      "slug": "quick-attack",
       "type": "normal"
     }
   ],

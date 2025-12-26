@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dizzy Punch",
+      "slug": "dizzy-punch",
       "type": "normal"
     },
     {
       "name": "Fire Punch",
+      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "ThunderPunch",
+      "slug": "thunder-punch",
       "type": "electric"
     },
     {
       "name": "Ice Punch",
+      "slug": "ice-punch",
       "type": "ice"
     }
   ],

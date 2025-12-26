@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Aqua Tail",
+      "slug": "aqua-tail",
       "type": "water"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Whirlpool",
+      "slug": "whirlpool",
       "type": "water"
     }
   ],

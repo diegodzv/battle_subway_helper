@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Assist",
+      "slug": "assist",
       "type": "normal"
     },
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     }
   ],

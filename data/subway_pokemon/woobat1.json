@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Air Cutter",
+      "slug": "air-cutter",
       "type": "flying"
     },
     {
       "name": "Psyshock",
+      "slug": "psyshock",
       "type": "psychic"
     },
     {
       "name": "Attract",
+      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Odor Sleuth",
+      "slug": "odor-sleuth",
       "type": "normal"
     }
   ],

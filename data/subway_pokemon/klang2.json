@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Gear Grind",
+      "slug": "gear-grind",
       "type": "steel"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Hyper Beam",
+      "slug": "hyper-beam",
       "type": "normal"
     },
     {
       "name": "Shift Gear",
+      "slug": "shift-gear",
       "type": "steel"
     }
   ],

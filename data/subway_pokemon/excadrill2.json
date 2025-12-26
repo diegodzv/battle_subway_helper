@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dig",
+      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Metal Sound",
+      "slug": "metal-sound",
       "type": "steel"
     },
     {
       "name": "Metal Claw",
+      "slug": "metal-claw",
       "type": "steel"
     },
     {
       "name": "Swords Dance",
+      "slug": "swords-dance",
       "type": "normal"
     }
   ],

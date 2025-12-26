@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sucker Punch",
+      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     }
   ],

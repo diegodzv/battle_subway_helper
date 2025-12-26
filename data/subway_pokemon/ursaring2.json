@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Facade",
+      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "Hammer Arm",
+      "slug": "hammer-arm",
       "type": "fighting"
     },
     {
       "name": "Scary Face",
+      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     }
   ],

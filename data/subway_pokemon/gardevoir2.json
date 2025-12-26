@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Stored Power",
+      "slug": "stored-power",
       "type": "psychic"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Calm Mind",
+      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Ally Switch",
+      "slug": "ally-switch",
       "type": "psychic"
     }
   ],

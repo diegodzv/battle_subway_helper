@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Dragon Claw",
+      "slug": "dragon-claw",
       "type": "dragon"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Dragon Dance",
+      "slug": "dragon-dance",
       "type": "dragon"
     }
   ],

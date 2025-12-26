@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "X-Scissor",
+      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Rock Blast",
+      "slug": "rock-blast",
       "type": "rock"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Curse",
+      "slug": "curse",
       "type": "ghost"
     }
   ],

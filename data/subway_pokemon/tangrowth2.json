@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Wring Out",
+      "slug": "wring-out",
       "type": "normal"
     },
     {
       "name": "Tickle",
+      "slug": "tickle",
       "type": "normal"
     },
     {
       "name": "Power Whip",
+      "slug": "power-whip",
       "type": "grass"
     },
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     }
   ],

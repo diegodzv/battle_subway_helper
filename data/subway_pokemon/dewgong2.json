@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Ice Shard",
+      "slug": "ice-shard",
       "type": "ice"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     }
   ],

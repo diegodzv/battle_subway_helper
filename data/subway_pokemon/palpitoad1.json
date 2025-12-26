@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Round",
+      "slug": "round",
       "type": "normal"
     },
     {
       "name": "BubbleBeam",
+      "slug": "bubble-beam",
       "type": "water"
     },
     {
       "name": "Mud Shot",
+      "slug": "mud-shot",
       "type": "ground"
     },
     {
       "name": "Supersonic",
+      "slug": "supersonic",
       "type": "normal"
     }
   ],

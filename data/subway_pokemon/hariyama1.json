@@ -40,24 +40,28 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png",
   "dex_number": 297,
-  "item_sprite_url": null,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
   "moves_meta": [
     {
       "name": "Feint",
+      "slug": "feint",
       "type": "normal"
     },
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Smack Down",
+      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Vital Throw",
+      "slug": "vital-throw",
       "type": "fighting"
     }
   ],
-  "item_slug": "king-s-rock"
+  "item_slug": "kings-rock"
 }

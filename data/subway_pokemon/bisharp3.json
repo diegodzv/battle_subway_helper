@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Iron Head",
+      "slug": "iron-head",
       "type": "steel"
     },
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Low Sweep",
+      "slug": "low-sweep",
       "type": "fighting"
     },
     {
       "name": "Sucker Punch",
+      "slug": "sucker-punch",
       "type": "dark"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Charge Beam",
+      "slug": "charge-beam",
       "type": "electric"
     }
   ],

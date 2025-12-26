@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hypnosis",
+      "slug": "hypnosis",
       "type": "psychic"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Cross Poison",
+      "slug": "cross-poison",
       "type": "poison"
     },
     {
       "name": "Taunt",
+      "slug": "taunt",
       "type": "dark"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Foul Play",
+      "slug": "foul-play",
       "type": "dark"
     },
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Scary Face",
+      "slug": "scary-face",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Bug Bite",
+      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Facade",
+      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "String Shot",
+      "slug": "string-shot",
       "type": "bug"
     }
   ],

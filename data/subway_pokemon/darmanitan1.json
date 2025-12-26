@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fire Punch",
+      "slug": "fire-punch",
       "type": "fire"
     },
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Belly Drum",
+      "slug": "belly-drum",
       "type": "normal"
     },
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Gear Grind",
+      "slug": "gear-grind",
       "type": "steel"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Screech",
+      "slug": "screech",
       "type": "normal"
     },
     {
       "name": "Volt Switch",
+      "slug": "volt-switch",
       "type": "electric"
     }
   ],

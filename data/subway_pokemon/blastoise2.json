@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hydro Pump",
+      "slug": "hydro-pump",
       "type": "water"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Mist",
+      "slug": "mist",
       "type": "ice"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     }
   ],

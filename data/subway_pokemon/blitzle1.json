@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Spark",
+      "slug": "spark",
       "type": "electric"
     },
     {
       "name": "Quick Attack",
+      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Tail Whip",
+      "slug": "tail-whip",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunder Fang",
+      "slug": "thunder-fang",
       "type": "electric"
     },
     {
       "name": "Ice Fang",
+      "slug": "ice-fang",
       "type": "ice"
     },
     {
       "name": "Superpower",
+      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Outrage",
+      "slug": "outrage",
       "type": "dragon"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Giga Impact",
+      "slug": "giga-impact",
       "type": "normal"
     },
     {
       "name": "Superpower",
+      "slug": "superpower",
       "type": "fighting"
     }
   ],

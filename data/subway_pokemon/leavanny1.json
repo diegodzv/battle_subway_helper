@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Leaf Blade",
+      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "Bug Bite",
+      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     }
   ],

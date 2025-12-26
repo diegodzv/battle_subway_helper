@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Switcheroo",
+      "slug": "switcheroo",
       "type": "dark"
     },
     {
       "name": "Mirror Coat",
+      "slug": "mirror-coat",
       "type": "psychic"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Dig",
+      "slug": "dig",
       "type": "ground"
     }
   ],

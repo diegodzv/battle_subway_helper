@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Megahorn",
+      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Facade",
+      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     }
   ],

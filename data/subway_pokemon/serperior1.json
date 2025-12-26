@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Attract",
+      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Leaf Tornado",
+      "slug": "leaf-tornado",
       "type": "grass"
     },
     {
       "name": "Dragon Tail",
+      "slug": "dragon-tail",
       "type": "dragon"
     },
     {
       "name": "Gastro Acid",
+      "slug": "gastro-acid",
       "type": "poison"
     }
   ],

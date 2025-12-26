@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thrash",
+      "slug": "thrash",
       "type": "normal"
     },
     {
       "name": "Bulk Up",
+      "slug": "bulk-up",
       "type": "fighting"
     },
     {
       "name": "Superpower",
+      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Pluck",
+      "slug": "pluck",
       "type": "flying"
     }
   ],

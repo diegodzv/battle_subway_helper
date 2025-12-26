@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Sand-Attack",
+      "slug": "sand-attack",
       "type": "ground"
     },
     {
       "name": "Torment",
+      "slug": "torment",
       "type": "dark"
     }
   ],

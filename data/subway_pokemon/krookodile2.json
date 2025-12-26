@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Smack Down",
+      "slug": "smack-down",
       "type": "rock"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Embargo",
+      "slug": "embargo",
       "type": "dark"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Horn Leech",
+      "slug": "horn-leech",
       "type": "grass"
     },
     {
       "name": "Double-Edge",
+      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Wild Charge",
+      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Jump Kick",
+      "slug": "jump-kick",
       "type": "fighting"
     }
   ],

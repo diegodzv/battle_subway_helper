@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Zen Headbutt",
+      "slug": "zen-headbutt",
       "type": "psychic"
     },
     {
       "name": "Sucker Punch",
+      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Superpower",
+      "slug": "superpower",
       "type": "fighting"
     }
   ],

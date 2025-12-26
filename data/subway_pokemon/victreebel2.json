@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Leaf Storm",
+      "slug": "leaf-storm",
       "type": "grass"
     },
     {
       "name": "Sleep Powder",
+      "slug": "sleep-powder",
       "type": "grass"
     },
     {
       "name": "Stockpile",
+      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     }
   ],

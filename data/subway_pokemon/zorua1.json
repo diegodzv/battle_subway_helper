@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Foul Play",
+      "slug": "foul-play",
       "type": "dark"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Leer",
+      "slug": "leer",
       "type": "normal"
     }
   ],

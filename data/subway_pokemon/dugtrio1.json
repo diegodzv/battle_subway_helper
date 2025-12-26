@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Reversal",
+      "slug": "reversal",
       "type": "fighting"
     },
     {
       "name": "Attract",
+      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Dig",
+      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

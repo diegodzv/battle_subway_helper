@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Air Cutter",
+      "slug": "air-cutter",
       "type": "flying"
     },
     {
       "name": "AncientPower",
+      "slug": "ancient-power",
       "type": "rock"
     }
   ],

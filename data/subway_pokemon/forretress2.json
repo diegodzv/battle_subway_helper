@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Spikes",
+      "slug": "spikes",
       "type": "ground"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Magnet Rise",
+      "slug": "magnet-rise",
       "type": "electric"
     },
     {
       "name": "Gyro Ball",
+      "slug": "gyro-ball",
       "type": "steel"
     }
   ],

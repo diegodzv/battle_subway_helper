@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Waterfall",
+      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Double-Edge",
+      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Final Gambit",
+      "slug": "final-gambit",
       "type": "fighting"
     }
   ],

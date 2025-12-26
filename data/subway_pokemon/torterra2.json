@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Wood Hammer",
+      "slug": "wood-hammer",
       "type": "grass"
     },
     {
       "name": "Tickle",
+      "slug": "tickle",
       "type": "normal"
     }
   ],

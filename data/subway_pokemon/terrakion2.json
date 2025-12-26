@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sacred Sword",
+      "slug": "sacred-sword",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     }
   ],

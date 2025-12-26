@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Flamethrower",
+      "slug": "flamethrower",
       "type": "fire"
     },
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Incinerate",
+      "slug": "incinerate",
       "type": "fire"
     },
     {
       "name": "Memento",
+      "slug": "memento",
       "type": "dark"
     }
   ],

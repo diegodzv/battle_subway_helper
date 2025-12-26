@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Leaf Blade",
+      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Swords Dance",
+      "slug": "swords-dance",
       "type": "normal"
     }
   ],

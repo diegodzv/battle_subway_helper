@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Icicle Crash",
+      "slug": "icicle-crash",
       "type": "ice"
     },
     {
       "name": "Slash",
+      "slug": "slash",
       "type": "normal"
     },
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     }
   ],

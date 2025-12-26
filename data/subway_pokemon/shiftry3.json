@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sunny Day",
+      "slug": "sunny-day",
       "type": "fire"
     },
     {
       "name": "SolarBeam",
+      "slug": "solar-beam",
       "type": "grass"
     },
     {
       "name": "Dark Pulse",
+      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "Explosion",
+      "slug": "explosion",
       "type": "normal"
     }
   ],

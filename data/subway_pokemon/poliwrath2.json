@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Waterfall",
+      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Hypnosis",
+      "slug": "hypnosis",
       "type": "psychic"
     },
     {
       "name": "Belly Drum",
+      "slug": "belly-drum",
       "type": "normal"
     }
   ],

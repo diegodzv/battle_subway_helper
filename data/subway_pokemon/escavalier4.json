@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Megahorn",
+      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Iron Head",
+      "slug": "iron-head",
       "type": "steel"
     },
     {
       "name": "Swagger",
+      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Reversal",
+      "slug": "reversal",
       "type": "fighting"
     }
   ],

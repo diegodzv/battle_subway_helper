@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Charm",
+      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Sleep Powder",
+      "slug": "sleep-powder",
       "type": "grass"
     },
     {
       "name": "Petal Dance",
+      "slug": "petal-dance",
       "type": "grass"
     },
     {
       "name": "Healing Wish",
+      "slug": "healing-wish",
       "type": "psychic"
     }
   ],

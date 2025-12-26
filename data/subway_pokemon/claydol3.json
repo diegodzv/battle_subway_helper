@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earth Power",
+      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Ally Switch",
+      "slug": "ally-switch",
       "type": "psychic"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     }
   ],

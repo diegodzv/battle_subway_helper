@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "ThunderPunch",
+      "slug": "thunder-punch",
       "type": "electric"
     },
     {
       "name": "Reversal",
+      "slug": "reversal",
       "type": "fighting"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     }
   ],

@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Ice Shard",
+      "slug": "ice-shard",
       "type": "ice"
     },
     {
       "name": "Ice Punch",
+      "slug": "ice-punch",
       "type": "ice"
     },
     {
       "name": "Torment",
+      "slug": "torment",
       "type": "dark"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

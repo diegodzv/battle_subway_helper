@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hi Jump Kick",
-      "type": null
+      "slug": "high-jump-kick",
+      "type": "fighting"
     },
     {
       "name": "Zen Headbutt",
+      "slug": "zen-headbutt",
       "type": "psychic"
     },
     {
       "name": "Ice Punch",
+      "slug": "ice-punch",
       "type": "ice"
     },
     {
       "name": "Bullet Punch",
+      "slug": "bullet-punch",
       "type": "steel"
     }
   ],

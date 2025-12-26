@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Destiny Bond",
+      "slug": "destiny-bond",
       "type": "ghost"
     }
   ],

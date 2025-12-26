@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hex",
+      "slug": "hex",
       "type": "ghost"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Dream Eater",
+      "slug": "dream-eater",
       "type": "psychic"
     },
     {
       "name": "Hypnosis",
+      "slug": "hypnosis",
       "type": "psychic"
     }
   ],

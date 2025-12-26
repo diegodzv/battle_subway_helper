@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Tri Attack",
+      "slug": "tri-attack",
       "type": "normal"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     }
   ],

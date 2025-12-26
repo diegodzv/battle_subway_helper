@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     },
     {
       "name": "Wild Charge",
+      "slug": "wild-charge",
       "type": "electric"
     }
   ],

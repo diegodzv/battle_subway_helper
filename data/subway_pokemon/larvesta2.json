@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Flame Wheel",
+      "slug": "flame-wheel",
       "type": "fire"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
       "type": "fire"
     }
   ],

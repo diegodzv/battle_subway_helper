@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Toxic",
+      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     }
   ],

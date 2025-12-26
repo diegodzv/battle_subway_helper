@@ -40,24 +40,28 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
   "dex_number": 34,
-  "item_sprite_url": null,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
   "moves_meta": [
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Megahorn",
+      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Hone Claws",
+      "slug": "hone-claws",
       "type": "dark"
     }
   ],
-  "item_slug": "king-s-rock"
+  "item_slug": "kings-rock"
 }

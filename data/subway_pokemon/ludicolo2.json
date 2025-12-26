@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     },
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Tickle",
+      "slug": "tickle",
       "type": "normal"
     }
   ],

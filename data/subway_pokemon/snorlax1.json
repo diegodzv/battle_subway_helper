@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Body Slam",
+      "slug": "body-slam",
       "type": "normal"
     },
     {
       "name": "Wild Charge",
+      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Counter",
+      "slug": "counter",
       "type": "fighting"
     },
     {
       "name": "Recycle",
+      "slug": "recycle",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Bulk Up",
+      "slug": "bulk-up",
       "type": "fighting"
     },
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Drain Punch",
+      "slug": "drain-punch",
       "type": "fighting"
     }
   ],

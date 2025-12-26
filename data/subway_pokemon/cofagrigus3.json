@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Destiny Bond",
+      "slug": "destiny-bond",
       "type": "ghost"
     },
     {
       "name": "Trick Room",
+      "slug": "trick-room",
       "type": "psychic"
     }
   ],

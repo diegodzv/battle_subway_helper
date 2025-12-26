@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Endure",
+      "slug": "endure",
       "type": "normal"
     },
     {
       "name": "Calm Mind",
+      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Baton Pass",
+      "slug": "baton-pass",
       "type": "normal"
     }
   ],

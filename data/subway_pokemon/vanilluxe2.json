@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Avalanche",
+      "slug": "avalanche",
       "type": "ice"
     },
     {
       "name": "Ice Shard",
+      "slug": "ice-shard",
       "type": "ice"
     },
     {
       "name": "Natural Gift",
+      "slug": "natural-gift",
       "type": "normal"
     },
     {
       "name": "Giga Impact",
+      "slug": "giga-impact",
       "type": "normal"
     }
   ],

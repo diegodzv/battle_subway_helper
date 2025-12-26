@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Final Gambit",
+      "slug": "final-gambit",
       "type": "fighting"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Icy Wind",
+      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Destiny Bond",
+      "slug": "destiny-bond",
       "type": "ghost"
     }
   ],

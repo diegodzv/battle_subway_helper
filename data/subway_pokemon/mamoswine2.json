@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Ice Fang",
+      "slug": "ice-fang",
       "type": "ice"
     }
   ],

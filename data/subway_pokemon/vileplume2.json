@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "SolarBeam",
+      "slug": "solar-beam",
       "type": "grass"
     },
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Synthesis",
+      "slug": "synthesis",
       "type": "grass"
     },
     {
       "name": "Double Team",
+      "slug": "double-team",
       "type": "normal"
     }
   ],

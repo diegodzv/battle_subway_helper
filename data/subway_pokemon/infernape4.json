@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Flare Blitz",
+      "slug": "flare-blitz",
       "type": "fire"
     },
     {
       "name": "Close Combat",
+      "slug": "close-combat",
       "type": "fighting"
     }
   ],

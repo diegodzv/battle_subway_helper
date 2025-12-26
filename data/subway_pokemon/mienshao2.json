@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Jump Kick",
+      "slug": "jump-kick",
       "type": "fighting"
     },
     {
       "name": "Bounce",
+      "slug": "bounce",
       "type": "flying"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     }
   ],

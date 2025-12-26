@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Waterfall",
+      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Aqua Jet",
+      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     }
   ],

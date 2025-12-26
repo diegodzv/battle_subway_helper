@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Giga Impact",
+      "slug": "giga-impact",
       "type": "normal"
     },
     {
       "name": "Quick Attack",
+      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Hypnosis",
+      "slug": "hypnosis",
       "type": "psychic"
     },
     {
       "name": "Sky Attack",
+      "slug": "sky-attack",
       "type": "flying"
     }
   ],

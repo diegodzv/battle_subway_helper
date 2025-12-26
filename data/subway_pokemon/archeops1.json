@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Quick Attack",
+      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     }
   ],

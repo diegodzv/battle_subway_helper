@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Electroweb",
+      "slug": "electroweb",
       "type": "electric"
     },
     {
       "name": "Bug Bite",
+      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "String Shot",
+      "slug": "string-shot",
       "type": "bug"
     },
     {
       "name": "Gastro Acid",
+      "slug": "gastro-acid",
       "type": "poison"
     }
   ],

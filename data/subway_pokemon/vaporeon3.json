@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Muddy Water",
+      "slug": "muddy-water",
       "type": "water"
     },
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Aqua Ring",
+      "slug": "aqua-ring",
       "type": "water"
     },
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     }
   ],

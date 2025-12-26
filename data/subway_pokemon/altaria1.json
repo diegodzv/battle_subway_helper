@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sing",
+      "slug": "sing",
       "type": "normal"
     },
     {
       "name": "Cotton Guard",
+      "slug": "cotton-guard",
       "type": "grass"
     },
     {
       "name": "Echoed Voice",
+      "slug": "echoed-voice",
       "type": "normal"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     }
   ],

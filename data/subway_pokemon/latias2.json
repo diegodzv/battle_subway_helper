@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Draco Meteor",
+      "slug": "draco-meteor",
       "type": "dragon"
     },
     {
       "name": "Thunder",
+      "slug": "thunder",
       "type": "electric"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

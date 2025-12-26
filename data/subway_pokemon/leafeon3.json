@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sunny Day",
+      "slug": "sunny-day",
       "type": "fire"
     },
     {
       "name": "Leaf Blade",
+      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "X-Scissor",
+      "slug": "x-scissor",
       "type": "bug"
     },
     {
       "name": "Synthesis",
+      "slug": "synthesis",
       "type": "grass"
     }
   ],

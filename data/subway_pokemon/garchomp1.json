@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Sandstorm",
+      "slug": "sandstorm",
       "type": "rock"
     },
     {
       "name": "Sand Tomb",
+      "slug": "sand-tomb",
       "type": "ground"
     }
   ],

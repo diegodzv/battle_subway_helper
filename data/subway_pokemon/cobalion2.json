@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Metal Burst",
+      "slug": "metal-burst",
       "type": "steel"
     },
     {
       "name": "Sacred Sword",
+      "slug": "sacred-sword",
       "type": "fighting"
     },
     {
       "name": "Quick Attack",
+      "slug": "quick-attack",
       "type": "normal"
     },
     {
       "name": "Iron Head",
+      "slug": "iron-head",
       "type": "steel"
     }
   ],

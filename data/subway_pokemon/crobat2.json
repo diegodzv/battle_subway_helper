@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Air Slash",
+      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Confuse Ray",
+      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Nasty Plot",
+      "slug": "nasty-plot",
       "type": "dark"
     }
   ],

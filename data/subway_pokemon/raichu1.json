@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Thief",
+      "slug": "thief",
       "type": "dark"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Discharge",
+      "slug": "discharge",
       "type": "electric"
     }
   ],

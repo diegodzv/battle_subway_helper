@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Dragon Claw",
+      "slug": "dragon-claw",
       "type": "dragon"
     },
     {
       "name": "Agility",
+      "slug": "agility",
       "type": "psychic"
     }
   ],

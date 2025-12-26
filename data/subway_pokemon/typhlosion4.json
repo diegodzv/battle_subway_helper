@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Extrasensory",
+      "slug": "extrasensory",
       "type": "psychic"
     },
     {
       "name": "Lava Plume",
+      "slug": "lava-plume",
       "type": "fire"
     },
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "SolarBeam",
+      "slug": "solar-beam",
       "type": "grass"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Calm Mind",
+      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
       "type": "fire"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Heat Wave",
+      "slug": "heat-wave",
       "type": "fire"
     }
   ],

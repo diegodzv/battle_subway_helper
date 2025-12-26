@@ -40,24 +40,28 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/620.png",
   "dex_number": 620,
-  "item_sprite_url": null,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Fling",
+      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Hi Jump Kick",
-      "type": null
+      "slug": "high-jump-kick",
+      "type": "fighting"
     }
   ],
-  "item_slug": "king-s-rock"
+  "item_slug": "kings-rock"
 }

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Head Charge",
+      "slug": "head-charge",
       "type": "normal"
     },
     {
       "name": "Pursuit",
+      "slug": "pursuit",
       "type": "dark"
     },
     {
       "name": "Scary Face",
+      "slug": "scary-face",
       "type": "normal"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     }
   ],

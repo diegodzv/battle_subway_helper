@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Tears",
+      "slug": "fake-tears",
       "type": "dark"
     },
     {
       "name": "Helping Hand",
+      "slug": "helping-hand",
       "type": "normal"
     },
     {
       "name": "Mach Punch",
+      "slug": "mach-punch",
       "type": "fighting"
     },
     {
       "name": "Stun Spore",
+      "slug": "stun-spore",
       "type": "grass"
     }
   ],

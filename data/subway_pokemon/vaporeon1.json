@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Wish",
+      "slug": "wish",
       "type": "normal"
     },
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Helping Hand",
+      "slug": "helping-hand",
       "type": "normal"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     }
   ],

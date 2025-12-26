@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Chip Away",
+      "slug": "chip-away",
       "type": "normal"
     },
     {
       "name": "Swagger",
+      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Helping Hand",
+      "slug": "helping-hand",
       "type": "normal"
     },
     {
       "name": "Flatter",
+      "slug": "flatter",
       "type": "dark"
     }
   ],

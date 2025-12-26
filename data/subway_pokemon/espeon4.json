@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Morning Sun",
+      "slug": "morning-sun",
       "type": "normal"
     }
   ],

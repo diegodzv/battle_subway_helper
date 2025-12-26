@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "DynamicPunch",
+      "slug": "dynamic-punch",
       "type": "fighting"
     },
     {
       "name": "Shadow Punch",
+      "slug": "shadow-punch",
       "type": "ghost"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     }
   ],

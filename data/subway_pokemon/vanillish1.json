@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Icy Wind",
+      "slug": "icy-wind",
       "type": "ice"
     },
     {
       "name": "Mirror Shot",
+      "slug": "mirror-shot",
       "type": "steel"
     },
     {
       "name": "Taunt",
+      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Acid Armor",
+      "slug": "acid-armor",
       "type": "poison"
     }
   ],

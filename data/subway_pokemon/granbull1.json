@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Metronome",
-      "type": null
+      "slug": "metronome",
+      "type": "normal"
     },
     {
       "name": "Attract",
+      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Mimic",
+      "slug": "mimic",
       "type": "normal"
     },
     {
       "name": "Return",
+      "slug": "return",
       "type": "normal"
     }
   ],

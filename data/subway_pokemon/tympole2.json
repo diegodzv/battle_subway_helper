@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Echoed Voice",
+      "slug": "echoed-voice",
       "type": "normal"
     },
     {
       "name": "Aqua Ring",
+      "slug": "aqua-ring",
       "type": "water"
     },
     {
       "name": "Rain Dance",
+      "slug": "rain-dance",
       "type": "water"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Charm",
+      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Safeguard",
+      "slug": "safeguard",
       "type": "normal"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Charge Beam",
+      "slug": "charge-beam",
       "type": "electric"
     }
   ],

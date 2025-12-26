@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Megahorn",
+      "slug": "megahorn",
       "type": "bug"
     },
     {
       "name": "Iron Defense",
+      "slug": "iron-defense",
       "type": "steel"
     },
     {
       "name": "Poison Jab",
+      "slug": "poison-jab",
       "type": "poison"
     },
     {
       "name": "Iron Head",
+      "slug": "iron-head",
       "type": "steel"
     }
   ],

@@ -44,19 +44,23 @@
   "moves_meta": [
     {
       "name": "Toxic",
+      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Minimize",
+      "slug": "minimize",
       "type": "normal"
     },
     {
       "name": "Mud Bomb",
+      "slug": "mud-bomb",
       "type": "ground"
     },
     {
       "name": "Softboiled",
-      "type": null
+      "slug": "soft-boiled",
+      "type": "normal"
     }
   ],
   "item_slug": "chople-berry"

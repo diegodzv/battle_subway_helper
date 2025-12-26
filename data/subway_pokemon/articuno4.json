@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Tailwind",
+      "slug": "tailwind",
       "type": "flying"
     },
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Sky Drop",
+      "slug": "sky-drop",
       "type": "flying"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

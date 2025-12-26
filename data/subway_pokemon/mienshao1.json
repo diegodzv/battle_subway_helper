@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Drain Punch",
+      "slug": "drain-punch",
       "type": "fighting"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Wide Guard",
+      "slug": "wide-guard",
       "type": "rock"
     },
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Air Slash",
+      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Attract",
+      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Calm Mind",
+      "slug": "calm-mind",
       "type": "psychic"
     }
   ],

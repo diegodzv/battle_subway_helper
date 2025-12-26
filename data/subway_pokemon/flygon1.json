@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Dragon Claw",
+      "slug": "dragon-claw",
       "type": "dragon"
     },
     {
       "name": "Endure",
+      "slug": "endure",
       "type": "normal"
     },
     {
       "name": "Fire Blast",
+      "slug": "fire-blast",
       "type": "fire"
     }
   ],

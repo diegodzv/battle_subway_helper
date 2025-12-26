@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Psycho Cut",
+      "slug": "psycho-cut",
       "type": "psychic"
     },
     {
       "name": "Leaf Blade",
+      "slug": "leaf-blade",
       "type": "grass"
     },
     {
       "name": "Slash",
+      "slug": "slash",
       "type": "normal"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

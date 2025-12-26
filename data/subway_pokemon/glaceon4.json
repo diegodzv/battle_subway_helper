@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Signal Beam",
+      "slug": "signal-beam",
       "type": "bug"
     },
     {
       "name": "Detect",
+      "slug": "detect",
       "type": "fighting"
     }
   ],

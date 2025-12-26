@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Magnet Rise",
+      "slug": "magnet-rise",
       "type": "electric"
     },
     {
       "name": "Thunderbolt",
+      "slug": "thunderbolt",
       "type": "electric"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     }
   ],

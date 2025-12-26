@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "SolarBeam",
+      "slug": "solar-beam",
       "type": "grass"
     },
     {
       "name": "Synthesis",
+      "slug": "synthesis",
       "type": "grass"
     },
     {
       "name": "Sunny Day",
+      "slug": "sunny-day",
       "type": "fire"
     },
     {
       "name": "Cotton Guard",
+      "slug": "cotton-guard",
       "type": "grass"
     }
   ],

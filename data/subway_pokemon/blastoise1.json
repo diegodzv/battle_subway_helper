@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Aqua Ring",
+      "slug": "aqua-ring",
       "type": "water"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Aqua Tail",
+      "slug": "aqua-tail",
       "type": "water"
     },
     {
       "name": "Iron Defense",
+      "slug": "iron-defense",
       "type": "steel"
     }
   ],

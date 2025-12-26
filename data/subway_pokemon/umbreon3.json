@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Faint Attack",
-      "type": null
+      "slug": "feint-attack",
+      "type": "dark"
     },
     {
       "name": "Swagger",
+      "slug": "swagger",
       "type": "normal"
     },
     {
       "name": "Psych Up",
+      "slug": "psych-up",
       "type": "normal"
     },
     {
       "name": "Screech",
+      "slug": "screech",
       "type": "normal"
     }
   ],

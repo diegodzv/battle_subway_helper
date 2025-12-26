@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Fire Blast",
+      "slug": "fire-blast",
       "type": "fire"
     },
     {
       "name": "Dragon Rush",
+      "slug": "dragon-rush",
       "type": "dragon"
     },
     {
       "name": "Work Up",
+      "slug": "work-up",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Charm",
+      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Double-Edge",
+      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Bulk Up",
+      "slug": "bulk-up",
       "type": "fighting"
     }
   ],

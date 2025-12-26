@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Double-Edge",
+      "slug": "double-edge",
       "type": "normal"
     },
     {
       "name": "Sweet Kiss",
+      "slug": "sweet-kiss",
       "type": "fairy"
     },
     {
       "name": "Attract",
+      "slug": "attract",
       "type": "normal"
     },
     {
       "name": "Heal Pulse",
+      "slug": "heal-pulse",
       "type": "psychic"
     }
   ],

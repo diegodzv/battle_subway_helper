@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Toxic",
+      "slug": "toxic",
       "type": "poison"
     },
     {
       "name": "Circle Throw",
+      "slug": "circle-throw",
       "type": "fighting"
     },
     {
       "name": "Wide Guard",
+      "slug": "wide-guard",
       "type": "rock"
     }
   ],

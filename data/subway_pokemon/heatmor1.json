@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Flame Burst",
+      "slug": "flame-burst",
       "type": "fire"
     },
     {
       "name": "Stockpile",
+      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Swallow",
+      "slug": "swallow",
       "type": "normal"
     },
     {
       "name": "Spit Up",
+      "slug": "spit-up",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     },
     {
       "name": "Leech Seed",
+      "slug": "leech-seed",
       "type": "grass"
     },
     {
       "name": "Substitute",
+      "slug": "substitute",
       "type": "normal"
     },
     {
       "name": "Focus Punch",
+      "slug": "focus-punch",
       "type": "fighting"
     }
   ],

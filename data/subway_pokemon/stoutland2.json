@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Giga Impact",
+      "slug": "giga-impact",
       "type": "normal"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Wild Charge",
+      "slug": "wild-charge",
       "type": "electric"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     }
   ],

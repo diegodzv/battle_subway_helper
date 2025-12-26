@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Rain Dance",
+      "slug": "rain-dance",
       "type": "water"
     }
   ],

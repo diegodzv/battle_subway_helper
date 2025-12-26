@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     },
     {
       "name": "Whirlwind",
+      "slug": "whirlwind",
       "type": "normal"
     }
   ],

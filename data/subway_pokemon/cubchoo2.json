@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Avalanche",
+      "slug": "avalanche",
       "type": "ice"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Slash",
+      "slug": "slash",
       "type": "normal"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sandstorm",
+      "slug": "sandstorm",
       "type": "rock"
     },
     {
       "name": "Earth Power",
+      "slug": "earth-power",
       "type": "ground"
     },
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Recover",
+      "slug": "recover",
       "type": "normal"
     }
   ],

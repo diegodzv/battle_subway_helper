@@ -40,24 +40,28 @@
   },
   "sprite_url_pokeapi": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/572.png",
   "dex_number": 572,
-  "item_sprite_url": null,
+  "item_sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
   "moves_meta": [
     {
       "name": "Tail Slap",
+      "slug": "tail-slap",
       "type": "normal"
     },
     {
       "name": "Dig",
+      "slug": "dig",
       "type": "ground"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     },
     {
       "name": "Captivate",
+      "slug": "captivate",
       "type": "normal"
     }
   ],
-  "item_slug": "king-s-rock"
+  "item_slug": "kings-rock"
 }

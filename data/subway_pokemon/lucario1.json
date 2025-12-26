@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Metal Sound",
+      "slug": "metal-sound",
       "type": "steel"
     },
     {
       "name": "Dark Pulse",
+      "slug": "dark-pulse",
       "type": "dark"
     },
     {
       "name": "Aura Sphere",
+      "slug": "aura-sphere",
       "type": "fighting"
     },
     {
       "name": "Heal Pulse",
+      "slug": "heal-pulse",
       "type": "psychic"
     }
   ],

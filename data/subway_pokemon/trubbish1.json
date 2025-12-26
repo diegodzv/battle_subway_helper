@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Acid Spray",
+      "slug": "acid-spray",
       "type": "poison"
     },
     {
       "name": "Toxic Spikes",
+      "slug": "toxic-spikes",
       "type": "poison"
     },
     {
       "name": "Stockpile",
+      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Swallow",
+      "slug": "swallow",
       "type": "normal"
     }
   ],

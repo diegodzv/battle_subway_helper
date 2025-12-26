@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Roar",
+      "slug": "roar",
       "type": "normal"
     },
     {
       "name": "Venoshock",
+      "slug": "venoshock",
       "type": "poison"
     },
     {
       "name": "Power Whip",
+      "slug": "power-whip",
       "type": "grass"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     }
   ],

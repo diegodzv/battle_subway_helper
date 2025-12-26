@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Drill Peck",
+      "slug": "drill-peck",
       "type": "flying"
     },
     {
       "name": "Aqua Jet",
+      "slug": "aqua-jet",
       "type": "water"
     },
     {
       "name": "Metal Claw",
+      "slug": "metal-claw",
       "type": "steel"
     },
     {
       "name": "FeatherDance",
+      "slug": "feather-dance",
       "type": "flying"
     }
   ],

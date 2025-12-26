@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Rock Blast",
+      "slug": "rock-blast",
       "type": "rock"
     },
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

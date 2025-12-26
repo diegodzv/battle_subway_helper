@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Perish Song",
+      "slug": "perish-song",
       "type": "normal"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Body Slam",
+      "slug": "body-slam",
       "type": "normal"
     },
     {
       "name": "Block",
+      "slug": "block",
       "type": "normal"
     }
   ],

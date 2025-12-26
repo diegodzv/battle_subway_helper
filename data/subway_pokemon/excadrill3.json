@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Sandstorm",
+      "slug": "sandstorm",
       "type": "rock"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Poison Jab",
+      "slug": "poison-jab",
       "type": "poison"
     }
   ],

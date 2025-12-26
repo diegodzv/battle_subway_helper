@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hail",
+      "slug": "hail",
       "type": "ice"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Superpower",
+      "slug": "superpower",
       "type": "fighting"
     },
     {
       "name": "Fissure",
+      "slug": "fissure",
       "type": "ground"
     }
   ],

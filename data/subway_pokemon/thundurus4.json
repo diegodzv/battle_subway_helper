@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Discharge",
+      "slug": "discharge",
       "type": "electric"
     },
     {
       "name": "Focus Blast",
+      "slug": "focus-blast",
       "type": "fighting"
     },
     {
       "name": "Volt Switch",
+      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Taunt",
+      "slug": "taunt",
       "type": "dark"
     }
   ],

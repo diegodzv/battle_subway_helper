@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     },
     {
       "name": "Pluck",
+      "slug": "pluck",
       "type": "flying"
     },
     {
       "name": "Double Team",
+      "slug": "double-team",
       "type": "normal"
     },
     {
       "name": "Scary Face",
+      "slug": "scary-face",
       "type": "normal"
     }
   ],

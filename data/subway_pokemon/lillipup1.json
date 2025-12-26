@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Take Down",
+      "slug": "take-down",
       "type": "normal"
     },
     {
       "name": "Thunder Wave",
+      "slug": "thunder-wave",
       "type": "electric"
     },
     {
       "name": "Roar",
+      "slug": "roar",
       "type": "normal"
     }
   ],

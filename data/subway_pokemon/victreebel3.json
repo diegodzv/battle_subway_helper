@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sunny Day",
+      "slug": "sunny-day",
       "type": "fire"
     },
     {
       "name": "SolarBeam",
+      "slug": "solar-beam",
       "type": "grass"
     },
     {
       "name": "Sludge Bomb",
+      "slug": "sludge-bomb",
       "type": "poison"
     },
     {
       "name": "Weather Ball",
+      "slug": "weather-ball",
       "type": "normal"
     }
   ],

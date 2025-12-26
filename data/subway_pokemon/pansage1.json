@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Seed Bomb",
+      "slug": "seed-bomb",
       "type": "grass"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Leer",
+      "slug": "leer",
       "type": "normal"
     },
     {
       "name": "Grass Knot",
+      "slug": "grass-knot",
       "type": "grass"
     }
   ],

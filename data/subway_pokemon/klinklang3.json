@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Shift Gear",
+      "slug": "shift-gear",
       "type": "steel"
     },
     {
       "name": "Gear Grind",
+      "slug": "gear-grind",
       "type": "steel"
     },
     {
       "name": "Volt Switch",
+      "slug": "volt-switch",
       "type": "electric"
     },
     {
       "name": "Giga Impact",
+      "slug": "giga-impact",
       "type": "normal"
     }
   ],

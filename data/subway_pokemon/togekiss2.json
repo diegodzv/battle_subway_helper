@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "ExtremeSpeed",
+      "slug": "extreme-speed",
       "type": "normal"
     },
     {
       "name": "Aerial Ace",
+      "slug": "aerial-ace",
       "type": "flying"
     },
     {
       "name": "Psych Up",
+      "slug": "psych-up",
       "type": "normal"
     },
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     }
   ],

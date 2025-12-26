@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Swords Dance",
+      "slug": "swords-dance",
       "type": "normal"
     },
     {
       "name": "Bullet Punch",
+      "slug": "bullet-punch",
       "type": "steel"
     },
     {
       "name": "Reversal",
+      "slug": "reversal",
       "type": "fighting"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     }
   ],

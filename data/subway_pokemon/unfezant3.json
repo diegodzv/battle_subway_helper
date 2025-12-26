@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Sky Attack",
+      "slug": "sky-attack",
       "type": "flying"
     },
     {
       "name": "Return",
+      "slug": "return",
       "type": "normal"
     },
     {
       "name": "Detect",
+      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "U-turn",
+      "slug": "u-turn",
       "type": "bug"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Razor Wind",
+      "slug": "razor-wind",
       "type": "normal"
     },
     {
       "name": "Facade",
+      "slug": "facade",
       "type": "normal"
     },
     {
       "name": "FeatherDance",
+      "slug": "feather-dance",
       "type": "flying"
     },
     {
       "name": "Tailwind",
+      "slug": "tailwind",
       "type": "flying"
     }
   ],

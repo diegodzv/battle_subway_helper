@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Encore",
+      "slug": "encore",
       "type": "normal"
     },
     {
       "name": "Fling",
+      "slug": "fling",
       "type": "dark"
     },
     {
       "name": "Dizzy Punch",
+      "slug": "dizzy-punch",
       "type": "normal"
     }
   ],

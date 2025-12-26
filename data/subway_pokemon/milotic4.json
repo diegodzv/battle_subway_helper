@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Ice Beam",
+      "slug": "ice-beam",
       "type": "ice"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     },
     {
       "name": "Sleep Talk",
+      "slug": "sleep-talk",
       "type": "normal"
     },
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     }
   ],

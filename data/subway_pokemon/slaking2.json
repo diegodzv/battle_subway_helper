@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Retaliate",
+      "slug": "retaliate",
       "type": "normal"
     },
     {
       "name": "Night Slash",
+      "slug": "night-slash",
       "type": "dark"
     },
     {
       "name": "Slack Off",
+      "slug": "slack-off",
       "type": "normal"
     },
     {
       "name": "Amnesia",
+      "slug": "amnesia",
       "type": "psychic"
     }
   ],

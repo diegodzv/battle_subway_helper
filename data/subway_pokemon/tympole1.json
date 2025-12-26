@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "BubbleBeam",
+      "slug": "bubble-beam",
       "type": "water"
     },
     {
       "name": "Round",
+      "slug": "round",
       "type": "normal"
     },
     {
       "name": "Growl",
+      "slug": "growl",
       "type": "normal"
     },
     {
       "name": "Aqua Ring",
+      "slug": "aqua-ring",
       "type": "water"
     }
   ],

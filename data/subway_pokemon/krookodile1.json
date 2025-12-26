@@ -43,18 +43,22 @@
   "moves_meta": [
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Bulldoze",
+      "slug": "bulldoze",
       "type": "ground"
     },
     {
       "name": "Taunt",
+      "slug": "taunt",
       "type": "dark"
     },
     {
       "name": "Counter",
+      "slug": "counter",
       "type": "fighting"
     }
   ],

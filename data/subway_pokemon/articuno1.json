@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Hail",
+      "slug": "hail",
       "type": "ice"
     },
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Fly",
+      "slug": "fly",
       "type": "flying"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     }
   ],

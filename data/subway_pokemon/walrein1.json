@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Frost Breath",
+      "slug": "frost-breath",
       "type": "ice"
     },
     {
       "name": "Snore",
+      "slug": "snore",
       "type": "normal"
     },
     {
       "name": "Stockpile",
+      "slug": "stockpile",
       "type": "normal"
     },
     {
       "name": "Rest",
+      "slug": "rest",
       "type": "psychic"
     }
   ],

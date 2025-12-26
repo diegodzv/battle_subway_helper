@@ -70,7 +70,9 @@ function StatRow({ label, value, max = 200 }) {
         </div>
       </div>
 
-      <div className="statValue mono">{typeof value === "number" ? value : "-"}</div>
+      <div className="statValue mono">
+        {typeof value === "number" ? value : "-"}
+      </div>
     </div>
   );
 }
@@ -79,6 +81,21 @@ function setDisplayName(set) {
   if (!set) return "";
   const v = typeof set.variant_index === "number" ? set.variant_index : null;
   return v ? `${set.species}-${v}` : set.species;
+}
+
+/**
+ * Turn a PokeAPI slug into a nice label:
+ *  - "high-jump-kick" -> "High Jump Kick"
+ *  - "soft-boiled" -> "Soft Boiled"
+ *  - "smelling-salts" -> "Smelling Salts"
+ */
+function prettyMoveNameFromSlug(slug) {
+  if (!slug || typeof slug !== "string") return null;
+  return slug
+    .split("-")
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 function SetCard({ set, onClick, selected, tag, tone = "default" }) {
@@ -172,12 +189,15 @@ function DetailPanel({ set, index, onRemoveSeen }) {
         <div className="h3">Moves</div>
         <ul className="moves">
           {movesMeta
-            ? movesMeta.map((m) => (
-                <li key={m.slug ?? m.name} className="moveRow">
-                  <TypeBadge type={m.type} />
-                  <span className="mono">{m.name}</span>
-                </li>
-              ))
+            ? movesMeta.map((m) => {
+                const label = prettyMoveNameFromSlug(m.slug) ?? m.name;
+                return (
+                  <li key={m.slug ?? m.name} className="moveRow">
+                    <TypeBadge type={m.type} />
+                    <span className="mono">{label}</span>
+                  </li>
+                );
+              })
             : movesFallback.map((m) => (
                 <li key={m} className="moveRow">
                   <TypeBadge type={null} />

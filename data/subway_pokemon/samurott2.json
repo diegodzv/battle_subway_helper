@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Blizzard",
+      "slug": "blizzard",
       "type": "ice"
     },
     {
       "name": "Giga Impact",
+      "slug": "giga-impact",
       "type": "normal"
     },
     {
       "name": "Detect",
+      "slug": "detect",
       "type": "fighting"
     },
     {
       "name": "Hydro Pump",
+      "slug": "hydro-pump",
       "type": "water"
     }
   ],

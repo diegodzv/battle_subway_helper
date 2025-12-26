@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Sucker Punch",
+      "slug": "sucker-punch",
       "type": "dark"
     },
     {
       "name": "Low Kick",
+      "slug": "low-kick",
       "type": "fighting"
     },
     {
       "name": "Protect",
+      "slug": "protect",
       "type": "normal"
     }
   ],

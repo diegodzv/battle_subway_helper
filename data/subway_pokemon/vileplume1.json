@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Petal Dance",
+      "slug": "petal-dance",
       "type": "grass"
     },
     {
       "name": "Stun Spore",
+      "slug": "stun-spore",
       "type": "grass"
     },
     {
       "name": "Teeter Dance",
+      "slug": "teeter-dance",
       "type": "normal"
     },
     {
       "name": "Moonlight",
+      "slug": "moonlight",
       "type": "fairy"
     }
   ],

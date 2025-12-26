@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     },
     {
       "name": "Waterfall",
+      "slug": "waterfall",
       "type": "water"
     },
     {
       "name": "Focus Punch",
+      "slug": "focus-punch",
       "type": "fighting"
     },
     {
       "name": "Rock Slide",
+      "slug": "rock-slide",
       "type": "rock"
     }
   ],

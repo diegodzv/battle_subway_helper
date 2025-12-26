@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Close Combat",
+      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Overheat",
+      "slug": "overheat",
       "type": "fire"
     },
     {
       "name": "Stone Edge",
+      "slug": "stone-edge",
       "type": "rock"
     }
   ],

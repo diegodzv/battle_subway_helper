@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "DynamicPunch",
+      "slug": "dynamic-punch",
       "type": "fighting"
     },
     {
       "name": "Payback",
+      "slug": "payback",
       "type": "dark"
     },
     {
       "name": "Foresight",
+      "slug": "foresight",
       "type": "normal"
     },
     {
       "name": "Wide Guard",
+      "slug": "wide-guard",
       "type": "rock"
     }
   ],

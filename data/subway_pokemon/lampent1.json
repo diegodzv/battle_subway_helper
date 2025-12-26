@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Flame Burst",
+      "slug": "flame-burst",
       "type": "fire"
     },
     {
       "name": "Hex",
+      "slug": "hex",
       "type": "ghost"
     },
     {
       "name": "Confuse Ray",
+      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Will-O-Wisp",
+      "slug": "will-o-wisp",
       "type": "fire"
     }
   ],

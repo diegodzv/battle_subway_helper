@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Inferno",
+      "slug": "inferno",
       "type": "fire"
     },
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Confuse Ray",
+      "slug": "confuse-ray",
       "type": "ghost"
     },
     {
       "name": "Curse",
+      "slug": "curse",
       "type": "ghost"
     }
   ],

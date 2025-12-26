@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Bug Bite",
+      "slug": "bug-bite",
       "type": "bug"
     },
     {
       "name": "Brick Break",
+      "slug": "brick-break",
       "type": "fighting"
     },
     {
       "name": "Thrash",
+      "slug": "thrash",
       "type": "normal"
     },
     {
       "name": "Swords Dance",
+      "slug": "swords-dance",
       "type": "normal"
     }
   ],

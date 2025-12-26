@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Giga Drain",
+      "slug": "giga-drain",
       "type": "grass"
     },
     {
       "name": "Charm",
+      "slug": "charm",
       "type": "fairy"
     },
     {
       "name": "Leech Seed",
+      "slug": "leech-seed",
       "type": "grass"
     },
     {
       "name": "PoisonPowder",
+      "slug": "poison-powder",
       "type": "poison"
     }
   ],

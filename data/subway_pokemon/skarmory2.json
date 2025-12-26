@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Brave Bird",
+      "slug": "brave-bird",
       "type": "flying"
     },
     {
       "name": "Steel Wing",
+      "slug": "steel-wing",
       "type": "steel"
     },
     {
       "name": "Swords Dance",
+      "slug": "swords-dance",
       "type": "normal"
     },
     {
       "name": "Roar",
+      "slug": "roar",
       "type": "normal"
     }
   ],

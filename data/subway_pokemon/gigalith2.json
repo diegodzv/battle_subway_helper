@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Iron Defense",
+      "slug": "iron-defense",
       "type": "steel"
     },
     {
       "name": "Sandstorm",
+      "slug": "sandstorm",
       "type": "rock"
     },
     {
       "name": "Lock-On",
+      "slug": "lock-on",
       "type": "normal"
     },
     {
       "name": "Rock Blast",
+      "slug": "rock-blast",
       "type": "rock"
     }
   ],

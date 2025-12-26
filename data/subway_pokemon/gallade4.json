@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Psycho Cut",
+      "slug": "psycho-cut",
       "type": "psychic"
     },
     {
       "name": "Close Combat",
+      "slug": "close-combat",
       "type": "fighting"
     },
     {
       "name": "Heal Pulse",
+      "slug": "heal-pulse",
       "type": "psychic"
     },
     {
       "name": "Ally Switch",
+      "slug": "ally-switch",
       "type": "psychic"
     }
   ],

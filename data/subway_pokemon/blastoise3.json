@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Fake Out",
+      "slug": "fake-out",
       "type": "normal"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Aqua Tail",
+      "slug": "aqua-tail",
       "type": "water"
     },
     {
       "name": "Avalanche",
+      "slug": "avalanche",
       "type": "ice"
     }
   ],

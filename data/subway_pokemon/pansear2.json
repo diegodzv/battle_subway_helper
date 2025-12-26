@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Flame Charge",
+      "slug": "flame-charge",
       "type": "fire"
     },
     {
       "name": "Shadow Claw",
+      "slug": "shadow-claw",
       "type": "ghost"
     },
     {
       "name": "Acrobatics",
+      "slug": "acrobatics",
       "type": "flying"
     },
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     }
   ],

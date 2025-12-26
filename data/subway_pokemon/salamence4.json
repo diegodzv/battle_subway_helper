@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Outrage",
+      "slug": "outrage",
       "type": "dragon"
     },
     {
       "name": "Crunch",
+      "slug": "crunch",
       "type": "dark"
     },
     {
       "name": "Earthquake",
+      "slug": "earthquake",
       "type": "ground"
     },
     {
       "name": "Zen Headbutt",
+      "slug": "zen-headbutt",
       "type": "psychic"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Block",
+      "slug": "block",
       "type": "normal"
     },
     {
       "name": "Iron Defense",
+      "slug": "iron-defense",
       "type": "steel"
     },
     {
       "name": "Flash Cannon",
+      "slug": "flash-cannon",
       "type": "steel"
     },
     {
       "name": "Discharge",
+      "slug": "discharge",
       "type": "electric"
     }
   ],

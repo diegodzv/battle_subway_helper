@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Yawn",
+      "slug": "yawn",
       "type": "normal"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Calm Mind",
+      "slug": "calm-mind",
       "type": "psychic"
     },
     {
       "name": "Water Pulse",
+      "slug": "water-pulse",
       "type": "water"
     }
   ],

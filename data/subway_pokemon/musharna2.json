@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Shadow Ball",
+      "slug": "shadow-ball",
       "type": "ghost"
     },
     {
       "name": "Energy Ball",
+      "slug": "energy-ball",
       "type": "grass"
     },
     {
       "name": "Psychic",
+      "slug": "psychic",
       "type": "psychic"
     },
     {
       "name": "Trick Room",
+      "slug": "trick-room",
       "type": "psychic"
     }
   ],

@@ -44,18 +44,22 @@
   "moves_meta": [
     {
       "name": "Air Slash",
+      "slug": "air-slash",
       "type": "flying"
     },
     {
       "name": "Surf",
+      "slug": "surf",
       "type": "water"
     },
     {
       "name": "Tailwind",
+      "slug": "tailwind",
       "type": "flying"
     },
     {
       "name": "Roost",
+      "slug": "roost",
       "type": "flying"
     }
   ],
