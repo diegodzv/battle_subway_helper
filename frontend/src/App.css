@@ -1,7 +1,15 @@
+/* frontend/src/App.css */
+
 :root {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: rgba(255, 255, 255, 0.92);
   background: #0b0f14;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 * { box-sizing: border-box; }
@@ -22,6 +30,8 @@
 .mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
+
+/* ---------------- Header ---------------- */
 
 .header {
   position: sticky;
@@ -106,19 +116,15 @@
 }
 .ghostBtn:hover { background: rgba(255,255,255,0.07); }
 
-.primaryBtn {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.10));
-  color: rgba(255,255,255,0.92);
-  border: 1px solid rgba(255,255,255,0.18);
-  cursor: pointer;
-}
-.primaryBtn:hover { background: rgba(255,255,255,0.16); }
-.primaryBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+/* ---------------- Content / Panels ---------------- */
 
-.content { flex: 1; padding: 18px; }
+.content {
+  flex: 1;
+  padding: 18px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
 
 .empty {
   max-width: 780px;
@@ -131,15 +137,14 @@
 }
 .emptyTitle { font-size: 1.4rem; font-weight: 850; margin-bottom: 6px; }
 
-.grid { display: grid; gap: 18px; align-items: start; }
-.gridTwoCols { grid-template-columns: 420px 1fr; }
-
 .panel {
   background: rgba(15, 20, 28, 0.88);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: 18px;
   padding: 14px;
   box-shadow: 0 18px 60px rgba(0,0,0,0.38);
+  width: 100%;
+  min-width: 0;
 }
 
 .panelTitle {
@@ -153,52 +158,63 @@
 .h1 { font-size: 1.25rem; font-weight: 900; }
 .h2 { font-size: 1.05rem; font-weight: 900; }
 .h3 { font-size: 0.95rem; font-weight: 900; margin-bottom: 6px; }
-.subTitle { margin: 10px 0 8px; font-weight: 900; }
 
-.cards {
+.footer {
+  padding: 14px 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ---------------- New layout wrapper ---------------- */
+
+.layoutNew {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+  align-items: start;
+  width: 100%;
+}
+
+/* ---------------- Toggle / counts ---------------- */
+
+.topControls {
+  display: grid;
   gap: 10px;
-}
-.cards.compact { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
-.poolOneCol { grid-template-columns: 1fr; }
-
-.card {
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.03);
-  padding: 10px;
-  cursor: pointer;
-  text-align: left;
-  color: rgba(255,255,255,0.92);
-}
-.card:hover { background: rgba(255,255,255,0.06); }
-.cardSelected { outline: 2px solid rgba(140, 180, 255, 0.55); }
-.cardSeen {
-  border-color: rgba(0, 255, 180, 0.28);
-  background: rgba(0, 255, 180, 0.06);
+  justify-items: end;
+  align-content: start;
 }
 
-.cardTop { display: flex; gap: 10px; align-items: center; }
-.cardTitle .name { font-weight: 900; }
-.cardTitle .meta { margin-top: 2px; }
+.togglesRow{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
 
-.tag {
-  margin-top: 8px;
-  display: inline-block;
-  padding: 4px 8px;
+.toggle {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
   border-radius: 999px;
-  font-size: 0.82rem;
-  border: 1px solid rgba(0, 255, 180, 0.30);
-  background: rgba(0, 255, 180, 0.10);
-  color: rgba(210, 255, 245, 0.95);
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
 }
+.toggle input { accent-color: rgba(120, 255, 140, 0.90); }
+
+.counts {
+  text-align: right;
+  font-size: 0.90rem;
+}
+
+/* ---------------- Sprites / item icons ---------------- */
 
 .sprite {
   width: 56px;
   height: 56px;
   image-rendering: pixelated;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));
+  flex: 0 0 auto;
 }
 .spriteFallback {
   width: 56px;
@@ -210,23 +226,93 @@
   color: rgba(255,255,255,0.55);
 }
 
-.side { display: grid; gap: 18px; }
+.itemLine {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.itemIcon {
+  width: 22px;
+  height: 22px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
+}
+.itemIconFallback {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px dashed rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.55);
+  font-size: 0.8rem;
+}
+.itemName { font-weight: 700; }
 
-.box {
-  margin-top: 12px;
+/* ---------------- Seen area (single row, 4 slots) ---------------- */
+
+.seenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.seenSlot,
+.seenSlotEmpty {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  min-width: 0;
+}
+
+.seenSlotEmpty {
+  border-style: dashed;
+  background: rgba(255,255,255,0.02);
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.seenSlotHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.seenSlotBody {
+  display: grid;
+  gap: 10px;
+}
+
+.seenSlotCols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.miniBox {
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.03);
   padding: 10px;
 }
 
-.statRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 4px 0;
+.teamSlotIndex {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
 }
 
+/* chips */
 .seenChips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 
 .chip {
@@ -244,7 +330,124 @@
 }
 .chipDanger:hover { background: rgba(255, 120, 120, 0.16); }
 
-.actionsRow { margin-top: 12px; }
+/* ---------------- Pool grid: 6 columns ---------------- */
+
+.poolGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(240px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* ---------------- Set tiles ---------------- */
+
+.setTile {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  min-width: 0;
+}
+.setTile:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.05);
+}
+
+.setTileTop {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.setTileTitle .name { font-weight: 900; }
+.setTileTitle .meta { margin-top: 2px; }
+
+.setTileActions {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tileBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+  font-weight: 900;
+
+  /* FIX: centrar el icono */
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  padding: 0;
+}
+.tileBtn:hover { background: rgba(255,255,255,0.08); }
+.tileBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.tileBtnConfirm {
+  border-color: rgba(0, 255, 180, 0.22);
+  background: rgba(0, 255, 180, 0.06);
+}
+.tileBtnConfirm:hover { background: rgba(0, 255, 180, 0.10); }
+
+.tileBtnDiscard {
+  border-color: rgba(255, 120, 120, 0.22);
+  background: rgba(255, 120, 120, 0.06);
+}
+.tileBtnDiscard:hover { background: rgba(255, 120, 120, 0.10); }
+
+.tileBtnUndo {
+  border-color: rgba(140, 180, 255, 0.26);
+  background: rgba(140, 180, 255, 0.08);
+}
+.tileBtnUndo:hover { background: rgba(140, 180, 255, 0.12); }
+
+.setTileBody {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.tileSection {
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.02);
+  padding: 10px;
+}
+
+.tileLabel {
+  font-size: 0.86rem;
+  margin-bottom: 6px;
+}
+
+/* Discarded styling */
+.setTileDiscarded {
+  opacity: 0.65;
+  border-color: rgba(255, 120, 120, 0.18);
+  background: rgba(255, 120, 120, 0.04);
+}
+.tileRibbon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 120, 120, 0.24);
+  background: rgba(255, 120, 120, 0.10);
+  color: rgba(255,255,255,0.90);
+}
+
+/* ---------------- Moves list ---------------- */
 
 .moves {
   list-style: none;
@@ -260,83 +463,7 @@
   align-items: center;
 }
 
-.teamRow {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(260px, 1fr));
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-}
-
-.teamPanel {
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-  padding: 12px;
-  min-width: 260px;
-}
-
-.teamHeader {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.teamHeaderLeft {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.teamSlotIndex {
-  width: 28px;
-  height: 28px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.04);
-}
-
-.teamSlotEmpty {
-  border-radius: 16px;
-  border: 1px dashed rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.02);
-  padding: 12px;
-  min-width: 260px;
-  display: grid;
-  gap: 8px;
-  align-content: start;
-}
-
-/* Item icon line */
-.itemLine {
-  margin-top: 6px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.itemIcon {
-  width: 25px;
-  height: 25px;
-  image-rendering: pixelated;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
-}
-.itemIconFallback {
-  width: 20px;
-  height: 20px;
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
-  border: 1px dashed rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.55);
-  font-size: 0.8rem;
-}
-.itemName { font-weight: 700; }
-
-/* ---------------- NEW STATS LAYOUT (rows + bar on the right) ---------------- */
+/* ---------------- Stats bars ---------------- */
 
 .statTable {
   display: grid;
@@ -351,19 +478,14 @@
   align-items: center;
 }
 
-.statLabel {
-  font-size: 0.92rem;
+.statLineCompact {
+  grid-template-columns: 40px 1fr 40px;
+  gap: 8px;
 }
 
-.statValue {
-  text-align: right;
-}
+.statLabel { font-size: 0.92rem; }
+.statValue { text-align: right; }
 
-.statTrackWrap {
-  width: 100%;
-}
-
-/* bar track + fills */
 .statBarTrack {
   position: relative;
   height: 10px;
@@ -372,42 +494,29 @@
   border: 1px solid rgba(255,255,255,0.10);
   overflow: hidden;
 }
+.statBarFill { height: 100%; border-radius: 999px; }
 
-.statBarFill {
-  height: 100%;
-  border-radius: 999px;
-}
+.stat-rDark  { background: rgba(140, 35, 35, 0.85); }
+.stat-rLight { background: rgba(220, 70, 70, 0.80); }
+.stat-orange { background: rgba(255, 160, 60, 0.80); }
+.stat-yellow { background: rgba(255, 220, 70, 0.85); }
+.stat-gLight { background: rgba(120, 255, 140, 0.70); }
+.stat-gDark  { background: rgba(27, 163, 156); }
 
-/* base colors by tier */
-.stat-rDark  { background: rgba(140, 35, 35, 0.85); }   /* <60 */
-.stat-rLight { background: rgba(220, 70, 70, 0.80); }   /* 60-79 */
-.stat-orange { background: rgba(255, 160, 60, 0.80); }  /* 80-99 */
-.stat-yellow { background: rgba(255, 220, 70, 0.85); }  /* 100-129 */
-.stat-gLight { background: rgba(120, 255, 140, 0.70); } /* 130-159 */
-.stat-gDark  { background: rgba(27, 163, 156); }   /* 160-200 */
-
-/* overflow overlay: painted on top from the left */
 .statOverflow {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  background: rgb(213, 184, 255); /* mauve */
+  background: rgb(213, 184, 255);
   mix-blend-mode: screen;
 }
 
-/* ---------------- OLD STATS (kept for safety, but unused now) ---------------- */
-.statBars { display: grid; gap: 10px; }
+.statTableCompact { gap: 8px; margin-top: 4px; }
+.statTableCompact .statBarTrack { height: 9px; }
 
-.statBarRow { display: grid; gap: 6px; }
-.statBarTop {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-}
+/* ---------------- Type badges ---------------- */
 
-/* Type badges */
 .typeBadge {
   display: inline-flex;
   align-items: center;
@@ -420,11 +529,8 @@
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.04);
 }
-
-/* Default / unknown */
 .type-unknown { color: rgba(255,255,255,0.75); }
 
-/* A few common types */
 .type-fire { background: rgba(255, 120, 90, 0.22); border-color: rgba(255, 120, 90, 0.35); }
 .type-water { background: rgba(80, 160, 255, 0.20); border-color: rgba(80, 160, 255, 0.35); }
 .type-grass { background: rgba(80, 220, 120, 0.18); border-color: rgba(80, 220, 120, 0.35); }
@@ -444,13 +550,21 @@
 .type-fairy { background: rgba(255, 160, 210, 0.16); border-color: rgba(255, 160, 210, 0.32); }
 .type-normal { background: rgba(200, 200, 200, 0.12); border-color: rgba(200, 200, 200, 0.26); }
 
-.footer {
-  padding: 14px 18px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 1500px) {
+  .poolGrid { grid-template-columns: repeat(4, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 1100px) {
+  .seenGrid { grid-template-columns: 1fr; }
+  .poolGrid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
 }
 
 @media (max-width: 980px) {
   .header { grid-template-columns: 1fr; gap: 10px; }
-  .gridTwoCols { grid-template-columns: 1fr; }
-  .teamRow { grid-template-columns: 1fr; overflow-x: visible; }
+}
+
+@media (max-width: 620px) {
+  .poolGrid { grid-template-columns: 1fr; }
 }

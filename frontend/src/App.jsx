@@ -38,7 +38,7 @@ function clamp01(x) {
   return Math.max(0, Math.min(1, x));
 }
 
-function StatRow({ label, value, max = 200 }) {
+function StatRow({ label, value, max = 200, compact = false }) {
   const v = typeof value === "number" ? value : 0;
 
   // Base fill is capped at max (200).
@@ -51,28 +51,19 @@ function StatRow({ label, value, max = 200 }) {
   const tierClass = getTierClass(v);
 
   return (
-    <div className="statLine">
+    <div className={`statLine ${compact ? "statLineCompact" : ""}`}>
       <div className="statLabel muted">{label}</div>
-
-      <div className="statTrackWrap">
-        <div className="statBarTrack" aria-label={`${label} ${v}`}>
+      <div className="statBarTrack" aria-label={`${label} ${v}`}>
+        <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
+        {overflowPct > 0 ? (
           <div
-            className={`statBarFill ${tierClass}`}
-            style={{ width: `${basePct}%` }}
+            className="statOverflow"
+            style={{ width: `${overflowPct}%` }}
+            title={`Overflow +${v - max}`}
           />
-          {overflowPct > 0 ? (
-            <div
-              className="statOverflow"
-              style={{ width: `${overflowPct}%` }}
-              title={`Overflow +${v - max}`}
-            />
-          ) : null}
-        </div>
+        ) : null}
       </div>
-
-      <div className="statValue mono">
-        {typeof value === "number" ? value : "-"}
-      </div>
+      <div className="statValue mono">{typeof value === "number" ? value : "-"}</div>
     </div>
   );
 }
@@ -83,12 +74,6 @@ function setDisplayName(set) {
   return v ? `${set.species}-${v}` : set.species;
 }
 
-/**
- * Turn a PokeAPI slug into a nice label:
- *  - "high-jump-kick" -> "High Jump Kick"
- *  - "soft-boiled" -> "Soft Boiled"
- *  - "smelling-salts" -> "Smelling Salts"
- */
 function prettyMoveNameFromSlug(slug) {
   if (!slug || typeof slug !== "string") return null;
   return slug
@@ -98,40 +83,113 @@ function prettyMoveNameFromSlug(slug) {
     .join(" ");
 }
 
-function SetCard({ set, onClick, selected, tag, tone = "default" }) {
-  const spe = set?.stats_lv50?.Spe ?? "-";
+function SetTile({
+  set,
+  isDiscarded,
+  onDiscardToggle,
+  onConfirm,
+  canConfirm,
+  showStats,
+}) {
   const display = setDisplayName(set);
+  const movesMeta = Array.isArray(set.moves_meta) ? set.moves_meta : null;
 
   return (
-    <button
-      className={`card ${selected ? "cardSelected" : ""} ${
-        tone === "seen" ? "cardSeen" : ""
-      }`}
-      onClick={onClick}
-      title={`${display} (#${set.global_id})`}
-    >
-      <div className="cardTop">
+    <div className={`setTile ${isDiscarded ? "setTileDiscarded" : ""}`}>
+      <div className="setTileTop">
         <Sprite url={set.sprite_url_pokeapi} alt={display} />
-        <div className="cardTitle">
+
+        <div className="setTileTitle">
           <div className="name">{display}</div>
           <div className="meta muted">
-            <span className="mono">
-              #{set.global_id} · Dex {set.dex_number ?? "?"}
-            </span>{" "}
-            · Spe <span className="mono">{spe}</span>
+            <span className="mono">#{set.global_id}</span> · Dex{" "}
+            <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
+            <span className="mono">{set.nature}</span>
           </div>
+        </div>
+
+        <div className="setTileActions">
+          <button
+            className={`tileBtn ${isDiscarded ? "tileBtnUndo" : "tileBtnDiscard"}`}
+            onClick={() => onDiscardToggle(set.global_id)}
+            title={isDiscarded ? "Undo discard" : "Discard this set"}
+          >
+            {isDiscarded ? "↩" : "✕"}
+          </button>
+
+          <button
+            className="tileBtn tileBtnConfirm"
+            onClick={() => onConfirm(set)}
+            disabled={!canConfirm || isDiscarded}
+            title={
+              !canConfirm
+                ? "Team already has 4 confirmed"
+                : isDiscarded
+                ? "Undo discard first"
+                : "Confirm this set (adds to Seen)"
+            }
+          >
+            ✓
+          </button>
         </div>
       </div>
 
-      {tag ? <div className="tag">{tag}</div> : null}
-    </button>
+      <div className="setTileBody">
+        <div className="tileSection">
+          <div className="tileLabel muted">Item</div>
+          <div className="itemLine">
+            <ItemIcon url={set.item_sprite_url} alt={set.item} />
+            <span className="itemName">{set.item}</span>
+          </div>
+        </div>
+
+        <div className="tileSection">
+          <div className="tileLabel muted">Moves</div>
+          <ul className="moves">
+            {movesMeta
+              ? movesMeta.map((m) => {
+                  const label = prettyMoveNameFromSlug(m.slug) ?? m.name;
+                  return (
+                    <li key={m.slug ?? m.name} className="moveRow">
+                      <TypeBadge type={m.type} />
+                      <span className="mono">{label}</span>
+                    </li>
+                  );
+                })
+              : (Array.isArray(set.moves) ? set.moves : []).map((m) => (
+                  <li key={m} className="moveRow">
+                    <TypeBadge type={null} />
+                    <span className="mono">{m}</span>
+                  </li>
+                ))}
+          </ul>
+        </div>
+
+        {/* (1) Stats opcionales en el pool */}
+        {showStats ? (
+          <div className="tileSection">
+            <div className="tileLabel muted">Stats (Lv 50)</div>
+            <div className="statTable statTableCompact">
+              <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact />
+              <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact />
+              <StatRow label="Def" value={set.stats_lv50?.Def} max={200} compact />
+              <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} compact />
+              <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} compact />
+              <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} compact />
+            </div>
+          </div>
+        ) : null}
+      </div>
+
+      {isDiscarded ? <div className="tileRibbon">DISCARDED</div> : null}
+    </div>
   );
 }
 
-function DetailPanel({ set, index, onRemoveSeen }) {
+function SeenSlot({ set, index, onRemove }) {
   if (!set) {
     return (
-      <div className="teamSlotEmpty">
+      <div className="seenSlotEmpty">
         <div className="teamSlotIndex mono">#{index + 1}</div>
         <div className="muted">Empty slot</div>
       </div>
@@ -139,24 +197,39 @@ function DetailPanel({ set, index, onRemoveSeen }) {
   }
 
   const display = setDisplayName(set);
-  const movesMeta = Array.isArray(set.moves_meta) ? set.moves_meta : null;
-  const movesFallback = Array.isArray(set.moves) ? set.moves : [];
 
   return (
-    <div className="teamPanel">
-      <div className="teamHeader">
-        <div className="teamHeaderLeft">
+    <div className="seenSlot">
+      <div className="seenSlotHeader">
+        <div style={{ display: "flex", gap: 10, alignItems: "center", minWidth: 0 }}>
           <div className="teamSlotIndex mono">#{index + 1}</div>
           <Sprite url={set.sprite_url_pokeapi} alt={display} />
-          <div>
-            <div className="h2">{display}</div>
-            <div className="muted">
-              <span className="mono">
-                #{set.global_id} · Dex {set.dex_number ?? "?"}
-              </span>{" "}
-              · {set.nature}
+          <div style={{ minWidth: 0 }}>
+            <div
+              className="h2"
+              style={{
+                margin: 0,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {display}
+            </div>
+            <div
+              className="muted"
+              style={{
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              <span className="mono">#{set.global_id}</span> · Dex{" "}
+              <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
+              <span className="mono">{set.nature}</span>
             </div>
 
+            {/* (3) Item en los vistos */}
             <div className="itemLine">
               <ItemIcon url={set.item_sprite_url} alt={set.item} />
               <span className="itemName">{set.item}</span>
@@ -166,50 +239,40 @@ function DetailPanel({ set, index, onRemoveSeen }) {
 
         <button
           className="chip chipDanger"
-          onClick={() => onRemoveSeen(set.global_id)}
+          onClick={() => onRemove(set.global_id)}
           title="Remove from seen"
         >
           Remove ✕
         </button>
       </div>
 
-      <div className="box">
-        <div className="h3">Stats (Lv 50)</div>
-        <div className="statTable">
-          <StatRow label="HP" value={set.stats_lv50?.HP} max={200} />
-          <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} />
-          <StatRow label="Def" value={set.stats_lv50?.Def} max={200} />
-          <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} />
-          <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} />
-          <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} />
-        </div>
-      </div>
-
-      <div className="box">
-        <div className="h3">Moves</div>
-        <ul className="moves">
-          {movesMeta
-            ? movesMeta.map((m) => {
-                const label = prettyMoveNameFromSlug(m.slug) ?? m.name;
-                return (
-                  <li key={m.slug ?? m.name} className="moveRow">
-                    <TypeBadge type={m.type} />
-                    <span className="mono">{label}</span>
-                  </li>
-                );
-              })
-            : movesFallback.map((m) => (
-                <li key={m} className="moveRow">
-                  <TypeBadge type={null} />
-                  <span className="mono">{m}</span>
+      <div className="seenSlotBody">
+        <div className="miniBox">
+          <div className="h3">Moves</div>
+          <ul className="moves">
+            {(Array.isArray(set.moves_meta) ? set.moves_meta : []).map((m) => {
+              const label = prettyMoveNameFromSlug(m.slug) ?? m.name;
+              return (
+                <li key={m.slug ?? m.name} className="moveRow">
+                  <TypeBadge type={m.type} />
+                  <span className="mono">{label}</span>
                 </li>
-              ))}
-        </ul>
-      </div>
+              );
+            })}
+          </ul>
+        </div>
 
-      <div className="box">
-        <div className="h3">EVs</div>
-        <div className="mono">{set.evs}</div>
+        <div className="miniBox">
+          <div className="h3">Stats</div>
+          <div className="statTable statTableCompact">
+            <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact />
+            <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact />
+            <StatRow label="Def" value={set.stats_lv50?.Def} max={200} compact />
+            <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} compact />
+            <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} compact />
+            <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} compact />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -222,13 +285,54 @@ export default function App() {
   const [isSearching, setIsSearching] = useState(false);
 
   const [trainer, setTrainer] = useState(null);
-  const [selectedSet, setSelectedSet] = useState(null);
 
-  const [seen, setSeen] = useState([]);
-  const [filterInfo, setFilterInfo] = useState(null);
-  const [isFiltering, setIsFiltering] = useState(false);
+  // confirmed team (4 slots): store global_ids, order matters
+  const [confirmed, setConfirmed] = useState([]); // array of global_id
+  const [discarded, setDiscarded] = useState(() => new Set()); // Set<global_id>
+  const [showDiscarded, setShowDiscarded] = useState(false);
 
-  const poolId = trainer?.pool_id ?? null;
+  // (1) toggle stats en pool
+  const [showStatsInPool, setShowStatsInPool] = useState(false);
+
+  const poolSets = trainer?.sets ?? [];
+
+  // quick map for lookups
+  const setById = useMemo(() => {
+    const m = new Map();
+    for (const s of poolSets) m.set(s.global_id, s);
+    return m;
+  }, [poolSets]);
+
+  // pool sorted: dex_number then global_id
+  const poolSortedDex = useMemo(() => {
+    const copy = [...poolSets];
+    copy.sort((a, b) => {
+      const da = typeof a.dex_number === "number" ? a.dex_number : 999999;
+      const db = typeof b.dex_number === "number" ? b.dex_number : 999999;
+      if (da !== db) return da - db;
+      return (a.global_id ?? 0) - (b.global_id ?? 0);
+    });
+    return copy;
+  }, [poolSets]);
+
+  // visible pool = not confirmed, and (not discarded unless toggle)
+  const visiblePool = useMemo(() => {
+    const confirmedSet = new Set(confirmed);
+    return poolSortedDex.filter((s) => {
+      if (confirmedSet.has(s.global_id)) return false;
+      const isDisc = discarded.has(s.global_id);
+      if (isDisc && !showDiscarded) return false;
+      return true;
+    });
+  }, [poolSortedDex, confirmed, discarded, showDiscarded]);
+
+  const confirmedSets = useMemo(() => {
+    const slots = [null, null, null, null];
+    for (let i = 0; i < Math.min(4, confirmed.length); i++) {
+      slots[i] = setById.get(confirmed[i]) ?? null;
+    }
+    return slots;
+  }, [confirmed, setById]);
 
   useEffect(() => {
     let cancelled = false;
@@ -241,9 +345,7 @@ export default function App() {
       }
       setIsSearching(true);
       try {
-        const res = await fetch(
-          `/trainers/search?q=${encodeURIComponent(nq)}&limit=20`
-        );
+        const res = await fetch(`/trainers/search?q=${encodeURIComponent(nq)}&limit=20`);
         if (!res.ok) throw new Error(`search failed: ${res.status}`);
         const data = await res.json();
         if (!cancelled) setSuggestions(data);
@@ -255,16 +357,15 @@ export default function App() {
     }
 
     run();
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, [debouncedQ]);
 
   async function loadTrainer(trainerId) {
     setTrainer(null);
-    setSelectedSet(null);
-    setSeen([]);
-    setFilterInfo(null);
+    setConfirmed([]);
+    setDiscarded(new Set());
+    setShowDiscarded(false);
+    setShowStatsInPool(false);
 
     const res = await fetch(`/trainers/${trainerId}`);
     if (!res.ok) {
@@ -275,100 +376,61 @@ export default function App() {
     setTrainer(data);
   }
 
-  useEffect(() => {
-    let cancelled = false;
-
-    async function run() {
-      if (!poolId) return;
-      setIsFiltering(true);
-      try {
-        const res = await fetch(`/pools/${poolId}/filter`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ seen_global_ids: seen }),
-        });
-        if (!res.ok) throw new Error(`filter failed: ${res.status}`);
-        const data = await res.json();
-        if (!cancelled) setFilterInfo(data);
-      } catch {
-        if (!cancelled) setFilterInfo(null);
-      } finally {
-        if (!cancelled) setIsFiltering(false);
-      }
-    }
-
-    run();
-    return () => {
-      cancelled = true;
-    };
-  }, [poolId, seen]);
-
-  const seenSet = useMemo(() => new Set(seen), [seen]);
-
-  const poolSets = trainer?.sets ?? [];
-  const remainingSets = filterInfo?.possible_remaining_sets ?? [];
-
-  // Pool sorted by Pokédex number, then global_id
-  const poolSortedDex = useMemo(() => {
-    const copy = [...poolSets];
-    copy.sort((a, b) => {
-      const da = typeof a.dex_number === "number" ? a.dex_number : 999999;
-      const db = typeof b.dex_number === "number" ? b.dex_number : 999999;
-      if (da !== db) return da - db;
-      return (a.global_id ?? 0) - (b.global_id ?? 0);
-    });
-    return copy;
-  }, [poolSets]);
-
-  // Possible remaining sorted exactly like Pool: dex_number, then global_id
-  const remainingSortedDex = useMemo(() => {
-    const copy = [...remainingSets];
-    copy.sort((a, b) => {
-      const da = typeof a.dex_number === "number" ? a.dex_number : 999999;
-      const db = typeof b.dex_number === "number" ? b.dex_number : 999999;
-      if (da !== db) return da - db;
-      return (a.global_id ?? 0) - (b.global_id ?? 0);
-    });
-    return copy;
-  }, [remainingSets]);
-
-  function markSeen(globalId) {
-    if (seenSet.has(globalId)) return;
-    if (seen.length >= 4) return;
-    setSeen((prev) => [...prev, globalId]);
-  }
-
-  function unmarkSeen(globalId) {
-    setSeen((prev) => prev.filter((x) => x !== globalId));
-  }
-
   function resetAll() {
     setTrainer(null);
-    setSelectedSet(null);
-    setSeen([]);
-    setFilterInfo(null);
+    setConfirmed([]);
+    setDiscarded(new Set());
+    setShowDiscarded(false);
+    setShowStatsInPool(false);
     setQ("");
     setSuggestions([]);
   }
 
-  // 4 slots (seen order)
-  const teamSets = useMemo(() => {
-    const byId = new Map(poolSets.map((s) => [s.global_id, s]));
-    const slots = [null, null, null, null];
-    for (let i = 0; i < Math.min(4, seen.length); i++) {
-      slots[i] = byId.get(seen[i]) ?? null;
-    }
-    return slots;
-  }, [poolSets, seen]);
+  function toggleDiscard(globalId) {
+    setDiscarded((prev) => {
+      const next = new Set(prev);
+      if (next.has(globalId)) next.delete(globalId);
+      else next.add(globalId);
+      return next;
+    });
+  }
+
+  function confirmSet(set) {
+    if (!set) return;
+    if (confirmed.length >= 4) return;
+    if (discarded.has(set.global_id)) return;
+
+    setConfirmed((prev) => [...prev, set.global_id]);
+
+    // auto-discard other variants of same species (option C)
+    setDiscarded((prev) => {
+      const next = new Set(prev);
+      for (const s of poolSets) {
+        if (s.species === set.species && s.global_id !== set.global_id) {
+          next.add(s.global_id);
+        }
+      }
+      return next;
+    });
+  }
+
+  function removeConfirmed(globalId) {
+    setConfirmed((prev) => prev.filter((x) => x !== globalId));
+  }
 
   const trainerTitle = trainer?.display_name ?? trainer?.name_en ?? "";
+
+  const total = poolSets.length;
+  const confirmedCount = confirmed.length;
+  const discardedCount = discarded.size;
+  const shownCount = visiblePool.length;
 
   return (
     <div className="page">
       <header className="header">
         <div className="brand">
           <div className="brandTitle">Battle Subway (B2/W2)</div>
-          <div className="muted">Super Set 4/5 · selector + 4v4 filter</div>
+          <div className="muted">Super Set 4/5 · manual set elimination</div>
         </div>
 
         <div className="searchBox">
@@ -416,12 +478,10 @@ export default function App() {
         {!trainer ? (
           <div className="empty">
             <div className="emptyTitle">Select a trainer</div>
-            <div className="muted">
-              Type above to autocomplete and pick one. Then mark Pokémon as you see them.
-            </div>
+            <div className="muted">Type above to autocomplete and pick one.</div>
           </div>
         ) : (
-          <div className="grid gridTwoCols">
+          <div className="layoutNew">
             <section className="panel">
               <div className="panelTitle">
                 <div>
@@ -441,140 +501,81 @@ export default function App() {
                     )}
                   </div>
                 </div>
+
+                <div className="topControls">
+                  <div className="togglesRow">
+                    <label className="toggle" title="Show / hide discarded sets">
+                      <input
+                        type="checkbox"
+                        checked={showDiscarded}
+                        onChange={(e) => setShowDiscarded(e.target.checked)}
+                      />
+                      <span>Show discarded</span>
+                    </label>
+
+                    <label className="toggle" title="Show / hide stats inside pool tiles">
+                      <input
+                        type="checkbox"
+                        checked={showStatsInPool}
+                        onChange={(e) => setShowStatsInPool(e.target.checked)}
+                      />
+                      <span>Show stats in pool</span>
+                    </label>
+                  </div>
+
+                  <div className="counts muted">
+                    shown <span className="mono">{shownCount}</span> · confirmed{" "}
+                    <span className="mono">{confirmedCount}</span> · discarded{" "}
+                    <span className="mono">{discardedCount}</span> · total{" "}
+                    <span className="mono">{total}</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="panel">
+              <div className="panelTitle">
+                <div className="h2">Seen ({confirmed.length}/4)</div>
+                <div className="muted">Confirm sets to fill slots 1–4</div>
               </div>
 
-              <div className="subTitle">Pool (by Pokédex)</div>
-              <div className="cards poolOneCol">
-                {poolSortedDex.map((s) => (
-                  <SetCard
+              <div className="seenGrid">
+                {confirmedSets.map((s, idx) => (
+                  <SeenSlot key={idx} set={s} index={idx} onRemove={removeConfirmed} />
+                ))}
+              </div>
+
+              <div className="muted" style={{ marginTop: 10 }}>
+                Tip: when you confirm a set, other variants of the same species are auto-discarded (toggle “Show discarded” to review).
+              </div>
+            </section>
+
+            <section className="panel">
+              <div className="panelTitle">
+                <div className="h2">Pool</div>
+                <div className="muted">Use ✕ to discard and ✓ to confirm.</div>
+              </div>
+
+              <div className="poolGrid">
+                {visiblePool.map((s) => (
+                  <SetTile
                     key={s.global_id}
                     set={s}
-                    selected={selectedSet?.global_id === s.global_id}
-                    tag={seenSet.has(s.global_id) ? "Seen" : ""}
-                    tone={seenSet.has(s.global_id) ? "seen" : "default"}
-                    onClick={() => setSelectedSet(s)}
+                    isDiscarded={discarded.has(s.global_id)}
+                    onDiscardToggle={toggleDiscard}
+                    onConfirm={confirmSet}
+                    canConfirm={confirmed.length < 4}
+                    showStats={showStatsInPool}
                   />
                 ))}
               </div>
             </section>
-
-            <aside className="side">
-              <section className="panel">
-                <div className="panelTitle">
-                  <div className="h2">Seen ({seen.length}/4)</div>
-                  {isFiltering ? <div className="muted">calculating…</div> : null}
-                </div>
-
-                {seen.length === 0 ? (
-                  <div className="muted">
-                    Mark the Pokémon as the opponent reveals them.
-                  </div>
-                ) : (
-                  <div className="seenChips">
-                    {seen.map((gid) => (
-                      <button
-                        key={gid}
-                        className="chip"
-                        onClick={() => unmarkSeen(gid)}
-                        title="Remove"
-                      >
-                        <span className="mono">#{gid}</span> ✕
-                      </button>
-                    ))}
-                  </div>
-                )}
-
-                <div className="box">
-                  <div className="statRow">
-                    <span className="muted">Possible teams</span>
-                    <span className="mono">
-                      {filterInfo?.num_possible_teams ?? "-"}
-                    </span>
-                  </div>
-                  <div className="statRow">
-                    <span className="muted">Possible remaining</span>
-                    <span className="mono">
-                      {filterInfo
-                        ? filterInfo.possible_remaining_global_ids.length
-                        : "-"}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="actionsRow">
-                  <button
-                    className="primaryBtn"
-                    onClick={() => selectedSet && markSeen(selectedSet.global_id)}
-                    disabled={
-                      !selectedSet ||
-                      seenSet.has(selectedSet.global_id) ||
-                      seen.length >= 4
-                    }
-                    title={
-                      !selectedSet
-                        ? "Select a Pokémon from the pool"
-                        : seenSet.has(selectedSet.global_id)
-                        ? "Already marked as seen"
-                        : seen.length >= 4
-                        ? "You already have 4 seen"
-                        : "Mark selected Pokémon as seen"
-                    }
-                  >
-                    Mark selected as seen
-                  </button>
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panelTitle">
-                  <div className="h2">Detected team</div>
-                  <div className="muted">1–4 (left → right)</div>
-                </div>
-
-                <div className="teamRow">
-                  {teamSets.map((s, idx) => (
-                    <DetailPanel
-                      key={idx}
-                      set={s}
-                      index={idx}
-                      onRemoveSeen={unmarkSeen}
-                    />
-                  ))}
-                </div>
-              </section>
-
-              <section className="panel">
-                <div className="panelTitle">
-                  <div className="h2">Possible remaining</div>
-                </div>
-
-                {!filterInfo ? (
-                  <div className="muted">Select a trainer to begin.</div>
-                ) : remainingSortedDex.length === 0 && seen.length > 0 ? (
-                  <div className="muted">
-                    No possibilities left (did you mark an ID that is not in the
-                    pool?).
-                  </div>
-                ) : (
-                  <div className="cards compact">
-                    {remainingSortedDex.map((s) => (
-                      <SetCard
-                        key={s.global_id}
-                        set={s}
-                        selected={selectedSet?.global_id === s.global_id}
-                        onClick={() => setSelectedSet(s)}
-                      />
-                    ))}
-                  </div>
-                )}
-              </section>
-            </aside>
           </div>
         )}
       </main>
 
       <footer className="footer muted">
-        Pool sorted by Pokédex. Items and move types shown visually.
+        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same species.
       </footer>
     </div>
   );
