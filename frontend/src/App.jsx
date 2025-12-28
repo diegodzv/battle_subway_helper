@@ -56,10 +56,7 @@ function StatRow({ label, value, max = 200 }) {
 
       <div className="statTrackWrap">
         <div className="statBarTrack" aria-label={`${label} ${v}`}>
-          <div
-            className={`statBarFill ${tierClass}`}
-            style={{ width: `${basePct}%` }}
-          />
+          <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
           {overflowPct > 0 ? (
             <div
               className="statOverflow"
@@ -70,9 +67,7 @@ function StatRow({ label, value, max = 200 }) {
         </div>
       </div>
 
-      <div className="statValue mono">
-        {typeof value === "number" ? value : "-"}
-      </div>
+      <div className="statValue mono">{typeof value === "number" ? value : "-"}</div>
     </div>
   );
 }
@@ -104,9 +99,7 @@ function SetCard({ set, onClick, selected, tag, tone = "default" }) {
 
   return (
     <button
-      className={`card ${selected ? "cardSelected" : ""} ${
-        tone === "seen" ? "cardSeen" : ""
-      }`}
+      className={`card ${selected ? "cardSelected" : ""} ${tone === "seen" ? "cardSeen" : ""}`}
       onClick={onClick}
       title={`${display} (#${set.global_id})`}
     >
@@ -241,9 +234,7 @@ export default function App() {
       }
       setIsSearching(true);
       try {
-        const res = await fetch(
-          `/trainers/search?q=${encodeURIComponent(nq)}&limit=20`
-        );
+        const res = await fetch(`/trainers/search?q=${encodeURIComponent(nq)}&limit=20`);
         if (!res.ok) throw new Error(`search failed: ${res.status}`);
         const data = await res.json();
         if (!cancelled) setSuggestions(data);
@@ -349,6 +340,8 @@ export default function App() {
     return slots;
   }, [poolSets, seen]);
 
+  const trainerTitle = trainer?.display_name ?? trainer?.name_en ?? "";
+
   return (
     <div className="page">
       <header className="header">
@@ -362,7 +355,7 @@ export default function App() {
             className="searchInput"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder='Search trainer (e.g. "battle girl", "scientist")...'
+            placeholder='Search trainer / Buscar entrenador (e.g. "clerk", "oficinista")...'
           />
           {isSearching ? <div className="spinner" title="Searching..." /> : null}
 
@@ -377,8 +370,16 @@ export default function App() {
                     setSuggestions([]);
                   }}
                 >
-                  <div className="dropdownName">{s.name_en}</div>
-                  <div className="dropdownMeta muted">{s.section}</div>
+                  <div className="dropdownName">{s.display_name ?? s.name_en}</div>
+                  <div className="dropdownMeta muted">
+                    {s.name_es ? (
+                      <>
+                        <span className="mono">{s.name_en}</span> · {s.section}
+                      </>
+                    ) : (
+                      <>{s.section}</>
+                    )}
+                  </div>
                 </button>
               ))}
             </div>
@@ -395,8 +396,7 @@ export default function App() {
           <div className="empty">
             <div className="emptyTitle">Select a trainer</div>
             <div className="muted">
-              Type above to autocomplete and pick one. Then mark Pokémon as you
-              see them.
+              Type above to autocomplete and pick one. Then mark Pokémon as you see them.
             </div>
           </div>
         ) : (
@@ -404,11 +404,20 @@ export default function App() {
             <section className="panel">
               <div className="panelTitle">
                 <div>
-                  <div className="h1">{trainer.name_en}</div>
+                  <div className="h1">{trainerTitle}</div>
                   <div className="muted">
-                    {trainer.section} · pool{" "}
-                    <span className="mono">{trainer.pool_id}</span> ·{" "}
-                    <span className="mono">{trainer.pool_size}</span> sets
+                    {trainer.name_es ? (
+                      <>
+                        <span className="mono">{trainer.name_en}</span> · {trainer.section} · pool{" "}
+                        <span className="mono">{trainer.pool_id}</span> ·{" "}
+                        <span className="mono">{trainer.pool_size}</span> sets
+                      </>
+                    ) : (
+                      <>
+                        {trainer.section} · pool <span className="mono">{trainer.pool_id}</span> ·{" "}
+                        <span className="mono">{trainer.pool_size}</span> sets
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -436,9 +445,7 @@ export default function App() {
                 </div>
 
                 {seen.length === 0 ? (
-                  <div className="muted">
-                    Mark the Pokémon as the opponent reveals them.
-                  </div>
+                  <div className="muted">Mark the Pokémon as the opponent reveals them.</div>
                 ) : (
                   <div className="seenChips">
                     {seen.map((gid) => (
@@ -457,16 +464,12 @@ export default function App() {
                 <div className="box">
                   <div className="statRow">
                     <span className="muted">Possible teams</span>
-                    <span className="mono">
-                      {filterInfo?.num_possible_teams ?? "-"}
-                    </span>
+                    <span className="mono">{filterInfo?.num_possible_teams ?? "-"}</span>
                   </div>
                   <div className="statRow">
                     <span className="muted">Possible remaining</span>
                     <span className="mono">
-                      {filterInfo
-                        ? filterInfo.possible_remaining_global_ids.length
-                        : "-"}
+                      {filterInfo ? filterInfo.possible_remaining_global_ids.length : "-"}
                     </span>
                   </div>
                 </div>
@@ -476,9 +479,7 @@ export default function App() {
                     className="primaryBtn"
                     onClick={() => selectedSet && markSeen(selectedSet.global_id)}
                     disabled={
-                      !selectedSet ||
-                      seenSet.has(selectedSet.global_id) ||
-                      seen.length >= 4
+                      !selectedSet || seenSet.has(selectedSet.global_id) || seen.length >= 4
                     }
                     title={
                       !selectedSet
@@ -503,12 +504,7 @@ export default function App() {
 
                 <div className="teamRow">
                   {teamSets.map((s, idx) => (
-                    <DetailPanel
-                      key={idx}
-                      set={s}
-                      index={idx}
-                      onRemoveSeen={unmarkSeen}
-                    />
+                    <DetailPanel key={idx} set={s} index={idx} onRemoveSeen={unmarkSeen} />
                   ))}
                 </div>
               </section>
@@ -522,8 +518,7 @@ export default function App() {
                   <div className="muted">Select a trainer to begin.</div>
                 ) : remainingSets.length === 0 && seen.length > 0 ? (
                   <div className="muted">
-                    No possibilities left (did you mark an ID that is not in the
-                    pool?).
+                    No possibilities left (did you mark an ID that is not in the pool?).
                   </div>
                 ) : (
                   <div className="cards compact">
@@ -543,9 +538,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="footer muted">
-        Pool sorted by Pokédex. Items and move types shown visually.
-      </footer>
+      <footer className="footer muted">Pool sorted by Pokédex. Items and move types shown visually.</footer>
     </div>
   );
 }

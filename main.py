@@ -25,7 +25,7 @@ POOLS_INDEX_FILE = os.path.join(DATA_DIR, "subway_pools_index_set45.json")
 # Utils
 # ----------------------------
 def normalize(s: str) -> str:
-    s = s.strip().lower()
+    s = (s or "").strip().lower()
     try:
         import unicodedata
 
@@ -41,6 +41,14 @@ def normalize(s: str) -> str:
 def read_json(path: str) -> Any:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def display_name_from_trainer(t: dict) -> str:
+    # Prefer Spanish if present; otherwise English.
+    name_es = t.get("name_es")
+    if isinstance(name_es, str) and name_es.strip():
+        return name_es.strip()
+    return (t.get("name_en") or "").strip()
 
 
 @lru_cache(maxsize=1)
@@ -82,18 +90,35 @@ def load_set_by_global_id(global_id: int) -> dict:
 @lru_cache(maxsize=1)
 def build_trainer_search_rows() -> List[dict]:
     """
-    Crea una lista ligera para buscar:
-      trainer_id, name_en, section, alias_en
-    Luego añadiremos alias_es cuando tengas el mapping.
+    Prepara filas ligeras para buscar por:
+      - name_en
+      - name_es (si existe)
     """
-    rows = []
+    rows: List[dict] = []
     for t in load_trainers():
+        name_en = t.get("name_en") or ""
+        name_es = t.get("name_es") or ""
+        aliases: List[str] = []
+
+        n_en = normalize(name_en)
+        if n_en:
+            aliases.append(n_en)
+
+        n_es = normalize(name_es) if isinstance(name_es, str) else ""
+        if n_es:
+            aliases.append(n_es)
+
+        # Dedup aliases
+        aliases = list(dict.fromkeys(aliases))
+
         rows.append(
             {
                 "trainer_id": t["trainer_id"],
-                "name_en": t["name_en"],
+                "name_en": name_en,
+                "name_es": name_es if isinstance(name_es, str) else None,
+                "display_name": display_name_from_trainer(t),
                 "section": t["section"],
-                "alias": normalize(t["name_en"]),
+                "aliases": aliases,
             }
         )
     return rows
@@ -110,15 +135,9 @@ def combos_remaining(pool_ids: List[int], seen: Set[int], team_size: int = 4) ->
     if len(seen) > team_size:
         return 0, set()
 
-    # Si algún visto no está en el pool, no hay combos
     if not seen.issubset(set(pool_sorted)):
         return 0, set()
 
-    # Pequeñas optimizaciones:
-    # - Si pool muy grande (80-90), C(90,4)=2.5M => todavía manejable en Python si no lo haces 100 veces/seg.
-    # - Aun así, filtramos rápido: si seen no vacío, sólo iteramos combinaciones que lo incluyan
-    #   (pero generar combinaciones con inclusión directa es más complejo; lo hacemos con filtro, que suele ir bien
-    #    porque en uso real seen crece rápido).
     n = len(pool_sorted)
     if n < team_size:
         return 0, set()
@@ -141,16 +160,19 @@ def combos_remaining(pool_ids: List[int], seen: Set[int], team_size: int = 4) ->
 class SearchResult(BaseModel):
     trainer_id: str
     name_en: str
+    name_es: Optional[str] = None
+    display_name: str
     section: str
 
 
 class TrainerDetail(BaseModel):
     trainer_id: str
     name_en: str
+    name_es: Optional[str] = None
+    display_name: str
     section: str
     pool_id: str
     pool_size: int
-    # devolvemos los sets completos del pool (para pintar sprites y detalles)
     sets: List[dict]
 
 
@@ -181,15 +203,36 @@ def health():
 def trainers_search(q: str = Query(..., min_length=1), limit: int = 20):
     nq = normalize(q)
     rows = build_trainer_search_rows()
+    lim = max(1, min(limit, 50))
 
-    # prefijo + contains (simple, rápido)
-    matches = [r for r in rows if r["alias"].startswith(nq)]
-    if len(matches) < limit:
-        extra = [r for r in rows if nq in r["alias"] and r not in matches]
-        matches.extend(extra)
+    # 1) Prefix matches en cualquiera de los aliases
+    prefix: List[dict] = []
+    for r in rows:
+        if any(a.startswith(nq) for a in r["aliases"]):
+            prefix.append(r)
 
-    matches = matches[: max(1, min(limit, 50))]
-    return [SearchResult(trainer_id=m["trainer_id"], name_en=m["name_en"], section=m["section"]) for m in matches]
+    # 2) Contains matches (sin repetir trainer_id)
+    prefix_ids = {r["trainer_id"] for r in prefix}
+    contains: List[dict] = []
+    if len(prefix) < lim:
+        for r in rows:
+            if r["trainer_id"] in prefix_ids:
+                continue
+            if any(nq in a for a in r["aliases"]):
+                contains.append(r)
+
+    matches = (prefix + contains)[:lim]
+
+    return [
+        SearchResult(
+            trainer_id=m["trainer_id"],
+            name_en=m["name_en"],
+            name_es=m.get("name_es"),
+            display_name=m["display_name"],
+            section=m["section"],
+        )
+        for m in matches
+    ]
 
 
 @app.get("/trainers/{trainer_id}", response_model=TrainerDetail)
@@ -210,18 +253,20 @@ def trainer_detail(trainer_id: str):
     if not pool:
         raise HTTPException(status_code=500, detail="pool_id not found in pools file")
 
-    # Cargar sets del pool
     sets = []
     for gid in pool["pool_global_ids"]:
         try:
             sets.append(load_set_by_global_id(int(gid)))
         except KeyError:
-            # si faltase algún set (no debería)
             continue
+
+    name_es = t.get("name_es") if isinstance(t.get("name_es"), str) else None
 
     return TrainerDetail(
         trainer_id=t["trainer_id"],
         name_en=t["name_en"],
+        name_es=name_es,
+        display_name=display_name_from_trainer(t),
         section=t["section"],
         pool_id=pool_id,
         pool_size=len(pool["pool_global_ids"]),
@@ -240,15 +285,9 @@ def pool_filter(pool_id: str, req: FilterRequest):
     seen = set(int(x) for x in req.seen_global_ids)
 
     num, union = combos_remaining(pool_ids, seen, team_size=4)
-    if num == 0:
-        remaining = []
-    else:
-        remaining = sorted(list(union - seen))
+    remaining = [] if num == 0 else sorted(list(union - seen))
 
-    # sets restantes completos para UI
-    remaining_sets = []
-    for gid in remaining:
-        remaining_sets.append(load_set_by_global_id(gid))
+    remaining_sets = [load_set_by_global_id(gid) for gid in remaining]
 
     return FilterResponse(
         pool_id=pool_id,
