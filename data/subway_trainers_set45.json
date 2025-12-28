@@ -730,7 +730,8 @@
         875,
         905
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Médium Truman"
     },
     {
       "trainer_id": "super-set-4-scientist-f-charis",
@@ -1622,7 +1623,8 @@
         900,
         976
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Entrenador Guay Paolo"
     },
     {
       "trainer_id": "super-set-5-backpacker-f-simone",
