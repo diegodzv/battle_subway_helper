@@ -16,7 +16,9 @@ function Sprite({ url, alt }) {
 }
 
 function ItemIcon({ url, alt }) {
-  if (!url) return <span className="itemIconFallback" title="No icon">◻</span>;
+  if (!url) return (
+    <span className="itemIconFallback" title="No icon">◻</span>
+  );
   return <img className="itemIcon" src={url} alt={alt} loading="lazy" />;
 }
 
@@ -402,14 +404,31 @@ export default function App() {
 
     setConfirmed((prev) => [...prev, set.global_id]);
 
-    // auto-discard other variants of same species (option C)
+    // Auto-discard rules:
+    //  - same species, other variants (as before)
+    //  - item clause: same item cannot appear twice in the opponent team
     setDiscarded((prev) => {
       const next = new Set(prev);
+
+      const confirmedSpecies = set.species;
+      const confirmedItem = (set.item ?? "").trim();
+
       for (const s of poolSets) {
-        if (s.species === set.species && s.global_id !== set.global_id) {
+        if (s.global_id === set.global_id) continue;
+
+        // (C) discard other variants of same species
+        if (s.species === confirmedSpecies) {
+          next.add(s.global_id);
+          continue;
+        }
+
+        // Item clause: discard any other set with same item
+        const item = (s.item ?? "").trim();
+        if (confirmedItem && item && item === confirmedItem) {
           next.add(s.global_id);
         }
       }
+
       return next;
     });
   }
@@ -546,7 +565,7 @@ export default function App() {
               </div>
 
               <div className="muted" style={{ marginTop: 10 }}>
-                Tip: when you confirm a set, other variants of the same species are auto-discarded (toggle “Show discarded” to review).
+                Tip: confirming a set auto-discards other variants of the same species, and also applies Item Clause (same item can’t appear twice).
               </div>
             </section>
 
@@ -575,7 +594,7 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same species.
+        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same species + Item Clause.
       </footer>
     </div>
   );
