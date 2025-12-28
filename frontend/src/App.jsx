@@ -56,7 +56,10 @@ function StatRow({ label, value, max = 200 }) {
 
       <div className="statTrackWrap">
         <div className="statBarTrack" aria-label={`${label} ${v}`}>
-          <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
+          <div
+            className={`statBarFill ${tierClass}`}
+            style={{ width: `${basePct}%` }}
+          />
           {overflowPct > 0 ? (
             <div
               className="statOverflow"
@@ -67,7 +70,9 @@ function StatRow({ label, value, max = 200 }) {
         </div>
       </div>
 
-      <div className="statValue mono">{typeof value === "number" ? value : "-"}</div>
+      <div className="statValue mono">
+        {typeof value === "number" ? value : "-"}
+      </div>
     </div>
   );
 }
@@ -99,7 +104,9 @@ function SetCard({ set, onClick, selected, tag, tone = "default" }) {
 
   return (
     <button
-      className={`card ${selected ? "cardSelected" : ""} ${tone === "seen" ? "cardSeen" : ""}`}
+      className={`card ${selected ? "cardSelected" : ""} ${
+        tone === "seen" ? "cardSeen" : ""
+      }`}
       onClick={onClick}
       title={`${display} (#${set.global_id})`}
     >
@@ -234,7 +241,9 @@ export default function App() {
       }
       setIsSearching(true);
       try {
-        const res = await fetch(`/trainers/search?q=${encodeURIComponent(nq)}&limit=20`);
+        const res = await fetch(
+          `/trainers/search?q=${encodeURIComponent(nq)}&limit=20`
+        );
         if (!res.ok) throw new Error(`search failed: ${res.status}`);
         const data = await res.json();
         if (!cancelled) setSuggestions(data);
@@ -310,6 +319,18 @@ export default function App() {
     });
     return copy;
   }, [poolSets]);
+
+  // Possible remaining sorted exactly like Pool: dex_number, then global_id
+  const remainingSortedDex = useMemo(() => {
+    const copy = [...remainingSets];
+    copy.sort((a, b) => {
+      const da = typeof a.dex_number === "number" ? a.dex_number : 999999;
+      const db = typeof b.dex_number === "number" ? b.dex_number : 999999;
+      if (da !== db) return da - db;
+      return (a.global_id ?? 0) - (b.global_id ?? 0);
+    });
+    return copy;
+  }, [remainingSets]);
 
   function markSeen(globalId) {
     if (seenSet.has(globalId)) return;
@@ -445,7 +466,9 @@ export default function App() {
                 </div>
 
                 {seen.length === 0 ? (
-                  <div className="muted">Mark the Pokémon as the opponent reveals them.</div>
+                  <div className="muted">
+                    Mark the Pokémon as the opponent reveals them.
+                  </div>
                 ) : (
                   <div className="seenChips">
                     {seen.map((gid) => (
@@ -464,12 +487,16 @@ export default function App() {
                 <div className="box">
                   <div className="statRow">
                     <span className="muted">Possible teams</span>
-                    <span className="mono">{filterInfo?.num_possible_teams ?? "-"}</span>
+                    <span className="mono">
+                      {filterInfo?.num_possible_teams ?? "-"}
+                    </span>
                   </div>
                   <div className="statRow">
                     <span className="muted">Possible remaining</span>
                     <span className="mono">
-                      {filterInfo ? filterInfo.possible_remaining_global_ids.length : "-"}
+                      {filterInfo
+                        ? filterInfo.possible_remaining_global_ids.length
+                        : "-"}
                     </span>
                   </div>
                 </div>
@@ -479,7 +506,9 @@ export default function App() {
                     className="primaryBtn"
                     onClick={() => selectedSet && markSeen(selectedSet.global_id)}
                     disabled={
-                      !selectedSet || seenSet.has(selectedSet.global_id) || seen.length >= 4
+                      !selectedSet ||
+                      seenSet.has(selectedSet.global_id) ||
+                      seen.length >= 4
                     }
                     title={
                       !selectedSet
@@ -504,7 +533,12 @@ export default function App() {
 
                 <div className="teamRow">
                   {teamSets.map((s, idx) => (
-                    <DetailPanel key={idx} set={s} index={idx} onRemoveSeen={unmarkSeen} />
+                    <DetailPanel
+                      key={idx}
+                      set={s}
+                      index={idx}
+                      onRemoveSeen={unmarkSeen}
+                    />
                   ))}
                 </div>
               </section>
@@ -516,13 +550,14 @@ export default function App() {
 
                 {!filterInfo ? (
                   <div className="muted">Select a trainer to begin.</div>
-                ) : remainingSets.length === 0 && seen.length > 0 ? (
+                ) : remainingSortedDex.length === 0 && seen.length > 0 ? (
                   <div className="muted">
-                    No possibilities left (did you mark an ID that is not in the pool?).
+                    No possibilities left (did you mark an ID that is not in the
+                    pool?).
                   </div>
                 ) : (
                   <div className="cards compact">
-                    {remainingSets.map((s) => (
+                    {remainingSortedDex.map((s) => (
                       <SetCard
                         key={s.global_id}
                         set={s}
@@ -538,7 +573,9 @@ export default function App() {
         )}
       </main>
 
-      <footer className="footer muted">Pool sorted by Pokédex. Items and move types shown visually.</footer>
+      <footer className="footer muted">
+        Pool sorted by Pokédex. Items and move types shown visually.
+      </footer>
     </div>
   );
 }
