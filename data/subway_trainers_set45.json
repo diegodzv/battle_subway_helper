@@ -327,7 +327,8 @@
         900,
         905
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Karateka Ariel"
     },
     {
       "trainer_id": "super-set-4-clerk-executive-faust",
@@ -5688,7 +5689,8 @@
         732,
         733
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Pokémon Ranger (M) Ximo"
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-m-smokey",
