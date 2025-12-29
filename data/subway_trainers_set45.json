@@ -2010,7 +2010,8 @@
         382,
         383
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Mochilero Rocco"
     },
     {
       "trainer_id": "super-set-5-baker-judy",
@@ -2930,7 +2931,8 @@
         645,
         646
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Ciclista Mark"
     },
     {
       "trainer_id": "super-set-5-cyclist-m-marion",
@@ -7342,7 +7344,8 @@
         927,
         979
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Operario Vic"
     },
     {
       "trainer_id": "super-set-5-worker-quinn",
