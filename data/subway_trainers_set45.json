@@ -113,7 +113,8 @@
         900,
         905
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Luchadora Mila"
     },
     {
       "trainer_id": "super-set-4-battle-girl-queenie",
@@ -6763,7 +6764,8 @@
         987,
         988
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Veterano Leónida"
     },
     {
       "trainer_id": "super-set-5-veteran-m-ponta",
