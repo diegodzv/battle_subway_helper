@@ -925,7 +925,8 @@
         820,
         821
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Científica Gina"
     },
     {
       "trainer_id": "super-set-4-scientist-f-therese",
@@ -7269,7 +7270,8 @@
         881,
         888
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Operario Cleto"
     },
     {
       "trainer_id": "super-set-5-worker-ice-vala-ry",
