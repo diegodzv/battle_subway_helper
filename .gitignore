@@ -1,0 +1,10 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Editor settings
+.vscode/
+
+# Virtual environment
+venv/
+.env
