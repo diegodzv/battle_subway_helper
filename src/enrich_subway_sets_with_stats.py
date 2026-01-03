@@ -15,8 +15,17 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import logging
 from pathlib import Path
 from typing import Any, Dict, List
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 STATS = ["HP", "Atk", "Def", "SpA", "SpD", "Spe"]
 
@@ -120,15 +129,19 @@ def main() -> int:
     base_stats_path = Path(args.base_stats)
     out_dir = Path(args.out_dir)
 
+    if not base_stats_path.exists():
+        logger.error(f"Base stats file not found: {base_stats_path}")
+        return 1
+
     base_db = read_json(base_stats_path)
     base_data = base_db.get("data", {})
     if not isinstance(base_data, dict) or not base_data:
-        print("[!] base_stats.json no tiene data. ¿Ejecutaste fetch_base_stats_pokeapi.py?")
+        logger.error("base_stats.json no tiene data. ¿Ejecutaste fetch_base_stats_pokeapi.py?")
         return 1
 
     files = list_set_files(sets_dir)
     if not files:
-        print(f"[!] No encuentro sets en {sets_dir}")
+        logger.warning(f"No encuentro sets en {sets_dir}")
         return 1
 
     if not args.write_in_place:
@@ -177,9 +190,10 @@ def main() -> int:
         write_json(out_path, s)
         updated += 1
 
-    print(f"[+] OK. sets={len(files)} updated={updated} missing_species={missing_species}")
+    logger.info(f"Process complete. sets={len(files)} updated={updated} missing_species={missing_species}")
     if missing_species:
-        print("[!] Te faltan species en base_stats.json: revisa mapeos raros en normalize_species_for_pokeapi().")
+        logger.warning("Faltan especies en base_stats.json: revisa mapeos en normalize_species_for_pokeapi().")
+    
     return 0
 
 

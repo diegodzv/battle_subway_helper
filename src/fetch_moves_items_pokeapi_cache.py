@@ -7,11 +7,20 @@ import argparse
 import json
 import re
 import time
+import logging
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, Optional, Set, Tuple
 
 import requests
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 POKEAPI_BASE = "https://pokeapi.co/api/v2"
 
@@ -158,23 +167,27 @@ def update_meta(cache: Dict[str, Any], rate_limit_ms: int) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--sets_dir", required=True, help="Directory with per-set JSON files (data/subway_pokemon)")
-    ap.add_argument("--cache", required=True, help="Path to cache JSON (data/moves_items_cache.json)")
+    ap.add_argument("--sets_dir", required=True, help="Directory with per-set JSON files")
+    ap.add_argument("--cache", required=True, help="Path to cache JSON")
     ap.add_argument(
         "--refetch_not_found",
         action="store_true",
-        help="If set, re-fetch only entries previously marked not_found=true",
+        help="Re-fetch entries previously marked not_found=true",
     )
     ap.add_argument(
         "--sleep",
         type=float,
         default=0.12,
-        help="Sleep (seconds) between requests (avoid rate limits). Default 0.12 (~120ms).",
+        help="Sleep between requests. Default 0.12.",
     )
     args = ap.parse_args()
 
     sets_dir = Path(args.sets_dir)
     cache_path = Path(args.cache)
+
+    if not sets_dir.exists():
+        logger.error(f"Directory not found: {sets_dir}")
+        return 1
 
     moves_raw, items_raw = extract_unique_moves_items(sets_dir)
 
@@ -211,28 +224,37 @@ def main() -> int:
     moves_to_fetch = sorted([m for m in moves if needs_fetch_move(m)])
     items_to_fetch = sorted([i for i in items if needs_fetch_item(i)])
 
-    print(f"[+] Moves únicos necesarios: {len(moves)} (a consultar {len(moves_to_fetch)})")
-    print(f"[+] Items únicos necesarios: {len(items)} (a consultar {len(items_to_fetch)})")
+    logger.info(f"Moves: {len(moves)} unique, {len(moves_to_fetch)} to fetch.")
+    logger.info(f"Items: {len(items)} unique, {len(items_to_fetch)} to fetch.")
 
     for idx, slug in enumerate(moves_to_fetch, start=1):
-        t, nf, meta = fetch_move_type(slug)
-        moves_cache[slug] = {"name": slug, "type": t, "not_found": nf, **meta}
+        try:
+            t, nf, meta_info = fetch_move_type(slug)
+            moves_cache[slug] = {"name": slug, "type": t, "not_found": nf, **meta_info}
+            if idx % 50 == 0:
+                logger.info(f"  moves progress: {idx}/{len(moves_to_fetch)}")
+        except Exception as e:
+            logger.error(f"Failed to fetch move {slug}: {e}")
+        
         if args.sleep:
             time.sleep(args.sleep)
-        if idx % 50 == 0:
-            print(f"  moves: {idx}/{len(moves_to_fetch)}")
 
     for idx, slug in enumerate(items_to_fetch, start=1):
-        sprite, nf, meta = fetch_item_sprite(slug)
-        items_cache[slug] = {"name": slug, "sprite_url": sprite, "not_found": nf, **meta}
+        try:
+            sprite, nf, meta_info = fetch_item_sprite(slug)
+            items_cache[slug] = {"name": slug, "sprite_url": sprite, "not_found": nf, **meta_info}
+            if idx % 50 == 0:
+                logger.info(f"  items progress: {idx}/{len(items_to_fetch)}")
+        except Exception as e:
+            logger.error(f"Failed to fetch item {slug}: {e}")
+
         if args.sleep:
             time.sleep(args.sleep)
-        if idx % 50 == 0:
-            print(f"  items: {idx}/{len(items_to_fetch)}")
 
     update_meta(cache, rate_limit_ms=int(args.sleep * 1000) if args.sleep else 0)
     save_json(cache_path, cache)
-    print(f"[+] Guardado caché: {cache_path}")
+    logger.info(f"Cache saved to: {cache_path}")
+    
     return 0
 
 

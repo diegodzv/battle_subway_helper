@@ -14,12 +14,21 @@ import argparse
 import json
 import re
 import time
+import logging
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 import requests
 from bs4 import BeautifulSoup
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_URL = "https://www.smogon.com/ingame/bc/bw_subway_pokemon"
 
@@ -273,15 +282,23 @@ def main() -> int:
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"[+] Descargando: {args.url}")
-    html = fetch_html(args.url, timeout=args.timeout)
+    logger.info(f"Descargando: {args.url}")
+    try:
+        html = fetch_html(args.url, timeout=args.timeout)
+    except Exception as e:
+        logger.error(f"Error fatal al descargar: {e}")
+        return 1
 
     if args.sleep > 0:
         time.sleep(args.sleep)
 
-    print("[+] Parseando sets...")
-    sets, meta = parse_sets(html)
-    print(f"[+] OK: {meta}")
+    logger.info("Parseando sets...")
+    try:
+        sets, meta = parse_sets(html)
+        logger.info(f"OK: {meta}")
+    except Exception as e:
+        logger.error(f"Error fatal al parsear: {e}")
+        return 1
 
     index: Dict[str, Any] = {
         "meta": meta,
@@ -309,7 +326,7 @@ def main() -> int:
 
     write_json(out_dir / "_index.json", index)
 
-    print(f"[+] Guardados {len(sets)} ficheros + _index.json en: {out_dir}")
+    logger.info(f"Guardados {len(sets)} ficheros + _index.json en: {out_dir}")
     return 0
 
 

@@ -6,8 +6,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import logging
 from pathlib import Path
 from typing import Any, Dict, Optional
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 DEX_FROM_SPRITE_RE = re.compile(r"/pokemon/(\d+)\.(?:png|gif)$", re.IGNORECASE)
 
@@ -124,9 +133,9 @@ def main() -> int:
             if args.write_in_place:
                 write_json(path, data)
 
-    print(f"[+] OK dex_number. total_sets={total} updated={updated} missing_species={missing}")
+    logger.info(f"Done dex_number. total_sets={total} updated={updated} missing_species={missing}")
     if not args.write_in_place:
-        print("[i] No se escribió nada (usa --write_in_place para guardar).")
+        logger.info("No se escribió nada (usa --write_in_place para guardar).")
     return 0
 
 

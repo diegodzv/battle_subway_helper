@@ -15,7 +15,16 @@ import argparse
 import hashlib
 import json
 import os
+import logging
 from typing import Any, Dict, List
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 
 def read_json(path: str) -> Any:
@@ -61,7 +70,7 @@ def main() -> int:
     data = read_json(args.inp)
     trainers = data.get("trainers", [])
     if not isinstance(trainers, list) or not trainers:
-        print("[!] No hay trainers en el input.")
+        logger.warning("No hay trainers en el input.")
         return 1
 
     groups: Dict[str, Dict[str, Any]] = {}
@@ -123,13 +132,13 @@ def main() -> int:
     }
 
     write_json(args.out, out)
-    print(f"[+] Guardado: {args.out} (unique_pools={len(pools)})")
+    logger.info(f"Guardado: {args.out} (unique_pools={len(pools)})")
 
     # Vista rápida
     top = pools[:10]
-    print("[+] Top pools por frecuencia:")
+    logger.info("Top pools por frecuencia:")
     for p in top:
-        print(f"  - {p['pool_id']} trainers={p['trainer_count']} pool_size={p['pool_size']}")
+        logger.info(f"  - {p['pool_id']} trainers={p['trainer_count']} pool_size={p['pool_size']}")
     return 0
 
 

@@ -6,12 +6,20 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import logging
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 
 import requests
 from bs4 import BeautifulSoup
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 DEFAULT_URL = "https://www.smogon.com/ingame/bc/bw_subway_trainers"
 
@@ -40,7 +48,6 @@ def slugify(s: str) -> str:
     s = s.strip().lower()
     try:
         import unicodedata
-
         s = unicodedata.normalize("NFKD", s)
         s = "".join(ch for ch in s if not unicodedata.combining(ch))
     except Exception:
@@ -75,7 +82,8 @@ def is_comma_token(tok: str) -> bool:
 
 def looks_like_trainer_name(tok: str) -> bool:
     low = tok.lower()
-    if low in {"table of contents", "introduction", "normal subway trainers", "super subway trainers"}:
+    forbidden = {"table of contents", "introduction", "normal subway trainers", "super subway trainers"}
+    if low in forbidden:
         return False
     if normalize_section_token(tok) is not None:
         return False
@@ -103,12 +111,13 @@ def consume_pool(tokens: List[str], start: int) -> Tuple[List[int], int]:
     return nums, i
 
 
-def parse_trainers(tokens: List[str], wanted_sections: Set[str], debug: bool = False) -> List[TrainerEntry]:
+def parse_trainers(tokens: List[str], wanted_sections: Set[str]) -> List[TrainerEntry]:
     entries: List[TrainerEntry] = []
 
     try:
         super_idx = next(i for i, t in enumerate(tokens) if t.strip().lower() == "super subway trainers")
     except StopIteration:
+        logger.error("No se encontró la sección 'Super Subway Trainers' en el HTML.")
         return []
 
     i = super_idx + 1
@@ -127,8 +136,8 @@ def parse_trainers(tokens: List[str], wanted_sections: Set[str], debug: bool = F
 
     while i < len(tokens):
         tok = tokens[i]
-
         sec = normalize_section_token(tok)
+        
         if sec:
             current_section = sec
             i += 1
@@ -157,13 +166,7 @@ def parse_trainers(tokens: List[str], wanted_sections: Set[str], debug: bool = F
 
         i += 1
 
-    uniq: Dict[str, TrainerEntry] = {}
-    for e in entries:
-        uniq[e.trainer_id] = e
-
-    if debug:
-        print(f"[debug] parsed trainers={len(uniq)}")
-
+    uniq: Dict[str, TrainerEntry] = {e.trainer_id: e for e in entries}
     return list(uniq.values())
 
 
@@ -172,43 +175,43 @@ def main() -> int:
     ap.add_argument("--url", default=DEFAULT_URL)
     ap.add_argument("--out", default="data/subway_trainers_set45.json")
     ap.add_argument("--timeout", type=int, default=30)
-    ap.add_argument("--sections", default="set4,set5", help="set4,set5 por defecto; también set1,set2,set3,special")
-    ap.add_argument("--debug_dump", action="store_true", help="Imprime tokens alrededor de 'Youngster Joshua'")
-    ap.add_argument("--debug", action="store_true", help="Debug extra")
+    ap.add_argument("--sections", default="set4,set5", help="set1-set5,special")
+    ap.add_argument("--debug_dump", action="store_true", help="Vuelca tokens cercanos a un entrenador conocido")
     args = ap.parse_args()
 
     section_map = {
-        "set1": "Super Set 1",
-        "set2": "Super Set 2",
-        "set3": "Super Set 3",
-        "set4": "Super Set 4",
-        "set5": "Super Set 5",
-        "special": "Super Special",
+        "set1": "Super Set 1", "set2": "Super Set 2", "set3": "Super Set 3",
+        "set4": "Super Set 4", "set5": "Super Set 5", "special": "Super Special",
     }
 
     wanted: Set[str] = set()
     for token in [t.strip().lower() for t in args.sections.split(",") if t.strip()]:
         if token not in section_map:
-            raise SystemExit(f"Sección desconocida: {token}. Usa: {', '.join(section_map.keys())}")
+            logger.error(f"Sección desconocida: {token}")
+            return 1
         wanted.add(section_map[token])
 
-    print(f"[+] Descargando: {args.url}")
-    html = fetch_html(args.url, timeout=args.timeout)
+    logger.info(f"Descargando: {args.url}")
+    try:
+        html = fetch_html(args.url, timeout=args.timeout)
+    except Exception as e:
+        logger.error(f"Error al descargar: {e}")
+        return 1
+        
     tokens = extract_tokens(html)
 
     if args.debug_dump:
         try:
-            idx = next(i for i, t in enumerate(tokens) if t == "Youngster Joshua")
-            lo = max(0, idx - 5)
-            hi = min(len(tokens), idx + 30)
-            print("[debug] Dump tokens alrededor de 'Youngster Joshua':")
+            idx = next(i for i, t in enumerate(tokens) if "Joshua" in t)
+            lo, hi = max(0, idx - 5), min(len(tokens), idx + 20)
+            logger.info("Dump tokens (debug):")
             for j in range(lo, hi):
-                print(f"{j:05d}: {tokens[j]}")
+                logger.info(f"{j:05d}: {tokens[j]}")
         except StopIteration:
-            print("[debug] No encuentro 'Youngster Joshua' en tokens.")
+            logger.warning("No se encontró 'Youngster Joshua' para el debug_dump.")
 
-    print(f"[+] Parseando entrenadores ({sorted(wanted)})...")
-    trainers = parse_trainers(tokens, wanted_sections=wanted, debug=args.debug)
+    logger.info(f"Parseando entrenadores para secciones: {sorted(wanted)}...")
+    trainers = parse_trainers(tokens, wanted_sections=wanted)
     trainers = sorted(trainers, key=lambda t: (t.section, t.name_en))
 
     payload = {
@@ -218,7 +221,8 @@ def main() -> int:
 
     out_path = Path(args.out)
     write_json(out_path, payload)
-    print(f"[+] Guardado: {out_path} (trainers={len(trainers)})")
+    logger.info(f"Guardado exitoso: {out_path} (Total: {len(trainers)} entrenadores)")
+    
     return 0
 
 

@@ -23,10 +23,18 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import logging
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List
 
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 ROOT_ALLOWED_KEYS = {"meta", "moves", "items"}
 
@@ -144,14 +152,16 @@ def main() -> int:
 
     path = Path(args.cache)
     if not path.exists():
-        raise SystemExit(f"[!] Cache file not found: {path}")
+        logger.warning(f"Cache file not found: {path}")
+        return 1
 
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
-        raise SystemExit("[!] Invalid cache JSON: root is not an object")
+        logger.error("Invalid cache JSON: root is not an object")
+        return 1
 
     schema = detect_schema(data)
-    print(f"[i] cache schema: {schema}")
+    logger.info(f"cache schema: {schema}")
 
     deletions: List[Deletion] = []
 
@@ -160,9 +170,10 @@ def main() -> int:
         items = data.get("items", {})
 
         if not isinstance(moves, dict) or not isinstance(items, dict):
-            raise SystemExit("[!] Invalid nested schema: moves/items must be objects")
+            logger.error("Invalid nested schema: moves/items must be objects")
+            return 1
 
-        print(f"[i] moves entries: {len(moves)} | items entries: {len(items)}")
+        logger.info(f"moves entries: {len(moves)} | items entries: {len(items)}")
 
         # 1) root cleanup (elimina la “segunda capa” plana)
         deletions.extend(apply_root_cleanup(data))
@@ -190,8 +201,7 @@ def main() -> int:
 
     else:
         # Flat schema: lo tratamos como "tabla única" y aplicamos compact+alias sobre el root.
-        # No es perfecto (no separa moves/items), pero sirve para limpiar not_found duplicados.
-        print("[!] Flat schema detected. Cleaning as a single table (best-effort).")
+        logger.warning("Flat schema detected. Cleaning as a single table (best-effort).")
         deletions.extend(apply_compact_deletions("root", data))
         # alias maps sobre root también (por si el flat mezcla todo)
         deletions.extend(apply_alias_deletions("root", data, MOVE_ALIAS_MAP))
@@ -203,7 +213,7 @@ def main() -> int:
                 data.pop(k, None)
 
     if not deletions:
-        print("[+] No bad entries to delete.")
+        logger.info("No bad entries to delete.")
         return 0
 
     # resumen
@@ -211,16 +221,16 @@ def main() -> int:
     for d in deletions:
         by_kind[d.kind] = by_kind.get(d.kind, 0) + 1
 
-    print(f"[+] Found {len(deletions)} deletions: {by_kind}")
+    logger.info(f"Found {len(deletions)} deletions: {by_kind}")
     for d in deletions:
-        print(f"  - ({d.kind}) delete '{d.key}' [{d.reason}]")
+        logger.info(f"  - ({d.kind}) delete '{d.key}' [{d.reason}]")
 
     if not args.write:
-        print("[dry-run] Not writing. Re-run with --write to apply.")
+        logger.info("[dry-run] Not writing. Re-run with --write to apply.")
         return 0
 
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"[+] Updated cache written: {path}")
+    logger.info(f"Updated cache written: {path}")
     return 0
 
 

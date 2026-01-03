@@ -6,8 +6,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import logging
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 # ----------------------------
 # Slug helpers (moves/items)
@@ -229,9 +238,9 @@ def main() -> int:
             if args.write_in_place:
                 save_json(path, d)
 
-    print(f"[+] OK enrich. total_sets={total} updated={updated}")
+    logger.info(f"enrich. total_sets={total} updated={updated}")
     if not args.write_in_place:
-        print("[i] No se escribió nada (usa --write_in_place para guardar).")
+        logger.info("No se escribió nada (usa --write_in_place para guardar).")
     return 0
 
 

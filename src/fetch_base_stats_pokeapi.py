@@ -10,10 +10,19 @@ from __future__ import annotations
 import argparse
 import json
 import time
+import logging
 from pathlib import Path
 from typing import Any, Dict, List, Set
 
 import requests
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 POKEAPI_POKEMON = "https://pokeapi.co/api/v2/pokemon/{name}"
 
@@ -92,19 +101,26 @@ def main() -> int:
     sets_dir = Path(args.sets_dir)
     out_path = Path(args.out)
 
+    if not sets_dir.exists():
+        logger.error(f"El directorio de entrada no existe: {sets_dir}")
+        return 1
+
     files = list_set_files(sets_dir)
     if not files:
-        print(f"[!] No encuentro sets en {sets_dir}")
+        logger.warning(f"No encuentro sets en {sets_dir}")
         return 1
 
     species: Set[str] = set()
     for p in files:
-        data = read_json(p)
-        sp = data.get("species")
-        if isinstance(sp, str) and sp.strip():
-            species.add(sp.strip())
+        try:
+            data = read_json(p)
+            sp = data.get("species")
+            if isinstance(sp, str) and sp.strip():
+                species.add(sp.strip())
+        except Exception as e:
+            logger.warning(f"No se pudo leer {p.name}: {e}")
 
-    print(f"[+] Especies únicas: {len(species)}")
+    logger.info(f"Especies únicas detectadas: {len(species)}")
 
     out: Dict[str, dict] = {}
     errors: List[str] = []
@@ -128,10 +144,10 @@ def main() -> int:
                 "abilities": [a["ability"]["name"] for a in payload.get("abilities", [])],
                 "sprites": payload.get("sprites", {}),
             }
-            print(f"[+] {sp} -> OK")
+            logger.info(f"Fetched: {sp} -> OK")
         except Exception as e:
             msg = f"{sp} ({api_name}): {e}"
-            print(f"[!] ERROR: {msg}")
+            logger.error(f"ERROR: {msg}")
             errors.append(msg)
 
         time.sleep(args.sleep)
@@ -147,9 +163,11 @@ def main() -> int:
     }
 
     write_json(out_path, result)
-    print(f"[+] Guardado: {out_path}")
+    logger.info(f"Guardado: {out_path} (Total OK: {len(out)})")
+    
     if errors:
-        print("[!] Hay errores. Normalmente son nombres raros; los añadimos al mapeo y listo.")
+        logger.warning("Se produjeron errores durante la descarga. Revisa el mapeo 'special' en el script.")
+    
     return 0
 
 

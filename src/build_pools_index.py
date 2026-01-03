@@ -6,8 +6,16 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import logging
 from typing import Any, Dict, List
 
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 def read_json(path: str) -> Any:
     with open(path, "r", encoding="utf-8") as f:
@@ -49,11 +57,11 @@ def build_global_id_index(sets_dir: str) -> Dict[str, str]:
 
         gid = str(data["global_id"])
         if gid in out and out[gid] != fn:
-            print(f"[!] WARNING: duplicate global_id {gid}: {out[gid]} and {fn}. Keeping {fn}.")
+            logger.warning(f"duplicate global_id {gid}: {out[gid]} and {fn}. Keeping {fn}.")
         out[gid] = fn
 
     if not out:
-        print(f"[!] WARNING: no set JSON files found in {sets_dir}")
+        logger.warning(f"no set JSON files found in {sets_dir}")
 
     return out
 
@@ -68,7 +76,7 @@ def main() -> int:
     pools_data = read_json(args.pools)
     pools = pools_data.get("pools", [])
     if not isinstance(pools, list) or not pools:
-        print("[!] No hay pools en el input (o 'pools' no es una lista).")
+        logger.warning("No hay pools en el input (o 'pools' no es una lista).")
         return 1
 
     trainer_to_pool: Dict[str, str] = {}
@@ -104,7 +112,7 @@ def main() -> int:
     }
 
     write_json(args.out, out)
-    print(f"[+] Guardado: {args.out}")
+    logger.info(f"Guardado: {args.out}")
     return 0
 
 
