@@ -60,7 +60,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Luchadora Martina"
+      "name_es": "Luchadora Mila"
     },
     {
       "trainer_id": "super-set-4-battle-girl-flush",
@@ -114,7 +114,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Luchadora Mila"
+      "name_es": "Luchadora Lorena"
     },
     {
       "trainer_id": "super-set-4-battle-girl-queenie",
@@ -167,7 +167,8 @@
         900,
         905
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Luchadora Martina"
     },
     {
       "trainer_id": "super-set-4-black-belt-enpi",
@@ -221,7 +222,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Karateka Celso"
+      "name_es": "Karateka Ariel"
     },
     {
       "trainer_id": "super-set-4-black-belt-harimao",
@@ -275,7 +276,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Karateka Damián"
+      "name_es": "Karateka Celso"
     },
     {
       "trainer_id": "super-set-4-black-belt-unsu",
@@ -329,7 +330,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Karateka Ariel"
+      "name_es": "Karateka Damián"
     },
     {
       "trainer_id": "super-set-4-clerk-executive-faust",
@@ -426,7 +427,7 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Empresario Gastón"
+      "name_es": "Empresario Douglas"
     },
     {
       "trainer_id": "super-set-4-clerk-executive-ulfgang",
@@ -523,7 +524,7 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Empresario Douglas"
+      "name_es": "Empresario Gastón"
     },
     {
       "trainer_id": "super-set-4-psychic-f-longo",
@@ -663,7 +664,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Álex"
+      "name_es": "Médium Truman"
     },
     {
       "trainer_id": "super-set-4-psychic-m-khaan",
@@ -733,7 +734,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Truman"
+      "name_es": "Médium Álex"
     },
     {
       "trainer_id": "super-set-4-scientist-f-charis",
@@ -1021,7 +1022,8 @@
         907,
         908
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Científica Espe"
     },
     {
       "trainer_id": "super-set-4-scientist-m-shan",
@@ -1117,7 +1119,7 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científico Stanley"
+      "name_es": "Científico Giulio"
     },
     {
       "trainer_id": "super-set-4-scientist-m-spacey",
@@ -1213,7 +1215,7 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científico Guilio"
+      "name_es": "Científico Stanley"
     },
     {
       "trainer_id": "super-set-4-scientist-m-stubs",
@@ -1469,7 +1471,8 @@
         900,
         976
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Entrenadora Guay Pam"
     },
     {
       "trainer_id": "super-set-5-ace-trainer-m-dylan",
@@ -1522,7 +1525,8 @@
         816,
         819
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Entrenador Guay Steve"
     },
     {
       "trainer_id": "super-set-5-ace-trainer-m-farley",
@@ -1600,7 +1604,8 @@
         906,
         907
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Entrenador Guay Luke"
     },
     {
       "trainer_id": "super-set-5-ace-trainer-m-reigel",
@@ -2934,7 +2939,7 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ciclista Mark"
+      "name_es": "Ciclista Gordon"
     },
     {
       "trainer_id": "super-set-5-cyclist-m-marion",
@@ -3030,7 +3035,8 @@
         645,
         646
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Ciclista Mark"
     },
     {
       "trainer_id": "super-set-5-depot-agent-isadore",
@@ -3532,7 +3538,8 @@
         987,
         988
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Duque Isaías"
     },
     {
       "trainer_id": "super-set-5-gentleman-kavan",
@@ -3620,7 +3627,8 @@
         987,
         988
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Duque Nelio"
     },
     {
       "trainer_id": "super-set-5-harlequin-aramis",
@@ -3655,7 +3663,7 @@
         885
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Arlequín Salomón"
+      "name_es": "Arlequín Aníbal"
     },
     {
       "trainer_id": "super-set-5-harlequin-athos",
@@ -3690,7 +3698,7 @@
         885
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Arlequín Aníbal"
+      "name_es": "Arlequín Salomón"
     },
     {
       "trainer_id": "super-set-5-hiker-jorge",
@@ -3790,7 +3798,8 @@
         885,
         906
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Montañero Pío"
     },
     {
       "trainer_id": "super-set-5-hiker-kemuel",
@@ -4060,7 +4069,7 @@
         748
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criada Palmira"
+      "name_es": "Criada Kira"
     },
     {
       "trainer_id": "super-set-5-maid-fesan",
@@ -4128,7 +4137,8 @@
         747,
         748
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Criada Palmira"
     },
     {
       "trainer_id": "super-set-5-nurse-panarat",
@@ -4359,7 +4369,7 @@
         871
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Seño Tamara"
+      "name_es": "Seño Lina"
     },
     {
       "trainer_id": "super-set-5-nursery-aide-evelyn",
@@ -4396,7 +4406,7 @@
         871
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Seño Lina"
+      "name_es": "Seño Tamara"
     },
     {
       "trainer_id": "super-set-5-painter-hacikan",
@@ -4453,7 +4463,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Artista Máximo"
+      "name_es": "Artista Manfred"
     },
     {
       "trainer_id": "super-set-5-painter-rikkyu",
@@ -4510,7 +4520,7 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Artista Manfred"
+      "name_es": "Artista Máximo"
     },
     {
       "trainer_id": "super-set-5-parasol-lady-hilary",
@@ -4725,7 +4735,7 @@
         982
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Piloto Matthew"
+      "name_es": "Piloto Renzo"
     },
     {
       "trainer_id": "super-set-5-pilot-chand",
@@ -4829,7 +4839,8 @@
         981,
         982
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Piloto Matthew"
     },
     {
       "trainer_id": "super-set-5-pokemon-breeder-f-janet",
@@ -5020,7 +5031,8 @@
         907,
         908
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Criapokémon Sabrina"
     },
     {
       "trainer_id": "super-set-5-pokemon-breeder-m-eoin",
@@ -5307,7 +5319,8 @@
         732,
         733
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Pokémon Ranger (F) Fátima"
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-f-paula",
@@ -5404,7 +5417,7 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (F) Adriana"
+      "name_es": "Pokémon Ranger (F) Bibi"
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-f-terran",
@@ -5501,7 +5514,7 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (F) Bibi"
+      "name_es": "Pokémon Ranger (F) Adriana"
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-m-mouse",
@@ -5598,7 +5611,7 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (M) Israel"
+      "name_es": "Pokémon Ranger (M) León"
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-m-skyblue",
@@ -5791,7 +5804,7 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (M) León"
+      "name_es": "Pokémon Ranger (M) Israel"
     },
     {
       "trainer_id": "super-set-5-policeman-bobemon",
@@ -5855,7 +5868,7 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Policía Takao"
+      "name_es": "Policía Rufo"
     },
     {
       "trainer_id": "super-set-5-policeman-bobnori",
@@ -5919,7 +5932,7 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Policía Rufo"
+      "name_es": "Policía Takao"
     },
     {
       "trainer_id": "super-set-5-roughneck-ganymed",
@@ -5940,7 +5953,7 @@
         880
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Calvo Ennio"
+      "name_es": "Calvo Fernán"
     },
     {
       "trainer_id": "super-set-5-roughneck-proteus",
@@ -5961,7 +5974,7 @@
         880
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Calvo Fernán"
+      "name_es": "Calvo Ennio"
     },
     {
       "trainer_id": "super-set-5-socialite-aparna",
@@ -6598,7 +6611,7 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterano Sancho"
+      "name_es": "Veterano Leónida"
     },
     {
       "trainer_id": "super-set-5-veteran-m-donta",
@@ -6766,7 +6779,7 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterano Leónida"
+      "name_es": "Veterano Sancho"
     },
     {
       "trainer_id": "super-set-5-veteran-m-ponta",
@@ -6844,7 +6857,8 @@
         906,
         907
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Veterano Phoebe"
     },
     {
       "trainer_id": "super-set-5-waiter-gonyan",
@@ -7271,7 +7285,7 @@
         888
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Operario Cleto"
+      "name_es": "Operario Doroteo"
     },
     {
       "trainer_id": "super-set-5-worker-ice-vala-ry",
@@ -7380,7 +7394,8 @@
         873,
         903
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Operario Arcadio"
     }
   ]
 }
