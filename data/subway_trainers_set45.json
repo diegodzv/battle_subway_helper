@@ -7289,7 +7289,7 @@
     },
     {
       "trainer_id": "super-set-5-worker-ice-vala-ry",
-      "name_en": "Worker (Ice) ValÃ©ry",
+      "name_en": "Worker (Ice) Valéry",
       "section": "Super Set 5",
       "pool_global_ids": [
         240,
@@ -7325,7 +7325,8 @@
         881,
         888
       ],
-      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers"
+      "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
+      "name_es": "Operario Cleto"
     },
     {
       "trainer_id": "super-set-5-worker-hayes",
