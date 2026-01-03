@@ -230,11 +230,17 @@ http://localhost:5173
 Open **two terminals**:
 
 Terminal 1 (backend):
+
+```cmd
 uvicorn src.main:app --reload --port 8000
+```
 
 Terminal 2 (frontend):
+
+```cmd
 cd frontend
 npm run dev
+```
 
 ---
 
