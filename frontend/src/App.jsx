@@ -449,7 +449,17 @@ export default function App() {
       <header className="header">
         <div className="brand">
           <div className="brandTitle">Battle Subway Helper (B2/W2)</div>
-          <div className="muted">By @diegodzv</div>
+          <div className="muted">
+            By{" "}
+            <a
+              href="https://github.com/diegodzv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="authorLink"
+            >
+              @diegodzv
+            </a>
+          </div>
         </div>
 
         <div className="searchBox">

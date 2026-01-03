@@ -568,3 +568,13 @@ html, body, #root {
 @media (max-width: 620px) {
   .poolGrid { grid-template-columns: 1fr; }
 }
+
+.authorLink {
+  color: rgba(140, 180, 255, 0.95);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.authorLink:hover {
+  text-decoration: underline;
+}
