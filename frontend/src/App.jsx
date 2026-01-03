@@ -448,8 +448,8 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div className="brand">
-          <div className="brandTitle">Battle Subway (B2/W2)</div>
-          <div className="muted">Super Set 4/5 · manual set elimination</div>
+          <div className="brandTitle">Battle Subway Helper (B2/W2)</div>
+          <div className="muted">By @diegodzv</div>
         </div>
 
         <div className="searchBox">
