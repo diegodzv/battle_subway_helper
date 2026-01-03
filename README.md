@@ -1,4 +1,4 @@
-# 🚇 Battle Subway Helper (Pokémon B2/W2 – Super Sets 4/5)
+# 🚇 Gen 5 Battle Subway Helper
 
 An interactive tool to **analyze Battle Subway trainers** (Pokémon Black 2 / White 2),
 allowing you to **deduce the opponent’s team in real time** based on revealed Pokémon,
