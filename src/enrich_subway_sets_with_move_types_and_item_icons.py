@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from __future__ import annotations
+
 import argparse
 import json
-import os
 import re
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 # ----------------------------
@@ -44,26 +46,19 @@ def compact_slug(slug: str) -> str:
 # ----------------------------
 # Known PokeAPI slug aliases
 # ----------------------------
-# These are the classic "Smogon-ish" vs PokeAPI differences.
+
 MOVE_SLUG_ALIASES: Dict[str, str] = {
-    # Gen 2 move is "feint-attack" in PokeAPI, not "faint-attack"
     "faint-attack": "feint-attack",
-
-    # PokeAPI uses "high-jump-kick"
     "hi-jump-kick": "high-jump-kick",
-
-    # PokeAPI uses "soft-boiled"
     "softboiled": "soft-boiled",
     "soft-boiled": "soft-boiled",
-
-    # PokeAPI uses plural "smelling-salts"
     "smelling-salt": "smelling-salts",
     "smellingsalt": "smelling-salts",
     "smelling-salts": "smelling-salts",
 }
 
 ITEM_SLUG_ALIASES: Dict[str, str] = {
-    # (optional room for future weirdness)
+    # reserved for future weirdness
 }
 
 
@@ -71,31 +66,26 @@ ITEM_SLUG_ALIASES: Dict[str, str] = {
 # IO helpers
 # ----------------------------
 
-def iter_set_files(sets_dir: str) -> Iterable[str]:
-    for fn in os.listdir(sets_dir):
-        if not fn.endswith(".json"):
-            continue
-        if fn.startswith("_"):
-            continue
-        yield os.path.join(sets_dir, fn)
+def iter_set_files(sets_dir: Path) -> Iterable[Path]:
+    for p in sets_dir.iterdir():
+        if p.is_file() and p.suffix == ".json" and not p.name.startswith("_"):
+            yield p
 
 
-def load_json(path: str) -> Any:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+def load_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def save_json(path: str, obj: Any) -> None:
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
+def save_json(path: Path, obj: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 # ----------------------------
 # Cache access
 # ----------------------------
 
-def load_cache(cache_path: str) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+def load_cache(cache_path: Path) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """
     Supports the current schema:
       { "meta": {...}, "moves": {...}, "items": {...} }
@@ -129,7 +119,6 @@ def resolve_move_slug(raw_move_name: str, moves_cache: Dict[str, Any]) -> str:
     if base in moves_cache:
         return base
 
-    # Compact fallback: match keys ignoring hyphens (useful for weird leftovers)
     target = compact_slug(base)
     if target:
         for k in moves_cache.keys():
@@ -220,12 +209,15 @@ def main() -> int:
     ap.add_argument("--write_in_place", action="store_true", help="Write changes to the set files")
     args = ap.parse_args()
 
-    moves_cache, items_cache = load_cache(args.cache)
+    sets_dir = Path(args.sets_dir)
+    cache_path = Path(args.cache)
+
+    moves_cache, items_cache = load_cache(cache_path)
 
     total = 0
     updated = 0
 
-    for path in iter_set_files(args.sets_dir):
+    for path in iter_set_files(sets_dir):
         total += 1
         d = load_json(path)
         if not isinstance(d, dict):
@@ -238,6 +230,8 @@ def main() -> int:
                 save_json(path, d)
 
     print(f"[+] OK enrich. total_sets={total} updated={updated}")
+    if not args.write_in_place:
+        print("[i] No se escribió nada (usa --write_in_place para guardar).")
     return 0
 
 

@@ -24,16 +24,37 @@ def build_global_id_index(sets_dir: str) -> Dict[str, str]:
     """
     Lee todos los JSON de sets y crea:
       global_id (str) -> filename
+
+    Ignora ficheros que:
+      - no acaben en .json
+      - empiecen por "_" (reservados)
     """
+    if not os.path.isdir(sets_dir):
+        raise FileNotFoundError(f"sets_dir not found or not a directory: {sets_dir}")
+
     out: Dict[str, str] = {}
     for fn in os.listdir(sets_dir):
         if not fn.endswith(".json") or fn.startswith("_"):
             continue
+
         path = os.path.join(sets_dir, fn)
-        with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            raise RuntimeError(f"Failed reading JSON: {path}. Error: {e}") from e
+
+        if "global_id" not in data:
+            raise KeyError(f"Missing 'global_id' in set file: {path}")
+
         gid = str(data["global_id"])
+        if gid in out and out[gid] != fn:
+            print(f"[!] WARNING: duplicate global_id {gid}: {out[gid]} and {fn}. Keeping {fn}.")
         out[gid] = fn
+
+    if not out:
+        print(f"[!] WARNING: no set JSON files found in {sets_dir}")
+
     return out
 
 
@@ -46,18 +67,28 @@ def main() -> int:
 
     pools_data = read_json(args.pools)
     pools = pools_data.get("pools", [])
-    if not pools:
-        print("[!] No hay pools en el input.")
+    if not isinstance(pools, list) or not pools:
+        print("[!] No hay pools en el input (o 'pools' no es una lista).")
         return 1
 
     trainer_to_pool: Dict[str, str] = {}
     pool_to_trainers: Dict[str, List[dict]] = {}
 
     for p in pools:
-        pid = p["pool_id"]
-        pool_to_trainers[pid] = p["trainers"]
-        for t in p["trainers"]:
-            trainer_to_pool[t["trainer_id"]] = pid
+        pid = p.get("pool_id")
+        trainers = p.get("trainers")
+
+        if not pid or not isinstance(pid, str):
+            raise ValueError("Invalid pool entry: missing/invalid 'pool_id'")
+        if not isinstance(trainers, list):
+            raise ValueError(f"Invalid pool entry {pid}: 'trainers' is not a list")
+
+        pool_to_trainers[pid] = trainers
+        for t in trainers:
+            tid = t.get("trainer_id")
+            if not tid or not isinstance(tid, str):
+                raise ValueError(f"Invalid trainer entry in pool {pid}: missing/invalid 'trainer_id'")
+            trainer_to_pool[tid] = pid
 
     global_id_to_setfile = build_global_id_index(args.sets_dir)
 

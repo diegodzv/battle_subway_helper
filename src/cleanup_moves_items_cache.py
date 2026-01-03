@@ -25,7 +25,7 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 
 ROOT_ALLOWED_KEYS = {"meta", "moves", "items"}
@@ -78,34 +78,19 @@ def root_junk_keys(data: Dict[str, Any]) -> List[str]:
     return [k for k in data.keys() if k not in ROOT_ALLOWED_KEYS]
 
 
-def build_compact_index(d: Dict[str, Any]) -> Dict[str, List[str]]:
-    """
-    compact_value -> list of keys that share that compact form
-    """
-    idx: Dict[str, List[str]] = {}
-    for k in d.keys():
-        ck = compact_key(k)
-        idx.setdefault(ck, []).append(k)
-    return idx
-
-
 def find_compact_good_match(bad_key: str, table: Dict[str, Any]) -> str | None:
     """
     Si bad_key (not_found) tiene otro key en table con mismo compact_key y "good", lo devuelve.
-    Si hay varios, preferimos uno "good". Si no hay ninguno good, None.
+    Si hay varios, preferimos el primero "good". Si no hay ninguno good, None.
     """
     target = compact_key(bad_key)
-    # buscar candidatos
     candidates = [k for k in table.keys() if compact_key(k) == target and k != bad_key]
     good = [k for k in candidates if is_good(table.get(k))]
     return good[0] if good else None
 
 
-def apply_alias_deletions(
-    kind: str, table: Dict[str, Any], alias_map: Dict[str, str]
-) -> List[Deletion]:
+def apply_alias_deletions(kind: str, table: Dict[str, Any], alias_map: Dict[str, str]) -> List[Deletion]:
     deletions: List[Deletion] = []
-
     for bad, good in alias_map.items():
         if bad in table and is_not_found(table.get(bad)) and good in table and is_good(table.get(good)):
             deletions.append(Deletion(kind=kind, key=bad, reason=f"alias_map keep '{good}'"))
@@ -149,12 +134,21 @@ def recalc_meta(data: Dict[str, Any]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cache", required=True, help="Path to moves_items_cache.json")
+    ap.add_argument(
+        "--cache",
+        default="data/moves_items_cache.json",
+        help="Path to moves_items_cache.json (default: data/moves_items_cache.json)",
+    )
     ap.add_argument("--write", action="store_true", help="Write changes in place")
     args = ap.parse_args()
 
     path = Path(args.cache)
+    if not path.exists():
+        raise SystemExit(f"[!] Cache file not found: {path}")
+
     data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise SystemExit("[!] Invalid cache JSON: root is not an object")
 
     schema = detect_schema(data)
     print(f"[i] cache schema: {schema}")
@@ -183,32 +177,41 @@ def main() -> int:
 
         # aplicar
         if deletions:
-            # root junk
             root_keys = [d.key for d in deletions if d.kind == "root"]
             for k in root_keys:
                 data.pop(k, None)
 
-            # moves/items
             move_keys = [d.key for d in deletions if d.kind == "move"]
             item_keys = [d.key for d in deletions if d.kind == "item"]
             delete_keys(moves, move_keys)
             delete_keys(items, item_keys)
 
-        # Recalcular meta
         recalc_meta(data)
 
     else:
-        # Si te interesa, aquí podríamos migrar flat->nested, pero en tu caso ya es nested.
-        print("[!] Flat schema detected. This script is mainly intended for nested schema.")
-        print("[!] Consider regenerating cache in nested form.")
-        return 2
+        # Flat schema: lo tratamos como "tabla única" y aplicamos compact+alias sobre el root.
+        # No es perfecto (no separa moves/items), pero sirve para limpiar not_found duplicados.
+        print("[!] Flat schema detected. Cleaning as a single table (best-effort).")
+        deletions.extend(apply_compact_deletions("root", data))
+        # alias maps sobre root también (por si el flat mezcla todo)
+        deletions.extend(apply_alias_deletions("root", data, MOVE_ALIAS_MAP))
+        deletions.extend(apply_alias_deletions("root", data, ITEM_ALIAS_MAP))
+
+        if deletions:
+            root_keys = [d.key for d in deletions if d.kind == "root"]
+            for k in root_keys:
+                data.pop(k, None)
 
     if not deletions:
         print("[+] No bad entries to delete.")
         return 0
 
-    # mostrar resumen
-    print(f"[+] Found {len(deletions)} deletions:")
+    # resumen
+    by_kind: Dict[str, int] = {}
+    for d in deletions:
+        by_kind[d.kind] = by_kind.get(d.kind, 0) + 1
+
+    print(f"[+] Found {len(deletions)} deletions: {by_kind}")
     for d in deletions:
         print(f"  - ({d.kind}) delete '{d.key}' [{d.reason}]")
 

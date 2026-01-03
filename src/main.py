@@ -2,23 +2,54 @@ from __future__ import annotations
 
 import itertools
 import json
+import logging
 import os
 import re
 from functools import lru_cache
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 
 # ----------------------------
-# Config
+# Logging
 # ----------------------------
-DATA_DIR = os.environ.get("MB_DATA_DIR", "data")
-SETS_DIR = os.path.join(DATA_DIR, "subway_pokemon")
-TRAINERS_FILE = os.path.join(DATA_DIR, "subway_trainers_set45.json")
-POOLS_FILE = os.path.join(DATA_DIR, "subway_pools_set45.json")
-POOLS_INDEX_FILE = os.path.join(DATA_DIR, "subway_pools_index_set45.json")
+LOG_LEVEL = os.environ.get("MB_LOG_LEVEL", "INFO").upper()
+logging.basicConfig(
+    level=LOG_LEVEL,
+    format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
+)
+logger = logging.getLogger("mb.api")
+
+
+# ----------------------------
+# Settings
+# ----------------------------
+class Settings:
+    """
+    Paths are relative to project root by default.
+    You can override the base data dir with MB_DATA_DIR.
+    """
+
+    def __init__(self) -> None:
+        data_dir = os.environ.get("MB_DATA_DIR", "data")
+        self.DATA_DIR = Path(data_dir)
+
+        self.SETS_DIR = self.DATA_DIR / "subway_pokemon"
+        self.TRAINERS_FILE = self.DATA_DIR / "subway_trainers_set45.json"
+        self.POOLS_FILE = self.DATA_DIR / "subway_pools_set45.json"
+        self.POOLS_INDEX_FILE = self.DATA_DIR / "subway_pools_index_set45.json"
+
+        # CORS (frontend dev)
+        # Example: MB_CORS_ORIGINS="http://localhost:5173,http://127.0.0.1:5173"
+        cors = os.environ.get("MB_CORS_ORIGINS", "")
+        self.CORS_ORIGINS = [x.strip() for x in cors.split(",") if x.strip()]
+
+
+settings = Settings()
 
 
 # ----------------------------
@@ -38,62 +69,86 @@ def normalize(s: str) -> str:
     return s
 
 
-def read_json(path: str) -> Any:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+def read_json(path: Path) -> Any:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise RuntimeError(f"Missing file: {path}")
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"Invalid JSON in {path}: {e}")
 
 
 def display_name_from_trainer(t: dict) -> str:
-    # Prefer Spanish if present; otherwise English.
     name_es = t.get("name_es")
     if isinstance(name_es, str) and name_es.strip():
         return name_es.strip()
     return (t.get("name_en") or "").strip()
 
 
+def require_file(path: Path, hint: str) -> None:
+    if not path.exists():
+        raise RuntimeError(f"Required file missing: {path}\nHint: {hint}")
+
+
+# ----------------------------
+# Data loaders (cached)
+# ----------------------------
 @lru_cache(maxsize=1)
 def load_trainers() -> List[dict]:
-    data = read_json(TRAINERS_FILE)
-    return data.get("trainers", [])
+    require_file(settings.TRAINERS_FILE, "Run: python src/fetch_subway_trainers_smogon.py")
+    data = read_json(settings.TRAINERS_FILE)
+    trainers = data.get("trainers", [])
+    if not isinstance(trainers, list):
+        raise RuntimeError("Invalid trainers JSON: 'trainers' must be a list")
+    return trainers
 
 
 @lru_cache(maxsize=1)
 def load_pools() -> Dict[str, dict]:
-    data = read_json(POOLS_FILE)
+    require_file(settings.POOLS_FILE, "Run: python src/dedupe_trainer_pools.py")
+    data = read_json(settings.POOLS_FILE)
     pools = data.get("pools", [])
-    return {p["pool_id"]: p for p in pools}
+    if not isinstance(pools, list):
+        raise RuntimeError("Invalid pools JSON: 'pools' must be a list")
+    out = {}
+    for p in pools:
+        pid = p.get("pool_id")
+        if isinstance(pid, str) and pid:
+            out[pid] = p
+    return out
 
 
 @lru_cache(maxsize=1)
 def load_pools_index() -> dict:
-    return read_json(POOLS_INDEX_FILE)
+    require_file(settings.POOLS_INDEX_FILE, "Run: python src/build_pools_index.py")
+    data = read_json(settings.POOLS_INDEX_FILE)
+    if not isinstance(data, dict):
+        raise RuntimeError("Invalid pools index JSON: must be an object")
+    return data
 
 
 @lru_cache(maxsize=1)
 def load_sets_index_global() -> Dict[str, str]:
-    # global_id -> filename
     idx = load_pools_index().get("global_id_to_setfile", {})
-    return {str(k): v for k, v in idx.items()}
+    if not isinstance(idx, dict):
+        raise RuntimeError("Invalid pools index: global_id_to_setfile must be an object")
+    return {str(k): str(v) for k, v in idx.items()}
 
 
-@lru_cache(maxsize=1)
+@lru_cache(maxsize=4096)
 def load_set_by_global_id(global_id: int) -> dict:
     gid = str(global_id)
     idx = load_sets_index_global()
-    if gid not in idx:
+    fn = idx.get(gid)
+    if not fn:
         raise KeyError(f"global_id {global_id} not found in sets index")
-    fn = idx[gid]
-    path = os.path.join(SETS_DIR, fn)
+
+    path = settings.SETS_DIR / fn
     return read_json(path)
 
 
 @lru_cache(maxsize=1)
 def build_trainer_search_rows() -> List[dict]:
-    """
-    Prepara filas ligeras para buscar por:
-      - name_en
-      - name_es (si existe)
-    """
     rows: List[dict] = []
     for t in load_trainers():
         name_en = t.get("name_en") or ""
@@ -108,7 +163,6 @@ def build_trainer_search_rows() -> List[dict]:
         if n_es:
             aliases.append(n_es)
 
-        # Dedup aliases
         aliases = list(dict.fromkeys(aliases))
 
         rows.append(
@@ -125,21 +179,15 @@ def build_trainer_search_rows() -> List[dict]:
 
 
 def combos_remaining(pool_ids: List[int], seen: Set[int], team_size: int = 4) -> Tuple[int, Set[int]]:
-    """
-    Dado un pool (lista de global_ids) y un conjunto 'seen',
-    calcula:
-      - num_combos compatibles (equipos posibles de tamaño team_size)
-      - possible_union: unión de ids que aparecen en al menos un combo compatible
-    """
     pool_sorted = sorted(pool_ids)
     if len(seen) > team_size:
         return 0, set()
 
-    if not seen.issubset(set(pool_sorted)):
+    pool_set = set(pool_sorted)
+    if not seen.issubset(pool_set):
         return 0, set()
 
-    n = len(pool_sorted)
-    if n < team_size:
+    if len(pool_sorted) < team_size:
         return 0, set()
 
     count = 0
@@ -191,7 +239,17 @@ class FilterResponse(BaseModel):
 # ----------------------------
 # App
 # ----------------------------
-app = FastAPI(title="Metro Batalla BW2 - Set 4/5", version="0.1.0")
+app = FastAPI(title="Battle Subway Helper (B2/W2) - Super Set 4/5", version="0.2.0")
+
+if settings.CORS_ORIGINS:
+    logger.info("CORS enabled for: %s", settings.CORS_ORIGINS)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=settings.CORS_ORIGINS,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 
 @app.get("/health")
@@ -205,14 +263,9 @@ def trainers_search(q: str = Query(..., min_length=1), limit: int = 20):
     rows = build_trainer_search_rows()
     lim = max(1, min(limit, 50))
 
-    # 1) Prefix matches en cualquiera de los aliases
-    prefix: List[dict] = []
-    for r in rows:
-        if any(a.startswith(nq) for a in r["aliases"]):
-            prefix.append(r)
-
-    # 2) Contains matches (sin repetir trainer_id)
+    prefix: List[dict] = [r for r in rows if any(a.startswith(nq) for a in r["aliases"])]
     prefix_ids = {r["trainer_id"] for r in prefix}
+
     contains: List[dict] = []
     if len(prefix) < lim:
         for r in rows:
@@ -222,7 +275,6 @@ def trainers_search(q: str = Query(..., min_length=1), limit: int = 20):
                 contains.append(r)
 
     matches = (prefix + contains)[:lim]
-
     return [
         SearchResult(
             trainer_id=m["trainer_id"],
@@ -238,7 +290,7 @@ def trainers_search(q: str = Query(..., min_length=1), limit: int = 20):
 @app.get("/trainers/{trainer_id}", response_model=TrainerDetail)
 def trainer_detail(trainer_id: str):
     trainers = load_trainers()
-    t = next((x for x in trainers if x["trainer_id"] == trainer_id), None)
+    t = next((x for x in trainers if x.get("trainer_id") == trainer_id), None)
     if not t:
         raise HTTPException(status_code=404, detail="trainer_id not found")
 
@@ -248,13 +300,12 @@ def trainer_detail(trainer_id: str):
     if not pool_id:
         raise HTTPException(status_code=500, detail="trainer_to_pool index missing this trainer")
 
-    pools = load_pools()
-    pool = pools.get(pool_id)
+    pool = load_pools().get(pool_id)
     if not pool:
         raise HTTPException(status_code=500, detail="pool_id not found in pools file")
 
-    sets = []
-    for gid in pool["pool_global_ids"]:
+    sets: List[dict] = []
+    for gid in pool.get("pool_global_ids", []):
         try:
             sets.append(load_set_by_global_id(int(gid)))
         except KeyError:
@@ -269,24 +320,22 @@ def trainer_detail(trainer_id: str):
         display_name=display_name_from_trainer(t),
         section=t["section"],
         pool_id=pool_id,
-        pool_size=len(pool["pool_global_ids"]),
+        pool_size=len(pool.get("pool_global_ids", [])),
         sets=sets,
     )
 
 
 @app.post("/pools/{pool_id}/filter", response_model=FilterResponse)
 def pool_filter(pool_id: str, req: FilterRequest):
-    pools = load_pools()
-    pool = pools.get(pool_id)
+    pool = load_pools().get(pool_id)
     if not pool:
         raise HTTPException(status_code=404, detail="pool_id not found")
 
-    pool_ids = [int(x) for x in pool["pool_global_ids"]]
+    pool_ids = [int(x) for x in pool.get("pool_global_ids", [])]
     seen = set(int(x) for x in req.seen_global_ids)
 
     num, union = combos_remaining(pool_ids, seen, team_size=4)
     remaining = [] if num == 0 else sorted(list(union - seen))
-
     remaining_sets = [load_set_by_global_id(gid) for gid in remaining]
 
     return FilterResponse(
@@ -296,3 +345,17 @@ def pool_filter(pool_id: str, req: FilterRequest):
         possible_remaining_global_ids=remaining,
         possible_remaining_sets=remaining_sets,
     )
+
+
+# Optional: run via `python -m src.main`
+if __name__ == "__main__":
+    import argparse
+    import uvicorn
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--host", default="127.0.0.1")
+    ap.add_argument("--port", type=int, default=8000)
+    ap.add_argument("--reload", action="store_true")
+    args = ap.parse_args()
+
+    uvicorn.run("src.main:app", host=args.host, port=args.port, reload=args.reload)

@@ -9,42 +9,36 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import time
-from typing import Dict, List, Set
+from pathlib import Path
+from typing import Any, Dict, List, Set
 
 import requests
-
 
 POKEAPI_POKEMON = "https://pokeapi.co/api/v2/pokemon/{name}"
 
 
-def read_json(path: str) -> dict:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+def read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def write_json(path: str, payload: dict) -> None:
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+def write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def list_set_files(dir_path: str) -> List[str]:
-    return [
-        os.path.join(dir_path, fn)
-        for fn in os.listdir(dir_path)
-        if fn.endswith(".json") and not fn.startswith("_")
-    ]
+def list_set_files(dir_path: Path) -> List[Path]:
+    return sorted(
+        [p for p in dir_path.iterdir() if p.is_file() and p.suffix == ".json" and not p.name.startswith("_")]
+    )
 
 
 def normalize_species_for_pokeapi(species: str) -> str:
     """
     PokéAPI usa nombres estilo 'mr-mime', 'farfetchd', etc.
     Para Gen 1-5 casi siempre coincide, pero hay excepciones.
-    Este mapeo pequeño cubre las típicas.
     """
-    s = species.strip().lower()
+    s = (species or "").strip()
 
     special = {
         "Mr. Mime": "mr-mime",
@@ -65,17 +59,19 @@ def normalize_species_for_pokeapi(species: str) -> str:
         "Keldeo": "keldeo-ordinary",
         "Meloetta": "meloetta-aria",
     }
-    if species in special:
-        return special[species]
+
+    if s in special:
+        return special[s]
 
     # default: minúsculas y espacios->guiones
-    s = s.replace(" ", "-")
-    s = s.replace(".", "")
-    s = s.replace("’", "")
-    s = s.replace("'", "")
-    s = s.replace("♀", "-f")
-    s = s.replace("♂", "-m")
-    return s
+    out = s.lower()
+    out = out.replace(" ", "-")
+    out = out.replace(".", "")
+    out = out.replace("’", "")
+    out = out.replace("'", "")
+    out = out.replace("♀", "-f")
+    out = out.replace("♂", "-m")
+    return out
 
 
 def fetch_pokemon(name: str, timeout: int = 30) -> dict:
@@ -93,15 +89,20 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=30)
     args = parser.parse_args()
 
-    files = list_set_files(args.sets_dir)
+    sets_dir = Path(args.sets_dir)
+    out_path = Path(args.out)
+
+    files = list_set_files(sets_dir)
     if not files:
-        print(f"[!] No encuentro sets en {args.sets_dir}")
+        print(f"[!] No encuentro sets en {sets_dir}")
         return 1
 
     species: Set[str] = set()
     for p in files:
         data = read_json(p)
-        species.add(data["species"])
+        sp = data.get("species")
+        if isinstance(sp, str) and sp.strip():
+            species.add(sp.strip())
 
     print(f"[+] Especies únicas: {len(species)}")
 
@@ -114,7 +115,6 @@ def main() -> int:
             payload = fetch_pokemon(api_name, timeout=args.timeout)
             stats = {s["stat"]["name"]: s["base_stat"] for s in payload["stats"]}
 
-            # Map a tus keys
             out[sp] = {
                 "pokeapi_name": api_name,
                 "base_stats": {
@@ -146,8 +146,8 @@ def main() -> int:
         "data": out,
     }
 
-    write_json(args.out, result)
-    print(f"[+] Guardado: {args.out}")
+    write_json(out_path, result)
+    print(f"[+] Guardado: {out_path}")
     if errors:
         print("[!] Hay errores. Normalmente son nombres raros; los añadimos al mapeo y listo.")
     return 0

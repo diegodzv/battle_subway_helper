@@ -15,7 +15,7 @@ import argparse
 import hashlib
 import json
 import os
-from typing import Dict, List, Any
+from typing import Any, Dict, List
 
 
 def read_json(path: str) -> Any:
@@ -27,6 +27,7 @@ def write_json(path: str, payload: Any) -> None:
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
 
 def pool_key(ids: List[int]) -> List[int]:
@@ -42,6 +43,15 @@ def stable_pool_id(sorted_ids: List[int]) -> str:
     return f"pool_{h}"
 
 
+def trainer_sort_key(t: Dict[str, Any]) -> tuple:
+    # Orden por sección, luego por nombre “humano” (es si existe), y como fallback name_en
+    section = t.get("section") or ""
+    name_es = t.get("name_es") or ""
+    name_en = t.get("name_en") or ""
+    display = name_es if name_es else name_en
+    return (section, display.lower(), name_en.lower())
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--in", dest="inp", default="data/subway_trainers_set45.json")
@@ -50,14 +60,19 @@ def main() -> int:
 
     data = read_json(args.inp)
     trainers = data.get("trainers", [])
-    if not trainers:
+    if not isinstance(trainers, list) or not trainers:
         print("[!] No hay trainers en el input.")
         return 1
 
     groups: Dict[str, Dict[str, Any]] = {}
 
     for t in trainers:
-        sorted_ids = pool_key(t["pool_global_ids"])
+        pool_ids = t.get("pool_global_ids")
+        if not isinstance(pool_ids, list) or not pool_ids:
+            # si hubiese un trainer malformado, lo saltamos
+            continue
+
+        sorted_ids = pool_key([int(x) for x in pool_ids])
         pid = stable_pool_id(sorted_ids)
 
         if pid not in groups:
@@ -70,17 +85,20 @@ def main() -> int:
 
         groups[pid]["trainers"].append(
             {
-                "trainer_id": t["trainer_id"],
-                "name_en": t["name_en"],
-                "section": t["section"],
+                "trainer_id": t.get("trainer_id"),
+                "name_en": t.get("name_en"),
+                # opcional, útil para inspección (no rompe consumidores)
+                "name_es": t.get("name_es"),
+                "section": t.get("section"),
             }
         )
-        groups[pid]["sections"].add(t["section"])
+        groups[pid]["sections"].add(t.get("section"))
 
-    pools = []
-    for pid, g in groups.items():
-        g["trainers"] = sorted(g["trainers"], key=lambda x: (x["section"], x["name_en"]))
-        g["sections"] = sorted(list(g["sections"]))
+    pools: List[dict] = []
+    for _, g in groups.items():
+        g["trainers"] = sorted(g["trainers"], key=trainer_sort_key)
+        g["sections"] = sorted([s for s in g["sections"] if s])
+
         pools.append(
             {
                 "pool_id": g["pool_id"],
@@ -106,6 +124,7 @@ def main() -> int:
 
     write_json(args.out, out)
     print(f"[+] Guardado: {args.out} (unique_pools={len(pools)})")
+
     # Vista rápida
     top = pools[:10]
     print("[+] Top pools por frecuencia:")
