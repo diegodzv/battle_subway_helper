@@ -60,7 +60,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Luchadora Mila"
+      "name_es": "Luchadora Mila",
+      "names": {
+        "en": "Aces",
+        "es": "Mila",
+        "de": "Marle",
+        "fr": "Johana",
+        "it": "Evina",
+        "ja": "テンホウ",
+        "ko": "천방"
+      },
+      "classes": {
+        "en": "Battle Girl",
+        "es": "Luchadora",
+        "de": "Kämpferin",
+        "fr": "Combattante",
+        "it": "Combat Girl",
+        "ja": "バトルガール",
+        "ko": "배틀걸"
+      }
     },
     {
       "trainer_id": "super-set-4-battle-girl-flush",
@@ -114,7 +132,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Luchadora Lorena"
+      "name_es": "Luchadora Lorena",
+      "names": {
+        "en": "Flush",
+        "es": "Lorena",
+        "de": "Ariadne",
+        "fr": "Yasmina",
+        "it": "Enza",
+        "ja": "スーカンツ",
+        "ko": "스칸트"
+      },
+      "classes": {
+        "en": "Battle Girl",
+        "es": "Luchadora",
+        "de": "Kämpferin",
+        "fr": "Combattante",
+        "it": "Combat Girl",
+        "ja": "バトルガール",
+        "ko": "배틀걸"
+      }
     },
     {
       "trainer_id": "super-set-4-battle-girl-queenie",
@@ -168,7 +204,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Luchadora Martina"
+      "name_es": "Luchadora Martina",
+      "names": {
+        "en": "Queenie",
+        "es": "Martina",
+        "de": "Holde",
+        "fr": "Paola",
+        "it": "Ores",
+        "ja": "チーホウ",
+        "ko": "지축"
+      },
+      "classes": {
+        "en": "Battle Girl",
+        "es": "Luchadora",
+        "de": "Kämpferin",
+        "fr": "Combattante",
+        "it": "Combat Girl",
+        "ja": "バトルガール",
+        "ko": "배틀걸"
+      }
     },
     {
       "trainer_id": "super-set-4-black-belt-enpi",
@@ -222,7 +276,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Karateka Ariel"
+      "name_es": "Karateka Ariel",
+      "names": {
+        "en": "Enpi",
+        "es": "Ariel",
+        "de": "Gordon",
+        "fr": "Firmin",
+        "it": "Pietro",
+        "ja": "エンピ",
+        "ko": "엔트로피"
+      },
+      "classes": {
+        "en": "Black Belt",
+        "es": "Karateka",
+        "de": "Schwarzgurt",
+        "fr": "Karatéka",
+        "it": "Cinturanera",
+        "ja": "カラテおう",
+        "ko": "태권왕"
+      }
     },
     {
       "trainer_id": "super-set-4-black-belt-harimao",
@@ -276,7 +348,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Karateka Celso"
+      "name_es": "Karateka Celso",
+      "names": {
+        "en": "Harimao",
+        "es": "Celso",
+        "de": "Harima",
+        "fr": "Hicham",
+        "it": "Rigo",
+        "ja": "ハリマオ",
+        "ko": "하리마오"
+      },
+      "classes": {
+        "en": "Black Belt",
+        "es": "Karateka",
+        "de": "Schwarzgurt",
+        "fr": "Karatéka",
+        "it": "Cinturanera",
+        "ja": "カラテおう",
+        "ko": "태권왕"
+      }
     },
     {
       "trainer_id": "super-set-4-black-belt-unsu",
@@ -330,7 +420,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Karateka Damián"
+      "name_es": "Karateka Damián",
+      "names": {
+        "en": "Unsu",
+        "es": "Damián",
+        "de": "Winslow",
+        "fr": "Antoine",
+        "it": "Fede",
+        "ja": "ウンスー",
+        "ko": "운스"
+      },
+      "classes": {
+        "en": "Black Belt",
+        "es": "Karateka",
+        "de": "Schwarzgurt",
+        "fr": "Karatéka",
+        "it": "Cinturanera",
+        "ja": "カラテおう",
+        "ko": "태권왕"
+      }
     },
     {
       "trainer_id": "super-set-4-clerk-executive-faust",
@@ -427,7 +535,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Empresario Douglas"
+      "name_es": "Empresario Douglas",
+      "names": {
+        "en": "Faust",
+        "es": "Douglas",
+        "de": "Lars",
+        "fr": "Manuel",
+        "it": "Lotis",
+        "ja": "ファウスト",
+        "ko": "파우스트"
+      },
+      "classes": {
+        "en": "Clerk (Executive)",
+        "es": "Empresario",
+        "de": "Angestellter",
+        "fr": "Employé",
+        "it": "Affarista",
+        "ja": "ビジネスマン",
+        "ko": "비즈니스맨"
+      }
     },
     {
       "trainer_id": "super-set-4-clerk-executive-ulfgang",
@@ -524,7 +650,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Empresario Gastón"
+      "name_es": "Empresario Gastón",
+      "names": {
+        "en": "Ulfgang",
+        "es": "Gastón",
+        "de": "Haymo",
+        "fr": "Cardus",
+        "it": "Vanno",
+        "ja": "ネジヒコ",
+        "ko": "비선"
+      },
+      "classes": {
+        "en": "Clerk (Executive)",
+        "es": "Empresario",
+        "de": "Angestellter",
+        "fr": "Employé",
+        "it": "Affarista",
+        "ja": "ビジネスマン",
+        "ko": "비즈니스맨"
+      }
     },
     {
       "trainer_id": "super-set-4-psychic-f-longo",
@@ -559,7 +703,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Guiomar"
+      "name_es": "Médium Guiomar",
+      "names": {
+        "en": "Longo",
+        "es": "Guiomar",
+        "de": "Alyssa",
+        "fr": "Samira",
+        "it": "Ervina",
+        "ja": "ロンゴ",
+        "ko": "롱고"
+      },
+      "classes": {
+        "en": "Psychic (F)",
+        "es": "Médium",
+        "de": "Psycho",
+        "fr": "Kinésiste",
+        "it": "Psiche",
+        "ja": "サイキッカー",
+        "ko": "초능력자"
+      }
     },
     {
       "trainer_id": "super-set-4-psychic-f-sambala",
@@ -594,7 +756,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Wanda"
+      "name_es": "Médium Wanda",
+      "names": {
+        "en": "Sambala",
+        "es": "Wanda",
+        "de": "Melinda",
+        "fr": "Ingrid",
+        "it": "Mia",
+        "ja": "シャンバラ",
+        "ko": "샴발라"
+      },
+      "classes": {
+        "en": "Psychic (F)",
+        "es": "Médium",
+        "de": "Psycho",
+        "fr": "Kinésiste",
+        "it": "Psiche",
+        "ja": "サイキッカー",
+        "ko": "초능력자"
+      }
     },
     {
       "trainer_id": "super-set-4-psychic-f-zaya",
@@ -629,7 +809,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Denise"
+      "name_es": "Médium Denise",
+      "names": {
+        "en": "Zaya",
+        "es": "Denise",
+        "de": "Hertha",
+        "fr": "Matilde",
+        "it": "Ramona",
+        "ja": "ムー",
+        "ko": "무우"
+      },
+      "classes": {
+        "en": "Psychic (F)",
+        "es": "Médium",
+        "de": "Psycho",
+        "fr": "Kinésiste",
+        "it": "Psiche",
+        "ja": "サイキッカー",
+        "ko": "초능력자"
+      }
     },
     {
       "trainer_id": "super-set-4-psychic-m-boldbat",
@@ -664,7 +862,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Truman"
+      "name_es": "Médium Truman",
+      "names": {
+        "en": "Boldbat",
+        "es": "Truman",
+        "de": "Roy",
+        "fr": "Chaz",
+        "it": "Nappo",
+        "ja": "ボルドバト",
+        "ko": "보르도바트"
+      },
+      "classes": {
+        "en": "Psychic (M)",
+        "es": "Médium",
+        "de": "Psycho",
+        "fr": "Kinésiste",
+        "it": "Psiche",
+        "ja": "サイキッカー",
+        "ko": "초능력자"
+      }
     },
     {
       "trainer_id": "super-set-4-psychic-m-khaan",
@@ -699,7 +915,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Caspe"
+      "name_es": "Médium Caspe",
+      "names": {
+        "en": "Khaan",
+        "es": "Caspe",
+        "de": "Han",
+        "fr": "Hans",
+        "it": "Delmino",
+        "ja": "ハーン",
+        "ko": "칸"
+      },
+      "classes": {
+        "en": "Psychic (M)",
+        "es": "Médium",
+        "de": "Psycho",
+        "fr": "Kinésiste",
+        "it": "Psiche",
+        "ja": "サイキッカー",
+        "ko": "초능력자"
+      }
     },
     {
       "trainer_id": "super-set-4-psychic-m-solongo",
@@ -734,7 +968,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Médium Álex"
+      "name_es": "Médium Álex",
+      "names": {
+        "en": "Solongo",
+        "es": "Álex",
+        "de": "Merlin",
+        "fr": "Barnabé",
+        "it": "Antonio",
+        "ja": "ソロンゴ",
+        "ko": "솔론"
+      },
+      "classes": {
+        "en": "Psychic (M)",
+        "es": "Médium",
+        "de": "Psycho",
+        "fr": "Kinésiste",
+        "it": "Psiche",
+        "ja": "サイキッカー",
+        "ko": "초능력자"
+      }
     },
     {
       "trainer_id": "super-set-4-scientist-f-charis",
@@ -830,7 +1082,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científica Edna"
+      "name_es": "Científica Edna",
+      "names": {
+        "en": "Charis",
+        "es": "Edna",
+        "de": "Polly",
+        "fr": "Brooke",
+        "it": "Alidora",
+        "ja": "ツヤコ",
+        "ko": "탐미"
+      },
+      "classes": {
+        "en": "Scientist (F)",
+        "es": "Científica",
+        "de": "Forscherin",
+        "fr": "Scientifique",
+        "it": "Scienziata",
+        "ja": "けんきゅういん",
+        "ko": "연구원"
+      }
     },
     {
       "trainer_id": "super-set-4-scientist-f-lotte",
@@ -927,7 +1197,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científica Gina"
+      "name_es": "Científica Gina",
+      "names": {
+        "en": "Lotte",
+        "es": "Gina",
+        "de": "Lotti",
+        "fr": "Malorie",
+        "it": "Tazia",
+        "ja": "ロッテ",
+        "ko": "로테"
+      },
+      "classes": {
+        "en": "Scientist (F)",
+        "es": "Científica",
+        "de": "Forscherin",
+        "fr": "Scientifique",
+        "it": "Scienziata",
+        "ja": "けんきゅういん",
+        "ko": "연구원"
+      }
     },
     {
       "trainer_id": "super-set-4-scientist-f-therese",
@@ -1023,7 +1311,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científica Espe"
+      "name_es": "Científica Espe",
+      "names": {
+        "en": "Therese",
+        "es": "Espe",
+        "de": "Theresa",
+        "fr": "Thérèse",
+        "it": "Ellia",
+        "ja": "テレーゼ",
+        "ko": "테레제"
+      },
+      "classes": {
+        "en": "Scientist (F)",
+        "es": "Científica",
+        "de": "Forscherin",
+        "fr": "Scientifique",
+        "it": "Scienziata",
+        "ja": "けんきゅういん",
+        "ko": "연구원"
+      }
     },
     {
       "trainer_id": "super-set-4-scientist-m-shan",
@@ -1119,7 +1425,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científico Giulio"
+      "name_es": "Científico Giulio",
+      "names": {
+        "en": "Shan",
+        "es": "Giulio",
+        "de": "Ulf",
+        "fr": "Manolo",
+        "it": "Severo",
+        "ja": "フトコロ",
+        "ko": "회한"
+      },
+      "classes": {
+        "en": "Scientist (M)",
+        "es": "Científico",
+        "de": "Forscher",
+        "fr": "Scientifique",
+        "it": "Scienziato",
+        "ja": "けんきゅういん",
+        "ko": "연구원"
+      }
     },
     {
       "trainer_id": "super-set-4-scientist-m-spacey",
@@ -1215,7 +1539,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científico Stanley"
+      "name_es": "Científico Stanley",
+      "names": {
+        "en": "Spacey",
+        "es": "Stanley",
+        "de": "Benno",
+        "fr": "Désiré",
+        "it": "Lucinio",
+        "ja": "ウツケ",
+        "ko": "공허"
+      },
+      "classes": {
+        "en": "Scientist (M)",
+        "es": "Científico",
+        "de": "Forscher",
+        "fr": "Scientifique",
+        "it": "Scienziato",
+        "ja": "けんきゅういん",
+        "ko": "연구원"
+      }
     },
     {
       "trainer_id": "super-set-4-scientist-m-stubs",
@@ -1312,7 +1654,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Científico Jürgen"
+      "name_es": "Científico Jürgen",
+      "names": {
+        "en": "Stubs",
+        "es": "Jürgen",
+        "de": "Heino",
+        "fr": "Kerwan",
+        "it": "Ando",
+        "ja": "ヤブサメ",
+        "ko": "마적"
+      },
+      "classes": {
+        "en": "Scientist (M)",
+        "es": "Científico",
+        "de": "Forscher",
+        "fr": "Scientifique",
+        "it": "Scienziato",
+        "ja": "けんきゅういん",
+        "ko": "연구원"
+      }
     },
     {
       "trainer_id": "super-set-5-ace-trainer-f-gwen",
@@ -1391,7 +1751,25 @@
         907
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Entrenadora Guay Reme"
+      "name_es": "Entrenadora Guay Reme",
+      "names": {
+        "en": "Gwen",
+        "es": "Reme",
+        "de": "Julie",
+        "fr": "Gwen",
+        "it": "Leandra",
+        "ja": "グエン",
+        "ko": "그웬"
+      },
+      "classes": {
+        "en": "Ace Trainer (F)",
+        "es": "Entrenadora Guay",
+        "de": "Ass-Trainer",
+        "fr": "Topdresseur",
+        "it": "Fantallen",
+        "ja": "エリートトレーナー",
+        "ko": "엘리트 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-ace-trainer-f-mooi",
@@ -1445,7 +1823,25 @@
         819
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Entrenadora Guay Egle"
+      "name_es": "Entrenadora Guay Egle",
+      "names": {
+        "en": "Mooi",
+        "es": "Egle",
+        "de": "Hollie",
+        "fr": "Marina",
+        "it": "Antalea",
+        "ja": "ムーイ",
+        "ko": "무이"
+      },
+      "classes": {
+        "en": "Ace Trainer (F)",
+        "es": "Entrenadora Guay",
+        "de": "Ass-Trainer",
+        "fr": "Topdresseur",
+        "it": "Fantallen",
+        "ja": "エリートトレーナー",
+        "ko": "엘리트 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-ace-trainer-f-palm",
@@ -1472,7 +1868,25 @@
         976
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Entrenadora Guay Pam"
+      "name_es": "Entrenadora Guay Pam",
+      "names": {
+        "en": "Palm",
+        "es": "Pam",
+        "de": "Ilva",
+        "fr": "Paloma",
+        "it": "Ires",
+        "ja": "パーム",
+        "ko": "파무"
+      },
+      "classes": {
+        "en": "Ace Trainer (F)",
+        "es": "Entrenadora Guay",
+        "de": "Ass-Trainer",
+        "fr": "Topdresseur",
+        "it": "Fantallen",
+        "ja": "エリートトレーナー",
+        "ko": "엘리트 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-ace-trainer-m-dylan",
@@ -1526,7 +1940,25 @@
         819
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Entrenador Guay Steve"
+      "name_es": "Entrenador Guay Steve",
+      "names": {
+        "en": "Dylan",
+        "es": "Steve",
+        "de": "Herb",
+        "fr": "Alex",
+        "it": "Gracco",
+        "ja": "ツルマツ",
+        "ko": "송학"
+      },
+      "classes": {
+        "en": "Ace Trainer (M)",
+        "es": "Entrenador Guay",
+        "de": "Ass-Trainer",
+        "fr": "Topdresseur",
+        "it": "Fantallen",
+        "ja": "エリートトレーナー",
+        "ko": "엘리트 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-ace-trainer-m-farley",
@@ -1605,7 +2037,25 @@
         907
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Entrenador Guay Luke"
+      "name_es": "Entrenador Guay Luke",
+      "names": {
+        "en": "Farley",
+        "es": "Luke",
+        "de": "Sam",
+        "fr": "Urbain",
+        "it": "Asperto",
+        "ja": "マツウシ",
+        "ko": "송우"
+      },
+      "classes": {
+        "en": "Ace Trainer (M)",
+        "es": "Entrenador Guay",
+        "de": "Ass-Trainer",
+        "fr": "Topdresseur",
+        "it": "Fantallen",
+        "ja": "エリートトレーナー",
+        "ko": "엘리트 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-ace-trainer-m-reigel",
@@ -1632,7 +2082,25 @@
         976
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Entrenador Guay Paolo"
+      "name_es": "Entrenador Guay Paolo",
+      "names": {
+        "en": "Reigel",
+        "es": "Paolo",
+        "de": "Imko",
+        "fr": "Foulque",
+        "it": "Calisto",
+        "ja": "サエモン",
+        "ko": "위문"
+      },
+      "classes": {
+        "en": "Ace Trainer (M)",
+        "es": "Entrenador Guay",
+        "de": "Ass-Trainer",
+        "fr": "Topdresseur",
+        "it": "Fantallen",
+        "ja": "エリートトレーナー",
+        "ko": "엘리트 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-backpacker-f-simone",
@@ -1729,7 +2197,25 @@
         296
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Mochilera Jenny"
+      "name_es": "Mochilera Jenny",
+      "names": {
+        "en": "Simone",
+        "es": "Jenny",
+        "de": "Lavina",
+        "fr": "Johanna",
+        "it": "Massima",
+        "ja": "ジョウハラ",
+        "ko": "조하라"
+      },
+      "classes": {
+        "en": "Backpacker (F)",
+        "es": "Mochilera",
+        "de": "Backpackerin",
+        "fr": "Randonneuse",
+        "it": "Giramondo",
+        "ja": "バックパッカー",
+        "ko": "백팩커"
+      }
     },
     {
       "trainer_id": "super-set-5-backpacker-f-wald",
@@ -1825,7 +2311,25 @@
         383
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Mochilera Ida"
+      "name_es": "Mochilera Ida",
+      "names": {
+        "en": "Wald",
+        "es": "Ida",
+        "de": "Martha",
+        "fr": "Leila",
+        "it": "Editta",
+        "ja": "ワルダ",
+        "ko": "완다"
+      },
+      "classes": {
+        "en": "Backpacker (F)",
+        "es": "Mochilera",
+        "de": "Backpackerin",
+        "fr": "Randonneuse",
+        "it": "Giramondo",
+        "ja": "バックパッカー",
+        "ko": "백팩커"
+      }
     },
     {
       "trainer_id": "super-set-5-backpacker-m-cedric",
@@ -1922,7 +2426,25 @@
         296
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Mochilero Didier"
+      "name_es": "Mochilero Didier",
+      "names": {
+        "en": "Cedric",
+        "es": "Didier",
+        "de": "Cedric",
+        "fr": "Cédric",
+        "it": "Olide",
+        "ja": "セドリック",
+        "ko": "세드릭"
+      },
+      "classes": {
+        "en": "Backpacker (M)",
+        "es": "Mochilero",
+        "de": "Backpacker",
+        "fr": "Randonneur",
+        "it": "Giramondo",
+        "ja": "バックパッカー",
+        "ko": "백팩커"
+      }
     },
     {
       "trainer_id": "super-set-5-backpacker-m-felton",
@@ -2018,7 +2540,25 @@
         383
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Mochilero Rocco"
+      "name_es": "Mochilero Rocco",
+      "names": {
+        "en": "Felton",
+        "es": "Rocco",
+        "de": "Max",
+        "fr": "Simon",
+        "it": "Onevio",
+        "ja": "シモン",
+        "ko": "시몬"
+      },
+      "classes": {
+        "en": "Backpacker (M)",
+        "es": "Mochilero",
+        "de": "Backpacker",
+        "fr": "Randonneur",
+        "it": "Giramondo",
+        "ja": "バックパッカー",
+        "ko": "백팩커"
+      }
     },
     {
       "trainer_id": "super-set-5-baker-judy",
@@ -2060,7 +2600,25 @@
         886
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pastelera Alysa"
+      "name_es": "Pastelera Alysa",
+      "names": {
+        "en": "Judy",
+        "es": "Alysa",
+        "de": "Simone",
+        "fr": "Cylia",
+        "it": "Mea",
+        "ja": "タマカヅラ",
+        "ko": "계옥"
+      },
+      "classes": {
+        "en": "Baker",
+        "es": "Panadera",
+        "de": "Bäckerin",
+        "fr": "Boulangère",
+        "it": "Panettiera",
+        "ja": "ベーカリー",
+        "ko": "제빵사"
+      }
     },
     {
       "trainer_id": "super-set-5-baker-vespera",
@@ -2102,7 +2660,25 @@
         886
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pastelera Naomi"
+      "name_es": "Pastelera Naomi",
+      "names": {
+        "en": "Vespera",
+        "es": "Naomi",
+        "de": "Kelly",
+        "fr": "Rozenn",
+        "it": "Cenzina",
+        "ja": "ノノミヤ",
+        "ko": "궁서"
+      },
+      "classes": {
+        "en": "Baker",
+        "es": "Panadera",
+        "de": "Bäckerin",
+        "fr": "Boulangère",
+        "it": "Panettiera",
+        "ja": "ベーカリー",
+        "ko": "제빵사"
+      }
     },
     {
       "trainer_id": "super-set-5-biker-petro",
@@ -2183,7 +2759,25 @@
         907
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Motorista Tobby"
+      "name_es": "Motorista Tobby",
+      "names": {
+        "en": "Petro",
+        "es": "Tobby",
+        "de": "Petro",
+        "fr": "Rufus",
+        "it": "Ruffino",
+        "ja": "ペトロ",
+        "ko": "페트로"
+      },
+      "classes": {
+        "en": "Biker",
+        "es": "Motorista",
+        "de": "Rowdy",
+        "fr": "Motard",
+        "it": "Centauro",
+        "ja": "ぼうそうぞく",
+        "ko": "폭주족"
+      }
     },
     {
       "trainer_id": "super-set-5-biker-philipo",
@@ -2264,7 +2858,25 @@
         907
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Motorista Filippo"
+      "name_es": "Motorista Filippo",
+      "names": {
+        "en": "Philipo",
+        "es": "Filippo",
+        "de": "Jörg",
+        "fr": "Felipe",
+        "it": "Carolo",
+        "ja": "フィリポ",
+        "ko": "필리프"
+      },
+      "classes": {
+        "en": "Biker",
+        "es": "Motorista",
+        "de": "Rowdy",
+        "fr": "Motard",
+        "it": "Centauro",
+        "ja": "ぼうそうぞく",
+        "ko": "폭주족"
+      }
     },
     {
       "trainer_id": "super-set-5-clerk-f-anette",
@@ -2360,7 +2972,25 @@
         733
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Oficinista Cristal"
+      "name_es": "Oficinista Cristal",
+      "names": {
+        "en": "Anette",
+        "es": "Cristal",
+        "de": "Desiree",
+        "fr": "Léna",
+        "it": "America",
+        "ja": "マツカゼ",
+        "ko": "솔바람"
+      },
+      "classes": {
+        "en": "Clerk (F)",
+        "es": "Oficinista",
+        "de": "Angestellte",
+        "fr": "Employée",
+        "it": "Segretaria",
+        "ja": "ＯＬ",
+        "ko": "여사원"
+      }
     },
     {
       "trainer_id": "super-set-5-clerk-f-anora",
@@ -2456,7 +3086,25 @@
         733
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Oficinista Minerva"
+      "name_es": "Oficinista Minerva",
+      "names": {
+        "en": "Anora",
+        "es": "Minerva",
+        "de": "Jody",
+        "fr": "Désirée",
+        "it": "Basilia",
+        "ja": "ウネメ",
+        "ko": "나인"
+      },
+      "classes": {
+        "en": "Clerk (F)",
+        "es": "Oficinista",
+        "de": "Angestellte",
+        "fr": "Employée",
+        "it": "Segretaria",
+        "ja": "ＯＬ",
+        "ko": "여사원"
+      }
     },
     {
       "trainer_id": "super-set-5-clerk-m-bank",
@@ -2552,7 +3200,25 @@
         733
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Empresario Bernie"
+      "name_es": "Empresario Bernie",
+      "names": {
+        "en": "Bank",
+        "es": "Bernie",
+        "de": "Maarten",
+        "fr": "Badis",
+        "it": "Barzio",
+        "ja": "バーンク",
+        "ko": "뱅크"
+      },
+      "classes": {
+        "en": "Clerk (M)",
+        "es": "Empresario",
+        "de": "Angestellter",
+        "fr": "Employé",
+        "it": "Affarista",
+        "ja": "ビジネスマン",
+        "ko": "비즈니스맨"
+      }
     },
     {
       "trainer_id": "super-set-5-clerk-m-elwin",
@@ -2648,7 +3314,25 @@
         733
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Empresario Ismael"
+      "name_es": "Empresario Ismael",
+      "names": {
+        "en": "Elwin",
+        "es": "Ismael",
+        "de": "Ismail",
+        "fr": "Victor",
+        "it": "Raulino",
+        "ja": "スギカツ",
+        "ko": "승과"
+      },
+      "classes": {
+        "en": "Clerk (M)",
+        "es": "Empresario",
+        "de": "Angestellter",
+        "fr": "Employé",
+        "it": "Affarista",
+        "ja": "ビジネスマン",
+        "ko": "비즈니스맨"
+      }
     },
     {
       "trainer_id": "super-set-5-cyclist-f-birgit",
@@ -2745,7 +3429,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ciclista Ivonne"
+      "name_es": "Ciclista Ivonne",
+      "names": {
+        "en": "Birgit",
+        "es": "Ivonne",
+        "de": "Birgit",
+        "fr": "Bridget",
+        "it": "Manuela",
+        "ja": "ビルギット",
+        "ko": "비르지트"
+      },
+      "classes": {
+        "en": "Cyclist (F)",
+        "es": "Ciclista",
+        "de": "Biker",
+        "fr": "Cycliste",
+        "it": "Ciclista",
+        "ja": "サイクリング",
+        "ko": "사이클링"
+      }
     },
     {
       "trainer_id": "super-set-5-cyclist-f-margit",
@@ -2842,7 +3544,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ciclista Delia"
+      "name_es": "Ciclista Delia",
+      "names": {
+        "en": "Margit",
+        "es": "Delia",
+        "de": "Renate",
+        "fr": "Marion",
+        "it": "Olelia",
+        "ja": "マルギット",
+        "ko": "마르기트"
+      },
+      "classes": {
+        "en": "Cyclist (F)",
+        "es": "Ciclista",
+        "de": "Biker",
+        "fr": "Cycliste",
+        "it": "Ciclista",
+        "ja": "サイクリング",
+        "ko": "사이클링"
+      }
     },
     {
       "trainer_id": "super-set-5-cyclist-m-dante",
@@ -2939,7 +3659,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ciclista Gordon"
+      "name_es": "Ciclista Gordon",
+      "names": {
+        "en": "Dante",
+        "es": "Gordon",
+        "de": "Dante",
+        "fr": "Dante",
+        "it": "Pericle",
+        "ja": "ダンテ",
+        "ko": "단테"
+      },
+      "classes": {
+        "en": "Cyclist (M)",
+        "es": "Ciclista",
+        "de": "Biker",
+        "fr": "Cycliste",
+        "it": "Ciclista",
+        "ja": "サイクリング",
+        "ko": "사이클링"
+      }
     },
     {
       "trainer_id": "super-set-5-cyclist-m-marion",
@@ -3036,7 +3774,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ciclista Mark"
+      "name_es": "Ciclista Mark",
+      "names": {
+        "en": "Marion",
+        "es": "Mark",
+        "de": "Serkan",
+        "fr": "Hector",
+        "it": "Onorio",
+        "ja": "マリオン",
+        "ko": "멀리언"
+      },
+      "classes": {
+        "en": "Cyclist (M)",
+        "es": "Ciclista",
+        "de": "Biker",
+        "fr": "Cycliste",
+        "it": "Ciclista",
+        "ja": "サイクリング",
+        "ko": "사이클링"
+      }
     },
     {
       "trainer_id": "super-set-5-depot-agent-isadore",
@@ -3081,7 +3837,25 @@
         895
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ferroviario Sami"
+      "name_es": "Ferroviario Sami",
+      "names": {
+        "en": "Isadore",
+        "es": "Sami",
+        "de": "Pavo",
+        "fr": "Isidore",
+        "it": "Arrigo",
+        "ja": "トトメス",
+        "ko": "토토메스"
+      },
+      "classes": {
+        "en": "Depot Agent",
+        "es": "Ferroviario",
+        "de": "Eisenbahner",
+        "fr": "Contrôleur",
+        "it": "Ferroviere",
+        "ja": "てつどういん",
+        "ko": "역무원"
+      }
     },
     {
       "trainer_id": "super-set-5-depot-agent-ramses",
@@ -3126,7 +3900,25 @@
         895
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Ferroviario Jordan"
+      "name_es": "Ferroviario Jordan",
+      "names": {
+        "en": "Ramses",
+        "es": "Jordan",
+        "de": "Ramses",
+        "fr": "Ramsès",
+        "it": "Iago",
+        "ja": "ラムセス",
+        "ko": "람세스"
+      },
+      "classes": {
+        "en": "Depot Agent",
+        "es": "Ferroviario",
+        "de": "Eisenbahner",
+        "fr": "Contrôleur",
+        "it": "Ferroviere",
+        "ja": "てつどういん",
+        "ko": "역무원"
+      }
     },
     {
       "trainer_id": "super-set-5-doctor-dwight",
@@ -3223,7 +4015,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Enfermero Montano"
+      "name_es": "Enfermero Montano",
+      "names": {
+        "en": "Dwight",
+        "es": "Montano",
+        "de": "Mattes",
+        "fr": "Luca",
+        "it": "Armenio",
+        "ja": "コテツ",
+        "ko": "철이"
+      },
+      "classes": {
+        "en": "Doctor",
+        "es": "Enfermero",
+        "de": "Doktor",
+        "fr": "Infirmier",
+        "it": "Medico",
+        "ja": "ドクター",
+        "ko": "의사"
+      }
     },
     {
       "trainer_id": "super-set-5-doctor-levant",
@@ -3320,7 +4130,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Enfermero Tirso"
+      "name_es": "Enfermero Tirso",
+      "names": {
+        "en": "Levant",
+        "es": "Tirso",
+        "de": "Hüstel",
+        "fr": "Timéo",
+        "it": "Fantino",
+        "ja": "トウシロウ",
+        "ko": "도훈"
+      },
+      "classes": {
+        "en": "Doctor",
+        "es": "Enfermero",
+        "de": "Doktor",
+        "fr": "Infirmier",
+        "it": "Medico",
+        "ja": "ドクター",
+        "ko": "의사"
+      }
     },
     {
       "trainer_id": "super-set-5-fisherman-fird",
@@ -3385,7 +4213,25 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pescador Adolfo"
+      "name_es": "Pescador Adolfo",
+      "names": {
+        "en": "Fird",
+        "es": "Adolfo",
+        "de": "Vick",
+        "fr": "Adolphe",
+        "it": "Nino",
+        "ja": "アドルフ",
+        "ko": "아돌프"
+      },
+      "classes": {
+        "en": "Fisherman",
+        "es": "Pescador",
+        "de": "Angler",
+        "fr": "Pêcheur",
+        "it": "Pescatore",
+        "ja": "つりびと",
+        "ko": "낚시꾼"
+      }
     },
     {
       "trainer_id": "super-set-5-fisherman-humfrey",
@@ -3450,7 +4296,25 @@
         544
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pescador Danilo"
+      "name_es": "Pescador Danilo",
+      "names": {
+        "en": "Humfrey",
+        "es": "Danilo",
+        "de": "Enno",
+        "fr": "Humphry",
+        "it": "Romildo",
+        "ja": "ハンフリー",
+        "ko": "헌프리"
+      },
+      "classes": {
+        "en": "Fisherman",
+        "es": "Pescador",
+        "de": "Angler",
+        "fr": "Pêcheur",
+        "it": "Pescatore",
+        "ja": "つりびと",
+        "ko": "낚시꾼"
+      }
     },
     {
       "trainer_id": "super-set-5-gentleman-camus",
@@ -3539,7 +4403,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Duque Isaías"
+      "name_es": "Duque Isaías",
+      "names": {
+        "en": "Camus",
+        "es": "Isaías",
+        "de": "Edwin",
+        "fr": "Camus",
+        "it": "Stani",
+        "ja": "カミュ",
+        "ko": "카뮤"
+      },
+      "classes": {
+        "en": "Gentleman",
+        "es": "Duque",
+        "de": "Gentleman",
+        "fr": "Gentleman",
+        "it": "Gentiluomo",
+        "ja": "ジェントルマン",
+        "ko": "신사"
+      }
     },
     {
       "trainer_id": "super-set-5-gentleman-kavan",
@@ -3628,7 +4510,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Duque Nelio"
+      "name_es": "Duque Nelio",
+      "names": {
+        "en": "Kavan",
+        "es": "Nelio",
+        "de": "Gisbert",
+        "fr": "Rainier",
+        "it": "Lucino",
+        "ja": "リルケ",
+        "ko": "선비"
+      },
+      "classes": {
+        "en": "Gentleman",
+        "es": "Duque",
+        "de": "Gentleman",
+        "fr": "Gentleman",
+        "it": "Gentiluomo",
+        "ja": "ジェントルマン",
+        "ko": "신사"
+      }
     },
     {
       "trainer_id": "super-set-5-harlequin-aramis",
@@ -3663,7 +4563,25 @@
         885
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Arlequín Aníbal"
+      "name_es": "Arlequín Aníbal",
+      "names": {
+        "en": "Aramis",
+        "es": "Aníbal",
+        "de": "Loki",
+        "fr": "Adrien",
+        "it": "Lindo",
+        "ja": "オオテンタ",
+        "ko": "태천"
+      },
+      "classes": {
+        "en": "Harlequin",
+        "es": "Arlequín",
+        "de": "Kasper",
+        "fr": "Clown",
+        "it": "Buffone",
+        "ja": "クラウン",
+        "ko": "어릿광대"
+      }
     },
     {
       "trainer_id": "super-set-5-harlequin-athos",
@@ -3698,7 +4616,25 @@
         885
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Arlequín Salomón"
+      "name_es": "Arlequín Salomón",
+      "names": {
+        "en": "Athos",
+        "es": "Salomón",
+        "de": "Vincent",
+        "fr": "Yassine",
+        "it": "Vanio",
+        "ja": "ドウジギリ",
+        "ko": "시의"
+      },
+      "classes": {
+        "en": "Harlequin",
+        "es": "Arlequín",
+        "de": "Kasper",
+        "fr": "Clown",
+        "it": "Buffone",
+        "ja": "クラウン",
+        "ko": "어릿광대"
+      }
     },
     {
       "trainer_id": "super-set-5-hiker-jorge",
@@ -3799,7 +4735,25 @@
         906
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Montañero Pío"
+      "name_es": "Montañero Pío",
+      "names": {
+        "en": "Jorge",
+        "es": "Pío",
+        "de": "Jorge",
+        "fr": "Georges",
+        "it": "Romeo",
+        "ja": "ジョルジュ",
+        "ko": "조르죠"
+      },
+      "classes": {
+        "en": "Hiker",
+        "es": "Montañero",
+        "de": "Wanderer",
+        "fr": "Montagnard",
+        "it": "Avventuriero",
+        "ja": "やまおとこ",
+        "ko": "등산가"
+      }
     },
     {
       "trainer_id": "super-set-5-hiker-kemuel",
@@ -3864,7 +4818,25 @@
         903
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Montañero Sixto"
+      "name_es": "Montañero Sixto",
+      "names": {
+        "en": "Kemuel",
+        "es": "Sixto",
+        "de": "Heinz",
+        "fr": "Samuel",
+        "it": "Genesio",
+        "ja": "サミュエル",
+        "ko": "사무엘"
+      },
+      "classes": {
+        "en": "Hiker",
+        "es": "Montañero",
+        "de": "Wanderer",
+        "fr": "Montagnard",
+        "it": "Avventuriero",
+        "ja": "やまおとこ",
+        "ko": "등산가"
+      }
     },
     {
       "trainer_id": "super-set-5-janitor-eric",
@@ -3932,7 +4904,25 @@
         982
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Limpiador Adelmo"
+      "name_es": "Limpiador Adelmo",
+      "names": {
+        "en": "Eric",
+        "es": "Adelmo",
+        "de": "Paolo",
+        "fr": "Edwin",
+        "it": "Adriano",
+        "ja": "エリック",
+        "ko": "에릭"
+      },
+      "classes": {
+        "en": "Janitor",
+        "es": "Limpiador",
+        "de": "Hausmeister",
+        "fr": "Nettoyeur",
+        "it": "Netturbino",
+        "ja": "せいそういん",
+        "ko": "청소부"
+      }
     },
     {
       "trainer_id": "super-set-5-janitor-oscar",
@@ -4000,7 +4990,25 @@
         982
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Limpiador Aquiles"
+      "name_es": "Limpiador Aquiles",
+      "names": {
+        "en": "Oscar",
+        "es": "Aquiles",
+        "de": "Oscar",
+        "fr": "Oscar",
+        "it": "Termino",
+        "ja": "オスカル",
+        "ko": "오스칼"
+      },
+      "classes": {
+        "en": "Janitor",
+        "es": "Limpiador",
+        "de": "Hausmeister",
+        "fr": "Nettoyeur",
+        "it": "Netturbino",
+        "ja": "せいそういん",
+        "ko": "청소부"
+      }
     },
     {
       "trainer_id": "super-set-5-maid-anguile",
@@ -4069,7 +5077,25 @@
         748
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criada Kira"
+      "name_es": "Criada Kira",
+      "names": {
+        "en": "Anguile",
+        "es": "Kira",
+        "de": "Anguile",
+        "fr": "Greta",
+        "it": "Donata",
+        "ja": "アンギーユ",
+        "ko": "앙유"
+      },
+      "classes": {
+        "en": "Maid",
+        "es": "Criada",
+        "de": "Zofe",
+        "fr": "Gouvernante",
+        "it": "Domestica",
+        "ja": "メイド",
+        "ko": "메이드"
+      }
     },
     {
       "trainer_id": "super-set-5-maid-fesan",
@@ -4138,7 +5164,25 @@
         748
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criada Palmira"
+      "name_es": "Criada Palmira",
+      "names": {
+        "en": "Fesan",
+        "es": "Palmira",
+        "de": "Bella",
+        "fr": "Delfina",
+        "it": "Olfina",
+        "ja": "フェザン",
+        "ko": "페잔"
+      },
+      "classes": {
+        "en": "Maid",
+        "es": "Criada",
+        "de": "Zofe",
+        "fr": "Gouvernante",
+        "it": "Domestica",
+        "ja": "メイド",
+        "ko": "메이드"
+      }
     },
     {
       "trainer_id": "super-set-5-nurse-panarat",
@@ -4235,7 +5279,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Enfermera Desi"
+      "name_es": "Enfermera Desi",
+      "names": {
+        "en": "Panarat",
+        "es": "Desi",
+        "de": "Elle",
+        "fr": "Elle",
+        "it": "Moranda",
+        "ja": "パナラット",
+        "ko": "페널라"
+      },
+      "classes": {
+        "en": "Nurse",
+        "es": "Enfermera",
+        "de": "Pflegerin",
+        "fr": "Infirmière",
+        "it": "Infermiera",
+        "ja": "ナース",
+        "ko": "간호사"
+      }
     },
     {
       "trainer_id": "super-set-5-nurse-saisune",
@@ -4332,7 +5394,25 @@
         821
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Enfermera Vanessa"
+      "name_es": "Enfermera Vanessa",
+      "names": {
+        "en": "Saisune",
+        "es": "Vanessa",
+        "de": "Sabine",
+        "fr": "Jody",
+        "it": "Nilde",
+        "ja": "サイズニー",
+        "ko": "타이니"
+      },
+      "classes": {
+        "en": "Nurse",
+        "es": "Enfermera",
+        "de": "Pflegerin",
+        "fr": "Infirmière",
+        "it": "Infermiera",
+        "ja": "ナース",
+        "ko": "간호사"
+      }
     },
     {
       "trainer_id": "super-set-5-nursery-aide-chachi",
@@ -4369,7 +5449,25 @@
         871
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Seño Lina"
+      "name_es": "Seño Lina",
+      "names": {
+        "en": "Chachi",
+        "es": "Lina",
+        "de": "Madita",
+        "fr": "Émilie",
+        "it": "Wilma",
+        "ja": "チャチャ",
+        "ko": "차차"
+      },
+      "classes": {
+        "en": "Nursery Aide",
+        "es": "Seño",
+        "de": "Erzieherin",
+        "fr": "Maîtresse",
+        "it": "Maestrina",
+        "ja": "ほいくし",
+        "ko": "보육사"
+      }
     },
     {
       "trainer_id": "super-set-5-nursery-aide-evelyn",
@@ -4406,7 +5504,25 @@
         871
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Seño Tamara"
+      "name_es": "Seño Tamara",
+      "names": {
+        "en": "Evelyn",
+        "es": "Tamara",
+        "de": "Evelyn",
+        "fr": "Claire",
+        "it": "Dona",
+        "ja": "ツルミ",
+        "ko": "미교"
+      },
+      "classes": {
+        "en": "Nursery Aide",
+        "es": "Seño",
+        "de": "Erzieherin",
+        "fr": "Maîtresse",
+        "it": "Maestrina",
+        "ja": "ほいくし",
+        "ko": "보육사"
+      }
     },
     {
       "trainer_id": "super-set-5-painter-hacikan",
@@ -4463,7 +5579,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Artista Manfred"
+      "name_es": "Artista Manfred",
+      "names": {
+        "en": "Hacikan",
+        "es": "Manfred",
+        "de": "Amaro",
+        "fr": "Pascal",
+        "it": "Rubello",
+        "ja": "ヘチカン",
+        "ko": "페치카"
+      },
+      "classes": {
+        "en": "Painter",
+        "es": "Artista",
+        "de": "Künstler",
+        "fr": "Peintre",
+        "it": "Artista",
+        "ja": "げいじゅつか",
+        "ko": "예술가"
+      }
     },
     {
       "trainer_id": "super-set-5-painter-rikkyu",
@@ -4520,7 +5654,25 @@
         905
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Artista Máximo"
+      "name_es": "Artista Máximo",
+      "names": {
+        "en": "Rikkyu",
+        "es": "Máximo",
+        "de": "Amir",
+        "fr": "Vince",
+        "it": "Roco",
+        "ja": "リキュウ",
+        "ko": "별궁"
+      },
+      "classes": {
+        "en": "Painter",
+        "es": "Artista",
+        "de": "Künstler",
+        "fr": "Peintre",
+        "it": "Artista",
+        "ja": "げいじゅつか",
+        "ko": "예술가"
+      }
     },
     {
       "trainer_id": "super-set-5-parasol-lady-hilary",
@@ -4575,7 +5727,25 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Dama Parasol Inés"
+      "name_es": "Dama Parasol Inés",
+      "names": {
+        "en": "Hilary",
+        "es": "Inés",
+        "de": "Cora",
+        "fr": "Hedvige",
+        "it": "Severa",
+        "ja": "ギンチヨ",
+        "ko": "은천"
+      },
+      "classes": {
+        "en": "Parasol Lady",
+        "es": "Dama Parasol",
+        "de": "Schirmdame",
+        "fr": "Sœur Parasol",
+        "it": "Ombrellina",
+        "ja": "パラソルおねえさん",
+        "ko": "파라솔 아가씨"
+      }
     },
     {
       "trainer_id": "super-set-5-parasol-lady-vanna",
@@ -4630,7 +5800,25 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Dama Parasol Estela"
+      "name_es": "Dama Parasol Estela",
+      "names": {
+        "en": "Vanna",
+        "es": "Estela",
+        "de": "Delilah",
+        "fr": "Gaétane",
+        "it": "Umberta",
+        "ja": "コマ",
+        "ko": "고려"
+      },
+      "classes": {
+        "en": "Parasol Lady",
+        "es": "Dama Parasol",
+        "de": "Schirmdame",
+        "fr": "Sœur Parasol",
+        "it": "Ombrellina",
+        "ja": "パラソルおねえさん",
+        "ko": "파라솔 아가씨"
+      }
     },
     {
       "trainer_id": "super-set-5-pilot-artemas",
@@ -4735,7 +5923,25 @@
         982
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Piloto Renzo"
+      "name_es": "Piloto Renzo",
+      "names": {
+        "en": "Artemas",
+        "es": "Renzo",
+        "de": "Flaps",
+        "fr": "Hermann",
+        "it": "Mingo",
+        "ja": "シンゲツ",
+        "ko": "심월"
+      },
+      "classes": {
+        "en": "Pilot",
+        "es": "Piloto",
+        "de": "Pilot",
+        "fr": "Pilote",
+        "it": "Pilota",
+        "ja": "パイロット",
+        "ko": "파일럿"
+      }
     },
     {
       "trainer_id": "super-set-5-pilot-chand",
@@ -4840,7 +6046,25 @@
         982
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Piloto Matthew"
+      "name_es": "Piloto Matthew",
+      "names": {
+        "en": "Chand",
+        "es": "Matthew",
+        "de": "Hugh",
+        "fr": "Hugh",
+        "it": "Bardo",
+        "ja": "ミカヅキ",
+        "ko": "신월"
+      },
+      "classes": {
+        "en": "Pilot",
+        "es": "Piloto",
+        "de": "Pilot",
+        "fr": "Pilote",
+        "it": "Pilota",
+        "ja": "パイロット",
+        "ko": "파일럿"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-breeder-f-janet",
@@ -4936,7 +6160,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criapokémon Débora"
+      "name_es": "Criapokémon Débora",
+      "names": {
+        "en": "Janet",
+        "es": "Débora",
+        "de": "Marlit",
+        "fr": "Anja",
+        "it": "Ella",
+        "ja": "ツヅミ",
+        "ko": "고선"
+      },
+      "classes": {
+        "en": "Pokemon Breeder (F)",
+        "es": "Criapokémon",
+        "de": "Pokémon-Züchter",
+        "fr": "Éleveuse",
+        "it": "Alleva",
+        "ja": "ポケモンブリーダー",
+        "ko": "포켓몬 브리더"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-breeder-f-shawna",
@@ -5032,7 +6274,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criapokémon Sabrina"
+      "name_es": "Criapokémon Sabrina",
+      "names": {
+        "en": "Shawna",
+        "es": "Sabrina",
+        "de": "Agnes",
+        "fr": "Aurélie",
+        "it": "Demia",
+        "ja": "ショウ",
+        "ko": "조지"
+      },
+      "classes": {
+        "en": "Pokemon Breeder (F)",
+        "es": "Criapokémon",
+        "de": "Pokémon-Züchter",
+        "fr": "Éleveuse",
+        "it": "Alleva",
+        "ja": "ポケモンブリーダー",
+        "ko": "포켓몬 브리더"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-breeder-m-eoin",
@@ -5128,7 +6388,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criapokémon Luca"
+      "name_es": "Criapokémon Luca",
+      "names": {
+        "en": "Eoin",
+        "es": "Luca",
+        "de": "Eoin",
+        "fr": "Ronan",
+        "it": "Erennio",
+        "ja": "イエオン",
+        "ko": "이에온"
+      },
+      "classes": {
+        "en": "Pokemon Breeder (M)",
+        "es": "Criapokémon",
+        "de": "Pokémon-Züchter",
+        "fr": "Éleveur",
+        "it": "Alleva",
+        "ja": "ポケモンブリーダー",
+        "ko": "포켓몬 브리더"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-breeder-m-manford",
@@ -5224,7 +6502,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Criapokémon Manford"
+      "name_es": "Criapokémon Manford",
+      "names": {
+        "en": "Manford",
+        "es": "Manford",
+        "de": "Dolph",
+        "fr": "Timo",
+        "it": "Telmo",
+        "ja": "マンゾウ",
+        "ko": "만상"
+      },
+      "classes": {
+        "en": "Pokemon Breeder (M)",
+        "es": "Criapokémon",
+        "de": "Pokémon-Züchter",
+        "fr": "Éleveur",
+        "it": "Alleva",
+        "ja": "ポケモンブリーダー",
+        "ko": "포켓몬 브리더"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-f-ivy",
@@ -5320,7 +6616,25 @@
         733
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (F) Fátima"
+      "name_es": "Pokémon Ranger (F) Fátima",
+      "names": {
+        "en": "Ivy",
+        "es": "Fátima",
+        "de": "Imme",
+        "fr": "Margaux",
+        "it": "Cesarea",
+        "ja": "ボルドー",
+        "ko": "보르도"
+      },
+      "classes": {
+        "en": "Pokemon Ranger (F)",
+        "es": "Pokémon Ranger (F)",
+        "de": "Pokémon Ranger",
+        "fr": "Pokémon Ranger",
+        "it": "Pokémon Ranger",
+        "ja": "ポケモンレンジャー",
+        "ko": "포켓몬 레인저"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-f-paula",
@@ -5417,7 +6731,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (F) Bibi"
+      "name_es": "Pokémon Ranger (F) Bibi",
+      "names": {
+        "en": "Paula",
+        "es": "Bibi",
+        "de": "Ellen",
+        "fr": "Déborah",
+        "it": "Arge",
+        "ja": "バウ",
+        "ko": "바우"
+      },
+      "classes": {
+        "en": "Pokemon Ranger (F)",
+        "es": "Pokémon Ranger (F)",
+        "de": "Pokémon Ranger",
+        "fr": "Pokémon Ranger",
+        "it": "Pokémon Ranger",
+        "ja": "ポケモンレンジャー",
+        "ko": "포켓몬 레인저"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-f-terran",
@@ -5514,7 +6846,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (F) Adriana"
+      "name_es": "Pokémon Ranger (F) Adriana",
+      "names": {
+        "en": "Terran",
+        "es": "Adriana",
+        "de": "Deidre",
+        "fr": "Sorène",
+        "it": "Veridia",
+        "ja": "テラコッタ",
+        "ko": "테라코타"
+      },
+      "classes": {
+        "en": "Pokemon Ranger (F)",
+        "es": "Pokémon Ranger (F)",
+        "de": "Pokémon Ranger",
+        "fr": "Pokémon Ranger",
+        "it": "Pokémon Ranger",
+        "ja": "ポケモンレンジャー",
+        "ko": "포켓몬 레인저"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-m-mouse",
@@ -5611,7 +6961,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (M) León"
+      "name_es": "Pokémon Ranger (M) León",
+      "names": {
+        "en": "Mouse",
+        "es": "León",
+        "de": "Lasso",
+        "fr": "Dylan",
+        "it": "Mondino",
+        "ja": "マウス",
+        "ko": "마우스"
+      },
+      "classes": {
+        "en": "Pokemon Ranger (M)",
+        "es": "Pokémon Ranger (M)",
+        "de": "Pokémon Ranger",
+        "fr": "Pokémon Ranger",
+        "it": "Pokémon Ranger",
+        "ja": "ポケモンレンジャー",
+        "ko": "포켓몬 레인저"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-m-skyblue",
@@ -5707,7 +7075,25 @@
         733
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (M) Ximo"
+      "name_es": "Pokémon Ranger (M) Ximo",
+      "names": {
+        "en": "Skyblue",
+        "es": "Ximo",
+        "de": "Ibo",
+        "fr": "Esteban",
+        "it": "Maudo",
+        "ja": "カメノゾキ",
+        "ko": "병사"
+      },
+      "classes": {
+        "en": "Pokemon Ranger (M)",
+        "es": "Pokémon Ranger (M)",
+        "de": "Pokémon Ranger",
+        "fr": "Pokémon Ranger",
+        "it": "Pokémon Ranger",
+        "ja": "ポケモンレンジャー",
+        "ko": "포켓몬 레인저"
+      }
     },
     {
       "trainer_id": "super-set-5-pokemon-ranger-m-smokey",
@@ -5804,7 +7190,25 @@
         646
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Pokémon Ranger (M) Israel"
+      "name_es": "Pokémon Ranger (M) Israel",
+      "names": {
+        "en": "Smokey",
+        "es": "Israel",
+        "de": "Angus",
+        "fr": "Scott",
+        "it": "Andrea",
+        "ja": "ススタケ",
+        "ko": "석죽"
+      },
+      "classes": {
+        "en": "Pokemon Ranger (M)",
+        "es": "Pokémon Ranger (M)",
+        "de": "Pokémon Ranger",
+        "fr": "Pokémon Ranger",
+        "it": "Pokémon Ranger",
+        "ja": "ポケモンレンジャー",
+        "ko": "포켓몬 레인저"
+      }
     },
     {
       "trainer_id": "super-set-5-policeman-bobemon",
@@ -5868,7 +7272,25 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Policía Rufo"
+      "name_es": "Policía Rufo",
+      "names": {
+        "en": "Bobemon",
+        "es": "Rufo",
+        "de": "Kilgore",
+        "fr": "Borys",
+        "it": "Nunzio",
+        "ja": "ボブエモン",
+        "ko": "포조리"
+      },
+      "classes": {
+        "en": "Policeman",
+        "es": "Policía",
+        "de": "Polizist",
+        "fr": "Agent",
+        "it": "Guardia",
+        "ja": "おまわりさん",
+        "ko": "경찰관"
+      }
     },
     {
       "trainer_id": "super-set-5-policeman-bobnori",
@@ -5932,7 +7354,25 @@
         894
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Policía Takao"
+      "name_es": "Policía Takao",
+      "names": {
+        "en": "Bobnori",
+        "es": "Takao",
+        "de": "Adriano",
+        "fr": "Chris",
+        "it": "Alessio",
+        "ja": "ボブノリ",
+        "ko": "포졸"
+      },
+      "classes": {
+        "en": "Policeman",
+        "es": "Policía",
+        "de": "Polizist",
+        "fr": "Agent",
+        "it": "Guardia",
+        "ja": "おまわりさん",
+        "ko": "경찰관"
+      }
     },
     {
       "trainer_id": "super-set-5-roughneck-ganymed",
@@ -5953,7 +7393,25 @@
         880
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Calvo Fernán"
+      "name_es": "Calvo Fernán",
+      "names": {
+        "en": "Ganymed",
+        "es": "Fernán",
+        "de": "Darja",
+        "fr": "Fabrice",
+        "it": "Marrigo",
+        "ja": "ガニメデ",
+        "ko": "가니메데"
+      },
+      "classes": {
+        "en": "Roughneck",
+        "es": "Calvo",
+        "de": "Raufbold",
+        "fr": "Loubard",
+        "it": "Zuccapelata",
+        "ja": "スキンヘッズ",
+        "ko": "빡빡이"
+      }
     },
     {
       "trainer_id": "super-set-5-roughneck-proteus",
@@ -5974,7 +7432,25 @@
         880
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Calvo Ennio"
+      "name_es": "Calvo Ennio",
+      "names": {
+        "en": "Proteus",
+        "es": "Ennio",
+        "de": "Proteus",
+        "fr": "Protée",
+        "it": "Jago",
+        "ja": "プロテウス",
+        "ko": "프로티우스"
+      },
+      "classes": {
+        "en": "Roughneck",
+        "es": "Calvo",
+        "de": "Raufbold",
+        "fr": "Loubard",
+        "it": "Zuccapelata",
+        "ja": "スキンヘッズ",
+        "ko": "빡빡이"
+      }
     },
     {
       "trainer_id": "super-set-5-socialite-aparna",
@@ -6063,7 +7539,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Marquesa Leonor"
+      "name_es": "Marquesa Leonor",
+      "names": {
+        "en": "Aparna",
+        "es": "Leonor",
+        "de": "Momo",
+        "fr": "Romy",
+        "it": "Parda",
+        "ja": "アパルナ",
+        "ko": "아파루나"
+      },
+      "classes": {
+        "en": "Socialite",
+        "es": "Marquesa",
+        "de": "Dame",
+        "fr": "Mondaine",
+        "it": "Madame",
+        "ja": "マダム",
+        "ko": "마담"
+      }
     },
     {
       "trainer_id": "super-set-5-socialite-saty",
@@ -6152,7 +7646,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Marquesa Sally"
+      "name_es": "Marquesa Sally",
+      "names": {
+        "en": "Saty",
+        "es": "Sally",
+        "de": "Satine",
+        "fr": "Sabrina",
+        "it": "Renata",
+        "ja": "サティー",
+        "ko": "사티"
+      },
+      "classes": {
+        "en": "Socialite",
+        "es": "Marquesa",
+        "de": "Dame",
+        "fr": "Mondaine",
+        "it": "Madame",
+        "ja": "マダム",
+        "ko": "마담"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-f-ginger",
@@ -6248,7 +7760,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterana Natalie"
+      "name_es": "Veterana Natalie",
+      "names": {
+        "en": "Ginger",
+        "es": "Natalie",
+        "de": "Olga",
+        "fr": "Ginger",
+        "it": "Gorina",
+        "ja": "シンジャ",
+        "ko": "신자"
+      },
+      "classes": {
+        "en": "Veteran (F)",
+        "es": "Veterana",
+        "de": "Veteranin",
+        "fr": "Vénérable",
+        "it": "Veterana",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-f-hecate",
@@ -6344,7 +7874,25 @@
         908
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterana Eunice"
+      "name_es": "Veterana Eunice",
+      "names": {
+        "en": "Hecate",
+        "es": "Eunice",
+        "de": "Jule",
+        "fr": "Gina",
+        "it": "Doretta",
+        "ja": "ヤマウバ",
+        "ko": "귀녀"
+      },
+      "classes": {
+        "en": "Veteran (F)",
+        "es": "Veterana",
+        "de": "Veteranin",
+        "fr": "Vénérable",
+        "it": "Veterana",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-f-jeune",
@@ -6433,7 +7981,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterana Jacinta"
+      "name_es": "Veterana Jacinta",
+      "names": {
+        "en": "Jeune",
+        "es": "Jacinta",
+        "de": "Tara",
+        "fr": "Hadja",
+        "it": "Imma",
+        "ja": "ハンニャ",
+        "ko": "반야"
+      },
+      "classes": {
+        "en": "Veteran (F)",
+        "es": "Veterana",
+        "de": "Veteranin",
+        "fr": "Vénérable",
+        "it": "Veterana",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-f-risha",
@@ -6522,7 +8088,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterana Sayuri"
+      "name_es": "Veterana Sayuri",
+      "names": {
+        "en": "Risha",
+        "es": "Sayuri",
+        "de": "Katalin",
+        "fr": "Norma",
+        "it": "Tonita",
+        "ja": "ナマナリ",
+        "ko": "생명"
+      },
+      "classes": {
+        "en": "Veteran (F)",
+        "es": "Veterana",
+        "de": "Veteranin",
+        "fr": "Vénérable",
+        "it": "Veterana",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-m-colombo",
@@ -6611,7 +8195,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterano Leónida"
+      "name_es": "Veterano Leónida",
+      "names": {
+        "en": "Colombo",
+        "es": "Leónida",
+        "de": "Juven",
+        "fr": "Evan",
+        "it": "Gallo",
+        "ja": "マゴベエ",
+        "ko": "마고비에"
+      },
+      "classes": {
+        "en": "Veteran (M)",
+        "es": "Veterano",
+        "de": "Veteran",
+        "fr": "Vénérable",
+        "it": "Veterano",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-m-donta",
@@ -6690,7 +8292,25 @@
         907
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterano Robus"
+      "name_es": "Veterano Robus",
+      "names": {
+        "en": "Donta",
+        "es": "Robus",
+        "de": "Jobst",
+        "fr": "Bryce",
+        "it": "Orenzio",
+        "ja": "ドンタ",
+        "ko": "존닥"
+      },
+      "classes": {
+        "en": "Veteran (M)",
+        "es": "Veterano",
+        "de": "Veteran",
+        "fr": "Vénérable",
+        "it": "Veterano",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-m-leron",
@@ -6779,7 +8399,25 @@
         988
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterano Sancho"
+      "name_es": "Veterano Sancho",
+      "names": {
+        "en": "Leron",
+        "es": "Sancho",
+        "de": "Günther",
+        "fr": "Justin",
+        "it": "Lorello",
+        "ja": "シンマル",
+        "ko": "신환"
+      },
+      "classes": {
+        "en": "Veteran (M)",
+        "es": "Veterano",
+        "de": "Veteran",
+        "fr": "Vénérable",
+        "it": "Veterano",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-veteran-m-ponta",
@@ -6858,7 +8496,25 @@
         907
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Veterano Phoebe"
+      "name_es": "Veterano Phoebe",
+      "names": {
+        "en": "Ponta",
+        "es": "Phoebe",
+        "de": "Jarik",
+        "fr": "Ponta",
+        "it": "Ughetto",
+        "ja": "ポンタ",
+        "ko": "폰타"
+      },
+      "classes": {
+        "en": "Veteran (M)",
+        "es": "Veterano",
+        "de": "Veteran",
+        "fr": "Vénérable",
+        "it": "Veterano",
+        "ja": "ベテラントレーナー",
+        "ko": "베테랑 트레이너"
+      }
     },
     {
       "trainer_id": "super-set-5-waiter-gonyan",
@@ -6954,7 +8610,25 @@
         558
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Camarero Rodolfo"
+      "name_es": "Camarero Rodolfo",
+      "names": {
+        "en": "Gonyan",
+        "es": "Rodolfo",
+        "de": "Basti",
+        "fr": "Bastien",
+        "it": "Benetto",
+        "ja": "コンニョン",
+        "ko": "커니언"
+      },
+      "classes": {
+        "en": "Waiter",
+        "es": "Camarero",
+        "de": "Servierer",
+        "fr": "Serveur",
+        "it": "Cameriere",
+        "ja": "ウエーター",
+        "ko": "웨이터"
+      }
     },
     {
       "trainer_id": "super-set-5-waiter-hasan",
@@ -7051,7 +8725,25 @@
         471
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Camarero Ben"
+      "name_es": "Camarero Ben",
+      "names": {
+        "en": "Hasan",
+        "es": "Ben",
+        "de": "Rupert",
+        "fr": "Hassan",
+        "it": "Florian",
+        "ja": "ハイサム",
+        "ko": "하이삼"
+      },
+      "classes": {
+        "en": "Waiter",
+        "es": "Camarero",
+        "de": "Servierer",
+        "fr": "Serveur",
+        "it": "Cameriere",
+        "ja": "ウエーター",
+        "ko": "웨이터"
+      }
     },
     {
       "trainer_id": "super-set-5-waitress-amber",
@@ -7148,7 +8840,25 @@
         471
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Camarera Desirée"
+      "name_es": "Camarera Desirée",
+      "names": {
+        "en": "Amber",
+        "es": "Desirée",
+        "de": "Claatje",
+        "fr": "Cindy",
+        "it": "Lucina",
+        "ja": "ハマチ",
+        "ko": "하머치"
+      },
+      "classes": {
+        "en": "Waitress",
+        "es": "Camarera",
+        "de": "Serviererin",
+        "fr": "Serveuse",
+        "it": "Cameriera",
+        "ja": "ウエートレス",
+        "ko": "웨이트리스"
+      }
     },
     {
       "trainer_id": "super-set-5-waitress-roe",
@@ -7244,7 +8954,25 @@
         558
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Camarera Nadia"
+      "name_es": "Camarera Nadia",
+      "names": {
+        "en": "Roe",
+        "es": "Nadia",
+        "de": "Lidia",
+        "fr": "Paula",
+        "it": "Divina",
+        "ja": "イクラ",
+        "ko": "아루마"
+      },
+      "classes": {
+        "en": "Waitress",
+        "es": "Camarera",
+        "de": "Serviererin",
+        "fr": "Serveuse",
+        "it": "Cameriera",
+        "ja": "ウエートレス",
+        "ko": "웨이트리스"
+      }
     },
     {
       "trainer_id": "super-set-5-worker-ice-roman",
@@ -7285,7 +9013,25 @@
         888
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Operario Doroteo"
+      "name_es": "Operario Doroteo",
+      "names": {
+        "en": "Roman",
+        "es": "Doroteo",
+        "de": "Roman",
+        "fr": "Roman",
+        "it": "Tonello",
+        "ja": "ロマン",
+        "ko": "로만"
+      },
+      "classes": {
+        "en": "Worker (Ice)",
+        "es": "Operario",
+        "de": "Arbeiter",
+        "fr": "Ouvrier",
+        "it": "Lavoratore",
+        "ja": "さぎょういん",
+        "ko": "작업원"
+      }
     },
     {
       "trainer_id": "super-set-5-worker-ice-vala-ry",
@@ -7326,7 +9072,25 @@
         888
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Operario Cleto"
+      "name_es": "Operario Cleto",
+      "names": {
+        "en": "Valéry",
+        "es": "Cleto",
+        "de": "Valery",
+        "fr": "Walid",
+        "it": "Magdalo",
+        "ja": "バレリー",
+        "ko": "발레리"
+      },
+      "classes": {
+        "en": "Worker (Ice)",
+        "es": "Operario",
+        "de": "Arbeiter",
+        "fr": "Ouvrier",
+        "it": "Lavoratore",
+        "ja": "さぎょういん",
+        "ko": "작업원"
+      }
     },
     {
       "trainer_id": "super-set-5-worker-hayes",
@@ -7364,7 +9128,25 @@
         979
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Operario Vic"
+      "name_es": "Operario Vic",
+      "names": {
+        "en": "Hayes",
+        "es": "Vic",
+        "de": "Georg",
+        "fr": "Joffrey",
+        "it": "Plavo",
+        "ja": "コレチカ",
+        "ko": "이주"
+      },
+      "classes": {
+        "en": "Worker",
+        "es": "Operario",
+        "de": "Arbeiter",
+        "fr": "Ouvrier",
+        "it": "Lavoratore",
+        "ja": "さぎょういん",
+        "ko": "작업원"
+      }
     },
     {
       "trainer_id": "super-set-5-worker-quinn",
@@ -7396,7 +9178,25 @@
         903
       ],
       "source_url": "https://www.smogon.com/ingame/bc/bw_subway_trainers",
-      "name_es": "Operario Arcadio"
+      "name_es": "Operario Arcadio",
+      "names": {
+        "en": "Quinn",
+        "es": "Arcadio",
+        "de": "Stefan",
+        "fr": "Robin",
+        "it": "Donelio",
+        "ja": "ノリカタ",
+        "ko": "승망"
+      },
+      "classes": {
+        "en": "Worker",
+        "es": "Operario",
+        "de": "Arbeiter",
+        "fr": "Ouvrier",
+        "it": "Lavoratore",
+        "ja": "さぎょういん",
+        "ko": "작업원"
+      }
     }
   ]
 }

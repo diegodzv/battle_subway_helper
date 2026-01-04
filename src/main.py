@@ -56,17 +56,32 @@ settings = Settings()
 # Utils
 # ----------------------------
 def normalize(s: str) -> str:
-    s = (s or "").strip().lower()
-    try:
-        import unicodedata
+    """
+    Unicode-friendly normalization:
+    - casefold for latin scripts
+    - remove diacritics (á -> a) but keep non-latin scripts intact
+    - keep letters/numbers from any script (Japanese/Korean included)
+    - collapse whitespace
+    """
+    import unicodedata
 
-        s = unicodedata.normalize("NFKD", s)
-        s = "".join(ch for ch in s if not unicodedata.combining(ch))
-    except Exception:
-        pass
-    s = re.sub(r"[^a-z0-9 ]+", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
+    s = (s or "").strip()
+    if not s:
+        return ""
+
+    # casefold works well for latin; harmless for most scripts
+    s = s.casefold()
+
+    # Remove diacritics but keep base characters
+    s_norm = unicodedata.normalize("NFKD", s)
+    s_norm = "".join(ch for ch in s_norm if not unicodedata.combining(ch))
+
+    # Remove punctuation/symbols, but keep unicode word chars and spaces
+    # \w in Unicode includes letters/digits/underscore from many scripts
+    s_norm = re.sub(r"[^\w\s]+", " ", s_norm, flags=re.UNICODE)
+    s_norm = re.sub(r"\s+", " ", s_norm, flags=re.UNICODE).strip()
+    return s_norm
+
 
 
 def read_json(path: Path) -> Any:
@@ -163,7 +178,33 @@ def build_trainer_search_rows() -> List[dict]:
         if n_es:
             aliases.append(n_es)
 
-        aliases = list(dict.fromkeys(aliases))
+        aliases: List[str] = []
+
+        # existing:
+        n_en = normalize(name_en)
+        if n_en:
+            aliases.append(n_en)
+
+        n_es = normalize(name_es) if isinstance(name_es, str) else ""
+        if n_es:
+            aliases.append(n_es)
+
+        # NEW: multilang name-only aliases
+        names_obj = t.get("names")
+        if isinstance(names_obj, dict):
+            for lang, val in names_obj.items():
+                if isinstance(val, str) and val.strip():
+                    aliases.append(normalize(val))
+
+        # NEW (optional): class aliases too (if you want people to search by class)
+        classes_obj = t.get("classes")
+        if isinstance(classes_obj, dict):
+            for lang, val in classes_obj.items():
+                if isinstance(val, str) and val.strip():
+                    aliases.append(normalize(val))
+
+        aliases = list(dict.fromkeys([a for a in aliases if a]))
+
 
         rows.append(
             {
