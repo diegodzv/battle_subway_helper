@@ -58,10 +58,10 @@ settings = Settings()
 def normalize(s: str) -> str:
     """
     Unicode-friendly normalization:
-    - casefold for latin scripts
-    - remove diacritics (á -> a) but keep non-latin scripts intact
-    - keep letters/numbers from any script (Japanese/Korean included)
-    - collapse whitespace
+      - casefold for latin scripts
+      - remove diacritics (á -> a) while keeping non-latin scripts intact
+      - keep unicode word chars (Japanese/Korean included) and spaces
+      - collapse whitespace
     """
     import unicodedata
 
@@ -76,12 +76,10 @@ def normalize(s: str) -> str:
     s_norm = unicodedata.normalize("NFKD", s)
     s_norm = "".join(ch for ch in s_norm if not unicodedata.combining(ch))
 
-    # Remove punctuation/symbols, but keep unicode word chars and spaces
-    # \w in Unicode includes letters/digits/underscore from many scripts
+    # Remove punctuation/symbols, keep unicode letters/digits/underscore and spaces
     s_norm = re.sub(r"[^\w\s]+", " ", s_norm, flags=re.UNICODE)
     s_norm = re.sub(r"\s+", " ", s_norm, flags=re.UNICODE).strip()
     return s_norm
-
 
 
 def read_json(path: Path) -> Any:
@@ -94,6 +92,7 @@ def read_json(path: Path) -> Any:
 
 
 def display_name_from_trainer(t: dict) -> str:
+    # Prefer Spanish full display name if present; otherwise English full.
     name_es = t.get("name_es")
     if isinstance(name_es, str) and name_es.strip():
         return name_es.strip()
@@ -125,7 +124,7 @@ def load_pools() -> Dict[str, dict]:
     pools = data.get("pools", [])
     if not isinstance(pools, list):
         raise RuntimeError("Invalid pools JSON: 'pools' must be a list")
-    out = {}
+    out: Dict[str, dict] = {}
     for p in pools:
         pid = p.get("pool_id")
         if isinstance(pid, str) and pid:
@@ -164,12 +163,21 @@ def load_set_by_global_id(global_id: int) -> dict:
 
 @lru_cache(maxsize=1)
 def build_trainer_search_rows() -> List[dict]:
+    """
+    Search aliases include:
+      - full EN (name_en)
+      - full ES (name_es) if present
+      - name-only multilingual (trainer["names"][lang]) if present
+      - (optional) classes multilingual (trainer["classes"][lang]) if present
+    """
     rows: List[dict] = []
     for t in load_trainers():
         name_en = t.get("name_en") or ""
         name_es = t.get("name_es") or ""
+
         aliases: List[str] = []
 
+        # Full names
         n_en = normalize(name_en)
         if n_en:
             aliases.append(n_en)
@@ -178,33 +186,22 @@ def build_trainer_search_rows() -> List[dict]:
         if n_es:
             aliases.append(n_es)
 
-        aliases: List[str] = []
-
-        # existing:
-        n_en = normalize(name_en)
-        if n_en:
-            aliases.append(n_en)
-
-        n_es = normalize(name_es) if isinstance(name_es, str) else ""
-        if n_es:
-            aliases.append(n_es)
-
-        # NEW: multilang name-only aliases
+        # Name-only in multiple languages
         names_obj = t.get("names")
         if isinstance(names_obj, dict):
-            for lang, val in names_obj.items():
+            for _, val in names_obj.items():
                 if isinstance(val, str) and val.strip():
                     aliases.append(normalize(val))
 
-        # NEW (optional): class aliases too (if you want people to search by class)
+        # Optional: allow searching by trainer class strings too
         classes_obj = t.get("classes")
         if isinstance(classes_obj, dict):
-            for lang, val in classes_obj.items():
+            for _, val in classes_obj.items():
                 if isinstance(val, str) and val.strip():
                     aliases.append(normalize(val))
 
+        # Dedup and remove empties
         aliases = list(dict.fromkeys([a for a in aliases if a]))
-
 
         rows.append(
             {
@@ -221,6 +218,7 @@ def build_trainer_search_rows() -> List[dict]:
 
 def combos_remaining(pool_ids: List[int], seen: Set[int], team_size: int = 4) -> Tuple[int, Set[int]]:
     pool_sorted = sorted(pool_ids)
+
     if len(seen) > team_size:
         return 0, set()
 
@@ -264,6 +262,10 @@ class TrainerDetail(BaseModel):
     pool_size: int
     sets: List[dict]
 
+    # Optional extra fields (won't break older clients)
+    names: Optional[Dict[str, Optional[str]]] = None
+    classes: Optional[Dict[str, Optional[str]]] = None
+
 
 class FilterRequest(BaseModel):
     seen_global_ids: List[int]
@@ -280,7 +282,7 @@ class FilterResponse(BaseModel):
 # ----------------------------
 # App
 # ----------------------------
-app = FastAPI(title="Battle Subway Helper (B2/W2) - Super Set 4/5", version="0.2.0")
+app = FastAPI(title="Battle Subway Helper (B2/W2) - Super Set 4/5", version="1.0.0")
 
 if settings.CORS_ORIGINS:
     logger.info("CORS enabled for: %s", settings.CORS_ORIGINS)
@@ -304,9 +306,11 @@ def trainers_search(q: str = Query(..., min_length=1), limit: int = 20):
     rows = build_trainer_search_rows()
     lim = max(1, min(limit, 50))
 
+    # 1) Prefix matches
     prefix: List[dict] = [r for r in rows if any(a.startswith(nq) for a in r["aliases"])]
     prefix_ids = {r["trainer_id"] for r in prefix}
 
+    # 2) Contains matches (without duplicates)
     contains: List[dict] = []
     if len(prefix) < lim:
         for r in rows:
@@ -353,6 +357,8 @@ def trainer_detail(trainer_id: str):
             continue
 
     name_es = t.get("name_es") if isinstance(t.get("name_es"), str) else None
+    names = t.get("names") if isinstance(t.get("names"), dict) else None
+    classes = t.get("classes") if isinstance(t.get("classes"), dict) else None
 
     return TrainerDetail(
         trainer_id=t["trainer_id"],
@@ -363,6 +369,8 @@ def trainer_detail(trainer_id: str):
         pool_id=pool_id,
         pool_size=len(pool.get("pool_global_ids", [])),
         sets=sets,
+        names=names,
+        classes=classes,
     )
 
 
