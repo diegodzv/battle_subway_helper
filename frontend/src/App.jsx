@@ -16,9 +16,12 @@ function Sprite({ url, alt }) {
 }
 
 function ItemIcon({ url, alt }) {
-  if (!url) return (
-    <span className="itemIconFallback" title="No icon">◻</span>
-  );
+  if (!url)
+    return (
+      <span className="itemIconFallback" title="No icon">
+        ◻
+      </span>
+    );
   return <img className="itemIcon" src={url} alt={alt} loading="lazy" />;
 }
 
@@ -40,7 +43,7 @@ function clamp01(x) {
   return Math.max(0, Math.min(1, x));
 }
 
-function StatRow({ label, value, max = 200, compact = false }) {
+function StatRow({ label, value, max = 200, compact = false, boosted = false }) {
   const v = typeof value === "number" ? value : 0;
 
   // Base fill is capped at max (200).
@@ -54,7 +57,7 @@ function StatRow({ label, value, max = 200, compact = false }) {
 
   return (
     <div className={`statLine ${compact ? "statLineCompact" : ""}`}>
-      <div className="statLabel muted">{label}</div>
+      <div className={`statLabel muted ${boosted ? "statLabelBoosted" : ""}`}>{label}</div>
       <div className="statBarTrack" aria-label={`${label} ${v}`}>
         <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
         {overflowPct > 0 ? (
@@ -85,14 +88,12 @@ function prettyMoveNameFromSlug(slug) {
     .join(" ");
 }
 
-function SetTile({
-  set,
-  isDiscarded,
-  onDiscardToggle,
-  onConfirm,
-  canConfirm,
-  showStats,
-}) {
+function hasEvs(set, statKey) {
+  const n = set?.evs_numeric?.[statKey];
+  return typeof n === "number" && n > 0;
+}
+
+function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, showStats }) {
   const display = setDisplayName(set);
   const movesMeta = Array.isArray(set.moves_meta) ? set.moves_meta : null;
 
@@ -167,17 +168,53 @@ function SetTile({
           </ul>
         </div>
 
-        {/* (1) Stats opcionales en el pool */}
+        {/* Stats opcionales en el pool */}
         {showStats ? (
           <div className="tileSection">
             <div className="tileLabel muted">Stats (Lv 50)</div>
             <div className="statTable statTableCompact">
-              <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact />
-              <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact />
-              <StatRow label="Def" value={set.stats_lv50?.Def} max={200} compact />
-              <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} compact />
-              <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} compact />
-              <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} compact />
+              <StatRow
+                label="HP"
+                value={set.stats_lv50?.HP}
+                max={200}
+                compact
+                boosted={hasEvs(set, "HP")}
+              />
+              <StatRow
+                label="Atk"
+                value={set.stats_lv50?.Atk}
+                max={200}
+                compact
+                boosted={hasEvs(set, "Atk")}
+              />
+              <StatRow
+                label="Def"
+                value={set.stats_lv50?.Def}
+                max={200}
+                compact
+                boosted={hasEvs(set, "Def")}
+              />
+              <StatRow
+                label="SpA"
+                value={set.stats_lv50?.SpA}
+                max={200}
+                compact
+                boosted={hasEvs(set, "SpA")}
+              />
+              <StatRow
+                label="SpD"
+                value={set.stats_lv50?.SpD}
+                max={200}
+                compact
+                boosted={hasEvs(set, "SpD")}
+              />
+              <StatRow
+                label="Spe"
+                value={set.stats_lv50?.Spe}
+                max={200}
+                compact
+                boosted={hasEvs(set, "Spe")}
+              />
             </div>
           </div>
         ) : null}
@@ -231,7 +268,7 @@ function SeenSlot({ set, index, onRemove }) {
               <span className="mono">{set.nature}</span>
             </div>
 
-            {/* (3) Item en los vistos */}
+            {/* Item en los vistos */}
             <div className="itemLine">
               <ItemIcon url={set.item_sprite_url} alt={set.item} />
               <span className="itemName">{set.item}</span>
@@ -267,12 +304,12 @@ function SeenSlot({ set, index, onRemove }) {
         <div className="miniBox">
           <div className="h3">Stats</div>
           <div className="statTable statTableCompact">
-            <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact />
-            <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact />
-            <StatRow label="Def" value={set.stats_lv50?.Def} max={200} compact />
-            <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} compact />
-            <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} compact />
-            <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} compact />
+            <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact boosted={hasEvs(set, "HP")} />
+            <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact boosted={hasEvs(set, "Atk")} />
+            <StatRow label="Def" value={set.stats_lv50?.Def} max={200} compact boosted={hasEvs(set, "Def")} />
+            <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} compact boosted={hasEvs(set, "SpA")} />
+            <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} compact boosted={hasEvs(set, "SpD")} />
+            <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} compact boosted={hasEvs(set, "Spe")} />
           </div>
         </div>
       </div>
@@ -293,7 +330,7 @@ export default function App() {
   const [discarded, setDiscarded] = useState(() => new Set()); // Set<global_id>
   const [showDiscarded, setShowDiscarded] = useState(false);
 
-  // (1) toggle stats en pool
+  // toggle stats en pool
   const [showStatsInPool, setShowStatsInPool] = useState(false);
 
   const poolSets = trainer?.sets ?? [];
@@ -359,7 +396,9 @@ export default function App() {
     }
 
     run();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [debouncedQ]);
 
   async function loadTrainer(trainerId) {
@@ -416,7 +455,7 @@ export default function App() {
       for (const s of poolSets) {
         if (s.global_id === set.global_id) continue;
 
-        // (C) discard other variants of same species
+        // discard other variants of same species
         if (s.species === confirmedSpecies) {
           next.add(s.global_id);
           continue;
@@ -575,7 +614,8 @@ export default function App() {
               </div>
 
               <div className="muted" style={{ marginTop: 10 }}>
-                Tip: confirming a set auto-discards other variants of the same species, and also applies Item Clause (same item can’t appear twice).
+                Tip: confirming a set auto-discards other variants of the same species, and also
+                applies Item Clause (same item can’t appear twice).
               </div>
             </section>
 
@@ -604,7 +644,8 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same species + Item Clause.
+        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same
+        species + Item Clause.
       </footer>
     </div>
   );

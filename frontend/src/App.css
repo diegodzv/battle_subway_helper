@@ -484,6 +484,12 @@ html, body, #root {
 }
 
 .statLabel { font-size: 0.92rem; }
+.statLabelBoosted {
+  color: rgb(213, 184, 255);
+  font-weight: 900;
+  text-shadow: 0 0 18px rgba(213, 184, 255, 0.18);
+}
+
 .statValue { text-align: right; }
 
 .statBarTrack {
