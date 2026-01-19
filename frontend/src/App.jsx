@@ -57,7 +57,10 @@ function StatRow({ label, value, max = 200, compact = false, boosted = false }) 
 
   return (
     <div className={`statLine ${compact ? "statLineCompact" : ""}`}>
-      <div className={`statLabel muted ${boosted ? "statLabelBoosted" : ""}`}>{label}</div>
+      <div className={`statLabel muted ${boosted ? "statLabelBoosted" : ""}`}>
+        {label}
+      </div>
+
       <div className="statBarTrack" aria-label={`${label} ${v}`}>
         <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
         {overflowPct > 0 ? (
@@ -173,48 +176,12 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
           <div className="tileSection">
             <div className="tileLabel muted">Stats (Lv 50)</div>
             <div className="statTable statTableCompact">
-              <StatRow
-                label="HP"
-                value={set.stats_lv50?.HP}
-                max={200}
-                compact
-                boosted={hasEvs(set, "HP")}
-              />
-              <StatRow
-                label="Atk"
-                value={set.stats_lv50?.Atk}
-                max={200}
-                compact
-                boosted={hasEvs(set, "Atk")}
-              />
-              <StatRow
-                label="Def"
-                value={set.stats_lv50?.Def}
-                max={200}
-                compact
-                boosted={hasEvs(set, "Def")}
-              />
-              <StatRow
-                label="SpA"
-                value={set.stats_lv50?.SpA}
-                max={200}
-                compact
-                boosted={hasEvs(set, "SpA")}
-              />
-              <StatRow
-                label="SpD"
-                value={set.stats_lv50?.SpD}
-                max={200}
-                compact
-                boosted={hasEvs(set, "SpD")}
-              />
-              <StatRow
-                label="Spe"
-                value={set.stats_lv50?.Spe}
-                max={200}
-                compact
-                boosted={hasEvs(set, "Spe")}
-              />
+              <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact boosted={hasEvs(set, "HP")} />
+              <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact boosted={hasEvs(set, "Atk")} />
+              <StatRow label="Def" value={set.stats_lv50?.Def} max={200} compact boosted={hasEvs(set, "Def")} />
+              <StatRow label="SpA" value={set.stats_lv50?.SpA} max={200} compact boosted={hasEvs(set, "SpA")} />
+              <StatRow label="SpD" value={set.stats_lv50?.SpD} max={200} compact boosted={hasEvs(set, "SpD")} />
+              <StatRow label="Spe" value={set.stats_lv50?.Spe} max={200} compact boosted={hasEvs(set, "Spe")} />
             </div>
           </div>
         ) : null}
@@ -225,13 +192,45 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
   );
 }
 
-function SeenSlot({ set, index, onRemove }) {
+function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
+  return (
+    <div className="seenSlotEmpty">
+      <div className="teamSlotIndex mono">#{index + 1}</div>
+
+      <div className="slotSearchHeader">
+        <div className="muted" style={{ fontWeight: 700 }}>
+          Filter pool
+        </div>
+        {query ? (
+          <button className="slotClearBtn" onClick={onClear} title="Clear filter">
+            Clear ✕
+          </button>
+        ) : null}
+      </div>
+
+      <input
+        className="slotSearchInput"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder='Type a Pokémon (e.g. "Gyarados", "Hydreigon-4")...'
+      />
+
+      <div className="muted slotHint">
+        Tip: this only filters the pool view. Confirming a set resets the filter.
+      </div>
+    </div>
+  );
+}
+
+function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSearch }) {
   if (!set) {
     return (
-      <div className="seenSlotEmpty">
-        <div className="teamSlotIndex mono">#{index + 1}</div>
-        <div className="muted">Empty slot</div>
-      </div>
+      <SeenSlotEmptySearch
+        index={index}
+        query={searchQuery}
+        setQuery={setSearchQuery}
+        onClear={onClearSearch}
+      />
     );
   }
 
@@ -330,8 +329,12 @@ export default function App() {
   const [discarded, setDiscarded] = useState(() => new Set()); // Set<global_id>
   const [showDiscarded, setShowDiscarded] = useState(false);
 
-  // toggle stats en pool
+  // toggle stats in pool
   const [showStatsInPool, setShowStatsInPool] = useState(false);
+
+  // NEW: Pokémon filter (from empty slots)
+  const [pokemonFilter, setPokemonFilter] = useState("");
+  const debouncedPokemonFilter = useDebouncedValue(pokemonFilter, 80);
 
   const poolSets = trainer?.sets ?? [];
 
@@ -355,7 +358,7 @@ export default function App() {
   }, [poolSets]);
 
   // visible pool = not confirmed, and (not discarded unless toggle)
-  const visiblePool = useMemo(() => {
+  const visiblePoolBase = useMemo(() => {
     const confirmedSet = new Set(confirmed);
     return poolSortedDex.filter((s) => {
       if (confirmedSet.has(s.global_id)) return false;
@@ -364,6 +367,18 @@ export default function App() {
       return true;
     });
   }, [poolSortedDex, confirmed, discarded, showDiscarded]);
+
+  // NEW: apply Pokémon filter on top of the normal view
+  const visiblePool = useMemo(() => {
+    const nq = debouncedPokemonFilter.trim().toLowerCase();
+    if (!nq) return visiblePoolBase;
+
+    return visiblePoolBase.filter((s) => {
+      const display = setDisplayName(s).toLowerCase();
+      const species = (s.species ?? "").toLowerCase();
+      return display.includes(nq) || species.includes(nq);
+    });
+  }, [visiblePoolBase, debouncedPokemonFilter]);
 
   const confirmedSets = useMemo(() => {
     const slots = [null, null, null, null];
@@ -407,6 +422,7 @@ export default function App() {
     setDiscarded(new Set());
     setShowDiscarded(false);
     setShowStatsInPool(false);
+    setPokemonFilter("");
 
     const res = await fetch(`/trainers/${trainerId}`);
     if (!res.ok) {
@@ -423,6 +439,7 @@ export default function App() {
     setDiscarded(new Set());
     setShowDiscarded(false);
     setShowStatsInPool(false);
+    setPokemonFilter("");
     setQ("");
     setSuggestions([]);
   }
@@ -441,10 +458,13 @@ export default function App() {
     if (confirmed.length >= 4) return;
     if (discarded.has(set.global_id)) return;
 
+    // reset the pool filter after confirming
+    setPokemonFilter("");
+
     setConfirmed((prev) => [...prev, set.global_id]);
 
     // Auto-discard rules:
-    //  - same species, other variants (as before)
+    //  - same species, other variants
     //  - item clause: same item cannot appear twice in the opponent team
     setDiscarded((prev) => {
       const next = new Set(prev);
@@ -609,20 +629,36 @@ export default function App() {
 
               <div className="seenGrid">
                 {confirmedSets.map((s, idx) => (
-                  <SeenSlot key={idx} set={s} index={idx} onRemove={removeConfirmed} />
+                  <SeenSlot
+                    key={idx}
+                    set={s}
+                    index={idx}
+                    onRemove={removeConfirmed}
+                    searchQuery={pokemonFilter}
+                    setSearchQuery={setPokemonFilter}
+                    onClearSearch={() => setPokemonFilter("")}
+                  />
                 ))}
               </div>
 
               <div className="muted" style={{ marginTop: 10 }}>
-                Tip: confirming a set auto-discards other variants of the same species, and also
-                applies Item Clause (same item can’t appear twice).
+                Tip: confirming a set auto-discards other variants of the same species, and also applies Item
+                Clause (same item can’t appear twice).
               </div>
             </section>
 
             <section className="panel">
               <div className="panelTitle">
                 <div className="h2">Pool</div>
-                <div className="muted">Use ✕ to discard and ✓ to confirm.</div>
+                <div className="muted">
+                  Use ✕ to discard and ✓ to confirm.
+                  {debouncedPokemonFilter.trim() ? (
+                    <>
+                      {" "}· filtering by{" "}
+                      <span className="mono">{debouncedPokemonFilter.trim()}</span>
+                    </>
+                  ) : null}
+                </div>
               </div>
 
               <div className="poolGrid">
@@ -644,8 +680,7 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same
-        species + Item Clause.
+        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same species + Item Clause.
       </footer>
     </div>
   );

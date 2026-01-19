@@ -584,3 +584,50 @@ html, body, #root {
 .authorLink:hover {
   text-decoration: underline;
 }
+
+/* ---------------- Slot search (Seen empty slots) ---------------- */
+
+.slotSearchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.slotSearchInput {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+  margin-top: 8px;
+}
+
+.slotSearchInput::placeholder {
+  color: rgba(255,255,255,0.42);
+}
+
+.slotSearchInput:focus {
+  border-color: rgba(140, 180, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.15);
+}
+
+.slotClearBtn {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.88);
+  cursor: pointer;
+}
+
+.slotClearBtn:hover {
+  background: rgba(255,255,255,0.07);
+}
+
+.slotHint {
+  margin-top: 8px;
+  font-size: 0.86rem;
+}
