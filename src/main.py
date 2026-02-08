@@ -356,21 +356,17 @@ def trainer_detail(trainer_id: str):
         except KeyError:
             continue
 
-    name_es = t.get("name_es") if isinstance(t.get("name_es"), str) else None
-    names = t.get("names") if isinstance(t.get("names"), dict) else None
-    classes = t.get("classes") if isinstance(t.get("classes"), dict) else None
-
     return TrainerDetail(
         trainer_id=t["trainer_id"],
         name_en=t["name_en"],
-        name_es=name_es,
+        name_es=t.get("name_es") if isinstance(t.get("name_es"), str) else None,
         display_name=display_name_from_trainer(t),
         section=t["section"],
         pool_id=pool_id,
         pool_size=len(pool.get("pool_global_ids", [])),
         sets=sets,
-        names=names,
-        classes=classes,
+        names=t.get("names") if isinstance(t.get("names"), dict) else None,
+        classes=t.get("classes") if isinstance(t.get("classes"), dict) else None,
     )
 
 
@@ -396,7 +392,6 @@ def pool_filter(pool_id: str, req: FilterRequest):
     )
 
 
-# Optional: run via `python -m src.main`
 if __name__ == "__main__":
     import argparse
     import uvicorn
@@ -407,4 +402,10 @@ if __name__ == "__main__":
     ap.add_argument("--reload", action="store_true")
     args = ap.parse_args()
 
-    uvicorn.run("src.main:app", host=args.host, port=args.port, reload=args.reload)
+    # Determine import string based on current directory
+    # If we are already IN the src folder, it's "main:app"
+    # If we are in the root, it's "src.main:app"
+    current_dir = Path.cwd().name
+    app_string = "main:app" if current_dir == "src" else "src.main:app"
+
+    uvicorn.run(app_string, host=args.host, port=args.port, reload=args.reload)
