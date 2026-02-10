@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import itertools
 import json
 import logging
 import os
 import re
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
@@ -216,31 +215,6 @@ def build_trainer_search_rows() -> List[dict]:
     return rows
 
 
-def combos_remaining(pool_ids: List[int], seen: Set[int], team_size: int = 4) -> Tuple[int, Set[int]]:
-    pool_sorted = sorted(pool_ids)
-
-    if len(seen) > team_size:
-        return 0, set()
-
-    pool_set = set(pool_sorted)
-    if not seen.issubset(pool_set):
-        return 0, set()
-
-    if len(pool_sorted) < team_size:
-        return 0, set()
-
-    count = 0
-    union: Set[int] = set()
-
-    for comb in itertools.combinations(pool_sorted, team_size):
-        if seen and not seen.issubset(comb):
-            continue
-        count += 1
-        union.update(comb)
-
-    return count, union
-
-
 # ----------------------------
 # API Models
 # ----------------------------
@@ -265,18 +239,6 @@ class TrainerDetail(BaseModel):
     # Optional extra fields (won't break older clients)
     names: Optional[Dict[str, Optional[str]]] = None
     classes: Optional[Dict[str, Optional[str]]] = None
-
-
-class FilterRequest(BaseModel):
-    seen_global_ids: List[int]
-
-
-class FilterResponse(BaseModel):
-    pool_id: str
-    seen_global_ids: List[int]
-    num_possible_teams: int
-    possible_remaining_global_ids: List[int]
-    possible_remaining_sets: List[dict]
 
 
 # ----------------------------
@@ -367,28 +329,6 @@ def trainer_detail(trainer_id: str):
         sets=sets,
         names=t.get("names") if isinstance(t.get("names"), dict) else None,
         classes=t.get("classes") if isinstance(t.get("classes"), dict) else None,
-    )
-
-
-@app.post("/pools/{pool_id}/filter", response_model=FilterResponse)
-def pool_filter(pool_id: str, req: FilterRequest):
-    pool = load_pools().get(pool_id)
-    if not pool:
-        raise HTTPException(status_code=404, detail="pool_id not found")
-
-    pool_ids = [int(x) for x in pool.get("pool_global_ids", [])]
-    seen = set(int(x) for x in req.seen_global_ids)
-
-    num, union = combos_remaining(pool_ids, seen, team_size=4)
-    remaining = [] if num == 0 else sorted(list(union - seen))
-    remaining_sets = [load_set_by_global_id(gid) for gid in remaining]
-
-    return FilterResponse(
-        pool_id=pool_id,
-        seen_global_ids=sorted(list(seen)),
-        num_possible_teams=num,
-        possible_remaining_global_ids=remaining,
-        possible_remaining_sets=remaining_sets,
     )
 
 

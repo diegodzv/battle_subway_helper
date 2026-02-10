@@ -577,15 +577,10 @@ export default function App() {
                   <div className="muted">
                     {trainer.name_es ? (
                       <>
-                        <span className="mono">{trainer.name_en}</span> · {trainer.section} · pool{" "}
-                        <span className="mono">{trainer.pool_id}</span> ·{" "}
-                        <span className="mono">{trainer.pool_size}</span> sets
+                        <span className="mono">{trainer.name_en}</span> · {trainer.section}
                       </>
                     ) : (
-                      <>
-                        {trainer.section} · pool <span className="mono">{trainer.pool_id}</span> ·{" "}
-                        <span className="mono">{trainer.pool_size}</span> sets
-                      </>
+                      <>{trainer.section}</>
                     )}
                   </div>
                 </div>
@@ -680,7 +675,7 @@ export default function App() {
       </main>
 
       <footer className="footer muted">
-        Pool sorted by Pokédex, then global_id. Confirming auto-discards other variants of the same species + Item Clause.
+        Confirming auto-discards other variants of the same species + Item Clause.
       </footer>
     </div>
   );
