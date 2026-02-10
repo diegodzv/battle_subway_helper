@@ -301,7 +301,7 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
         </div>
 
         <div className="miniBox">
-          <div className="h3">Stats</div>
+          <div className="h3">Stats (Lv 50)</div>
           <div className="statTable statTableCompact">
             <StatRow label="HP" value={set.stats_lv50?.HP} max={200} compact boosted={hasEvs(set, "HP")} />
             <StatRow label="Atk" value={set.stats_lv50?.Atk} max={200} compact boosted={hasEvs(set, "Atk")} />
