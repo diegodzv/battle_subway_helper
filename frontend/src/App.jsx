@@ -115,9 +115,7 @@ function TrainerNamesLine({ trainer }) {
   if (names) {
     for (const lang of order) {
       const val = names?.[lang];
-      if (typeof val === "string" && val.trim()) {
-        parts.push({ lang, val: val.trim() });
-      }
+      if (typeof val === "string" && val.trim()) parts.push({ lang, val: val.trim() });
     }
   }
 
@@ -217,7 +215,7 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
           </ul>
         </div>
 
-        {/* Stats opcionales en el pool */}
+        {/* Optional stats in pool */}
         {showStats ? (
           <div className="tileSection">
             <div className="tileLabel muted">Stats (Lv 50)</div>
@@ -313,7 +311,7 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
               <span className="mono">{set.nature}</span>
             </div>
 
-            {/* Item en los vistos */}
+            {/* Item in seen Pokémon */}
             <div className="itemLine">
               <ItemIcon url={set.item_sprite_url} alt={set.item} />
               <span className="itemName">{set.item}</span>
@@ -370,15 +368,14 @@ export default function App() {
 
   const [trainer, setTrainer] = useState(null);
 
-  // confirmed team (4 slots): store global_ids, order matters
-  const [confirmed, setConfirmed] = useState([]); // array of global_id
-  const [discarded, setDiscarded] = useState(() => new Set()); // Set<global_id>
+  const [confirmed, setConfirmed] = useState([]);
+  const [discarded, setDiscarded] = useState(() => new Set());
   const [showDiscarded, setShowDiscarded] = useState(false);
 
   // toggle stats in pool
   const [showStatsInPool, setShowStatsInPool] = useState(false);
 
-  // NEW: Pokémon filter (from empty slots)
+  // Pokémon filter (from empty slots)
   const [pokemonFilter, setPokemonFilter] = useState("");
   const debouncedPokemonFilter = useDebouncedValue(pokemonFilter, 80);
 
@@ -414,7 +411,7 @@ export default function App() {
     });
   }, [poolSortedDex, confirmed, discarded, showDiscarded]);
 
-  // NEW: apply Pokémon filter on top of the normal view
+  // apply Pokémon filter on top of the normal view
   const visiblePool = useMemo(() => {
     const nq = debouncedPokemonFilter.trim().toLowerCase();
     if (!nq) return visiblePoolBase;
@@ -514,7 +511,6 @@ export default function App() {
     //  - item clause: same item cannot appear twice in the opponent team
     setDiscarded((prev) => {
       const next = new Set(prev);
-
       const confirmedSpecies = set.species;
       const confirmedItem = (set.item ?? "").trim();
 
@@ -551,7 +547,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header className="header">
+      <header className={`header ${trainer ? "headerWithTrainer" : ""}`}>
         <div className="brand">
           <div className="brandTitle">Battle Subway Helper (B2/W2)</div>
           <div className="muted">
@@ -606,6 +602,44 @@ export default function App() {
         <button className="ghostBtn" onClick={resetAll}>
           Reset
         </button>
+
+        {trainer ? (
+          <div className="trainerBar">
+            <div className="trainerBarLeft">
+              <div className="h1">{trainerTitle}</div>
+              <TrainerNamesLine trainer={trainer} />
+            </div>
+
+            <div className="trainerBarRight">
+              <div className="togglesRow">
+                <label className="toggle" title="Show / hide discarded sets">
+                  <input
+                    type="checkbox"
+                    checked={showDiscarded}
+                    onChange={(e) => setShowDiscarded(e.target.checked)}
+                  />
+                  <span>Show discarded</span>
+                </label>
+
+                <label className="toggle" title="Show / hide stats inside pool tiles">
+                  <input
+                    type="checkbox"
+                    checked={showStatsInPool}
+                    onChange={(e) => setShowStatsInPool(e.target.checked)}
+                  />
+                  <span>Show stats in pool</span>
+                </label>
+              </div>
+
+              <div className="counts muted">
+                shown <span className="mono">{shownCount}</span> · confirmed{" "}
+                <span className="mono">{confirmedCount}</span> · discarded{" "}
+                <span className="mono">{discardedCount}</span> · total{" "}
+                <span className="mono">{total}</span>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </header>
 
       <main className="content">
@@ -616,45 +650,6 @@ export default function App() {
           </div>
         ) : (
           <div className="layoutNew">
-            {/* Sticky trainer header panel */}
-            <section className="panel panelStickyTrainer">
-              <div className="panelTitle">
-                <div>
-                  <div className="h1">{trainerTitle}</div>
-                  <TrainerNamesLine trainer={trainer} />
-                </div>
-
-                <div className="topControls">
-                  <div className="togglesRow">
-                    <label className="toggle" title="Show / hide discarded sets">
-                      <input
-                        type="checkbox"
-                        checked={showDiscarded}
-                        onChange={(e) => setShowDiscarded(e.target.checked)}
-                      />
-                      <span>Show discarded</span>
-                    </label>
-
-                    <label className="toggle" title="Show / hide stats inside pool tiles">
-                      <input
-                        type="checkbox"
-                        checked={showStatsInPool}
-                        onChange={(e) => setShowStatsInPool(e.target.checked)}
-                      />
-                      <span>Show stats in pool</span>
-                    </label>
-                  </div>
-
-                  <div className="counts muted">
-                    shown <span className="mono">{shownCount}</span> · confirmed{" "}
-                    <span className="mono">{confirmedCount}</span> · discarded{" "}
-                    <span className="mono">{discardedCount}</span> · total{" "}
-                    <span className="mono">{total}</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
             <section className="panel">
               <div className="panelTitle">
                 <div className="h2">Seen ({confirmed.length}/4)</div>
