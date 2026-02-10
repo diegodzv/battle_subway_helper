@@ -96,6 +96,52 @@ function hasEvs(set, statKey) {
   return typeof n === "number" && n > 0;
 }
 
+/**
+ * Subtitle below trainer title:
+ * - Keep big title in Spanish (trainer.display_name)
+ * - Here: show EN + other languages (de/fr/it/ja/ko) if available via trainer.names
+ * - No "section" (removes "Super Set 5")
+ */
+function TrainerNamesLine({ trainer }) {
+  if (!trainer) return null;
+
+  const names = trainer?.names && typeof trainer.names === "object" ? trainer.names : null;
+
+  // Desired order. We skip "es" because it's already the big title.
+  const order = ["en", "de", "fr", "it", "ja", "ko"];
+
+  const parts = [];
+
+  if (names) {
+    for (const lang of order) {
+      const val = names?.[lang];
+      if (typeof val === "string" && val.trim()) {
+        parts.push({ lang, val: val.trim() });
+      }
+    }
+  }
+
+  // Fallback: at least show English if we can
+  if (parts.length === 0) {
+    const en = (trainer?.name_en ?? "").trim();
+    if (en) parts.push({ lang: "en", val: en });
+  }
+
+  if (parts.length === 0) return null;
+
+  return (
+    <div className="trainerNamesLine muted">
+      {parts.map((p, idx) => (
+        <span key={`${p.lang}-${p.val}`} className="trainerNamePart">
+          <span className="langTag mono">{p.lang.toUpperCase()}</span>
+          <span className="mono trainerNameVal">{p.val}</span>
+          {idx < parts.length - 1 ? <span className="sep">·</span> : null}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, showStats }) {
   const display = setDisplayName(set);
   const movesMeta = Array.isArray(set.moves_meta) ? set.moves_meta : null;
@@ -570,19 +616,12 @@ export default function App() {
           </div>
         ) : (
           <div className="layoutNew">
-            <section className="panel">
+            {/* Sticky trainer header panel */}
+            <section className="panel panelStickyTrainer">
               <div className="panelTitle">
                 <div>
                   <div className="h1">{trainerTitle}</div>
-                  <div className="muted">
-                    {trainer.name_es ? (
-                      <>
-                        <span className="mono">{trainer.name_en}</span> · {trainer.section}
-                      </>
-                    ) : (
-                      <>{trainer.section}</>
-                    )}
-                  </div>
+                  <TrainerNamesLine trainer={trainer} />
                 </div>
 
                 <div className="topControls">

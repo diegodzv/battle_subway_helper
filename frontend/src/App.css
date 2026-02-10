@@ -173,6 +173,54 @@ html, body, #root {
   width: 100%;
 }
 
+/* ---------------- Sticky trainer header panel ---------------- */
+
+.panelStickyTrainer {
+  position: sticky;
+  /* Header is sticky at top:0; this places the trainer bar right under it */
+  top: 86px;
+  z-index: 9;
+
+  background: rgba(15, 20, 28, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+/* Trainer multilang subtitle */
+.trainerNamesLine {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.trainerNamePart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.langTag {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.82);
+}
+
+.trainerNameVal {
+  color: rgba(255,255,255,0.78);
+}
+
+.sep {
+  margin-left: 8px;
+  color: rgba(255,255,255,0.30);
+}
+
 /* ---------------- Toggle / counts ---------------- */
 
 .topControls {
@@ -569,6 +617,8 @@ html, body, #root {
 
 @media (max-width: 980px) {
   .header { grid-template-columns: 1fr; gap: 10px; }
+  /* Header gets taller on mobile; give more room for sticky trainer panel */
+  .panelStickyTrainer { top: 140px; }
 }
 
 @media (max-width: 620px) {
