@@ -266,7 +266,7 @@ function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
         className="slotSearchInput"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder='Type a Pokémon (e.g. "Gyarados", "Hydreigon-4")...'
+        placeholder='Type a Pokémon here (e.g. "Gyarados", "Hydreigon-4")...'
       />
 
       <div className="muted slotHint">
