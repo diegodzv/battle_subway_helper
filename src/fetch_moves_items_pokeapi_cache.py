@@ -79,13 +79,35 @@ def http_get_json(url: str, timeout: float = 15.0) -> FetchResult:
         return FetchResult(False, {"error": str(e)})
 
 
-def fetch_move_type(move_slug: str) -> Tuple[Optional[str], bool, Dict[str, Any]]:
+def fetch_move_meta(move_slug: str) -> Tuple[Dict[str, Any], bool, Dict[str, Any]]:
+    """
+    Returns:
+      - move_meta: {type, power, accuracy, damage_class, pp}
+      - not_found: bool
+      - meta_info: {status: int} or error payload
+    """
     url = f"{POKEAPI_BASE}/move/{move_slug}/"
     res = http_get_json(url)
     if not res.ok:
-        return None, True, res.payload
-    t = res.payload.get("type", {}).get("name")
-    return (t if isinstance(t, str) else None), False, {"status": 200}
+        return {}, True, res.payload
+
+    payload = res.payload
+
+    move_type = payload.get("type", {}).get("name")
+    damage_class = payload.get("damage_class", {}).get("name")
+
+    power = payload.get("power")
+    accuracy = payload.get("accuracy")
+    pp = payload.get("pp")
+
+    out: Dict[str, Any] = {
+        "type": move_type if isinstance(move_type, str) else None,
+        "damage_class": damage_class if isinstance(damage_class, str) else None,
+        "power": power if isinstance(power, int) else None,
+        "accuracy": accuracy if isinstance(accuracy, int) else None,
+        "pp": pp if isinstance(pp, int) else None,
+    }
+    return out, False, {"status": 200}
 
 
 def fetch_item_sprite(item_slug: str) -> Tuple[Optional[str], bool, Dict[str, Any]]:
@@ -149,7 +171,7 @@ def ensure_nested_cache(cache_obj: Any) -> Dict[str, Any]:
         for k, v in cache_obj.items():
             if not isinstance(v, dict):
                 continue
-            if "type" in v:
+            if "type" in v or "power" in v or "accuracy" in v:
                 nested["moves"][k] = v
             elif "sprite_url" in v:
                 nested["items"][k] = v
@@ -173,6 +195,11 @@ def main() -> int:
         "--refetch_not_found",
         action="store_true",
         help="Re-fetch entries previously marked not_found=true",
+    )
+    ap.add_argument(
+        "--refetch_moves",
+        action="store_true",
+        help="Force re-fetch all move entries (useful if you changed the schema).",
     )
     ap.add_argument(
         "--sleep",
@@ -202,13 +229,27 @@ def main() -> int:
     items_cache: Dict[str, Any] = cache.setdefault("items", {})
 
     def needs_fetch_move(slug: str) -> bool:
+        if args.refetch_moves:
+            return True
+
         e = moves_cache.get(slug)
         if not isinstance(e, dict):
             return True
+
         if args.refetch_not_found and e.get("not_found") is True:
             return True
+
+        # schema mínima requerida ahora
+        required_keys = ("type", "damage_class", "power", "accuracy", "pp")
+        for k in required_keys:
+            if k not in e:
+                return True
         if e.get("type") in (None, ""):
             return True
+        if e.get("damage_class") in (None, ""):
+            return True
+
+        # power/accuracy pueden ser None para status (válido), así que no forzamos por value.
         return False
 
     def needs_fetch_item(slug: str) -> bool:
@@ -229,13 +270,13 @@ def main() -> int:
 
     for idx, slug in enumerate(moves_to_fetch, start=1):
         try:
-            t, nf, meta_info = fetch_move_type(slug)
-            moves_cache[slug] = {"name": slug, "type": t, "not_found": nf, **meta_info}
+            meta, nf, meta_info = fetch_move_meta(slug)
+            moves_cache[slug] = {"name": slug, **meta, "not_found": nf, **meta_info}
             if idx % 50 == 0:
                 logger.info(f"  moves progress: {idx}/{len(moves_to_fetch)}")
         except Exception as e:
             logger.error(f"Failed to fetch move {slug}: {e}")
-        
+
         if args.sleep:
             time.sleep(args.sleep)
 
@@ -254,7 +295,7 @@ def main() -> int:
     update_meta(cache, rate_limit_ms=int(args.sleep * 1000) if args.sleep else 0)
     save_json(cache_path, cache)
     logger.info(f"Cache saved to: {cache_path}")
-    
+
     return 0
 
 
