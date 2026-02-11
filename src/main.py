@@ -148,7 +148,6 @@ def load_sets_index_global() -> Dict[str, str]:
     return {str(k): str(v) for k, v in idx.items()}
 
 
-@lru_cache(maxsize=1)
 def load_moves_items_cache() -> dict:
     path = settings.DATA_DIR / "moves_items_cache.json"
     require_file(path, "Run: python src/fetch_moves_items_pokeapi_cache.py")

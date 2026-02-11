@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/trainers': 'http://127.0.0.1:8000',
+      '/moves': 'http://127.0.0.1:8000',
       '/pools': 'http://127.0.0.1:8000',
       '/health': 'http://127.0.0.1:8000',
     },

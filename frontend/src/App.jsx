@@ -415,18 +415,18 @@ export default function App() {
     }
 
     async function loadMoveDex() {
-      const candidates = ["/data/moves_items_cache.json", "/moves_items_cache.json"];
-      for (const url of candidates) {
-        try {
-          const data = await tryFetch(url);
-          const moves = data?.moves && typeof data.moves === "object" ? data.moves : null;
-          if (moves && !cancelled) {
-            setMoveDex(moves);
-            return;
-          }
-        } catch {
-          // try next
+      try {
+        const data = await tryFetch("/moves/cache");
+        const moves = data?.moves && typeof data.moves === "object" ? data.moves : null;
+        if (moves && !cancelled) {
+          setMoveDex(moves);
+          return;
         }
+        console.warn("moves/cache returned no 'moves' object.");
+        if (!cancelled) setMoveDex({});
+      } catch (e) {
+        console.warn("Could not load move dex from backend /moves/cache", e);
+        if (!cancelled) setMoveDex({});
       }
     }
 
