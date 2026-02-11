@@ -148,6 +148,16 @@ def load_sets_index_global() -> Dict[str, str]:
     return {str(k): str(v) for k, v in idx.items()}
 
 
+@lru_cache(maxsize=1)
+def load_moves_items_cache() -> dict:
+    path = settings.DATA_DIR / "moves_items_cache.json"
+    require_file(path, "Run: python src/fetch_moves_items_pokeapi_cache.py")
+    data = read_json(path)
+    if not isinstance(data, dict):
+        raise RuntimeError("Invalid moves_items_cache.json")
+    return data
+
+
 @lru_cache(maxsize=4096)
 def load_set_by_global_id(global_id: int) -> dict:
     gid = str(global_id)
@@ -260,6 +270,11 @@ if settings.CORS_ORIGINS:
 @app.get("/health")
 def health():
     return {"ok": True}
+
+
+@app.get("/moves/cache")
+def moves_cache():
+    return load_moves_items_cache()
 
 
 @app.get("/trainers/search", response_model=List[SearchResult])

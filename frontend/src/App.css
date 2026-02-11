@@ -499,6 +499,31 @@ html, body, #root {
   align-items: center;
 }
 
+/* Seen: header row for "Moves" + "BP/ACC" */
+.movesHeaderRow {
+  display: grid;
+  grid-template-columns: 1fr 84px;
+  align-items: end;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.movesHeaderPA {
+  text-align: right;
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+}
+
+/* Seen: add BP/ACC column */
+.moveRowSeen {
+  grid-template-columns: 74px 1fr 84px;
+}
+.movePA {
+  text-align: right;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  white-space: nowrap;
+}
+
 /* ---------------- Stats bars ---------------- */
 
 .statTable {

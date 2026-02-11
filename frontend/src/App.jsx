@@ -96,6 +96,16 @@ function hasEvs(set, statKey) {
   return typeof n === "number" && n > 0;
 }
 
+function formatBPAcc(moveEntry) {
+  // Status or unknown -> dashes
+  if (!moveEntry) return "— / —";
+  if (moveEntry.damage_class === "status") return "— / —";
+
+  const bp = typeof moveEntry.power === "number" ? String(moveEntry.power) : "—";
+  const acc = typeof moveEntry.accuracy === "number" ? String(moveEntry.accuracy) : "—";
+  return `${bp} / ${acc}`;
+}
+
 /**
  * Subtitle below trainer title:
  * - Keep big title in Spanish (trainer.display_name)
@@ -266,7 +276,7 @@ function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
   );
 }
 
-function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSearch }) {
+function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSearch, moveDex }) {
   if (!set) {
     return (
       <SeenSlotEmptySearch
@@ -330,14 +340,27 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
 
       <div className="seenSlotBody">
         <div className="miniBox">
-          <div className="h3">Moves</div>
+          <div className="movesHeaderRow">
+            <div className="h3">Moves</div>
+            <div className="muted mono movesHeaderPA">BP/ACC</div>
+          </div>
+
           <ul className="moves">
             {(Array.isArray(set.moves_meta) ? set.moves_meta : []).map((m) => {
               const label = prettyMoveNameFromSlug(m.slug) ?? m.name;
+
+              const entry =
+                m?.slug && moveDex && Object.prototype.hasOwnProperty.call(moveDex, m.slug)
+                  ? moveDex[m.slug]
+                  : null;
+
+              const bpacc = formatBPAcc(entry);
+
               return (
-                <li key={m.slug ?? m.name} className="moveRow">
+                <li key={m.slug ?? m.name} className="moveRow moveRowSeen">
                   <TypeBadge type={m.type} />
                   <span className="mono">{label}</span>
+                  <span className="mono movePA">{bpacc}</span>
                 </li>
               );
             })}
@@ -378,6 +401,40 @@ export default function App() {
   // Pokémon filter (from empty slots)
   const [pokemonFilter, setPokemonFilter] = useState("");
   const debouncedPokemonFilter = useDebouncedValue(pokemonFilter, 80);
+
+  // move dex
+  const [moveDex, setMoveDex] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function tryFetch(url) {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    }
+
+    async function loadMoveDex() {
+      const candidates = ["/data/moves_items_cache.json", "/moves_items_cache.json"];
+      for (const url of candidates) {
+        try {
+          const data = await tryFetch(url);
+          const moves = data?.moves && typeof data.moves === "object" ? data.moves : null;
+          if (moves && !cancelled) {
+            setMoveDex(moves);
+            return;
+          }
+        } catch {
+          // try next
+        }
+      }
+    }
+
+    loadMoveDex();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const poolSets = trainer?.sets ?? [];
 
@@ -666,6 +723,7 @@ export default function App() {
                     searchQuery={pokemonFilter}
                     setSearchQuery={setPokemonFilter}
                     onClearSearch={() => setPokemonFilter("")}
+                    moveDex={moveDex}
                   />
                 ))}
               </div>
