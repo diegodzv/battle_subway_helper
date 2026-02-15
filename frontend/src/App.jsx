@@ -221,68 +221,49 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
 
 /* ---------------- My Team (Gen5) ---------------- */
 
-const STAT_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"];
-const STAT_LABEL = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
+const EV_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"];
+const EV_LABEL = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
 
 const NATURES = [
-  "Hardy",
-  "Lonely",
-  "Brave",
-  "Adamant",
-  "Naughty",
-  "Bold",
-  "Docile",
-  "Relaxed",
-  "Impish",
-  "Lax",
-  "Timid",
-  "Hasty",
-  "Serious",
-  "Jolly",
-  "Naive",
-  "Modest",
-  "Mild",
-  "Quiet",
-  "Bashful",
-  "Rash",
-  "Calm",
-  "Gentle",
-  "Sassy",
-  "Careful",
-  "Quirky",
+  "Hardy","Lonely","Brave","Adamant","Naughty",
+  "Bold","Docile","Relaxed","Impish","Lax",
+  "Timid","Hasty","Serious","Jolly","Naive",
+  "Modest","Mild","Quiet","Bashful","Rash",
+  "Calm","Gentle","Sassy","Careful","Quirky",
 ];
 
+// nature multipliers for non-HP stats
 const NATURE_MODS = {
-  Hardy: { up: null, down: null },
+  Hardy:  { up: null, down: null },
   Docile: { up: null, down: null },
-  Serious: { up: null, down: null },
-  Bashful: { up: null, down: null },
+  Serious:{ up: null, down: null },
+  Bashful:{ up: null, down: null },
   Quirky: { up: null, down: null },
 
   Lonely: { up: "atk", down: "def" },
-  Brave: { up: "atk", down: "spe" },
-  Adamant: { up: "atk", down: "spa" },
-  Naughty: { up: "atk", down: "spd" },
+  Brave:  { up: "atk", down: "spe" },
+  Adamant:{ up: "atk", down: "spa" },
+  Naughty:{ up: "atk", down: "spd" },
 
-  Bold: { up: "def", down: "atk" },
-  Relaxed: { up: "def", down: "spe" },
+  Bold:   { up: "def", down: "atk" },
+  Relaxed:{ up: "def", down: "spe" },
   Impish: { up: "def", down: "spa" },
-  Lax: { up: "def", down: "spd" },
+  Lax:    { up: "def", down: "spd" },
 
-  Timid: { up: "spe", down: "atk" },
-  Hasty: { up: "spe", down: "def" },
-  Jolly: { up: "spe", down: "spa" },
-  Naive: { up: "spe", down: "spd" },
+  Timid:  { up: "spe", down: "atk" },
+  Hasty:  { up: "spe", down: "def" },
+  Jolly:  { up: "spe", down: "spa" },
+  Naive:  { up: "spe", down: "spd" },
 
   Modest: { up: "spa", down: "atk" },
-  Mild: { up: "spa", down: "def" },
-  Quiet: { up: "spa", down: "spe" },
-  Rash: { up: "spa", down: "spd" },
+  Mild:   { up: "spa", down: "def" },
+  Quiet:  { up: "spa", down: "spe" },
+  Rash:   { up: "spa", down: "spd" },
 
-  Calm: { up: "spd", down: "atk" },
+  Calm:   { up: "spd", down: "atk" },
   Gentle: { up: "spd", down: "def" },
-  Sassy: { up: "spd", down: "spe" },
-  Careful: { up: "spd", down: "spa" },
+  Sassy:  { up: "spd", down: "spe" },
+  Careful:{ up: "spd", down: "spa" },
 };
 
 function clampInt(n, lo, hi) {
@@ -291,7 +272,7 @@ function clampInt(n, lo, hi) {
 }
 
 function evTotal(evs) {
-  return STAT_KEYS.reduce((acc, k) => acc + (typeof evs?.[k] === "number" ? evs[k] : 0), 0);
+  return EV_KEYS.reduce((acc, k) => acc + (typeof evs?.[k] === "number" ? evs[k] : 0), 0);
 }
 
 function normalizeKey(s) {
@@ -324,7 +305,12 @@ function natureMultiplier(nature, statKey) {
   return 1.0;
 }
 
-function calcFinalStatsLv50(baseStats, evs, ivs, nature) {
+function calcFinalStatsLv50(
+  baseStats,
+  evs,
+  nature,
+  ivs = { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }
+) {
   const level = 50;
   const out = {};
 
@@ -332,7 +318,6 @@ function calcFinalStatsLv50(baseStats, evs, ivs, nature) {
   const E = evs ?? {};
   const I = ivs ?? {};
 
-  // HP
   {
     const b = Number(base.hp ?? 0);
     const ev = Number(E.hp ?? 0);
@@ -362,19 +347,26 @@ function MoveAutocompleteInput({ value, onChangeText, onPickSlug, moveDex, place
 
   const suggestions = useMemo(() => {
     if (!moveDex || typeof moveDex !== "object") return [];
-    const q = normalizeKey(debounced);
-    if (!q) return [];
+    const qRaw = normalizeKey(debounced);
+    if (!qRaw) return [];
 
-    // prioritize prefix matches, then contains
+    const q = qRaw.replace(/\s+/g, " ").trim();     // keep spaces
+    const qHy = q.replace(/\s+/g, "-");            // also try hyphen
+    const out = [];
+
     const keys = Object.keys(moveDex);
-    const prefix = [];
-    const contains = [];
     for (const slug of keys) {
-      if (slug.startsWith(q)) prefix.push(slug);
-      else if (slug.includes(q)) contains.push(slug);
-      if (prefix.length >= 12) break;
+      const pretty = normalizeKey(prettyMoveNameFromSlug(slug)); // "dragon pulse"
+      const slugNorm = normalizeKey(slug);                       // "dragon-pulse"
+
+      const hit =
+        slugNorm.includes(q) ||
+        slugNorm.includes(qHy) ||
+        pretty.includes(q);
+
+      if (hit) out.push(slug);
+      if (out.length >= 12) break;
     }
-    const out = [...prefix, ...contains].slice(0, 12);
     return out;
   }, [debounced, moveDex]);
 
@@ -392,7 +384,7 @@ function MoveAutocompleteInput({ value, onChangeText, onPickSlug, moveDex, place
   return (
     <div className="miniAutocomplete" ref={boxRef}>
       <input
-        className="myMoveNameInput mono"
+        className="myInput myInputSmall myMoveNameInput"
         value={value}
         onChange={(e) => {
           onChangeText(e.target.value);
@@ -408,7 +400,7 @@ function MoveAutocompleteInput({ value, onChangeText, onPickSlug, moveDex, place
       />
 
       {show ? (
-        <div className="dropdown moveDropdown">
+        <div className="dropdown dropdownAbove moveDropdown">
           {suggestions.map((slug) => {
             const entry = moveDex?.[slug] ?? null;
             const label = prettyMoveNameFromSlug(slug) ?? slug;
@@ -419,7 +411,7 @@ function MoveAutocompleteInput({ value, onChangeText, onPickSlug, moveDex, place
               <button
                 key={slug}
                 className="dropdownItem"
-                onMouseDown={(e) => e.preventDefault()} // prevent blur before click
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={() => {
                   onPickSlug(slug, label);
                   setOpen(false);
@@ -466,7 +458,7 @@ function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear 
           autoComplete="off"
         />
         {suggestions.length > 0 ? (
-          <div className="dropdown">
+          <div className="dropdown dropdownAbove">
             {suggestions.map((s) => (
               <button key={s.dex} className="dropdownItem" onClick={() => onPick(s.dex)}>
                 <div className="dropdownName">{s.name_en}</div>
@@ -490,65 +482,20 @@ function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear 
   );
 }
 
-function MyTeamStatRow({ label, iv, ev, final, onChangeIv, onChangeEv }) {
-  const v = typeof final === "number" ? final : 0;
-
-  const max = 200;
-  const basePct = Math.round(clamp01(v / max) * 100);
-  const overflowPct = v > max ? Math.round(clamp01((v - max) / max) * 100) : 0;
-  const tierClass = getTierClass(v);
-
-  return (
-    <div className="myStatRow">
-      <div className="mono myStatKey">{label}</div>
-
-      <input
-        className="ivInput mono"
-        type="number"
-        min={0}
-        max={31}
-        value={typeof iv === "number" ? iv : 31}
-        onChange={(e) => onChangeIv(e.target.value)}
-      />
-
-      <input
-        className="evInput mono"
-        type="number"
-        min={0}
-        max={252}
-        step={4}
-        value={typeof ev === "number" ? ev : 0}
-        onChange={(e) => onChangeEv(e.target.value)}
-      />
-
-      <div className="statBarTrack" aria-label={`${label} ${v}`}>
-        <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
-        {overflowPct > 0 ? (
-          <div className="statOverflow" style={{ width: `${overflowPct}%` }} title={`Overflow +${v - max}`} />
-        ) : null}
-      </div>
-
-      <div className="mono myStatFinal">{typeof final === "number" ? final : "-"}</div>
-    </div>
-  );
-}
-
 function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
   const name = mon?.name_en ?? mon?.slug ?? `#${mon?.dex ?? "?"}`;
   const types = Array.isArray(mon?.types) ? mon.types : [];
   const abilities = Array.isArray(mon?.abilities) ? mon.abilities : [];
-
   const evs = mon?.evs ?? {};
-  const ivs = mon?.ivs ?? { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 };
-
   const total = evTotal(evs);
-  const totalClamped = Math.min(510, total);
-  const totalPct = Math.round((totalClamped / 510) * 100);
+  const totalPct = Math.round((Math.min(510, total) / 510) * 100);
+
+  const [statsOpen, setStatsOpen] = useState(true);
 
   const baseStats = mon?.base_stats ?? {};
   const finalStats = useMemo(
-    () => calcFinalStatsLv50(baseStats, evs, ivs, mon?.nature ?? "Hardy"),
-    [baseStats, evs, ivs, mon?.nature]
+    () => calcFinalStatsLv50(baseStats, evs, mon?.nature ?? "Hardy", mon?.ivs ?? { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }),
+    [baseStats, evs, mon?.nature, mon?.ivs]
   );
 
   function setEv(key, valueRaw) {
@@ -567,19 +514,19 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
   }
 
   function setIv(key, valueRaw) {
-    const current = { ...(mon.ivs ?? {}) };
+    const current = { ...(mon.ivs ?? { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }) };
     const nextVal = clampInt(parseInt(valueRaw, 10), 0, 31);
     current[key] = nextVal;
     onUpdate({ ...mon, ivs: current });
   }
 
-  function recognizedMoveMeta(i) {
+  const recognizedMoveMeta = (i) => {
     const slug = mon?.move_slugs?.[i] ?? findMoveSlugFromText(mon?.moves?.[i], moveDex);
     if (!slug) return null;
     const entry = moveDex?.[slug] ?? null;
     if (!entry) return null;
     return { slug, entry };
-  }
+  };
 
   return (
     <div className="mySlot">
@@ -596,16 +543,7 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
               {types.map((t) => (
                 <TypeBadge key={t} type={t} />
               ))}
-              <span className="mono">·</span>
-              <span className="mono">{mon?.nature ?? "Hardy"}</span>
             </div>
-
-            {mon?.item ? (
-              <div className="itemLine">
-                <ItemIcon url={null} alt={mon.item} />
-                <span className="itemName">{mon.item}</span>
-              </div>
-            ) : null}
           </div>
         </div>
 
@@ -621,7 +559,7 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
             <label className="myField">
               <div className="muted myLabel">Ability</div>
               <select
-                className="mySelect"
+                className="mySelect myInputSmall"
                 value={mon?.ability ?? ""}
                 onChange={(e) => onUpdate({ ...mon, ability: e.target.value })}
               >
@@ -638,10 +576,10 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
             <label className="myField">
               <div className="muted myLabel">Item</div>
               <input
-                className="myInput"
+                className="myInput myInputSmall"
                 value={mon?.item ?? ""}
                 onChange={(e) => onUpdate({ ...mon, item: e.target.value })}
-                placeholder='e.g. "Choice Scarf"'
+                placeholder='e.g. "Sitrus Berry"'
                 autoComplete="off"
               />
             </label>
@@ -649,7 +587,7 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
             <label className="myField">
               <div className="muted myLabel">Nature</div>
               <select
-                className="mySelect"
+                className="mySelect myInputSmall"
                 value={mon?.nature ?? "Hardy"}
                 onChange={(e) => onUpdate({ ...mon, nature: e.target.value })}
               >
@@ -663,7 +601,7 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
           </div>
         </div>
 
-        {/* Moves box (rival-like) */}
+        {/* Moves box (same layout as enemy, but editable move name) */}
         <div className="miniBox">
           <div className="movesHeaderRow">
             <div className="h3">Moves</div>
@@ -679,7 +617,6 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
               return (
                 <li key={i} className="moveRow moveRowSeen myMoveRowEditable">
                   <TypeBadge type={type} />
-
                   <MoveAutocompleteInput
                     value={mon?.moves?.[i] ?? ""}
                     moveDex={moveDex}
@@ -688,7 +625,7 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
                       const nextMoves = Array.isArray(mon.moves) ? [...mon.moves] : ["", "", "", ""];
                       const nextSlugs = Array.isArray(mon.move_slugs) ? [...mon.move_slugs] : [null, null, null, null];
                       nextMoves[i] = txt;
-                      nextSlugs[i] = null; // free text allowed
+                      nextSlugs[i] = null;
                       onUpdate({ ...mon, moves: nextMoves, move_slugs: nextSlugs });
                     }}
                     onPickSlug={(slug, label) => {
@@ -699,53 +636,86 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
                       onUpdate({ ...mon, moves: nextMoves, move_slugs: nextSlugs });
                     }}
                   />
-
                   <span className="mono movePA">{bpacc}</span>
                 </li>
               );
             })}
           </ul>
-
-          <div className="muted" style={{ marginTop: 8, fontSize: "0.86rem" }}>
-            Moves accept any text. Selecting from the list just helps with type/BP/Acc.
-          </div>
         </div>
 
-        {/* Stats box (STAT | IV | EV | BAR | FINAL + EV total bar) */}
-        <div className="miniBox">
-          <div className="h3">Stats (Lv 50)</div>
-
-          <div className="evHeaderRow">
-            <div className="muted mono">EV total</div>
-            <div className="mono">
-              {totalClamped} / 510
-            </div>
-          </div>
-          <div className="evBarTrack" title="EV total (max 510)">
-            <div className="evBarFill" style={{ width: `${totalPct}%` }} />
-          </div>
-
-          <div className="myStatsHeader muted mono">
-            <span>STAT</span>
-            <span>IV</span>
-            <span>EV</span>
-            <span></span>
-            <span>FINAL</span>
+        {/* Stats box (collapsible) */}
+        <div className={`miniBox ${statsOpen ? "" : "statsCollapsed"}`}>
+          <div className="statsTitleRow">
+            <div className="h3">Stats (Lv 50)</div>
+            <button
+              className="collapseBtn"
+              onClick={() => setStatsOpen((v) => !v)}
+              aria-expanded={statsOpen}
+              title={statsOpen ? "Hide stats" : "Show stats"}
+              type="button"
+            >
+              {statsOpen ? "▾" : "▸"}
+            </button>
           </div>
 
-          <div className="myStatsGrid">
-            {STAT_KEYS.map((k) => (
-              <MyTeamStatRow
-                key={k}
-                label={STAT_LABEL[k]}
-                iv={typeof ivs?.[k] === "number" ? ivs[k] : 31}
-                ev={typeof evs?.[k] === "number" ? evs[k] : 0}
-                final={finalStats?.[k]}
-                onChangeIv={(v) => setIv(k, v)}
-                onChangeEv={(v) => setEv(k, v)}
-              />
-            ))}
-          </div>
+          {statsOpen ? (
+            <>
+              <div className="evHeaderRow">
+                <div className="muted mono">EV total</div>
+                <div className="mono">{Math.min(510, total)} / 510</div>
+              </div>
+              <div className="evBarTrack" title="EV total (max 510)">
+                <div className="evBarFill" style={{ width: `${totalPct}%` }} />
+              </div>
+
+              <div className="myStatsHeader muted mono">
+                <span></span>
+                <span>IV</span>
+                <span>EV</span>
+                <span></span>
+                <span>FINAL</span>
+              </div>
+
+              <div className="myStatsGrid">
+                {EV_KEYS.map((k) => (
+                  <div key={k} className="myStatRow">
+                    <div className="mono myStatKey">{EV_LABEL[k]}</div>
+
+                    <input
+                      className="ivInput mono"
+                      type="number"
+                      min={0}
+                      max={31}
+                      step={1}
+                      value={typeof mon?.ivs?.[k] === "number" ? mon.ivs[k] : 31}
+                      onChange={(e) => setIv(k, e.target.value)}
+                    />
+
+                    <input
+                      className="evInput mono"
+                      type="number"
+                      min={0}
+                      max={252}
+                      step={4}
+                      value={typeof evs?.[k] === "number" ? evs[k] : 0}
+                      onChange={(e) => setEv(k, e.target.value)}
+                    />
+
+                    <div className="statBarTrack" aria-label={`${EV_LABEL[k]} ${finalStats?.[k] ?? "-"}`}>
+                      <div
+                        className={`statBarFill ${getTierClass(typeof finalStats?.[k] === "number" ? finalStats[k] : 0)}`}
+                        style={{
+                          width: `${Math.round(clamp01((typeof finalStats?.[k] === "number" ? finalStats[k] : 0) / 200) * 100)}%`,
+                        }}
+                      />
+                    </div>
+
+                    <div className="mono myStatFinal">{finalStats?.[k] ?? "-"}</div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : null}
         </div>
       </div>
     </div>
@@ -922,7 +892,7 @@ function MyTeamTab({ myTeam, setMyTeam, moveDex }) {
   );
 }
 
-/* ---------------- Enemy Trainer tab (NO TOCAR) ---------------- */
+/* ---------------- Enemy Trainer tab (tu app actual) ---------------- */
 
 function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
   return (
@@ -1380,7 +1350,7 @@ export default function App() {
               {isSearching ? <div className="spinner" title="Searching..." /> : null}
 
               {suggestions.length > 0 ? (
-                <div className="dropdown">
+                <div className="dropdown dropdownAbove">
                   {suggestions.map((s) => (
                     <button
                       key={s.trainer_id}

@@ -6,28 +6,25 @@
   background: #0b0f14;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   height: 100%;
   width: 100%;
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: radial-gradient(1200px 600px at 30% 0%, rgba(80, 120, 255, 0.12), transparent 60%),
-    radial-gradient(900px 500px at 80% 20%, rgba(0, 255, 180, 0.07), transparent 55%), #0b0f14;
+              radial-gradient(900px 500px at 80% 20%, rgba(0, 255, 180, 0.07), transparent 55%),
+              #0b0f14;
 }
 
 .muted {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.60);
   font-size: 0.92rem;
 }
 .mono {
@@ -54,27 +51,20 @@ body,
   grid-template-rows: auto auto;
 }
 
-.brandTitle {
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
+.brandTitle { font-weight: 800; letter-spacing: 0.2px; }
 
-.searchBox {
-  position: relative;
-}
+.searchBox { position: relative; }
 
 .searchInput {
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255,255,255,0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255,255,255,0.92);
   outline: none;
 }
-.searchInput::placeholder {
-  color: rgba(255, 255, 255, 0.42);
-}
+.searchInput::placeholder { color: rgba(255,255,255,0.42); }
 .searchInput:focus {
   border-color: rgba(140, 180, 255, 0.55);
   box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.15);
@@ -86,9 +76,9 @@ body,
   margin-top: 8px;
   border-radius: 14px;
   background: rgba(15, 20, 28, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.10);
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
   z-index: 60;
 }
 
@@ -102,21 +92,13 @@ body,
   justify-content: space-between;
   gap: 10px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255,255,255,0.92);
 }
-.dropdownItem:hover {
-  background: rgba(255, 255, 255, 0.06);
-}
-.dropdownName {
-  font-weight: 700;
-}
-.dropdownMeta {
-  font-size: 0.9rem;
-}
+.dropdownItem:hover { background: rgba(255,255,255,0.06); }
+.dropdownName { font-weight: 700; }
+.dropdownMeta { font-size: 0.9rem; }
 
-.dropdownAbove {
-  z-index: 80;
-}
+.dropdownAbove { z-index: 250; }
 
 .spinner {
   position: absolute;
@@ -125,27 +107,21 @@ body,
   width: 18px;
   height: 18px;
   border-radius: 999px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-top-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255,255,255,0.15);
+  border-top-color: rgba(255,255,255,0.70);
   animation: spin 0.7s linear infinite;
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .ghostBtn {
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255,255,255,0.85);
 }
-.ghostBtn:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
+.ghostBtn:hover { background: rgba(255,255,255,0.07); }
 
 /* --- Trainer bar inside header --- */
 
@@ -160,12 +136,10 @@ body,
 
   margin-top: 6px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.trainerBarLeft {
-  min-width: 0;
-}
+.trainerBarLeft { min-width: 0; }
 .trainerBarRight {
   display: grid;
   gap: 10px;
@@ -173,19 +147,9 @@ body,
   align-content: start;
 }
 
-.h1 {
-  font-size: 1.25rem;
-  font-weight: 900;
-}
-.h2 {
-  font-size: 1.05rem;
-  font-weight: 900;
-}
-.h3 {
-  font-size: 0.95rem;
-  font-weight: 900;
-  margin-bottom: 6px;
-}
+.h1 { font-size: 1.25rem; font-weight: 900; }
+.h2 { font-size: 1.05rem; font-weight: 900; }
+.h3 { font-size: 0.95rem; font-weight: 900; margin-bottom: 6px; }
 
 /* Trainer multilang subtitle */
 .trainerNamesLine {
@@ -209,22 +173,17 @@ body,
   letter-spacing: 0.4px;
   padding: 3px 7px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.82);
 }
 
-.trainerNameVal {
-  color: rgba(255, 255, 255, 0.78);
-}
-.sep {
-  margin-left: 8px;
-  color: rgba(255, 255, 255, 0.3);
-}
+.trainerNameVal { color: rgba(255,255,255,0.78); }
+.sep { margin-left: 8px; color: rgba(255,255,255,0.30); }
 
 /* ---------------- Toggle / counts ---------------- */
 
-.togglesRow {
+.togglesRow{
   display: inline-flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -235,20 +194,18 @@ body,
   display: inline-flex;
   gap: 10px;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
   border-radius: 999px;
   padding: 8px 12px;
   cursor: pointer;
   user-select: none;
 }
-.toggle input {
-  accent-color: rgba(120, 255, 140, 0.9);
-}
+.toggle input { accent-color: rgba(120, 255, 140, 0.90); }
 
 .counts {
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 0.90rem;
 }
 
 /* ---------------- Content / Panels ---------------- */
@@ -267,21 +224,17 @@ body,
   padding: 28px;
   border-radius: 18px;
   background: rgba(15, 20, 28, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.45);
 }
-.emptyTitle {
-  font-size: 1.4rem;
-  font-weight: 850;
-  margin-bottom: 6px;
-}
+.emptyTitle { font-size: 1.4rem; font-weight: 850; margin-bottom: 6px; }
 
 .panel {
   background: rgba(15, 20, 28, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: 18px;
   padding: 14px;
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.38);
   width: 100%;
   min-width: 0;
 }
@@ -296,7 +249,7 @@ body,
 
 .footer {
   padding: 14px 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ---------------- New layout wrapper ---------------- */
@@ -314,7 +267,7 @@ body,
   width: 56px;
   height: 56px;
   image-rendering: pixelated;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));
   flex: 0 0 auto;
 }
 .spriteFallback {
@@ -323,8 +276,8 @@ body,
   border-radius: 12px;
   display: grid;
   place-items: center;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.55);
+  border: 1px dashed rgba(255,255,255,0.20);
+  color: rgba(255,255,255,0.55);
 }
 
 .itemLine {
@@ -337,7 +290,7 @@ body,
   width: 22px;
   height: 22px;
   image-rendering: pixelated;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
 }
 .itemIconFallback {
   width: 20px;
@@ -345,13 +298,11 @@ body,
   display: grid;
   place-items: center;
   border-radius: 6px;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.55);
+  border: 1px dashed rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.55);
   font-size: 0.8rem;
 }
-.itemName {
-  font-weight: 700;
-}
+.itemName { font-weight: 700; }
 
 /* ---------------- Seen area (single row, 4 slots) ---------------- */
 
@@ -365,15 +316,15 @@ body,
 .seenSlot,
 .seenSlotEmpty {
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
   padding: 12px;
   min-width: 0;
 }
 
 .seenSlotEmpty {
   border-style: dashed;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255,255,255,0.02);
   display: grid;
   gap: 8px;
   align-content: start;
@@ -387,16 +338,14 @@ body,
   margin-bottom: 10px;
 }
 
-.seenSlotBody {
-  display: grid;
-  gap: 10px;
-}
+.seenSlotBody { display: grid; gap: 10px; }
 
 .miniBox {
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
   padding: 10px;
+  overflow: visible;
 }
 
 .teamSlotIndex {
@@ -405,30 +354,26 @@ body,
   border-radius: 10px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
 }
 
 .chip {
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 999px;
   padding: 6px 10px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255,255,255,0.04);
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255,255,255,0.88);
 }
-.chip:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
+.chip:hover { background: rgba(255,255,255,0.07); }
 .chipDanger {
   border-color: rgba(255, 120, 120, 0.25);
-  background: rgba(255, 120, 120, 0.1);
+  background: rgba(255, 120, 120, 0.10);
 }
-.chipDanger:hover {
-  background: rgba(255, 120, 120, 0.16);
-}
+.chipDanger:hover { background: rgba(255, 120, 120, 0.16); }
 
-/* ---------------- Pool grid: 6 columns ---------------- */
+/* ---------------- Pool grid: 4..6 columns responsive ---------------- */
 
 .poolGrid {
   display: grid;
@@ -437,21 +382,37 @@ body,
   width: 100%;
 }
 
+@media (max-width: 1750px) {
+  .poolGrid { grid-template-columns: repeat(5, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 1500px) {
+  .poolGrid { grid-template-columns: repeat(4, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 1100px) {
+  .poolGrid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .poolGrid { grid-template-columns: 1fr; }
+}
+
 /* ---------------- Set tiles ---------------- */
 
 .setTile {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255,255,255,0.03);
   padding: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
   transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
   min-width: 0;
 }
 .setTile:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.05);
 }
 
 .setTileTop {
@@ -461,12 +422,8 @@ body,
   align-items: center;
 }
 
-.setTileTitle .name {
-  font-weight: 900;
-}
-.setTileTitle .meta {
-  margin-top: 2px;
-}
+.setTileTitle .name { font-weight: 900; }
+.setTileTitle .meta { margin-top: 2px; }
 
 .setTileActions {
   display: inline-flex;
@@ -478,9 +435,9 @@ body,
   width: 34px;
   height: 34px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.92);
   cursor: pointer;
   font-weight: 900;
   display: grid;
@@ -488,37 +445,26 @@ body,
   line-height: 1;
   padding: 0;
 }
-.tileBtn:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-.tileBtn:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
+.tileBtn:hover { background: rgba(255,255,255,0.08); }
+.tileBtn:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .tileBtnConfirm {
   border-color: rgba(0, 255, 180, 0.22);
   background: rgba(0, 255, 180, 0.06);
 }
-.tileBtnConfirm:hover {
-  background: rgba(0, 255, 180, 0.1);
-}
+.tileBtnConfirm:hover { background: rgba(0, 255, 180, 0.10); }
 
 .tileBtnDiscard {
   border-color: rgba(255, 120, 120, 0.22);
   background: rgba(255, 120, 120, 0.06);
 }
-.tileBtnDiscard:hover {
-  background: rgba(255, 120, 120, 0.1);
-}
+.tileBtnDiscard:hover { background: rgba(255, 120, 120, 0.10); }
 
 .tileBtnUndo {
   border-color: rgba(140, 180, 255, 0.26);
   background: rgba(140, 180, 255, 0.08);
 }
-.tileBtnUndo:hover {
-  background: rgba(140, 180, 255, 0.12);
-}
+.tileBtnUndo:hover { background: rgba(140, 180, 255, 0.12); }
 
 .setTileBody {
   margin-top: 10px;
@@ -528,8 +474,8 @@ body,
 
 .tileSection {
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.02);
   padding: 10px;
 }
 
@@ -553,8 +499,8 @@ body,
   padding: 4px 8px;
   border-radius: 999px;
   border: 1px solid rgba(255, 120, 120, 0.24);
-  background: rgba(255, 120, 120, 0.1);
-  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 120, 120, 0.10);
+  color: rgba(255,255,255,0.90);
 }
 
 /* ---------------- Moves list ---------------- */
@@ -566,6 +512,9 @@ body,
   display: grid;
   gap: 8px;
 }
+
+.myMovesList { gap: 10px; }
+
 .moveRow {
   display: grid;
   grid-template-columns: 74px 1fr;
@@ -594,98 +543,28 @@ body,
 .movePA {
   text-align: right;
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255,255,255,0.65);
   white-space: nowrap;
 }
 
-/* My Team: editable move row (input must behave like the name column) */
-.myMoveRowEditable {
-  align-items: center;
-}
-
-/* Make the move input take full width and not shrink weirdly */
-.myMoveNameInput {
-  width: 100%;
-  min-width: 0;
-  padding: 8px 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(20, 26, 35, 0.95);
-  color: rgba(255, 255, 255, 0.92);
-  outline: none;
-}
-.myMoveNameInput::placeholder {
-  color: rgba(255, 255, 255, 0.42);
-}
-.myMoveNameInput:focus {
-  border-color: rgba(213, 184, 255, 0.4);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
-}
-
 /* ---------------- Stats bars ---------------- */
-
-.statTable {
-  display: grid;
-  gap: 10px;
-  margin-top: 6px;
-}
-
-.statLine {
-  display: grid;
-  grid-template-columns: 44px 1fr 44px;
-  gap: 10px;
-  align-items: center;
-}
-
-.statLineCompact {
-  grid-template-columns: 40px 1fr 40px;
-  gap: 8px;
-}
-
-.statLabel {
-  font-size: 0.92rem;
-}
-.statLabelBoosted {
-  color: rgb(213, 184, 255);
-  font-weight: 900;
-  text-shadow: 0 0 18px rgba(213, 184, 255, 0.18);
-}
-
-.statValue {
-  text-align: right;
-}
 
 .statBarTrack {
   position: relative;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
   overflow: hidden;
 }
-.statBarFill {
-  height: 100%;
-  border-radius: 999px;
-}
+.statBarFill { height: 100%; border-radius: 999px; }
 
-.stat-rDark {
-  background: rgba(140, 35, 35, 0.85);
-}
-.stat-rLight {
-  background: rgba(220, 70, 70, 0.8);
-}
-.stat-orange {
-  background: rgba(255, 160, 60, 0.8);
-}
-.stat-yellow {
-  background: rgba(255, 220, 70, 0.85);
-}
-.stat-gLight {
-  background: rgba(120, 255, 140, 0.7);
-}
-.stat-gDark {
-  background: rgba(27, 163, 156);
-}
+.stat-rDark  { background: rgba(140, 35, 35, 0.85); }
+.stat-rLight { background: rgba(220, 70, 70, 0.80); }
+.stat-orange { background: rgba(255, 160, 60, 0.80); }
+.stat-yellow { background: rgba(255, 220, 70, 0.85); }
+.stat-gLight { background: rgba(120, 255, 140, 0.70); }
+.stat-gDark  { background: rgba(27, 163, 156); }
 
 .statOverflow {
   position: absolute;
@@ -694,14 +573,6 @@ body,
   height: 100%;
   background: rgb(213, 184, 255);
   mix-blend-mode: screen;
-}
-
-.statTableCompact {
-  gap: 8px;
-  margin-top: 4px;
-}
-.statTableCompact .statBarTrack {
-  height: 9px;
 }
 
 /* ---------------- Type badges ---------------- */
@@ -715,136 +586,31 @@ body,
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
 }
-.type-unknown {
-  color: rgba(255, 255, 255, 0.75);
-}
+.type-unknown { color: rgba(255,255,255,0.75); }
 
-.type-fire {
-  background: rgba(255, 120, 90, 0.22);
-  border-color: rgba(255, 120, 90, 0.35);
-}
-.type-water {
-  background: rgba(80, 160, 255, 0.2);
-  border-color: rgba(80, 160, 255, 0.35);
-}
-.type-grass {
-  background: rgba(80, 220, 120, 0.18);
-  border-color: rgba(80, 220, 120, 0.35);
-}
-.type-electric {
-  background: rgba(255, 220, 80, 0.18);
-  border-color: rgba(255, 220, 80, 0.35);
-}
-.type-ice {
-  background: rgba(120, 220, 255, 0.16);
-  border-color: rgba(120, 220, 255, 0.32);
-}
-.type-fighting {
-  background: rgba(255, 120, 160, 0.16);
-  border-color: rgba(255, 120, 160, 0.32);
-}
-.type-poison {
-  background: rgba(200, 120, 255, 0.16);
-  border-color: rgba(200, 120, 255, 0.32);
-}
-.type-ground {
-  background: rgba(220, 190, 120, 0.16);
-  border-color: rgba(220, 190, 120, 0.32);
-}
-.type-flying {
-  background: rgba(160, 180, 255, 0.16);
-  border-color: rgba(160, 180, 255, 0.32);
-}
-.type-psychic {
-  background: rgba(255, 120, 220, 0.16);
-  border-color: rgba(255, 120, 220, 0.32);
-}
-.type-bug {
-  background: rgba(180, 220, 80, 0.16);
-  border-color: rgba(180, 220, 80, 0.32);
-}
-.type-rock {
-  background: rgba(200, 200, 140, 0.14);
-  border-color: rgba(200, 200, 140, 0.3);
-}
-.type-ghost {
-  background: rgba(160, 140, 255, 0.16);
-  border-color: rgba(160, 140, 255, 0.32);
-}
-.type-dragon {
-  background: rgba(120, 140, 255, 0.16);
-  border-color: rgba(120, 140, 255, 0.32);
-}
-.type-dark {
-  background: rgba(120, 120, 140, 0.16);
-  border-color: rgba(120, 120, 140, 0.32);
-}
-.type-steel {
-  background: rgba(180, 200, 220, 0.14);
-  border-color: rgba(180, 200, 220, 0.3);
-}
-.type-fairy {
-  background: rgba(255, 160, 210, 0.16);
-  border-color: rgba(255, 160, 210, 0.32);
-}
-.type-normal {
-  background: rgba(200, 200, 200, 0.12);
-  border-color: rgba(200, 200, 200, 0.26);
-}
+.type-fire { background: rgba(255, 120, 90, 0.22); border-color: rgba(255, 120, 90, 0.35); }
+.type-water { background: rgba(80, 160, 255, 0.20); border-color: rgba(80, 160, 255, 0.35); }
+.type-grass { background: rgba(80, 220, 120, 0.18); border-color: rgba(80, 220, 120, 0.35); }
+.type-electric { background: rgba(255, 220, 80, 0.18); border-color: rgba(255, 220, 80, 0.35); }
+.type-ice { background: rgba(120, 220, 255, 0.16); border-color: rgba(120, 220, 255, 0.32); }
+.type-fighting { background: rgba(255, 120, 160, 0.16); border-color: rgba(255, 120, 160, 0.32); }
+.type-poison { background: rgba(200, 120, 255, 0.16); border-color: rgba(200, 120, 255, 0.32); }
+.type-ground { background: rgba(220, 190, 120, 0.16); border-color: rgba(220, 190, 120, 0.32); }
+.type-flying { background: rgba(160, 180, 255, 0.16); border-color: rgba(160, 180, 255, 0.32); }
+.type-psychic { background: rgba(255, 120, 220, 0.16); border-color: rgba(255, 120, 220, 0.32); }
+.type-bug { background: rgba(180, 220, 80, 0.16); border-color: rgba(180, 220, 80, 0.32); }
+.type-rock { background: rgba(200, 200, 140, 0.14); border-color: rgba(200, 200, 140, 0.30); }
+.type-ghost { background: rgba(160, 140, 255, 0.16); border-color: rgba(160, 140, 255, 0.32); }
+.type-dragon { background: rgba(120, 140, 255, 0.16); border-color: rgba(120, 140, 255, 0.32); }
+.type-dark { background: rgba(120, 120, 140, 0.16); border-color: rgba(120, 120, 140, 0.32); }
+.type-steel { background: rgba(180, 200, 220, 0.14); border-color: rgba(180, 200, 220, 0.30); }
+.type-fairy { background: rgba(255, 160, 210, 0.16); border-color: rgba(255, 160, 210, 0.32); }
+.type-normal { background: rgba(200, 200, 200, 0.12); border-color: rgba(200, 200, 200, 0.26); }
 
-/* ---------------- Responsive ---------------- */
-
-@media (max-width: 1500px) {
-  .poolGrid {
-    grid-template-columns: repeat(4, minmax(240px, 1fr));
-  }
-}
-
-@media (max-width: 1100px) {
-  .seenGrid {
-    grid-template-columns: 1fr;
-  }
-  .poolGrid {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-  }
-}
-
-@media (max-width: 980px) {
-  .header {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .trainerBar {
-    grid-template-columns: 1fr;
-  }
-  .trainerBarRight {
-    justify-items: start;
-  }
-  .counts {
-    text-align: left;
-  }
-}
-
-@media (max-width: 620px) {
-  .poolGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.authorLink {
-  color: rgba(140, 180, 255, 0.95);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.authorLink:hover {
-  text-decoration: underline;
-}
-
-/* ---------------- Slot search (Seen empty slots) ---------------- */
+/* ---------------- Slot search ---------------- */
 
 .slotSearchHeader {
   display: flex;
@@ -857,9 +623,9 @@ body,
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255,255,255,0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255,255,255,0.92);
   outline: none;
   margin-top: 8px;
 }
@@ -880,15 +646,13 @@ body,
 .slotClearBtn {
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.88);
   cursor: pointer;
 }
 
-.slotClearBtn:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
+.slotClearBtn:hover { background: rgba(255,255,255,0.07); }
 
 .slotHint {
   margin-top: 8px;
@@ -904,14 +668,14 @@ body,
   justify-content: center;
   padding: 6px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
 }
 
 .tabBtn {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.85);
   padding: 8px 12px;
   border-radius: 999px;
   cursor: pointer;
@@ -919,14 +683,12 @@ body,
   letter-spacing: 0.2px;
 }
 
-.tabBtn:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
+.tabBtn:hover { background: rgba(255,255,255,0.07); }
 
 .tabBtnActive {
   border-color: rgba(213, 184, 255, 0.35);
-  background: rgba(213, 184, 255, 0.1);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
+  background: rgba(213, 184, 255, 0.10);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
 }
 
 /* ---------------- My Team ---------------- */
@@ -939,22 +701,21 @@ body,
 }
 
 @media (max-width: 1100px) {
-  .myTeamGrid {
-    grid-template-columns: 1fr;
-  }
+  .myTeamGrid { grid-template-columns: 1fr; }
 }
 
 .mySlot {
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
   padding: 12px;
   min-width: 0;
+  overflow: visible;
 }
 
 .mySlotEmpty {
   border-style: dashed;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255,255,255,0.02);
 }
 
 .mySlotTop {
@@ -964,103 +725,115 @@ body,
   gap: 10px;
 }
 
-.mySlotBody {
-  display: grid;
-  gap: 10px;
-  margin-top: 10px;
-}
+.mySearchBox { position: relative; }
 
-.myFormGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
+.myField { display: grid; gap: 6px; }
 
-@media (max-width: 620px) {
-  .myFormGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.myField {
-  display: grid;
-  gap: 6px;
-}
-
-.myLabel {
-  font-size: 0.86rem;
-}
+.myLabel { font-size: 0.86rem; }
 
 .myInput,
 .mySelect {
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255,255,255,0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255,255,255,0.92);
   outline: none;
+}
+
+.myInputSmall,
+.mySelect.myInputSmall {
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 0.92rem;
 }
 
 .myInput:focus,
 .mySelect:focus {
-  border-color: rgba(213, 184, 255, 0.4);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
+  border-color: rgba(213, 184, 255, 0.40);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
 }
 
-/* ---------------- My Team (NEW layout: controls + moves + stats) ---------------- */
-
-.myControlsBox {
-  padding: 10px;
-}
-
+/* Controls grid (Ability/Item/Nature) */
+.myControlsBox { padding: 10px; }
 .myControlsGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(160px, 1fr));
   gap: 10px;
 }
-
 @media (max-width: 620px) {
-  .myControlsGrid {
-    grid-template-columns: 1fr;
-  }
+  .myControlsGrid { grid-template-columns: 1fr; }
 }
 
-.mySearchBox {
-  position: relative;
+/* EV total */
+.evHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
 }
 
-/* IMPORTANT: avoid dropdown being clipped by parents */
-.mySlot,
-.seenSlot,
-.seenSlotEmpty,
-.panel,
-.miniBox,
-.searchBox,
-.mySearchBox,
-.miniAutocomplete {
-  overflow: visible;
+.evBarTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  overflow: hidden;
 }
 
-/* Make the My Team filled body match the enemy style (stacked boxes) */
-.seenSlotBody {
+.evBarFill {
+  height: 100%;
+  background: rgb(213, 184, 255);
+  opacity: 0.55;
+}
+
+/* STAT | IV | EV | BAR | FINAL */
+.myStatsHeader {
   display: grid;
+  grid-template-columns: 44px 48px 56px 1fr 52px;
   gap: 10px;
+  margin-top: 10px;
+  opacity: 0.75;
+  font-size: 0.78rem;
+  letter-spacing: 0.25px;
 }
 
-/* Moves list spacing slightly larger (you asked) */
-.myMovesList {
-  gap: 10px; /* was 8px */
+.myStatsGrid { display: grid; gap: 8px; margin-top: 6px; }
+
+.myStatRow {
+  display: grid;
+  grid-template-columns: 44px 48px 56px 1fr 52px;
+  gap: 10px;
+  align-items: center;
 }
 
-/* Autocomplete wrapper */
-.miniAutocomplete {
-  position: relative;
+.myStatKey { font-weight: 900; font-size: 0.90rem; }
+.myStatFinal { text-align: right; font-size: 0.90rem; white-space: nowrap; }
+
+.evInput,
+.ivInput {
   width: 100%;
   min-width: 0;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+  font-size: 0.88rem;
+}
+.evInput:focus,
+.ivInput:focus {
+  border-color: rgba(213, 184, 255, 0.40);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
 }
 
-/* Move dropdown must overlay and not be cut */
+/* Autocomplete */
+.miniAutocomplete { position: relative; width: 100%; min-width: 0; overflow: visible; }
+.myMoveNameInput { width: 100%; min-width: 0; }
+
+/* Moves dropdown overlay */
 .moveDropdown {
   position: absolute;
   left: 0;
@@ -1073,118 +846,58 @@ body,
   border-radius: 12px;
 }
 
-/* ---------------- EV total bar ---------------- */
-
-.evHeaderRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
+.moveDropdown .dropdownItem {
+  padding: 8px 10px;
 }
 
-.evBarTrack {
-  height: 8px; /* slimmer */
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-
-.evBarFill {
-  height: 100%;
-  background: rgb(213, 184, 255);
-  opacity: 0.55;
-}
-
-/* ---------------- My Team stats table: STAT | IV | EV | BAR | FINAL ---------------- */
-
-.myStatsHeader {
-  display: grid;
-  grid-template-columns: 44px 48px 56px 1fr 52px;
-  gap: 10px;
-  margin-top: 10px;
-  opacity: 0.75;
-  font-size: 0.78rem;
+.moveDropdown .typeBadge {
+  padding: 4px 6px;
+  font-size: 0.70rem;
   letter-spacing: 0.25px;
 }
 
-.myStatsGrid {
-  display: grid;
-  gap: 8px;
-  margin-top: 6px;
+.moveDropdown .dropdownMeta {
+  font-size: 0.82rem;
 }
 
-.myStatRow {
-  display: grid;
-  grid-template-columns: 44px 48px 56px 1fr 52px;
-  gap: 10px;
+/* Collapse button */
+.statsTitleRow {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.myStatKey {
-  font-weight: 900;
-  font-size: 0.9rem;
-}
-
-.myStatFinal {
-  text-align: right;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-/* EV/IV inputs: compact */
-.evInput,
-.ivInput {
-  width: 100%;
-  min-width: 0;
-  padding: 6px 8px;
+.collapseBtn {
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(20, 26, 35, 0.95);
-  color: rgba(255, 255, 255, 0.92);
-  outline: none;
-  font-size: 0.88rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  line-height: 1;
+}
+.collapseBtn:hover { background: rgba(255,255,255,0.08); }
+
+/* Optional: when collapsed reduce padding slightly */
+.statsCollapsed { padding-bottom: 8px; }
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 980px) {
+  .header { grid-template-columns: 1fr; gap: 10px; }
+  .trainerBar { grid-template-columns: 1fr; }
+  .trainerBarRight { justify-items: start; }
+  .counts { text-align: left; }
 }
 
-.evInput:focus,
-.ivInput:focus {
-  border-color: rgba(213, 184, 255, 0.4);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
+.authorLink {
+  color: rgba(140, 180, 255, 0.95);
+  text-decoration: none;
+  font-weight: 600;
 }
-
-/* ---------------- Type badges ---------------- (kept above) */
-
-/* ---------------- Responsive tweaks for My Team stats ---------------- */
-
-@media (max-width: 620px) {
-  .myStatsHeader {
-    grid-template-columns: 44px 44px 52px 1fr 48px;
-    gap: 8px;
-  }
-  .myStatRow {
-    grid-template-columns: 44px 44px 52px 1fr 48px;
-    gap: 8px;
-  }
-}
-
-/* =========================================================
-   Minor polish / consistency
-   ========================================================= */
-
-/* Ensure move rows don't force overflow */
-.moveRowSeen {
-  min-width: 0;
-}
-.moveRowSeen > * {
-  min-width: 0;
-}
-
-/* Move PA slightly softer */
-.movePA {
-  color: rgba(255, 255, 255, 0.62);
-}
-
-/* Keep h3 compact */
-.miniBox .h3 {
-  margin-bottom: 6px;
-}
+.authorLink:hover { text-decoration: underline; }
