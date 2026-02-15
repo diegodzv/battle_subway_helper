@@ -547,7 +547,34 @@ html, body, #root {
   white-space: nowrap;
 }
 
-/* ---------------- Stats bars ---------------- */
+/* ---------------- Stats bars (RESTORED LAYOUT) ---------------- */
+
+.statTable {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.statLine {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+
+.statLineCompact {
+  grid-template-columns: 40px 1fr 40px;
+  gap: 8px;
+}
+
+.statLabel { font-size: 0.92rem; }
+.statValue { text-align: right; }
+
+.statLabelBoosted {
+  color: rgb(213, 184, 255);
+  font-weight: 900;
+  text-shadow: 0 0 18px rgba(213, 184, 255, 0.18);
+}
 
 .statBarTrack {
   position: relative;
@@ -558,6 +585,9 @@ html, body, #root {
   overflow: hidden;
 }
 .statBarFill { height: 100%; border-radius: 999px; }
+
+.statTableCompact { gap: 8px; margin-top: 4px; }
+.statTableCompact .statBarTrack { height: 9px; }
 
 .stat-rDark  { background: rgba(140, 35, 35, 0.85); }
 .stat-rLight { background: rgba(220, 70, 70, 0.80); }
@@ -728,7 +758,6 @@ html, body, #root {
 .mySearchBox { position: relative; }
 
 .myField { display: grid; gap: 6px; }
-
 .myLabel { font-size: 0.86rem; }
 
 .myInput,
@@ -755,7 +784,7 @@ html, body, #root {
   box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
 }
 
-/* Controls grid (Ability/Item/Nature) */
+/* Controls grid */
 .myControlsBox { padding: 10px; }
 .myControlsGrid {
   display: grid;
@@ -883,7 +912,6 @@ html, body, #root {
 }
 .collapseBtn:hover { background: rgba(255,255,255,0.08); }
 
-/* Optional: when collapsed reduce padding slightly */
 .statsCollapsed { padding-bottom: 8px; }
 
 /* ---------------- Responsive ---------------- */

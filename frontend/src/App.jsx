@@ -232,7 +232,6 @@ const NATURES = [
   "Calm","Gentle","Sassy","Careful","Quirky",
 ];
 
-// nature multipliers for non-HP stats
 const NATURE_MODS = {
   Hardy:  { up: null, down: null },
   Docile: { up: null, down: null },
@@ -350,20 +349,16 @@ function MoveAutocompleteInput({ value, onChangeText, onPickSlug, moveDex, place
     const qRaw = normalizeKey(debounced);
     if (!qRaw) return [];
 
-    const q = qRaw.replace(/\s+/g, " ").trim();     // keep spaces
-    const qHy = q.replace(/\s+/g, "-");            // also try hyphen
+    const q = qRaw.replace(/\s+/g, " ").trim();
+    const qHy = q.replace(/\s+/g, "-");
     const out = [];
 
     const keys = Object.keys(moveDex);
     for (const slug of keys) {
-      const pretty = normalizeKey(prettyMoveNameFromSlug(slug)); // "dragon pulse"
-      const slugNorm = normalizeKey(slug);                       // "dragon-pulse"
+      const pretty = normalizeKey(prettyMoveNameFromSlug(slug));
+      const slugNorm = normalizeKey(slug);
 
-      const hit =
-        slugNorm.includes(q) ||
-        slugNorm.includes(qHy) ||
-        pretty.includes(q);
-
+      const hit = slugNorm.includes(q) || slugNorm.includes(qHy) || pretty.includes(q);
       if (hit) out.push(slug);
       if (out.length >= 12) break;
     }
@@ -494,7 +489,13 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
 
   const baseStats = mon?.base_stats ?? {};
   const finalStats = useMemo(
-    () => calcFinalStatsLv50(baseStats, evs, mon?.nature ?? "Hardy", mon?.ivs ?? { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }),
+    () =>
+      calcFinalStatsLv50(
+        baseStats,
+        evs,
+        mon?.nature ?? "Hardy",
+        mon?.ivs ?? { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }
+      ),
     [baseStats, evs, mon?.nature, mon?.ivs]
   );
 
@@ -677,42 +678,47 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
               </div>
 
               <div className="myStatsGrid">
-                {EV_KEYS.map((k) => (
-                  <div key={k} className="myStatRow">
-                    <div className="mono myStatKey">{EV_LABEL[k]}</div>
+                {EV_KEYS.map((k) => {
+                  const v = typeof finalStats?.[k] === "number" ? finalStats[k] : 0;
+                  const basePct = Math.round(clamp01(v / 200) * 100);
+                  const overflowPct = v > 200 ? Math.round(clamp01((v - 200) / 200) * 100) : 0;
+                  const tier = getTierClass(v);
 
-                    <input
-                      className="ivInput mono"
-                      type="number"
-                      min={0}
-                      max={31}
-                      step={1}
-                      value={typeof mon?.ivs?.[k] === "number" ? mon.ivs[k] : 31}
-                      onChange={(e) => setIv(k, e.target.value)}
-                    />
+                  return (
+                    <div key={k} className="myStatRow">
+                      <div className="mono myStatKey">{EV_LABEL[k]}</div>
 
-                    <input
-                      className="evInput mono"
-                      type="number"
-                      min={0}
-                      max={252}
-                      step={4}
-                      value={typeof evs?.[k] === "number" ? evs[k] : 0}
-                      onChange={(e) => setEv(k, e.target.value)}
-                    />
-
-                    <div className="statBarTrack" aria-label={`${EV_LABEL[k]} ${finalStats?.[k] ?? "-"}`}>
-                      <div
-                        className={`statBarFill ${getTierClass(typeof finalStats?.[k] === "number" ? finalStats[k] : 0)}`}
-                        style={{
-                          width: `${Math.round(clamp01((typeof finalStats?.[k] === "number" ? finalStats[k] : 0) / 200) * 100)}%`,
-                        }}
+                      <input
+                        className="ivInput mono"
+                        type="number"
+                        min={0}
+                        max={31}
+                        step={1}
+                        value={typeof mon?.ivs?.[k] === "number" ? mon.ivs[k] : 31}
+                        onChange={(e) => setIv(k, e.target.value)}
                       />
-                    </div>
 
-                    <div className="mono myStatFinal">{finalStats?.[k] ?? "-"}</div>
-                  </div>
-                ))}
+                      <input
+                        className="evInput mono"
+                        type="number"
+                        min={0}
+                        max={252}
+                        step={4}
+                        value={typeof evs?.[k] === "number" ? evs[k] : 0}
+                        onChange={(e) => setEv(k, e.target.value)}
+                      />
+
+                      <div className="statBarTrack" aria-label={`${EV_LABEL[k]} ${v}`}>
+                        <div className={`statBarFill ${tier}`} style={{ width: `${basePct}%` }} />
+                        {overflowPct > 0 ? (
+                          <div className="statOverflow" style={{ width: `${overflowPct}%` }} title={`Overflow +${v - 200}`} />
+                        ) : null}
+                      </div>
+
+                      <div className="mono myStatFinal">{finalStats?.[k] ?? "-"}</div>
+                    </div>
+                  );
+                })}
               </div>
             </>
           ) : null}
@@ -1098,7 +1104,7 @@ function EnemyTrainerTab(props) {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState("enemy"); // "enemy" | "myteam"
+  const [activeTab, setActiveTab] = useState("enemy");
   const [myTeam, setMyTeam] = useState([null, null, null, null]);
 
   const [q, setQ] = useState("");
