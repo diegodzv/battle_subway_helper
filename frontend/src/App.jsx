@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 
 function useDebouncedValue(value, delayMs) {
@@ -36,7 +36,7 @@ function getTierClass(v) {
   if (v < 100) return "stat-orange";
   if (v < 130) return "stat-yellow";
   if (v < 160) return "stat-gLight";
-  return "stat-gDark"; // 160..200 (and also base for >=200)
+  return "stat-gDark";
 }
 
 function clamp01(x) {
@@ -46,11 +46,7 @@ function clamp01(x) {
 function StatRow({ label, value, max = 200, compact = false, boosted = false }) {
   const v = typeof value === "number" ? value : 0;
 
-  // Base fill is capped at max (200).
   const basePct = Math.round(clamp01(v / max) * 100);
-
-  // Overflow: for v > max, overlay from left with (v-max)/max, capped at 100%.
-  // Example: v=220 -> overflowPct=10; v=210 -> 5; v=400 -> 100
   const overflowPct = v > max ? Math.round(clamp01((v - max) / max) * 100) : 0;
   const tierClass = getTierClass(v);
 
@@ -89,7 +85,6 @@ function hasEvs(set, statKey) {
 }
 
 function formatBPAcc(moveEntry) {
-  // Status or unknown -> dashes
   if (!moveEntry) return "— / —";
   if (moveEntry.damage_class === "status") return "— / —";
   const bp = typeof moveEntry.power === "number" ? String(moveEntry.power) : "—";
@@ -97,12 +92,6 @@ function formatBPAcc(moveEntry) {
   return `${bp} / ${acc}`;
 }
 
-/**
- * Subtitle below trainer title:
- * - Keep big title in Spanish (trainer.display_name)
- * - Here: show EN + other languages (de/fr/it/ja/ko) if available via trainer.names
- * - No "section" (removes "Super Set 5")
- */
 function TrainerNamesLine({ trainer }) {
   if (!trainer) return null;
   const names = trainer?.names && typeof trainer.names === "object" ? trainer.names : null;
@@ -116,7 +105,6 @@ function TrainerNamesLine({ trainer }) {
     }
   }
 
-  // Fallback: at least show English if we can
   if (parts.length === 0) {
     const en = (trainer?.name_en ?? "").trim();
     if (en) parts.push({ lang: "en", val: en });
@@ -211,7 +199,6 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
           </ul>
         </div>
 
-        {/* Optional stats in pool */}
         {showStats ? (
           <div className="tileSection">
             <div className="tileLabel muted">Stats (Lv 50)</div>
@@ -234,8 +221,69 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
 
 /* ---------------- My Team (Gen5) ---------------- */
 
-const EV_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"];
-const EV_LABEL = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
+const STAT_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"];
+const STAT_LABEL = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
+
+const NATURES = [
+  "Hardy",
+  "Lonely",
+  "Brave",
+  "Adamant",
+  "Naughty",
+  "Bold",
+  "Docile",
+  "Relaxed",
+  "Impish",
+  "Lax",
+  "Timid",
+  "Hasty",
+  "Serious",
+  "Jolly",
+  "Naive",
+  "Modest",
+  "Mild",
+  "Quiet",
+  "Bashful",
+  "Rash",
+  "Calm",
+  "Gentle",
+  "Sassy",
+  "Careful",
+  "Quirky",
+];
+
+const NATURE_MODS = {
+  Hardy: { up: null, down: null },
+  Docile: { up: null, down: null },
+  Serious: { up: null, down: null },
+  Bashful: { up: null, down: null },
+  Quirky: { up: null, down: null },
+
+  Lonely: { up: "atk", down: "def" },
+  Brave: { up: "atk", down: "spe" },
+  Adamant: { up: "atk", down: "spa" },
+  Naughty: { up: "atk", down: "spd" },
+
+  Bold: { up: "def", down: "atk" },
+  Relaxed: { up: "def", down: "spe" },
+  Impish: { up: "def", down: "spa" },
+  Lax: { up: "def", down: "spd" },
+
+  Timid: { up: "spe", down: "atk" },
+  Hasty: { up: "spe", down: "def" },
+  Jolly: { up: "spe", down: "spa" },
+  Naive: { up: "spe", down: "spd" },
+
+  Modest: { up: "spa", down: "atk" },
+  Mild: { up: "spa", down: "def" },
+  Quiet: { up: "spa", down: "spe" },
+  Rash: { up: "spa", down: "spd" },
+
+  Calm: { up: "spd", down: "atk" },
+  Gentle: { up: "spd", down: "def" },
+  Sassy: { up: "spd", down: "spe" },
+  Careful: { up: "spd", down: "spa" },
+};
 
 function clampInt(n, lo, hi) {
   const x = Number.isFinite(n) ? n : 0;
@@ -243,11 +291,155 @@ function clampInt(n, lo, hi) {
 }
 
 function evTotal(evs) {
-  return EV_KEYS.reduce((acc, k) => acc + (typeof evs?.[k] === "number" ? evs[k] : 0), 0);
+  return STAT_KEYS.reduce((acc, k) => acc + (typeof evs?.[k] === "number" ? evs[k] : 0), 0);
 }
 
-function normalizeMoveText(s) {
-  return (s ?? "").toString();
+function normalizeKey(s) {
+  return (s ?? "").toString().trim().toLowerCase();
+}
+
+function findMoveSlugFromText(text, moveDex) {
+  if (!moveDex || typeof moveDex !== "object") return null;
+  const t = normalizeKey(text);
+  if (!t) return null;
+
+  if (Object.prototype.hasOwnProperty.call(moveDex, t)) return t;
+
+  const hy = t.replace(/\s+/g, "-");
+  if (Object.prototype.hasOwnProperty.call(moveDex, hy)) return hy;
+
+  for (const slug of Object.keys(moveDex)) {
+    const pn = prettyMoveNameFromSlug(slug);
+    if (pn && normalizeKey(pn) === t) return slug;
+  }
+  return null;
+}
+
+function natureMultiplier(nature, statKey) {
+  const n = (nature ?? "").trim();
+  const cfg = NATURE_MODS[n] ?? { up: null, down: null };
+  if (!cfg.up || !cfg.down) return 1.0;
+  if (statKey === cfg.up) return 1.1;
+  if (statKey === cfg.down) return 0.9;
+  return 1.0;
+}
+
+function calcFinalStatsLv50(baseStats, evs, ivs, nature) {
+  const level = 50;
+  const out = {};
+
+  const base = baseStats ?? {};
+  const E = evs ?? {};
+  const I = ivs ?? {};
+
+  // HP
+  {
+    const b = Number(base.hp ?? 0);
+    const ev = Number(E.hp ?? 0);
+    const iv = Number(I.hp ?? 31);
+    const v = Math.floor(((2 * b + iv + Math.floor(ev / 4)) * level) / 100) + level + 10;
+    out.hp = v;
+  }
+
+  for (const k of ["atk", "def", "spa", "spd", "spe"]) {
+    const b = Number(base[k] ?? 0);
+    const ev = Number(E[k] ?? 0);
+    const iv = Number(I[k] ?? 31);
+
+    const pre = Math.floor(((2 * b + iv + Math.floor(ev / 4)) * level) / 100) + 5;
+    const mult = natureMultiplier(nature, k);
+    out[k] = Math.floor(pre * mult);
+  }
+
+  return out;
+}
+
+function MoveAutocompleteInput({ value, onChangeText, onPickSlug, moveDex, placeholder }) {
+  const [open, setOpen] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const debounced = useDebouncedValue(value, 80);
+  const boxRef = useRef(null);
+
+  const suggestions = useMemo(() => {
+    if (!moveDex || typeof moveDex !== "object") return [];
+    const q = normalizeKey(debounced);
+    if (!q) return [];
+
+    // prioritize prefix matches, then contains
+    const keys = Object.keys(moveDex);
+    const prefix = [];
+    const contains = [];
+    for (const slug of keys) {
+      if (slug.startsWith(q)) prefix.push(slug);
+      else if (slug.includes(q)) contains.push(slug);
+      if (prefix.length >= 12) break;
+    }
+    const out = [...prefix, ...contains].slice(0, 12);
+    return out;
+  }, [debounced, moveDex]);
+
+  useEffect(() => {
+    function onDocClick(e) {
+      if (!boxRef.current) return;
+      if (!boxRef.current.contains(e.target)) setOpen(false);
+    }
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, []);
+
+  const show = (focused || open) && suggestions.length > 0;
+
+  return (
+    <div className="miniAutocomplete" ref={boxRef}>
+      <input
+        className="myMoveNameInput mono"
+        value={value}
+        onChange={(e) => {
+          onChangeText(e.target.value);
+          setOpen(true);
+        }}
+        placeholder={placeholder}
+        onFocus={() => {
+          setFocused(true);
+          setOpen(true);
+        }}
+        onBlur={() => setFocused(false)}
+        autoComplete="off"
+      />
+
+      {show ? (
+        <div className="dropdown moveDropdown">
+          {suggestions.map((slug) => {
+            const entry = moveDex?.[slug] ?? null;
+            const label = prettyMoveNameFromSlug(slug) ?? slug;
+            const type = entry?.type ?? null;
+            const bpacc = formatBPAcc(entry);
+
+            return (
+              <button
+                key={slug}
+                className="dropdownItem"
+                onMouseDown={(e) => e.preventDefault()} // prevent blur before click
+                onClick={() => {
+                  onPickSlug(slug, label);
+                  setOpen(false);
+                }}
+                title={slug}
+              >
+                <div className="dropdownName" style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <TypeBadge type={type} />
+                  <span className="mono">{label}</span>
+                </div>
+                <div className="dropdownMeta muted">
+                  <span className="mono">{bpacc}</span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear }) {
@@ -265,12 +457,13 @@ function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear 
         ) : null}
       </div>
 
-      <div className="searchBox" style={{ marginTop: 8 }}>
+      <div className="searchBox mySearchBox" style={{ marginTop: 8 }}>
         <input
           className="slotSearchInput"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder='Type a Pokémon (Gen 1–5) e.g. "Gyarados", "Hydreigon"...'
+          placeholder='Type a Pokémon (Gen 1–5) e.g. "Gyarados"...'
+          autoComplete="off"
         />
         {suggestions.length > 0 ? (
           <div className="dropdown">
@@ -282,10 +475,7 @@ function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear 
                   {Array.isArray(s.types) && s.types.length ? (
                     <>
                       {" "}
-                      ·{" "}
-                      <span className="mono">
-                        {s.types.map((t) => t.toUpperCase()).join("/")}
-                      </span>
+                      · <span className="mono">{s.types.map((t) => t.toUpperCase()).join("/")}</span>
                     </>
                   ) : null}
                 </div>
@@ -300,22 +490,72 @@ function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear 
   );
 }
 
-function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
+function MyTeamStatRow({ label, iv, ev, final, onChangeIv, onChangeEv }) {
+  const v = typeof final === "number" ? final : 0;
+
+  const max = 200;
+  const basePct = Math.round(clamp01(v / max) * 100);
+  const overflowPct = v > max ? Math.round(clamp01((v - max) / max) * 100) : 0;
+  const tierClass = getTierClass(v);
+
+  return (
+    <div className="myStatRow">
+      <div className="mono myStatKey">{label}</div>
+
+      <input
+        className="ivInput mono"
+        type="number"
+        min={0}
+        max={31}
+        value={typeof iv === "number" ? iv : 31}
+        onChange={(e) => onChangeIv(e.target.value)}
+      />
+
+      <input
+        className="evInput mono"
+        type="number"
+        min={0}
+        max={252}
+        step={4}
+        value={typeof ev === "number" ? ev : 0}
+        onChange={(e) => onChangeEv(e.target.value)}
+      />
+
+      <div className="statBarTrack" aria-label={`${label} ${v}`}>
+        <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
+        {overflowPct > 0 ? (
+          <div className="statOverflow" style={{ width: `${overflowPct}%` }} title={`Overflow +${v - max}`} />
+        ) : null}
+      </div>
+
+      <div className="mono myStatFinal">{typeof final === "number" ? final : "-"}</div>
+    </div>
+  );
+}
+
+function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
   const name = mon?.name_en ?? mon?.slug ?? `#${mon?.dex ?? "?"}`;
   const types = Array.isArray(mon?.types) ? mon.types : [];
   const abilities = Array.isArray(mon?.abilities) ? mon.abilities : [];
 
   const evs = mon?.evs ?? {};
+  const ivs = mon?.ivs ?? { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 };
+
   const total = evTotal(evs);
-  const totalPct = Math.round((Math.min(510, total) / 510) * 100);
+  const totalClamped = Math.min(510, total);
+  const totalPct = Math.round((totalClamped / 510) * 100);
+
+  const baseStats = mon?.base_stats ?? {};
+  const finalStats = useMemo(
+    () => calcFinalStatsLv50(baseStats, evs, ivs, mon?.nature ?? "Hardy"),
+    [baseStats, evs, ivs, mon?.nature]
+  );
 
   function setEv(key, valueRaw) {
     const current = { ...(mon.evs ?? {}) };
     const nextVal = clampInt(parseInt(valueRaw, 10), 0, 252);
-
     current[key] = nextVal;
 
-    // cap total 510 by reducing the changed stat if needed
     let t = evTotal(current);
     if (t > 510) {
       const overflow = t - 510;
@@ -323,10 +563,22 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
       t = evTotal(current);
     }
 
-    onUpdate({
-      ...mon,
-      evs: current,
-    });
+    onUpdate({ ...mon, evs: current });
+  }
+
+  function setIv(key, valueRaw) {
+    const current = { ...(mon.ivs ?? {}) };
+    const nextVal = clampInt(parseInt(valueRaw, 10), 0, 31);
+    current[key] = nextVal;
+    onUpdate({ ...mon, ivs: current });
+  }
+
+  function recognizedMoveMeta(i) {
+    const slug = mon?.move_slugs?.[i] ?? findMoveSlugFromText(mon?.moves?.[i], moveDex);
+    if (!slug) return null;
+    const entry = moveDex?.[slug] ?? null;
+    if (!entry) return null;
+    return { slug, entry };
   }
 
   return (
@@ -344,7 +596,16 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
               {types.map((t) => (
                 <TypeBadge key={t} type={t} />
               ))}
+              <span className="mono">·</span>
+              <span className="mono">{mon?.nature ?? "Hardy"}</span>
             </div>
+
+            {mon?.item ? (
+              <div className="itemLine">
+                <ItemIcon url={null} alt={mon.item} />
+                <span className="itemName">{mon.item}</span>
+              </div>
+            ) : null}
           </div>
         </div>
 
@@ -353,11 +614,10 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
         </button>
       </div>
 
-      <div className="mySlotBody">
-        <div className="miniBox">
-          <div className="h3">Set</div>
-
-          <div className="myFormGrid">
+      <div className="seenSlotBody">
+        {/* Controls box (Ability / Item / Nature) */}
+        <div className="miniBox myControlsBox">
+          <div className="myControlsGrid">
             <label className="myField">
               <div className="muted myLabel">Ability</div>
               <select
@@ -382,61 +642,109 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
                 value={mon?.item ?? ""}
                 onChange={(e) => onUpdate({ ...mon, item: e.target.value })}
                 placeholder='e.g. "Choice Scarf"'
+                autoComplete="off"
               />
             </label>
-          </div>
 
-          <div style={{ marginTop: 10 }}>
-            <div className="muted myLabel">Moves (free text)</div>
-            <div className="myMovesGrid">
-              {[0, 1, 2, 3].map((i) => (
-                <input
-                  key={i}
-                  className="myInput"
-                  value={mon?.moves?.[i] ?? ""}
-                  onChange={(e) => {
-                    const next = Array.isArray(mon.moves) ? [...mon.moves] : ["", "", "", ""];
-                    next[i] = normalizeMoveText(e.target.value);
-                    onUpdate({ ...mon, moves: next });
-                  }}
-                  placeholder={`Move ${i + 1}`}
-                />
-              ))}
-            </div>
+            <label className="myField">
+              <div className="muted myLabel">Nature</div>
+              <select
+                className="mySelect"
+                value={mon?.nature ?? "Hardy"}
+                onChange={(e) => onUpdate({ ...mon, nature: e.target.value })}
+              >
+                {NATURES.map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </select>
+            </label>
           </div>
         </div>
 
+        {/* Moves box (rival-like) */}
         <div className="miniBox">
-          <div className="h3">Base stats + EVs</div>
+          <div className="movesHeaderRow">
+            <div className="h3">Moves</div>
+            <div className="muted mono movesHeaderPA">POWER / ACC</div>
+          </div>
+
+          <ul className="moves myMovesList">
+            {[0, 1, 2, 3].map((i) => {
+              const meta = recognizedMoveMeta(i);
+              const type = meta?.entry?.type ?? null;
+              const bpacc = meta ? formatBPAcc(meta.entry) : "— / —";
+
+              return (
+                <li key={i} className="moveRow moveRowSeen myMoveRowEditable">
+                  <TypeBadge type={type} />
+
+                  <MoveAutocompleteInput
+                    value={mon?.moves?.[i] ?? ""}
+                    moveDex={moveDex}
+                    placeholder={`Move ${i + 1}`}
+                    onChangeText={(txt) => {
+                      const nextMoves = Array.isArray(mon.moves) ? [...mon.moves] : ["", "", "", ""];
+                      const nextSlugs = Array.isArray(mon.move_slugs) ? [...mon.move_slugs] : [null, null, null, null];
+                      nextMoves[i] = txt;
+                      nextSlugs[i] = null; // free text allowed
+                      onUpdate({ ...mon, moves: nextMoves, move_slugs: nextSlugs });
+                    }}
+                    onPickSlug={(slug, label) => {
+                      const nextMoves = Array.isArray(mon.moves) ? [...mon.moves] : ["", "", "", ""];
+                      const nextSlugs = Array.isArray(mon.move_slugs) ? [...mon.move_slugs] : [null, null, null, null];
+                      nextMoves[i] = label;
+                      nextSlugs[i] = slug;
+                      onUpdate({ ...mon, moves: nextMoves, move_slugs: nextSlugs });
+                    }}
+                  />
+
+                  <span className="mono movePA">{bpacc}</span>
+                </li>
+              );
+            })}
+          </ul>
+
+          <div className="muted" style={{ marginTop: 8, fontSize: "0.86rem" }}>
+            Moves accept any text. Selecting from the list just helps with type/BP/Acc.
+          </div>
+        </div>
+
+        {/* Stats box (STAT | IV | EV | BAR | FINAL + EV total bar) */}
+        <div className="miniBox">
+          <div className="h3">Stats (Lv 50)</div>
 
           <div className="evHeaderRow">
             <div className="muted mono">EV total</div>
-            <div className="mono">{Math.min(510, total)} / 510</div>
+            <div className="mono">
+              {totalClamped} / 510
+            </div>
           </div>
           <div className="evBarTrack" title="EV total (max 510)">
             <div className="evBarFill" style={{ width: `${totalPct}%` }} />
           </div>
 
-          <div className="evGrid">
-            {EV_KEYS.map((k) => (
-              <div key={k} className="evRow">
-                <div className="mono evKey">{EV_LABEL[k]}</div>
-                <div className="muted mono evBase">{mon?.base_stats?.[k] ?? "-"}</div>
-                <input
-                  className="evInput mono"
-                  type="number"
-                  min={0}
-                  max={252}
-                  step={4}
-                  value={typeof evs?.[k] === "number" ? evs[k] : 0}
-                  onChange={(e) => setEv(k, e.target.value)}
-                />
-              </div>
-            ))}
+          <div className="myStatsHeader muted mono">
+            <span>STAT</span>
+            <span>IV</span>
+            <span>EV</span>
+            <span></span>
+            <span>FINAL</span>
           </div>
 
-          <div className="muted" style={{ marginTop: 8, fontSize: "0.86rem" }}>
-            EVs are capped at 510 automatically. (We’ll refine UI later.)
+          <div className="myStatsGrid">
+            {STAT_KEYS.map((k) => (
+              <MyTeamStatRow
+                key={k}
+                label={STAT_LABEL[k]}
+                iv={typeof ivs?.[k] === "number" ? ivs[k] : 31}
+                ev={typeof evs?.[k] === "number" ? evs[k] : 0}
+                final={finalStats?.[k]}
+                onChangeIv={(v) => setIv(k, v)}
+                onChangeEv={(v) => setEv(k, v)}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -444,11 +752,10 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
   );
 }
 
-function MyTeamTab({ myTeam, setMyTeam }) {
+function MyTeamTab({ myTeam, setMyTeam, moveDex }) {
   const [slotQueries, setSlotQueries] = useState(["", "", "", ""]);
   const [slotSuggestions, setSlotSuggestions] = useState([[], [], [], []]);
 
-  // debounced per slot
   const debounced = [
     useDebouncedValue(slotQueries[0], 120),
     useDebouncedValue(slotQueries[1], 120),
@@ -516,10 +823,16 @@ function MyTeamTab({ myTeam, setMyTeam }) {
         abilities: entry.abilities ?? [],
         base_stats: entry.base_stats ?? {},
         sprite_url: entry.sprite_url ?? null,
+
         ability: "",
         item: "",
+        nature: "Hardy",
+
         moves: ["", "", "", ""],
+        move_slugs: [null, null, null, null],
+
         evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
+        ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 },
       };
 
       setMyTeam((prev) => {
@@ -577,6 +890,7 @@ function MyTeamTab({ myTeam, setMyTeam }) {
                 mon={mon}
                 onRemove={() => removePokemon(idx)}
                 onUpdate={(m) => updatePokemon(idx, m)}
+                moveDex={moveDex}
               />
             ) : (
               <MyTeamSlotEmpty
@@ -608,7 +922,7 @@ function MyTeamTab({ myTeam, setMyTeam }) {
   );
 }
 
-/* ---------------- Enemy Trainer tab (tu app actual) ---------------- */
+/* ---------------- Enemy Trainer tab (NO TOCAR) ---------------- */
 
 function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
   return (
@@ -665,7 +979,6 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
               <span className="mono">{set.nature}</span>
             </div>
 
-            {/* Item in seen Pokémon */}
             <div className="itemLine">
               <ItemIcon url={set.item_sprite_url} alt={set.item} />
               <span className="itemName">{set.item}</span>
@@ -721,19 +1034,9 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
 
 function EnemyTrainerTab(props) {
   const {
-    q,
-    setQ,
-    debouncedQ,
-    suggestions,
-    setSuggestions,
-    isSearching,
-    setIsSearching,
     trainer,
-    setTrainer,
     confirmed,
-    setConfirmed,
     discarded,
-    setDiscarded,
     showDiscarded,
     setShowDiscarded,
     showStatsInPool,
@@ -743,23 +1046,12 @@ function EnemyTrainerTab(props) {
     debouncedPokemonFilter,
     moveDex,
     poolSets,
-    setById,
-    poolSortedDex,
-    visiblePoolBase,
     visiblePool,
     confirmedSets,
-    loadTrainer,
-    resetAll,
     toggleDiscard,
     confirmSet,
     removeConfirmed,
   } = props;
-
-  const trainerTitle = trainer?.display_name ?? trainer?.name_en ?? "";
-  const total = poolSets.length;
-  const confirmedCount = confirmed.length;
-  const discardedCount = discarded.size;
-  const shownCount = visiblePool.length;
 
   return (
     <>
@@ -836,13 +1128,9 @@ function EnemyTrainerTab(props) {
 }
 
 export default function App() {
-  // Tabs
   const [activeTab, setActiveTab] = useState("enemy"); // "enemy" | "myteam"
-
-  // My Team state (persist across tab switches)
   const [myTeam, setMyTeam] = useState([null, null, null, null]);
 
-  // Enemy Trainer state (tu app actual)
   const [q, setQ] = useState("");
   const debouncedQ = useDebouncedValue(q, 150);
   const [suggestions, setSuggestions] = useState([]);
@@ -854,14 +1142,11 @@ export default function App() {
   const [discarded, setDiscarded] = useState(() => new Set());
   const [showDiscarded, setShowDiscarded] = useState(false);
 
-  // toggle stats in pool
   const [showStatsInPool, setShowStatsInPool] = useState(false);
 
-  // Pokémon filter (from empty slots)
   const [pokemonFilter, setPokemonFilter] = useState("");
   const debouncedPokemonFilter = useDebouncedValue(pokemonFilter, 80);
 
-  // move dex
   const [moveDex, setMoveDex] = useState(null);
 
   useEffect(() => {
@@ -897,14 +1182,12 @@ export default function App() {
 
   const poolSets = trainer?.sets ?? [];
 
-  // quick map for lookups
   const setById = useMemo(() => {
     const m = new Map();
     for (const s of poolSets) m.set(s.global_id, s);
     return m;
   }, [poolSets]);
 
-  // pool sorted: dex_number then global_id
   const poolSortedDex = useMemo(() => {
     const copy = [...poolSets];
     copy.sort((a, b) => {
@@ -916,7 +1199,6 @@ export default function App() {
     return copy;
   }, [poolSets]);
 
-  // visible pool = not confirmed, and (not discarded unless toggle)
   const visiblePoolBase = useMemo(() => {
     const confirmedSet = new Set(confirmed);
     return poolSortedDex.filter((s) => {
@@ -927,7 +1209,6 @@ export default function App() {
     });
   }, [poolSortedDex, confirmed, discarded, showDiscarded]);
 
-  // apply Pokémon filter on top of the normal view
   const visiblePool = useMemo(() => {
     const nq = debouncedPokemonFilter.trim().toLowerCase();
     if (!nq) return visiblePoolBase;
@@ -1017,13 +1298,9 @@ export default function App() {
     if (confirmed.length >= 4) return;
     if (discarded.has(set.global_id)) return;
 
-    // reset the pool filter after confirming
     setPokemonFilter("");
     setConfirmed((prev) => [...prev, set.global_id]);
 
-    // Auto-discard rules:
-    //  - same species, other variants
-    //  - item clause: same item cannot appear twice in the opponent team
     setDiscarded((prev) => {
       const next = new Set(prev);
       const confirmedSpecies = set.species;
@@ -1037,7 +1314,6 @@ export default function App() {
           continue;
         }
 
-        // Item clause: discard any other set with same item
         const item = (s.item ?? "").trim();
         if (confirmedItem && item && item === confirmedItem) {
           next.add(s.global_id);
@@ -1067,7 +1343,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Tabs */}
         <div className="tabsBar" role="tablist" aria-label="App tabs">
           <button
             className={`tabBtn ${activeTab === "myteam" ? "tabBtnActive" : ""}`}
@@ -1087,14 +1362,12 @@ export default function App() {
           </button>
         </div>
 
-        {/* Right area */}
         <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", alignItems: "center" }}>
           <button className="ghostBtn" onClick={resetAll} title="Reset enemy trainer state">
             Reset Enemy
           </button>
         </div>
 
-        {/* Enemy header extra row */}
         {activeTab === "enemy" ? (
           <>
             <div className="searchBox" style={{ gridColumn: "1 / -1" }}>
@@ -1171,23 +1444,13 @@ export default function App() {
 
       {activeTab === "myteam" ? (
         <main className="content">
-          <MyTeamTab myTeam={myTeam} setMyTeam={setMyTeam} />
+          <MyTeamTab myTeam={myTeam} setMyTeam={setMyTeam} moveDex={moveDex} />
         </main>
       ) : (
         <EnemyTrainerTab
-          q={q}
-          setQ={setQ}
-          debouncedQ={debouncedQ}
-          suggestions={suggestions}
-          setSuggestions={setSuggestions}
-          isSearching={isSearching}
-          setIsSearching={setIsSearching}
           trainer={trainer}
-          setTrainer={setTrainer}
           confirmed={confirmed}
-          setConfirmed={setConfirmed}
           discarded={discarded}
-          setDiscarded={setDiscarded}
           showDiscarded={showDiscarded}
           setShowDiscarded={setShowDiscarded}
           showStatsInPool={showStatsInPool}
@@ -1197,13 +1460,8 @@ export default function App() {
           debouncedPokemonFilter={debouncedPokemonFilter}
           moveDex={moveDex}
           poolSets={poolSets}
-          setById={setById}
-          poolSortedDex={poolSortedDex}
-          visiblePoolBase={visiblePoolBase}
           visiblePool={visiblePool}
           confirmedSets={confirmedSets}
-          loadTrainer={loadTrainer}
-          resetAll={resetAll}
           toggleDiscard={toggleDiscard}
           confirmSet={confirmSet}
           removeConfirmed={removeConfirmed}

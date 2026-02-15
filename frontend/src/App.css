@@ -6,25 +6,28 @@
   background: #0b0f14;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
   margin: 0;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: radial-gradient(1200px 600px at 30% 0%, rgba(80, 120, 255, 0.12), transparent 60%),
-              radial-gradient(900px 500px at 80% 20%, rgba(0, 255, 180, 0.07), transparent 55%),
-              #0b0f14;
+    radial-gradient(900px 500px at 80% 20%, rgba(0, 255, 180, 0.07), transparent 55%), #0b0f14;
 }
 
 .muted {
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.92rem;
 }
 .mono {
@@ -51,20 +54,27 @@ html, body, #root {
   grid-template-rows: auto auto;
 }
 
-.brandTitle { font-weight: 800; letter-spacing: 0.2px; }
+.brandTitle {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
 
-.searchBox { position: relative; }
+.searchBox {
+  position: relative;
+}
 
 .searchInput {
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
   outline: none;
 }
-.searchInput::placeholder { color: rgba(255,255,255,0.42); }
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
 .searchInput:focus {
   border-color: rgba(140, 180, 255, 0.55);
   box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.15);
@@ -76,9 +86,10 @@ html, body, #root {
   margin-top: 8px;
   border-radius: 14px;
   background: rgba(15, 20, 28, 0.98);
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  z-index: 60;
 }
 
 .dropdownItem {
@@ -91,11 +102,21 @@ html, body, #root {
   justify-content: space-between;
   gap: 10px;
   cursor: pointer;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
 }
-.dropdownItem:hover { background: rgba(255,255,255,0.06); }
-.dropdownName { font-weight: 700; }
-.dropdownMeta { font-size: 0.9rem; }
+.dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.dropdownName {
+  font-weight: 700;
+}
+.dropdownMeta {
+  font-size: 0.9rem;
+}
+
+.dropdownAbove {
+  z-index: 80;
+}
 
 .spinner {
   position: absolute;
@@ -104,21 +125,27 @@ html, body, #root {
   width: 18px;
   height: 18px;
   border-radius: 999px;
-  border: 2px solid rgba(255,255,255,0.15);
-  border-top-color: rgba(255,255,255,0.70);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.7);
   animation: spin 0.7s linear infinite;
 }
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .ghostBtn {
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
-.ghostBtn:hover { background: rgba(255,255,255,0.07); }
+.ghostBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
 
 /* --- Trainer bar inside header --- */
 
@@ -133,10 +160,12 @@ html, body, #root {
 
   margin-top: 6px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.trainerBarLeft { min-width: 0; }
+.trainerBarLeft {
+  min-width: 0;
+}
 .trainerBarRight {
   display: grid;
   gap: 10px;
@@ -144,9 +173,19 @@ html, body, #root {
   align-content: start;
 }
 
-.h1 { font-size: 1.25rem; font-weight: 900; }
-.h2 { font-size: 1.05rem; font-weight: 900; }
-.h3 { font-size: 0.95rem; font-weight: 900; margin-bottom: 6px; }
+.h1 {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+.h2 {
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+.h3 {
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
 
 /* Trainer multilang subtitle */
 .trainerNamesLine {
@@ -170,17 +209,22 @@ html, body, #root {
   letter-spacing: 0.4px;
   padding: 3px 7px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.04);
-  color: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.82);
 }
 
-.trainerNameVal { color: rgba(255,255,255,0.78); }
-.sep { margin-left: 8px; color: rgba(255,255,255,0.30); }
+.trainerNameVal {
+  color: rgba(255, 255, 255, 0.78);
+}
+.sep {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 /* ---------------- Toggle / counts ---------------- */
 
-.togglesRow{
+.togglesRow {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -191,18 +235,20 @@ html, body, #root {
   display: inline-flex;
   gap: 10px;
   align-items: center;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 999px;
   padding: 8px 12px;
   cursor: pointer;
   user-select: none;
 }
-.toggle input { accent-color: rgba(120, 255, 140, 0.90); }
+.toggle input {
+  accent-color: rgba(120, 255, 140, 0.9);
+}
 
 .counts {
   text-align: right;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
 }
 
 /* ---------------- Content / Panels ---------------- */
@@ -221,17 +267,21 @@ html, body, #root {
   padding: 28px;
   border-radius: 18px;
   background: rgba(15, 20, 28, 0.92);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
 }
-.emptyTitle { font-size: 1.4rem; font-weight: 850; margin-bottom: 6px; }
+.emptyTitle {
+  font-size: 1.4rem;
+  font-weight: 850;
+  margin-bottom: 6px;
+}
 
 .panel {
   background: rgba(15, 20, 28, 0.88);
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
   padding: 14px;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.38);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
   width: 100%;
   min-width: 0;
 }
@@ -246,7 +296,7 @@ html, body, #root {
 
 .footer {
   padding: 14px 18px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ---------------- New layout wrapper ---------------- */
@@ -264,7 +314,7 @@ html, body, #root {
   width: 56px;
   height: 56px;
   image-rendering: pixelated;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
   flex: 0 0 auto;
 }
 .spriteFallback {
@@ -273,8 +323,8 @@ html, body, #root {
   border-radius: 12px;
   display: grid;
   place-items: center;
-  border: 1px dashed rgba(255,255,255,0.20);
-  color: rgba(255,255,255,0.55);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .itemLine {
@@ -287,7 +337,7 @@ html, body, #root {
   width: 22px;
   height: 22px;
   image-rendering: pixelated;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
 }
 .itemIconFallback {
   width: 20px;
@@ -295,11 +345,13 @@ html, body, #root {
   display: grid;
   place-items: center;
   border-radius: 6px;
-  border: 1px dashed rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.55);
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 0.8rem;
 }
-.itemName { font-weight: 700; }
+.itemName {
+  font-weight: 700;
+}
 
 /* ---------------- Seen area (single row, 4 slots) ---------------- */
 
@@ -313,15 +365,15 @@ html, body, #root {
 .seenSlot,
 .seenSlotEmpty {
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
   padding: 12px;
   min-width: 0;
 }
 
 .seenSlotEmpty {
   border-style: dashed;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
   display: grid;
   gap: 8px;
   align-content: start;
@@ -335,12 +387,15 @@ html, body, #root {
   margin-bottom: 10px;
 }
 
-.seenSlotBody { display: grid; gap: 10px; }
+.seenSlotBody {
+  display: grid;
+  gap: 10px;
+}
 
 .miniBox {
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
   padding: 10px;
 }
 
@@ -350,24 +405,28 @@ html, body, #root {
   border-radius: 10px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .chip {
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   padding: 6px 10px;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   cursor: pointer;
-  color: rgba(255,255,255,0.88);
+  color: rgba(255, 255, 255, 0.88);
 }
-.chip:hover { background: rgba(255,255,255,0.07); }
+.chip:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
 .chipDanger {
   border-color: rgba(255, 120, 120, 0.25);
-  background: rgba(255, 120, 120, 0.10);
+  background: rgba(255, 120, 120, 0.1);
 }
-.chipDanger:hover { background: rgba(255, 120, 120, 0.16); }
+.chipDanger:hover {
+  background: rgba(255, 120, 120, 0.16);
+}
 
 /* ---------------- Pool grid: 6 columns ---------------- */
 
@@ -382,17 +441,17 @@ html, body, #root {
 
 .setTile {
   position: relative;
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   padding: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
   transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
   min-width: 0;
 }
 .setTile:hover {
   transform: translateY(-1px);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .setTileTop {
@@ -402,8 +461,12 @@ html, body, #root {
   align-items: center;
 }
 
-.setTileTitle .name { font-weight: 900; }
-.setTileTitle .meta { margin-top: 2px; }
+.setTileTitle .name {
+  font-weight: 900;
+}
+.setTileTitle .meta {
+  margin-top: 2px;
+}
 
 .setTileActions {
   display: inline-flex;
@@ -415,9 +478,9 @@ html, body, #root {
   width: 34px;
   height: 34px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.04);
-  color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.92);
   cursor: pointer;
   font-weight: 900;
   display: grid;
@@ -425,26 +488,37 @@ html, body, #root {
   line-height: 1;
   padding: 0;
 }
-.tileBtn:hover { background: rgba(255,255,255,0.08); }
-.tileBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+.tileBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.tileBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
 
 .tileBtnConfirm {
   border-color: rgba(0, 255, 180, 0.22);
   background: rgba(0, 255, 180, 0.06);
 }
-.tileBtnConfirm:hover { background: rgba(0, 255, 180, 0.10); }
+.tileBtnConfirm:hover {
+  background: rgba(0, 255, 180, 0.1);
+}
 
 .tileBtnDiscard {
   border-color: rgba(255, 120, 120, 0.22);
   background: rgba(255, 120, 120, 0.06);
 }
-.tileBtnDiscard:hover { background: rgba(255, 120, 120, 0.10); }
+.tileBtnDiscard:hover {
+  background: rgba(255, 120, 120, 0.1);
+}
 
 .tileBtnUndo {
   border-color: rgba(140, 180, 255, 0.26);
   background: rgba(140, 180, 255, 0.08);
 }
-.tileBtnUndo:hover { background: rgba(140, 180, 255, 0.12); }
+.tileBtnUndo:hover {
+  background: rgba(140, 180, 255, 0.12);
+}
 
 .setTileBody {
   margin-top: 10px;
@@ -454,8 +528,8 @@ html, body, #root {
 
 .tileSection {
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
   padding: 10px;
 }
 
@@ -479,8 +553,8 @@ html, body, #root {
   padding: 4px 8px;
   border-radius: 999px;
   border: 1px solid rgba(255, 120, 120, 0.24);
-  background: rgba(255, 120, 120, 0.10);
-  color: rgba(255,255,255,0.90);
+  background: rgba(255, 120, 120, 0.1);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ---------------- Moves list ---------------- */
@@ -520,8 +594,32 @@ html, body, #root {
 .movePA {
   text-align: right;
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
   white-space: nowrap;
+}
+
+/* My Team: editable move row (input must behave like the name column) */
+.myMoveRowEditable {
+  align-items: center;
+}
+
+/* Make the move input take full width and not shrink weirdly */
+.myMoveNameInput {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255, 255, 255, 0.92);
+  outline: none;
+}
+.myMoveNameInput::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+.myMoveNameInput:focus {
+  border-color: rgba(213, 184, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
 }
 
 /* ---------------- Stats bars ---------------- */
@@ -544,31 +642,50 @@ html, body, #root {
   gap: 8px;
 }
 
-.statLabel { font-size: 0.92rem; }
+.statLabel {
+  font-size: 0.92rem;
+}
 .statLabelBoosted {
   color: rgb(213, 184, 255);
   font-weight: 900;
   text-shadow: 0 0 18px rgba(213, 184, 255, 0.18);
 }
 
-.statValue { text-align: right; }
+.statValue {
+  text-align: right;
+}
 
 .statBarTrack {
   position: relative;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
-.statBarFill { height: 100%; border-radius: 999px; }
+.statBarFill {
+  height: 100%;
+  border-radius: 999px;
+}
 
-.stat-rDark  { background: rgba(140, 35, 35, 0.85); }
-.stat-rLight { background: rgba(220, 70, 70, 0.80); }
-.stat-orange { background: rgba(255, 160, 60, 0.80); }
-.stat-yellow { background: rgba(255, 220, 70, 0.85); }
-.stat-gLight { background: rgba(120, 255, 140, 0.70); }
-.stat-gDark  { background: rgba(27, 163, 156); }
+.stat-rDark {
+  background: rgba(140, 35, 35, 0.85);
+}
+.stat-rLight {
+  background: rgba(220, 70, 70, 0.8);
+}
+.stat-orange {
+  background: rgba(255, 160, 60, 0.8);
+}
+.stat-yellow {
+  background: rgba(255, 220, 70, 0.85);
+}
+.stat-gLight {
+  background: rgba(120, 255, 140, 0.7);
+}
+.stat-gDark {
+  background: rgba(27, 163, 156);
+}
 
 .statOverflow {
   position: absolute;
@@ -579,8 +696,13 @@ html, body, #root {
   mix-blend-mode: screen;
 }
 
-.statTableCompact { gap: 8px; margin-top: 4px; }
-.statTableCompact .statBarTrack { height: 9px; }
+.statTableCompact {
+  gap: 8px;
+  margin-top: 4px;
+}
+.statTableCompact .statBarTrack {
+  height: 9px;
+}
 
 /* ---------------- Type badges ---------------- */
 
@@ -593,50 +715,123 @@ html, body, #root {
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.4px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
 }
-.type-unknown { color: rgba(255,255,255,0.75); }
+.type-unknown {
+  color: rgba(255, 255, 255, 0.75);
+}
 
-.type-fire { background: rgba(255, 120, 90, 0.22); border-color: rgba(255, 120, 90, 0.35); }
-.type-water { background: rgba(80, 160, 255, 0.20); border-color: rgba(80, 160, 255, 0.35); }
-.type-grass { background: rgba(80, 220, 120, 0.18); border-color: rgba(80, 220, 120, 0.35); }
-.type-electric { background: rgba(255, 220, 80, 0.18); border-color: rgba(255, 220, 80, 0.35); }
-.type-ice { background: rgba(120, 220, 255, 0.16); border-color: rgba(120, 220, 255, 0.32); }
-.type-fighting { background: rgba(255, 120, 160, 0.16); border-color: rgba(255, 120, 160, 0.32); }
-.type-poison { background: rgba(200, 120, 255, 0.16); border-color: rgba(200, 120, 255, 0.32); }
-.type-ground { background: rgba(220, 190, 120, 0.16); border-color: rgba(220, 190, 120, 0.32); }
-.type-flying { background: rgba(160, 180, 255, 0.16); border-color: rgba(160, 180, 255, 0.32); }
-.type-psychic { background: rgba(255, 120, 220, 0.16); border-color: rgba(255, 120, 220, 0.32); }
-.type-bug { background: rgba(180, 220, 80, 0.16); border-color: rgba(180, 220, 80, 0.32); }
-.type-rock { background: rgba(200, 200, 140, 0.14); border-color: rgba(200, 200, 140, 0.30); }
-.type-ghost { background: rgba(160, 140, 255, 0.16); border-color: rgba(160, 140, 255, 0.32); }
-.type-dragon { background: rgba(120, 140, 255, 0.16); border-color: rgba(120, 140, 255, 0.32); }
-.type-dark { background: rgba(120, 120, 140, 0.16); border-color: rgba(120, 120, 140, 0.32); }
-.type-steel { background: rgba(180, 200, 220, 0.14); border-color: rgba(180, 200, 220, 0.30); }
-.type-fairy { background: rgba(255, 160, 210, 0.16); border-color: rgba(255, 160, 210, 0.32); }
-.type-normal { background: rgba(200, 200, 200, 0.12); border-color: rgba(200, 200, 200, 0.26); }
+.type-fire {
+  background: rgba(255, 120, 90, 0.22);
+  border-color: rgba(255, 120, 90, 0.35);
+}
+.type-water {
+  background: rgba(80, 160, 255, 0.2);
+  border-color: rgba(80, 160, 255, 0.35);
+}
+.type-grass {
+  background: rgba(80, 220, 120, 0.18);
+  border-color: rgba(80, 220, 120, 0.35);
+}
+.type-electric {
+  background: rgba(255, 220, 80, 0.18);
+  border-color: rgba(255, 220, 80, 0.35);
+}
+.type-ice {
+  background: rgba(120, 220, 255, 0.16);
+  border-color: rgba(120, 220, 255, 0.32);
+}
+.type-fighting {
+  background: rgba(255, 120, 160, 0.16);
+  border-color: rgba(255, 120, 160, 0.32);
+}
+.type-poison {
+  background: rgba(200, 120, 255, 0.16);
+  border-color: rgba(200, 120, 255, 0.32);
+}
+.type-ground {
+  background: rgba(220, 190, 120, 0.16);
+  border-color: rgba(220, 190, 120, 0.32);
+}
+.type-flying {
+  background: rgba(160, 180, 255, 0.16);
+  border-color: rgba(160, 180, 255, 0.32);
+}
+.type-psychic {
+  background: rgba(255, 120, 220, 0.16);
+  border-color: rgba(255, 120, 220, 0.32);
+}
+.type-bug {
+  background: rgba(180, 220, 80, 0.16);
+  border-color: rgba(180, 220, 80, 0.32);
+}
+.type-rock {
+  background: rgba(200, 200, 140, 0.14);
+  border-color: rgba(200, 200, 140, 0.3);
+}
+.type-ghost {
+  background: rgba(160, 140, 255, 0.16);
+  border-color: rgba(160, 140, 255, 0.32);
+}
+.type-dragon {
+  background: rgba(120, 140, 255, 0.16);
+  border-color: rgba(120, 140, 255, 0.32);
+}
+.type-dark {
+  background: rgba(120, 120, 140, 0.16);
+  border-color: rgba(120, 120, 140, 0.32);
+}
+.type-steel {
+  background: rgba(180, 200, 220, 0.14);
+  border-color: rgba(180, 200, 220, 0.3);
+}
+.type-fairy {
+  background: rgba(255, 160, 210, 0.16);
+  border-color: rgba(255, 160, 210, 0.32);
+}
+.type-normal {
+  background: rgba(200, 200, 200, 0.12);
+  border-color: rgba(200, 200, 200, 0.26);
+}
 
 /* ---------------- Responsive ---------------- */
 
 @media (max-width: 1500px) {
-  .poolGrid { grid-template-columns: repeat(4, minmax(240px, 1fr)); }
+  .poolGrid {
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+  }
 }
 
 @media (max-width: 1100px) {
-  .seenGrid { grid-template-columns: 1fr; }
-  .poolGrid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+  .seenGrid {
+    grid-template-columns: 1fr;
+  }
+  .poolGrid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
 }
 
 @media (max-width: 980px) {
-  .header { grid-template-columns: 1fr; gap: 10px; }
-  .trainerBar { grid-template-columns: 1fr; }
-  .trainerBarRight { justify-items: start; }
-  .counts { text-align: left; }
+  .header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .trainerBar {
+    grid-template-columns: 1fr;
+  }
+  .trainerBarRight {
+    justify-items: start;
+  }
+  .counts {
+    text-align: left;
+  }
 }
 
 @media (max-width: 620px) {
-  .poolGrid { grid-template-columns: 1fr; }
+  .poolGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .authorLink {
@@ -662,9 +857,9 @@ html, body, #root {
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
   outline: none;
   margin-top: 8px;
 }
@@ -685,14 +880,14 @@ html, body, #root {
 .slotClearBtn {
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-  color: rgba(255,255,255,0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.88);
   cursor: pointer;
 }
 
 .slotClearBtn:hover {
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .slotHint {
@@ -709,14 +904,14 @@ html, body, #root {
   justify-content: center;
   padding: 6px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .tabBtn {
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.85);
   padding: 8px 12px;
   border-radius: 999px;
   cursor: pointer;
@@ -724,12 +919,14 @@ html, body, #root {
   letter-spacing: 0.2px;
 }
 
-.tabBtn:hover { background: rgba(255,255,255,0.07); }
+.tabBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
 
 .tabBtnActive {
   border-color: rgba(213, 184, 255, 0.35);
-  background: rgba(213, 184, 255, 0.10);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+  background: rgba(213, 184, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
 }
 
 /* ---------------- My Team ---------------- */
@@ -742,20 +939,22 @@ html, body, #root {
 }
 
 @media (max-width: 1100px) {
-  .myTeamGrid { grid-template-columns: 1fr; }
+  .myTeamGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .mySlot {
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
   padding: 12px;
   min-width: 0;
 }
 
 .mySlotEmpty {
   border-style: dashed;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .mySlotTop {
@@ -778,35 +977,103 @@ html, body, #root {
 }
 
 @media (max-width: 620px) {
-  .myFormGrid { grid-template-columns: 1fr; }
+  .myFormGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.myField { display: grid; gap: 6px; }
+.myField {
+  display: grid;
+  gap: 6px;
+}
 
-.myLabel { font-size: 0.86rem; }
+.myLabel {
+  font-size: 0.86rem;
+}
 
 .myInput,
 .mySelect {
   width: 100%;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
   outline: none;
 }
 
 .myInput:focus,
 .mySelect:focus {
-  border-color: rgba(213, 184, 255, 0.40);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+  border-color: rgba(213, 184, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
 }
 
-.myMovesGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
+/* ---------------- My Team (NEW layout: controls + moves + stats) ---------------- */
+
+.myControlsBox {
+  padding: 10px;
 }
+
+.myControlsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 620px) {
+  .myControlsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mySearchBox {
+  position: relative;
+}
+
+/* IMPORTANT: avoid dropdown being clipped by parents */
+.mySlot,
+.seenSlot,
+.seenSlotEmpty,
+.panel,
+.miniBox,
+.searchBox,
+.mySearchBox,
+.miniAutocomplete {
+  overflow: visible;
+}
+
+/* Make the My Team filled body match the enemy style (stacked boxes) */
+.seenSlotBody {
+  display: grid;
+  gap: 10px;
+}
+
+/* Moves list spacing slightly larger (you asked) */
+.myMovesList {
+  gap: 10px; /* was 8px */
+}
+
+/* Autocomplete wrapper */
+.miniAutocomplete {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Move dropdown must overlay and not be cut */
+.moveDropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  margin-top: 0;
+  z-index: 250;
+  max-height: 260px;
+  overflow: auto;
+  border-radius: 12px;
+}
+
+/* ---------------- EV total bar ---------------- */
 
 .evHeaderRow {
   display: flex;
@@ -816,10 +1083,10 @@ html, body, #root {
 }
 
 .evBarTrack {
-  height: 10px;
+  height: 8px; /* slimmer */
   border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
@@ -829,34 +1096,95 @@ html, body, #root {
   opacity: 0.55;
 }
 
-.evGrid {
+/* ---------------- My Team stats table: STAT | IV | EV | BAR | FINAL ---------------- */
+
+.myStatsHeader {
   display: grid;
-  gap: 8px;
+  grid-template-columns: 44px 48px 56px 1fr 52px;
+  gap: 10px;
   margin-top: 10px;
+  opacity: 0.75;
+  font-size: 0.78rem;
+  letter-spacing: 0.25px;
 }
 
-.evRow {
+.myStatsGrid {
   display: grid;
-  grid-template-columns: 44px 44px 1fr;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.myStatRow {
+  display: grid;
+  grid-template-columns: 44px 48px 56px 1fr 52px;
   gap: 10px;
   align-items: center;
 }
 
-.evKey { font-weight: 900; }
-.evBase { text-align: right; }
+.myStatKey {
+  font-weight: 900;
+  font-size: 0.9rem;
+}
 
-.evInput {
+.myStatFinal {
+  text-align: right;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* EV/IV inputs: compact */
+.evInput,
+.ivInput {
   width: 100%;
-  padding: 8px 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.12);
+  min-width: 0;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(20, 26, 35, 0.95);
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
   outline: none;
+  font-size: 0.88rem;
 }
 
-.evInput:focus {
-  border-color: rgba(213, 184, 255, 0.40);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+.evInput:focus,
+.ivInput:focus {
+  border-color: rgba(213, 184, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.1);
 }
 
+/* ---------------- Type badges ---------------- (kept above) */
+
+/* ---------------- Responsive tweaks for My Team stats ---------------- */
+
+@media (max-width: 620px) {
+  .myStatsHeader {
+    grid-template-columns: 44px 44px 52px 1fr 48px;
+    gap: 8px;
+  }
+  .myStatRow {
+    grid-template-columns: 44px 44px 52px 1fr 48px;
+    gap: 8px;
+  }
+}
+
+/* =========================================================
+   Minor polish / consistency
+   ========================================================= */
+
+/* Ensure move rows don't force overflow */
+.moveRowSeen {
+  min-width: 0;
+}
+.moveRowSeen > * {
+  min-width: 0;
+}
+
+/* Move PA slightly softer */
+.movePA {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* Keep h3 compact */
+.miniBox .h3 {
+  margin-bottom: 6px;
+}
