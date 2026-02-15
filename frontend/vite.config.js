@@ -9,6 +9,7 @@ export default defineConfig({
       '/moves': 'http://127.0.0.1:8000',
       '/pools': 'http://127.0.0.1:8000',
       '/health': 'http://127.0.0.1:8000',
+      '/pokedex': 'http://127.0.0.1:8000',
     },
   },
 })

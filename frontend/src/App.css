@@ -699,3 +699,164 @@ html, body, #root {
   margin-top: 8px;
   font-size: 0.86rem;
 }
+
+/* ---------------- Tabs ---------------- */
+
+.tabsBar {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+}
+
+.tabBtn {
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.85);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.tabBtn:hover { background: rgba(255,255,255,0.07); }
+
+.tabBtnActive {
+  border-color: rgba(213, 184, 255, 0.35);
+  background: rgba(213, 184, 255, 0.10);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+}
+
+/* ---------------- My Team ---------------- */
+
+.myTeamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .myTeamGrid { grid-template-columns: 1fr; }
+}
+
+.mySlot {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  min-width: 0;
+}
+
+.mySlotEmpty {
+  border-style: dashed;
+  background: rgba(255,255,255,0.02);
+}
+
+.mySlotTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mySlotBody {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.myFormGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 620px) {
+  .myFormGrid { grid-template-columns: 1fr; }
+}
+
+.myField { display: grid; gap: 6px; }
+
+.myLabel { font-size: 0.86rem; }
+
+.myInput,
+.mySelect {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+}
+
+.myInput:focus,
+.mySelect:focus {
+  border-color: rgba(213, 184, 255, 0.40);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+}
+
+.myMovesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.evHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.evBarTrack {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  overflow: hidden;
+}
+
+.evBarFill {
+  height: 100%;
+  background: rgb(213, 184, 255);
+  opacity: 0.55;
+}
+
+.evGrid {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.evRow {
+  display: grid;
+  grid-template-columns: 44px 44px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.evKey { font-weight: 900; }
+.evBase { text-align: right; }
+
+.evInput {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+}
+
+.evInput:focus {
+  border-color: rgba(213, 184, 255, 0.40);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+}
+

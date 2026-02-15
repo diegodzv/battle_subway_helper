@@ -42,6 +42,10 @@ class Settings:
         self.POOLS_FILE = self.DATA_DIR / "subway_pools_set45.json"
         self.POOLS_INDEX_FILE = self.DATA_DIR / "subway_pools_index_set45.json"
 
+        # New: Gen5 pokedex files
+        self.POKEDEX_GEN5_FILE = self.DATA_DIR / "pokedex_gen5.json"
+        self.POKEDEX_GEN5_INDEX_FILE = self.DATA_DIR / "pokedex_gen5_index.json"
+
         # CORS (frontend dev)
         # Example: MB_CORS_ORIGINS="http://localhost:5173,http://127.0.0.1:5173"
         cors = os.environ.get("MB_CORS_ORIGINS", "")
@@ -148,12 +152,33 @@ def load_sets_index_global() -> Dict[str, str]:
     return {str(k): str(v) for k, v in idx.items()}
 
 
+@lru_cache(maxsize=1)
 def load_moves_items_cache() -> dict:
     path = settings.DATA_DIR / "moves_items_cache.json"
     require_file(path, "Run: python src/fetch_moves_items_pokeapi_cache.py")
     data = read_json(path)
     if not isinstance(data, dict):
         raise RuntimeError("Invalid moves_items_cache.json")
+    return data
+
+
+@lru_cache(maxsize=1)
+def load_pokedex_gen5_index() -> dict:
+    path = settings.POKEDEX_GEN5_INDEX_FILE
+    require_file(path, "Run: python src/fetch_pokedex_gen5_pokeapi.py")
+    data = read_json(path)
+    if not isinstance(data, dict):
+        raise RuntimeError("Invalid pokedex_gen5_index.json")
+    return data
+
+
+@lru_cache(maxsize=1)
+def load_pokedex_gen5_full() -> dict:
+    path = settings.POKEDEX_GEN5_FILE
+    require_file(path, "Run: python src/fetch_pokedex_gen5_pokeapi.py")
+    data = read_json(path)
+    if not isinstance(data, dict):
+        raise RuntimeError("Invalid pokedex_gen5.json")
     return data
 
 
@@ -224,6 +249,51 @@ def build_trainer_search_rows() -> List[dict]:
     return rows
 
 
+@lru_cache(maxsize=1)
+def build_pokedex_gen5_search_rows() -> List[dict]:
+    """
+    Build searchable rows from pokedex_gen5_index.json
+    Each row has: dex, slug, name_en, name_es, types, aliases[]
+    """
+    data = load_pokedex_gen5_index()
+    arr = data.get("pokemon", [])
+    if not isinstance(arr, list):
+        raise RuntimeError("Invalid pokedex_gen5_index.json: pokemon must be a list")
+
+    rows: List[dict] = []
+    for p in arr:
+        if not isinstance(p, dict):
+            continue
+        dex = p.get("dex")
+        slug = p.get("slug") or ""
+        name_en = p.get("name_en") or slug
+        name_es = p.get("name_es")
+        types = p.get("types") if isinstance(p.get("types"), list) else []
+
+        aliases: List[str] = []
+        if isinstance(slug, str) and slug.strip():
+            aliases.append(normalize(slug))
+        if isinstance(name_en, str) and name_en.strip():
+            aliases.append(normalize(name_en))
+        if isinstance(name_es, str) and name_es.strip():
+            aliases.append(normalize(name_es))
+
+        aliases = list(dict.fromkeys([a for a in aliases if a]))
+
+        if isinstance(dex, int):
+            rows.append(
+                {
+                    "dex": dex,
+                    "slug": slug,
+                    "name_en": name_en,
+                    "name_es": name_es if isinstance(name_es, str) else None,
+                    "types": types,
+                    "aliases": aliases,
+                }
+            )
+    return rows
+
+
 # ----------------------------
 # API Models
 # ----------------------------
@@ -244,10 +314,15 @@ class TrainerDetail(BaseModel):
     pool_id: str
     pool_size: int
     sets: List[dict]
-
-    # Optional extra fields (won't break older clients)
     names: Optional[Dict[str, Optional[str]]] = None
     classes: Optional[Dict[str, Optional[str]]] = None
+
+class PokedexSearchResult(BaseModel):
+    dex: int
+    slug: str
+    name_en: str
+    name_es: Optional[str] = None
+    types: List[str] = []
 
 
 # ----------------------------
@@ -274,6 +349,54 @@ def health():
 @app.get("/moves/cache")
 def moves_cache():
     return load_moves_items_cache()
+
+
+@app.get("/pokedex/gen5/index")
+def pokedex_gen5_index():
+    # returns full index (649 entries) – ok for offline preload
+    return load_pokedex_gen5_index()
+
+
+@app.get("/pokedex/gen5/search", response_model=List[PokedexSearchResult])
+def pokedex_gen5_search(q: str = Query(..., min_length=1), limit: int = 20):
+    nq = normalize(q)
+    rows = build_pokedex_gen5_search_rows()
+    lim = max(1, min(limit, 50))
+
+    prefix = [r for r in rows if any(a.startswith(nq) for a in r["aliases"])]
+    prefix_ids = {r["dex"] for r in prefix}
+
+    contains: List[dict] = []
+    if len(prefix) < lim:
+        for r in rows:
+            if r["dex"] in prefix_ids:
+                continue
+            if any(nq in a for a in r["aliases"]):
+                contains.append(r)
+
+    matches = (prefix + contains)[:lim]
+    return [
+        PokedexSearchResult(
+            dex=m["dex"],
+            slug=m["slug"],
+            name_en=m["name_en"],
+            name_es=m.get("name_es"),
+            types=m.get("types") or [],
+        )
+        for m in matches
+    ]
+
+
+@app.get("/pokedex/gen5/{dex}")
+def pokedex_gen5_detail(dex: int):
+    data = load_pokedex_gen5_full()
+    pokemon = data.get("pokemon", {})
+    if not isinstance(pokemon, dict):
+        raise HTTPException(status_code=500, detail="Invalid pokedex_gen5.json structure")
+    entry = pokemon.get(str(dex))
+    if not isinstance(entry, dict) or entry.get("not_found") is True:
+        raise HTTPException(status_code=404, detail="dex not found")
+    return entry
 
 
 @app.get("/trainers/search", response_model=List[SearchResult])

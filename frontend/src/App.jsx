@@ -52,23 +52,15 @@ function StatRow({ label, value, max = 200, compact = false, boosted = false }) 
   // Overflow: for v > max, overlay from left with (v-max)/max, capped at 100%.
   // Example: v=220 -> overflowPct=10; v=210 -> 5; v=400 -> 100
   const overflowPct = v > max ? Math.round(clamp01((v - max) / max) * 100) : 0;
-
   const tierClass = getTierClass(v);
 
   return (
     <div className={`statLine ${compact ? "statLineCompact" : ""}`}>
-      <div className={`statLabel muted ${boosted ? "statLabelBoosted" : ""}`}>
-        {label}
-      </div>
-
+      <div className={`statLabel muted ${boosted ? "statLabelBoosted" : ""}`}>{label}</div>
       <div className="statBarTrack" aria-label={`${label} ${v}`}>
         <div className={`statBarFill ${tierClass}`} style={{ width: `${basePct}%` }} />
         {overflowPct > 0 ? (
-          <div
-            className="statOverflow"
-            style={{ width: `${overflowPct}%` }}
-            title={`Overflow +${v - max}`}
-          />
+          <div className="statOverflow" style={{ width: `${overflowPct}%` }} title={`Overflow +${v - max}`} />
         ) : null}
       </div>
       <div className="statValue mono">{typeof value === "number" ? value : "-"}</div>
@@ -100,7 +92,6 @@ function formatBPAcc(moveEntry) {
   // Status or unknown -> dashes
   if (!moveEntry) return "— / —";
   if (moveEntry.damage_class === "status") return "— / —";
-
   const bp = typeof moveEntry.power === "number" ? String(moveEntry.power) : "—";
   const acc = typeof moveEntry.accuracy === "number" ? String(moveEntry.accuracy) : "—";
   return `${bp} / ${acc}`;
@@ -114,12 +105,8 @@ function formatBPAcc(moveEntry) {
  */
 function TrainerNamesLine({ trainer }) {
   if (!trainer) return null;
-
   const names = trainer?.names && typeof trainer.names === "object" ? trainer.names : null;
-
-  // Desired order. We skip "es" because it's already the big title.
   const order = ["en", "de", "fr", "it", "ja", "ko"];
-
   const parts = [];
 
   if (names) {
@@ -162,8 +149,7 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
         <div className="setTileTitle">
           <div className="name">{display}</div>
           <div className="meta muted">
-            <span className="mono">#{set.global_id}</span> · Dex{" "}
-            <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
+            <span className="mono">#{set.global_id}</span> · Dex <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
             <span className="mono">{set.nature}</span>
           </div>
         </div>
@@ -246,6 +232,384 @@ function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, sho
   );
 }
 
+/* ---------------- My Team (Gen5) ---------------- */
+
+const EV_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"];
+const EV_LABEL = { hp: "HP", atk: "Atk", def: "Def", spa: "SpA", spd: "SpD", spe: "Spe" };
+
+function clampInt(n, lo, hi) {
+  const x = Number.isFinite(n) ? n : 0;
+  return Math.max(lo, Math.min(hi, Math.trunc(x)));
+}
+
+function evTotal(evs) {
+  return EV_KEYS.reduce((acc, k) => acc + (typeof evs?.[k] === "number" ? evs[k] : 0), 0);
+}
+
+function normalizeMoveText(s) {
+  return (s ?? "").toString();
+}
+
+function MyTeamSlotEmpty({ index, query, setQuery, suggestions, onPick, onClear }) {
+  return (
+    <div className="mySlot mySlotEmpty">
+      <div className="mySlotTop">
+        <div className="teamSlotIndex mono">#{index + 1}</div>
+        <div className="muted" style={{ fontWeight: 800 }}>
+          Pick a Pokémon
+        </div>
+        {query ? (
+          <button className="slotClearBtn" onClick={onClear} title="Clear">
+            Clear ✕
+          </button>
+        ) : null}
+      </div>
+
+      <div className="searchBox" style={{ marginTop: 8 }}>
+        <input
+          className="slotSearchInput"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder='Type a Pokémon (Gen 1–5) e.g. "Gyarados", "Hydreigon"...'
+        />
+        {suggestions.length > 0 ? (
+          <div className="dropdown">
+            {suggestions.map((s) => (
+              <button key={s.dex} className="dropdownItem" onClick={() => onPick(s.dex)}>
+                <div className="dropdownName">{s.name_en}</div>
+                <div className="dropdownMeta muted">
+                  <span className="mono">#{s.dex}</span>
+                  {Array.isArray(s.types) && s.types.length ? (
+                    <>
+                      {" "}
+                      ·{" "}
+                      <span className="mono">
+                        {s.types.map((t) => t.toUpperCase()).join("/")}
+                      </span>
+                    </>
+                  ) : null}
+                </div>
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+
+      <div className="muted slotHint">This is your team. It won’t affect the enemy tab.</div>
+    </div>
+  );
+}
+
+function MyTeamSlotFilled({ index, mon, onRemove, onUpdate }) {
+  const name = mon?.name_en ?? mon?.slug ?? `#${mon?.dex ?? "?"}`;
+  const types = Array.isArray(mon?.types) ? mon.types : [];
+  const abilities = Array.isArray(mon?.abilities) ? mon.abilities : [];
+
+  const evs = mon?.evs ?? {};
+  const total = evTotal(evs);
+  const totalPct = Math.round((Math.min(510, total) / 510) * 100);
+
+  function setEv(key, valueRaw) {
+    const current = { ...(mon.evs ?? {}) };
+    const nextVal = clampInt(parseInt(valueRaw, 10), 0, 252);
+
+    current[key] = nextVal;
+
+    // cap total 510 by reducing the changed stat if needed
+    let t = evTotal(current);
+    if (t > 510) {
+      const overflow = t - 510;
+      current[key] = Math.max(0, current[key] - overflow);
+      t = evTotal(current);
+    }
+
+    onUpdate({
+      ...mon,
+      evs: current,
+    });
+  }
+
+  return (
+    <div className="mySlot">
+      <div className="seenSlotHeader">
+        <div style={{ display: "flex", gap: 10, alignItems: "center", minWidth: 0 }}>
+          <div className="teamSlotIndex mono">#{index + 1}</div>
+          <Sprite url={mon?.sprite_url} alt={name} />
+          <div style={{ minWidth: 0 }}>
+            <div className="h2" style={{ margin: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              {name}
+            </div>
+            <div className="muted" style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+              <span className="mono">#{mon?.dex}</span>
+              {types.map((t) => (
+                <TypeBadge key={t} type={t} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <button className="chip chipDanger" onClick={onRemove} title="Remove from My Team">
+          Remove ✕
+        </button>
+      </div>
+
+      <div className="mySlotBody">
+        <div className="miniBox">
+          <div className="h3">Set</div>
+
+          <div className="myFormGrid">
+            <label className="myField">
+              <div className="muted myLabel">Ability</div>
+              <select
+                className="mySelect"
+                value={mon?.ability ?? ""}
+                onChange={(e) => onUpdate({ ...mon, ability: e.target.value })}
+              >
+                <option value="">(choose)</option>
+                {abilities.map((a) => (
+                  <option key={a.name} value={a.name}>
+                    {a.name}
+                    {a.is_hidden ? " (hidden)" : ""}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="myField">
+              <div className="muted myLabel">Item</div>
+              <input
+                className="myInput"
+                value={mon?.item ?? ""}
+                onChange={(e) => onUpdate({ ...mon, item: e.target.value })}
+                placeholder='e.g. "Choice Scarf"'
+              />
+            </label>
+          </div>
+
+          <div style={{ marginTop: 10 }}>
+            <div className="muted myLabel">Moves (free text)</div>
+            <div className="myMovesGrid">
+              {[0, 1, 2, 3].map((i) => (
+                <input
+                  key={i}
+                  className="myInput"
+                  value={mon?.moves?.[i] ?? ""}
+                  onChange={(e) => {
+                    const next = Array.isArray(mon.moves) ? [...mon.moves] : ["", "", "", ""];
+                    next[i] = normalizeMoveText(e.target.value);
+                    onUpdate({ ...mon, moves: next });
+                  }}
+                  placeholder={`Move ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="miniBox">
+          <div className="h3">Base stats + EVs</div>
+
+          <div className="evHeaderRow">
+            <div className="muted mono">EV total</div>
+            <div className="mono">{Math.min(510, total)} / 510</div>
+          </div>
+          <div className="evBarTrack" title="EV total (max 510)">
+            <div className="evBarFill" style={{ width: `${totalPct}%` }} />
+          </div>
+
+          <div className="evGrid">
+            {EV_KEYS.map((k) => (
+              <div key={k} className="evRow">
+                <div className="mono evKey">{EV_LABEL[k]}</div>
+                <div className="muted mono evBase">{mon?.base_stats?.[k] ?? "-"}</div>
+                <input
+                  className="evInput mono"
+                  type="number"
+                  min={0}
+                  max={252}
+                  step={4}
+                  value={typeof evs?.[k] === "number" ? evs[k] : 0}
+                  onChange={(e) => setEv(k, e.target.value)}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="muted" style={{ marginTop: 8, fontSize: "0.86rem" }}>
+            EVs are capped at 510 automatically. (We’ll refine UI later.)
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MyTeamTab({ myTeam, setMyTeam }) {
+  const [slotQueries, setSlotQueries] = useState(["", "", "", ""]);
+  const [slotSuggestions, setSlotSuggestions] = useState([[], [], [], []]);
+
+  // debounced per slot
+  const debounced = [
+    useDebouncedValue(slotQueries[0], 120),
+    useDebouncedValue(slotQueries[1], 120),
+    useDebouncedValue(slotQueries[2], 120),
+    useDebouncedValue(slotQueries[3], 120),
+  ];
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function runSlot(i) {
+      const q = (debounced[i] ?? "").trim();
+      if (!q) {
+        if (!cancelled) {
+          setSlotSuggestions((prev) => {
+            const next = [...prev];
+            next[i] = [];
+            return next;
+          });
+        }
+        return;
+      }
+
+      try {
+        const res = await fetch(`/pokedex/gen5/search?q=${encodeURIComponent(q)}&limit=12`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        if (!cancelled) {
+          setSlotSuggestions((prev) => {
+            const next = [...prev];
+            next[i] = Array.isArray(data) ? data : [];
+            return next;
+          });
+        }
+      } catch {
+        if (!cancelled) {
+          setSlotSuggestions((prev) => {
+            const next = [...prev];
+            next[i] = [];
+            return next;
+          });
+        }
+      }
+    }
+
+    for (let i = 0; i < 4; i++) runSlot(i);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [debounced[0], debounced[1], debounced[2], debounced[3]]);
+
+  async function pickPokemon(slotIndex, dex) {
+    try {
+      const res = await fetch(`/pokedex/gen5/${dex}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const entry = await res.json();
+
+      const mon = {
+        dex: entry.dex,
+        slug: entry.slug,
+        name_en: entry.name_en,
+        name_es: entry.name_es,
+        types: entry.types ?? [],
+        abilities: entry.abilities ?? [],
+        base_stats: entry.base_stats ?? {},
+        sprite_url: entry.sprite_url ?? null,
+        ability: "",
+        item: "",
+        moves: ["", "", "", ""],
+        evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
+      };
+
+      setMyTeam((prev) => {
+        const next = [...prev];
+        next[slotIndex] = mon;
+        return next;
+      });
+
+      setSlotQueries((prev) => {
+        const next = [...prev];
+        next[slotIndex] = "";
+        return next;
+      });
+
+      setSlotSuggestions((prev) => {
+        const next = [...prev];
+        next[slotIndex] = [];
+        return next;
+      });
+    } catch {
+      alert("Could not load pokedex entry.");
+    }
+  }
+
+  function removePokemon(slotIndex) {
+    setMyTeam((prev) => {
+      const next = [...prev];
+      next[slotIndex] = null;
+      return next;
+    });
+  }
+
+  function updatePokemon(slotIndex, mon) {
+    setMyTeam((prev) => {
+      const next = [...prev];
+      next[slotIndex] = mon;
+      return next;
+    });
+  }
+
+  return (
+    <div className="layoutNew">
+      <section className="panel">
+        <div className="panelTitle">
+          <div className="h2">My Team</div>
+          <div className="muted">Build your own 4-Pokémon team (Gen 5 format)</div>
+        </div>
+
+        <div className="myTeamGrid">
+          {myTeam.map((mon, idx) =>
+            mon ? (
+              <MyTeamSlotFilled
+                key={idx}
+                index={idx}
+                mon={mon}
+                onRemove={() => removePokemon(idx)}
+                onUpdate={(m) => updatePokemon(idx, m)}
+              />
+            ) : (
+              <MyTeamSlotEmpty
+                key={idx}
+                index={idx}
+                query={slotQueries[idx]}
+                setQuery={(v) =>
+                  setSlotQueries((prev) => {
+                    const next = [...prev];
+                    next[idx] = v;
+                    return next;
+                  })
+                }
+                suggestions={slotSuggestions[idx]}
+                onPick={(dex) => pickPokemon(idx, dex)}
+                onClear={() =>
+                  setSlotQueries((prev) => {
+                    const next = [...prev];
+                    next[idx] = "";
+                    return next;
+                  })
+                }
+              />
+            )
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+/* ---------------- Enemy Trainer tab (tu app actual) ---------------- */
+
 function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
   return (
     <div className="seenSlotEmpty">
@@ -269,9 +633,7 @@ function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
         placeholder='Type a Pokémon here (e.g. "Gyarados", "Hydreigon-4")...'
       />
 
-      <div className="muted slotHint">
-        Tip: this only filters the pool view. Confirming a set resets the filter.
-      </div>
+      <div className="muted slotHint">Tip: this only filters the pool view. Confirming a set resets the filter.</div>
     </div>
   );
 }
@@ -279,12 +641,7 @@ function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
 function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSearch, moveDex }) {
   if (!set) {
     return (
-      <SeenSlotEmptySearch
-        index={index}
-        query={searchQuery}
-        setQuery={setSearchQuery}
-        onClear={onClearSearch}
-      />
+      <SeenSlotEmptySearch index={index} query={searchQuery} setQuery={setSearchQuery} onClear={onClearSearch} />
     );
   }
 
@@ -299,25 +656,12 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
           <div style={{ minWidth: 0 }}>
             <div
               className="h2"
-              style={{
-                margin: 0,
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              }}
+              style={{ margin: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}
             >
               {display}
             </div>
-            <div
-              className="muted"
-              style={{
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              }}
-            >
-              <span className="mono">#{set.global_id}</span> · Dex{" "}
-              <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
+            <div className="muted" style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              <span className="mono">#{set.global_id}</span> · Dex <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
               <span className="mono">{set.nature}</span>
             </div>
 
@@ -329,11 +673,7 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
           </div>
         </div>
 
-        <button
-          className="chip chipDanger"
-          onClick={() => onRemove(set.global_id)}
-          title="Remove from seen"
-        >
+        <button className="chip chipDanger" onClick={() => onRemove(set.global_id)} title="Remove from seen">
           Remove ✕
         </button>
       </div>
@@ -348,12 +688,8 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
           <ul className="moves">
             {(Array.isArray(set.moves_meta) ? set.moves_meta : []).map((m) => {
               const label = prettyMoveNameFromSlug(m.slug) ?? m.name;
-
               const entry =
-                m?.slug && moveDex && Object.prototype.hasOwnProperty.call(moveDex, m.slug)
-                  ? moveDex[m.slug]
-                  : null;
-
+                m?.slug && moveDex && Object.prototype.hasOwnProperty.call(moveDex, m.slug) ? moveDex[m.slug] : null;
               const bpacc = formatBPAcc(entry);
 
               return (
@@ -383,7 +719,130 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
   );
 }
 
+function EnemyTrainerTab(props) {
+  const {
+    q,
+    setQ,
+    debouncedQ,
+    suggestions,
+    setSuggestions,
+    isSearching,
+    setIsSearching,
+    trainer,
+    setTrainer,
+    confirmed,
+    setConfirmed,
+    discarded,
+    setDiscarded,
+    showDiscarded,
+    setShowDiscarded,
+    showStatsInPool,
+    setShowStatsInPool,
+    pokemonFilter,
+    setPokemonFilter,
+    debouncedPokemonFilter,
+    moveDex,
+    poolSets,
+    setById,
+    poolSortedDex,
+    visiblePoolBase,
+    visiblePool,
+    confirmedSets,
+    loadTrainer,
+    resetAll,
+    toggleDiscard,
+    confirmSet,
+    removeConfirmed,
+  } = props;
+
+  const trainerTitle = trainer?.display_name ?? trainer?.name_en ?? "";
+  const total = poolSets.length;
+  const confirmedCount = confirmed.length;
+  const discardedCount = discarded.size;
+  const shownCount = visiblePool.length;
+
+  return (
+    <>
+      <main className="content">
+        {!trainer ? (
+          <div className="empty">
+            <div className="emptyTitle">Select a trainer</div>
+            <div className="muted">Type above to autocomplete and pick one.</div>
+          </div>
+        ) : (
+          <div className="layoutNew">
+            <section className="panel">
+              <div className="panelTitle">
+                <div className="h2">Seen ({confirmed.length}/4)</div>
+                <div className="muted">Confirm sets to fill slots 1–4</div>
+              </div>
+
+              <div className="seenGrid">
+                {confirmedSets.map((s, idx) => (
+                  <SeenSlot
+                    key={idx}
+                    set={s}
+                    index={idx}
+                    onRemove={removeConfirmed}
+                    searchQuery={pokemonFilter}
+                    setSearchQuery={setPokemonFilter}
+                    onClearSearch={() => setPokemonFilter("")}
+                    moveDex={moveDex}
+                  />
+                ))}
+              </div>
+
+              <div className="muted" style={{ marginTop: 10 }}>
+                Tip: confirming a set auto-discards other variants of the same species, and also applies Item Clause (same
+                item can’t appear twice).
+              </div>
+            </section>
+
+            <section className="panel">
+              <div className="panelTitle">
+                <div className="h2">Pool</div>
+                <div className="muted">
+                  Use ✕ to discard and ✓ to confirm.
+                  {debouncedPokemonFilter.trim() ? (
+                    <>
+                      {" "}
+                      · filtering by <span className="mono">{debouncedPokemonFilter.trim()}</span>
+                    </>
+                  ) : null}
+                </div>
+              </div>
+
+              <div className="poolGrid">
+                {visiblePool.map((s) => (
+                  <SetTile
+                    key={s.global_id}
+                    set={s}
+                    isDiscarded={discarded.has(s.global_id)}
+                    onDiscardToggle={toggleDiscard}
+                    onConfirm={confirmSet}
+                    canConfirm={confirmed.length < 4}
+                    showStats={showStatsInPool}
+                  />
+                ))}
+              </div>
+            </section>
+          </div>
+        )}
+      </main>
+
+      <footer className="footer muted">Confirming auto-discards other variants of the same species + Item Clause.</footer>
+    </>
+  );
+}
+
 export default function App() {
+  // Tabs
+  const [activeTab, setActiveTab] = useState("enemy"); // "enemy" | "myteam"
+
+  // My Team state (persist across tab switches)
+  const [myTeam, setMyTeam] = useState([null, null, null, null]);
+
+  // Enemy Trainer state (tu app actual)
   const [q, setQ] = useState("");
   const debouncedQ = useDebouncedValue(q, 150);
   const [suggestions, setSuggestions] = useState([]);
@@ -560,7 +1019,6 @@ export default function App() {
 
     // reset the pool filter after confirming
     setPokemonFilter("");
-
     setConfirmed((prev) => [...prev, set.global_id]);
 
     // Auto-discard rules:
@@ -574,7 +1032,6 @@ export default function App() {
       for (const s of poolSets) {
         if (s.global_id === set.global_id) continue;
 
-        // discard other variants of same species
         if (s.species === confirmedSpecies) {
           next.add(s.global_id);
           continue;
@@ -597,178 +1054,161 @@ export default function App() {
 
   const trainerTitle = trainer?.display_name ?? trainer?.name_en ?? "";
 
-  const total = poolSets.length;
-  const confirmedCount = confirmed.length;
-  const discardedCount = discarded.size;
-  const shownCount = visiblePool.length;
-
   return (
     <div className="page">
-      <header className={`header ${trainer ? "headerWithTrainer" : ""}`}>
+      <header className={`header ${trainer && activeTab === "enemy" ? "headerWithTrainer" : ""}`}>
         <div className="brand">
           <div className="brandTitle">Battle Subway Helper (B2/W2)</div>
           <div className="muted">
             By{" "}
-            <a
-              href="https://github.com/diegodzv"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="authorLink"
-            >
+            <a href="https://github.com/diegodzv" target="_blank" rel="noopener noreferrer" className="authorLink">
               @diegodzv
             </a>
           </div>
         </div>
 
-        <div className="searchBox">
-          <input
-            className="searchInput"
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder='Search trainer / Buscar entrenador (e.g. "clerk", "oficinista")...'
-          />
-          {isSearching ? <div className="spinner" title="Searching..." /> : null}
-
-          {suggestions.length > 0 ? (
-            <div className="dropdown">
-              {suggestions.map((s) => (
-                <button
-                  key={s.trainer_id}
-                  className="dropdownItem"
-                  onClick={() => {
-                    loadTrainer(s.trainer_id);
-                    setSuggestions([]);
-                  }}
-                >
-                  <div className="dropdownName">{s.display_name ?? s.name_en}</div>
-                  <div className="dropdownMeta muted">
-                    {s.name_es ? (
-                      <>
-                        <span className="mono">{s.name_en}</span> · {s.section}
-                      </>
-                    ) : (
-                      <>{s.section}</>
-                    )}
-                  </div>
-                </button>
-              ))}
-            </div>
-          ) : null}
+        {/* Tabs */}
+        <div className="tabsBar" role="tablist" aria-label="App tabs">
+          <button
+            className={`tabBtn ${activeTab === "myteam" ? "tabBtnActive" : ""}`}
+            onClick={() => setActiveTab("myteam")}
+            role="tab"
+            aria-selected={activeTab === "myteam"}
+          >
+            My Team
+          </button>
+          <button
+            className={`tabBtn ${activeTab === "enemy" ? "tabBtnActive" : ""}`}
+            onClick={() => setActiveTab("enemy")}
+            role="tab"
+            aria-selected={activeTab === "enemy"}
+          >
+            Enemy Trainer
+          </button>
         </div>
 
-        <button className="ghostBtn" onClick={resetAll}>
-          Reset
-        </button>
+        {/* Right area */}
+        <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", alignItems: "center" }}>
+          <button className="ghostBtn" onClick={resetAll} title="Reset enemy trainer state">
+            Reset Enemy
+          </button>
+        </div>
 
-        {trainer ? (
-          <div className="trainerBar">
-            <div className="trainerBarLeft">
-              <div className="h1">{trainerTitle}</div>
-              <TrainerNamesLine trainer={trainer} />
+        {/* Enemy header extra row */}
+        {activeTab === "enemy" ? (
+          <>
+            <div className="searchBox" style={{ gridColumn: "1 / -1" }}>
+              <input
+                className="searchInput"
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder='Search trainer / Buscar entrenador (e.g. "clerk", "oficinista")...'
+              />
+              {isSearching ? <div className="spinner" title="Searching..." /> : null}
+
+              {suggestions.length > 0 ? (
+                <div className="dropdown">
+                  {suggestions.map((s) => (
+                    <button
+                      key={s.trainer_id}
+                      className="dropdownItem"
+                      onClick={() => {
+                        loadTrainer(s.trainer_id);
+                        setSuggestions([]);
+                      }}
+                    >
+                      <div className="dropdownName">{s.display_name ?? s.name_en}</div>
+                      <div className="dropdownMeta muted">
+                        {s.name_es ? (
+                          <>
+                            <span className="mono">{s.name_en}</span> · {s.section}
+                          </>
+                        ) : (
+                          <>{s.section}</>
+                        )}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              ) : null}
             </div>
 
-            <div className="trainerBarRight">
-              <div className="togglesRow">
-                <label className="toggle" title="Show / hide discarded sets">
-                  <input
-                    type="checkbox"
-                    checked={showDiscarded}
-                    onChange={(e) => setShowDiscarded(e.target.checked)}
-                  />
-                  <span>Show discarded</span>
-                </label>
+            {trainer ? (
+              <div className="trainerBar">
+                <div className="trainerBarLeft">
+                  <div className="h1">{trainerTitle}</div>
+                  <TrainerNamesLine trainer={trainer} />
+                </div>
 
-                <label className="toggle" title="Show / hide stats inside pool tiles">
-                  <input
-                    type="checkbox"
-                    checked={showStatsInPool}
-                    onChange={(e) => setShowStatsInPool(e.target.checked)}
-                  />
-                  <span>Show stats in pool</span>
-                </label>
-              </div>
+                <div className="trainerBarRight">
+                  <div className="togglesRow">
+                    <label className="toggle" title="Show / hide discarded sets">
+                      <input type="checkbox" checked={showDiscarded} onChange={(e) => setShowDiscarded(e.target.checked)} />
+                      <span>Show discarded</span>
+                    </label>
 
-              <div className="counts muted">
-                shown <span className="mono">{shownCount}</span> · confirmed{" "}
-                <span className="mono">{confirmedCount}</span> · discarded{" "}
-                <span className="mono">{discardedCount}</span> · total{" "}
-                <span className="mono">{total}</span>
+                    <label className="toggle" title="Show / hide stats inside pool tiles">
+                      <input
+                        type="checkbox"
+                        checked={showStatsInPool}
+                        onChange={(e) => setShowStatsInPool(e.target.checked)}
+                      />
+                      <span>Show stats in pool</span>
+                    </label>
+                  </div>
+
+                  <div className="counts muted">
+                    shown <span className="mono">{visiblePool.length}</span> · confirmed{" "}
+                    <span className="mono">{confirmed.length}</span> · discarded{" "}
+                    <span className="mono">{discarded.size}</span> · total <span className="mono">{poolSets.length}</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            ) : null}
+          </>
         ) : null}
       </header>
 
-      <main className="content">
-        {!trainer ? (
-          <div className="empty">
-            <div className="emptyTitle">Select a trainer</div>
-            <div className="muted">Type above to autocomplete and pick one.</div>
-          </div>
-        ) : (
-          <div className="layoutNew">
-            <section className="panel">
-              <div className="panelTitle">
-                <div className="h2">Seen ({confirmed.length}/4)</div>
-                <div className="muted">Confirm sets to fill slots 1–4</div>
-              </div>
-
-              <div className="seenGrid">
-                {confirmedSets.map((s, idx) => (
-                  <SeenSlot
-                    key={idx}
-                    set={s}
-                    index={idx}
-                    onRemove={removeConfirmed}
-                    searchQuery={pokemonFilter}
-                    setSearchQuery={setPokemonFilter}
-                    onClearSearch={() => setPokemonFilter("")}
-                    moveDex={moveDex}
-                  />
-                ))}
-              </div>
-
-              <div className="muted" style={{ marginTop: 10 }}>
-                Tip: confirming a set auto-discards other variants of the same species, and also applies Item
-                Clause (same item can’t appear twice).
-              </div>
-            </section>
-
-            <section className="panel">
-              <div className="panelTitle">
-                <div className="h2">Pool</div>
-                <div className="muted">
-                  Use ✕ to discard and ✓ to confirm.
-                  {debouncedPokemonFilter.trim() ? (
-                    <>
-                      {" "}· filtering by{" "}
-                      <span className="mono">{debouncedPokemonFilter.trim()}</span>
-                    </>
-                  ) : null}
-                </div>
-              </div>
-
-              <div className="poolGrid">
-                {visiblePool.map((s) => (
-                  <SetTile
-                    key={s.global_id}
-                    set={s}
-                    isDiscarded={discarded.has(s.global_id)}
-                    onDiscardToggle={toggleDiscard}
-                    onConfirm={confirmSet}
-                    canConfirm={confirmed.length < 4}
-                    showStats={showStatsInPool}
-                  />
-                ))}
-              </div>
-            </section>
-          </div>
-        )}
-      </main>
-
-      <footer className="footer muted">
-        Confirming auto-discards other variants of the same species + Item Clause.
-      </footer>
+      {activeTab === "myteam" ? (
+        <main className="content">
+          <MyTeamTab myTeam={myTeam} setMyTeam={setMyTeam} />
+        </main>
+      ) : (
+        <EnemyTrainerTab
+          q={q}
+          setQ={setQ}
+          debouncedQ={debouncedQ}
+          suggestions={suggestions}
+          setSuggestions={setSuggestions}
+          isSearching={isSearching}
+          setIsSearching={setIsSearching}
+          trainer={trainer}
+          setTrainer={setTrainer}
+          confirmed={confirmed}
+          setConfirmed={setConfirmed}
+          discarded={discarded}
+          setDiscarded={setDiscarded}
+          showDiscarded={showDiscarded}
+          setShowDiscarded={setShowDiscarded}
+          showStatsInPool={showStatsInPool}
+          setShowStatsInPool={setShowStatsInPool}
+          pokemonFilter={pokemonFilter}
+          setPokemonFilter={setPokemonFilter}
+          debouncedPokemonFilter={debouncedPokemonFilter}
+          moveDex={moveDex}
+          poolSets={poolSets}
+          setById={setById}
+          poolSortedDex={poolSortedDex}
+          visiblePoolBase={visiblePoolBase}
+          visiblePool={visiblePool}
+          confirmedSets={confirmedSets}
+          loadTrainer={loadTrainer}
+          resetAll={resetAll}
+          toggleDiscard={toggleDiscard}
+          confirmSet={confirmSet}
+          removeConfirmed={removeConfirmed}
+        />
+      )}
     </div>
   );
 }

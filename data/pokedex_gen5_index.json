@@ -1,0 +1,6160 @@
+{
+  "meta": {
+    "source": "pokedex_gen5.json",
+    "updated_at_unix": 1771150404,
+    "count": 649,
+    "max_id": 649
+  },
+  "pokemon": [
+    {
+      "dex": 1,
+      "slug": "bulbasaur",
+      "name_en": "Bulbasaur",
+      "name_es": "Bulbasaur",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 2,
+      "slug": "ivysaur",
+      "name_en": "Ivysaur",
+      "name_es": "Ivysaur",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 3,
+      "slug": "venusaur",
+      "name_en": "Venusaur",
+      "name_es": "Venusaur",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 4,
+      "slug": "charmander",
+      "name_en": "Charmander",
+      "name_es": "Charmander",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 5,
+      "slug": "charmeleon",
+      "name_en": "Charmeleon",
+      "name_es": "Charmeleon",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 6,
+      "slug": "charizard",
+      "name_en": "Charizard",
+      "name_es": "Charizard",
+      "types": [
+        "fire",
+        "flying"
+      ]
+    },
+    {
+      "dex": 7,
+      "slug": "squirtle",
+      "name_en": "Squirtle",
+      "name_es": "Squirtle",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 8,
+      "slug": "wartortle",
+      "name_en": "Wartortle",
+      "name_es": "Wartortle",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 9,
+      "slug": "blastoise",
+      "name_en": "Blastoise",
+      "name_es": "Blastoise",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 10,
+      "slug": "caterpie",
+      "name_en": "Caterpie",
+      "name_es": "Caterpie",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 11,
+      "slug": "metapod",
+      "name_en": "Metapod",
+      "name_es": "Metapod",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 12,
+      "slug": "butterfree",
+      "name_en": "Butterfree",
+      "name_es": "Butterfree",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 13,
+      "slug": "weedle",
+      "name_en": "Weedle",
+      "name_es": "Weedle",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 14,
+      "slug": "kakuna",
+      "name_en": "Kakuna",
+      "name_es": "Kakuna",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 15,
+      "slug": "beedrill",
+      "name_en": "Beedrill",
+      "name_es": "Beedrill",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 16,
+      "slug": "pidgey",
+      "name_en": "Pidgey",
+      "name_es": "Pidgey",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 17,
+      "slug": "pidgeotto",
+      "name_en": "Pidgeotto",
+      "name_es": "Pidgeotto",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 18,
+      "slug": "pidgeot",
+      "name_en": "Pidgeot",
+      "name_es": "Pidgeot",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 19,
+      "slug": "rattata",
+      "name_en": "Rattata",
+      "name_es": "Rattata",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 20,
+      "slug": "raticate",
+      "name_en": "Raticate",
+      "name_es": "Raticate",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 21,
+      "slug": "spearow",
+      "name_en": "Spearow",
+      "name_es": "Spearow",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 22,
+      "slug": "fearow",
+      "name_en": "Fearow",
+      "name_es": "Fearow",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 23,
+      "slug": "ekans",
+      "name_en": "Ekans",
+      "name_es": "Ekans",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 24,
+      "slug": "arbok",
+      "name_en": "Arbok",
+      "name_es": "Arbok",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 25,
+      "slug": "pikachu",
+      "name_en": "Pikachu",
+      "name_es": "Pikachu",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 26,
+      "slug": "raichu",
+      "name_en": "Raichu",
+      "name_es": "Raichu",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 27,
+      "slug": "sandshrew",
+      "name_en": "Sandshrew",
+      "name_es": "Sandshrew",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 28,
+      "slug": "sandslash",
+      "name_en": "Sandslash",
+      "name_es": "Sandslash",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 29,
+      "slug": "nidoran-f",
+      "name_en": "Nidoran♀",
+      "name_es": "Nidoran♀",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 30,
+      "slug": "nidorina",
+      "name_en": "Nidorina",
+      "name_es": "Nidorina",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 31,
+      "slug": "nidoqueen",
+      "name_en": "Nidoqueen",
+      "name_es": "Nidoqueen",
+      "types": [
+        "poison",
+        "ground"
+      ]
+    },
+    {
+      "dex": 32,
+      "slug": "nidoran-m",
+      "name_en": "Nidoran♂",
+      "name_es": "Nidoran♂",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 33,
+      "slug": "nidorino",
+      "name_en": "Nidorino",
+      "name_es": "Nidorino",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 34,
+      "slug": "nidoking",
+      "name_en": "Nidoking",
+      "name_es": "Nidoking",
+      "types": [
+        "poison",
+        "ground"
+      ]
+    },
+    {
+      "dex": 35,
+      "slug": "clefairy",
+      "name_en": "Clefairy",
+      "name_es": "Clefairy",
+      "types": [
+        "fairy"
+      ]
+    },
+    {
+      "dex": 36,
+      "slug": "clefable",
+      "name_en": "Clefable",
+      "name_es": "Clefable",
+      "types": [
+        "fairy"
+      ]
+    },
+    {
+      "dex": 37,
+      "slug": "vulpix",
+      "name_en": "Vulpix",
+      "name_es": "Vulpix",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 38,
+      "slug": "ninetales",
+      "name_en": "Ninetales",
+      "name_es": "Ninetales",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 39,
+      "slug": "jigglypuff",
+      "name_en": "Jigglypuff",
+      "name_es": "Jigglypuff",
+      "types": [
+        "normal",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 40,
+      "slug": "wigglytuff",
+      "name_en": "Wigglytuff",
+      "name_es": "Wigglytuff",
+      "types": [
+        "normal",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 41,
+      "slug": "zubat",
+      "name_en": "Zubat",
+      "name_es": "Zubat",
+      "types": [
+        "poison",
+        "flying"
+      ]
+    },
+    {
+      "dex": 42,
+      "slug": "golbat",
+      "name_en": "Golbat",
+      "name_es": "Golbat",
+      "types": [
+        "poison",
+        "flying"
+      ]
+    },
+    {
+      "dex": 43,
+      "slug": "oddish",
+      "name_en": "Oddish",
+      "name_es": "Oddish",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 44,
+      "slug": "gloom",
+      "name_en": "Gloom",
+      "name_es": "Gloom",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 45,
+      "slug": "vileplume",
+      "name_en": "Vileplume",
+      "name_es": "Vileplume",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 46,
+      "slug": "paras",
+      "name_en": "Paras",
+      "name_es": "Paras",
+      "types": [
+        "bug",
+        "grass"
+      ]
+    },
+    {
+      "dex": 47,
+      "slug": "parasect",
+      "name_en": "Parasect",
+      "name_es": "Parasect",
+      "types": [
+        "bug",
+        "grass"
+      ]
+    },
+    {
+      "dex": 48,
+      "slug": "venonat",
+      "name_en": "Venonat",
+      "name_es": "Venonat",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 49,
+      "slug": "venomoth",
+      "name_en": "Venomoth",
+      "name_es": "Venomoth",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 50,
+      "slug": "diglett",
+      "name_en": "Diglett",
+      "name_es": "Diglett",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 51,
+      "slug": "dugtrio",
+      "name_en": "Dugtrio",
+      "name_es": "Dugtrio",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 52,
+      "slug": "meowth",
+      "name_en": "Meowth",
+      "name_es": "Meowth",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 53,
+      "slug": "persian",
+      "name_en": "Persian",
+      "name_es": "Persian",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 54,
+      "slug": "psyduck",
+      "name_en": "Psyduck",
+      "name_es": "Psyduck",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 55,
+      "slug": "golduck",
+      "name_en": "Golduck",
+      "name_es": "Golduck",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 56,
+      "slug": "mankey",
+      "name_en": "Mankey",
+      "name_es": "Mankey",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 57,
+      "slug": "primeape",
+      "name_en": "Primeape",
+      "name_es": "Primeape",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 58,
+      "slug": "growlithe",
+      "name_en": "Growlithe",
+      "name_es": "Growlithe",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 59,
+      "slug": "arcanine",
+      "name_en": "Arcanine",
+      "name_es": "Arcanine",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 60,
+      "slug": "poliwag",
+      "name_en": "Poliwag",
+      "name_es": "Poliwag",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 61,
+      "slug": "poliwhirl",
+      "name_en": "Poliwhirl",
+      "name_es": "Poliwhirl",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 62,
+      "slug": "poliwrath",
+      "name_en": "Poliwrath",
+      "name_es": "Poliwrath",
+      "types": [
+        "water",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 63,
+      "slug": "abra",
+      "name_en": "Abra",
+      "name_es": "Abra",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 64,
+      "slug": "kadabra",
+      "name_en": "Kadabra",
+      "name_es": "Kadabra",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 65,
+      "slug": "alakazam",
+      "name_en": "Alakazam",
+      "name_es": "Alakazam",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 66,
+      "slug": "machop",
+      "name_en": "Machop",
+      "name_es": "Machop",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 67,
+      "slug": "machoke",
+      "name_en": "Machoke",
+      "name_es": "Machoke",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 68,
+      "slug": "machamp",
+      "name_en": "Machamp",
+      "name_es": "Machamp",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 69,
+      "slug": "bellsprout",
+      "name_en": "Bellsprout",
+      "name_es": "Bellsprout",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 70,
+      "slug": "weepinbell",
+      "name_en": "Weepinbell",
+      "name_es": "Weepinbell",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 71,
+      "slug": "victreebel",
+      "name_en": "Victreebel",
+      "name_es": "Victreebel",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 72,
+      "slug": "tentacool",
+      "name_en": "Tentacool",
+      "name_es": "Tentacool",
+      "types": [
+        "water",
+        "poison"
+      ]
+    },
+    {
+      "dex": 73,
+      "slug": "tentacruel",
+      "name_en": "Tentacruel",
+      "name_es": "Tentacruel",
+      "types": [
+        "water",
+        "poison"
+      ]
+    },
+    {
+      "dex": 74,
+      "slug": "geodude",
+      "name_en": "Geodude",
+      "name_es": "Geodude",
+      "types": [
+        "rock",
+        "ground"
+      ]
+    },
+    {
+      "dex": 75,
+      "slug": "graveler",
+      "name_en": "Graveler",
+      "name_es": "Graveler",
+      "types": [
+        "rock",
+        "ground"
+      ]
+    },
+    {
+      "dex": 76,
+      "slug": "golem",
+      "name_en": "Golem",
+      "name_es": "Golem",
+      "types": [
+        "rock",
+        "ground"
+      ]
+    },
+    {
+      "dex": 77,
+      "slug": "ponyta",
+      "name_en": "Ponyta",
+      "name_es": "Ponyta",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 78,
+      "slug": "rapidash",
+      "name_en": "Rapidash",
+      "name_es": "Rapidash",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 79,
+      "slug": "slowpoke",
+      "name_en": "Slowpoke",
+      "name_es": "Slowpoke",
+      "types": [
+        "water",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 80,
+      "slug": "slowbro",
+      "name_en": "Slowbro",
+      "name_es": "Slowbro",
+      "types": [
+        "water",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 81,
+      "slug": "magnemite",
+      "name_en": "Magnemite",
+      "name_es": "Magnemite",
+      "types": [
+        "electric",
+        "steel"
+      ]
+    },
+    {
+      "dex": 82,
+      "slug": "magneton",
+      "name_en": "Magneton",
+      "name_es": "Magneton",
+      "types": [
+        "electric",
+        "steel"
+      ]
+    },
+    {
+      "dex": 83,
+      "slug": "farfetchd",
+      "name_en": "Farfetch’d",
+      "name_es": "Farfetch’d",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 84,
+      "slug": "doduo",
+      "name_en": "Doduo",
+      "name_es": "Doduo",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 85,
+      "slug": "dodrio",
+      "name_en": "Dodrio",
+      "name_es": "Dodrio",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 86,
+      "slug": "seel",
+      "name_en": "Seel",
+      "name_es": "Seel",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 87,
+      "slug": "dewgong",
+      "name_en": "Dewgong",
+      "name_es": "Dewgong",
+      "types": [
+        "water",
+        "ice"
+      ]
+    },
+    {
+      "dex": 88,
+      "slug": "grimer",
+      "name_en": "Grimer",
+      "name_es": "Grimer",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 89,
+      "slug": "muk",
+      "name_en": "Muk",
+      "name_es": "Muk",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 90,
+      "slug": "shellder",
+      "name_en": "Shellder",
+      "name_es": "Shellder",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 91,
+      "slug": "cloyster",
+      "name_en": "Cloyster",
+      "name_es": "Cloyster",
+      "types": [
+        "water",
+        "ice"
+      ]
+    },
+    {
+      "dex": 92,
+      "slug": "gastly",
+      "name_en": "Gastly",
+      "name_es": "Gastly",
+      "types": [
+        "ghost",
+        "poison"
+      ]
+    },
+    {
+      "dex": 93,
+      "slug": "haunter",
+      "name_en": "Haunter",
+      "name_es": "Haunter",
+      "types": [
+        "ghost",
+        "poison"
+      ]
+    },
+    {
+      "dex": 94,
+      "slug": "gengar",
+      "name_en": "Gengar",
+      "name_es": "Gengar",
+      "types": [
+        "ghost",
+        "poison"
+      ]
+    },
+    {
+      "dex": 95,
+      "slug": "onix",
+      "name_en": "Onix",
+      "name_es": "Onix",
+      "types": [
+        "rock",
+        "ground"
+      ]
+    },
+    {
+      "dex": 96,
+      "slug": "drowzee",
+      "name_en": "Drowzee",
+      "name_es": "Drowzee",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 97,
+      "slug": "hypno",
+      "name_en": "Hypno",
+      "name_es": "Hypno",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 98,
+      "slug": "krabby",
+      "name_en": "Krabby",
+      "name_es": "Krabby",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 99,
+      "slug": "kingler",
+      "name_en": "Kingler",
+      "name_es": "Kingler",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 100,
+      "slug": "voltorb",
+      "name_en": "Voltorb",
+      "name_es": "Voltorb",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 101,
+      "slug": "electrode",
+      "name_en": "Electrode",
+      "name_es": "Electrode",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 102,
+      "slug": "exeggcute",
+      "name_en": "Exeggcute",
+      "name_es": "Exeggcute",
+      "types": [
+        "grass",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 103,
+      "slug": "exeggutor",
+      "name_en": "Exeggutor",
+      "name_es": "Exeggutor",
+      "types": [
+        "grass",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 104,
+      "slug": "cubone",
+      "name_en": "Cubone",
+      "name_es": "Cubone",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 105,
+      "slug": "marowak",
+      "name_en": "Marowak",
+      "name_es": "Marowak",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 106,
+      "slug": "hitmonlee",
+      "name_en": "Hitmonlee",
+      "name_es": "Hitmonlee",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 107,
+      "slug": "hitmonchan",
+      "name_en": "Hitmonchan",
+      "name_es": "Hitmonchan",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 108,
+      "slug": "lickitung",
+      "name_en": "Lickitung",
+      "name_es": "Lickitung",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 109,
+      "slug": "koffing",
+      "name_en": "Koffing",
+      "name_es": "Koffing",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 110,
+      "slug": "weezing",
+      "name_en": "Weezing",
+      "name_es": "Weezing",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 111,
+      "slug": "rhyhorn",
+      "name_en": "Rhyhorn",
+      "name_es": "Rhyhorn",
+      "types": [
+        "ground",
+        "rock"
+      ]
+    },
+    {
+      "dex": 112,
+      "slug": "rhydon",
+      "name_en": "Rhydon",
+      "name_es": "Rhydon",
+      "types": [
+        "ground",
+        "rock"
+      ]
+    },
+    {
+      "dex": 113,
+      "slug": "chansey",
+      "name_en": "Chansey",
+      "name_es": "Chansey",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 114,
+      "slug": "tangela",
+      "name_en": "Tangela",
+      "name_es": "Tangela",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 115,
+      "slug": "kangaskhan",
+      "name_en": "Kangaskhan",
+      "name_es": "Kangaskhan",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 116,
+      "slug": "horsea",
+      "name_en": "Horsea",
+      "name_es": "Horsea",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 117,
+      "slug": "seadra",
+      "name_en": "Seadra",
+      "name_es": "Seadra",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 118,
+      "slug": "goldeen",
+      "name_en": "Goldeen",
+      "name_es": "Goldeen",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 119,
+      "slug": "seaking",
+      "name_en": "Seaking",
+      "name_es": "Seaking",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 120,
+      "slug": "staryu",
+      "name_en": "Staryu",
+      "name_es": "Staryu",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 121,
+      "slug": "starmie",
+      "name_en": "Starmie",
+      "name_es": "Starmie",
+      "types": [
+        "water",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 122,
+      "slug": "mr-mime",
+      "name_en": "Mr. Mime",
+      "name_es": "Mr. Mime",
+      "types": [
+        "psychic",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 123,
+      "slug": "scyther",
+      "name_en": "Scyther",
+      "name_es": "Scyther",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 124,
+      "slug": "jynx",
+      "name_en": "Jynx",
+      "name_es": "Jynx",
+      "types": [
+        "ice",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 125,
+      "slug": "electabuzz",
+      "name_en": "Electabuzz",
+      "name_es": "Electabuzz",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 126,
+      "slug": "magmar",
+      "name_en": "Magmar",
+      "name_es": "Magmar",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 127,
+      "slug": "pinsir",
+      "name_en": "Pinsir",
+      "name_es": "Pinsir",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 128,
+      "slug": "tauros",
+      "name_en": "Tauros",
+      "name_es": "Tauros",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 129,
+      "slug": "magikarp",
+      "name_en": "Magikarp",
+      "name_es": "Magikarp",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 130,
+      "slug": "gyarados",
+      "name_en": "Gyarados",
+      "name_es": "Gyarados",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 131,
+      "slug": "lapras",
+      "name_en": "Lapras",
+      "name_es": "Lapras",
+      "types": [
+        "water",
+        "ice"
+      ]
+    },
+    {
+      "dex": 132,
+      "slug": "ditto",
+      "name_en": "Ditto",
+      "name_es": "Ditto",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 133,
+      "slug": "eevee",
+      "name_en": "Eevee",
+      "name_es": "Eevee",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 134,
+      "slug": "vaporeon",
+      "name_en": "Vaporeon",
+      "name_es": "Vaporeon",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 135,
+      "slug": "jolteon",
+      "name_en": "Jolteon",
+      "name_es": "Jolteon",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 136,
+      "slug": "flareon",
+      "name_en": "Flareon",
+      "name_es": "Flareon",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 137,
+      "slug": "porygon",
+      "name_en": "Porygon",
+      "name_es": "Porygon",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 138,
+      "slug": "omanyte",
+      "name_en": "Omanyte",
+      "name_es": "Omanyte",
+      "types": [
+        "rock",
+        "water"
+      ]
+    },
+    {
+      "dex": 139,
+      "slug": "omastar",
+      "name_en": "Omastar",
+      "name_es": "Omastar",
+      "types": [
+        "rock",
+        "water"
+      ]
+    },
+    {
+      "dex": 140,
+      "slug": "kabuto",
+      "name_en": "Kabuto",
+      "name_es": "Kabuto",
+      "types": [
+        "rock",
+        "water"
+      ]
+    },
+    {
+      "dex": 141,
+      "slug": "kabutops",
+      "name_en": "Kabutops",
+      "name_es": "Kabutops",
+      "types": [
+        "rock",
+        "water"
+      ]
+    },
+    {
+      "dex": 142,
+      "slug": "aerodactyl",
+      "name_en": "Aerodactyl",
+      "name_es": "Aerodactyl",
+      "types": [
+        "rock",
+        "flying"
+      ]
+    },
+    {
+      "dex": 143,
+      "slug": "snorlax",
+      "name_en": "Snorlax",
+      "name_es": "Snorlax",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 144,
+      "slug": "articuno",
+      "name_en": "Articuno",
+      "name_es": "Articuno",
+      "types": [
+        "ice",
+        "flying"
+      ]
+    },
+    {
+      "dex": 145,
+      "slug": "zapdos",
+      "name_en": "Zapdos",
+      "name_es": "Zapdos",
+      "types": [
+        "electric",
+        "flying"
+      ]
+    },
+    {
+      "dex": 146,
+      "slug": "moltres",
+      "name_en": "Moltres",
+      "name_es": "Moltres",
+      "types": [
+        "fire",
+        "flying"
+      ]
+    },
+    {
+      "dex": 147,
+      "slug": "dratini",
+      "name_en": "Dratini",
+      "name_es": "Dratini",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 148,
+      "slug": "dragonair",
+      "name_en": "Dragonair",
+      "name_es": "Dragonair",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 149,
+      "slug": "dragonite",
+      "name_en": "Dragonite",
+      "name_es": "Dragonite",
+      "types": [
+        "dragon",
+        "flying"
+      ]
+    },
+    {
+      "dex": 150,
+      "slug": "mewtwo",
+      "name_en": "Mewtwo",
+      "name_es": "Mewtwo",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 151,
+      "slug": "mew",
+      "name_en": "Mew",
+      "name_es": "Mew",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 152,
+      "slug": "chikorita",
+      "name_en": "Chikorita",
+      "name_es": "Chikorita",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 153,
+      "slug": "bayleef",
+      "name_en": "Bayleef",
+      "name_es": "Bayleef",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 154,
+      "slug": "meganium",
+      "name_en": "Meganium",
+      "name_es": "Meganium",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 155,
+      "slug": "cyndaquil",
+      "name_en": "Cyndaquil",
+      "name_es": "Cyndaquil",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 156,
+      "slug": "quilava",
+      "name_en": "Quilava",
+      "name_es": "Quilava",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 157,
+      "slug": "typhlosion",
+      "name_en": "Typhlosion",
+      "name_es": "Typhlosion",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 158,
+      "slug": "totodile",
+      "name_en": "Totodile",
+      "name_es": "Totodile",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 159,
+      "slug": "croconaw",
+      "name_en": "Croconaw",
+      "name_es": "Croconaw",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 160,
+      "slug": "feraligatr",
+      "name_en": "Feraligatr",
+      "name_es": "Feraligatr",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 161,
+      "slug": "sentret",
+      "name_en": "Sentret",
+      "name_es": "Sentret",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 162,
+      "slug": "furret",
+      "name_en": "Furret",
+      "name_es": "Furret",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 163,
+      "slug": "hoothoot",
+      "name_en": "Hoothoot",
+      "name_es": "Hoothoot",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 164,
+      "slug": "noctowl",
+      "name_en": "Noctowl",
+      "name_es": "Noctowl",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 165,
+      "slug": "ledyba",
+      "name_en": "Ledyba",
+      "name_es": "Ledyba",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 166,
+      "slug": "ledian",
+      "name_en": "Ledian",
+      "name_es": "Ledian",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 167,
+      "slug": "spinarak",
+      "name_en": "Spinarak",
+      "name_es": "Spinarak",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 168,
+      "slug": "ariados",
+      "name_en": "Ariados",
+      "name_es": "Ariados",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 169,
+      "slug": "crobat",
+      "name_en": "Crobat",
+      "name_es": "Crobat",
+      "types": [
+        "poison",
+        "flying"
+      ]
+    },
+    {
+      "dex": 170,
+      "slug": "chinchou",
+      "name_en": "Chinchou",
+      "name_es": "Chinchou",
+      "types": [
+        "water",
+        "electric"
+      ]
+    },
+    {
+      "dex": 171,
+      "slug": "lanturn",
+      "name_en": "Lanturn",
+      "name_es": "Lanturn",
+      "types": [
+        "water",
+        "electric"
+      ]
+    },
+    {
+      "dex": 172,
+      "slug": "pichu",
+      "name_en": "Pichu",
+      "name_es": "Pichu",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 173,
+      "slug": "cleffa",
+      "name_en": "Cleffa",
+      "name_es": "Cleffa",
+      "types": [
+        "fairy"
+      ]
+    },
+    {
+      "dex": 174,
+      "slug": "igglybuff",
+      "name_en": "Igglybuff",
+      "name_es": "Igglybuff",
+      "types": [
+        "normal",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 175,
+      "slug": "togepi",
+      "name_en": "Togepi",
+      "name_es": "Togepi",
+      "types": [
+        "fairy"
+      ]
+    },
+    {
+      "dex": 176,
+      "slug": "togetic",
+      "name_en": "Togetic",
+      "name_es": "Togetic",
+      "types": [
+        "fairy",
+        "flying"
+      ]
+    },
+    {
+      "dex": 177,
+      "slug": "natu",
+      "name_en": "Natu",
+      "name_es": "Natu",
+      "types": [
+        "psychic",
+        "flying"
+      ]
+    },
+    {
+      "dex": 178,
+      "slug": "xatu",
+      "name_en": "Xatu",
+      "name_es": "Xatu",
+      "types": [
+        "psychic",
+        "flying"
+      ]
+    },
+    {
+      "dex": 179,
+      "slug": "mareep",
+      "name_en": "Mareep",
+      "name_es": "Mareep",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 180,
+      "slug": "flaaffy",
+      "name_en": "Flaaffy",
+      "name_es": "Flaaffy",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 181,
+      "slug": "ampharos",
+      "name_en": "Ampharos",
+      "name_es": "Ampharos",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 182,
+      "slug": "bellossom",
+      "name_en": "Bellossom",
+      "name_es": "Bellossom",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 183,
+      "slug": "marill",
+      "name_en": "Marill",
+      "name_es": "Marill",
+      "types": [
+        "water",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 184,
+      "slug": "azumarill",
+      "name_en": "Azumarill",
+      "name_es": "Azumarill",
+      "types": [
+        "water",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 185,
+      "slug": "sudowoodo",
+      "name_en": "Sudowoodo",
+      "name_es": "Sudowoodo",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 186,
+      "slug": "politoed",
+      "name_en": "Politoed",
+      "name_es": "Politoed",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 187,
+      "slug": "hoppip",
+      "name_en": "Hoppip",
+      "name_es": "Hoppip",
+      "types": [
+        "grass",
+        "flying"
+      ]
+    },
+    {
+      "dex": 188,
+      "slug": "skiploom",
+      "name_en": "Skiploom",
+      "name_es": "Skiploom",
+      "types": [
+        "grass",
+        "flying"
+      ]
+    },
+    {
+      "dex": 189,
+      "slug": "jumpluff",
+      "name_en": "Jumpluff",
+      "name_es": "Jumpluff",
+      "types": [
+        "grass",
+        "flying"
+      ]
+    },
+    {
+      "dex": 190,
+      "slug": "aipom",
+      "name_en": "Aipom",
+      "name_es": "Aipom",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 191,
+      "slug": "sunkern",
+      "name_en": "Sunkern",
+      "name_es": "Sunkern",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 192,
+      "slug": "sunflora",
+      "name_en": "Sunflora",
+      "name_es": "Sunflora",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 193,
+      "slug": "yanma",
+      "name_en": "Yanma",
+      "name_es": "Yanma",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 194,
+      "slug": "wooper",
+      "name_en": "Wooper",
+      "name_es": "Wooper",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 195,
+      "slug": "quagsire",
+      "name_en": "Quagsire",
+      "name_es": "Quagsire",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 196,
+      "slug": "espeon",
+      "name_en": "Espeon",
+      "name_es": "Espeon",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 197,
+      "slug": "umbreon",
+      "name_en": "Umbreon",
+      "name_es": "Umbreon",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 198,
+      "slug": "murkrow",
+      "name_en": "Murkrow",
+      "name_es": "Murkrow",
+      "types": [
+        "dark",
+        "flying"
+      ]
+    },
+    {
+      "dex": 199,
+      "slug": "slowking",
+      "name_en": "Slowking",
+      "name_es": "Slowking",
+      "types": [
+        "water",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 200,
+      "slug": "misdreavus",
+      "name_en": "Misdreavus",
+      "name_es": "Misdreavus",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 201,
+      "slug": "unown",
+      "name_en": "Unown",
+      "name_es": "Unown",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 202,
+      "slug": "wobbuffet",
+      "name_en": "Wobbuffet",
+      "name_es": "Wobbuffet",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 203,
+      "slug": "girafarig",
+      "name_en": "Girafarig",
+      "name_es": "Girafarig",
+      "types": [
+        "normal",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 204,
+      "slug": "pineco",
+      "name_en": "Pineco",
+      "name_es": "Pineco",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 205,
+      "slug": "forretress",
+      "name_en": "Forretress",
+      "name_es": "Forretress",
+      "types": [
+        "bug",
+        "steel"
+      ]
+    },
+    {
+      "dex": 206,
+      "slug": "dunsparce",
+      "name_en": "Dunsparce",
+      "name_es": "Dunsparce",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 207,
+      "slug": "gligar",
+      "name_en": "Gligar",
+      "name_es": "Gligar",
+      "types": [
+        "ground",
+        "flying"
+      ]
+    },
+    {
+      "dex": 208,
+      "slug": "steelix",
+      "name_en": "Steelix",
+      "name_es": "Steelix",
+      "types": [
+        "steel",
+        "ground"
+      ]
+    },
+    {
+      "dex": 209,
+      "slug": "snubbull",
+      "name_en": "Snubbull",
+      "name_es": "Snubbull",
+      "types": [
+        "fairy"
+      ]
+    },
+    {
+      "dex": 210,
+      "slug": "granbull",
+      "name_en": "Granbull",
+      "name_es": "Granbull",
+      "types": [
+        "fairy"
+      ]
+    },
+    {
+      "dex": 211,
+      "slug": "qwilfish",
+      "name_en": "Qwilfish",
+      "name_es": "Qwilfish",
+      "types": [
+        "water",
+        "poison"
+      ]
+    },
+    {
+      "dex": 212,
+      "slug": "scizor",
+      "name_en": "Scizor",
+      "name_es": "Scizor",
+      "types": [
+        "bug",
+        "steel"
+      ]
+    },
+    {
+      "dex": 213,
+      "slug": "shuckle",
+      "name_en": "Shuckle",
+      "name_es": "Shuckle",
+      "types": [
+        "bug",
+        "rock"
+      ]
+    },
+    {
+      "dex": 214,
+      "slug": "heracross",
+      "name_en": "Heracross",
+      "name_es": "Heracross",
+      "types": [
+        "bug",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 215,
+      "slug": "sneasel",
+      "name_en": "Sneasel",
+      "name_es": "Sneasel",
+      "types": [
+        "dark",
+        "ice"
+      ]
+    },
+    {
+      "dex": 216,
+      "slug": "teddiursa",
+      "name_en": "Teddiursa",
+      "name_es": "Teddiursa",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 217,
+      "slug": "ursaring",
+      "name_en": "Ursaring",
+      "name_es": "Ursaring",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 218,
+      "slug": "slugma",
+      "name_en": "Slugma",
+      "name_es": "Slugma",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 219,
+      "slug": "magcargo",
+      "name_en": "Magcargo",
+      "name_es": "Magcargo",
+      "types": [
+        "fire",
+        "rock"
+      ]
+    },
+    {
+      "dex": 220,
+      "slug": "swinub",
+      "name_en": "Swinub",
+      "name_es": "Swinub",
+      "types": [
+        "ice",
+        "ground"
+      ]
+    },
+    {
+      "dex": 221,
+      "slug": "piloswine",
+      "name_en": "Piloswine",
+      "name_es": "Piloswine",
+      "types": [
+        "ice",
+        "ground"
+      ]
+    },
+    {
+      "dex": 222,
+      "slug": "corsola",
+      "name_en": "Corsola",
+      "name_es": "Corsola",
+      "types": [
+        "water",
+        "rock"
+      ]
+    },
+    {
+      "dex": 223,
+      "slug": "remoraid",
+      "name_en": "Remoraid",
+      "name_es": "Remoraid",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 224,
+      "slug": "octillery",
+      "name_en": "Octillery",
+      "name_es": "Octillery",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 225,
+      "slug": "delibird",
+      "name_en": "Delibird",
+      "name_es": "Delibird",
+      "types": [
+        "ice",
+        "flying"
+      ]
+    },
+    {
+      "dex": 226,
+      "slug": "mantine",
+      "name_en": "Mantine",
+      "name_es": "Mantine",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 227,
+      "slug": "skarmory",
+      "name_en": "Skarmory",
+      "name_es": "Skarmory",
+      "types": [
+        "steel",
+        "flying"
+      ]
+    },
+    {
+      "dex": 228,
+      "slug": "houndour",
+      "name_en": "Houndour",
+      "name_es": "Houndour",
+      "types": [
+        "dark",
+        "fire"
+      ]
+    },
+    {
+      "dex": 229,
+      "slug": "houndoom",
+      "name_en": "Houndoom",
+      "name_es": "Houndoom",
+      "types": [
+        "dark",
+        "fire"
+      ]
+    },
+    {
+      "dex": 230,
+      "slug": "kingdra",
+      "name_en": "Kingdra",
+      "name_es": "Kingdra",
+      "types": [
+        "water",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 231,
+      "slug": "phanpy",
+      "name_en": "Phanpy",
+      "name_es": "Phanpy",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 232,
+      "slug": "donphan",
+      "name_en": "Donphan",
+      "name_es": "Donphan",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 233,
+      "slug": "porygon2",
+      "name_en": "Porygon2",
+      "name_es": "Porygon2",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 234,
+      "slug": "stantler",
+      "name_en": "Stantler",
+      "name_es": "Stantler",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 235,
+      "slug": "smeargle",
+      "name_en": "Smeargle",
+      "name_es": "Smeargle",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 236,
+      "slug": "tyrogue",
+      "name_en": "Tyrogue",
+      "name_es": "Tyrogue",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 237,
+      "slug": "hitmontop",
+      "name_en": "Hitmontop",
+      "name_es": "Hitmontop",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 238,
+      "slug": "smoochum",
+      "name_en": "Smoochum",
+      "name_es": "Smoochum",
+      "types": [
+        "ice",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 239,
+      "slug": "elekid",
+      "name_en": "Elekid",
+      "name_es": "Elekid",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 240,
+      "slug": "magby",
+      "name_en": "Magby",
+      "name_es": "Magby",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 241,
+      "slug": "miltank",
+      "name_en": "Miltank",
+      "name_es": "Miltank",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 242,
+      "slug": "blissey",
+      "name_en": "Blissey",
+      "name_es": "Blissey",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 243,
+      "slug": "raikou",
+      "name_en": "Raikou",
+      "name_es": "Raikou",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 244,
+      "slug": "entei",
+      "name_en": "Entei",
+      "name_es": "Entei",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 245,
+      "slug": "suicune",
+      "name_en": "Suicune",
+      "name_es": "Suicune",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 246,
+      "slug": "larvitar",
+      "name_en": "Larvitar",
+      "name_es": "Larvitar",
+      "types": [
+        "rock",
+        "ground"
+      ]
+    },
+    {
+      "dex": 247,
+      "slug": "pupitar",
+      "name_en": "Pupitar",
+      "name_es": "Pupitar",
+      "types": [
+        "rock",
+        "ground"
+      ]
+    },
+    {
+      "dex": 248,
+      "slug": "tyranitar",
+      "name_en": "Tyranitar",
+      "name_es": "Tyranitar",
+      "types": [
+        "rock",
+        "dark"
+      ]
+    },
+    {
+      "dex": 249,
+      "slug": "lugia",
+      "name_en": "Lugia",
+      "name_es": "Lugia",
+      "types": [
+        "psychic",
+        "flying"
+      ]
+    },
+    {
+      "dex": 250,
+      "slug": "ho-oh",
+      "name_en": "Ho-Oh",
+      "name_es": "Ho-Oh",
+      "types": [
+        "fire",
+        "flying"
+      ]
+    },
+    {
+      "dex": 251,
+      "slug": "celebi",
+      "name_en": "Celebi",
+      "name_es": "Celebi",
+      "types": [
+        "psychic",
+        "grass"
+      ]
+    },
+    {
+      "dex": 252,
+      "slug": "treecko",
+      "name_en": "Treecko",
+      "name_es": "Treecko",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 253,
+      "slug": "grovyle",
+      "name_en": "Grovyle",
+      "name_es": "Grovyle",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 254,
+      "slug": "sceptile",
+      "name_en": "Sceptile",
+      "name_es": "Sceptile",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 255,
+      "slug": "torchic",
+      "name_en": "Torchic",
+      "name_es": "Torchic",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 256,
+      "slug": "combusken",
+      "name_en": "Combusken",
+      "name_es": "Combusken",
+      "types": [
+        "fire",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 257,
+      "slug": "blaziken",
+      "name_en": "Blaziken",
+      "name_es": "Blaziken",
+      "types": [
+        "fire",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 258,
+      "slug": "mudkip",
+      "name_en": "Mudkip",
+      "name_es": "Mudkip",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 259,
+      "slug": "marshtomp",
+      "name_en": "Marshtomp",
+      "name_es": "Marshtomp",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 260,
+      "slug": "swampert",
+      "name_en": "Swampert",
+      "name_es": "Swampert",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 261,
+      "slug": "poochyena",
+      "name_en": "Poochyena",
+      "name_es": "Poochyena",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 262,
+      "slug": "mightyena",
+      "name_en": "Mightyena",
+      "name_es": "Mightyena",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 263,
+      "slug": "zigzagoon",
+      "name_en": "Zigzagoon",
+      "name_es": "Zigzagoon",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 264,
+      "slug": "linoone",
+      "name_en": "Linoone",
+      "name_es": "Linoone",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 265,
+      "slug": "wurmple",
+      "name_en": "Wurmple",
+      "name_es": "Wurmple",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 266,
+      "slug": "silcoon",
+      "name_en": "Silcoon",
+      "name_es": "Silcoon",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 267,
+      "slug": "beautifly",
+      "name_en": "Beautifly",
+      "name_es": "Beautifly",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 268,
+      "slug": "cascoon",
+      "name_en": "Cascoon",
+      "name_es": "Cascoon",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 269,
+      "slug": "dustox",
+      "name_en": "Dustox",
+      "name_es": "Dustox",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 270,
+      "slug": "lotad",
+      "name_en": "Lotad",
+      "name_es": "Lotad",
+      "types": [
+        "water",
+        "grass"
+      ]
+    },
+    {
+      "dex": 271,
+      "slug": "lombre",
+      "name_en": "Lombre",
+      "name_es": "Lombre",
+      "types": [
+        "water",
+        "grass"
+      ]
+    },
+    {
+      "dex": 272,
+      "slug": "ludicolo",
+      "name_en": "Ludicolo",
+      "name_es": "Ludicolo",
+      "types": [
+        "water",
+        "grass"
+      ]
+    },
+    {
+      "dex": 273,
+      "slug": "seedot",
+      "name_en": "Seedot",
+      "name_es": "Seedot",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 274,
+      "slug": "nuzleaf",
+      "name_en": "Nuzleaf",
+      "name_es": "Nuzleaf",
+      "types": [
+        "grass",
+        "dark"
+      ]
+    },
+    {
+      "dex": 275,
+      "slug": "shiftry",
+      "name_en": "Shiftry",
+      "name_es": "Shiftry",
+      "types": [
+        "grass",
+        "dark"
+      ]
+    },
+    {
+      "dex": 276,
+      "slug": "taillow",
+      "name_en": "Taillow",
+      "name_es": "Taillow",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 277,
+      "slug": "swellow",
+      "name_en": "Swellow",
+      "name_es": "Swellow",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 278,
+      "slug": "wingull",
+      "name_en": "Wingull",
+      "name_es": "Wingull",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 279,
+      "slug": "pelipper",
+      "name_en": "Pelipper",
+      "name_es": "Pelipper",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 280,
+      "slug": "ralts",
+      "name_en": "Ralts",
+      "name_es": "Ralts",
+      "types": [
+        "psychic",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 281,
+      "slug": "kirlia",
+      "name_en": "Kirlia",
+      "name_es": "Kirlia",
+      "types": [
+        "psychic",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 282,
+      "slug": "gardevoir",
+      "name_en": "Gardevoir",
+      "name_es": "Gardevoir",
+      "types": [
+        "psychic",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 283,
+      "slug": "surskit",
+      "name_en": "Surskit",
+      "name_es": "Surskit",
+      "types": [
+        "bug",
+        "water"
+      ]
+    },
+    {
+      "dex": 284,
+      "slug": "masquerain",
+      "name_en": "Masquerain",
+      "name_es": "Masquerain",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 285,
+      "slug": "shroomish",
+      "name_en": "Shroomish",
+      "name_es": "Shroomish",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 286,
+      "slug": "breloom",
+      "name_en": "Breloom",
+      "name_es": "Breloom",
+      "types": [
+        "grass",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 287,
+      "slug": "slakoth",
+      "name_en": "Slakoth",
+      "name_es": "Slakoth",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 288,
+      "slug": "vigoroth",
+      "name_en": "Vigoroth",
+      "name_es": "Vigoroth",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 289,
+      "slug": "slaking",
+      "name_en": "Slaking",
+      "name_es": "Slaking",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 290,
+      "slug": "nincada",
+      "name_en": "Nincada",
+      "name_es": "Nincada",
+      "types": [
+        "bug",
+        "ground"
+      ]
+    },
+    {
+      "dex": 291,
+      "slug": "ninjask",
+      "name_en": "Ninjask",
+      "name_es": "Ninjask",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 292,
+      "slug": "shedinja",
+      "name_en": "Shedinja",
+      "name_es": "Shedinja",
+      "types": [
+        "bug",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 293,
+      "slug": "whismur",
+      "name_en": "Whismur",
+      "name_es": "Whismur",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 294,
+      "slug": "loudred",
+      "name_en": "Loudred",
+      "name_es": "Loudred",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 295,
+      "slug": "exploud",
+      "name_en": "Exploud",
+      "name_es": "Exploud",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 296,
+      "slug": "makuhita",
+      "name_en": "Makuhita",
+      "name_es": "Makuhita",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 297,
+      "slug": "hariyama",
+      "name_en": "Hariyama",
+      "name_es": "Hariyama",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 298,
+      "slug": "azurill",
+      "name_en": "Azurill",
+      "name_es": "Azurill",
+      "types": [
+        "normal",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 299,
+      "slug": "nosepass",
+      "name_en": "Nosepass",
+      "name_es": "Nosepass",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 300,
+      "slug": "skitty",
+      "name_en": "Skitty",
+      "name_es": "Skitty",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 301,
+      "slug": "delcatty",
+      "name_en": "Delcatty",
+      "name_es": "Delcatty",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 302,
+      "slug": "sableye",
+      "name_en": "Sableye",
+      "name_es": "Sableye",
+      "types": [
+        "dark",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 303,
+      "slug": "mawile",
+      "name_en": "Mawile",
+      "name_es": "Mawile",
+      "types": [
+        "steel",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 304,
+      "slug": "aron",
+      "name_en": "Aron",
+      "name_es": "Aron",
+      "types": [
+        "steel",
+        "rock"
+      ]
+    },
+    {
+      "dex": 305,
+      "slug": "lairon",
+      "name_en": "Lairon",
+      "name_es": "Lairon",
+      "types": [
+        "steel",
+        "rock"
+      ]
+    },
+    {
+      "dex": 306,
+      "slug": "aggron",
+      "name_en": "Aggron",
+      "name_es": "Aggron",
+      "types": [
+        "steel",
+        "rock"
+      ]
+    },
+    {
+      "dex": 307,
+      "slug": "meditite",
+      "name_en": "Meditite",
+      "name_es": "Meditite",
+      "types": [
+        "fighting",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 308,
+      "slug": "medicham",
+      "name_en": "Medicham",
+      "name_es": "Medicham",
+      "types": [
+        "fighting",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 309,
+      "slug": "electrike",
+      "name_en": "Electrike",
+      "name_es": "Electrike",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 310,
+      "slug": "manectric",
+      "name_en": "Manectric",
+      "name_es": "Manectric",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 311,
+      "slug": "plusle",
+      "name_en": "Plusle",
+      "name_es": "Plusle",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 312,
+      "slug": "minun",
+      "name_en": "Minun",
+      "name_es": "Minun",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 313,
+      "slug": "volbeat",
+      "name_en": "Volbeat",
+      "name_es": "Volbeat",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 314,
+      "slug": "illumise",
+      "name_en": "Illumise",
+      "name_es": "Illumise",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 315,
+      "slug": "roselia",
+      "name_en": "Roselia",
+      "name_es": "Roselia",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 316,
+      "slug": "gulpin",
+      "name_en": "Gulpin",
+      "name_es": "Gulpin",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 317,
+      "slug": "swalot",
+      "name_en": "Swalot",
+      "name_es": "Swalot",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 318,
+      "slug": "carvanha",
+      "name_en": "Carvanha",
+      "name_es": "Carvanha",
+      "types": [
+        "water",
+        "dark"
+      ]
+    },
+    {
+      "dex": 319,
+      "slug": "sharpedo",
+      "name_en": "Sharpedo",
+      "name_es": "Sharpedo",
+      "types": [
+        "water",
+        "dark"
+      ]
+    },
+    {
+      "dex": 320,
+      "slug": "wailmer",
+      "name_en": "Wailmer",
+      "name_es": "Wailmer",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 321,
+      "slug": "wailord",
+      "name_en": "Wailord",
+      "name_es": "Wailord",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 322,
+      "slug": "numel",
+      "name_en": "Numel",
+      "name_es": "Numel",
+      "types": [
+        "fire",
+        "ground"
+      ]
+    },
+    {
+      "dex": 323,
+      "slug": "camerupt",
+      "name_en": "Camerupt",
+      "name_es": "Camerupt",
+      "types": [
+        "fire",
+        "ground"
+      ]
+    },
+    {
+      "dex": 324,
+      "slug": "torkoal",
+      "name_en": "Torkoal",
+      "name_es": "Torkoal",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 325,
+      "slug": "spoink",
+      "name_en": "Spoink",
+      "name_es": "Spoink",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 326,
+      "slug": "grumpig",
+      "name_en": "Grumpig",
+      "name_es": "Grumpig",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 327,
+      "slug": "spinda",
+      "name_en": "Spinda",
+      "name_es": "Spinda",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 328,
+      "slug": "trapinch",
+      "name_en": "Trapinch",
+      "name_es": "Trapinch",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 329,
+      "slug": "vibrava",
+      "name_en": "Vibrava",
+      "name_es": "Vibrava",
+      "types": [
+        "ground",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 330,
+      "slug": "flygon",
+      "name_en": "Flygon",
+      "name_es": "Flygon",
+      "types": [
+        "ground",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 331,
+      "slug": "cacnea",
+      "name_en": "Cacnea",
+      "name_es": "Cacnea",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 332,
+      "slug": "cacturne",
+      "name_en": "Cacturne",
+      "name_es": "Cacturne",
+      "types": [
+        "grass",
+        "dark"
+      ]
+    },
+    {
+      "dex": 333,
+      "slug": "swablu",
+      "name_en": "Swablu",
+      "name_es": "Swablu",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 334,
+      "slug": "altaria",
+      "name_en": "Altaria",
+      "name_es": "Altaria",
+      "types": [
+        "dragon",
+        "flying"
+      ]
+    },
+    {
+      "dex": 335,
+      "slug": "zangoose",
+      "name_en": "Zangoose",
+      "name_es": "Zangoose",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 336,
+      "slug": "seviper",
+      "name_en": "Seviper",
+      "name_es": "Seviper",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 337,
+      "slug": "lunatone",
+      "name_en": "Lunatone",
+      "name_es": "Lunatone",
+      "types": [
+        "rock",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 338,
+      "slug": "solrock",
+      "name_en": "Solrock",
+      "name_es": "Solrock",
+      "types": [
+        "rock",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 339,
+      "slug": "barboach",
+      "name_en": "Barboach",
+      "name_es": "Barboach",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 340,
+      "slug": "whiscash",
+      "name_en": "Whiscash",
+      "name_es": "Whiscash",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 341,
+      "slug": "corphish",
+      "name_en": "Corphish",
+      "name_es": "Corphish",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 342,
+      "slug": "crawdaunt",
+      "name_en": "Crawdaunt",
+      "name_es": "Crawdaunt",
+      "types": [
+        "water",
+        "dark"
+      ]
+    },
+    {
+      "dex": 343,
+      "slug": "baltoy",
+      "name_en": "Baltoy",
+      "name_es": "Baltoy",
+      "types": [
+        "ground",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 344,
+      "slug": "claydol",
+      "name_en": "Claydol",
+      "name_es": "Claydol",
+      "types": [
+        "ground",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 345,
+      "slug": "lileep",
+      "name_en": "Lileep",
+      "name_es": "Lileep",
+      "types": [
+        "rock",
+        "grass"
+      ]
+    },
+    {
+      "dex": 346,
+      "slug": "cradily",
+      "name_en": "Cradily",
+      "name_es": "Cradily",
+      "types": [
+        "rock",
+        "grass"
+      ]
+    },
+    {
+      "dex": 347,
+      "slug": "anorith",
+      "name_en": "Anorith",
+      "name_es": "Anorith",
+      "types": [
+        "rock",
+        "bug"
+      ]
+    },
+    {
+      "dex": 348,
+      "slug": "armaldo",
+      "name_en": "Armaldo",
+      "name_es": "Armaldo",
+      "types": [
+        "rock",
+        "bug"
+      ]
+    },
+    {
+      "dex": 349,
+      "slug": "feebas",
+      "name_en": "Feebas",
+      "name_es": "Feebas",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 350,
+      "slug": "milotic",
+      "name_en": "Milotic",
+      "name_es": "Milotic",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 351,
+      "slug": "castform",
+      "name_en": "Castform",
+      "name_es": "Castform",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 352,
+      "slug": "kecleon",
+      "name_en": "Kecleon",
+      "name_es": "Kecleon",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 353,
+      "slug": "shuppet",
+      "name_en": "Shuppet",
+      "name_es": "Shuppet",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 354,
+      "slug": "banette",
+      "name_en": "Banette",
+      "name_es": "Banette",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 355,
+      "slug": "duskull",
+      "name_en": "Duskull",
+      "name_es": "Duskull",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 356,
+      "slug": "dusclops",
+      "name_en": "Dusclops",
+      "name_es": "Dusclops",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 357,
+      "slug": "tropius",
+      "name_en": "Tropius",
+      "name_es": "Tropius",
+      "types": [
+        "grass",
+        "flying"
+      ]
+    },
+    {
+      "dex": 358,
+      "slug": "chimecho",
+      "name_en": "Chimecho",
+      "name_es": "Chimecho",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 359,
+      "slug": "absol",
+      "name_en": "Absol",
+      "name_es": "Absol",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 360,
+      "slug": "wynaut",
+      "name_en": "Wynaut",
+      "name_es": "Wynaut",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 361,
+      "slug": "snorunt",
+      "name_en": "Snorunt",
+      "name_es": "Snorunt",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 362,
+      "slug": "glalie",
+      "name_en": "Glalie",
+      "name_es": "Glalie",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 363,
+      "slug": "spheal",
+      "name_en": "Spheal",
+      "name_es": "Spheal",
+      "types": [
+        "ice",
+        "water"
+      ]
+    },
+    {
+      "dex": 364,
+      "slug": "sealeo",
+      "name_en": "Sealeo",
+      "name_es": "Sealeo",
+      "types": [
+        "ice",
+        "water"
+      ]
+    },
+    {
+      "dex": 365,
+      "slug": "walrein",
+      "name_en": "Walrein",
+      "name_es": "Walrein",
+      "types": [
+        "ice",
+        "water"
+      ]
+    },
+    {
+      "dex": 366,
+      "slug": "clamperl",
+      "name_en": "Clamperl",
+      "name_es": "Clamperl",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 367,
+      "slug": "huntail",
+      "name_en": "Huntail",
+      "name_es": "Huntail",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 368,
+      "slug": "gorebyss",
+      "name_en": "Gorebyss",
+      "name_es": "Gorebyss",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 369,
+      "slug": "relicanth",
+      "name_en": "Relicanth",
+      "name_es": "Relicanth",
+      "types": [
+        "water",
+        "rock"
+      ]
+    },
+    {
+      "dex": 370,
+      "slug": "luvdisc",
+      "name_en": "Luvdisc",
+      "name_es": "Luvdisc",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 371,
+      "slug": "bagon",
+      "name_en": "Bagon",
+      "name_es": "Bagon",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 372,
+      "slug": "shelgon",
+      "name_en": "Shelgon",
+      "name_es": "Shelgon",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 373,
+      "slug": "salamence",
+      "name_en": "Salamence",
+      "name_es": "Salamence",
+      "types": [
+        "dragon",
+        "flying"
+      ]
+    },
+    {
+      "dex": 374,
+      "slug": "beldum",
+      "name_en": "Beldum",
+      "name_es": "Beldum",
+      "types": [
+        "steel",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 375,
+      "slug": "metang",
+      "name_en": "Metang",
+      "name_es": "Metang",
+      "types": [
+        "steel",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 376,
+      "slug": "metagross",
+      "name_en": "Metagross",
+      "name_es": "Metagross",
+      "types": [
+        "steel",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 377,
+      "slug": "regirock",
+      "name_en": "Regirock",
+      "name_es": "Regirock",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 378,
+      "slug": "regice",
+      "name_en": "Regice",
+      "name_es": "Regice",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 379,
+      "slug": "registeel",
+      "name_en": "Registeel",
+      "name_es": "Registeel",
+      "types": [
+        "steel"
+      ]
+    },
+    {
+      "dex": 380,
+      "slug": "latias",
+      "name_en": "Latias",
+      "name_es": "Latias",
+      "types": [
+        "dragon",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 381,
+      "slug": "latios",
+      "name_en": "Latios",
+      "name_es": "Latios",
+      "types": [
+        "dragon",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 382,
+      "slug": "kyogre",
+      "name_en": "Kyogre",
+      "name_es": "Kyogre",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 383,
+      "slug": "groudon",
+      "name_en": "Groudon",
+      "name_es": "Groudon",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 384,
+      "slug": "rayquaza",
+      "name_en": "Rayquaza",
+      "name_es": "Rayquaza",
+      "types": [
+        "dragon",
+        "flying"
+      ]
+    },
+    {
+      "dex": 385,
+      "slug": "jirachi",
+      "name_en": "Jirachi",
+      "name_es": "Jirachi",
+      "types": [
+        "steel",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 386,
+      "slug": "deoxys",
+      "name_en": "Deoxys",
+      "name_es": "Deoxys",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 387,
+      "slug": "turtwig",
+      "name_en": "Turtwig",
+      "name_es": "Turtwig",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 388,
+      "slug": "grotle",
+      "name_en": "Grotle",
+      "name_es": "Grotle",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 389,
+      "slug": "torterra",
+      "name_en": "Torterra",
+      "name_es": "Torterra",
+      "types": [
+        "grass",
+        "ground"
+      ]
+    },
+    {
+      "dex": 390,
+      "slug": "chimchar",
+      "name_en": "Chimchar",
+      "name_es": "Chimchar",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 391,
+      "slug": "monferno",
+      "name_en": "Monferno",
+      "name_es": "Monferno",
+      "types": [
+        "fire",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 392,
+      "slug": "infernape",
+      "name_en": "Infernape",
+      "name_es": "Infernape",
+      "types": [
+        "fire",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 393,
+      "slug": "piplup",
+      "name_en": "Piplup",
+      "name_es": "Piplup",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 394,
+      "slug": "prinplup",
+      "name_en": "Prinplup",
+      "name_es": "Prinplup",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 395,
+      "slug": "empoleon",
+      "name_en": "Empoleon",
+      "name_es": "Empoleon",
+      "types": [
+        "water",
+        "steel"
+      ]
+    },
+    {
+      "dex": 396,
+      "slug": "starly",
+      "name_en": "Starly",
+      "name_es": "Starly",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 397,
+      "slug": "staravia",
+      "name_en": "Staravia",
+      "name_es": "Staravia",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 398,
+      "slug": "staraptor",
+      "name_en": "Staraptor",
+      "name_es": "Staraptor",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 399,
+      "slug": "bidoof",
+      "name_en": "Bidoof",
+      "name_es": "Bidoof",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 400,
+      "slug": "bibarel",
+      "name_en": "Bibarel",
+      "name_es": "Bibarel",
+      "types": [
+        "normal",
+        "water"
+      ]
+    },
+    {
+      "dex": 401,
+      "slug": "kricketot",
+      "name_en": "Kricketot",
+      "name_es": "Kricketot",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 402,
+      "slug": "kricketune",
+      "name_en": "Kricketune",
+      "name_es": "Kricketune",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 403,
+      "slug": "shinx",
+      "name_en": "Shinx",
+      "name_es": "Shinx",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 404,
+      "slug": "luxio",
+      "name_en": "Luxio",
+      "name_es": "Luxio",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 405,
+      "slug": "luxray",
+      "name_en": "Luxray",
+      "name_es": "Luxray",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 406,
+      "slug": "budew",
+      "name_en": "Budew",
+      "name_es": "Budew",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 407,
+      "slug": "roserade",
+      "name_en": "Roserade",
+      "name_es": "Roserade",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 408,
+      "slug": "cranidos",
+      "name_en": "Cranidos",
+      "name_es": "Cranidos",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 409,
+      "slug": "rampardos",
+      "name_en": "Rampardos",
+      "name_es": "Rampardos",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 410,
+      "slug": "shieldon",
+      "name_en": "Shieldon",
+      "name_es": "Shieldon",
+      "types": [
+        "rock",
+        "steel"
+      ]
+    },
+    {
+      "dex": 411,
+      "slug": "bastiodon",
+      "name_en": "Bastiodon",
+      "name_es": "Bastiodon",
+      "types": [
+        "rock",
+        "steel"
+      ]
+    },
+    {
+      "dex": 412,
+      "slug": "burmy",
+      "name_en": "Burmy",
+      "name_es": "Burmy",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 413,
+      "slug": "wormadam",
+      "name_en": "Wormadam",
+      "name_es": "Wormadam",
+      "types": [
+        "bug",
+        "grass"
+      ]
+    },
+    {
+      "dex": 414,
+      "slug": "mothim",
+      "name_en": "Mothim",
+      "name_es": "Mothim",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 415,
+      "slug": "combee",
+      "name_en": "Combee",
+      "name_es": "Combee",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 416,
+      "slug": "vespiquen",
+      "name_en": "Vespiquen",
+      "name_es": "Vespiquen",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 417,
+      "slug": "pachirisu",
+      "name_en": "Pachirisu",
+      "name_es": "Pachirisu",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 418,
+      "slug": "buizel",
+      "name_en": "Buizel",
+      "name_es": "Buizel",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 419,
+      "slug": "floatzel",
+      "name_en": "Floatzel",
+      "name_es": "Floatzel",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 420,
+      "slug": "cherubi",
+      "name_en": "Cherubi",
+      "name_es": "Cherubi",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 421,
+      "slug": "cherrim",
+      "name_en": "Cherrim",
+      "name_es": "Cherrim",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 422,
+      "slug": "shellos",
+      "name_en": "Shellos",
+      "name_es": "Shellos",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 423,
+      "slug": "gastrodon",
+      "name_en": "Gastrodon",
+      "name_es": "Gastrodon",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 424,
+      "slug": "ambipom",
+      "name_en": "Ambipom",
+      "name_es": "Ambipom",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 425,
+      "slug": "drifloon",
+      "name_en": "Drifloon",
+      "name_es": "Drifloon",
+      "types": [
+        "ghost",
+        "flying"
+      ]
+    },
+    {
+      "dex": 426,
+      "slug": "drifblim",
+      "name_en": "Drifblim",
+      "name_es": "Drifblim",
+      "types": [
+        "ghost",
+        "flying"
+      ]
+    },
+    {
+      "dex": 427,
+      "slug": "buneary",
+      "name_en": "Buneary",
+      "name_es": "Buneary",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 428,
+      "slug": "lopunny",
+      "name_en": "Lopunny",
+      "name_es": "Lopunny",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 429,
+      "slug": "mismagius",
+      "name_en": "Mismagius",
+      "name_es": "Mismagius",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 430,
+      "slug": "honchkrow",
+      "name_en": "Honchkrow",
+      "name_es": "Honchkrow",
+      "types": [
+        "dark",
+        "flying"
+      ]
+    },
+    {
+      "dex": 431,
+      "slug": "glameow",
+      "name_en": "Glameow",
+      "name_es": "Glameow",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 432,
+      "slug": "purugly",
+      "name_en": "Purugly",
+      "name_es": "Purugly",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 433,
+      "slug": "chingling",
+      "name_en": "Chingling",
+      "name_es": "Chingling",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 434,
+      "slug": "stunky",
+      "name_en": "Stunky",
+      "name_es": "Stunky",
+      "types": [
+        "poison",
+        "dark"
+      ]
+    },
+    {
+      "dex": 435,
+      "slug": "skuntank",
+      "name_en": "Skuntank",
+      "name_es": "Skuntank",
+      "types": [
+        "poison",
+        "dark"
+      ]
+    },
+    {
+      "dex": 436,
+      "slug": "bronzor",
+      "name_en": "Bronzor",
+      "name_es": "Bronzor",
+      "types": [
+        "steel",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 437,
+      "slug": "bronzong",
+      "name_en": "Bronzong",
+      "name_es": "Bronzong",
+      "types": [
+        "steel",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 438,
+      "slug": "bonsly",
+      "name_en": "Bonsly",
+      "name_es": "Bonsly",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 439,
+      "slug": "mime-jr",
+      "name_en": "Mime Jr.",
+      "name_es": "Mime Jr.",
+      "types": [
+        "psychic",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 440,
+      "slug": "happiny",
+      "name_en": "Happiny",
+      "name_es": "Happiny",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 441,
+      "slug": "chatot",
+      "name_en": "Chatot",
+      "name_es": "Chatot",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 442,
+      "slug": "spiritomb",
+      "name_en": "Spiritomb",
+      "name_es": "Spiritomb",
+      "types": [
+        "ghost",
+        "dark"
+      ]
+    },
+    {
+      "dex": 443,
+      "slug": "gible",
+      "name_en": "Gible",
+      "name_es": "Gible",
+      "types": [
+        "dragon",
+        "ground"
+      ]
+    },
+    {
+      "dex": 444,
+      "slug": "gabite",
+      "name_en": "Gabite",
+      "name_es": "Gabite",
+      "types": [
+        "dragon",
+        "ground"
+      ]
+    },
+    {
+      "dex": 445,
+      "slug": "garchomp",
+      "name_en": "Garchomp",
+      "name_es": "Garchomp",
+      "types": [
+        "dragon",
+        "ground"
+      ]
+    },
+    {
+      "dex": 446,
+      "slug": "munchlax",
+      "name_en": "Munchlax",
+      "name_es": "Munchlax",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 447,
+      "slug": "riolu",
+      "name_en": "Riolu",
+      "name_es": "Riolu",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 448,
+      "slug": "lucario",
+      "name_en": "Lucario",
+      "name_es": "Lucario",
+      "types": [
+        "fighting",
+        "steel"
+      ]
+    },
+    {
+      "dex": 449,
+      "slug": "hippopotas",
+      "name_en": "Hippopotas",
+      "name_es": "Hippopotas",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 450,
+      "slug": "hippowdon",
+      "name_en": "Hippowdon",
+      "name_es": "Hippowdon",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 451,
+      "slug": "skorupi",
+      "name_en": "Skorupi",
+      "name_es": "Skorupi",
+      "types": [
+        "poison",
+        "bug"
+      ]
+    },
+    {
+      "dex": 452,
+      "slug": "drapion",
+      "name_en": "Drapion",
+      "name_es": "Drapion",
+      "types": [
+        "poison",
+        "dark"
+      ]
+    },
+    {
+      "dex": 453,
+      "slug": "croagunk",
+      "name_en": "Croagunk",
+      "name_es": "Croagunk",
+      "types": [
+        "poison",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 454,
+      "slug": "toxicroak",
+      "name_en": "Toxicroak",
+      "name_es": "Toxicroak",
+      "types": [
+        "poison",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 455,
+      "slug": "carnivine",
+      "name_en": "Carnivine",
+      "name_es": "Carnivine",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 456,
+      "slug": "finneon",
+      "name_en": "Finneon",
+      "name_es": "Finneon",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 457,
+      "slug": "lumineon",
+      "name_en": "Lumineon",
+      "name_es": "Lumineon",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 458,
+      "slug": "mantyke",
+      "name_en": "Mantyke",
+      "name_es": "Mantyke",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 459,
+      "slug": "snover",
+      "name_en": "Snover",
+      "name_es": "Snover",
+      "types": [
+        "grass",
+        "ice"
+      ]
+    },
+    {
+      "dex": 460,
+      "slug": "abomasnow",
+      "name_en": "Abomasnow",
+      "name_es": "Abomasnow",
+      "types": [
+        "grass",
+        "ice"
+      ]
+    },
+    {
+      "dex": 461,
+      "slug": "weavile",
+      "name_en": "Weavile",
+      "name_es": "Weavile",
+      "types": [
+        "dark",
+        "ice"
+      ]
+    },
+    {
+      "dex": 462,
+      "slug": "magnezone",
+      "name_en": "Magnezone",
+      "name_es": "Magnezone",
+      "types": [
+        "electric",
+        "steel"
+      ]
+    },
+    {
+      "dex": 463,
+      "slug": "lickilicky",
+      "name_en": "Lickilicky",
+      "name_es": "Lickilicky",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 464,
+      "slug": "rhyperior",
+      "name_en": "Rhyperior",
+      "name_es": "Rhyperior",
+      "types": [
+        "ground",
+        "rock"
+      ]
+    },
+    {
+      "dex": 465,
+      "slug": "tangrowth",
+      "name_en": "Tangrowth",
+      "name_es": "Tangrowth",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 466,
+      "slug": "electivire",
+      "name_en": "Electivire",
+      "name_es": "Electivire",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 467,
+      "slug": "magmortar",
+      "name_en": "Magmortar",
+      "name_es": "Magmortar",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 468,
+      "slug": "togekiss",
+      "name_en": "Togekiss",
+      "name_es": "Togekiss",
+      "types": [
+        "fairy",
+        "flying"
+      ]
+    },
+    {
+      "dex": 469,
+      "slug": "yanmega",
+      "name_en": "Yanmega",
+      "name_es": "Yanmega",
+      "types": [
+        "bug",
+        "flying"
+      ]
+    },
+    {
+      "dex": 470,
+      "slug": "leafeon",
+      "name_en": "Leafeon",
+      "name_es": "Leafeon",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 471,
+      "slug": "glaceon",
+      "name_en": "Glaceon",
+      "name_es": "Glaceon",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 472,
+      "slug": "gliscor",
+      "name_en": "Gliscor",
+      "name_es": "Gliscor",
+      "types": [
+        "ground",
+        "flying"
+      ]
+    },
+    {
+      "dex": 473,
+      "slug": "mamoswine",
+      "name_en": "Mamoswine",
+      "name_es": "Mamoswine",
+      "types": [
+        "ice",
+        "ground"
+      ]
+    },
+    {
+      "dex": 474,
+      "slug": "porygon-z",
+      "name_en": "Porygon-Z",
+      "name_es": "Porygon-Z",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 475,
+      "slug": "gallade",
+      "name_en": "Gallade",
+      "name_es": "Gallade",
+      "types": [
+        "psychic",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 476,
+      "slug": "probopass",
+      "name_en": "Probopass",
+      "name_es": "Probopass",
+      "types": [
+        "rock",
+        "steel"
+      ]
+    },
+    {
+      "dex": 477,
+      "slug": "dusknoir",
+      "name_en": "Dusknoir",
+      "name_es": "Dusknoir",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 478,
+      "slug": "froslass",
+      "name_en": "Froslass",
+      "name_es": "Froslass",
+      "types": [
+        "ice",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 479,
+      "slug": "rotom",
+      "name_en": "Rotom",
+      "name_es": "Rotom",
+      "types": [
+        "electric",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 480,
+      "slug": "uxie",
+      "name_en": "Uxie",
+      "name_es": "Uxie",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 481,
+      "slug": "mesprit",
+      "name_en": "Mesprit",
+      "name_es": "Mesprit",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 482,
+      "slug": "azelf",
+      "name_en": "Azelf",
+      "name_es": "Azelf",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 483,
+      "slug": "dialga",
+      "name_en": "Dialga",
+      "name_es": "Dialga",
+      "types": [
+        "steel",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 484,
+      "slug": "palkia",
+      "name_en": "Palkia",
+      "name_es": "Palkia",
+      "types": [
+        "water",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 485,
+      "slug": "heatran",
+      "name_en": "Heatran",
+      "name_es": "Heatran",
+      "types": [
+        "fire",
+        "steel"
+      ]
+    },
+    {
+      "dex": 486,
+      "slug": "regigigas",
+      "name_en": "Regigigas",
+      "name_es": "Regigigas",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 487,
+      "slug": "giratina",
+      "name_en": "Giratina",
+      "name_es": "Giratina",
+      "types": [
+        "ghost",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 488,
+      "slug": "cresselia",
+      "name_en": "Cresselia",
+      "name_es": "Cresselia",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 489,
+      "slug": "phione",
+      "name_en": "Phione",
+      "name_es": "Phione",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 490,
+      "slug": "manaphy",
+      "name_en": "Manaphy",
+      "name_es": "Manaphy",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 491,
+      "slug": "darkrai",
+      "name_en": "Darkrai",
+      "name_es": "Darkrai",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 492,
+      "slug": "shaymin",
+      "name_en": "Shaymin",
+      "name_es": "Shaymin",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 493,
+      "slug": "arceus",
+      "name_en": "Arceus",
+      "name_es": "Arceus",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 494,
+      "slug": "victini",
+      "name_en": "Victini",
+      "name_es": "Victini",
+      "types": [
+        "psychic",
+        "fire"
+      ]
+    },
+    {
+      "dex": 495,
+      "slug": "snivy",
+      "name_en": "Snivy",
+      "name_es": "Snivy",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 496,
+      "slug": "servine",
+      "name_en": "Servine",
+      "name_es": "Servine",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 497,
+      "slug": "serperior",
+      "name_en": "Serperior",
+      "name_es": "Serperior",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 498,
+      "slug": "tepig",
+      "name_en": "Tepig",
+      "name_es": "Tepig",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 499,
+      "slug": "pignite",
+      "name_en": "Pignite",
+      "name_es": "Pignite",
+      "types": [
+        "fire",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 500,
+      "slug": "emboar",
+      "name_en": "Emboar",
+      "name_es": "Emboar",
+      "types": [
+        "fire",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 501,
+      "slug": "oshawott",
+      "name_en": "Oshawott",
+      "name_es": "Oshawott",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 502,
+      "slug": "dewott",
+      "name_en": "Dewott",
+      "name_es": "Dewott",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 503,
+      "slug": "samurott",
+      "name_en": "Samurott",
+      "name_es": "Samurott",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 504,
+      "slug": "patrat",
+      "name_en": "Patrat",
+      "name_es": "Patrat",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 505,
+      "slug": "watchog",
+      "name_en": "Watchog",
+      "name_es": "Watchog",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 506,
+      "slug": "lillipup",
+      "name_en": "Lillipup",
+      "name_es": "Lillipup",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 507,
+      "slug": "herdier",
+      "name_en": "Herdier",
+      "name_es": "Herdier",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 508,
+      "slug": "stoutland",
+      "name_en": "Stoutland",
+      "name_es": "Stoutland",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 509,
+      "slug": "purrloin",
+      "name_en": "Purrloin",
+      "name_es": "Purrloin",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 510,
+      "slug": "liepard",
+      "name_en": "Liepard",
+      "name_es": "Liepard",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 511,
+      "slug": "pansage",
+      "name_en": "Pansage",
+      "name_es": "Pansage",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 512,
+      "slug": "simisage",
+      "name_en": "Simisage",
+      "name_es": "Simisage",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 513,
+      "slug": "pansear",
+      "name_en": "Pansear",
+      "name_es": "Pansear",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 514,
+      "slug": "simisear",
+      "name_en": "Simisear",
+      "name_es": "Simisear",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 515,
+      "slug": "panpour",
+      "name_en": "Panpour",
+      "name_es": "Panpour",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 516,
+      "slug": "simipour",
+      "name_en": "Simipour",
+      "name_es": "Simipour",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 517,
+      "slug": "munna",
+      "name_en": "Munna",
+      "name_es": "Munna",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 518,
+      "slug": "musharna",
+      "name_en": "Musharna",
+      "name_es": "Musharna",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 519,
+      "slug": "pidove",
+      "name_en": "Pidove",
+      "name_es": "Pidove",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 520,
+      "slug": "tranquill",
+      "name_en": "Tranquill",
+      "name_es": "Tranquill",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 521,
+      "slug": "unfezant",
+      "name_en": "Unfezant",
+      "name_es": "Unfezant",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 522,
+      "slug": "blitzle",
+      "name_en": "Blitzle",
+      "name_es": "Blitzle",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 523,
+      "slug": "zebstrika",
+      "name_en": "Zebstrika",
+      "name_es": "Zebstrika",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 524,
+      "slug": "roggenrola",
+      "name_en": "Roggenrola",
+      "name_es": "Roggenrola",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 525,
+      "slug": "boldore",
+      "name_en": "Boldore",
+      "name_es": "Boldore",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 526,
+      "slug": "gigalith",
+      "name_en": "Gigalith",
+      "name_es": "Gigalith",
+      "types": [
+        "rock"
+      ]
+    },
+    {
+      "dex": 527,
+      "slug": "woobat",
+      "name_en": "Woobat",
+      "name_es": "Woobat",
+      "types": [
+        "psychic",
+        "flying"
+      ]
+    },
+    {
+      "dex": 528,
+      "slug": "swoobat",
+      "name_en": "Swoobat",
+      "name_es": "Swoobat",
+      "types": [
+        "psychic",
+        "flying"
+      ]
+    },
+    {
+      "dex": 529,
+      "slug": "drilbur",
+      "name_en": "Drilbur",
+      "name_es": "Drilbur",
+      "types": [
+        "ground"
+      ]
+    },
+    {
+      "dex": 530,
+      "slug": "excadrill",
+      "name_en": "Excadrill",
+      "name_es": "Excadrill",
+      "types": [
+        "ground",
+        "steel"
+      ]
+    },
+    {
+      "dex": 531,
+      "slug": "audino",
+      "name_en": "Audino",
+      "name_es": "Audino",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 532,
+      "slug": "timburr",
+      "name_en": "Timburr",
+      "name_es": "Timburr",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 533,
+      "slug": "gurdurr",
+      "name_en": "Gurdurr",
+      "name_es": "Gurdurr",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 534,
+      "slug": "conkeldurr",
+      "name_en": "Conkeldurr",
+      "name_es": "Conkeldurr",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 535,
+      "slug": "tympole",
+      "name_en": "Tympole",
+      "name_es": "Tympole",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 536,
+      "slug": "palpitoad",
+      "name_en": "Palpitoad",
+      "name_es": "Palpitoad",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 537,
+      "slug": "seismitoad",
+      "name_en": "Seismitoad",
+      "name_es": "Seismitoad",
+      "types": [
+        "water",
+        "ground"
+      ]
+    },
+    {
+      "dex": 538,
+      "slug": "throh",
+      "name_en": "Throh",
+      "name_es": "Throh",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 539,
+      "slug": "sawk",
+      "name_en": "Sawk",
+      "name_es": "Sawk",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 540,
+      "slug": "sewaddle",
+      "name_en": "Sewaddle",
+      "name_es": "Sewaddle",
+      "types": [
+        "bug",
+        "grass"
+      ]
+    },
+    {
+      "dex": 541,
+      "slug": "swadloon",
+      "name_en": "Swadloon",
+      "name_es": "Swadloon",
+      "types": [
+        "bug",
+        "grass"
+      ]
+    },
+    {
+      "dex": 542,
+      "slug": "leavanny",
+      "name_en": "Leavanny",
+      "name_es": "Leavanny",
+      "types": [
+        "bug",
+        "grass"
+      ]
+    },
+    {
+      "dex": 543,
+      "slug": "venipede",
+      "name_en": "Venipede",
+      "name_es": "Venipede",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 544,
+      "slug": "whirlipede",
+      "name_en": "Whirlipede",
+      "name_es": "Whirlipede",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 545,
+      "slug": "scolipede",
+      "name_en": "Scolipede",
+      "name_es": "Scolipede",
+      "types": [
+        "bug",
+        "poison"
+      ]
+    },
+    {
+      "dex": 546,
+      "slug": "cottonee",
+      "name_en": "Cottonee",
+      "name_es": "Cottonee",
+      "types": [
+        "grass",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 547,
+      "slug": "whimsicott",
+      "name_en": "Whimsicott",
+      "name_es": "Whimsicott",
+      "types": [
+        "grass",
+        "fairy"
+      ]
+    },
+    {
+      "dex": 548,
+      "slug": "petilil",
+      "name_en": "Petilil",
+      "name_es": "Petilil",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 549,
+      "slug": "lilligant",
+      "name_en": "Lilligant",
+      "name_es": "Lilligant",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 550,
+      "slug": "basculin",
+      "name_en": "Basculin",
+      "name_es": "Basculin",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 551,
+      "slug": "sandile",
+      "name_en": "Sandile",
+      "name_es": "Sandile",
+      "types": [
+        "ground",
+        "dark"
+      ]
+    },
+    {
+      "dex": 552,
+      "slug": "krokorok",
+      "name_en": "Krokorok",
+      "name_es": "Krokorok",
+      "types": [
+        "ground",
+        "dark"
+      ]
+    },
+    {
+      "dex": 553,
+      "slug": "krookodile",
+      "name_en": "Krookodile",
+      "name_es": "Krookodile",
+      "types": [
+        "ground",
+        "dark"
+      ]
+    },
+    {
+      "dex": 554,
+      "slug": "darumaka",
+      "name_en": "Darumaka",
+      "name_es": "Darumaka",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 555,
+      "slug": "darmanitan",
+      "name_en": "Darmanitan",
+      "name_es": "Darmanitan",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 556,
+      "slug": "maractus",
+      "name_en": "Maractus",
+      "name_es": "Maractus",
+      "types": [
+        "grass"
+      ]
+    },
+    {
+      "dex": 557,
+      "slug": "dwebble",
+      "name_en": "Dwebble",
+      "name_es": "Dwebble",
+      "types": [
+        "bug",
+        "rock"
+      ]
+    },
+    {
+      "dex": 558,
+      "slug": "crustle",
+      "name_en": "Crustle",
+      "name_es": "Crustle",
+      "types": [
+        "bug",
+        "rock"
+      ]
+    },
+    {
+      "dex": 559,
+      "slug": "scraggy",
+      "name_en": "Scraggy",
+      "name_es": "Scraggy",
+      "types": [
+        "dark",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 560,
+      "slug": "scrafty",
+      "name_en": "Scrafty",
+      "name_es": "Scrafty",
+      "types": [
+        "dark",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 561,
+      "slug": "sigilyph",
+      "name_en": "Sigilyph",
+      "name_es": "Sigilyph",
+      "types": [
+        "psychic",
+        "flying"
+      ]
+    },
+    {
+      "dex": 562,
+      "slug": "yamask",
+      "name_en": "Yamask",
+      "name_es": "Yamask",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 563,
+      "slug": "cofagrigus",
+      "name_en": "Cofagrigus",
+      "name_es": "Cofagrigus",
+      "types": [
+        "ghost"
+      ]
+    },
+    {
+      "dex": 564,
+      "slug": "tirtouga",
+      "name_en": "Tirtouga",
+      "name_es": "Tirtouga",
+      "types": [
+        "water",
+        "rock"
+      ]
+    },
+    {
+      "dex": 565,
+      "slug": "carracosta",
+      "name_en": "Carracosta",
+      "name_es": "Carracosta",
+      "types": [
+        "water",
+        "rock"
+      ]
+    },
+    {
+      "dex": 566,
+      "slug": "archen",
+      "name_en": "Archen",
+      "name_es": "Archen",
+      "types": [
+        "rock",
+        "flying"
+      ]
+    },
+    {
+      "dex": 567,
+      "slug": "archeops",
+      "name_en": "Archeops",
+      "name_es": "Archeops",
+      "types": [
+        "rock",
+        "flying"
+      ]
+    },
+    {
+      "dex": 568,
+      "slug": "trubbish",
+      "name_en": "Trubbish",
+      "name_es": "Trubbish",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 569,
+      "slug": "garbodor",
+      "name_en": "Garbodor",
+      "name_es": "Garbodor",
+      "types": [
+        "poison"
+      ]
+    },
+    {
+      "dex": 570,
+      "slug": "zorua",
+      "name_en": "Zorua",
+      "name_es": "Zorua",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 571,
+      "slug": "zoroark",
+      "name_en": "Zoroark",
+      "name_es": "Zoroark",
+      "types": [
+        "dark"
+      ]
+    },
+    {
+      "dex": 572,
+      "slug": "minccino",
+      "name_en": "Minccino",
+      "name_es": "Minccino",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 573,
+      "slug": "cinccino",
+      "name_en": "Cinccino",
+      "name_es": "Cinccino",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 574,
+      "slug": "gothita",
+      "name_en": "Gothita",
+      "name_es": "Gothita",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 575,
+      "slug": "gothorita",
+      "name_en": "Gothorita",
+      "name_es": "Gothorita",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 576,
+      "slug": "gothitelle",
+      "name_en": "Gothitelle",
+      "name_es": "Gothitelle",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 577,
+      "slug": "solosis",
+      "name_en": "Solosis",
+      "name_es": "Solosis",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 578,
+      "slug": "duosion",
+      "name_en": "Duosion",
+      "name_es": "Duosion",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 579,
+      "slug": "reuniclus",
+      "name_en": "Reuniclus",
+      "name_es": "Reuniclus",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 580,
+      "slug": "ducklett",
+      "name_en": "Ducklett",
+      "name_es": "Ducklett",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 581,
+      "slug": "swanna",
+      "name_en": "Swanna",
+      "name_es": "Swanna",
+      "types": [
+        "water",
+        "flying"
+      ]
+    },
+    {
+      "dex": 582,
+      "slug": "vanillite",
+      "name_en": "Vanillite",
+      "name_es": "Vanillite",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 583,
+      "slug": "vanillish",
+      "name_en": "Vanillish",
+      "name_es": "Vanillish",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 584,
+      "slug": "vanilluxe",
+      "name_en": "Vanilluxe",
+      "name_es": "Vanilluxe",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 585,
+      "slug": "deerling",
+      "name_en": "Deerling",
+      "name_es": "Deerling",
+      "types": [
+        "normal",
+        "grass"
+      ]
+    },
+    {
+      "dex": 586,
+      "slug": "sawsbuck",
+      "name_en": "Sawsbuck",
+      "name_es": "Sawsbuck",
+      "types": [
+        "normal",
+        "grass"
+      ]
+    },
+    {
+      "dex": 587,
+      "slug": "emolga",
+      "name_en": "Emolga",
+      "name_es": "Emolga",
+      "types": [
+        "electric",
+        "flying"
+      ]
+    },
+    {
+      "dex": 588,
+      "slug": "karrablast",
+      "name_en": "Karrablast",
+      "name_es": "Karrablast",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 589,
+      "slug": "escavalier",
+      "name_en": "Escavalier",
+      "name_es": "Escavalier",
+      "types": [
+        "bug",
+        "steel"
+      ]
+    },
+    {
+      "dex": 590,
+      "slug": "foongus",
+      "name_en": "Foongus",
+      "name_es": "Foongus",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 591,
+      "slug": "amoonguss",
+      "name_en": "Amoonguss",
+      "name_es": "Amoonguss",
+      "types": [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      "dex": 592,
+      "slug": "frillish",
+      "name_en": "Frillish",
+      "name_es": "Frillish",
+      "types": [
+        "water",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 593,
+      "slug": "jellicent",
+      "name_en": "Jellicent",
+      "name_es": "Jellicent",
+      "types": [
+        "water",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 594,
+      "slug": "alomomola",
+      "name_en": "Alomomola",
+      "name_es": "Alomomola",
+      "types": [
+        "water"
+      ]
+    },
+    {
+      "dex": 595,
+      "slug": "joltik",
+      "name_en": "Joltik",
+      "name_es": "Joltik",
+      "types": [
+        "bug",
+        "electric"
+      ]
+    },
+    {
+      "dex": 596,
+      "slug": "galvantula",
+      "name_en": "Galvantula",
+      "name_es": "Galvantula",
+      "types": [
+        "bug",
+        "electric"
+      ]
+    },
+    {
+      "dex": 597,
+      "slug": "ferroseed",
+      "name_en": "Ferroseed",
+      "name_es": "Ferroseed",
+      "types": [
+        "grass",
+        "steel"
+      ]
+    },
+    {
+      "dex": 598,
+      "slug": "ferrothorn",
+      "name_en": "Ferrothorn",
+      "name_es": "Ferrothorn",
+      "types": [
+        "grass",
+        "steel"
+      ]
+    },
+    {
+      "dex": 599,
+      "slug": "klink",
+      "name_en": "Klink",
+      "name_es": "Klink",
+      "types": [
+        "steel"
+      ]
+    },
+    {
+      "dex": 600,
+      "slug": "klang",
+      "name_en": "Klang",
+      "name_es": "Klang",
+      "types": [
+        "steel"
+      ]
+    },
+    {
+      "dex": 601,
+      "slug": "klinklang",
+      "name_en": "Klinklang",
+      "name_es": "Klinklang",
+      "types": [
+        "steel"
+      ]
+    },
+    {
+      "dex": 602,
+      "slug": "tynamo",
+      "name_en": "Tynamo",
+      "name_es": "Tynamo",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 603,
+      "slug": "eelektrik",
+      "name_en": "Eelektrik",
+      "name_es": "Eelektrik",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 604,
+      "slug": "eelektross",
+      "name_en": "Eelektross",
+      "name_es": "Eelektross",
+      "types": [
+        "electric"
+      ]
+    },
+    {
+      "dex": 605,
+      "slug": "elgyem",
+      "name_en": "Elgyem",
+      "name_es": "Elgyem",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 606,
+      "slug": "beheeyem",
+      "name_en": "Beheeyem",
+      "name_es": "Beheeyem",
+      "types": [
+        "psychic"
+      ]
+    },
+    {
+      "dex": 607,
+      "slug": "litwick",
+      "name_en": "Litwick",
+      "name_es": "Litwick",
+      "types": [
+        "ghost",
+        "fire"
+      ]
+    },
+    {
+      "dex": 608,
+      "slug": "lampent",
+      "name_en": "Lampent",
+      "name_es": "Lampent",
+      "types": [
+        "ghost",
+        "fire"
+      ]
+    },
+    {
+      "dex": 609,
+      "slug": "chandelure",
+      "name_en": "Chandelure",
+      "name_es": "Chandelure",
+      "types": [
+        "ghost",
+        "fire"
+      ]
+    },
+    {
+      "dex": 610,
+      "slug": "axew",
+      "name_en": "Axew",
+      "name_es": "Axew",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 611,
+      "slug": "fraxure",
+      "name_en": "Fraxure",
+      "name_es": "Fraxure",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 612,
+      "slug": "haxorus",
+      "name_en": "Haxorus",
+      "name_es": "Haxorus",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 613,
+      "slug": "cubchoo",
+      "name_en": "Cubchoo",
+      "name_es": "Cubchoo",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 614,
+      "slug": "beartic",
+      "name_en": "Beartic",
+      "name_es": "Beartic",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 615,
+      "slug": "cryogonal",
+      "name_en": "Cryogonal",
+      "name_es": "Cryogonal",
+      "types": [
+        "ice"
+      ]
+    },
+    {
+      "dex": 616,
+      "slug": "shelmet",
+      "name_en": "Shelmet",
+      "name_es": "Shelmet",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 617,
+      "slug": "accelgor",
+      "name_en": "Accelgor",
+      "name_es": "Accelgor",
+      "types": [
+        "bug"
+      ]
+    },
+    {
+      "dex": 618,
+      "slug": "stunfisk",
+      "name_en": "Stunfisk",
+      "name_es": "Stunfisk",
+      "types": [
+        "ground",
+        "electric"
+      ]
+    },
+    {
+      "dex": 619,
+      "slug": "mienfoo",
+      "name_en": "Mienfoo",
+      "name_es": "Mienfoo",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 620,
+      "slug": "mienshao",
+      "name_en": "Mienshao",
+      "name_es": "Mienshao",
+      "types": [
+        "fighting"
+      ]
+    },
+    {
+      "dex": 621,
+      "slug": "druddigon",
+      "name_en": "Druddigon",
+      "name_es": "Druddigon",
+      "types": [
+        "dragon"
+      ]
+    },
+    {
+      "dex": 622,
+      "slug": "golett",
+      "name_en": "Golett",
+      "name_es": "Golett",
+      "types": [
+        "ground",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 623,
+      "slug": "golurk",
+      "name_en": "Golurk",
+      "name_es": "Golurk",
+      "types": [
+        "ground",
+        "ghost"
+      ]
+    },
+    {
+      "dex": 624,
+      "slug": "pawniard",
+      "name_en": "Pawniard",
+      "name_es": "Pawniard",
+      "types": [
+        "dark",
+        "steel"
+      ]
+    },
+    {
+      "dex": 625,
+      "slug": "bisharp",
+      "name_en": "Bisharp",
+      "name_es": "Bisharp",
+      "types": [
+        "dark",
+        "steel"
+      ]
+    },
+    {
+      "dex": 626,
+      "slug": "bouffalant",
+      "name_en": "Bouffalant",
+      "name_es": "Bouffalant",
+      "types": [
+        "normal"
+      ]
+    },
+    {
+      "dex": 627,
+      "slug": "rufflet",
+      "name_en": "Rufflet",
+      "name_es": "Rufflet",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 628,
+      "slug": "braviary",
+      "name_en": "Braviary",
+      "name_es": "Braviary",
+      "types": [
+        "normal",
+        "flying"
+      ]
+    },
+    {
+      "dex": 629,
+      "slug": "vullaby",
+      "name_en": "Vullaby",
+      "name_es": "Vullaby",
+      "types": [
+        "dark",
+        "flying"
+      ]
+    },
+    {
+      "dex": 630,
+      "slug": "mandibuzz",
+      "name_en": "Mandibuzz",
+      "name_es": "Mandibuzz",
+      "types": [
+        "dark",
+        "flying"
+      ]
+    },
+    {
+      "dex": 631,
+      "slug": "heatmor",
+      "name_en": "Heatmor",
+      "name_es": "Heatmor",
+      "types": [
+        "fire"
+      ]
+    },
+    {
+      "dex": 632,
+      "slug": "durant",
+      "name_en": "Durant",
+      "name_es": "Durant",
+      "types": [
+        "bug",
+        "steel"
+      ]
+    },
+    {
+      "dex": 633,
+      "slug": "deino",
+      "name_en": "Deino",
+      "name_es": "Deino",
+      "types": [
+        "dark",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 634,
+      "slug": "zweilous",
+      "name_en": "Zweilous",
+      "name_es": "Zweilous",
+      "types": [
+        "dark",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 635,
+      "slug": "hydreigon",
+      "name_en": "Hydreigon",
+      "name_es": "Hydreigon",
+      "types": [
+        "dark",
+        "dragon"
+      ]
+    },
+    {
+      "dex": 636,
+      "slug": "larvesta",
+      "name_en": "Larvesta",
+      "name_es": "Larvesta",
+      "types": [
+        "bug",
+        "fire"
+      ]
+    },
+    {
+      "dex": 637,
+      "slug": "volcarona",
+      "name_en": "Volcarona",
+      "name_es": "Volcarona",
+      "types": [
+        "bug",
+        "fire"
+      ]
+    },
+    {
+      "dex": 638,
+      "slug": "cobalion",
+      "name_en": "Cobalion",
+      "name_es": "Cobalion",
+      "types": [
+        "steel",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 639,
+      "slug": "terrakion",
+      "name_en": "Terrakion",
+      "name_es": "Terrakion",
+      "types": [
+        "rock",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 640,
+      "slug": "virizion",
+      "name_en": "Virizion",
+      "name_es": "Virizion",
+      "types": [
+        "grass",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 641,
+      "slug": "tornadus",
+      "name_en": "Tornadus",
+      "name_es": "Tornadus",
+      "types": [
+        "flying"
+      ]
+    },
+    {
+      "dex": 642,
+      "slug": "thundurus",
+      "name_en": "Thundurus",
+      "name_es": "Thundurus",
+      "types": [
+        "electric",
+        "flying"
+      ]
+    },
+    {
+      "dex": 643,
+      "slug": "reshiram",
+      "name_en": "Reshiram",
+      "name_es": "Reshiram",
+      "types": [
+        "dragon",
+        "fire"
+      ]
+    },
+    {
+      "dex": 644,
+      "slug": "zekrom",
+      "name_en": "Zekrom",
+      "name_es": "Zekrom",
+      "types": [
+        "dragon",
+        "electric"
+      ]
+    },
+    {
+      "dex": 645,
+      "slug": "landorus",
+      "name_en": "Landorus",
+      "name_es": "Landorus",
+      "types": [
+        "ground",
+        "flying"
+      ]
+    },
+    {
+      "dex": 646,
+      "slug": "kyurem",
+      "name_en": "Kyurem",
+      "name_es": "Kyurem",
+      "types": [
+        "dragon",
+        "ice"
+      ]
+    },
+    {
+      "dex": 647,
+      "slug": "keldeo",
+      "name_en": "Keldeo",
+      "name_es": "Keldeo",
+      "types": [
+        "water",
+        "fighting"
+      ]
+    },
+    {
+      "dex": 648,
+      "slug": "meloetta",
+      "name_en": "Meloetta",
+      "name_es": "Meloetta",
+      "types": [
+        "normal",
+        "psychic"
+      ]
+    },
+    {
+      "dex": 649,
+      "slug": "genesect",
+      "name_en": "Genesect",
+      "name_es": "Genesect",
+      "types": [
+        "bug",
+        "steel"
+      ]
+    }
+  ]
+}
