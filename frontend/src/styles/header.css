@@ -1,0 +1,177 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 520px) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(11, 15, 20, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.headerWithTrainer {
+  grid-template-rows: auto auto;
+}
+
+.brandTitle { font-weight: 800; letter-spacing: 0.2px; }
+
+.searchBox { position: relative; }
+
+.searchInput {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+}
+
+.searchInput::placeholder { color: rgba(255,255,255,0.42); }
+
+.searchInput:focus {
+  border-color: rgba(140, 180, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.15);
+}
+
+.spinner {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-top-color: rgba(255,255,255,0.70);
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.ghostBtn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  cursor: pointer;
+  color: rgba(255,255,255,0.85);
+}
+.ghostBtn:hover { background: rgba(255,255,255,0.07); }
+
+/* Trainer bar inside header */
+.trainerBar {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: start;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.trainerBarLeft { min-width: 0; }
+
+.trainerBarRight {
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+  align-content: start;
+}
+
+/* Trainer multilang subtitle */
+.trainerNamesLine {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.trainerNamePart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.langTag {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.82);
+}
+
+.trainerNameVal { color: rgba(255,255,255,0.78); }
+.sep { margin-left: 8px; color: rgba(255,255,255,0.30); }
+
+/* Toggles / counts */
+.togglesRow{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.toggle {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle input { accent-color: rgba(120, 255, 140, 0.90); }
+
+.counts {
+  text-align: right;
+  font-size: 0.90rem;
+}
+
+/* Tabs */
+.tabsBar {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+}
+
+.tabBtn {
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.85);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.tabBtn:hover { background: rgba(255,255,255,0.07); }
+
+.tabBtnActive {
+  border-color: rgba(213, 184, 255, 0.35);
+  background: rgba(213, 184, 255, 0.10);
+  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
+}
+
+/* Responsive (header) */
+@media (max-width: 980px) {
+  .header { grid-template-columns: 1fr; gap: 10px; }
+  .trainerBar { grid-template-columns: 1fr; }
+  .trainerBarRight { justify-items: start; }
+}

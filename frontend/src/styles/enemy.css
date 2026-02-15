@@ -1,0 +1,163 @@
+/* Seen area */
+.seenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.seenSlot,
+.seenSlotEmpty {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  min-width: 0;
+}
+
+.seenSlotEmpty {
+  border-style: dashed;
+  background: rgba(255,255,255,0.02);
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.seenSlotHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.seenSlotBody { display: grid; gap: 10px; }
+
+/* Pool grid: 4..6 columns responsive */
+.poolGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(240px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 1750px) {
+  .poolGrid { grid-template-columns: repeat(5, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 1500px) {
+  .poolGrid { grid-template-columns: repeat(4, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 1100px) {
+  .poolGrid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .poolGrid { grid-template-columns: 1fr; }
+}
+
+/* Set tiles */
+.setTile {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  min-width: 0;
+}
+.setTile:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.05);
+}
+
+.setTileTop {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.setTileTitle .name { font-weight: 900; }
+.setTileTitle .meta { margin-top: 2px; }
+
+.setTileActions {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tileBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  padding: 0;
+}
+.tileBtn:hover { background: rgba(255,255,255,0.08); }
+.tileBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.tileBtnConfirm {
+  border-color: rgba(0, 255, 180, 0.22);
+  background: rgba(0, 255, 180, 0.06);
+}
+.tileBtnConfirm:hover { background: rgba(0, 255, 180, 0.10); }
+
+.tileBtnDiscard {
+  border-color: rgba(255, 120, 120, 0.22);
+  background: rgba(255, 120, 120, 0.06);
+}
+.tileBtnDiscard:hover { background: rgba(255, 120, 120, 0.10); }
+
+.tileBtnUndo {
+  border-color: rgba(140, 180, 255, 0.26);
+  background: rgba(140, 180, 255, 0.08);
+}
+.tileBtnUndo:hover { background: rgba(140, 180, 255, 0.12); }
+
+.setTileBody {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.tileSection {
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.02);
+  padding: 10px;
+}
+
+.tileLabel {
+  font-size: 0.86rem;
+  margin-bottom: 6px;
+}
+
+.setTileDiscarded {
+  opacity: 0.65;
+  border-color: rgba(255, 120, 120, 0.18);
+  background: rgba(255, 120, 120, 0.04);
+}
+
+.tileRibbon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 120, 120, 0.24);
+  background: rgba(255, 120, 120, 0.10);
+  color: rgba(255,255,255,0.90);
+}
