@@ -499,7 +499,7 @@ html, body, #root {
   align-items: center;
 }
 
-/* Seen: header row for "Moves" + "BP/ACC" */
+/* Seen: header row for "Moves" + "POWER/ACC" */
 .movesHeaderRow {
   display: grid;
   grid-template-columns: 1fr 84px;
@@ -513,7 +513,7 @@ html, body, #root {
   letter-spacing: 0.3px;
 }
 
-/* Seen: add BP/ACC column */
+/* Seen: add POWER/ACC column */
 .moveRowSeen {
   grid-template-columns: 74px 1fr 84px;
 }

@@ -342,7 +342,7 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
         <div className="miniBox">
           <div className="movesHeaderRow">
             <div className="h3">Moves</div>
-            <div className="muted mono movesHeaderPA">BP/ACC</div>
+            <div className="muted mono movesHeaderPA">POWER / ACC</div>
           </div>
 
           <ul className="moves">
