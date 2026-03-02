@@ -26,35 +26,32 @@ function defaultBoosts() {
   return { atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
 }
 
-function BoostPicker({ boosts, onChange }) {
+function BoostStageSelect({ label, value, onChange }) {
   return (
-    <div style={{ display: "grid", gap: 8 }}>
-      {BOOST_KEYS.map(({ key, label }) => (
-        <label key={key} className="myField" style={{ gridTemplateColumns: "1fr", gap: 6 }}>
-          <div className="muted myLabel">{label} stage</div>
-          <select
-            className="mySelect myInputSmall"
-            value={boosts?.[key] ?? 0}
-            onChange={(e) => onChange({ ...(boosts ?? defaultBoosts()), [key]: clampInt(parseInt(e.target.value, 10), -6, 6) })}
-          >
-            {Array.from({ length: 13 }, (_, i) => i - 6).map((v) => (
-              <option key={v} value={v}>
-                {v >= 0 ? `+${v}` : String(v)}
-              </option>
-            ))}
-          </select>
-        </label>
-      ))}
-    </div>
+    <label className="myField" style={{ gridTemplateColumns: "1fr", gap: 6, margin: 0 }}>
+      <div className="muted myLabel">{label}</div>
+      <select
+        className="mySelect myInputSmall mono"
+        value={value ?? 0}
+        onChange={(e) => onChange(clampInt(parseInt(e.target.value, 10), -6, 6))}
+        title="Boost stage"
+      >
+        {Array.from({ length: 13 }, (_, i) => i - 6).map((v) => (
+          <option key={v} value={v}>
+            {v >= 0 ? `+${v}` : String(v)}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 }
 
-function RemainingHpInput({ current, max, onChange }) {
+function RemainingHpCompact({ current, max, onChange }) {
   const safeMax = Math.max(1, Number(max ?? 1));
   const safeCur = clampInt(Number(current ?? safeMax), 0, safeMax);
 
   return (
-    <label className="myField">
+    <label className="myField" style={{ gridTemplateColumns: "1fr", gap: 6, margin: 0 }}>
       <div className="muted myLabel">Remaining HP</div>
       <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
         <input
@@ -65,9 +62,11 @@ function RemainingHpInput({ current, max, onChange }) {
           step={1}
           value={safeCur}
           onChange={(e) => onChange(clampInt(parseInt(e.target.value, 10), 0, safeMax))}
-          style={{ width: 110 }}
+          style={{ width: 92 }}
         />
-        <div className="mono muted">/ {safeMax}</div>
+        <div className="mono muted" style={{ whiteSpace: "nowrap" }}>
+          / {safeMax}
+        </div>
       </div>
     </label>
   );
@@ -96,19 +95,27 @@ function MoveDamageRow({ sideLabel, moveSlug, moveEntry, damage, isCrit, onToggl
             {sideLabel}: {label}
           </div>
         </div>
-        <label className="toggle" style={{ padding: "6px 10px" }} title="Critical hit">
-          <input
-            type="checkbox"
-            checked={!!isCrit}
-            onChange={(e) => onToggleCrit(e.target.checked)}
-            onClick={(e) => e.stopPropagation()}
-          />
-          <span>Crit</span>
-        </label>
+
+        {/* Compact: POWER/ACC inline just left of Crit */}
+        <div style={{ display: "flex", gap: 10, alignItems: "center", flex: "0 0 auto" }}>
+          <span className="mono muted" style={{ whiteSpace: "nowrap" }}>
+            {bpacc}
+          </span>
+
+          <label className="toggle" style={{ padding: "6px 10px" }} title="Critical hit">
+            <input
+              type="checkbox"
+              checked={!!isCrit}
+              onChange={(e) => onToggleCrit(e.target.checked)}
+              onClick={(e) => e.stopPropagation()}
+            />
+            <span>Crit</span>
+          </label>
+        </div>
       </div>
 
-      <div className="muted" style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "center" }}>
-        <span className="mono">{bpacc}</span>
+      {/* Second row now only for damage range */}
+      <div className="muted" style={{ display: "flex", justifyContent: "flex-end", gap: 10, alignItems: "center" }}>
         <span className="mono">{rangeText}</span>
       </div>
     </div>
@@ -158,6 +165,69 @@ function buildCalcPokemonFromEnemySet(set, boosts, currentHp) {
     boosts: boosts ?? defaultBoosts(),
     current_hp: typeof currentHp === "number" ? currentHp : maxHp,
   };
+}
+
+function StatsBoxWithControls({
+  title,
+  stats, // {hp, atk, def, spa, spd, spe}
+  boosts,
+  onBoostsChange,
+  curHp,
+  onCurHpChange,
+  maxHp,
+  align = "left",
+}) {
+  const isRight = align === "right";
+
+  return (
+    <div className="miniBox">
+      <div className="h3" style={{ textAlign: isRight ? "right" : "left" }}>
+        {title}
+      </div>
+
+      <div style={{ display: "grid", gap: 10, marginTop: 10 }}>
+        {/* HP row: StatRow + Remaining HP control */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 170px", gap: 12, alignItems: "center" }}>
+          <div style={{ minWidth: 0 }}>
+            <StatRow label="HP" value={stats?.hp ?? 0} compact />
+          </div>
+          <div style={{ justifySelf: isRight ? "end" : "start" }}>
+            <RemainingHpCompact current={curHp} max={maxHp} onChange={onCurHpChange} />
+          </div>
+        </div>
+
+        {/* Boost rows */}
+        {BOOST_KEYS.map(({ key, label }) => {
+          const statLabel =
+            key === "atk" ? "Atk" : key === "def" ? "Def" : key === "spa" ? "SpA" : key === "spd" ? "SpD" : "Spe";
+          const statVal = stats?.[key] ?? 0;
+
+          return (
+            <div
+              key={key}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 170px",
+                gap: 12,
+                alignItems: "center",
+              }}
+            >
+              <div style={{ minWidth: 0 }}>
+                <StatRow label={statLabel} value={statVal} compact />
+              </div>
+              <div style={{ justifySelf: isRight ? "end" : "start" }}>
+                <BoostStageSelect
+                  label={`${statLabel} stage`}
+                  value={boosts?.[key] ?? 0}
+                  onChange={(v) => onBoostsChange({ ...(boosts ?? defaultBoosts()), [key]: v })}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
@@ -230,7 +300,9 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
         return;
       }
       try {
-        const data = await apiGetJson(`/subway/trainer/${encodeURIComponent(tId)}/pool/search?q=${encodeURIComponent(q)}&limit=12`);
+        const data = await apiGetJson(
+          `/subway/trainer/${encodeURIComponent(tId)}/pool/search?q=${encodeURIComponent(q)}&limit=12`
+        );
         if (!cancelled) setEnemySuggestions(Array.isArray(data) ? data : []);
       } catch {
         if (!cancelled) setEnemySuggestions([]);
@@ -258,7 +330,9 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
   // Determine move slugs for each side
   const myMoveSlugs = useMemo(() => {
     if (!selectedMyMon) return [null, null, null, null];
-    const out = [0, 1, 2, 3].map((i) => selectedMyMon?.move_slugs?.[i] ?? findMoveSlugFromText(selectedMyMon?.moves?.[i], moveDex));
+    const out = [0, 1, 2, 3].map(
+      (i) => selectedMyMon?.move_slugs?.[i] ?? findMoveSlugFromText(selectedMyMon?.moves?.[i], moveDex)
+    );
     return out;
   }, [selectedMyMon, moveDex]);
 
@@ -275,7 +349,7 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
   const [enCrit, setEnCrit] = useState([false, false, false, false]);
 
   // Detail selection
-  const [selectedMoveDetail, setSelectedMoveDetail] = useState(null); // { side: 'my'|'en', i, resp }
+  const [selectedMoveDetail, setSelectedMoveDetail] = useState(null); // { side: 'my'|'en', i, resp, slug }
 
   const field = useMemo(
     () => ({ format, weather, wonder_room: wonderRoom, gravity }),
@@ -415,6 +489,17 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
 
   const enemySeen = (confirmedSets ?? []).filter(Boolean);
 
+  // Keep selected detail in sync: if the selected move has updated damage, refresh resp reference.
+  useEffect(() => {
+    if (!selectedMoveDetail?.slug) return;
+    const side = selectedMoveDetail.side;
+    const idx = selectedMoveDetail.i;
+    const nextResp = side === "my" ? myDamage?.[idx] : enDamage?.[idx];
+    if (nextResp && nextResp !== selectedMoveDetail.resp) {
+      setSelectedMoveDetail((p) => (p ? { ...p, resp: nextResp } : p));
+    }
+  }, [myDamage, enDamage, selectedMoveDetail]);
+
   return (
     <div className="layoutNew">
       {!trainer ? (
@@ -491,23 +576,42 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                   </div>
                 </div>
 
-                {selectedMoveDetail?.resp ? (
+                {selectedMoveDetail?.slug ? (
                   <div className="miniBox">
                     <div className="h3">Selected move</div>
-                    <div className="muted mono" style={{ marginTop: 6 }}>
-                      {selectedMoveDetail.side === "my" ? "My" : "Enemy"} ·{" "}
-                      {prettyMoveNameFromSlug(selectedMoveDetail.slug) ?? selectedMoveDetail.slug}
+
+                    <div className="muted mono" style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                      <span>{selectedMoveDetail.side === "my" ? "My" : "Enemy"}</span>
+                      <span className="muted">·</span>
+                      <span>{prettyMoveNameFromSlug(selectedMoveDetail.slug) ?? selectedMoveDetail.slug}</span>
+
+                      {moveDex?.[selectedMoveDetail.slug]?.type ? (
+                        <>
+                          <span className="muted">·</span>
+                          <TypeBadge type={moveDex[selectedMoveDetail.slug].type} />
+                        </>
+                      ) : null}
+
+                      <span className="muted">·</span>
+                      <span>{formatBPAcc(moveDex?.[selectedMoveDetail.slug])}</span>
                     </div>
-                    <div className="muted mono" style={{ marginTop: 8 }}>
-                      Damage: {selectedMoveDetail.resp.min_damage}-{selectedMoveDetail.resp.max_damage} (
-                      {selectedMoveDetail.resp.min_percent_maxhp}-{selectedMoveDetail.resp.max_percent_maxhp}%)
-                      {" · "}
-                      {selectedMoveDetail.resp.guaranteed_ohko_on_remaining
-                        ? "GUARANTEED OHKO (remaining HP)"
-                        : selectedMoveDetail.resp.possible_ohko_on_remaining
-                        ? "POSSIBLE OHKO (remaining HP)"
-                        : "not an OHKO (remaining HP)"}
-                    </div>
+
+                    {selectedMoveDetail?.resp ? (
+                      <div className="muted mono" style={{ marginTop: 8 }}>
+                        Damage: {selectedMoveDetail.resp.min_damage}-{selectedMoveDetail.resp.max_damage} (
+                        {selectedMoveDetail.resp.min_percent_maxhp}-{selectedMoveDetail.resp.max_percent_maxhp}%)
+                        {" · "}
+                        {selectedMoveDetail.resp.guaranteed_ohko_on_remaining
+                          ? "GUARANTEED OHKO (remaining HP)"
+                          : selectedMoveDetail.resp.possible_ohko_on_remaining
+                          ? "POSSIBLE OHKO (remaining HP)"
+                          : "not an OHKO (remaining HP)"}
+                      </div>
+                    ) : (
+                      <div className="muted mono" style={{ marginTop: 8 }}>
+                        No damage data (missing move / not calculated yet).
+                      </div>
+                    )}
                   </div>
                 ) : null}
               </div>
@@ -516,9 +620,16 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
 
           {/* 3 columns */}
           <section className="panel">
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 360px 1fr", gap: 18, alignItems: "start" }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 360px 1fr",
+                gap: 18,
+                alignItems: "stretch", // <-- iguala altura de columnas dentro del panel
+              }}
+            >
               {/* Left: My */}
-              <div style={{ display: "grid", gap: 12 }}>
+              <div style={{ display: "grid", gap: 12, height: "100%", alignContent: "start" }}>
                 <div className="h2">My side</div>
 
                 <div className="miniBox">
@@ -566,28 +677,24 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                       </div>
                     </div>
 
-                    <div className="miniBox">
-                      <div className="h3">HP & Boosts</div>
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 10 }}>
-                        <RemainingHpInput current={myCurHp} max={myFinalStats.hp} onChange={setMyCurHp} />
-                        <div />
-                      </div>
-                      <div style={{ marginTop: 10 }}>
-                        <BoostPicker boosts={myBoosts} onChange={setMyBoosts} />
-                      </div>
-                    </div>
-
-                    <div className="miniBox">
-                      <div className="h3">Stats (Lv 50)</div>
-                      <div className="statTable statTableCompact" style={{ marginTop: 10 }}>
-                        <StatRow label="HP" value={myFinalStats.hp} compact />
-                        <StatRow label="Atk" value={myFinalStats.atk} compact />
-                        <StatRow label="Def" value={myFinalStats.def} compact />
-                        <StatRow label="SpA" value={myFinalStats.spa} compact />
-                        <StatRow label="SpD" value={myFinalStats.spd} compact />
-                        <StatRow label="Spe" value={myFinalStats.spe} compact />
-                      </div>
-                    </div>
+                    {/* HP & Boosts removed; integrated into Stats */}
+                    <StatsBoxWithControls
+                      title="Stats (Lv 50)"
+                      stats={{
+                        hp: myFinalStats.hp,
+                        atk: myFinalStats.atk,
+                        def: myFinalStats.def,
+                        spa: myFinalStats.spa,
+                        spd: myFinalStats.spd,
+                        spe: myFinalStats.spe,
+                      }}
+                      boosts={myBoosts}
+                      onBoostsChange={setMyBoosts}
+                      curHp={myCurHp}
+                      onCurHpChange={setMyCurHp}
+                      maxHp={myFinalStats.hp}
+                      align="left"
+                    />
                   </>
                 ) : (
                   <div className="muted">Pick a Pokémon from your team slots.</div>
@@ -595,7 +702,7 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
               </div>
 
               {/* Center: Field */}
-              <div style={{ display: "grid", gap: 12 }}>
+              <div style={{ display: "grid", gap: 12, height: "100%", alignContent: "start" }}>
                 <div className="h2" style={{ textAlign: "center" }}>
                   Field
                 </div>
@@ -603,18 +710,10 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                 <div className="miniBox">
                   <div className="h3">Format</div>
                   <div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 10 }}>
-                    <button
-                      className={`tabBtn ${format === "singles" ? "tabBtnActive" : ""}`}
-                      onClick={() => setFormat("singles")}
-                      type="button"
-                    >
+                    <button className={`tabBtn ${format === "singles" ? "tabBtnActive" : ""}`} onClick={() => setFormat("singles")} type="button">
                       Singles
                     </button>
-                    <button
-                      className={`tabBtn ${format === "doubles" ? "tabBtnActive" : ""}`}
-                      onClick={() => setFormat("doubles")}
-                      type="button"
-                    >
+                    <button className={`tabBtn ${format === "doubles" ? "tabBtnActive" : ""}`} onClick={() => setFormat("doubles")} type="button">
                       Doubles
                     </button>
                   </div>
@@ -622,7 +721,12 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
 
                 <div className="miniBox">
                   <div className="h3">Weather</div>
-                  <select className="mySelect myInputSmall" value={weather} onChange={(e) => setWeather(e.target.value)} style={{ marginTop: 10 }}>
+                  <select
+                    className="mySelect myInputSmall"
+                    value={weather}
+                    onChange={(e) => setWeather(e.target.value)}
+                    style={{ marginTop: 10 }}
+                  >
                     <option value="none">None</option>
                     <option value="sun">Sun</option>
                     <option value="rain">Rain</option>
@@ -694,7 +798,7 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
               </div>
 
               {/* Right: Enemy */}
-              <div style={{ display: "grid", gap: 12 }}>
+              <div style={{ display: "grid", gap: 12, height: "100%", alignContent: "start" }}>
                 <div className="h2" style={{ textAlign: "right" }}>
                   Enemy side
                 </div>
@@ -722,9 +826,12 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                         <Sprite url={s.sprite_url_pokeapi} alt={setDisplayName(s)} />
                       </button>
                     ))}
-                    {/* if less than 4, fill placeholders */}
                     {Array.from({ length: Math.max(0, 4 - enemySeen.length) }, (_, i) => (
-                      <div key={`ph-${i}`} className="spriteFallback" style={{ height: 72, borderRadius: 14, display: "grid", placeItems: "center" }}>
+                      <div
+                        key={`ph-${i}`}
+                        className="spriteFallback"
+                        style={{ height: 72, borderRadius: 14, display: "grid", placeItems: "center" }}
+                      >
                         ?
                       </div>
                     ))}
@@ -783,28 +890,24 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                       </div>
                     </div>
 
-                    <div className="miniBox">
-                      <div className="h3">HP & Boosts</div>
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 10 }}>
-                        <RemainingHpInput current={enCurHp} max={enemyMaxHp} onChange={setEnCurHp} />
-                        <div />
-                      </div>
-                      <div style={{ marginTop: 10 }}>
-                        <BoostPicker boosts={enBoosts} onChange={setEnBoosts} />
-                      </div>
-                    </div>
-
-                    <div className="miniBox">
-                      <div className="h3">Stats (Lv 50)</div>
-                      <div className="statTable statTableCompact" style={{ marginTop: 10 }}>
-                        <StatRow label="HP" value={selectedEnemySet.stats_lv50?.HP} compact />
-                        <StatRow label="Atk" value={selectedEnemySet.stats_lv50?.Atk} compact />
-                        <StatRow label="Def" value={selectedEnemySet.stats_lv50?.Def} compact />
-                        <StatRow label="SpA" value={selectedEnemySet.stats_lv50?.SpA} compact />
-                        <StatRow label="SpD" value={selectedEnemySet.stats_lv50?.SpD} compact />
-                        <StatRow label="Spe" value={selectedEnemySet.stats_lv50?.Spe} compact />
-                      </div>
-                    </div>
+                    {/* HP & Boosts removed; integrated into Stats */}
+                    <StatsBoxWithControls
+                      title="Stats (Lv 50)"
+                      stats={{
+                        hp: Number(selectedEnemySet.stats_lv50?.HP ?? 0),
+                        atk: Number(selectedEnemySet.stats_lv50?.Atk ?? 0),
+                        def: Number(selectedEnemySet.stats_lv50?.Def ?? 0),
+                        spa: Number(selectedEnemySet.stats_lv50?.SpA ?? 0),
+                        spd: Number(selectedEnemySet.stats_lv50?.SpD ?? 0),
+                        spe: Number(selectedEnemySet.stats_lv50?.Spe ?? 0),
+                      }}
+                      boosts={enBoosts}
+                      onBoostsChange={setEnBoosts}
+                      curHp={enCurHp}
+                      onCurHpChange={setEnCurHp}
+                      maxHp={enemyMaxHp}
+                      align="right"
+                    />
                   </>
                 ) : (
                   <div className="muted" style={{ textAlign: "right" }}>
