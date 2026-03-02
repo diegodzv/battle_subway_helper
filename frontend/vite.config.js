@@ -1,15 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Reemplaza 'battle_subway_helper' con el nombre exacto de tu repositorio
 export default defineConfig({
   plugins: [react()],
-  server: {
-    proxy: {
-      '/trainers': 'http://127.0.0.1:8000',
-      '/moves': 'http://127.0.0.1:8000',
-      '/pools': 'http://127.0.0.1:8000',
-      '/health': 'http://127.0.0.1:8000',
-      '/pokedex': 'http://127.0.0.1:8000',
-    },
-  },
+  base: '/battle_subway_helper/', 
+  build: {
+    outDir: 'dist',
+  }
 })
