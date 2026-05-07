@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { apiGetJson, apiPostJson } from "../../api/client";
+import { calcDamageFromRequest } from "../../utils/damageCalc";
 import { useDebouncedValue } from "../../hooks/useDebouncedValue";
 import { Sprite } from "../common/Sprite";
 import { ItemIcon } from "../common/ItemIcon";
@@ -291,40 +291,26 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
   const [enemySuggestions, setEnemySuggestions] = useState([]);
 
   useEffect(() => {
-    let cancelled = false;
-
-    async function run() {
-      const tId = trainer?.trainer_id;
-      const q = (debEnemyQuery ?? "").trim();
-      if (!tId || !q) {
-        if (!cancelled) setEnemySuggestions([]);
-        return;
-      }
-      try {
-        const data = await apiGetJson(
-          `/subway/trainer/${encodeURIComponent(tId)}/pool/search?q=${encodeURIComponent(q)}&limit=12`
-        );
-        if (!cancelled) setEnemySuggestions(Array.isArray(data) ? data : []);
-      } catch {
-        if (!cancelled) setEnemySuggestions([]);
-      }
+    const q = (debEnemyQuery ?? "").trim().toLowerCase();
+    if (!q || !trainer?.sets) {
+      setEnemySuggestions([]);
+      return;
     }
+    setEnemySuggestions(
+      trainer.sets
+        .filter((s) => setDisplayName(s).toLowerCase().includes(q) || (s.species ?? "").toLowerCase().includes(q))
+        .slice(0, 12)
+        .map((s) => ({ display: setDisplayName(s), global_id: s.global_id, dex_number: s.dex_number }))
+    );
+  }, [trainer, debEnemyQuery]);
 
-    run();
-    return () => {
-      cancelled = true;
-    };
-  }, [trainer?.trainer_id, debEnemyQuery]);
-
-  async function pickEnemyGlobalId(globalId) {
-    try {
-      const data = await apiGetJson(`/subway/set/${globalId}`);
-      setEnemyTempSet(data);
+  function pickEnemyGlobalId(globalId) {
+    const set = trainer?.sets?.find((s) => s.global_id === globalId) ?? null;
+    if (set) {
+      setEnemyTempSet(set);
       setSelectedEnemyId(null);
       setEnemyQuery("");
       setEnemySuggestions([]);
-    } catch {
-      alert("Could not load enemy set.");
     }
   }
 
@@ -411,68 +397,26 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
   const [enDamage, setEnDamage] = useState([null, null, null, null]);
 
   useEffect(() => {
-    let cancelled = false;
-
-    async function computeAll() {
-      if (!myCalcMon || !enCalcMon || !moveDex) {
-        if (!cancelled) {
-          setMyDamage([null, null, null, null]);
-          setEnDamage([null, null, null, null]);
-        }
-        return;
-      }
-
-      try {
-        // My -> Enemy
-        const myPromises = myMoveSlugs.map(async (slug, i) => {
-          if (!slug) return null;
-          const body = {
-            attacker: myCalcMon,
-            defender: enCalcMon,
-            move_slug: slug,
-            is_crit: !!myCrit[i],
-            target_is_switching: false,
-            field,
-            atk_side: atkSideMy,
-            def_side: defSideEn,
-          };
-          return apiPostJson("/calc/damage", body);
-        });
-
-        // Enemy -> My
-        const enPromises = enemyMoveSlugs.map(async (slug, i) => {
-          if (!slug) return null;
-          const body = {
-            attacker: enCalcMon,
-            defender: myCalcMon,
-            move_slug: slug,
-            is_crit: !!enCrit[i],
-            target_is_switching: false,
-            field,
-            atk_side: atkSideEn,
-            def_side: defSideMy,
-          };
-          return apiPostJson("/calc/damage", body);
-        });
-
-        const [myRes, enRes] = await Promise.all([Promise.all(myPromises), Promise.all(enPromises)]);
-        if (!cancelled) {
-          setMyDamage(myRes);
-          setEnDamage(enRes);
-        }
-      } catch (e) {
-        console.warn("calc/damage error", e);
-        if (!cancelled) {
-          setMyDamage([null, null, null, null]);
-          setEnDamage([null, null, null, null]);
-        }
-      }
+    if (!myCalcMon || !enCalcMon || !moveDex) {
+      setMyDamage([null, null, null, null]);
+      setEnDamage([null, null, null, null]);
+      return;
     }
 
-    computeAll();
-    return () => {
-      cancelled = true;
-    };
+    setMyDamage(
+      myMoveSlugs.map((slug, i) =>
+        slug
+          ? calcDamageFromRequest({ attacker: myCalcMon, defender: enCalcMon, move_slug: slug, is_crit: !!myCrit[i], field, atk_side: atkSideMy, def_side: defSideEn }, moveDex)
+          : null
+      )
+    );
+    setEnDamage(
+      enemyMoveSlugs.map((slug, i) =>
+        slug
+          ? calcDamageFromRequest({ attacker: enCalcMon, defender: myCalcMon, move_slug: slug, is_crit: !!enCrit[i], field, atk_side: atkSideEn, def_side: defSideMy }, moveDex)
+          : null
+      )
+    );
   }, [
     myCalcMon,
     enCalcMon,
