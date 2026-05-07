@@ -1,6 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useDebouncedValue } from "../../hooks/useDebouncedValue";
-import { apiGetJson } from "../../api/client";
+import { loadStaticJson } from "../../api/client";
+
+// Module-level cache: loaded once on first pokemon pick, persists across remounts
+let _pokedexFullCache = null;
+async function loadPokedexFull() {
+  if (_pokedexFullCache) return _pokedexFullCache;
+  const data = await loadStaticJson("pokedex_gen5.json");
+  _pokedexFullCache = data.pokemon ?? {};
+  return _pokedexFullCache;
+}
 import { Sprite } from "../common/Sprite";
 import { TypeBadge } from "../common/TypeBadge";
 import { clamp01, clampInt, findMoveSlugFromText, formatBPAcc, getTierClass } from "../../utils/poke";
@@ -302,7 +311,7 @@ function MyTeamSlotFilled({ index, mon, onRemove, onUpdate, moveDex }) {
   );
 }
 
-export function MyTeamTab({ myTeam, setMyTeam, moveDex }) {
+export function MyTeamTab({ myTeam, setMyTeam, moveDex, pokedexIndex }) {
   const [slotQueries, setSlotQueries] = useState(["", "", "", ""]);
   const [slotSuggestions, setSlotSuggestions] = useState([[], [], [], []]);
 
@@ -314,51 +323,21 @@ export function MyTeamTab({ myTeam, setMyTeam, moveDex }) {
   ];
 
   useEffect(() => {
-    let cancelled = false;
-
-    async function runSlot(i) {
-      const q = (debounced[i] ?? "").trim();
-      if (!q) {
-        if (!cancelled) {
-          setSlotSuggestions((prev) => {
-            const next = [...prev];
-            next[i] = [];
-            return next;
-          });
-        }
-        return;
-      }
-
-      try {
-        const data = await apiGetJson(`/pokedex/gen5/search?q=${encodeURIComponent(q)}&limit=12`);
-        if (!cancelled) {
-          setSlotSuggestions((prev) => {
-            const next = [...prev];
-            next[i] = Array.isArray(data) ? data : [];
-            return next;
-          });
-        }
-      } catch {
-        if (!cancelled) {
-          setSlotSuggestions((prev) => {
-            const next = [...prev];
-            next[i] = [];
-            return next;
-          });
-        }
-      }
-    }
-
-    for (let i = 0; i < 4; i++) runSlot(i);
-
-    return () => {
-      cancelled = true;
-    };
-  }, [debounced[0], debounced[1], debounced[2], debounced[3]]);
+    setSlotSuggestions(
+      debounced.map((q) => {
+        const nq = (q ?? "").trim().toLowerCase();
+        if (!nq || !pokedexIndex) return [];
+        return pokedexIndex
+          .filter((p) => (p.name_en ?? "").toLowerCase().includes(nq) || (p.slug ?? "").toLowerCase().includes(nq))
+          .slice(0, 12);
+      })
+    );
+  }, [debounced[0], debounced[1], debounced[2], debounced[3], pokedexIndex]);
 
   async function pickPokemon(slotIndex, dex) {
     try {
-      const entry = await apiGetJson(`/pokedex/gen5/${dex}`);
+      const pdex = await loadPokedexFull();
+      const entry = pdex[String(dex)];
 
       const mon = {
         dex: entry.dex,

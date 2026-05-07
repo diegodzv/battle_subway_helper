@@ -89,3 +89,56 @@ export function computeDamage(attacker, defender, move, field, isCrit = false) {
         effectiveness,
     };
 }
+
+// Adapter that takes the same request body shape as the old /calc/damage endpoint
+// and returns a response matching the old API format.
+export function calcDamageFromRequest(body, moveDex) {
+    const { attacker, defender, move_slug, is_crit, field, atk_side, def_side } = body;
+
+    const moveEntry = moveDex?.[move_slug];
+    if (!moveEntry || moveEntry.damage_class === 'status' || !moveEntry.power) return null;
+
+    const category = moveEntry.damage_class.toLowerCase();
+
+    // Wonder Room swaps Def/SpD for both sides
+    let atkStats = { ...attacker.stats };
+    let defStats = { ...defender.stats };
+    if (field?.wonder_room) {
+        ({ def: atkStats.spd, spd: atkStats.def } = { def: atkStats.def, spd: atkStats.spd });
+        ({ def: defStats.spd, spd: defStats.def } = { def: defStats.def, spd: defStats.spd });
+    }
+
+    const result = computeDamage(
+        { ...attacker, stats: atkStats },
+        { ...defender, stats: defStats },
+        moveEntry,
+        field ?? {},
+        !!is_crit
+    );
+    if (!result) return null;
+
+    // Post-roll modifiers: screens, helping hand, friend guard
+    let postMult = 1.0;
+    if (category === 'physical' && def_side?.reflect) postMult *= 0.5;
+    if (category === 'special' && def_side?.light_screen) postMult *= 0.5;
+    if (atk_side?.helping_hand) postMult *= 1.5;
+    if (field?.format === 'doubles' && def_side?.friend_guard) postMult *= 0.75;
+
+    const rolls = postMult === 1.0
+        ? result.rolls
+        : result.rolls.map(v => Math.max(1, Math.floor(v * postMult)));
+
+    const minDmg = rolls[0] ?? 0;
+    const maxDmg = rolls[rolls.length - 1] ?? 0;
+    const maxHp = Math.max(1, Number(defender.stats?.hp ?? 1));
+    const currentHp = typeof defender.current_hp === 'number' ? defender.current_hp : maxHp;
+
+    return {
+        min_damage: minDmg,
+        max_damage: maxDmg,
+        min_percent_maxhp: Math.round((minDmg / maxHp) * 100),
+        max_percent_maxhp: Math.round((maxDmg / maxHp) * 100),
+        guaranteed_ohko_on_remaining: minDmg >= currentHp,
+        possible_ohko_on_remaining: maxDmg >= currentHp,
+    };
+}

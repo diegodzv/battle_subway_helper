@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./styles/index.css";
 
 import { useDebouncedValue } from "./hooks/useDebouncedValue";
-import { apiGetJson } from "./api/client";
+import { loadStaticJson } from "./api/client";
 
 import { TrainerNamesLine } from "./components/trainer/TrainerNamesLine";
 import { MyTeamTab } from "./components/myteam/MyTeamTab";
@@ -14,10 +14,14 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("enemy");
   const [myTeam, setMyTeam] = useState([null, null, null, null]);
 
+  const [dataReady, setDataReady] = useState(false);
+  const [setsIndex, setSetsIndex] = useState(null);
+  const [trainersList, setTrainersList] = useState(null);
+  const [pokedexIndex, setPokedexIndex] = useState(null);
+
   const [q, setQ] = useState("");
   const debouncedQ = useDebouncedValue(q, 150);
   const [suggestions, setSuggestions] = useState([]);
-  const [isSearching, setIsSearching] = useState(false);
 
   const [trainer, setTrainer] = useState(null);
 
@@ -32,26 +36,39 @@ export default function App() {
 
   const [moveDex, setMoveDex] = useState(null);
 
-  // Load move dex once
+  // Load all static data on startup
   useEffect(() => {
     let cancelled = false;
 
-    async function loadMoveDex() {
-      try {
-        const data = await apiGetJson("/moves/cache");
-        const moves = data?.moves && typeof data.moves === "object" ? data.moves : null;
-        if (moves && !cancelled) {
-          setMoveDex(moves);
-          return;
-        }
-        if (!cancelled) setMoveDex({});
-      } catch (e) {
-        console.warn("Could not load move dex from backend /moves/cache", e);
-        if (!cancelled) setMoveDex({});
-      }
-    }
+    Promise.all([
+      loadStaticJson("subway_trainers_set45.json"),
+      loadStaticJson("all_pokemon_sets.json"),
+      loadStaticJson("moves_items_cache.json"),
+      loadStaticJson("pokedex_gen5_index.json"),
+    ]).then(([trainersData, setsData, movesData, pdexIndexData]) => {
+      if (cancelled) return;
 
-    loadMoveDex();
+      setTrainersList(trainersData.trainers ?? []);
+
+      const idx = new Map();
+      for (const set of Object.values(setsData)) {
+        if (typeof set.global_id === "number") idx.set(set.global_id, set);
+      }
+      setSetsIndex(idx);
+      setMoveDex(movesData.moves ?? {});
+      setPokedexIndex(pdexIndexData.pokemon ?? []);
+      setDataReady(true);
+    }).catch((e) => {
+      console.error("Failed to load static data:", e);
+      if (!cancelled) {
+        setTrainersList([]);
+        setSetsIndex(new Map());
+        setMoveDex({});
+        setPokedexIndex([]);
+        setDataReady(true);
+      }
+    });
+
     return () => {
       cancelled = true;
     };
@@ -105,47 +122,40 @@ export default function App() {
     return slots;
   }, [confirmed, setById]);
 
-  // Trainer search autocomplete
+  // Trainer search autocomplete (client-side)
   useEffect(() => {
-    let cancelled = false;
-
-    async function run() {
-      const nq = debouncedQ.trim();
-      if (!nq) {
-        setSuggestions([]);
-        return;
-      }
-      setIsSearching(true);
-      try {
-        const data = await apiGetJson(`/trainers/search?q=${encodeURIComponent(nq)}&limit=20`);
-        if (!cancelled) setSuggestions(Array.isArray(data) ? data : []);
-      } catch {
-        if (!cancelled) setSuggestions([]);
-      } finally {
-        if (!cancelled) setIsSearching(false);
-      }
+    const nq = debouncedQ.trim().toLowerCase();
+    if (!nq || !trainersList) {
+      setSuggestions([]);
+      return;
     }
+    setSuggestions(
+      trainersList
+        .filter((t) => {
+          const en = (t.name_en ?? "").toLowerCase();
+          const es = (t.name_es ?? "").toLowerCase();
+          return en.includes(nq) || es.includes(nq);
+        })
+        .slice(0, 20)
+    );
+  }, [debouncedQ, trainersList]);
 
-    run();
-    return () => {
-      cancelled = true;
-    };
-  }, [debouncedQ]);
+  function loadTrainer(trainerId) {
+    if (!setsIndex || !trainersList) return;
 
-  async function loadTrainer(trainerId) {
-    setTrainer(null);
+    const trainerData = trainersList.find((t) => t.trainer_id === trainerId);
+    if (!trainerData) return;
+
+    const sets = (trainerData.pool_global_ids ?? [])
+      .map((id) => setsIndex.get(id))
+      .filter(Boolean);
+
+    setTrainer({ ...trainerData, sets });
     setConfirmed([]);
     setDiscarded(new Set());
     setShowDiscarded(false);
     setShowStatsInPool(false);
     setPokemonFilter("");
-
-    try {
-      const data = await apiGetJson(`/trainers/${trainerId}`);
-      setTrainer(data);
-    } catch {
-      alert("Could not load trainer.");
-    }
   }
 
   function resetAll() {
@@ -262,7 +272,7 @@ export default function App() {
                 onChange={(e) => setQ(e.target.value)}
                 placeholder='Search trainer / Buscar entrenador (e.g. "clerk", "oficinista")...'
               />
-              {isSearching ? <div className="spinner" title="Searching..." /> : null}
+              {!dataReady ? <div className="spinner" title="Loading data..." /> : null}
 
               {suggestions.length > 0 ? (
                 <div className="dropdown dropdownAbove">
@@ -341,7 +351,7 @@ export default function App() {
 
       {activeTab === "myteam" ? (
         <main className="content">
-          <MyTeamTab myTeam={myTeam} setMyTeam={setMyTeam} moveDex={moveDex} />
+          <MyTeamTab myTeam={myTeam} setMyTeam={setMyTeam} moveDex={moveDex} pokedexIndex={pokedexIndex} />
         </main>
       ) : activeTab === "enemy" ? (
         <EnemyTrainerTab
