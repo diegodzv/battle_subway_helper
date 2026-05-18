@@ -5,39 +5,17 @@ import { StatRow } from "../common/StatRow";
 import { SetTile } from "./SetTile";
 import { formatBPAcc, hasEvs, prettyMoveNameFromSlug, setDisplayName } from "../../utils/poke";
 
-function SeenSlotEmptySearch({ index, query, setQuery, onClear }) {
+function SeenSlotEmpty({ index }) {
   return (
-    <div className="seenSlotEmpty">
+    <div className="seenSlotEmpty" style={{ placeItems: "center", display: "grid" }}>
       <div className="teamSlotIndex mono">#{index + 1}</div>
-
-      <div className="slotSearchHeader">
-        <div className="muted" style={{ fontWeight: 700 }}>
-          Filter pool
-        </div>
-        {query ? (
-          <button className="slotClearBtn" onClick={onClear} title="Clear filter">
-            Clear ✕
-          </button>
-        ) : null}
-      </div>
-
-      <input
-        className="slotSearchInput"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder='Type a Pokémon here (e.g. "Gyarados", "Hydreigon-4")...'
-      />
-
-      <div className="muted slotHint">Tip: this only filters the pool view. Confirming a set resets the filter.</div>
     </div>
   );
 }
 
-function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSearch, moveDex }) {
+function SeenSlot({ set, index, onRemove, moveDex }) {
   if (!set) {
-    return (
-      <SeenSlotEmptySearch index={index} query={searchQuery} setQuery={setSearchQuery} onClear={onClearSearch} />
-    );
+    return <SeenSlotEmpty index={index} />;
   }
 
   const display = setDisplayName(set);
@@ -49,7 +27,7 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
           <div className="teamSlotIndex mono">#{index + 1}</div>
           <Sprite url={set.sprite_url_pokeapi} alt={display} />
           <div style={{ minWidth: 0 }}>
-            <div className="h2" style={{ margin: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+            <div className="h3" style={{ margin: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
               {display}
             </div>
             <div className="muted" style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
@@ -112,6 +90,7 @@ function SeenSlot({ set, index, onRemove, searchQuery, setSearchQuery, onClearSe
 
 export function EnemyTrainerTab(props) {
   const {
+    searchProps,
     trainer,
     confirmed,
     discarded,
@@ -136,8 +115,40 @@ export function EnemyTrainerTab(props) {
       <main className="content">
         {!trainer ? (
           <div className="empty">
-            <div className="emptyTitle">Select a trainer</div>
-            <div className="muted">Type above to autocomplete and pick one.</div>
+            <div className="emptyTitle" style={{ textAlign: "center" }}>Enter Trainer Name</div>
+            <div className="searchBox" style={{ marginTop: 14 }}>
+              <input
+                className="searchInput"
+                value={searchProps.q}
+                onChange={(e) => searchProps.setQ(e.target.value)}
+                placeholder="Search trainer / Buscar entrenador (e.g. clerk, oficinista)..."
+                autoFocus
+              />
+              {!searchProps.dataReady ? <div className="spinner" title="Loading data..." /> : null}
+              {searchProps.suggestions.length > 0 ? (
+                <div className="dropdown dropdownAbove">
+                  {searchProps.suggestions.map((s) => (
+                    <button
+                      key={s.trainer_id}
+                      className="dropdownItem"
+                      onClick={() => {
+                        searchProps.loadTrainer(s.trainer_id);
+                        searchProps.setSuggestions([]);
+                      }}
+                    >
+                      <div className="dropdownName">{s.display_name ?? s.name_en}</div>
+                      <div className="dropdownMeta muted">
+                        {s.name_es ? (
+                          <><span className="mono">{s.name_en}</span> · {s.section}</>
+                        ) : (
+                          <>{s.section}</>
+                        )}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+            </div>
           </div>
         ) : (
           <div className="layoutNew">
@@ -154,9 +165,6 @@ export function EnemyTrainerTab(props) {
                     set={s}
                     index={idx}
                     onRemove={removeConfirmed}
-                    searchQuery={pokemonFilter}
-                    setSearchQuery={setPokemonFilter}
-                    onClearSearch={() => setPokemonFilter("")}
                     moveDex={moveDex}
                   />
                 ))}

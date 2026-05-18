@@ -263,89 +263,105 @@ export default function App() {
           </button>
         </div>
 
-        {activeTab === "enemy" || activeTab === "calc" ? (
-          <>
-            <div className="searchBox" style={{ gridColumn: "1 / -1" }}>
-              <input
-                className="searchInput"
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                placeholder='Search trainer / Buscar entrenador (e.g. "clerk", "oficinista")...'
-              />
-              {!dataReady ? <div className="spinner" title="Loading data..." /> : null}
+        {activeTab === "calc" ? (
+          <div className="searchBox" style={{ gridColumn: "1 / -1" }}>
+            <input
+              className="searchInput"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Search trainer / Buscar entrenador (e.g. clerk, oficinista)..."
+            />
+            {!dataReady ? <div className="spinner" title="Loading data..." /> : null}
 
-              {suggestions.length > 0 ? (
-                <div className="dropdown dropdownAbove">
-                  {suggestions.map((s) => (
-                    <button
-                      key={s.trainer_id}
-                      className="dropdownItem"
-                      onClick={() => {
-                        loadTrainer(s.trainer_id);
-                        setSuggestions([]);
-                      }}
-                    >
-                      <div className="dropdownName">{s.display_name ?? s.name_en}</div>
-                      <div className="dropdownMeta muted">
-                        {s.name_es ? (
-                          <>
-                            <span className="mono">{s.name_en}</span> · {s.section}
-                          </>
-                        ) : (
-                          <>{s.section}</>
-                        )}
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-
-            {trainer && activeTab === "enemy" ? (
-              <div className="trainerBar">
-                <div className="trainerBarLeft">
-                  <div className="h1">{trainerTitle}</div>
-                  <TrainerNamesLine trainer={trainer} />
-                </div>
-
-                <div className="trainerBarRight">
-                  <div className="togglesRow">
-                    <label className="toggle" title="Show / hide discarded sets">
-                      <input type="checkbox" checked={showDiscarded} onChange={(e) => setShowDiscarded(e.target.checked)} />
-                      <span>Show discarded</span>
-                    </label>
-
-                    <label className="toggle" title="Show / hide stats inside pool tiles">
-                      <input
-                        type="checkbox"
-                        checked={showStatsInPool}
-                        onChange={(e) => setShowStatsInPool(e.target.checked)}
-                      />
-                      <span>Show stats in pool</span>
-                    </label>
-                  </div>
-
-                  <div className="counts muted">
-                    shown <span className="mono">{visiblePool.length}</span> · confirmed{" "}
-                    <span className="mono">{confirmed.length}</span> · discarded{" "}
-                    <span className="mono">{discarded.size}</span> · total <span className="mono">{poolSets.length}</span>
-                  </div>
-                </div>
-              </div>
-            ) : trainer && activeTab === "calc" ? (
-              <div className="trainerBar">
-                <div className="trainerBarLeft">
-                  <div className="h1">{trainerTitle}</div>
-                  <TrainerNamesLine trainer={trainer} />
-                </div>
-                <div className="trainerBarRight">
-                  <div className="muted" style={{ textAlign: "right" }}>
-                    Calculator uses this trainer’s pool only.
-                  </div>
-                </div>
+            {suggestions.length > 0 ? (
+              <div className="dropdown dropdownAbove">
+                {suggestions.map((s) => (
+                  <button
+                    key={s.trainer_id}
+                    className="dropdownItem"
+                    onClick={() => {
+                      loadTrainer(s.trainer_id);
+                      setSuggestions([]);
+                    }}
+                  >
+                    <div className="dropdownName">{s.display_name ?? s.name_en}</div>
+                    <div className="dropdownMeta muted">
+                      {s.name_es ? (
+                        <>
+                          <span className="mono">{s.name_en}</span> · {s.section}
+                        </>
+                      ) : (
+                        <>{s.section}</>
+                      )}
+                    </div>
+                  </button>
+                ))}
               </div>
             ) : null}
-          </>
+          </div>
+        ) : null}
+
+        {trainer && activeTab === "enemy" ? (
+          <div className="trainerBar">
+            <div className="trainerBarLeft">
+              <div className="h1">{trainerTitle}</div>
+              <TrainerNamesLine trainer={trainer} />
+            </div>
+
+            <div className="trainerBarRight">
+              <div className="togglesRow">
+                <label className="toggle" title="Show / hide discarded sets">
+                  <input type="checkbox" checked={showDiscarded} onChange={(e) => setShowDiscarded(e.target.checked)} />
+                  <span>Show discarded</span>
+                </label>
+
+                <label className="toggle" title="Show / hide stats inside pool tiles">
+                  <input
+                    type="checkbox"
+                    checked={showStatsInPool}
+                    onChange={(e) => setShowStatsInPool(e.target.checked)}
+                  />
+                  <span>Show stats in pool</span>
+                </label>
+              </div>
+
+              <div className="counts muted">
+                shown <span className="mono">{visiblePool.length}</span> · confirmed{" "}
+                <span className="mono">{confirmed.length}</span> · discarded{" "}
+                <span className="mono">{discarded.size}</span> · total <span className="mono">{poolSets.length}</span>
+              </div>
+            </div>
+
+            <div className="searchBox" style={{ gridColumn: "1 / -1", marginTop: 4 }}>
+              <input
+                className="searchInput"
+                value={pokemonFilter}
+                onChange={(e) => setPokemonFilter(e.target.value)}
+                placeholder="Filter Pokémon in pool..."
+              />
+              {pokemonFilter ? (
+                <button
+                  className="ghostBtn"
+                  onClick={() => setPokemonFilter("")}
+                  style={{ position: "absolute", right: 6, top: 6, padding: "4px 8px" }}
+                >
+                  ✕
+                </button>
+              ) : null}
+            </div>
+          </div>
+        ) : trainer && activeTab === "calc" ? (
+          <div className="trainerBar">
+            <div className="trainerBarLeft">
+              <div className="h1">{trainerTitle}</div>
+              <TrainerNamesLine trainer={trainer} />
+            </div>
+            <div className="trainerBarRight">
+              <div className="muted" style={{ textAlign: "right" }}>
+                Calculator uses this trainer’s pool only.
+              </div>
+            </div>
+          </div>
         ) : null}
       </header>
 
@@ -355,6 +371,7 @@ export default function App() {
         </main>
       ) : activeTab === "enemy" ? (
         <EnemyTrainerTab
+          searchProps={{ q, setQ, suggestions, setSuggestions, loadTrainer, dataReady }}
           trainer={trainer}
           confirmed={confirmed}
           discarded={discarded}
