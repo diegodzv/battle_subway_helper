@@ -4,7 +4,6 @@ import { useDebouncedValue } from "../../hooks/useDebouncedValue";
 import { Sprite } from "../common/Sprite";
 import { ItemIcon } from "../common/ItemIcon";
 import { TypeBadge } from "../common/TypeBadge";
-import { StatRow } from "../common/StatRow";
 import {
   clampInt,
   findMoveSlugFromText,
@@ -27,49 +26,18 @@ function defaultBoosts() {
   return { atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
 }
 
-function BoostStageSelect({ label, value, onChange }) {
+function BoostSelect({ value, onChange }) {
   return (
-    <label className="myField" style={{ gridTemplateColumns: "1fr", gap: 6, margin: 0 }}>
-      <div className="muted myLabel">{label}</div>
-      <select
-        className="mySelect myInputSmall mono"
-        value={value ?? 0}
-        onChange={(e) => onChange(clampInt(parseInt(e.target.value, 10), -6, 6))}
-        title="Boost stage"
-      >
-        {Array.from({ length: 13 }, (_, i) => i - 6).map((v) => (
-          <option key={v} value={v}>
-            {v >= 0 ? `+${v}` : String(v)}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
-function RemainingHpCompact({ current, max, onChange }) {
-  const safeMax = Math.max(1, Number(max ?? 1));
-  const safeCur = clampInt(Number(current ?? safeMax), 0, safeMax);
-
-  return (
-    <label className="myField" style={{ gridTemplateColumns: "1fr", gap: 6, margin: 0 }}>
-      <div className="muted myLabel">Remaining HP</div>
-      <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-        <input
-          className="myInput myInputSmall mono"
-          type="number"
-          min={0}
-          max={safeMax}
-          step={1}
-          value={safeCur}
-          onChange={(e) => onChange(clampInt(parseInt(e.target.value, 10), 0, safeMax))}
-          style={{ width: 92 }}
-        />
-        <div className="mono muted" style={{ whiteSpace: "nowrap" }}>
-          / {safeMax}
-        </div>
-      </div>
-    </label>
+    <select
+      className="mySelect myInputSmall mono"
+      value={value ?? 0}
+      onChange={(e) => onChange(clampInt(parseInt(e.target.value, 10), -6, 6))}
+      style={{ width: "100%" }}
+    >
+      {Array.from({ length: 13 }, (_, i) => i - 6).map((v) => (
+        <option key={v} value={v}>{v >= 0 ? `+${v}` : String(v)}</option>
+      ))}
+    </select>
   );
 }
 
@@ -168,61 +136,51 @@ function buildCalcPokemonFromEnemySet(set, boosts, currentHp) {
   };
 }
 
-function StatsBoxWithControls({
-  title,
-  stats, // {hp, atk, def, spa, spd, spe}
-  boosts,
-  onBoostsChange,
-  curHp,
-  onCurHpChange,
-  maxHp,
-  align = "left",
-}) {
-  const isRight = align === "right";
+function StatsBoxWithControls({ title, stats, boosts, onBoostsChange, curHp, onCurHpChange, maxHp }) {
+  const safeMax = Math.max(1, Number(maxHp ?? 1));
+  const safeCur = clampInt(Number(curHp ?? safeMax), 0, safeMax);
 
   return (
     <div className="miniBox">
-      <div className="h3" style={{ textAlign: isRight ? "right" : "left" }}>
-        {title}
-      </div>
+      <div className="h3">{title}</div>
+      <div style={{ display: "grid", gap: 5, marginTop: 8 }}>
+        {/* header row */}
+        <div style={{ display: "grid", gridTemplateColumns: "40px 46px 1fr", gap: 8 }}>
+          <div />
+          <div className="muted mono" style={{ fontSize: "0.78rem", textAlign: "right" }}>Stat</div>
+          <div className="muted mono" style={{ fontSize: "0.78rem" }}>Stage / HP</div>
+        </div>
 
-      <div style={{ display: "grid", gap: 10, marginTop: 10 }}>
-        {/* HP row: StatRow + Remaining HP control */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 170px", gap: 12, alignItems: "center" }}>
-          <div style={{ minWidth: 0 }}>
-            <StatRow label="HP" value={stats?.hp ?? 0} compact />
-          </div>
-          <div style={{ justifySelf: isRight ? "end" : "start" }}>
-            <RemainingHpCompact current={curHp} max={maxHp} onChange={onCurHpChange} />
+        {/* HP row */}
+        <div style={{ display: "grid", gridTemplateColumns: "40px 46px 1fr", gap: 8, alignItems: "center" }}>
+          <div className="muted mono" style={{ fontSize: "0.88rem" }}>HP</div>
+          <div className="mono" style={{ fontSize: "0.88rem", textAlign: "right" }}>{stats?.hp ?? 0}</div>
+          <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+            <input
+              className="myInput myInputSmall mono"
+              type="number"
+              min={0}
+              max={safeMax}
+              step={1}
+              value={safeCur}
+              onChange={(e) => onCurHpChange(clampInt(parseInt(e.target.value, 10), 0, safeMax))}
+              style={{ width: 68 }}
+            />
+            <span className="mono muted" style={{ fontSize: "0.82rem", whiteSpace: "nowrap" }}>/{safeMax}</span>
           </div>
         </div>
 
         {/* Boost rows */}
-        {BOOST_KEYS.map(({ key, label }) => {
-          const statLabel =
-            key === "atk" ? "Atk" : key === "def" ? "Def" : key === "spa" ? "SpA" : key === "spd" ? "SpD" : "Spe";
-          const statVal = stats?.[key] ?? 0;
-
+        {BOOST_KEYS.map(({ key }) => {
+          const lbl = key === "atk" ? "Atk" : key === "def" ? "Def" : key === "spa" ? "SpA" : key === "spd" ? "SpD" : "Spe";
           return (
-            <div
-              key={key}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 170px",
-                gap: 12,
-                alignItems: "center",
-              }}
-            >
-              <div style={{ minWidth: 0 }}>
-                <StatRow label={statLabel} value={statVal} compact />
-              </div>
-              <div style={{ justifySelf: isRight ? "end" : "start" }}>
-                <BoostStageSelect
-                  label={`${statLabel} stage`}
-                  value={boosts?.[key] ?? 0}
-                  onChange={(v) => onBoostsChange({ ...(boosts ?? defaultBoosts()), [key]: v })}
-                />
-              </div>
+            <div key={key} style={{ display: "grid", gridTemplateColumns: "40px 46px 1fr", gap: 8, alignItems: "center" }}>
+              <div className="muted mono" style={{ fontSize: "0.88rem" }}>{lbl}</div>
+              <div className="mono" style={{ fontSize: "0.88rem", textAlign: "right" }}>{stats?.[key] ?? 0}</div>
+              <BoostSelect
+                value={boosts?.[key] ?? 0}
+                onChange={(v) => onBoostsChange({ ...(boosts ?? defaultBoosts()), [key]: v })}
+              />
             </div>
           );
         })}
@@ -244,6 +202,9 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
 
   const [helpingHandMy, setHelpingHandMy] = useState(false);
   const [friendGuardEn, setFriendGuardEn] = useState(false);
+
+  const [myBurned, setMyBurned] = useState(false);
+  const [enBurned, setEnBurned] = useState(false);
 
   const [selectedMyIdx, setSelectedMyIdx] = useState(0);
   const [selectedEnemyId, setSelectedEnemyId] = useState(null); // global_id from confirmedSets
@@ -349,8 +310,9 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
       light_screen: screenMy,
       helping_hand: format === "doubles" ? helpingHandMy : false,
       friend_guard: false,
+      burned: myBurned,
     }),
-    [reflectMy, screenMy, helpingHandMy, format]
+    [reflectMy, screenMy, helpingHandMy, format, myBurned]
   );
 
   const defSideMy = useMemo(
@@ -369,8 +331,9 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
       light_screen: screenEn,
       helping_hand: false,
       friend_guard: false,
+      burned: enBurned,
     }),
-    [reflectEn, screenEn]
+    [reflectEn, screenEn, enBurned]
   );
 
   const defSideEn = useMemo(
@@ -638,7 +601,6 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                       curHp={myCurHp}
                       onCurHpChange={setMyCurHp}
                       maxHp={myFinalStats.hp}
-                      align="left"
                     />
                   </>
                 ) : (
@@ -696,48 +658,52 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                     Side Conditions
                   </div>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 10, marginTop: 10, alignItems: "center" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 10, marginTop: 10, alignItems: "start" }}>
                     <div style={{ display: "grid", gap: 10 }}>
-                      <label className="toggle">
+                      <label className="toggle" title="My Pokémon has Burn (halves physical output, negated by Guts)">
+                        <input type="checkbox" checked={myBurned} onChange={(e) => setMyBurned(e.target.checked)} />
+                        <span>Burned</span>
+                      </label>
+                      <label className="toggle" title="My side has Reflect (halves enemy physical, bypassed by crits)">
                         <input type="checkbox" checked={reflectMy} onChange={(e) => setReflectMy(e.target.checked)} />
                         <span>Reflect</span>
                       </label>
-                      <label className="toggle">
+                      <label className="toggle" title="My side has Light Screen (halves enemy special, bypassed by crits)">
                         <input type="checkbox" checked={screenMy} onChange={(e) => setScreenMy(e.target.checked)} />
                         <span>Light Screen</span>
                       </label>
                       {format === "doubles" ? (
-                        <label className="toggle" title="Doubles only">
+                        <label className="toggle" title="Doubles only: partner used Helping Hand">
                           <input type="checkbox" checked={helpingHandMy} onChange={(e) => setHelpingHandMy(e.target.checked)} />
                           <span>Helping Hand</span>
                         </label>
                       ) : null}
                     </div>
 
-                    <div className="muted mono" style={{ textAlign: "center" }}>
-                      Apply
+                    <div className="muted mono" style={{ textAlign: "center", paddingTop: 6 }}>
+                      My · En
                     </div>
 
                     <div style={{ display: "grid", gap: 10 }}>
-                      <label className="toggle">
+                      <label className="toggle" title="Enemy Pokémon has Burn (halves its physical output, negated by Guts)">
+                        <input type="checkbox" checked={enBurned} onChange={(e) => setEnBurned(e.target.checked)} />
+                        <span>Burned</span>
+                      </label>
+                      <label className="toggle" title="Enemy side has Reflect (halves my physical, bypassed by crits)">
                         <input type="checkbox" checked={reflectEn} onChange={(e) => setReflectEn(e.target.checked)} />
                         <span>Reflect</span>
                       </label>
-                      <label className="toggle">
+                      <label className="toggle" title="Enemy side has Light Screen (halves my special, bypassed by crits)">
                         <input type="checkbox" checked={screenEn} onChange={(e) => setScreenEn(e.target.checked)} />
                         <span>Light Screen</span>
                       </label>
                       {format === "doubles" ? (
-                        <label className="toggle" title="Doubles only">
+                        <label className="toggle" title="Doubles only: enemy partner has Friend Guard">
                           <input type="checkbox" checked={friendGuardEn} onChange={(e) => setFriendGuardEn(e.target.checked)} />
                           <span>Friend Guard</span>
                         </label>
                       ) : null}
                     </div>
-                  </div>
-
-                  <div className="muted" style={{ marginTop: 10, textAlign: "center" }}>
-                    (Pursuit switching is applied automatically only for Pursuit — lo añadimos luego en UI)
                   </div>
                 </div>
               </div>
@@ -851,7 +817,6 @@ export function CalculatorTab({ trainer, confirmedSets, myTeam, moveDex }) {
                       curHp={enCurHp}
                       onCurHpChange={setEnCurHp}
                       maxHp={enemyMaxHp}
-                      align="right"
                     />
                   </>
                 ) : (

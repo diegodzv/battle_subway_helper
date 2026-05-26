@@ -31,8 +31,9 @@ function getStageMultiplier(stage) {
     return s > 0 ? (2 + s) / 2 : 2 / (2 + Math.abs(s));
 }
 
-export function computeDamage(attacker, defender, move, field, isCrit = false) {
-    // 1. Stats y Niveles
+// is_burned: attacker has Burn (halves physical, negated by Guts)
+// def_side: { reflect, light_screen } — screens on defender's side (bypassed by crits)
+export function computeDamage(attacker, defender, move, field, isCrit = false, is_burned = false, def_side = {}) {
     const level = 50;
     const category = move.damage_class.toLowerCase();
     if (category === 'status') return null;
@@ -40,7 +41,7 @@ export function computeDamage(attacker, defender, move, field, isCrit = false) {
     const atkStatKey = category === 'physical' ? 'atk' : 'spa';
     const defStatKey = category === 'physical' ? 'def' : 'spd';
 
-    // Lógica de críticos ignora stages negativos del atacante y positivos del defensor
+    // Crits ignore negative atk stages and positive def stages
     let atkStage = attacker.boosts[atkStatKey];
     let defStage = defender.boosts[defStatKey];
     if (isCrit) {
@@ -51,10 +52,8 @@ export function computeDamage(attacker, defender, move, field, isCrit = false) {
     const A = Math.floor(attacker.stats[atkStatKey] * getStageMultiplier(atkStage));
     const D = Math.floor(defender.stats[defStatKey] * getStageMultiplier(defStage));
 
-    // 2. Daño Base
     let baseDamage = Math.floor(Math.floor(Math.floor((2 * level / 5 + 2) * move.power * A / D) / 50) + 2);
 
-    // 3. Modificadores
     const moveType = move.type.toLowerCase();
     let effectiveness = 1.0;
     defender.types.forEach(type => {
@@ -64,20 +63,26 @@ export function computeDamage(attacker, defender, move, field, isCrit = false) {
     let stab = attacker.types.map(t => t.toLowerCase()).includes(moveType) ? 1.5 : 1.0;
     if (attacker.ability?.toLowerCase() === 'adaptability' && stab > 1) stab = 2.0;
 
-    // 4. Rolls (85% a 100%)
+    const hasGuts = attacker.ability?.toLowerCase() === 'guts';
+
     const rolls = Array.from({ length: 16 }, (_, i) => {
         const r = 85 + i;
         let dmg = baseDamage;
-        
-        // Aplicar modificadores en cadena (simplificado Gen 5)
+
         dmg = Math.floor(dmg * (r / 100));
         dmg = Math.floor(dmg * stab);
         dmg = Math.floor(dmg * effectiveness);
         if (isCrit) dmg = Math.floor(dmg * 2.0);
-        
-        // Clima (simplificado)
+
         if ((field.weather === 'sun' && moveType === 'fire') || (field.weather === 'rain' && moveType === 'water')) dmg = Math.floor(dmg * 1.5);
         if ((field.weather === 'sun' && moveType === 'water') || (field.weather === 'rain' && moveType === 'fire')) dmg = Math.floor(dmg * 0.5);
+
+        // Burn halves physical damage (Guts negates the penalty)
+        if (is_burned && category === 'physical' && !hasGuts) dmg = Math.floor(dmg * 0.5);
+
+        // Screens halve damage; crits bypass screens in Gen 5
+        if (!isCrit && category === 'physical' && def_side?.reflect) dmg = Math.floor(dmg * 0.5);
+        if (!isCrit && category === 'special' && def_side?.light_screen) dmg = Math.floor(dmg * 0.5);
 
         return Math.max(1, dmg);
     });
@@ -108,19 +113,21 @@ export function calcDamageFromRequest(body, moveDex) {
         ({ def: defStats.spd, spd: defStats.def } = { def: defStats.def, spd: defStats.spd });
     }
 
+    const is_burned = !!(atk_side?.burned);
+
     const result = computeDamage(
         { ...attacker, stats: atkStats },
         { ...defender, stats: defStats },
         moveEntry,
         field ?? {},
-        !!is_crit
+        !!is_crit,
+        is_burned,
+        def_side ?? {}
     );
     if (!result) return null;
 
-    // Post-roll modifiers: screens, helping hand, friend guard
+    // Post-roll modifiers: helping hand, friend guard (screens handled inside computeDamage)
     let postMult = 1.0;
-    if (category === 'physical' && def_side?.reflect) postMult *= 0.5;
-    if (category === 'special' && def_side?.light_screen) postMult *= 0.5;
     if (atk_side?.helping_hand) postMult *= 1.5;
     if (field?.format === 'doubles' && def_side?.friend_guard) postMult *= 0.75;
 
