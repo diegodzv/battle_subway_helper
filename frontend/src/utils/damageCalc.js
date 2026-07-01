@@ -1,10 +1,3 @@
-/**
- * Motor de Cálculo de Daño - Gen 5 Battle Subway
- * Basado en la lógica original de main.py
- */
-
-import { normalize } from './text';
-
 const TYPE_CHART = {
     normal: { rock: 0.5, ghost: 0, steel: 0.5 },
     fire: { fire: 0.5, water: 0.5, grass: 2, ice: 2, bug: 2, rock: 0.5, dragon: 0.5, steel: 2 },
