@@ -5,19 +5,13 @@ import { useDebouncedValue } from "./hooks/useDebouncedValue";
 import { loadStaticJson } from "./api/client";
 
 import { TrainerNamesLine } from "./components/trainer/TrainerNamesLine";
-import { MyTeamTab } from "./components/myteam/MyTeamTab";
 import { EnemyTrainerTab } from "./components/enemy/EnemyTrainerTab";
-import { CalculatorTab } from "./components/calculator/CalculatorTab";
 import { setDisplayName } from "./utils/poke";
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState("enemy");
-  const [myTeam, setMyTeam] = useState([null, null, null, null]);
-
   const [dataReady, setDataReady] = useState(false);
   const [setsIndex, setSetsIndex] = useState(null);
   const [trainersList, setTrainersList] = useState(null);
-  const [pokedexIndex, setPokedexIndex] = useState(null);
 
   const [q, setQ] = useState("");
   const debouncedQ = useDebouncedValue(q, 150);
@@ -44,8 +38,7 @@ export default function App() {
       loadStaticJson("subway_trainers_set45.json"),
       loadStaticJson("all_pokemon_sets.json"),
       loadStaticJson("moves_items_cache.json"),
-      loadStaticJson("pokedex_gen5_index.json"),
-    ]).then(([trainersData, setsData, movesData, pdexIndexData]) => {
+    ]).then(([trainersData, setsData, movesData]) => {
       if (cancelled) return;
 
       setTrainersList(trainersData.trainers ?? []);
@@ -56,7 +49,6 @@ export default function App() {
       }
       setSetsIndex(idx);
       setMoveDex(movesData.moves ?? {});
-      setPokedexIndex(pdexIndexData.pokemon ?? []);
       setDataReady(true);
     }).catch((e) => {
       console.error("Failed to load static data:", e);
@@ -64,7 +56,6 @@ export default function App() {
         setTrainersList([]);
         setSetsIndex(new Map());
         setMoveDex({});
-        setPokedexIndex([]);
         setDataReady(true);
       }
     });
@@ -156,15 +147,6 @@ export default function App() {
     setShowDiscarded(false);
     setShowStatsInPool(false);
     setPokemonFilter("");
-  }
-
-  function resetAll() {
-    setTrainer(null);
-    setConfirmed([]);
-    setDiscarded(new Set());
-    setShowDiscarded(false);
-    setShowStatsInPool(false);
-    setPokemonFilter("");
     setQ("");
     setSuggestions([]);
   }
@@ -217,7 +199,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header className={`header ${trainer && activeTab === "enemy" ? "headerWithTrainer" : ""}`}>
+      <header className={`header ${trainer ? "headerWithTrainer" : ""}`}>
         <div className="brand">
           <div className="brandTitle">Battle Subway Helper (B2/W2)</div>
           <div className="muted">
@@ -228,61 +210,21 @@ export default function App() {
           </div>
         </div>
 
-        <div className="tabsBar" role="tablist" aria-label="App tabs">
-          <button
-            className={`tabBtn ${activeTab === "myteam" ? "tabBtnActive" : ""}`}
-            onClick={() => setActiveTab("myteam")}
-            role="tab"
-            aria-selected={activeTab === "myteam"}
-          >
-            My Team
-          </button>
-
-          <button
-            className={`tabBtn ${activeTab === "enemy" ? "tabBtnActive" : ""}`}
-            onClick={() => setActiveTab("enemy")}
-            role="tab"
-            aria-selected={activeTab === "enemy"}
-          >
-            Enemy Trainer
-          </button>
-
-          <button
-            className={`tabBtn ${activeTab === "calc" ? "tabBtnActive" : ""}`}
-            onClick={() => setActiveTab("calc")}
-            role="tab"
-            aria-selected={activeTab === "calc"}
-          >
-            Calculator
-          </button>
-        </div>
-
-        <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", alignItems: "center" }}>
-          <button className="ghostBtn" onClick={resetAll} title="Reset enemy trainer state">
-            Reset Enemy
-          </button>
-        </div>
-
-        {activeTab === "calc" ? (
-          <div className="searchBox" style={{ gridColumn: "1 / -1" }}>
+        {trainer ? (
+          <div className="searchBox" style={{ minWidth: 280, justifySelf: "end" }}>
             <input
               className="searchInput"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search trainer / Buscar entrenador (e.g. clerk, oficinista)..."
+              placeholder="Switch trainer / Cambiar entrenador..."
             />
-            {!dataReady ? <div className="spinner" title="Loading data..." /> : null}
-
             {suggestions.length > 0 ? (
               <div className="dropdown dropdownAbove">
                 {suggestions.map((s) => (
                   <button
                     key={s.trainer_id}
                     className="dropdownItem"
-                    onClick={() => {
-                      loadTrainer(s.trainer_id);
-                      setSuggestions([]);
-                    }}
+                    onClick={() => loadTrainer(s.trainer_id)}
                   >
                     <div className="dropdownName">{s.display_name ?? s.name_en}</div>
                     <div className="dropdownMeta muted">
@@ -301,7 +243,7 @@ export default function App() {
           </div>
         ) : null}
 
-        {trainer && activeTab === "enemy" ? (
+        {trainer ? (
           <div className="trainerBar">
             <div className="trainerBarLeft">
               <div className="h1">{trainerTitle}</div>
@@ -331,70 +273,30 @@ export default function App() {
                 <span className="mono">{discarded.size}</span> · total <span className="mono">{poolSets.length}</span>
               </div>
             </div>
-
-            <div className="searchBox" style={{ gridColumn: "1 / -1", marginTop: 4 }}>
-              <input
-                className="searchInput"
-                value={pokemonFilter}
-                onChange={(e) => setPokemonFilter(e.target.value)}
-                placeholder="Filter Pokémon in pool..."
-              />
-              {pokemonFilter ? (
-                <button
-                  className="ghostBtn"
-                  onClick={() => setPokemonFilter("")}
-                  style={{ position: "absolute", right: 6, top: 6, padding: "4px 8px" }}
-                >
-                  ✕
-                </button>
-              ) : null}
-            </div>
-          </div>
-        ) : trainer && activeTab === "calc" ? (
-          <div className="trainerBar">
-            <div className="trainerBarLeft">
-              <div className="h1">{trainerTitle}</div>
-              <TrainerNamesLine trainer={trainer} />
-            </div>
-            <div className="trainerBarRight">
-              <div className="muted" style={{ textAlign: "right" }}>
-                Calculator uses this trainer’s pool only.
-              </div>
-            </div>
           </div>
         ) : null}
       </header>
 
-      {activeTab === "myteam" ? (
-        <main className="content">
-          <MyTeamTab myTeam={myTeam} setMyTeam={setMyTeam} moveDex={moveDex} pokedexIndex={pokedexIndex} />
-        </main>
-      ) : activeTab === "enemy" ? (
-        <EnemyTrainerTab
-          searchProps={{ q, setQ, suggestions, setSuggestions, loadTrainer, dataReady }}
-          trainer={trainer}
-          confirmed={confirmed}
-          discarded={discarded}
-          showDiscarded={showDiscarded}
-          setShowDiscarded={setShowDiscarded}
-          showStatsInPool={showStatsInPool}
-          setShowStatsInPool={setShowStatsInPool}
-          pokemonFilter={pokemonFilter}
-          setPokemonFilter={setPokemonFilter}
-          debouncedPokemonFilter={debouncedPokemonFilter}
-          moveDex={moveDex}
-          poolSets={poolSets}
-          visiblePool={visiblePool}
-          confirmedSets={confirmedSets}
-          toggleDiscard={toggleDiscard}
-          confirmSet={confirmSet}
-          removeConfirmed={removeConfirmed}
-        />
-      ) : (
-        <main className="content">
-          <CalculatorTab trainer={trainer} confirmedSets={confirmedSets} myTeam={myTeam} moveDex={moveDex} />
-        </main>
-      )}
+      <EnemyTrainerTab
+        searchProps={{ q, setQ, suggestions, setSuggestions, loadTrainer, dataReady }}
+        trainer={trainer}
+        confirmed={confirmed}
+        discarded={discarded}
+        showDiscarded={showDiscarded}
+        setShowDiscarded={setShowDiscarded}
+        showStatsInPool={showStatsInPool}
+        setShowStatsInPool={setShowStatsInPool}
+        pokemonFilter={pokemonFilter}
+        setPokemonFilter={setPokemonFilter}
+        debouncedPokemonFilter={debouncedPokemonFilter}
+        moveDex={moveDex}
+        poolSets={poolSets}
+        visiblePool={visiblePool}
+        confirmedSets={confirmedSets}
+        toggleDiscard={toggleDiscard}
+        confirmSet={confirmSet}
+        removeConfirmed={removeConfirmed}
+      />
     </div>
   );
 }

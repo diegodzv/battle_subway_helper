@@ -2,16 +2,6 @@ export function clamp01(x) {
   return Math.max(0, Math.min(1, x));
 }
 
-export function clampInt(n, lo, hi) {
-  const x = Number.isFinite(n) ? n : Number.parseInt(String(n), 10);
-  const v = Number.isFinite(x) ? x : 0;
-  return Math.max(lo, Math.min(hi, Math.trunc(v)));
-}
-
-export function normalizeKey(s) {
-  return (s ?? "").toString().trim().toLowerCase();
-}
-
 export function setDisplayName(set) {
   if (!set) return "";
   const v = typeof set.variant_index === "number" ? set.variant_index : null;
@@ -38,28 +28,6 @@ export function formatBPAcc(moveEntry) {
   const bp = typeof moveEntry.power === "number" ? String(moveEntry.power) : "—";
   const acc = typeof moveEntry.accuracy === "number" ? String(moveEntry.accuracy) : "—";
   return `${bp} / ${acc}`;
-}
-
-export function findMoveSlugFromText(text, moveDex) {
-  if (!moveDex || typeof moveDex !== "object") return null;
-
-  const t = normalizeKey(text);
-  if (!t) return null;
-
-  // exact slug match
-  if (Object.prototype.hasOwnProperty.call(moveDex, t)) return t;
-
-  // spaces -> hyphen
-  const hy = t.replace(/\s+/g, "-");
-  if (Object.prototype.hasOwnProperty.call(moveDex, hy)) return hy;
-
-  // match by pretty name
-  for (const slug of Object.keys(moveDex)) {
-    const pn = prettyMoveNameFromSlug(slug);
-    if (pn && normalizeKey(pn) === t) return slug;
-  }
-
-  return null;
 }
 
 export function getTierClass(v) {

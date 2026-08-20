@@ -1,127 +1,73 @@
-# 🚇 Gen 5 Battle Subway Helper
+# 🚇 Battle Subway Helper (B2/W2)
 
-An interactive tool to **analyze Battle Subway trainers** (Pokémon Black 2 / White 2),
-allowing you to **deduce the opponent’s team in real time** based on revealed Pokémon,
-their possible sets, and competitive constraints such as **Item Clause**.
+A web tool to **track Battle Subway trainers** in Pokémon Black 2 / White 2 and
+**deduce the opponent's team in real time**.
 
-The application is designed for **practical, in-battle use**, especially in **Double Battles**,
-and displays **all possible Pokémon sets**, allowing you to manually discard or confirm options
-as the battle progresses.
+Each Subway trainer has a pool of possible Pokémon (with multiple possible sets
+per species — movesets, items, natures) from which they pick 3 or 4 for battle.
+This tool shows you that full pool and lets you narrow it down as the trainer
+reveals Pokémon: confirming a set automatically discards every other set that
+can't coexist with it under **Species Clause** and **Item Clause**.
+
+Live at: **https://diegodzv.github.io/battle_subway_helper/**
 
 ---
 
-## ✨ Main Features
+## ✨ Features
 
-- 🔍 **Multilingual** trainer search
-- 🧩 Full visualization of each trainer’s **possible Pokémon sets**
-- 👀 Manual marking of **seen / confirmed Pokémon**
-- ❌ Manual discarding of impossible sets
-- 🎒 Automatic enforcement of **Item Clause**
-- 📊 Real, Gen 5–accurate **Level 50 stats**
-- 🎮 UI inspired by **Serebii**, redesigned for competitive play
+- 🔍 Trainer search in English or Spanish, autocompleted
+- 🧩 Full visualization of each trainer's possible Pokémon sets (moves, item, nature, Lv 50 stats)
+- 👀 Confirm sets as they're revealed in battle, filling 4 "Seen" slots
+- ❌ Discard sets manually, or automatically via Species Clause + Item Clause
+- 🔎 Per-slot filter boxes to quickly narrow the pool while looking for a specific Pokémon
+- ⚡ Switch trainers directly from the header, no reset step needed
 
 ---
 
 ## 🚀 Running the Application
 
-The project consists of **two separate services**:
-- Backend (FastAPI)
-- Frontend (Vite + React)
+This is a **static, frontend-only** app — no backend, no database. All Pokémon
+and trainer data is pre-generated JSON served as static files.
 
-Both must be running at the same time.
-
----
-
-### ▶️ Backend (API)
-
-From the **project root**:
-
-```python
-uvicorn src.main:app --reload --port 8000
-```
-
-The API will be available at:
-
-http://localhost:8000
-
-Health check:
-
-http://localhost:8000/health
-
----
-
-### ▶️ Frontend (UI)
-
-From the **frontend/** directory:
-
-```python
+```bash
+cd frontend
 npm install
 npm run dev
 ```
 
-The UI will be available at:
+The UI will be available at http://localhost:5173
 
-http://localhost:5173
+Other commands (run from `frontend/`):
 
----
-
-### 🔁 Running everything (recommended workflow)
-
-Open **two terminals**:
-
-Terminal 1 (backend):
-
-```cmd
-uvicorn src.main:app --reload --port 8000
+```bash
+npm run build   # production build -> frontend/dist/
+npm run lint    # eslint
 ```
 
-Terminal 2 (frontend):
-
-```cmd
-cd frontend
-npm run dev
-```
+There is no automated test suite — verify changes manually in the browser.
 
 ---
 
 ## 🧠 Design Notes
 
-- All Pokémon data is **precomputed**
-- No runtime PokéAPI calls
-- All filtering logic happens server-side
-- Frontend is purely reactive and stateless
-- Item Clause is enforced client-side for usability
-
-This makes the app:
-- Fast
-- Offline-friendly
-- Deterministic
-- Tournament-safe
+- All Pokémon and trainer data is precomputed and loaded as static JSON at startup
+- No runtime PokéAPI calls, no server round-trips
+- Species Clause and Item Clause are enforced client-side for usability
+- Fast, offline-friendly, deterministic
 
 ---
 
 ## 🎮 About Battle Subway
 
-This tool is designed for:
-- Pokémon Black / White & Pokémon Black 2 / White 2
-- Super Subway Doubles planning
-
-Inspired by:
-- Smogon data
-- Serebii presentation
-- Competitive play needs
+This tool is designed for the Battle Subway in Pokémon Black 2 / White 2.
 
 ---
 
-## 🤝 Contributing
+## 🛠️ Deployment
 
-Contributions are welcome!
-
-Ideas:
-- Better UX for doubles
-- Automatic set elimination rules
-- Damage calculator integration
-- Localization support
+Push to `main` — GitHub Actions (`.github/workflows/deploy.yml`) builds the
+frontend and deploys `frontend/dist/` to the `gh-pages` branch, which GitHub
+Pages serves automatically.
 
 ---
 
@@ -129,9 +75,5 @@ Ideas:
 
 This project is shared for the Pokémon community.
 
-Pokémon data belongs to:
-- Nintendo
-- Game Freak
-- Creatures Inc.
-
+Pokémon data belongs to Nintendo, Game Freak, and Creatures Inc.
 This project is non-commercial and educational.

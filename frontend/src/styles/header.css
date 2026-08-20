@@ -3,7 +3,7 @@
   top: 0;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1fr minmax(320px, 520px) auto;
+  grid-template-columns: 1fr auto;
   gap: 16px;
   align-items: center;
   padding: 14px 18px;
@@ -49,16 +49,6 @@
   animation: spin 0.7s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
-.ghostBtn {
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
-  cursor: pointer;
-  color: rgba(255,255,255,0.85);
-}
-.ghostBtn:hover { background: rgba(255,255,255,0.07); }
 
 /* Trainer bar inside header */
 .trainerBar {
@@ -136,37 +126,6 @@
 .counts {
   text-align: right;
   font-size: 0.90rem;
-}
-
-/* Tabs */
-.tabsBar {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding: 6px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-}
-
-.tabBtn {
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-  color: rgba(255,255,255,0.85);
-  padding: 8px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
-
-.tabBtn:hover { background: rgba(255,255,255,0.07); }
-
-.tabBtnActive {
-  border-color: rgba(213, 184, 255, 0.35);
-  background: rgba(213, 184, 255, 0.10);
-  box-shadow: 0 0 0 3px rgba(213, 184, 255, 0.10);
 }
 
 /* Responsive (header) */

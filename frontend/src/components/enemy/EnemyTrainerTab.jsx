@@ -5,17 +5,45 @@ import { StatRow } from "../common/StatRow";
 import { SetTile } from "./SetTile";
 import { formatBPAcc, hasEvs, prettyMoveNameFromSlug, setDisplayName } from "../../utils/poke";
 
-function SeenSlotEmpty({ index }) {
+function SeenSlotEmpty({ index, query, setQuery, onClear }) {
   return (
-    <div className="seenSlotEmpty" style={{ placeItems: "center", display: "grid" }}>
-      <div className="teamSlotIndex mono">#{index + 1}</div>
+    <div className="seenSlotEmpty">
+      <div className="slotSearchHeader">
+        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <div className="teamSlotIndex mono">#{index + 1}</div>
+          <div className="muted" style={{ fontWeight: 700 }}>Filter pool</div>
+        </div>
+        {query ? (
+          <button className="slotClearBtn" onClick={onClear} title="Clear filter">
+            Clear ✕
+          </button>
+        ) : null}
+      </div>
+
+      <input
+        className="slotSearchInput"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Type a Pokémon (e.g. Gyarados, Hydreigon-4)..."
+      />
+
+      <div className="muted slotHint">
+        This filters the Pool below. Confirming a set clears the filter.
+      </div>
     </div>
   );
 }
 
-function SeenSlot({ set, index, onRemove, moveDex }) {
+function SeenSlot({ set, index, onRemove, moveDex, pokemonFilter, setPokemonFilter }) {
   if (!set) {
-    return <SeenSlotEmpty index={index} />;
+    return (
+      <SeenSlotEmpty
+        index={index}
+        query={pokemonFilter}
+        setQuery={setPokemonFilter}
+        onClear={() => setPokemonFilter("")}
+      />
+    );
   }
 
   const display = setDisplayName(set);
@@ -166,6 +194,8 @@ export function EnemyTrainerTab(props) {
                     index={idx}
                     onRemove={removeConfirmed}
                     moveDex={moveDex}
+                    pokemonFilter={pokemonFilter}
+                    setPokemonFilter={setPokemonFilter}
                   />
                 ))}
               </div>
