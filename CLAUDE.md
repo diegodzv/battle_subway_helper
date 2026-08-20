@@ -215,7 +215,7 @@ Key layout classes:
 - `.layoutNew` — 2-column grid (Seen panel + Pool panel) for enemy tab
 - `.panel` — frosted card: dark bg, border, border-radius 18px, padding 14px
 - `.miniBox` — smaller inner card: lighter bg, border, border-radius 14px, padding 10px
-- `.slotSearchInput` / `.slotSearchHeader` / `.slotClearBtn` / `.slotHint` (in `components.css`) — the per-slot pool filter inputs rendered by `SeenSlotEmpty`
+- `.slotSearchInput` / `.slotSearchHeader` / `.slotClearBtn` (in `components.css`) — the per-slot pool filter inputs rendered by `SeenSlotEmpty`
 
 ---
 

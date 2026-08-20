@@ -24,12 +24,8 @@ function SeenSlotEmpty({ index, query, setQuery, onClear }) {
         className="slotSearchInput"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Type a Pokémon (e.g. Gyarados, Hydreigon-4)..."
+        placeholder="Search species..."
       />
-
-      <div className="muted slotHint">
-        This filters the Pool below. Confirming a set clears the filter.
-      </div>
     </div>
   );
 }

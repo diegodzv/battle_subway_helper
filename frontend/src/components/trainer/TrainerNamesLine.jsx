@@ -1,7 +1,7 @@
 export function TrainerNamesLine({ trainer }) {
   if (!trainer) return null;
   const names = trainer?.names && typeof trainer.names === "object" ? trainer.names : null;
-  const order = ["en", "de", "fr", "it", "ja", "ko"];
+  const order = ["es", "de", "fr", "it", "ja", "ko"];
   const parts = [];
 
   if (names) {
