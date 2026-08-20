@@ -18,6 +18,16 @@ Live at: **https://diegodzv.github.io/battle_subway_helper/**.
 
 ---
 
+## Subway Pool Atlas
+
+I also built **Subway Pool Atlas**, a companion analytics tool for exploring the Battle Subway trainer pool as a whole.
+
+It provides statistics and comparisons across trainers, Pokémon sets, species, items, natures, moves, EV spreads, and Lv. 50 stats, including frequency rankings and differences between Super Set 4 and Super Set 5.
+
+**Explore the Atlas:** [Subway Pool Atlas](https://claude.ai/code/artifact/143847fa-3f33-47b9-b7a2-58f22f069032)
+
+---
+
 ## License
 
 This project is shared freely with the Pokémon community. Attribution is appreciated.
