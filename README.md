@@ -1,31 +1,26 @@
 # Battle Subway Helper (B2/W2)
 
-A web tool to **track Battle Subway trainers** in Pokémon Black 2 / White 2 and
-**deduce the opponent's team in real time**.
+A web tool for **tracking Battle Subway trainers** in Pokémon Black 2 / White 2 and **deducing the opponent's team in real time**.
 
-Each Subway trainer has a pool of possible Pokémon (with multiple possible sets
-per species — movesets, items, natures) from which they pick 3 or 4 for battle.
-This tool shows you that full pool and lets you narrow it down as the trainer
-reveals Pokémon: confirming a set automatically discards every other set that
-can't coexist with it under **Species Clause** and **Item Clause**.
+Each Subway trainer has a predefined pool of possible Pokémon sets, including different movesets, items, and natures. The game selects 3 or 4 Pokémon from that pool for each battle.
+The Battle Subway Helper shows the trainer's full pool and lets you narrow down the possibilities as Pokémon are revealed. Confirming a set automatically eliminates any other sets that can no longer appear automatically applying **Species Clause** and **Item Clause**.
 
-Live at: **https://diegodzv.github.io/battle_subway_helper/**
+Live at: **https://diegodzv.github.io/battle_subway_helper/**.
 
 ---
 
 ## Features
 
 - Multi-language support.
-- Full visualization of each trainer's possible Pokémon sets (moves, item, nature, Lv 50 stats).
-- Confirm sets as they're revealed in battle, filling 4 "Seen" slots.
-- Discard sets manually, or automatically via Species Clause + Item Clause.
-- Per-slot filter boxes to quickly narrow the pool while looking for a specific Pokémon.
+- View each trainer's full pool of possible Pokémon sets, including moves, items, natures, and Lv. 50 stats.
+- Confirm Pokémon sets as they are revealed during battle, filling up to 4 "Seen" slots.
+- Manually discard sets or automatically eliminate incompatible ones based on Species Clause and Item Clause.
 
 ---
 
 ## License
 
-This project is shared for the Pokémon community, though due credit is appreciated.
+This project is shared freely with the Pokémon community. Attribution is appreciated.
 
-Pokémon data belongs to Nintendo, Game Freak, and Creatures Inc.
-This project is non-commercial and educational.
+Pokémon and related data are the property of Nintendo, Game Freak, and Creatures Inc. This project is non-commercial and intended for educational and community use.
+
