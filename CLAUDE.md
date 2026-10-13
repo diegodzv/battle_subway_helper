@@ -19,6 +19,9 @@ cd frontend && npm run lint
 
 No test suite. Verify changes manually in the browser.
 
+`npm run lint` currently reports a handful of pre-existing errors (unused props in
+`EnemyTrainerTab.jsx`/`SetTile.jsx`, `set-state-in-effect` in `App.jsx`); CI only runs the build.
+
 ---
 
 ## What This Is
@@ -60,10 +63,10 @@ battle_subway_helper/
 ├── CLAUDE.md                      # This file
 ├── frontend/
 │   ├── vite.config.js             # base: '/battle_subway_helper/'
-│   ├── public/data/               # All static JSON data files (served as-is)
+│   ├── public/data/subway_data.json  # The only data file (served as-is)
 │   └── src/
 │       ├── App.jsx                # Root: state, data loading, header, trainer search
-│       ├── api/client.js          # loadStaticJson(filename) — sole data-fetch utility
+│       ├── api/client.js          # loadSubwayData() — fetches subway_data.json and expands it
 │       ├── utils/
 │       │   ├── poke.js            # Utility fns: setDisplayName, formatBPAcc, etc.
 │       │   └── text.js            # normalize() — lowercase + strip accents
@@ -87,24 +90,42 @@ battle_subway_helper/
 
 ## Data Architecture
 
-All data is pre-generated JSON in `frontend/public/data/`. The app loads everything at startup.
+All data lives in a single pre-generated file, `frontend/public/data/subway_data.json`
+(~220 KB, ~47 KB gzipped), loaded once at startup. It is hand-maintained (there is no
+generator script) and written one record per line so diffs stay readable. It only
+contains what the app renders: the 100 Super Set 4/5 trainers and the 780 sets that
+appear in their pools — don't add sets, moves or fields nothing uses.
 
-### Static JSON Files
+### subway_data.json (compact, on disk)
 
-| File | Size | Contents |
-|------|------|----------|
-| `subway_trainers_set45.json` | ~300 KB | All trainers: `{trainers: [{trainer_id, name_en, name_es, section, pool_global_ids, names: {en,es,de,fr,it,ja,ko}, classes: {en,...}}]}` |
-| `all_pokemon_sets.json` | ~1 MB | All Pokémon sets keyed by slug: `{global_id, species, nature, item, moves, evs, variant_index, stats_lv50, sprite_url_pokeapi, dex_number, item_sprite_url, moves_meta: [{name,slug,type}]}` |
-| `moves_items_cache.json` | ~200 KB | `{moves: {"slug": {name, type, damage_class, power, accuracy, pp}}}` |
+| Key | Contents |
+|-----|----------|
+| `moves` | `{"slug": {type, damage_class, power?, accuracy?}}` — `power`/`accuracy` omitted when null |
+| `items` | `{"Item Name": "pokeapi-item-slug"}` — only used to build item sprite URLs |
+| `sets` | `[{id, species, variant, dex, nature, item, moves: [slug], evs: ["HP","Def"], stats: [HP,Atk,Def,SpA,SpD,Spe]}]` |
+| `pools` | `[[set id, ...]]` — the 33 distinct pools; many trainers share one |
+| `trainers` | `[{trainer_id, name_en, name_es, section, pool: <index into pools>, names: {en,es,de,fr,it,ja,ko}}]` |
 
-### Data Loading Pattern (App.jsx)
+### Expanded shape (in memory)
 
-```
-Startup (parallel):
-  subway_trainers_set45.json → trainersList (array)
-  all_pokemon_sets.json       → setsIndex (Map<global_id, set>)
-  moves_items_cache.json      → moveDex ({slug: entry})
-```
+`loadSubwayData()` in `api/client.js` expands the compact records into the shape every
+component consumes, and returns `{trainersList, setsIndex, moveDex}`:
+
+- set: `{global_id, species, variant_index, dex_number, nature, item, moves_meta: [{slug, type}], evs_numeric: {HP,...}, stats_lv50: {HP,...}, sprite_url_pokeapi, item_sprite_url}`
+  - sprite URLs are derived (PokeAPI sprites repo, by dex number / item slug), not stored
+  - `evs_numeric` is derived from `evs`: 510 split evenly across the listed stats, capped at 255
+  - move display names are derived from the slug (`prettyMoveNameFromSlug`)
+- trainer: the stored record plus `pool_global_ids` (resolved from `pools[pool]`)
+- `setsIndex` is a `Map<global_id, set>`; `moveDex` is the `moves` object as-is
+
+### Gen 5 accuracy
+
+Everything must be **Gen 5 (B2W2)** data, not current-gen: base stats (e.g. Alakazam
+SpD 85, Cresselia 120/130 defenses), move power/accuracy (Sucker Punch 80, Tackle 50),
+and no Fairy type (Charm/Moonlight/Sweet Kiss are Normal). PokeAPI returns current-gen
+values by default, which is how wrong data got in before. To audit, compare against
+Pokémon Showdown's Gen 5 dex (`@pkmn/dex`, `Dex.forGen(5)`). `stats` are precomputed at
+Lv 50 assuming 31 IVs, the EV rule above and the set's nature.
 
 ### Trainer Loading (synchronous after startup)
 
@@ -196,7 +217,7 @@ esbuild's JSX parser rejects single-quoted attribute values that contain double-
 
 ## Stat Key Naming Convention
 
-Enemy sets store pre-computed Lv 50 stats under **capitalized** keys:
+Expanded enemy sets expose pre-computed Lv 50 stats under **capitalized** keys (stored on disk as a `stats` array in the same order):
 ```js
 set.stats_lv50 = { HP, Atk, Def, SpA, SpD, Spe }
 ```

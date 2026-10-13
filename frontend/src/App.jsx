@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./styles/index.css";
 
 import { useDebouncedValue } from "./hooks/useDebouncedValue";
-import { loadStaticJson } from "./api/client";
+import { loadSubwayData } from "./api/client";
 
 import { TrainerNamesLine } from "./components/trainer/TrainerNamesLine";
 import { EnemyTrainerTab } from "./components/enemy/EnemyTrainerTab";
@@ -34,21 +34,12 @@ export default function App() {
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([
-      loadStaticJson("subway_trainers_set45.json"),
-      loadStaticJson("all_pokemon_sets.json"),
-      loadStaticJson("moves_items_cache.json"),
-    ]).then(([trainersData, setsData, movesData]) => {
+    loadSubwayData().then((data) => {
       if (cancelled) return;
 
-      setTrainersList(trainersData.trainers ?? []);
-
-      const idx = new Map();
-      for (const set of Object.values(setsData)) {
-        if (typeof set.global_id === "number") idx.set(set.global_id, set);
-      }
-      setSetsIndex(idx);
-      setMoveDex(movesData.moves ?? {});
+      setTrainersList(data.trainersList);
+      setSetsIndex(data.setsIndex);
+      setMoveDex(data.moveDex);
       setDataReady(true);
     }).catch((e) => {
       console.error("Failed to load static data:", e);
