@@ -2,7 +2,7 @@ import { Sprite } from "../common/Sprite";
 import { ItemIcon } from "../common/ItemIcon";
 import { TypeBadge } from "../common/TypeBadge";
 import { StatRow } from "../common/StatRow";
-import { formatBPAcc, hasEvs, prettyMoveNameFromSlug, setDisplayName } from "../../utils/poke";
+import { hasEvs, natureEffectLabel, prettyMoveNameFromSlug, setDisplayName } from "../../utils/poke";
 
 export function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfirm, showStats }) {
   const display = setDisplayName(set);
@@ -16,8 +16,7 @@ export function SetTile({ set, isDiscarded, onDiscardToggle, onConfirm, canConfi
         <div className="setTileTitle">
           <div className="name">{display}</div>
           <div className="meta muted">
-            <span className="mono">#{set.global_id}</span> · Dex <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
-            <span className="mono">{set.nature}</span>
+            <span className="mono">{set.nature}</span> · <span className="mono">{natureEffectLabel(set.nature)}</span>
           </div>
         </div>
 

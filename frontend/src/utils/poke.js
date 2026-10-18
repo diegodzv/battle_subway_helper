@@ -38,3 +38,17 @@ export function getTierClass(v) {
   if (v < 160) return "stat-gLight";
   return "stat-gDark";
 }
+
+// Gen 5 natures → [boosted stat, lowered stat]; neutral natures are omitted
+const NATURE_EFFECTS = {
+  Lonely: ["Atk", "Def"], Brave: ["Atk", "Spe"], Adamant: ["Atk", "SpA"], Naughty: ["Atk", "SpD"],
+  Bold: ["Def", "Atk"], Relaxed: ["Def", "Spe"], Impish: ["Def", "SpA"], Lax: ["Def", "SpD"],
+  Timid: ["Spe", "Atk"], Hasty: ["Spe", "Def"], Jolly: ["Spe", "SpA"], Naive: ["Spe", "SpD"],
+  Modest: ["SpA", "Atk"], Mild: ["SpA", "Def"], Quiet: ["SpA", "Spe"], Rash: ["SpA", "SpD"],
+  Calm: ["SpD", "Atk"], Gentle: ["SpD", "Def"], Sassy: ["SpD", "Spe"], Careful: ["SpD", "SpA"],
+};
+
+export function natureEffectLabel(nature) {
+  const effect = NATURE_EFFECTS[nature];
+  return effect ? `⬆️${effect[0]} ⬇️${effect[1]}` : "Neutral";
+}

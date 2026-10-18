@@ -20,7 +20,7 @@ cd frontend && npm run lint
 No test suite. Verify changes manually in the browser.
 
 `npm run lint` currently reports a handful of pre-existing errors (unused props in
-`EnemyTrainerTab.jsx`/`SetTile.jsx`, `set-state-in-effect` in `App.jsx`); CI only runs the build.
+`EnemyTrainerTab.jsx`, `set-state-in-effect` in `App.jsx`); CI only runs the build.
 
 ---
 
@@ -167,6 +167,8 @@ typing in any empty slot filters the Pool panel below. Confirming a set clears t
 ### SetTile (enemy/SetTile.jsx)
 
 Compact card per pool set. Has ✕ (discard) and ✓ (confirm) buttons. Shows sprite, name, item, moves. Dimmed when discarded.
+The line under the name shows only the nature and its effect (`Adamant · ⬆️Atk ⬇️SpA`, or
+`Hardy · Neutral`), via `natureEffectLabel()` in `utils/poke.js`.
 
 ---
 
