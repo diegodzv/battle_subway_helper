@@ -167,8 +167,8 @@ typing in any empty slot filters the Pool panel below. Confirming a set clears t
 ### SetTile (enemy/SetTile.jsx)
 
 Compact card per pool set. Has ✕ (discard) and ✓ (confirm) buttons. Shows sprite, name, item, moves. Dimmed when discarded.
-The line under the name shows only the nature and its effect (`Adamant · ⬆️Atk ⬇️SpA`, or
-`Hardy · Neutral`), via `natureEffectLabel()` in `utils/poke.js`.
+The line under the name shows only the nature and its effect (`Adamant · ⇧Atk ⇩SpA`, or
+`Hardy · Neutral`), via `natureEffectLabel()` in `utils/poke.js`. Filled "Seen" slots use the same line.
 
 ---
 

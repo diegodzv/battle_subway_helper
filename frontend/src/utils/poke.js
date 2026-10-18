@@ -50,5 +50,5 @@ const NATURE_EFFECTS = {
 
 export function natureEffectLabel(nature) {
   const effect = NATURE_EFFECTS[nature];
-  return effect ? `⬆️${effect[0]} ⬇️${effect[1]}` : "Neutral";
+  return effect ? `⇧${effect[0]} ⇩${effect[1]}` : "Neutral";
 }

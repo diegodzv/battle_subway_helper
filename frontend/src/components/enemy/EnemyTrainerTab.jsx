@@ -3,7 +3,7 @@ import { ItemIcon } from "../common/ItemIcon";
 import { TypeBadge } from "../common/TypeBadge";
 import { StatRow } from "../common/StatRow";
 import { SetTile } from "./SetTile";
-import { formatBPAcc, hasEvs, prettyMoveNameFromSlug, setDisplayName } from "../../utils/poke";
+import { formatBPAcc, hasEvs, natureEffectLabel, prettyMoveNameFromSlug, setDisplayName } from "../../utils/poke";
 
 function SeenSlotEmpty({ index, query, setQuery, onClear }) {
   return (
@@ -55,8 +55,7 @@ function SeenSlot({ set, index, onRemove, moveDex, pokemonFilter, setPokemonFilt
               {display}
             </div>
             <div className="muted" style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-              <span className="mono">#{set.global_id}</span> · Dex <span className="mono">{set.dex_number ?? "?"}</span> ·{" "}
-              <span className="mono">{set.nature}</span>
+              <span className="mono">{set.nature}</span> · <span className="mono">{natureEffectLabel(set.nature)}</span>
             </div>
 
             <div className="itemLine">
