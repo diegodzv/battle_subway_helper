@@ -30,7 +30,7 @@ function SeenSlotEmpty({ index, query, setQuery, onClear }) {
   );
 }
 
-function SeenSlot({ set, index, onRemove, moveDex, pokemonFilter, setPokemonFilter }) {
+function SeenSlot({ set, index, onRemove, onSendToCalc, moveDex, pokemonFilter, setPokemonFilter }) {
   if (!set) {
     return (
       <SeenSlotEmpty
@@ -65,9 +65,14 @@ function SeenSlot({ set, index, onRemove, moveDex, pokemonFilter, setPokemonFilt
           </div>
         </div>
 
-        <button className="chip chipDanger" onClick={() => onRemove(set.global_id)} title="Remove from seen">
-          Remove ✕
-        </button>
+        <div className="seenSlotActions">
+          <button className="chip" onClick={() => onSendToCalc(set)} title="Open this set in the damage calculator">
+            → Calc
+          </button>
+          <button className="chip chipDanger" onClick={() => onRemove(set.global_id)} title="Remove from seen">
+            Remove ✕
+          </button>
+        </div>
       </div>
 
       <div className="seenSlotBody">
@@ -131,6 +136,7 @@ export function EnemyTrainerTab(props) {
     toggleDiscard,
     confirmSet,
     removeConfirmed,
+    sendToCalc,
   } = props;
 
   return (
@@ -188,6 +194,7 @@ export function EnemyTrainerTab(props) {
                     set={s}
                     index={idx}
                     onRemove={removeConfirmed}
+                    onSendToCalc={sendToCalc}
                     moveDex={moveDex}
                     pokemonFilter={pokemonFilter}
                     setPokemonFilter={setPokemonFilter}

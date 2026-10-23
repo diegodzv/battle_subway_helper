@@ -2,6 +2,11 @@ export function clamp01(x) {
   return Math.max(0, Math.min(1, x));
 }
 
+// Same id scheme as @smogon/calc's toID(): "Porygon-Z" -> "porygonz"
+export function speciesId(name) {
+  return String(name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
 export function setDisplayName(set) {
   if (!set) return "";
   const v = typeof set.variant_index === "number" ? set.variant_index : null;

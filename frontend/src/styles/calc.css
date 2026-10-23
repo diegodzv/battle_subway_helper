@@ -1,0 +1,216 @@
+/* Tabs (header) */
+.tabsBar {
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  justify-self: center;
+}
+.tabBtn {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255,255,255,0.70);
+  font-weight: 700;
+  cursor: pointer;
+}
+.tabBtn:hover { color: rgba(255,255,255,0.92); border-color: transparent; }
+.tabBtnOn {
+  background: rgba(140, 180, 255, 0.16);
+  border-color: rgba(140, 180, 255, 0.35);
+  color: rgba(255,255,255,0.95);
+}
+
+.seenSlotActions { display: inline-flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+
+/* Three-column layout: your Pokemon | field + result | rival */
+.calcLayout {
+  display: grid;
+  grid-template-columns: minmax(380px, 1fr) minmax(340px, 0.85fr) minmax(360px, 1fr);
+  grid-template-areas: "mine center enemy";
+  gap: 18px;
+  align-items: start;
+}
+.calcMine { grid-area: mine; }
+.calcCenter { grid-area: center; display: grid; gap: 18px; min-width: 0; position: sticky; top: 90px; }
+.calcEnemy { grid-area: enemy; }
+@media (max-width: 1250px) {
+  .calcLayout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "center center" "mine enemy";
+  }
+  .calcCenter { position: static; }
+}
+@media (max-width: 820px) {
+  .calcLayout { grid-template-columns: 1fr; grid-template-areas: "center" "mine" "enemy"; }
+}
+
+/* Cards */
+.calcTeamBar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.calcChipOn {
+  background: rgba(140, 180, 255, 0.16);
+  border-color: rgba(140, 180, 255, 0.40);
+}
+.calcPickBox { margin-bottom: 12px; }
+.calcHeaderMain { display: flex; gap: 10px; align-items: flex-start; min-width: 0; flex: 1; }
+.calcHeaderFields { display: grid; gap: 6px; min-width: 0; flex: 1; }
+.calcGrow { flex: 1; min-width: 0; }
+
+.calcInput, .calcSelect {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20, 26, 35, 0.95);
+  color: rgba(255,255,255,0.92);
+  outline: none;
+  font: inherit;
+  font-size: 0.92rem;
+}
+.calcInput:focus, .calcSelect:focus {
+  border-color: rgba(140, 180, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.15);
+}
+.calcSelect option, .calcSelect optgroup { background: #141a23; color: rgba(255,255,255,0.92); }
+.calcSpeciesInput { font-weight: 800; font-size: 1rem; }
+.calcNumber { text-align: right; padding: 4px 6px; -moz-appearance: textfield; appearance: textfield; }
+.calcNumber::-webkit-outer-spin-button,
+.calcNumber::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.calcBoxHeader { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 6px; }
+.calcCheck { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; user-select: none; font-size: 0.9rem; }
+.calcCheck input, .calcCritBox, .calcToggle input { accent-color: rgba(140, 180, 255, 0.95); }
+.calcItemRow { display: flex; gap: 8px; align-items: center; }
+.calcDisabled { opacity: 0.4; text-decoration: line-through; }
+
+/* Moves */
+.calcMovesHeader {
+  display: grid;
+  grid-template-columns: 1fr 84px 34px;
+  align-items: end;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.calcMoveRow {
+  grid-template-columns: 74px 1fr 84px 34px;
+  gap: 8px;
+  padding: 3px 4px;
+  margin: -3px -4px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.calcMoveRow:hover { background: rgba(255,255,255,0.04); }
+.calcMoveEmpty { cursor: default; }
+.calcMoveSelected {
+  background: rgba(140, 180, 255, 0.12);
+  border-color: rgba(140, 180, 255, 0.35);
+}
+.calcCritBox { justify-self: center; width: 16px; height: 16px; cursor: pointer; }
+
+/* Stats */
+.calcStatGrid, .calcStatGridMine {
+  display: grid;
+  grid-template-columns: 1fr 58px 40px;
+  gap: 8px;
+  align-items: center;
+}
+.calcStatGridMine { grid-template-columns: 1fr 50px 42px 58px 40px; }
+.calcStatHead { font-size: 0.76rem; letter-spacing: 0.3px; text-align: right; margin-bottom: -2px; }
+.calcStageSelect { padding: 3px 4px; text-align: right; }
+.calcFinal { text-align: right; font-weight: 800; }
+.calcUp { color: rgb(120, 255, 140); }
+.calcDown { color: rgb(255, 130, 130); }
+.calcWarn { color: rgb(255, 130, 130); font-weight: 800; }
+
+.calcConditionRow { display: grid; grid-template-columns: 1fr 120px; gap: 10px; margin-top: 6px; }
+.calcField { display: grid; gap: 4px; font-size: 0.86rem; }
+
+/* Field */
+.calcSegmented { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+.calcSegment {
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.80);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.calcSegment:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.18); }
+.calcSegmentOn {
+  background: rgba(140, 180, 255, 0.18);
+  border-color: rgba(140, 180, 255, 0.45);
+  color: rgba(255,255,255,0.96);
+}
+.calcFieldBoth {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.calcToggleWrap { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.calcCenterWrap { justify-content: center; }
+.calcToggle {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  font-size: 0.88rem;
+  cursor: pointer;
+  user-select: none;
+}
+.calcToggleOn { background: rgba(140, 180, 255, 0.14); border-color: rgba(140, 180, 255, 0.40); }
+.calcSides { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 12px; }
+.calcSideDivider { background: rgba(255,255,255,0.12); }
+.calcSideCol { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.calcSpikes { grid-template-columns: auto 56px; align-items: center; gap: 6px; }
+
+/* Result */
+.calcResultMain {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(140, 180, 255, 0.30);
+  background: rgba(140, 180, 255, 0.08);
+  color: rgba(255,255,255,0.95);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  cursor: copy;
+}
+.calcResultMain:hover { background: rgba(140, 180, 255, 0.13); border-color: rgba(140, 180, 255, 0.45); }
+.calcResultCopied { border-color: rgba(120, 255, 140, 0.55); background: rgba(120, 255, 140, 0.10); }
+.calcResultEmpty { padding: 12px 2px; }
+.calcResultLists { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.calcResultCol { display: grid; gap: 4px; align-content: start; min-width: 0; }
+.calcResultColTitle { font-size: 0.82rem; margin-bottom: 2px; }
+.calcResultItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 9px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.86rem;
+  text-align: left;
+  cursor: pointer;
+}
+.calcResultItem:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+.calcResultItemOn { background: rgba(140, 180, 255, 0.12); border-color: rgba(140, 180, 255, 0.35); }
+@media (max-width: 520px) {
+  .calcSides, .calcResultLists { grid-template-columns: 1fr; }
+  .calcSideDivider { display: none; }
+}

@@ -32,10 +32,13 @@ pool of possible Pokémon sets, and confirm/discard sets as they reveal themselv
 battle. Confirming a set auto-discards every other set that can't coexist with it under
 Species Clause and Item Clause.
 
-This is the app's only feature. Earlier iterations also had a "My Team" builder, a Gen 5
-damage calculator, and an OCR-based auto-capture companion for reading the emulator screen
-— all three were removed as unfinished/overly complex. Don't reintroduce them unless
-explicitly asked.
+A second tab is a **Gen 5 damage calculator** focused on the Subway: your Pokémon (any
+Gen 5 species/build, saved in the browser) vs. any Subway set, with field conditions in
+the middle and a Showdown-style result line you can click to copy.
+
+Earlier iterations also had a separate "My Team" builder and an OCR-based auto-capture
+companion for reading the emulator screen — both were removed as unfinished/overly
+complex. Don't reintroduce them unless explicitly asked.
 
 Live at: `https://diegodzv.github.io/battle_subway_helper/`
 
@@ -65,13 +68,15 @@ battle_subway_helper/
 │   ├── vite.config.js             # base: '/battle_subway_helper/'
 │   ├── public/data/subway_data.json  # The only data file (served as-is)
 │   └── src/
-│       ├── App.jsx                # Root: state, data loading, header, trainer search
+│       ├── App.jsx                # Root: state, data loading, header + tabs, trainer search
+│       ├── calc/engine.js         # The only importer of @smogon/calc (Gen 5 wrapper)
 │       ├── api/client.js          # loadSubwayData() — fetches subway_data.json and expands it
 │       ├── utils/
 │       │   ├── poke.js            # Utility fns: setDisplayName, formatBPAcc, etc.
 │       │   └── text.js            # normalize() — lowercase + strip accents
 │       ├── hooks/
-│       │   └── useDebouncedValue.js
+│       │   ├── useDebouncedValue.js
+│       │   └── useCalcState.js    # All calculator state (team persisted to localStorage)
 │       ├── styles/
 │       │   ├── index.css          # Imports all partials
 │       │   ├── tokens.css         # CSS custom properties (colors, radii, etc.)
@@ -79,11 +84,13 @@ battle_subway_helper/
 │       │   ├── layout.css         # .page, .content, .layoutNew, .panel, .footer
 │       │   ├── header.css         # .header, .brand, .trainerBar
 │       │   ├── components.css     # .dropdown, .sprite, .chip, .typeBadge, .moveRow, .statTable, .slotSearchInput
-│       │   └── enemy.css          # .seenGrid, .seenSlot, .poolGrid, .setTile
+│       │   ├── enemy.css          # .seenGrid, .seenSlot, .poolGrid, .setTile
+│       │   └── calc.css           # .tabsBar + everything prefixed .calc*
 │       └── components/
-│           ├── common/            # Sprite, ItemIcon, TypeBadge, StatRow
+│           ├── common/            # Sprite, ItemIcon, TypeBadge, StatRow, SearchSelect (autocomplete)
 │           ├── trainer/           # TrainerNamesLine (shows all language names)
-│           └── enemy/             # EnemyTrainerTab, SetTile
+│           ├── enemy/             # EnemyTrainerTab, SetTile
+│           └── calc/              # CalculatorTab, CalcBoxes (item/moves/stats/condition), FieldPanel, ResultPanel
 ```
 
 ---
@@ -91,25 +98,28 @@ battle_subway_helper/
 ## Data Architecture
 
 All data lives in a single pre-generated file, `frontend/public/data/subway_data.json`
-(~220 KB, ~47 KB gzipped), loaded once at startup. It is hand-maintained (there is no
+(~270 KB), loaded once at startup. It is hand-maintained (there is no
 generator script) and written one record per line so diffs stay readable. It only
-contains what the app renders: the 100 Super Set 4/5 trainers and the 780 sets that
-appear in their pools — don't add sets, moves or fields nothing uses.
+contains what the app renders: the 100 Super Set 4/5 trainers, the 780 sets that
+appear in their pools, and the Gen 5 move/ability tables the calculator needs — don't add
+sets, moves or fields nothing uses.
 
 ### subway_data.json (compact, on disk)
 
 | Key | Contents |
 |-----|----------|
-| `moves` | `{"slug": {type, damage_class, power?, accuracy?}}` — `power`/`accuracy` omitted when null |
+| `moves` | `{"slug": {type, damage_class, power?, accuracy?}}` — every Gen 5 move (the calculator lets you pick any); `power`/`accuracy` omitted when null |
 | `items` | `{"Item Name": "pokeapi-item-slug"}` — only used to build item sprite URLs |
 | `sets` | `[{id, species, variant, dex, nature, item, moves: [slug], evs: ["HP","Def"], stats: [HP,Atk,Def,SpA,SpD,Spe]}]` |
 | `pools` | `[[set id, ...]]` — the 33 distinct pools; many trainers share one |
 | `trainers` | `[{trainer_id, name_en, name_es, section, pool: <index into pools>, names: {en,es,de,fr,it,ja,ko}}]` |
+| `abilities` | `{"speciesid": ["Ability", ...]}` — regular Gen 5 abilities for every Gen 5 species, keyed by `toID(name)` (`porygonz`) |
+| `hidden_abilities` | `{"speciesid": "Ability"}` — Dream World abilities. Subway Pokémon never have these, so the rival's ability picker only offers `abilities` |
 
 ### Expanded shape (in memory)
 
 `loadSubwayData()` in `api/client.js` expands the compact records into the shape every
-component consumes, and returns `{trainersList, setsIndex, moveDex}`:
+component consumes, and returns `{trainersList, setsIndex, moveDex, abilities}`:
 
 - set: `{global_id, species, variant_index, dex_number, nature, item, moves_meta: [{slug, type}], evs_numeric: {HP,...}, stats_lv50: {HP,...}, sprite_url_pokeapi, item_sprite_url}`
   - sprite URLs are derived (PokeAPI sprites repo, by dex number / item slug), not stored
@@ -117,6 +127,7 @@ component consumes, and returns `{trainersList, setsIndex, moveDex}`:
   - move display names are derived from the slug (`prettyMoveNameFromSlug`)
 - trainer: the stored record plus `pool_global_ids` (resolved from `pools[pool]`)
 - `setsIndex` is a `Map<global_id, set>`; `moveDex` is the `moves` object as-is
+- `abilities` is `{regular, hidden}` (the two tables above)
 
 ### Gen 5 accuracy
 
@@ -164,11 +175,37 @@ There is no standalone pool-filter textbox. Instead, each empty "Seen" slot
 (`SeenSlotEmpty`) renders a filter input wired to the shared `pokemonFilter` state —
 typing in any empty slot filters the Pool panel below. Confirming a set clears the filter.
 
+Each filled "Seen" slot has a "→ Calc" button (`sendToCalc` in App.jsx) that loads that
+set as the calculator's rival and switches tab.
+
 ### SetTile (enemy/SetTile.jsx)
 
 Compact card per pool set. Has ✕ (discard) and ✓ (confirm) buttons. Shows sprite, name, item, moves. Dimmed when discarded.
 The line under the name shows only the nature and its effect (`Adamant · ↑Atk ↓SpA`, or
 `Hardy · Neutral`), via `natureEffectLabel()` in `utils/poke.js`. Filled "Seen" slots use the same line.
+
+### Damage calculator (components/calc/)
+
+- **Engine:** `@smogon/calc` (Showdown's calc), always `Generations.get(5)`, Lv 50. Only
+  `calc/engine.js` imports it, and `CalculatorTab` is `React.lazy`-loaded from App.jsx so the
+  library (~130 KB gzipped) is a separate chunk downloaded only when the tab opens — keep
+  calc imports out of App.jsx, hooks and the enemy tab (`speciesId()` in `utils/poke.js` exists
+  so App can look up abilities without importing `toID`).
+- **State:** `useCalcState()` is called in App.jsx (so "→ Calc" can set the rival) and passed
+  down as `calc`. Only the team builds (species, nature, ability, item, moves, EVs, IVs) are
+  persisted (`localStorage` key `bsh.calc.team.v1`, up to 6 members); per-battle state
+  (boosts, status, HP %, item disabled, crit flags) and the field reset on switch/reload.
+- **Layout:** left = your Pokémon (team chips + editable card), centre = `FieldPanel` (shared
+  conditions on top; your side | rival side split by a vertical line) and `ResultPanel`,
+  right = rival search over *all* Subway sets (not just the loaded trainer's pool) + card.
+- **Results:** every move of both sides is computed on each render; the selected one shows
+  the full `result.desc()` line (click copies it), the rest show `moveDesc()` in two lists.
+  `desc()` throws when every roll is 0 (immunities) — `computeAttack` catches that.
+- Subway sets are fed to the calc with 31 IVs and their `evs_numeric`; the calc's stats match
+  `stats_lv50` exactly. Subway item names use Gen 5 spellings (`TwistedSpoon`), mapped via
+  `toID`. Hidden Power is resolved to `Hidden Power <Type>` from the attacker's IVs.
+- The "final" stat column only applies the -6..+6 stage; Tailwind, Choice Scarf, paralysis
+  etc. are handled inside the damage calc but not reflected in the displayed Spe.
 
 ---
 

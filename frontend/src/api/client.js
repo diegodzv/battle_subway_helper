@@ -44,5 +44,8 @@ export async function loadSubwayData() {
   const pools = data.pools ?? [];
   const trainersList = (data.trainers ?? []).map((t) => ({ ...t, pool_global_ids: pools[t.pool] ?? [] }));
 
-  return { trainersList, setsIndex, moveDex };
+  // Gen 5 abilities keyed by species id (toID of the name): regular ones, plus the Dream World one
+  const abilities = { regular: data.abilities ?? {}, hidden: data.hidden_abilities ?? {} };
+
+  return { trainersList, setsIndex, moveDex, abilities };
 }

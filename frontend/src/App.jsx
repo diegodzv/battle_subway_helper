@@ -1,12 +1,16 @@
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useEffect, useMemo, useState } from "react";
 import "./styles/index.css";
 
 import { useDebouncedValue } from "./hooks/useDebouncedValue";
+import { useCalcState } from "./hooks/useCalcState";
 import { loadSubwayData } from "./api/client";
 
 import { TrainerNamesLine } from "./components/trainer/TrainerNamesLine";
 import { EnemyTrainerTab } from "./components/enemy/EnemyTrainerTab";
-import { setDisplayName } from "./utils/poke";
+import { setDisplayName, speciesId } from "./utils/poke";
+
+// @smogon/calc is large, so the calculator is only downloaded when its tab is opened
+const CalculatorTab = lazy(() => import("./components/calc/CalculatorTab").then((m) => ({ default: m.CalculatorTab })));
 
 export default function App() {
   const [dataReady, setDataReady] = useState(false);
@@ -29,6 +33,10 @@ export default function App() {
   const debouncedPokemonFilter = useDebouncedValue(pokemonFilter, 80);
 
   const [moveDex, setMoveDex] = useState(null);
+  const [abilities, setAbilities] = useState(null);
+
+  const [tab, setTab] = useState("rival");
+  const calc = useCalcState();
 
   // Load all static data on startup
   useEffect(() => {
@@ -40,6 +48,7 @@ export default function App() {
       setTrainersList(data.trainersList);
       setSetsIndex(data.setsIndex);
       setMoveDex(data.moveDex);
+      setAbilities(data.abilities);
       setDataReady(true);
     }).catch((e) => {
       console.error("Failed to load static data:", e);
@@ -182,15 +191,21 @@ export default function App() {
     });
   }
 
+  function sendToCalc(set) {
+    calc.selectEnemy(set.global_id, abilities?.regular?.[speciesId(set.species)]?.[0] ?? "");
+    setTab("calc");
+  }
+
   function removeConfirmed(globalId) {
     setConfirmed((prev) => prev.filter((x) => x !== globalId));
   }
 
   const trainerTitle = trainer?.display_name ?? trainer?.name_en ?? "";
+  const showTrainerBar = !!trainer && tab === "rival";
 
   return (
     <div className="page">
-      <header className={`header ${trainer ? "headerWithTrainer" : ""}`}>
+      <header className={`header ${showTrainerBar ? "headerWithTrainer" : ""}`}>
         <div className="brand">
           <div className="brandTitle">Battle Subway Helper (B2/W2)</div>
           <div className="muted">
@@ -201,7 +216,16 @@ export default function App() {
           </div>
         </div>
 
-        {trainer ? (
+        <nav className="tabsBar">
+          <button className={`tabBtn ${tab === "rival" ? "tabBtnOn" : ""}`} onClick={() => setTab("rival")}>
+            Rival trainer
+          </button>
+          <button className={`tabBtn ${tab === "calc" ? "tabBtnOn" : ""}`} onClick={() => setTab("calc")}>
+            Damage calc
+          </button>
+        </nav>
+
+        {showTrainerBar ? (
           <div className="searchBox" style={{ minWidth: 280, justifySelf: "end" }}>
             <input
               className="searchInput"
@@ -234,7 +258,7 @@ export default function App() {
           </div>
         ) : null}
 
-        {trainer ? (
+        {showTrainerBar ? (
           <div className="trainerBar">
             <div className="trainerBarLeft">
               <div className="h1">{trainerTitle}</div>
@@ -268,6 +292,11 @@ export default function App() {
         ) : null}
       </header>
 
+      {tab === "calc" ? (
+        <Suspense fallback={<main className="content muted">Loading calculator...</main>}>
+          <CalculatorTab calc={calc} setsIndex={setsIndex} moveDex={moveDex} abilities={abilities} />
+        </Suspense>
+      ) : (
       <EnemyTrainerTab
         searchProps={{ q, setQ, suggestions, setSuggestions, loadTrainer, dataReady }}
         trainer={trainer}
@@ -287,7 +316,9 @@ export default function App() {
         toggleDiscard={toggleDiscard}
         confirmSet={confirmSet}
         removeConfirmed={removeConfirmed}
+        sendToCalc={sendToCalc}
       />
+      )}
     </div>
   );
 }

@@ -15,6 +15,7 @@ Live at: **https://diegodzv.github.io/battle_subway_helper/**.
 - View each trainer's full pool of possible Pokémon sets, including moves, items, natures, and Lv. 50 stats.
 - Confirm Pokémon sets as they are revealed during battle, filling up to 4 "Seen" slots.
 - Manually discard sets or automatically eliminate incompatible ones based on Species Clause and Item Clause.
+- Gen 5 damage calculator (powered by Pokémon Showdown's calc): your own Pokémon vs. any Subway set, with field conditions, stat stages and a copyable result line.
 
 ---
 
