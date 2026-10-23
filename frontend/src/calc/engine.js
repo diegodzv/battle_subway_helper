@@ -64,8 +64,10 @@ export function itemSpriteUrl(name) {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${moveSlug(name)}.png`;
 }
 
-export function speciesSpriteUrl(species) {
-  return species ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${species.num}.png` : null;
+// Forms (Rotom-Wash, Deoxys-Attack...) fall back to the base species' sprite
+export function speciesSpriteUrl(speciesName, dexNumbers) {
+  const num = dexNumbers?.[toID(speciesName ?? "")];
+  return num ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png` : null;
 }
 
 // Regular abilities first (the only ones Subway Pokémon can have), then the Dream World one

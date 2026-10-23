@@ -34,6 +34,7 @@ export default function App() {
 
   const [moveDex, setMoveDex] = useState(null);
   const [abilities, setAbilities] = useState(null);
+  const [dexNumbers, setDexNumbers] = useState(null);
 
   const [tab, setTab] = useState("rival");
   const calc = useCalcState();
@@ -49,6 +50,7 @@ export default function App() {
       setSetsIndex(data.setsIndex);
       setMoveDex(data.moveDex);
       setAbilities(data.abilities);
+      setDexNumbers(data.dexNumbers);
       setDataReady(true);
     }).catch((e) => {
       console.error("Failed to load static data:", e);
@@ -192,7 +194,7 @@ export default function App() {
   }
 
   function sendToCalc(set) {
-    calc.selectEnemy(set.global_id, abilities?.regular?.[speciesId(set.species)]?.[0] ?? "");
+    calc.addEnemy(set.global_id, abilities?.regular?.[speciesId(set.species)]?.[0] ?? "");
     setTab("calc");
   }
 
@@ -294,7 +296,13 @@ export default function App() {
 
       {tab === "calc" ? (
         <Suspense fallback={<main className="content muted">Loading calculator...</main>}>
-          <CalculatorTab calc={calc} setsIndex={setsIndex} moveDex={moveDex} abilities={abilities} />
+          <CalculatorTab
+            calc={calc}
+            setsIndex={setsIndex}
+            moveDex={moveDex}
+            abilities={abilities}
+            dexNumbers={dexNumbers}
+          />
         </Suspense>
       ) : (
       <EnemyTrainerTab

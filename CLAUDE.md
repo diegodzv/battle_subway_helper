@@ -115,11 +115,12 @@ sets, moves or fields nothing uses.
 | `trainers` | `[{trainer_id, name_en, name_es, section, pool: <index into pools>, names: {en,es,de,fr,it,ja,ko}}]` |
 | `abilities` | `{"speciesid": ["Ability", ...]}` — regular Gen 5 abilities for every Gen 5 species, keyed by `toID(name)` (`porygonz`) |
 | `hidden_abilities` | `{"speciesid": "Ability"}` — Dream World abilities. Subway Pokémon never have these, so the rival's ability picker only offers `abilities` |
+| `dex_numbers` | `{"speciesid": 488}` — national dex number for every real Gen 5 species (forms share the base number). `@smogon/calc` ships no dex numbers, so this drives the calculator's sprites, and it doubles as the list of pickable species: the calc's species list also contains Smogon CAP fakemons (Arghonaut, Syclant...), which are absent here and filtered out |
 
 ### Expanded shape (in memory)
 
 `loadSubwayData()` in `api/client.js` expands the compact records into the shape every
-component consumes, and returns `{trainersList, setsIndex, moveDex, abilities}`:
+component consumes, and returns `{trainersList, setsIndex, moveDex, abilities, dexNumbers}`:
 
 - set: `{global_id, species, variant_index, dex_number, nature, item, moves_meta: [{slug, type}], evs_numeric: {HP,...}, stats_lv50: {HP,...}, sprite_url_pokeapi, item_sprite_url}`
   - sprite URLs are derived (PokeAPI sprites repo, by dex number / item slug), not stored
@@ -193,11 +194,15 @@ The line under the name shows only the nature and its effect (`Adamant · ↑Atk
   so App can look up abilities without importing `toID`).
 - **State:** `useCalcState()` is called in App.jsx (so "→ Calc" can set the rival) and passed
   down as `calc`. Only the team builds (species, nature, ability, item, moves, EVs, IVs) are
-  persisted (`localStorage` key `bsh.calc.team.v1`, up to 6 members); per-battle state
-  (boosts, status, HP %, item disabled, crit flags) and the field reset on switch/reload.
+  persisted (`localStorage` key `bsh.calc.team.v1`, up to 6 members); your per-battle state
+  (boosts, status, HP %, item disabled, crit flags) resets when you switch member.
+- **Rival list:** the rival side is also a list of up to 6 sets (chips + "+ Add"), not
+  persisted. Each entry is `{setId, battle}` and keeps its own battle state, so you can flip
+  between rivals without losing boosts. `addEnemy()` focuses a set that's already listed,
+  otherwise appends it (replacing the selected one when the list is full); "→ Calc" uses it.
 - **Layout:** left = your Pokémon (team chips + editable card), centre = `FieldPanel` (shared
   conditions on top; your side | rival side split by a vertical line) and `ResultPanel`,
-  right = rival search over *all* Subway sets (not just the loaded trainer's pool) + card.
+  right = rival list; its search covers *all* Subway sets (not just the loaded trainer's pool).
 - **Results:** every move of both sides is computed on each render; the selected one shows
   the full `result.desc()` line (click copies it), the rest show `moveDesc()` in two lists.
   `desc()` throws when every roll is 0 (immunities) — `computeAttack` catches that.

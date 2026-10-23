@@ -26,7 +26,6 @@ import {
   speciesSpriteUrl,
 } from "../../calc/engine";
 
-const SPECIES_OPTIONS = SPECIES_LIST.map((s) => ({ key: s.name, label: s.name, meta: s.types.join(" / ") }));
 const MOVE_OPTIONS = MOVE_LIST.map((m) => ({ key: m.name, label: m.name, meta: `${m.type} · ${m.category}` }));
 const ITEM_OPTIONS = ITEM_LIST.map((i) => ({ key: i.name, label: i.name }));
 
@@ -81,8 +80,16 @@ function results(attacker, defender, moves, crits, ivs, field, attackerKey) {
   });
 }
 
-export function CalculatorTab({ calc, setsIndex, moveDex, abilities }) {
+export function CalculatorTab({ calc, setsIndex, moveDex, abilities, dexNumbers }) {
   const [adding, setAdding] = useState(false);
+  const [addingEnemy, setAddingEnemy] = useState(false);
+
+  // The calc's species list also contains Smogon CAP fakemons; only real Gen 5 species have a dex number
+  const speciesOptions = useMemo(
+    () =>
+      SPECIES_LIST.filter((s) => dexNumbers?.[s.id]).map((s) => ({ key: s.name, label: s.name, meta: s.types.join(" / ") })),
+    [dexNumbers]
+  );
   const { myMon, myBattle, enemyBattle, field, selected } = calc;
 
   const enemySet = calc.enemySetId != null ? setsIndex?.get(calc.enemySetId) ?? null : null;
@@ -130,14 +137,14 @@ export function CalculatorTab({ calc, setsIndex, moveDex, abilities }) {
 
   function pickEnemy(setId) {
     const set = setsIndex.get(setId);
-    calc.selectEnemy(setId, speciesAbilities(set?.species, abilities).regular[0] ?? "");
+    calc.addEnemy(setId, speciesAbilities(set?.species, abilities).regular[0] ?? "");
+    setAddingEnemy(false);
   }
 
   const patchBattle = (setter) => (p) => setter((b) => ({ ...b, ...p }));
   const setCrit = (setter) => (i, v) => setter((b) => ({ ...b, crits: b.crits.map((c, j) => (j === i ? v : c)) }));
   const setBoost = (setter) => (id, v) => setter((b) => ({ ...b, boosts: { ...b.boosts, [id]: v } }));
 
-  const mySpecies = getSpecies(myMon?.species);
   const myAbilities = speciesAbilities(myMon?.species, abilities);
   const enemyAbilities = speciesAbilities(enemySet?.species, abilities);
 
@@ -180,7 +187,7 @@ export function CalculatorTab({ calc, setsIndex, moveDex, abilities }) {
             <div className="calcPickBox">
               <SearchSelect
                 value=""
-                options={SPECIES_OPTIONS}
+                options={speciesOptions}
                 onSelect={(o) => pickSpecies(o.key)}
                 placeholder="Search Pokémon (any Gen 5 species)..."
                 autoFocus={adding}
@@ -190,12 +197,12 @@ export function CalculatorTab({ calc, setsIndex, moveDex, abilities }) {
             <div className="seenSlot">
               <div className="seenSlotHeader">
                 <div className="calcHeaderMain">
-                  <Sprite url={speciesSpriteUrl(mySpecies)} alt={myMon.species} />
+                  <Sprite url={speciesSpriteUrl(myMon.species, dexNumbers)} alt={myMon.species} />
                   <div className="calcHeaderFields">
                     <SearchSelect
                       className="calcInput calcSpeciesInput"
                       value={myMon.species}
-                      options={SPECIES_OPTIONS}
+                      options={speciesOptions}
                       onSelect={(o) => pickSpecies(o.key)}
                       placeholder="Species..."
                     />
@@ -281,16 +288,46 @@ export function CalculatorTab({ calc, setsIndex, moveDex, abilities }) {
             <div className="h2">Rival</div>
           </div>
 
-          <div className="calcPickBox">
-            <SearchSelect
-              value=""
-              options={enemyOptions}
-              onSelect={(o) => pickEnemy(o.key)}
-              placeholder="Search Subway set (e.g. venusaur-1)..."
-            />
+          <div className="calcTeamBar">
+            {calc.enemies.map((e, i) => {
+              const s = setsIndex?.get(e.setId);
+              return (
+                <button
+                  key={e.setId}
+                  className={`chip ${i === calc.enemyActive && !addingEnemy ? "calcChipOn" : ""}`}
+                  onClick={() => {
+                    setAddingEnemy(false);
+                    calc.switchEnemy(i);
+                  }}
+                >
+                  {s ? setDisplayName(s) : "?"}
+                </button>
+              );
+            })}
+            {calc.enemies.length > 0 ? (
+              <button className={`chip ${addingEnemy ? "calcChipOn" : ""}`} onClick={() => setAddingEnemy((a) => !a)}>
+                + Add
+              </button>
+            ) : null}
           </div>
 
-          {enemySet ? (
+          {addingEnemy || !enemySet ? (
+            <div className="calcPickBox">
+              <SearchSelect
+                value=""
+                options={enemyOptions}
+                onSelect={(o) => pickEnemy(o.key)}
+                placeholder={
+                  calc.enemies.length >= MAX_TEAM
+                    ? "List full: replaces the selected rival..."
+                    : "Search Subway set (e.g. venusaur-1)..."
+                }
+                autoFocus={addingEnemy}
+              />
+            </div>
+          ) : null}
+
+          {enemySet && !addingEnemy ? (
             <div className="seenSlot">
               <div className="seenSlotHeader">
                 <div className="calcHeaderMain">
@@ -311,8 +348,8 @@ export function CalculatorTab({ calc, setsIndex, moveDex, abilities }) {
                     />
                   </div>
                 </div>
-                <button className="chip chipDanger" onClick={calc.clearEnemy} title="Clear rival">
-                  Clear ✕
+                <button className="chip chipDanger" onClick={calc.removeActiveEnemy} title="Remove from the rival list">
+                  Remove ✕
                 </button>
               </div>
 

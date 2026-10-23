@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// Only the team builds are persisted; boosts, status, HP and field reset every session
+// Only your team builds are persisted; the rival list, boosts, status, HP and field reset every session
 const TEAM_KEY = "bsh.calc.team.v1";
 export const MAX_TEAM = 6;
 
@@ -58,8 +58,8 @@ function loadTeam() {
 export function useCalcState() {
   const [{ team, active }, setTeamState] = useState(loadTeam);
   const [myBattle, setMyBattle] = useState(() => freshBattle());
-  const [enemySetId, setEnemySetId] = useState(null);
-  const [enemyBattle, setEnemyBattle] = useState(() => freshBattle());
+  // Rival list: each entry keeps its own battle state, so switching rivals doesn't lose boosts etc.
+  const [{ enemies, enemyActive }, setEnemyState] = useState({ enemies: [], enemyActive: 0 });
   const [field, setField] = useState(initialField);
   const [selected, setSelected] = useState({ side: "mine", index: 0 });
 
@@ -114,9 +114,44 @@ export function useCalcState() {
     setMyBattle(freshBattle());
   }
 
-  function selectEnemy(setId, ability) {
-    setEnemySetId(setId);
-    setEnemyBattle(freshBattle(ability));
+  const enemy = enemies[enemyActive] ?? null;
+
+  // Focuses the set if it's already in the list; otherwise appends it (or replaces the active one when full)
+  function addEnemy(setId, ability) {
+    setEnemyState((prev) => {
+      const existing = prev.enemies.findIndex((e) => e.setId === setId);
+      if (existing >= 0) return { ...prev, enemyActive: existing };
+      const entry = { setId, battle: freshBattle(ability) };
+      if (prev.enemies.length >= MAX_TEAM) {
+        const next = [...prev.enemies];
+        next[prev.enemyActive] = entry;
+        return { ...prev, enemies: next };
+      }
+      return { enemies: [...prev.enemies, entry], enemyActive: prev.enemies.length };
+    });
+  }
+
+  function switchEnemy(index) {
+    setEnemyState((prev) => ({ ...prev, enemyActive: index }));
+  }
+
+  function removeActiveEnemy() {
+    setEnemyState((prev) => {
+      const next = prev.enemies.filter((_, i) => i !== prev.enemyActive);
+      return { enemies: next, enemyActive: Math.max(0, Math.min(prev.enemyActive, next.length - 1)) };
+    });
+  }
+
+  // Same signature as a useState setter, applied to the active rival's battle state
+  function setEnemyBattle(update) {
+    setEnemyState((prev) => {
+      const cur = prev.enemies[prev.enemyActive];
+      if (!cur) return prev;
+      const battle = typeof update === "function" ? update(cur.battle) : update;
+      const next = [...prev.enemies];
+      next[prev.enemyActive] = { ...cur, battle };
+      return { ...prev, enemies: next };
+    });
   }
 
   return {
@@ -130,11 +165,14 @@ export function useCalcState() {
     replaceSpecies,
     updateMyMon,
     removeActive,
-    enemySetId,
-    enemyBattle,
+    enemies,
+    enemyActive,
+    enemySetId: enemy?.setId ?? null,
+    enemyBattle: enemy?.battle ?? freshBattle(),
     setEnemyBattle,
-    selectEnemy,
-    clearEnemy: () => setEnemySetId(null),
+    addEnemy,
+    switchEnemy,
+    removeActiveEnemy,
     field,
     setField,
     selected,
